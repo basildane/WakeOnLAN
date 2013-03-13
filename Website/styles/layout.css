@@ -1,0 +1,36 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#container {
+	padding: 0;
+}
+#masthead {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+}
+#navigation {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	clear: both;
+}
+#column_l {
+	position: relative;
+	float: left;
+}
+#column_r {
+	float: left;
+}
+#footer {
+	width: auto;
+	clear: both;
+	overflow: auto;
+}
+.float_right {
+	float:right;
+}

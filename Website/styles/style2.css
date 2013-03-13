@@ -1,0 +1,144 @@
+﻿@import url("layout.css");
+body {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	font-style: normal;
+	background-color: #fff;
+}
+#container {
+	width: 100%;
+	margin: 0;
+	background-color: #fff;
+	position: relative;
+}
+#masthead {
+	text-align: right;
+	width: 100%;
+	background-color: #c5d5e5;
+}
+#navigation {
+	background-color: #ca7;
+	overflow: hidden;
+}
+#page_content {
+	position: relative;
+	width: 100%;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CCAA77;
+}
+#column_l {
+	position: relative;
+	margin: 0 350px 0 0;
+	padding: 0 2%;
+	background-color: #fff;
+	float: none;
+}
+#column_r {
+	float: none;
+	width: 330px;
+	margin: 0;
+	padding: 10px;
+	background-color: #cdf;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+#footer {
+	background-color: #dfcfbf;
+	padding-bottom: 5px;
+}
+/* Styles for Masthead */
+#masthead img {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+#masthead p {
+	font-size: small;
+	text-align: right;
+	color: #000;
+	margin: 10px 10px 10px 0;
+	padding: 0;
+}
+/* Styles for Navigation */
+#navigation ul {
+	list-style-type: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+#navigation li {
+	float: left;
+}
+#navigation a {
+	color: #000;
+	text-decoration: none;
+	display: block;
+	padding: 5px;
+	border: 1px solid #ca7;
+	background-color: #dc8;
+}
+#navigation a:hover {
+	color: #000;
+	text-decoration: none;
+	border: 1px solid #ed9;
+	background-color: #ed9;
+}
+/* Styles for Content */
+h1 {
+	font-size: 2em;
+	color: #393939;
+}
+h2 {
+	font-size: 1.75em;
+	color: #469;
+}
+h3 {
+	font-size: 1.5em;
+	color: #469;
+}
+h4 {
+	font-size: 1.25em;
+	color: #469;
+}
+h5 {
+	font-size: 0.75em;
+	color: #469;
+}
+h6 {
+	font-size: 0.5em;
+	color: #469;
+}
+/* Styles for Footer */
+#footer p {
+	font-size: x-small;
+	text-align: center;
+	color: #393939;
+	margin: 10px;
+	padding: 1px;
+}
+#footer a {
+	color: #393939;
+	text-decoration: underline;
+}
+#footer a:hover {
+	color: #000;
+	text-decoration: none;
+}
+/* Styles for Links */
+a {
+	color: #469;
+	text-decoration: underline;
+}
+a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+.style_bold {
+	font-weight: bold;
+}
+.style_italic {
+	font-style: italic;
+}

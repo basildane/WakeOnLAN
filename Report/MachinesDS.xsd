@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MachinesDS" targetNamespace="http://tempuri.org/MachinesDS.xsd" xmlns:mstns="http://tempuri.org/MachinesDS.xsd" xmlns="http://tempuri.org/MachinesDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MachinesDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MachinesDS" msprop:Generator_UserDSName="MachinesDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Machine" msprop:Generator_UserTableName="Machine" msprop:Generator_RowEvArgName="MachineRowChangeEvent" msprop:Generator_TableVarName="tableMachine" msprop:Generator_TablePropName="Machine" msprop:Generator_RowDeletingName="MachineRowDeleting" msprop:Generator_RowChangingName="MachineRowChanging" msprop:Generator_RowDeletedName="MachineRowDeleted" msprop:Generator_RowEvHandlerName="MachineRowChangeEventHandler" msprop:Generator_TableClassName="MachineDataTable" msprop:Generator_RowChangedName="MachineRowChanged" msprop:Generator_RowClassName="MachineRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Group" msprop:Generator_ColumnVarNameInTable="columnGroup" msprop:Generator_ColumnPropNameInRow="Group" msprop:Generator_ColumnPropNameInTable="GroupColumn" msprop:Generator_UserColumnName="Group" type="xs:string" minOccurs="0" />
+              <xs:element name="IP" msprop:Generator_ColumnVarNameInTable="columnIP" msprop:Generator_ColumnPropNameInRow="IP" msprop:Generator_ColumnPropNameInTable="IPColumn" msprop:Generator_UserColumnName="IP" type="xs:string" minOccurs="0" />
+              <xs:element name="MAC" msprop:Generator_ColumnVarNameInTable="columnMAC" msprop:Generator_ColumnPropNameInRow="MAC" msprop:Generator_ColumnPropNameInTable="MACColumn" msprop:Generator_UserColumnName="MAC" type="xs:string" minOccurs="0" />
+              <xs:element name="Netbios" msprop:Generator_ColumnVarNameInTable="columnNetbios" msprop:Generator_ColumnPropNameInRow="Netbios" msprop:Generator_ColumnPropNameInTable="NetbiosColumn" msprop:Generator_UserColumnName="Netbios" type="xs:string" minOccurs="0" />
+              <xs:element name="ShutdownCommand" msprop:Generator_ColumnVarNameInTable="columnShutdownCommand" msprop:Generator_ColumnPropNameInRow="ShutdownCommand" msprop:Generator_ColumnPropNameInTable="ShutdownCommandColumn" msprop:Generator_UserColumnName="ShutdownCommand" type="xs:string" minOccurs="0" />
+              <xs:element name="Emergency" msprop:Generator_ColumnVarNameInTable="columnEmergency" msprop:Generator_ColumnPropNameInRow="Emergency" msprop:Generator_ColumnPropNameInTable="EmergencyColumn" msprop:Generator_UserColumnName="Emergency" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Broadcast" msprop:Generator_ColumnVarNameInTable="columnBroadcast" msprop:Generator_ColumnPropNameInRow="Broadcast" msprop:Generator_ColumnPropNameInTable="BroadcastColumn" msprop:Generator_UserColumnName="Broadcast" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

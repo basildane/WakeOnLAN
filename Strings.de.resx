@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AbortFailed" xml:space="preserve">
+    <value>Abrechen {0} Fehler: {1}</value>
+    <comment>Abort {machine} Error: {error message}</comment>
+  </data>
+  <data name="Aborting" xml:space="preserve">
+    <value>Abbruch…</value>
+    <comment>Aborting...</comment>
+  </data>
+  <data name="AbortingShutdown" xml:space="preserve">
+    <value>Breche das Runterfahren für {0} ab</value>
+    <comment>Aborting shutdown command on {0}</comment>
+  </data>
+  <data name="AbortShutdown" xml:space="preserve">
+    <value>Abbruch des Runterfahrens wird ausgeführt …</value>
+    <comment>Abort Shutdown in progress...</comment>
+  </data>
+  <data name="AbortSuccess" xml:space="preserve">
+    <value>Abbruch bei {0} war erfolgreich</value>
+    <comment>Abort {machine} successful</comment>
+  </data>
+  <data name="AllMachines" xml:space="preserve">
+    <value>Alle Rechner</value>
+    <comment>All machines</comment>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Sind Sie sicher?</value>
+    <comment>Are you sure?</comment>
+  </data>
+  <data name="BeginShutdown" xml:space="preserve">
+    <value>Starte Runterfahren…</value>
+    <comment>Begin shutdown...</comment>
+  </data>
+  <data name="ChangesLost" xml:space="preserve">
+    <value>Ihre Änderungen werden verlohren gehen.</value>
+    <comment>Your changes will be lost.</comment>
+  </data>
+  <data name="ChangesNotSaved" xml:space="preserve">
+    <value>Änderungen wurden nicht gespeichert</value>
+    <comment>Changes have not been saved</comment>
+  </data>
+  <data name="DefaultEmergency" xml:space="preserve">
+    <value>Notfallabschaltung!</value>
+    <comment>Emergency shutdown!</comment>
+  </data>
+  <data name="DefaultMessage" xml:space="preserve">
+    <value>System fährt runter!</value>
+    <comment>System is shutting down!</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Lösche {0} Datensätze?</value>
+    <comment>Delete {0} records?</comment>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Fertig</value>
+    <comment>Done</comment>
+  </data>
+  <data name="EmergencyShutdown" xml:space="preserve">
+    <value>Notfallabschaltung hat begonnen</value>
+    <comment>Emergency shutdown started</comment>
+  </data>
+  <data name="ErrorInvalidIP" xml:space="preserve">
+    <value>Ungültige IP Adresse. Muster   ###.###.###.###</value>
+    <comment>Invalid IP Address.  Use ###.###.###.###</comment>
+  </data>
+  <data name="ErrorInvalidMAC" xml:space="preserve">
+    <value>Ungültige MAC Adresse. Muster   ##:##:##:##:##:##</value>
+    <comment>Invalid MAC Address.  Use ##:##:##:##:##:##</comment>
+  </data>
+  <data name="ErrorInvalidName" xml:space="preserve">
+    <value>Ungültiger Rechnername</value>
+    <comment>Invalid computer name</comment>
+  </data>
+  <data name="ErrorMsg" xml:space="preserve">
+    <value>Fehler {0}</value>
+    <comment>Error: {0}</comment>
+  </data>
+  <data name="ExportedTo" xml:space="preserve">
+    <value>Einstellungen wurden nach [{0}] exportiert</value>
+    <comment>Settings were exported to [{0}]</comment>
+  </data>
+  <data name="HostNotResponding" xml:space="preserve">
+    <value>Rechner antwortet nicht</value>
+    <comment>Host not responding</comment>
+  </data>
+  <data name="ImmediateReboot" xml:space="preserve">
+    <value>Dies wird DIESEN Rechner SOFORT neustarten.  Sind Sie sicher?</value>
+    <comment>This will IMMEDIATELY reboot THIS machine.  Are you sure?</comment>
+  </data>
+  <data name="ImmediateShutdown" xml:space="preserve">
+    <value>Dies wird DIESEN Rechner SOFORT runterfahren.  Sind Sie sicher?</value>
+    <comment>This will IMMEDIATELY shutdown THIS machine.  Are you sure?</comment>
+  </data>
+  <data name="ImportedFrom" xml:space="preserve">
+    <value>Einstellungen wurden von [{0}] importiert</value>
+    <comment>Settings were imported from {0}</comment>
+  </data>
+  <data name="isNew" xml:space="preserve">
+    <value>Neu</value>
+    <comment>New</comment>
+  </data>
+  <data name="Limited" xml:space="preserve">
+    <value>{0} - Testversion ist auf 3 Rechner beschränkt</value>
+    <comment>{0} - trial version is limited to 3 machines</comment>
+  </data>
+  <data name="OffLine" xml:space="preserve">
+    <value>Host ist OFFLINE</value>
+    <comment>Host is OFFLINE</comment>
+  </data>
+  <data name="OnLine" xml:space="preserve">
+    <value>Host ist ONLINE</value>
+    <comment>Host is ONLINE</comment>
+  </data>
+  <data name="Opt_BroadcastAddress" xml:space="preserve">
+    <value>Broadcast Adresse</value>
+    <comment>Broadcast Address</comment>
+  </data>
+  <data name="Opt_BroadcastDesc" xml:space="preserve">
+    <value>Tragen Sie die Broadcast IP Adresse für die Pakete von WOL ein..</value>
+    <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
+  </data>
+  <data name="Pausing" xml:space="preserve">
+    <value>Pausieren…</value>
+    <comment>Pausing...</comment>
+  </data>
+  <data name="Polling" xml:space="preserve">
+    <value>Abfrage {0}</value>
+    <comment>Polling {0}</comment>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Eigenschaften - {0}</value>
+    <comment>Properties - {0}</comment>
+  </data>
+  <data name="ResponseTime" xml:space="preserve">
+    <value>{0} Antwortzeit {1} ms</value>
+    <comment>{host} Response Time {count} ms</comment>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Wählen Sie eine WakeOnLan Einstellungsdatei zum Importieren aus</value>
+    <comment>Select a WakeOnLan settings file to import</comment>
+  </data>
+  <data name="SendShutdown" xml:space="preserve">
+    <value>Sende das Kommando zum Runterfahren an {0}</value>
+    <comment>Sending shutdown command to {host}</comment>
+  </data>
+  <data name="SentTo" xml:space="preserve">
+    <value>Sende das Wake Up Paket an {0} {1}…</value>
+    <comment>Sent Wake Up packet to {host} {mac}...</comment>
+  </data>
+  <data name="ShutdownFailed" xml:space="preserve">
+    <value>Runterfahren auf {0} war nicht erfolgreich : {1}</value>
+    <comment>Shutdown failed for {host} {error}</comment>
+  </data>
+  <data name="ShutDownSeconds" xml:space="preserve">
+    <value>Runterfahren in {0} Sekunden…</value>
+    <comment>Shutting down in {0} seconds...</comment>
+  </data>
+  <data name="ShutdownSuccessful" xml:space="preserve">
+    <value>Runterfahren von {0} erfolgreich</value>
+    <comment>Shutdown {0} successful</comment>
+  </data>
+  <data name="ShuttingDown" xml:space="preserve">
+    <value>Runterfahren …</value>
+    <comment>Shutting down...</comment>
+  </data>
+  <data name="Skipping" xml:space="preserve">
+    <value>Überspringen…</value>
+    <comment>Skipping...</comment>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>Erfolgreich</value>
+    <comment>Successful</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Wake on LAN</value>
+    <comment>Wake on LAN</comment>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version {0}.{1:00}.{2}.{3}</value>
+    <comment>Version</comment>
+  </data>
+  <data name="WhereSave" xml:space="preserve">
+    <value>Wo möchten sie die Einstellungen speichern?</value>
+    <comment>Where do you want to save the settings?</comment>
+  </data>
+  <data name="actions_email" xml:space="preserve">
+    <value>Email senden</value>
+  </data>
+  <data name="actions_popup" xml:space="preserve">
+    <value>Nachricht anzeigen</value>
+  </data>
+  <data name="actions_shutdown" xml:space="preserve">
+    <value>Rechner runterfahren</value>
+  </data>
+  <data name="actions_shutdownAll" xml:space="preserve">
+    <value>Alle Rechner runterfahren</value>
+  </data>
+  <data name="actions_start" xml:space="preserve">
+    <value>Rechner hochfahren</value>
+  </data>
+  <data name="actions_startAll" xml:space="preserve">
+    <value>Alle Rechner hochfahren</value>
+  </data>
+  <data name="lit_at" xml:space="preserve">
+    <value>{0} am {1}</value>
+  </data>
+  <data name="lit_atDays" xml:space="preserve">
+    <value>{0} jeden {1} Tag</value>
+  </data>
+  <data name="lit_atWeeks" xml:space="preserve">
+    <value>{0} jeden {1} im {3}-Wochenrythmus, beginnend {3}</value>
+  </data>
+  <data name="lit_Disabled" xml:space="preserve">
+    <value>Nicht aktiv</value>
+  </data>
+  <data name="lit_Enabled" xml:space="preserve">
+    <value>Aktivieren</value>
+  </data>
+  <data name="lit_Error" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="lit_Invalid" xml:space="preserve">
+    <value>Ungütlige Kommandozeile</value>
+  </data>
+  <data name="lit_multipleTriggers" xml:space="preserve">
+    <value>Mehrere Auslöser sind definiert</value>
+  </data>
+  <data name="lit_Never" xml:space="preserve">
+    <value>Niemals</value>
+  </data>
+  <data name="lit_None" xml:space="preserve">
+    <value>Nichts</value>
+  </data>
+  <data name="lit_noRights" xml:space="preserve">
+    <value>{0} scheint keine Leseberechtigung auf die WOL Zeittabellen - Datenbank zu haben. Zugriff erlauben?</value>
+  </data>
+  <data name="lit_notFound" xml:space="preserve">
+    <value>Rechner nicht gefunden</value>
+  </data>
+  <data name="lit_Queued" xml:space="preserve">
+    <value>Warteschlange</value>
+  </data>
+  <data name="lit_Ready" xml:space="preserve">
+    <value>Ferig</value>
+  </data>
+  <data name="lit_Running" xml:space="preserve">
+    <value>Läuft…</value>
+  </data>
+  <data name="lit_Unknown" xml:space="preserve">
+    <value>Unbekannt</value>
+  </data>
+</root>
