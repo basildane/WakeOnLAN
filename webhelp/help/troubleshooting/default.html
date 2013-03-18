@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>Home - WakeOnLAN</title>
+<!-- #EndEditable -->
+<link href="../styles/style2.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<link href="../styles/pages.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<link rel="shortcut icon" href="http://aquilawol.sourceforge.net/favicon.ico" />
+<style type="text/css">
+
+.auto-style1 {
+	border-width: 0px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39085909-2', 'sourceforge.net');
+  ga('send', 'pageview');
+
+</script>
+<!-- #BeginEditable "head" -->
+
+<!-- #EndEditable -->
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead" style="text-align:center">
+		<img alt="" height="150" src="../images/wol_logo.png" width="150" /><a href="http://www.aquilatech.com"><img src="../images/aquilatech.png" style="float: right" class="auto-style1" /></a><h1>
+		WakeOnLAN Help</h1>
+		<h2>Aquila Technology</h2>
+		<h3>Version 2.7</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul>
+			<li><a href="http://aquilawol.sourceforge.net">Home</a></li>
+			<li><a href="../default.html">Help</a></li>
+			<li><a href="../faq/default.html">FAQ</a></li>
+			<li><a href="default.html">Troubleshooting</a></li>
+			<li>
+			<a href="http://sourceforge.net/projects/aquilawol/files/" target="_blank">Downloads</a></li>
+			<li><a href="../contact/default.html">Contact</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin Page Content -->
+	<div id="page_content">
+		<!-- Begin Left Column -->
+		<div id="column_l">
+			<!-- #BeginEditable "content" -->
+			<h2>Troubleshooting</h2>
+
+			<p>Wake-on-LAN can be a frustrating technology to implement. This is 
+			because it requires appropriate BIOS, network card and, sometimes, 
+			operating system and router support to function reliably. In some 
+			cases, hardware may wake from one low power state but not from 
+			others. This means that due to hardware issues the computer may be 
+			waking up from the "fully off state" (S5) but doesn't wake from 
+			sleep or hibernation or vice-versa. Also, it is not always clear 
+			what kind of magic packet a NIC expects to see.</p>
+			<p>WOL includes features to make it easier to configure and 
+			troubleshoot.</p>
+			<p>Aquila WOL includes a built-in packet analyzer to help you 
+			determine if your packets are being received correctly.&nbsp; You 
+			may install the WOL application on the host you are trying to wake 
+			up, and run Tools -&gt; Listen. The Listener window will display all 
+			WOL packets heard on this machine.&nbsp; It will show packets from 
+			any WOL software, not only Aquila WOL.</p>
+			<p><img height="475" src="listener.PNG" width="591" /></p>
+			<p>&nbsp;</p>
+
+			<p>Configuring WOL correctly means finding IP addresses and MAC 
+			addresses for the hosts you are trying to control.&nbsp; Aquila WOL 
+			includes tools to make this easy and avoid mistakes.</p>
+			<p>Access the search tool from the main window by clicking Tools -&gt; 
+			Search for machines. Detailed help on the search tool is available
+			<a href="../search/default.html">here</a>.</p>
+			<p><img height="631" src="../search/search.PNG" width="844" /></p>
+			<p></p>
+			<p>Aquila WOL consists of several different parts.</p>
+			<p>1. Wake up.&nbsp; Waking up a host requires the correct MAC 
+			address and broadcast subnet be configured.</p>
+			<p>2. Shutdown.&nbsp; Shutdown requires the netbios name or IP 
+			address for WOL to contact the host to shut it down.&nbsp; It 
+			requires that you have rights to shutdown the host, Administrator or 
+			Power-User rights, for example.&nbsp; Shutdown does not use the MAC 
+			address.&nbsp; Shutdown for non-windows hosts requires that you use 
+			the shutdown command line field.</p>
+			<p>3. Host status in the main window.&nbsp; The main window displays 
+			the host status using either the IP address or netbios name.&nbsp; 
+			It uses ICMP to determine if the host is online.&nbsp; It does not 
+			use the MAC nor does it require admin rights.</p>
+			
+			<p>&nbsp;</p>
+			<p class="pages">
+				<a class="pages" href="../search/default.html">&lt; Prev</a>
+				<a class="pages" href="../getting_started/default.html">1</a>
+				<a class="pages" href="../faq/default.html">2</a>
+				<a class="pages" href="../main_window/default.html">3</a>
+				<a class="pages" href="../properties/default.html">4</a>
+				<a class="pages" href="../wakeup/default.html">5</a>
+				<a class="pages" href="../shutdown/default.html">6</a>
+				<a class="pages" href="../search/default.html">7</a>
+				<span class="current">8</span>
+				<a class="pages" href="../multiuser/default.html">9</a>
+				<a class="pages" href="../scheduler/default.html">10</a>
+				<a class="pages" href="../command_line/default.html">11</a>
+				<a class="pages" href="../multiuser/default.html">Next &gt;</a>
+			</p>
+
+			<!-- #EndEditable --></div>
+		<!-- End Left Column -->
+		<!-- Begin Right Column -->
+		<div id="column_r">
+			<!-- #BeginEditable "sidebar" -->
+			<h4>Related topics</h4>
+			<ul>
+				<li><a href="../properties/default.html">Properties</a></li>
+			</ul>
+			<!-- #EndEditable --></div>
+		<!-- End Right Column --></div>
+	<!-- End Page Content -->
+	<!-- Begin Footer -->
+		<div id="sflogo" style="position: relative; width: 90px; height: 35px; z-index: 1; left: -10px; top: 55px; float: right;">
+		<a href="http://sourceforge.net">
+<img width="88px" height="31px" src="http://sourceforge.net/sflogo.php?group_id=309305&type=1" alt="SourceForge.net Logo" />
+</a></div>
+	<div id="footer">
+		<p><a href="http://aquilawol.sourceforge.net">Home</a> | 
+		<a href="../contact/default.html">Contact</a> |
+		<a href="http://sourceforge.net/p/aquilawol/feature-requests/" target="_blank">
+		Feature Requests</a> |
+		<a href="../faq/default.html">FAQ</a> |
+		<a href="../information_links/default.html">Information Links</a> |
+		<a href="http://sourceforge.net/p/aquilawol/discussion/1105198/" target="_blank">Forum</a>
+		</p>
+		<p>Copyright &copy; 2004 - 2013, 
+		<a href="http://www.aquilatech.com" target="_blank">Aquila Technology</a>. All Rights Reserved.
+		</p>
+	</div>
+	<!-- End Footer --></div>
+<!-- End Container -->
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

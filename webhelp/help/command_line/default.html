@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>Home - WakeOnLAN</title>
+<style type="text/css">
+.ms-color2-main {
+	border-left-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom: 1.5pt solid black;
+	background-color: silver;
+}
+.ms-color2-tl {
+	font-weight: bold;
+	color: white;
+	border-left-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom: 1.5pt solid black;
+	background-color: maroon;
+}
+.ms-color2-left {
+	font-weight: bold;
+	color: black;
+	border-style: none;
+	background-color: #FFFFEF;
+}
+.ms-color2-top {
+	font-weight: bold;
+	color: white;
+	border-left-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom: 1.5pt solid black;
+	background-color: maroon;
+}
+.ms-color2-even {
+	color: black;
+	border-style: none;
+	background-color: #FFFFEF;
+}
+
+pre.codeSample {
+	background: none repeat scroll 0 0 #DDDDDD;
+	font-family: Lucida Console,Courier New;
+	font-size: large;
+	margin-bottom: 1em;
+	padding: 10px 15px 10px 25px;
+}
+
+.auto-style1 {
+	font-size: medium;
+}
+
+</style>
+<!-- #EndEditable -->
+<link href="../styles/style2.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<link href="../styles/pages.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<link rel="shortcut icon" href="http://aquilawol.sourceforge.net/favicon.ico" />
+<style type="text/css">
+
+.auto-style1 {
+	border-width: 0px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39085909-2', 'sourceforge.net');
+  ga('send', 'pageview');
+
+</script>
+<!-- #BeginEditable "head" -->
+
+<!-- #EndEditable -->
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead" style="text-align:center">
+		<img alt="" height="150" src="../images/wol_logo.png" width="150" /><a href="http://www.aquilatech.com"><img src="../images/aquilatech.png" style="float: right" class="auto-style1" /></a><h1>
+		WakeOnLAN Help</h1>
+		<h2>Aquila Technology</h2>
+		<h3>Version 2.7</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul>
+			<li><a href="http://aquilawol.sourceforge.net">Home</a></li>
+			<li><a href="../default.html">Help</a></li>
+			<li><a href="../faq/default.html">FAQ</a></li>
+			<li><a href="../troubleshooting/default.html">Troubleshooting</a></li>
+			<li>
+			<a href="http://sourceforge.net/projects/aquilawol/files/" target="_blank">Downloads</a></li>
+			<li><a href="../contact/default.html">Contact</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin Page Content -->
+	<div id="page_content">
+		<!-- Begin Left Column -->
+		<div id="column_l">
+			<!-- #BeginEditable "content" -->
+			<h2>Command Line</h2>
+			<p>There is a command line version of WOL called WakeOnLanC.exe.&nbsp; 
+			It's main purpose is to support the task scheduler, but it can be 
+			used for any reason to wake up and shutdown hosts just like the GUI.&nbsp; 
+			These are the command line options:</p>
+			<table class="ms-color2-main" style="width: 57%">
+				<!-- fpstyle: 9,011111100 -->
+				<tr>
+					<th class="ms-color2-tl" style="width: 80px">Command</th>
+					<th class="ms-color2-top" style="width: 514px">Description</th>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-s</td>
+					<td class="ms-color2-even" style="width: 514px">shutdown, 
+					requires -m or -all</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="height: 20px; width: 80px">
+					-a</td>
+					<td class="ms-color2-even" style="height: 20px; width: 514px">
+					abort a shutdown, requires -m</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px; height: 20px">
+					-r</td>
+					<td class="ms-color2-even" style="width: 514px; height: 20px">
+					reboot</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-w</td>
+					<td class="ms-color2-even" style="width: 514px">wakeup, 
+					requires -m, -mac, or -all</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-l</td>
+					<td class="ms-color2-even" style="width: 514px">listen for 
+					WOL packets</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-e</td>
+					<td class="ms-color2-even" style="width: 514px">enumerate 
+					host list</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-p "xx"</td>
+					<td class="ms-color2-even" style="width: 514px">specify path 
+					to machines.xml database</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-h</td>
+					<td class="ms-color2-even" style="width: 514px">display help</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">&nbsp;</td>
+					<td class="ms-color2-even" style="width: 514px">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">Options</td>
+					<td class="ms-color2-even" style="width: 514px">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-t xx</td>
+					<td class="ms-color2-even" style="width: 514px">time delay 
+					(xx = seconds).&nbsp; For shutdown and reboot commands.</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-f</td>
+					<td class="ms-color2-even" style="width: 514px">Force files 
+					closed.</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-m xx</td>
+					<td class="ms-color2-even" style="width: 514px">xx = machine 
+					name</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-mac xxxx</td>
+					<td class="ms-color2-even" style="width: 514px">MAC address</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-all</td>
+					<td class="ms-color2-even" style="width: 514px">All machines</td>
+				</tr>
+				<tr>
+					<td class="ms-color2-left" style="width: 80px">-c "xx"</td>
+					<td class="ms-color2-even" style="width: 514px">xx = comment 
+					for shutdown or reboot command.</td>
+				</tr>
+			</table>
+			<p>&nbsp;</p>
+			<h2>Command line examples</h2>
+			<p class="auto-style1"><strong>Shutdown machine named "LaMachine", the comment will be 
+				"Power Failure":</strong></p>
+			<pre class="codeSample">C:\&gt;WakeOnLanC -s -m \\LaMachine -c "Power Failure"</pre>
+			<p>&nbsp;</p>
+			<p class="auto-style1"><strong>Wakeup machine named "LaMachine":</strong></p>
+			<pre class="codeSample">C:\&gt;WakeOnLanC -w -m \\LaMachine </pre>
+			<p>&nbsp;</p>
+			<p class="auto-style1"><strong>Wakeup machine by MAC
+			address:</strong></p>
+			<pre class="codeSample">C:\&gt;WakeOnLanC -w -mac 00:43:18:9E:8E:A0</pre>
+&nbsp;<p class="auto-style1"><strong>Reboot "LaMachine", force files 
+			closed, delay for 20 seconds:</strong></p>
+			<pre class="codeSample">C:\&gt;WakeOnLanC -r -m \\LaMachine -t 20 -f</pre>
+&nbsp;<p class="auto-style1"><strong>Listen for and display WOL packets on the local subnet, for 
+			troubleshooting.</strong></p>
+			<pre class="codeSample">C:\&gt;WakeOnLanC -l</pre>
+			
+			<p>&nbsp;</p>
+			<p class="pages">
+				<a class="pages" href="../scheduler/default.html">&lt; Prev</a>
+				<a class="pages" href="../getting_started/default.html">1</a>
+				<a class="pages" href="../faq/default.html">2</a>
+				<a class="pages" href="../main_window/default.html">3</a>
+				<a class="pages" href="../properties/default.html">4</a>
+				<a class="pages" href="../wakeup/default.html">5</a>
+				<a class="pages" href="../shutdown/default.html">6</a>
+				<a class="pages" href="../search/default.html">7</a>
+				<a class="pages" href="../troubleshooting/default.html">8</a>
+				<a class="pages" href="../multiuser/default.html">9</a>
+				<a class="pages" href="../scheduler/default.html">10</a>
+				<span class="current">11</span>
+				<span class="disabled">Next &gt;</span>
+			</p>
+
+			<!-- #EndEditable --></div>
+		<!-- End Left Column -->
+		<!-- Begin Right Column -->
+		<div id="column_r">
+			<!-- #BeginEditable "sidebar" -->
+			<h4>Related topics</h4>
+			<ul>
+				<li><a href="../troubleshooting/default.html">Troubleshooting</a></li>
+				<li><a href="../wakeup/default.html">Wake up</a></li>
+				<li><a href="../shutdown/default.html">Shut down</a></li>
+			</ul>
+			<!-- #EndEditable --></div>
+		<!-- End Right Column --></div>
+	<!-- End Page Content -->
+	<!-- Begin Footer -->
+		<div id="sflogo" style="position: relative; width: 90px; height: 35px; z-index: 1; left: -10px; top: 55px; float: right;">
+		<a href="http://sourceforge.net">
+<img width="88px" height="31px" src="http://sourceforge.net/sflogo.php?group_id=309305&type=1" alt="SourceForge.net Logo" />
+</a></div>
+	<div id="footer">
+		<p><a href="http://aquilawol.sourceforge.net">Home</a> | 
+		<a href="../contact/default.html">Contact</a> |
+		<a href="http://sourceforge.net/p/aquilawol/feature-requests/" target="_blank">
+		Feature Requests</a> |
+		<a href="../faq/default.html">FAQ</a> |
+		<a href="../information_links/default.html">Information Links</a> |
+		<a href="http://sourceforge.net/p/aquilawol/discussion/1105198/" target="_blank">Forum</a>
+		</p>
+		<p>Copyright &copy; 2004 - 2013, 
+		<a href="http://www.aquilatech.com" target="_blank">Aquila Technology</a>. All Rights Reserved.
+		</p>
+	</div>
+	<!-- End Footer --></div>
+<!-- End Container -->
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>
