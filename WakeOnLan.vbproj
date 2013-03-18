@@ -211,7 +211,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <DefineTrace>true</DefineTrace>
     <OutputPath>C:\Debug\WakeOnLan\</OutputPath>
-    <DefineConstants>Trial=false</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <BaseAddress>285212672</BaseAddress>
     <DocumentationFile>WakeOnLan.xml</DocumentationFile>
     <Optimize>true</Optimize>
