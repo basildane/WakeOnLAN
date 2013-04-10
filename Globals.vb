@@ -40,7 +40,7 @@ Module Globals
 #If DEBUG Then
             Help.ShowHelp(parent, "file:///P:\WakeOnLan\Website\help\" + url)
 #Else
-            Help.ShowHelp(parent, "file:///" + AppDomain.CurrentDomain.BaseDirectory + "help\help\" + url)
+            Help.ShowHelp(parent, "file:///" + AppDomain.CurrentDomain.BaseDirectory + "help\" + url)
 #End If
 
         Catch ex As Exception
