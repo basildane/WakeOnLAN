@@ -17,6 +17,7 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.Diagnostics
+Imports System.Net
 
 Module Module1
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
@@ -28,6 +29,7 @@ Module Module1
         Shutdown
         WakeUp
         Abort
+        Debug
     End Enum
 
     Enum ErrorCodes
@@ -135,6 +137,9 @@ Module Module1
                     DisplayHelp()
                     Return ErrorCodes.OK
 
+                Case "-d"
+                    Mode = _modeTypes.Debug
+
                 Case Else
                     DisplayHelp()
                     Return ErrorCodes.InvalidCommand
@@ -154,6 +159,9 @@ Module Module1
             Case _modeTypes.Abort
                 Return Abort()
 
+            Case _modeTypes.Debug
+                Return ShowIPConfig()
+
             Case Else
                 BadCommand()
                 Return ErrorCodes.InvalidCommand
@@ -172,6 +180,7 @@ Module Module1
         Console.WriteLine("-l   (listen for WOL packets)")
         Console.WriteLine("-e   (enumerate machine list)")
         Console.WriteLine("-p   (path to machines.xml (optional))")
+        Console.WriteLine("-d   (debug) requires -m")
         Console.WriteLine("-h   (display this help message)")
         Console.WriteLine()
         Console.WriteLine("options:")
@@ -343,6 +352,32 @@ Module Module1
             Console.WriteLine(" IP: {0} MAC: {1}", m.IP.PadRight(16, " "), m.MAC)
         Next
     End Sub
+
+    Private Function ShowIPConfig() As Integer
+        Dim ping As New NetworkInformation.Ping
+        Dim reply As NetworkInformation.PingReply
+
+        If (sMachine = "") Then
+            Console.WriteLine("You must specify machine name with -m")
+            Return ErrorCodes.InvalidCommand
+        End If
+        Console.WriteLine("Show IP configuration for " & sMachine)
+        Try
+            For Each IPA As IPAddress In Dns.GetHostAddresses(sMachine)
+                Console.WriteLine("  Address: {0} Family: {1}", IPA.ToString(), IPA.AddressFamily.ToString())
+            Next
+
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            Return ErrorCodes.NotFound
+
+        End Try
+
+        reply = ping.Send(sMachine, 1500)
+        Console.WriteLine("Ping: " & reply.Status.ToString())
+        Return ErrorCodes.OK
+
+    End Function
 
 
     Private Function FormatMessage(ByVal [error] As Integer) As String
