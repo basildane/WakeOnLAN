@@ -11,13 +11,8 @@ Partial Class AboutBox
         MyBase.Dispose(disposing)
     End Sub
 
-    Friend WithEvents TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
-    Friend WithEvents LabelProductName As System.Windows.Forms.Label
-    Friend WithEvents LabelVersion As System.Windows.Forms.Label
-    Friend WithEvents TextBoxDescription As System.Windows.Forms.TextBox
     Friend WithEvents OKButton As System.Windows.Forms.Button
-    Friend WithEvents LabelCopyright As System.Windows.Forms.Label
 
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
@@ -28,36 +23,44 @@ Partial Class AboutBox
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutBox))
-        Me.TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
+        Me.OKButton = New System.Windows.Forms.Button()
+        Me.TextBoxDescription = New System.Windows.Forms.TextBox()
         Me.LabelProductName = New System.Windows.Forms.Label()
         Me.LabelVersion = New System.Windows.Forms.Label()
         Me.LabelCopyright = New System.Windows.Forms.Label()
-        Me.TextBoxDescription = New System.Windows.Forms.TextBox()
-        Me.OKButton = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.TableLayoutPanel.SuspendLayout()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.label4 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.lAutomaticUpdate = New System.Windows.Forms.Label()
+        Me.pbUpdate = New System.Windows.Forms.PictureBox()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.pbUpdate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'TableLayoutPanel
-        '
-        resources.ApplyResources(Me.TableLayoutPanel, "TableLayoutPanel")
-        Me.TableLayoutPanel.Controls.Add(Me.LogoPictureBox, 0, 0)
-        Me.TableLayoutPanel.Controls.Add(Me.LabelProductName, 1, 0)
-        Me.TableLayoutPanel.Controls.Add(Me.LabelVersion, 1, 1)
-        Me.TableLayoutPanel.Controls.Add(Me.LabelCopyright, 1, 2)
-        Me.TableLayoutPanel.Controls.Add(Me.TextBoxDescription, 1, 4)
-        Me.TableLayoutPanel.Controls.Add(Me.OKButton, 1, 5)
-        Me.TableLayoutPanel.Controls.Add(Me.LinkLabel1, 1, 3)
-        Me.TableLayoutPanel.Name = "TableLayoutPanel"
         '
         'LogoPictureBox
         '
         resources.ApplyResources(Me.LogoPictureBox, "LogoPictureBox")
         Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.TableLayoutPanel.SetRowSpan(Me.LogoPictureBox, 6)
         Me.LogoPictureBox.TabStop = False
+        '
+        'OKButton
+        '
+        resources.ApplyResources(Me.OKButton, "OKButton")
+        Me.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.OKButton.Name = "OKButton"
+        '
+        'TextBoxDescription
+        '
+        Me.TextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None
+        resources.ApplyResources(Me.TextBoxDescription, "TextBoxDescription")
+        Me.TextBoxDescription.Name = "TextBoxDescription"
+        Me.TextBoxDescription.ReadOnly = True
+        Me.TextBoxDescription.TabStop = False
         '
         'LabelProductName
         '
@@ -72,21 +75,8 @@ Partial Class AboutBox
         'LabelCopyright
         '
         resources.ApplyResources(Me.LabelCopyright, "LabelCopyright")
+        Me.LabelCopyright.ForeColor = System.Drawing.SystemColors.Highlight
         Me.LabelCopyright.Name = "LabelCopyright"
-        '
-        'TextBoxDescription
-        '
-        resources.ApplyResources(Me.TextBoxDescription, "TextBoxDescription")
-        Me.TextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxDescription.Name = "TextBoxDescription"
-        Me.TextBoxDescription.ReadOnly = True
-        Me.TextBoxDescription.TabStop = False
-        '
-        'OKButton
-        '
-        resources.ApplyResources(Me.OKButton, "OKButton")
-        Me.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.OKButton.Name = "OKButton"
         '
         'LinkLabel1
         '
@@ -94,23 +84,88 @@ Partial Class AboutBox
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.TabStop = True
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel1.Controls.Add(Me.LogoPictureBox)
+        Me.Panel1.Controls.Add(Me.LabelProductName)
+        Me.Panel1.Controls.Add(Me.LabelCopyright)
+        resources.ApplyResources(Me.Panel1, "Panel1")
+        Me.Panel1.Name = "Panel1"
+        '
+        'label4
+        '
+        resources.ApplyResources(Me.label4, "label4")
+        Me.label4.Name = "label4"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.Name = "Label1"
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.Name = "Label2"
+        '
+        'LinkLabel2
+        '
+        resources.ApplyResources(Me.LinkLabel2, "LinkLabel2")
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.TabStop = True
+        '
+        'lAutomaticUpdate
+        '
+        resources.ApplyResources(Me.lAutomaticUpdate, "lAutomaticUpdate")
+        Me.lAutomaticUpdate.Name = "lAutomaticUpdate"
+        '
+        'pbUpdate
+        '
+        Me.pbUpdate.Image = Global.WakeOnLan.My.Resources.Resources.system_software_update
+        resources.ApplyResources(Me.pbUpdate, "pbUpdate")
+        Me.pbUpdate.Name = "pbUpdate"
+        Me.pbUpdate.TabStop = False
+        '
         'AboutBox
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.CancelButton = Me.OKButton
-        Me.Controls.Add(Me.TableLayoutPanel)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Controls.Add(Me.pbUpdate)
+        Me.Controls.Add(Me.lAutomaticUpdate)
+        Me.Controls.Add(Me.LinkLabel2)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.label4)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.LabelVersion)
+        Me.Controls.Add(Me.TextBoxDescription)
+        Me.Controls.Add(Me.OKButton)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "AboutBox"
         Me.ShowInTaskbar = False
-        Me.TableLayoutPanel.ResumeLayout(False)
-        Me.TableLayoutPanel.PerformLayout()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.pbUpdate, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
+    Friend WithEvents TextBoxDescription As System.Windows.Forms.TextBox
+    Friend WithEvents LabelProductName As System.Windows.Forms.Label
+    Friend WithEvents LabelVersion As System.Windows.Forms.Label
+    Friend WithEvents LabelCopyright As System.Windows.Forms.Label
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Private WithEvents label4 As System.Windows.Forms.Label
+    Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lAutomaticUpdate As System.Windows.Forms.Label
+    Friend WithEvents pbUpdate As System.Windows.Forms.PictureBox
 
 End Class

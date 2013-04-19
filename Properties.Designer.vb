@@ -41,15 +41,15 @@ Partial Class Properties
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.bCalcBroadcast = New System.Windows.Forms.Button()
-        Me.Help_Button = New System.Windows.Forms.Button()
         Me.TTL = New WakeOnLan.RegExTextBox()
         Me.UDPPort = New WakeOnLan.RegExTextBox()
         Me.Broadcast = New WakeOnLan.IPAddressControl()
         Me.IP = New WakeOnLan.IPAddressControl()
         Me.MachineName = New WakeOnLan.RegExTextBox()
         Me.MAC = New WakeOnLan.RegExTextBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.bCalcBroadcast = New System.Windows.Forms.Button()
+        Me.Help_Button = New System.Windows.Forms.Button()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -157,18 +157,6 @@ Partial Class Properties
         Me.ErrorProvider1.SetIconAlignment(Me.Label6, CType(resources.GetObject("Label6.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
         Me.Label6.Name = "Label6"
         '
-        'bCalcBroadcast
-        '
-        resources.ApplyResources(Me.bCalcBroadcast, "bCalcBroadcast")
-        Me.bCalcBroadcast.Name = "bCalcBroadcast"
-        Me.bCalcBroadcast.UseVisualStyleBackColor = True
-        '
-        'Help_Button
-        '
-        resources.ApplyResources(Me.Help_Button, "Help_Button")
-        Me.Help_Button.Name = "Help_Button"
-        Me.Help_Button.UseVisualStyleBackColor = True
-        '
         'TTL
         '
         Me.TTL.ErrorColor = System.Drawing.Color.Red
@@ -220,6 +208,18 @@ Partial Class Properties
         resources.ApplyResources(Me.MAC, "MAC")
         Me.MAC.Name = "MAC"
         Me.MAC.ValidationExpression = "^([0-9a-fA-F]{2}([-:])?){5}[0-9a-fA-F]{2}$"
+        '
+        'bCalcBroadcast
+        '
+        resources.ApplyResources(Me.bCalcBroadcast, "bCalcBroadcast")
+        Me.bCalcBroadcast.Name = "bCalcBroadcast"
+        Me.bCalcBroadcast.UseVisualStyleBackColor = True
+        '
+        'Help_Button
+        '
+        resources.ApplyResources(Me.Help_Button, "Help_Button")
+        Me.Help_Button.Name = "Help_Button"
+        Me.Help_Button.UseVisualStyleBackColor = True
         '
         'Properties
         '

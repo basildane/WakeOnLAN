@@ -64,6 +64,7 @@ Public Class Properties
         _Name = ""
         Me.Text = String.Format(My.Resources.Strings.Properties, My.Resources.Strings.isNew)
         Me.Delete_Button.Visible = False
+        Me.IP.Text = ""
         Me.Broadcast.Text = "255.255.255.255"
         Me.UDPPort.Text = "9"
         Me.TTL.Text = "128"

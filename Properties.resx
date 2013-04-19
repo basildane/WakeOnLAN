@@ -142,7 +142,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Cancel_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>14</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -172,13 +172,13 @@
     <value>130, 20</value>
   </data>
   <data name="TTL.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;TTL.Name" xml:space="preserve">
     <value>TTL</value>
   </data>
   <data name="&gt;&gt;TTL.Type" xml:space="preserve">
-    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.0.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TTL.Parent" xml:space="preserve">
     <value>$this</value>
@@ -196,13 +196,13 @@
     <value>130, 20</value>
   </data>
   <data name="UDPPort.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;UDPPort.Name" xml:space="preserve">
     <value>UDPPort</value>
   </data>
   <data name="&gt;&gt;UDPPort.Type" xml:space="preserve">
-    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.0.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;UDPPort.Parent" xml:space="preserve">
     <value>$this</value>
@@ -220,7 +220,7 @@
     <value>75, 23</value>
   </data>
   <data name="Help_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>12</value>
   </data>
   <data name="Help_Button.Text" xml:space="preserve">
     <value>Help</value>
@@ -346,13 +346,13 @@
     <value>129, 24</value>
   </data>
   <data name="Broadcast.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;Broadcast.Name" xml:space="preserve">
     <value>Broadcast</value>
   </data>
   <data name="&gt;&gt;Broadcast.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.7.0.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.7.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Broadcast.Parent" xml:space="preserve">
     <value>$this</value>
@@ -406,13 +406,13 @@
     <value>129, 24</value>
   </data>
   <data name="IP.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;IP.Name" xml:space="preserve">
     <value>IP</value>
   </data>
   <data name="&gt;&gt;IP.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.7.0.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.7.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;IP.Parent" xml:space="preserve">
     <value>$this</value>
@@ -436,7 +436,7 @@
     <value>MachineName</value>
   </data>
   <data name="&gt;&gt;MachineName.Type" xml:space="preserve">
-    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.0.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;MachineName.Parent" xml:space="preserve">
     <value>$this</value>
@@ -460,7 +460,7 @@
     <value>MAC</value>
   </data>
   <data name="&gt;&gt;MAC.Type" xml:space="preserve">
-    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.0.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;MAC.Parent" xml:space="preserve">
     <value>$this</value>
@@ -478,7 +478,7 @@
     <value>130, 20</value>
   </data>
   <data name="Group.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;Group.Name" xml:space="preserve">
     <value>Group</value>
@@ -541,7 +541,7 @@
     <value>75, 23</value>
   </data>
   <data name="Delete_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="Delete_Button.Text" xml:space="preserve">
     <value>Delete</value>
@@ -568,7 +568,7 @@
     <value>130, 20</value>
   </data>
   <data name="Edit_NETBIOS.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;Edit_NETBIOS.Name" xml:space="preserve">
     <value>Edit_NETBIOS</value>
@@ -595,7 +595,7 @@
     <value>321, 57</value>
   </data>
   <data name="TextBox_Command.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;TextBox_Command.Name" xml:space="preserve">
     <value>TextBox_Command</value>
@@ -661,7 +661,7 @@
     <value>134, 17</value>
   </data>
   <data name="CheckBox_Emergency.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="CheckBox_Emergency.Text" xml:space="preserve">
     <value>Emergency shutdown?</value>
@@ -822,9 +822,6 @@
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Properties</value>
   </data>
@@ -859,7 +856,7 @@
     <value>67, 23</value>
   </data>
   <data name="OK_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>13</value>
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>OK</value>

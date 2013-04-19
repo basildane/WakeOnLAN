@@ -16,6 +16,8 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
+Imports System.Resources
+
 Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
@@ -47,6 +49,7 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 
-<Assembly: AssemblyVersion("2.7.1.1")> 
+<Assembly: AssemblyVersion("2.7.2.0")> 
 
 <Assembly: ComVisibleAttribute(False)> 
+<Assembly: NeutralResourcesLanguageAttribute("en-US")> 

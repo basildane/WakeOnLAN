@@ -71,5 +71,14 @@
     <Setting Name="MinimizeToTray" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="updateURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://aquilawol.sourceforge.net/updates/AppCast.xml</Value>
+    </Setting>
+    <Setting Name="updateIntervalDays" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="autocheckUpdates" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -167,6 +167,7 @@ Partial Class Explorer
         Me.DetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -778,6 +779,11 @@ Partial Class Explorer
         Me.NotifyIcon1.ContextMenuStrip = Me.ContextMenuStripTray
         resources.ApplyResources(Me.NotifyIcon1, "NotifyIcon1")
         '
+        'NotifyIconUpdate
+        '
+        Me.NotifyIconUpdate.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        resources.ApplyResources(Me.NotifyIconUpdate, "NotifyIconUpdate")
+        '
         'Explorer
         '
         resources.ApplyResources(Me, "$this")
@@ -867,5 +873,6 @@ Partial Class Explorer
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripMenuItemWakeUp As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ListenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NotifyIconUpdate As System.Windows.Forms.NotifyIcon
 
 End Class

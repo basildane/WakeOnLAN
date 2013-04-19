@@ -329,6 +329,36 @@ Namespace My
                 Me("MinimizeToTray") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://aquilawol.sourceforge.net/updates/AppCast.xml")>  _
+        Public ReadOnly Property updateURL() As String
+            Get
+                Return CType(Me("updateURL"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("7")>  _
+        Public ReadOnly Property updateIntervalDays() As Integer
+            Get
+                Return CType(Me("updateIntervalDays"),Integer)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property autocheckUpdates() As Boolean
+            Get
+                Return CType(Me("autocheckUpdates"),Boolean)
+            End Get
+            Set
+                Me("autocheckUpdates") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

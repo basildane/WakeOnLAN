@@ -36,6 +36,7 @@ Public Class Options
             My.Settings.Force = .Force
             My.Settings.Reboot = .Reboot
             My.Settings.dbPath = .dbPath
+            My.Settings.autocheckUpdates = .AutoCheck
         End With
         My.Settings.Save()
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
@@ -67,6 +68,7 @@ Public Class Options
             .Force = My.Settings.Force
             .Reboot = My.Settings.Reboot
             .dbPath = My.Settings.dbPath
+            .AutoCheck = My.Settings.autocheckUpdates
         End With
 
         With PropertyGrid1
@@ -131,6 +133,17 @@ Public Class Options
             End Set
         End Property
         Private _Reboot As Boolean
+
+        <TypeConverter(GetType(TrueFalseConverter))> _
+        <GlobalizedCategory("cat_WOL")> Public Property AutoCheck() As Boolean
+            Get
+                Return _autocheck
+            End Get
+            Set(value As Boolean)
+                _autocheck = value
+            End Set
+        End Property
+        Private _autocheck As Boolean
 
         Private _Shutdown As String
 

@@ -19,6 +19,7 @@
 Imports System.Diagnostics
 Imports System.Windows.Forms
 Imports Microsoft.Win32
+Imports AutoUpdaterDotNET
 
 Public Class Explorer
     Declare Function IsValidLocale Lib "kernel32" (ByVal Locale As Integer, ByVal dwFlags As Integer) As Integer
@@ -99,6 +100,35 @@ Public Class Explorer
         Catch ex As Exception
 
         End Try
+
+        CheckUpdates()
+    End Sub
+
+    Private Sub CheckUpdates()
+        AutoUpdater.CurrentCulture = Application.CurrentCulture
+        AutoUpdater.AppCastURL = My.Settings.updateURL
+        AddHandler AutoUpdater.UpdateStatus, AddressOf updateStatus
+        AutoUpdater.Start(My.Settings.updateIntervalDays)
+    End Sub
+
+    Private Delegate Sub UpdateStatusHandler(sender As Object, e As AutoUpdateEventArgs)
+
+    Private Sub updateStatus(sender As Object, e As AutoUpdateEventArgs)
+        If (InvokeRequired) Then
+            BeginInvoke(New UpdateStatusHandler(AddressOf updateStatus), New Object() {sender, e})
+            Return
+        End If
+
+        ToolStripStatusLabel2.Text = e.text
+        If (e.status = AutoUpdateEventArgs.statusCodes.updateAvailable) Then
+            NotifyIconUpdate.Visible = True
+            NotifyIconUpdate.ShowBalloonTip(0, "WakeOnLAN Update Available", e.text, ToolTipIcon.Info)
+        End If
+    End Sub
+
+    Private Sub NotifyIconUpdate_BalloonTipClicked(sender As System.Object, e As System.EventArgs) Handles NotifyIconUpdate.BalloonTipClicked, NotifyIconUpdate.Click
+        NotifyIconUpdate.Visible = False
+        AboutBox.ShowDialog(Me)
     End Sub
 
     Private Sub SetMinimizeToTray()
@@ -696,6 +726,7 @@ Public Class Explorer
     Private Sub ListenToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ListenToolStripMenuItem.Click
         My.Forms.Listener.Show()
     End Sub
+
 End Class
 
 ' Implements the manual sorting of items by columns.

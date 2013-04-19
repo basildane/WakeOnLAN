@@ -45,6 +45,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_B0CC8B2E5610B5F72F06BA364BC74D1A"
+        "OwnerKey" = "8:_742B0D135E1C400EBAB1628E8910BE27"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E5E9B79075F59F1580703FF879BF617A"
         "OwnerKey" = "8:_742B0D135E1C400EBAB1628E8910BE27"
         "MsmSig" = "8:_UNDEFINED"
@@ -95,6 +101,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_FF980E69204A364C82D9C295FF9AF456"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B0CC8B2E5610B5F72F06BA364BC74D1A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -307,6 +319,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B0CC8B2E5610B5F72F06BA364BC74D1A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:AutoUpdater.NET, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_B0CC8B2E5610B5F72F06BA364BC74D1A"
+                    {
+                    "Name" = "8:AutoUpdater.NET.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:AutoUpdater.NET.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_303A410242F840E79F6DB760BFF0D7C9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E5E9B79075F59F1580703FF879BF617A"
             {
             "AssemblyRegister" = "3:1"
@@ -446,16 +489,16 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:WakeOnLAN 2.7.1"
-        "ProductCode" = "8:{E026E971-2770-414E-BF5B-4F9A74CBFB27}"
-        "PackageCode" = "8:{BEBB2255-AE60-45DF-A52F-0BD620944867}"
+        "ProductName" = "8:WakeOnLAN 2.7.2"
+        "ProductCode" = "8:{3B062D4D-0D06-4B72-A022-B1A199DF1C49}"
+        "PackageCode" = "8:{97DBD2CF-173F-4221-BCD6-3214D38DA1C7}"
         "UpgradeCode" = "8:{20A416B6-1FE6-468D-85B4-F8952658AA27}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.7.1"
+        "ProductVersion" = "8:2.7.2"
         "Manufacturer" = "8:Aquila Technology"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://aquilawol.sourceforge.net/"
