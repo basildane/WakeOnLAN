@@ -130,18 +130,11 @@
   <data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MachineName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
-  </data>
   <data name="MachineName.ToolTip" xml:space="preserve">
     <value>Ceci est le nom du périphérique. Entrer un nom valide, contenant des lettres, chiffres, tirets ou liaisons.</value>
   </data>
   <data name="MAC.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
-  </data>
-  <data name="MAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
   </data>
   <data name="MAC.ToolTip" xml:space="preserve">
     <value>Entrer l'adresse MAC du périphérique. Cela est utilisé pour les messages de réveil. Les adresses MAC valides sont 6 paires de chiffres hexadécimaux, séparées par ':' ou '-'. Par exemple: 01:00:22:32:af:d0</value>
@@ -149,19 +142,11 @@
   <data name="Group.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="Group.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
-  </data>
-  <data name="Label2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 143</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 13</value>
   </data>
-  <data name="Label2.Text" xml:space="preserve">
+  <data name="lbGroup.Text" xml:space="preserve">
     <value>Groupe</value>
   </data>
   <data name="Delete_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
@@ -173,19 +158,13 @@
   <data name="Edit_NETBIOS.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="Edit_NETBIOS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
-  </data>
   <data name="TextBox_Command.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="Label1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 13</value>
   </data>
-  <data name="Label1.Text" xml:space="preserve">
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
     <value>Ligne de commande pour l'arrêt :</value>
   </data>
   <data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
@@ -197,46 +176,25 @@
   <data name="CheckBox_Emergency.Text" xml:space="preserve">
     <value>Arrêt d'urgence ?</value>
   </data>
-  <data name="Label11.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 147</value>
   </data>
-  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 117</value>
-  </data>
-  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 13</value>
   </data>
-  <data name="Label11.Text" xml:space="preserve">
+  <data name="lbNetbios.Text" xml:space="preserve">
     <value>Nom Netbios</value>
   </data>
-  <data name="Label10.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 29</value>
-  </data>
-  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 13</value>
   </data>
-  <data name="Label10.Text" xml:space="preserve">
+  <data name="lbName.Text" xml:space="preserve">
     <value>Nom</value>
   </data>
-  <data name="Label9.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 61</value>
-  </data>
-  <data name="Label9.Text" xml:space="preserve">
+  <data name="lbMAC.Text" xml:space="preserve">
     <value>Adresse MAC</value>
   </data>
-  <data name="Label3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 88</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
+  <data name="lbIP.Text" xml:space="preserve">
     <value>Adresse IP</value>
   </data>
   <data name="$this.Text" xml:space="preserve">

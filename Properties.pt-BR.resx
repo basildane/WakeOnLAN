@@ -126,20 +126,17 @@
   <data name="MAC.ToolTip" xml:space="preserve">
     <value>Insira o endereço MAC do computador. Um endereço MAC válido é composto de 6 pares de digitos hexadecimais separados por ':' ou '-'. Exemplo: 01:00:22:32:af:d0</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 143</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
+  <data name="lbGroup.Text" xml:space="preserve">
     <value>Grupo</value>
   </data>
   <data name="Delete_Button.Text" xml:space="preserve">
     <value>Excluir</value>
   </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 13</value>
   </data>
-  <data name="Label1.Text" xml:space="preserve">
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
     <value>Linha de comando Shutdown:</value>
   </data>
   <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
@@ -148,37 +145,25 @@
   <data name="CheckBox_Emergency.Text" xml:space="preserve">
     <value>Deligamento de emergência?</value>
   </data>
-  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 117</value>
-  </data>
-  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 13</value>
   </data>
-  <data name="Label11.Text" xml:space="preserve">
+  <data name="lbNetbios.Text" xml:space="preserve">
     <value>Nome NetBIOS</value>
   </data>
-  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 29</value>
-  </data>
-  <data name="Label10.Text" xml:space="preserve">
+  <data name="lbName.Text" xml:space="preserve">
     <value>Nome</value>
   </data>
-  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 61</value>
-  </data>
-  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbMAC.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 13</value>
   </data>
-  <data name="Label9.Text" xml:space="preserve">
+  <data name="lbMAC.Text" xml:space="preserve">
     <value>Endereço MAC</value>
   </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 89</value>
-  </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 13</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
+  <data name="lbIP.Text" xml:space="preserve">
     <value>Endereço IP</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
