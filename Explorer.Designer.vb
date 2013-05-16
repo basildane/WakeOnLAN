@@ -143,9 +143,9 @@ Partial Class Explorer
         Me.DeutschToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FrenchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RussianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FinnishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnglishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TaiwanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FinnishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchForMachinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -657,6 +657,13 @@ Partial Class Explorer
         Me.RussianToolStripMenuItem.Name = "RussianToolStripMenuItem"
         Me.RussianToolStripMenuItem.Tag = "ru-RU"
         '
+        'FinnishToolStripMenuItem
+        '
+        Me.FinnishToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.finland_16x16
+        Me.FinnishToolStripMenuItem.Name = "FinnishToolStripMenuItem"
+        resources.ApplyResources(Me.FinnishToolStripMenuItem, "FinnishToolStripMenuItem")
+        Me.FinnishToolStripMenuItem.Tag = "fi-FI"
+        '
         'EnglishToolStripMenuItem
         '
         Me.EnglishToolStripMenuItem.CheckOnClick = True
@@ -669,13 +676,6 @@ Partial Class Explorer
         resources.ApplyResources(Me.TaiwanToolStripMenuItem, "TaiwanToolStripMenuItem")
         Me.TaiwanToolStripMenuItem.Name = "TaiwanToolStripMenuItem"
         Me.TaiwanToolStripMenuItem.Tag = "zh-TW"
-        '
-        'FinnishToolStripMenuItem
-        '
-        Me.FinnishToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.finland_16x16
-        Me.FinnishToolStripMenuItem.Name = "FinnishToolStripMenuItem"
-        resources.ApplyResources(Me.FinnishToolStripMenuItem, "FinnishToolStripMenuItem")
-        Me.FinnishToolStripMenuItem.Tag = "fi-FI"
         '
         'ToolsToolStripMenuItem
         '

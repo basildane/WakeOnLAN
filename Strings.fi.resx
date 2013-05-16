@@ -316,19 +316,19 @@
     <value>Käynnistä kaikki tietokoneet</value>
   </data>
   <data name="lit_at" xml:space="preserve">
-    <value>???</value>
+    <value>At {0} on {1}</value>
   </data>
   <data name="lit_atDays" xml:space="preserve">
-    <value>???</value>
+    <value>At {0} every {1} day(s)</value>
   </data>
   <data name="lit_atWeeks" xml:space="preserve">
-    <value>???</value>
+    <value>At {0} every {1} every {2} weeks, starting {3}</value>
   </data>
   <data name="lit_Disabled" xml:space="preserve">
     <value>Estetty</value>
   </data>
   <data name="lit_Enabled" xml:space="preserve">
-    <value>???</value>
+    <value>Enabled</value>
   </data>
   <data name="lit_Error" xml:space="preserve">
     <value>Virhe</value>
@@ -337,7 +337,7 @@
     <value>Virheellinen komentokehoite</value>
   </data>
   <data name="lit_multipleTriggers" xml:space="preserve">
-    <value>???</value>
+    <value>Multiple triggers defined</value>
   </data>
   <data name="lit_Never" xml:space="preserve">
     <value>Ei koskaan</value>
@@ -346,7 +346,7 @@
     <value>Ei mitään</value>
   </data>
   <data name="lit_noRights" xml:space="preserve">
-    <value>???</value>
+    <value>{0} does not appear to have read access rights to the WOL Scheduler database. Grant access?</value>
   </data>
   <data name="lit_notFound" xml:space="preserve">
     <value>Tietokonetta ei löydy</value>
@@ -364,9 +364,9 @@
     <value>Tuntematon</value>
   </data>
   <data name="lit_false" xml:space="preserve">
-    <value>???</value>
+    <value>False</value>
   </data>
   <data name="lit_true" xml:space="preserve">
-    <value>???</value>
+    <value>True</value>
   </data>
 </root>

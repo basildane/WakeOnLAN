@@ -306,6 +306,16 @@
     <Compile Include="Controls\IPAddress.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Property\OptionProperties.fi.Designer.vb">
+      <DependentUpon>OptionProperties.fi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\ReportStrings.fi.Designer.vb">
+      <DependentUpon>ReportStrings.fi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Strings.fi.Designer.vb">
       <DependentUpon>Strings.fi.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -605,6 +615,43 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\IPAddress.resx">
       <DependentUpon>IPAddress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License.fi.resx">
+      <DependentUpon>License.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties.fi.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\OptionProperties.fi.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionProperties.fi.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\Options.fi.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportStrings.fi.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReportStrings.fi.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditAction.fi.resx">
+      <DependentUpon>EditAction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTask.fi.resx">
+      <DependentUpon>EditTask.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTrigger.fi.resx">
+      <DependentUpon>EditTrigger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\Schedule.fi.resx">
+      <DependentUpon>Schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.fi.resx">
+      <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shutdown.fi.resx">
+      <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Strings.fi.resx">
       <Generator>ResXFileCodeGenerator</Generator>

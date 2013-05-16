@@ -117,614 +117,518 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="Cancel_Button.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbMAC.Text" xml:space="preserve">
-    <value>MAC Address</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbBroadcast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="&gt;&gt;lbShutdownCommand.ZOrder" xml:space="preserve">
-    <value>18</value>
+  <data name="&gt;&gt;lbIP.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Delete_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lbNetbios.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="bCalcBroadcast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="lbTTL.Text" xml:space="preserve">
+    <value>TTL</value>
   </data>
-  <data name="lbShutdownCommand.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbShutdownCommand.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbMAC.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="&gt;&gt;lbName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Help_Button.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="TextBox_Command.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="Help_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;Help_Button.Name" xml:space="preserve">
-    <value>Help_Button</value>
-  </data>
-  <data name="OK_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="&gt;&gt;Delete_Button.Name" xml:space="preserve">
-    <value>Delete_Button</value>
-  </data>
-  <data name="Cancel_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="TTL.IconPadding" type="System.Int32, mscorlib">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbBroadcast.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="lbTTL.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="lbBroadcast.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="TextBox_Command.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 57</value>
-  </data>
-  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="OK_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 414</value>
-  </data>
-  <data name="IP.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="CheckBox_Emergency.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbIP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="lbIP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbUDP.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;OK_Button.Name" xml:space="preserve">
     <value>OK_Button</value>
   </data>
-  <data name="CheckBox_Emergency.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 87</value>
   </data>
-  <data name="&gt;&gt;lbMAC.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="TTL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
-  </data>
-  <data name="lbMAC.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbBroadcast.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
+  <data name="&gt;&gt;lbBroadcast.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="lbGroup.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 371</value>
-  </data>
-  <data name="lbNetbios.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MAC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 58</value>
-  </data>
-  <data name="lbIP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="&gt;&gt;ErrorProvider1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbNetbios.Name" xml:space="preserve">
-    <value>lbNetbios</value>
-  </data>
-  <data name="&gt;&gt;bCalcBroadcast.Name" xml:space="preserve">
-    <value>bCalcBroadcast</value>
-  </data>
-  <data name="&gt;&gt;Broadcast.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;OK_Button.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Properties</value>
-  </data>
-  <data name="&gt;&gt;OK_Button.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lbGroup.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbGroup.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="lbTTL.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="lbIP.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TextBox_Command.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 13</value>
-  </data>
-  <data name="&gt;&gt;lbUDP.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbNetbios.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="bCalcBroadcast.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 147</value>
   </data>
-  <data name="&gt;&gt;Edit_NETBIOS.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;Broadcast.Name" xml:space="preserve">
-    <value>Broadcast</value>
+  <data name="UDPPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 341</value>
   </data>
   <data name="UDPPort.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="lbName.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;CheckBox_Emergency.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MAC.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbBroadcast.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;Cancel_Button.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbNetbios.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;lbTTL.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbBroadcast.Text" xml:space="preserve">
-    <value>Broadcast</value>
-  </data>
-  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 344</value>
-  </data>
-  <data name="&gt;&gt;UDPPort.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbBroadcast.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbIP.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="OK_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lbShutdownCommand.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
   </data>
-  <data name="&gt;&gt;CheckBox_Emergency.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>Shutdown command line:</value>
   </data>
-  <data name="lbBroadcast.IconPadding" type="System.Int32, mscorlib">
+  <data name="IP.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;TTL.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="lbMAC.Text" xml:space="preserve">
+    <value>MAC Address</value>
+  </data>
+  <data name="&gt;&gt;IP.Type" xml:space="preserve">
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="Edit_NETBIOS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 144</value>
+  </data>
+  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="Cancel_Button.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox_Command.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 57</value>
+  </data>
+  <data name="lbUDP.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;Edit_NETBIOS.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MAC.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
+  <data name="&gt;&gt;lbMAC.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
-  <data name="&gt;&gt;Edit_NETBIOS.Name" xml:space="preserve">
-    <value>Edit_NETBIOS</value>
+  <data name="Help_Button.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;lbUDP.Name" xml:space="preserve">
-    <value>lbUDP</value>
+  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 29</value>
   </data>
-  <data name="&gt;&gt;MAC.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="bCalcBroadcast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 113</value>
+  </data>
+  <data name="lbIP.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbMAC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbGroup.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UDPPort.Error" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;CheckBox_Emergency.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="&gt;&gt;lbIP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Help_Button.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="lbUDP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 13</value>
-  </data>
-  <data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 368</value>
-  </data>
-  <data name="TextBox_Command.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ErrorProvider1.Name" xml:space="preserve">
-    <value>ErrorProvider1</value>
-  </data>
-  <data name="lbIP.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="lbNetbios.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="TTL.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="Delete_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="lbName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;MachineName.Name" xml:space="preserve">
-    <value>MachineName</value>
-  </data>
-  <data name="Broadcast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 24</value>
-  </data>
-  <data name="&gt;&gt;MachineName.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CheckBox_Emergency.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
     <value>377, 414</value>
   </data>
-  <data name="lbShutdownCommand.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
+  <data name="Help_Button.Text" xml:space="preserve">
+    <value>Help</value>
   </data>
-  <data name="CheckBox_Emergency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lbTTL.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;IP.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lbUDP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="Broadcast.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="Delete_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="lbTTL.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="Broadcast.Error" xml:space="preserve">
+    <value />
   </data>
   <data name="Edit_NETBIOS.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 20</value>
   </data>
-  <data name="&gt;&gt;lbMAC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbGroup.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="&gt;&gt;lbIP.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;IP.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <data name="Group.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 20</value>
-  </data>
-  <data name="lbGroup.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Broadcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 114</value>
-  </data>
-  <data name="CheckBox_Emergency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 210</value>
-  </data>
-  <data name="Delete_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 414</value>
-  </data>
-  <data name="&gt;&gt;Help_Button.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="Delete_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="&gt;&gt;Cancel_Button.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;TTL.Name" xml:space="preserve">
-    <value>TTL</value>
-  </data>
-  <data name="lbBroadcast.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="&gt;&gt;TTL.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbGroup.Text" xml:space="preserve">
-    <value>Group</value>
-  </data>
-  <data name="&gt;&gt;Group.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="lbTTL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 13</value>
-  </data>
-  <data name="&gt;&gt;TextBox_Command.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="Group.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbUDP.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lbBroadcast.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbBroadcast.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lbGroup.Name" xml:space="preserve">
-    <value>lbGroup</value>
-  </data>
-  <data name="&gt;&gt;CheckBox_Emergency.Name" xml:space="preserve">
-    <value>CheckBox_Emergency</value>
-  </data>
-  <data name="lbNetbios.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;TextBox_Command.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBox_Command.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="&gt;&gt;Group.Name" xml:space="preserve">
-    <value>Group</value>
-  </data>
-  <data name="lbShutdownCommand.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
-  </data>
-  <data name="&gt;&gt;Broadcast.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 29</value>
   </data>
   <data name="IP.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 24</value>
   </data>
-  <data name="Group.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;Group.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;lbBroadcast.Name" xml:space="preserve">
-    <value>lbBroadcast</value>
+  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
   </data>
-  <data name="lbShutdownCommand.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbNetbios.ZOrder" xml:space="preserve">
-    <value>20</value>
+  <data name="MachineName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="Group.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 170</value>
+  <data name="&gt;&gt;CheckBox_Emergency.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Shutdown command line:</value>
+  <data name="Delete_Button.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="Help_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="MAC.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Properties</value>
-  </data>
-  <data name="&gt;&gt;MachineName.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lbShutdownCommand.IconPadding" type="System.Int32, mscorlib">
+  <data name="Group.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;lbBroadcast.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="OK_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;lbIP.Name" xml:space="preserve">
-    <value>lbIP</value>
+  <data name="Edit_NETBIOS.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;Edit_NETBIOS.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;UDPPort.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 87</value>
+  <data name="lbIP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
-  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 147</value>
+  <data name="&gt;&gt;Help_Button.Name" xml:space="preserve">
+    <value>Help_Button</value>
   </data>
-  <data name="Help_Button.IconPadding" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;ErrorProvider1.Name" xml:space="preserve">
+    <value>ErrorProvider1</value>
+  </data>
+  <data name="MachineName.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="Delete_Button.Text" xml:space="preserve">
-    <value>Delete</value>
+  <data name="lbShutdownCommand.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
-  <data name="TextBox_Command.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 269</value>
-  </data>
-  <data name="&gt;&gt;TTL.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="TTL.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;lbName.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <data name="lbIP.Text" xml:space="preserve">
-    <value>IP Address</value>
+  <data name="lbGroup.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
-    <value>Cancel_Button</value>
+  <data name="lbBroadcast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="lbShutdownCommand.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Broadcast.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="CheckBox_Emergency.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TTL.Type" xml:space="preserve">
+    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbShutdownCommand.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;Group.Name" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="Broadcast.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="TextBox_Command.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbGroup.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbShutdownCommand.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MachineName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 20</value>
+  </data>
+  <data name="&gt;&gt;Edit_NETBIOS.Name" xml:space="preserve">
+    <value>Edit_NETBIOS</value>
+  </data>
+  <data name="Group.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 170</value>
+  </data>
+  <data name="OK_Button.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;MachineName.Name" xml:space="preserve">
+    <value>MachineName</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CheckBox_Emergency.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBox_Command.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;OK_Button.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lbName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;Cancel_Button.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbMAC.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;lbIP.Name" xml:space="preserve">
+    <value>lbIP</value>
+  </data>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 13</value>
+  </data>
+  <data name="MAC.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MAC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbUDP.Text" xml:space="preserve">
+    <value>UDP Port</value>
+  </data>
+  <data name="&gt;&gt;Edit_NETBIOS.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;lbGroup.Name" xml:space="preserve">
+    <value>lbGroup</value>
+  </data>
+  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="IP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 84</value>
+  </data>
+  <data name="&gt;&gt;Help_Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbUDP.Name" xml:space="preserve">
+    <value>lbUDP</value>
+  </data>
+  <data name="&gt;&gt;ErrorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MAC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 58</value>
+  </data>
+  <data name="&gt;&gt;lbNetbios.Name" xml:space="preserve">
+    <value>lbNetbios</value>
+  </data>
+  <data name="lbMAC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;TTL.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 173</value>
+  </data>
+  <data name="TextBox_Command.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Cancel_Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Broadcast.Name" xml:space="preserve">
+    <value>Broadcast</value>
+  </data>
+  <data name="lbMAC.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Broadcast.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lbGroup.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="CheckBox_Emergency.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbMAC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="MachineName.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Delete_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 414</value>
+  </data>
+  <data name="lbGroup.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Cancel_Button.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TTL.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="lbNetbios.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="lbShutdownCommand.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 58</value>
   </data>
-  <data name="&gt;&gt;IP.Name" xml:space="preserve">
-    <value>IP</value>
+  <data name="IP.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="bCalcBroadcast.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lbTTL.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="bCalcBroadcast.Text" xml:space="preserve">
-    <value>Calculate</value>
+  <data name="Help_Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="bCalcBroadcast.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="Delete_Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;TextBox_Command.Name" xml:space="preserve">
-    <value>TextBox_Command</value>
+  <data name="OK_Button.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="IP.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;bCalcBroadcast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="bCalcBroadcast.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="CheckBox_Emergency.Text" xml:space="preserve">
     <value>Emergency shutdown?</value>
   </data>
+  <data name="lbUDP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="TTL.Error" xml:space="preserve">
+    <value />
+  </data>
   <data name="lbShutdownCommand.Location" type="System.Drawing.Point, System.Drawing">
     <value>113, 253</value>
   </data>
+  <data name="Edit_NETBIOS.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lbShutdownCommand.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbName.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbBroadcast.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="MachineName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 26</value>
+  </data>
+  <data name="&gt;&gt;lbShutdownCommand.Name" xml:space="preserve">
+    <value>lbShutdownCommand</value>
+  </data>
+  <data name="lbNetbios.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="OK_Button.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Command.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Delete_Button.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="OK_Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 23</value>
+  </data>
+  <data name="&gt;&gt;lbName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbTTL.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="MAC.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Broadcast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
+  </data>
+  <data name="lbBroadcast.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 17</value>
+  </data>
   <data name="Cancel_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;lbTTL.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="CheckBox_Emergency.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbGroup.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;lbName.Name" xml:space="preserve">
     <value>lbName</value>
   </data>
-  <data name="&gt;&gt;lbShutdownCommand.Name" xml:space="preserve">
-    <value>lbShutdownCommand</value>
+  <data name="CheckBox_Emergency.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="lbUDP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
+  <data name="&gt;&gt;Edit_NETBIOS.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;MachineName.Type" xml:space="preserve">
-    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
+  <data name="Help_Button.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="Edit_NETBIOS.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;OK_Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="IP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 84</value>
-  </data>
-  <data name="Broadcast.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="MachineName.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lbTTL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="bCalcBroadcast.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>OK</value>
   </data>
-  <data name="Help_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="MachineName.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;bCalcBroadcast.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Edit_NETBIOS.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;Delete_Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;bCalcBroadcast.Name" xml:space="preserve">
+    <value>bCalcBroadcast</value>
   </data>
-  <data name="lbMAC.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;IP.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbTTL.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="MAC.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Delete_Button.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Help_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 414</value>
-  </data>
-  <data name="&gt;&gt;UDPPort.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lbIP.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbMAC.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="OK_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Broadcast.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lbUDP.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbNetbios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TTL.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 118</value>
-  </data>
-  <data name="&gt;&gt;MAC.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bCalcBroadcast.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbNetbios.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Group.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Edit_NETBIOS.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
   </data>
   <data name="lbNetbios.Text" xml:space="preserve">
     <value>Netbios Name</value>
@@ -732,229 +636,472 @@
   <data name="&gt;&gt;lbTTL.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbUDP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="lbIP.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;lbTTL.Name" xml:space="preserve">
-    <value>lbTTL</value>
+  <data name="&gt;&gt;MAC.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
-  <data name="&gt;&gt;Help_Button.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lbShutdownCommand.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MAC.Name" xml:space="preserve">
-    <value>MAC</value>
-  </data>
-  <data name="UDPPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 341</value>
-  </data>
-  <data name="lbUDP.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;MAC.Type" xml:space="preserve">
-    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="MachineName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
-  </data>
-  <data name="Group.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="MachineName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 26</value>
-  </data>
-  <data name="&gt;&gt;bCalcBroadcast.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lbName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>TopLeft</value>
-  </data>
-  <data name="&gt;&gt;UDPPort.Type" xml:space="preserve">
-    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lbUDP.Text" xml:space="preserve">
-    <value>UDP Port</value>
-  </data>
-  <data name="&gt;&gt;TextBox_Command.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbMAC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="CheckBox_Emergency.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lbTTL.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 173</value>
-  </data>
-  <data name="&gt;&gt;Group.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OK_Button.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbBroadcast.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbUDP.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbNetbios.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Broadcast.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbUDP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
-    <value>ToolTip1</value>
-  </data>
-  <data name="MAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
-  </data>
-  <data name="lbTTL.Text" xml:space="preserve">
-    <value>TTL</value>
-  </data>
-  <data name="UDPPort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 20</value>
-  </data>
-  <data name="&gt;&gt;Delete_Button.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="Edit_NETBIOS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 144</value>
-  </data>
-  <data name="&gt;&gt;lbMAC.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Help_Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OK_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 23</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>464, 455</value>
-  </data>
-  <data name="lbMAC.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbShutdownCommand.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="bCalcBroadcast.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TTL.Type" xml:space="preserve">
-    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbName.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbIP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;Delete_Button.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbIP.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lbNetbios.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbUDP.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbMAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
-  </data>
-  <data name="&gt;&gt;lbGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;UDPPort.Name" xml:space="preserve">
-    <value>UDPPort</value>
-  </data>
-  <data name="lbName.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="Cancel_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;lbMAC.Name" xml:space="preserve">
-    <value>lbMAC</value>
-  </data>
-  <data name="lbGroup.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="MachineName.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Cancel_Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="UDPPort.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="CheckBox_Emergency.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Cancel_Button.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="Help_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="&gt;&gt;Group.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbIP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="bCalcBroadcast.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbTTL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lbIP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="&gt;&gt;IP.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Group.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;lbNetbios.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;lbBroadcast.Name" xml:space="preserve">
+    <value>lbBroadcast</value>
+  </data>
+  <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
+    <value>ToolTip1</value>
+  </data>
+  <data name="&gt;&gt;lbGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbNetbios.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;Broadcast.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lbUDP.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lbShutdownCommand.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="TextBox_Command.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="Help_Button.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lbShutdownCommand.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lbGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="UDPPort.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbUDP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="Cancel_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbIP.Text" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 371</value>
+  </data>
+  <data name="lbGroup.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
+  </data>
+  <data name="TextBox_Command.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MAC.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Group.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbTTL.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbBroadcast.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbTTL.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;lbBroadcast.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="OK_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 414</value>
+  </data>
+  <data name="CheckBox_Emergency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 210</value>
+  </data>
+  <data name="lbNetbios.Error" xml:space="preserve">
+    <value />
   </data>
   <data name="lbTTL.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="lbName.Text" xml:space="preserve">
-    <value>Name</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="UDPPort.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbBroadcast.Text" xml:space="preserve">
+    <value>Broadcast</value>
+  </data>
+  <data name="Cancel_Button.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbName.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;Delete_Button.Name" xml:space="preserve">
+    <value>Delete_Button</value>
+  </data>
+  <data name="bCalcBroadcast.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;Delete_Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbIP.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Cancel_Button.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="MAC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 20</value>
+  </data>
+  <data name="lbTTL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="Delete_Button.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lbMAC.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Command.Name" xml:space="preserve">
+    <value>TextBox_Command</value>
+  </data>
+  <data name="&gt;&gt;UDPPort.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="bCalcBroadcast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;IP.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="UDPPort.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="lbName.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
+    <value>Cancel_Button</value>
+  </data>
+  <data name="Group.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;MachineName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Delete_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="TTL.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbBroadcast.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;MAC.Name" xml:space="preserve">
+    <value>MAC</value>
+  </data>
+  <data name="&gt;&gt;Delete_Button.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="TextBox_Command.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 269</value>
+  </data>
+  <data name="Help_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 118</value>
+  </data>
+  <data name="&gt;&gt;Group.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbMAC.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 344</value>
+  </data>
+  <data name="&gt;&gt;OK_Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbNetbios.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TTL.Name" xml:space="preserve">
+    <value>TTL</value>
+  </data>
+  <data name="&gt;&gt;MachineName.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="Delete_Button.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Broadcast.Type" xml:space="preserve">
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="IP.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="bCalcBroadcast.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Group.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lbUDP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 368</value>
+  </data>
+  <data name="&gt;&gt;lbUDP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OK_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>TopLeft</value>
   </data>
   <data name="Edit_NETBIOS.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="bCalcBroadcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 113</value>
+  <data name="&gt;&gt;TextBox_Command.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lbName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
   </data>
-  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 17</value>
+  <data name="lbBroadcast.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="lbMAC.IconPadding" type="System.Int32, mscorlib">
+  <data name="TTL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 20</value>
+  </data>
+  <data name="&gt;&gt;lbShutdownCommand.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Help_Button.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Broadcast.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="OK_Button.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="&gt;&gt;lbUDP.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>fi</value>
-  </metadata>
+  <data name="&gt;&gt;IP.Name" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="UDPPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 20</value>
+  </data>
+  <data name="MAC.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="lbMAC.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbShutdownCommand.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;UDPPort.Name" xml:space="preserve">
+    <value>UDPPort</value>
+  </data>
+  <data name="&gt;&gt;UDPPort.Type" xml:space="preserve">
+    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_Emergency.Name" xml:space="preserve">
+    <value>CheckBox_Emergency</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>464, 455</value>
+  </data>
+  <data name="lbTTL.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbBroadcast.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lbUDP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Help_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 414</value>
+  </data>
+  <data name="TTL.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lbUDP.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="&gt;&gt;lbMAC.Name" xml:space="preserve">
+    <value>lbMAC</value>
+  </data>
+  <data name="lbNetbios.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;bCalcBroadcast.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbIP.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="bCalcBroadcast.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbNetbios.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="OK_Button.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbBroadcast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Cancel_Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;lbMAC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="IP.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbGroup.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBox_Command.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="lbName.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;TextBox_Command.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="lbName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="Help_Button.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="bCalcBroadcast.Text" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="lbMAC.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;MachineName.Type" xml:space="preserve">
+    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Broadcast.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Help_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;bCalcBroadcast.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Broadcast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 114</value>
+  </data>
+  <data name="&gt;&gt;Delete_Button.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Edit_NETBIOS.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="lbGroup.Text" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="lbUDP.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;lbTTL.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lbTTL.Name" xml:space="preserve">
+    <value>lbTTL</value>
+  </data>
+  <data name="lbIP.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;lbName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbNetbios.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MAC.Type" xml:space="preserve">
+    <value>WakeOnLan.RegExTextBox, WakeOnLan, Version=2.7.2.50, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;OK_Button.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Delete_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>fi</value>
+  </metadata>
+  <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

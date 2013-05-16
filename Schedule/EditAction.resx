@@ -124,17 +124,12 @@
   <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
     <value>MessageGroupBox</value>
   </data>
-  <data name="EmailToTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 46</value>
-  </data>
-  <data name="&gt;&gt;MessageTextBox.Name" xml:space="preserve">
-    <value>MessageTextBox</value>
-  </data>
   <data name="&gt;&gt;EmailFromTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EmailMessageTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AllGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;MachinesComboBox.Parent" xml:space="preserve">
     <value>ComputerGroupBox</value>
@@ -142,7 +137,6 @@
   <data name="Label6.Text" xml:space="preserve">
     <value>To:</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="forceCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -152,8 +146,8 @@
   <data name="EmailGroupBox.Text" xml:space="preserve">
     <value>Email message</value>
   </data>
-  <data name="Cancel_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 23</value>
+  <data name="&gt;&gt;MessageTextBox.Name" xml:space="preserve">
+    <value>MessageTextBox</value>
   </data>
   <data name="&gt;&gt;EmailServerTextBox.Name" xml:space="preserve">
     <value>EmailServerTextBox</value>
@@ -191,6 +185,9 @@
   <data name="&gt;&gt;MessageTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="Cancel_Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 23</value>
+  </data>
   <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
     <value>EmailGroupBox</value>
   </data>
@@ -202,9 +199,6 @@
   </data>
   <data name="&gt;&gt;EmailToTextBox.Parent" xml:space="preserve">
     <value>EmailGroupBox</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel1.Name" xml:space="preserve">
-    <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;AllGroupBox.Parent" xml:space="preserve">
     <value>$this</value>
@@ -239,6 +233,9 @@
   <data name="&gt;&gt;forceCheckBox.Parent" xml:space="preserve">
     <value>ComputerGroupBox</value>
   </data>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
   </data>
@@ -247,6 +244,9 @@
   </data>
   <data name="TableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;MessageGroupBox.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;Cancel_Button.Parent" xml:space="preserve">
     <value>TableLayoutPanel1</value>
@@ -288,6 +288,9 @@
   <data name="forceAll.Text" xml:space="preserve">
     <value>Force</value>
   </data>
+  <data name="ComputerGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
   </data>
@@ -306,8 +309,8 @@
   <data name="&gt;&gt;ComputerGroupBox.Name" xml:space="preserve">
     <value>ComputerGroupBox</value>
   </data>
-  <data name="MessageGroupBox.Text" xml:space="preserve">
-    <value>Popup message</value>
+  <data name="&gt;&gt;EmailMessageTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;EmailSubjectTextBox.Name" xml:space="preserve">
     <value>EmailSubjectTextBox</value>
@@ -315,17 +318,14 @@
   <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 3</value>
   </data>
-  <data name="&gt;&gt;forceCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;ActionComboBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
   </data>
-  <data name="ComputerGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;TableLayoutPanel1.Name" xml:space="preserve">
+    <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;MessageTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -333,8 +333,8 @@
   <data name="forceAll.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
+    <value>Cancel_Button</value>
   </data>
   <data name="&gt;&gt;MachinesComboBox.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -345,8 +345,8 @@
   <data name="&gt;&gt;EmailServerTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
-    <value>Label5</value>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Cancel</value>
   </data>
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -384,8 +384,8 @@
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>MessageGroupBox</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>37, 56</value>
@@ -417,6 +417,9 @@
   <data name="EmailGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="TableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;EmailServerTextBox.Parent" xml:space="preserve">
     <value>EmailGroupBox</value>
   </data>
@@ -447,9 +450,6 @@
   <data name="&gt;&gt;Label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
-    <value>EmailGroupBox</value>
-  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
   </data>
@@ -459,20 +459,20 @@
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>50, 75</value>
   </data>
-  <data name="AllGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
   </data>
-  <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
-    <value>Cancel_Button</value>
+  <data name="EmailToTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 46</value>
   </data>
   <data name="&gt;&gt;EmailSubjectTextBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="&gt;&gt;Label7.Name" xml:space="preserve">
     <value>Label7</value>
+  </data>
+  <data name="ActionComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="EmailMessageTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 59</value>
@@ -486,17 +486,14 @@
   <data name="AllGroupBox.Text" xml:space="preserve">
     <value>Options</value>
   </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>EmailGroupBox</value>
   </data>
   <data name="forceCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="&gt;&gt;OK_Button.Parent" xml:space="preserve">
     <value>TableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>MessageGroupBox</value>
   </data>
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -549,8 +546,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditAction</value>
   </data>
-  <data name="&gt;&gt;MessageGroupBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="ActionComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 21</value>
   </data>
   <data name="&gt;&gt;Label6.Name" xml:space="preserve">
     <value>Label6</value>
@@ -558,8 +555,8 @@
   <data name="&gt;&gt;forceAll.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="OK_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;forceCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Label8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -587,6 +584,9 @@
   </data>
   <data name="EmailFromTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 20</value>
+  </data>
+  <data name="MessageGroupBox.Text" xml:space="preserve">
+    <value>Popup message</value>
   </data>
   <data name="&gt;&gt;EmailServerTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -699,7 +699,7 @@
   <data name="EmailGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>408, 199</value>
   </data>
-  <data name="ActionComboBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="OK_Button.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
@@ -719,9 +719,6 @@
   </data>
   <data name="forceAll.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="ActionComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 21</value>
   </data>
   <data name="MessageTitleTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 20</value>
@@ -756,6 +753,9 @@
   <data name="&gt;&gt;forceCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
@@ -788,5 +788,8 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>fi</value>
   </metadata>
 </root>

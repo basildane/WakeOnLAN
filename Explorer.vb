@@ -529,6 +529,10 @@ Public Class Explorer
         ChangeLanguage("zh-TW")
     End Sub
 
+    Private Sub FinnishToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles FinnishToolStripMenuItem.Click
+        ChangeLanguage("fi-FI")
+    End Sub
+
     Private Sub PortugueseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PortugueseToolStripMenuItem.Click
         ChangeLanguage("pt-BR")
     End Sub

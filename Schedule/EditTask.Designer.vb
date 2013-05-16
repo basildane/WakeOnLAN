@@ -26,6 +26,7 @@ Partial Class EditTask
         Me.TabControlTasks = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.UserIDTextBox = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -52,7 +53,6 @@ Partial Class EditTask
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ButtonCancel = New System.Windows.Forms.Button()
         Me.OKButton = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.TabControlTasks.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -90,6 +90,11 @@ Partial Class EditTask
         resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
+        '
+        'Label7
+        '
+        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.Name = "Label7"
         '
         'PasswordTextBox
         '
@@ -245,11 +250,6 @@ Partial Class EditTask
         resources.ApplyResources(Me.OKButton, "OKButton")
         Me.OKButton.Name = "OKButton"
         Me.OKButton.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        resources.ApplyResources(Me.Label7, "Label7")
-        Me.Label7.Name = "Label7"
         '
         'EditTask
         '

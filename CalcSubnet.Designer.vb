@@ -22,112 +22,82 @@ Partial Class CalcSubnet
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CalcSubnet))
         Me.bCalculate = New System.Windows.Forms.Button()
         Me.bOK = New System.Windows.Forms.Button()
         Me.IpBroadcast = New WakeOnLan.IPAddressControl()
         Me.IpSubnet = New WakeOnLan.IPAddressControl()
         Me.IpIP = New WakeOnLan.IPAddressControl()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lIP = New System.Windows.Forms.Label()
+        Me.lSubnet = New System.Windows.Forms.Label()
+        Me.lRecommended = New System.Windows.Forms.Label()
+        Me.lHeader = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'bCalculate
         '
-        Me.bCalculate.Location = New System.Drawing.Point(15, 236)
+        resources.ApplyResources(Me.bCalculate, "bCalculate")
         Me.bCalculate.Name = "bCalculate"
-        Me.bCalculate.Size = New System.Drawing.Size(75, 23)
-        Me.bCalculate.TabIndex = 3
-        Me.bCalculate.Text = "Calculate"
         Me.bCalculate.UseVisualStyleBackColor = True
         '
         'bOK
         '
-        Me.bOK.Location = New System.Drawing.Point(197, 236)
+        resources.ApplyResources(Me.bOK, "bOK")
         Me.bOK.Name = "bOK"
-        Me.bOK.Size = New System.Drawing.Size(75, 23)
-        Me.bOK.TabIndex = 4
-        Me.bOK.Text = "OK"
         Me.bOK.UseVisualStyleBackColor = True
         '
         'IpBroadcast
         '
         Me.IpBroadcast.BackColor = System.Drawing.SystemColors.Window
-        Me.IpBroadcast.Enabled = False
-        Me.IpBroadcast.Location = New System.Drawing.Point(143, 180)
+        resources.ApplyResources(Me.IpBroadcast, "IpBroadcast")
         Me.IpBroadcast.Name = "IpBroadcast"
-        Me.IpBroadcast.Size = New System.Drawing.Size(129, 24)
-        Me.IpBroadcast.TabIndex = 2
         '
         'IpSubnet
         '
         Me.IpSubnet.BackColor = System.Drawing.SystemColors.Window
-        Me.IpSubnet.Location = New System.Drawing.Point(143, 106)
+        resources.ApplyResources(Me.IpSubnet, "IpSubnet")
         Me.IpSubnet.Name = "IpSubnet"
-        Me.IpSubnet.Size = New System.Drawing.Size(129, 24)
-        Me.IpSubnet.TabIndex = 1
         '
         'IpIP
         '
         Me.IpIP.BackColor = System.Drawing.SystemColors.Window
-        Me.IpIP.Location = New System.Drawing.Point(143, 64)
+        resources.ApplyResources(Me.IpIP, "IpIP")
         Me.IpIP.Name = "IpIP"
-        Me.IpIP.Size = New System.Drawing.Size(129, 24)
-        Me.IpIP.TabIndex = 0
         '
-        'Label1
+        'lIP
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(52, 70)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "IP Address"
+        resources.ApplyResources(Me.lIP, "lIP")
+        Me.lIP.Name = "lIP"
         '
-        'Label2
+        'lSubnet
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(69, 112)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 13)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Subnet"
+        resources.ApplyResources(Me.lSubnet, "lSubnet")
+        Me.lSubnet.Name = "lSubnet"
         '
-        'Label3
+        'lRecommended
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 156)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(174, 13)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Recommended Broadcast Address:"
+        resources.ApplyResources(Me.lRecommended, "lRecommended")
+        Me.lRecommended.Name = "lRecommended"
         '
-        'Label4
+        'lHeader
         '
-        Me.Label4.Location = New System.Drawing.Point(12, 9)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(260, 57)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "This function is used to help you find the ""Broadcast Address"" to use, based on t" & _
-    "he IP Address and Subnet."
+        resources.ApplyResources(Me.lHeader, "lHeader")
+        Me.lHeader.Name = "lHeader"
         '
         'CalcSubnet
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 277)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lHeader)
+        Me.Controls.Add(Me.lRecommended)
+        Me.Controls.Add(Me.lSubnet)
+        Me.Controls.Add(Me.lIP)
         Me.Controls.Add(Me.bOK)
         Me.Controls.Add(Me.bCalculate)
         Me.Controls.Add(Me.IpBroadcast)
         Me.Controls.Add(Me.IpSubnet)
         Me.Controls.Add(Me.IpIP)
         Me.Name = "CalcSubnet"
-        Me.Text = "Calculate Subnet"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -137,8 +107,8 @@ Partial Class CalcSubnet
     Friend WithEvents IpBroadcast As WakeOnLan.IPAddressControl
     Friend WithEvents bCalculate As System.Windows.Forms.Button
     Friend WithEvents bOK As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents lIP As System.Windows.Forms.Label
+    Friend WithEvents lSubnet As System.Windows.Forms.Label
+    Friend WithEvents lRecommended As System.Windows.Forms.Label
+    Friend WithEvents lHeader As System.Windows.Forms.Label
 End Class

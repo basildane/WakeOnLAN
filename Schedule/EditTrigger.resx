@@ -123,6 +123,9 @@
   <data name="CheckBox5.Text" xml:space="preserve">
     <value>Thursday</value>
   </data>
+  <data name="&gt;&gt;CheckBox2.Parent" xml:space="preserve">
+    <value>GroupBoxWeekly</value>
+  </data>
   <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
     <value>GroupBoxDaily</value>
   </data>
@@ -133,6 +136,9 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="DateTimePickerDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 20</value>
+  </data>
+  <data name="TextBoxWeeklyRecurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="&gt;&gt;DateTimePickerTime.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -161,8 +167,8 @@
   <data name="GroupBoxWeekly.Size" type="System.Drawing.Size, System.Drawing">
     <value>380, 140</value>
   </data>
-  <data name="&gt;&gt;GroupBoxWeekly.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="OK_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
   <data name="&gt;&gt;CheckBox5.Parent" xml:space="preserve">
     <value>GroupBoxWeekly</value>
@@ -197,6 +203,9 @@
   <data name="CheckBox2.Text" xml:space="preserve">
     <value>Monday</value>
   </data>
+  <data name="&gt;&gt;CheckBox7.Parent" xml:space="preserve">
+    <value>GroupBoxWeekly</value>
+  </data>
   <data name="&gt;&gt;GroupBoxDaily.Parent" xml:space="preserve">
     <value>GroupBoxSettings</value>
   </data>
@@ -211,6 +220,9 @@
   </data>
   <data name="Label5.Text" xml:space="preserve">
     <value>Recur every:</value>
+  </data>
+  <data name="GroupBoxSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
   <data name="RadioButtonDaily.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -227,14 +239,14 @@
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 21</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Edit Trigger</value>
+  <data name="RadioButtonOneTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;OK_Button.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="RadioButtonOneTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 25</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -336,17 +348,14 @@
   <data name="CheckBox7.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 17</value>
   </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Start:</value>
-  </data>
   <data name="RadioButtonWeekly.Text" xml:space="preserve">
     <value>Weekly</value>
   </data>
   <data name="CheckBox3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="GroupBoxSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+  <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 3</value>
   </data>
   <data name="CheckBox2.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -362,12 +371,6 @@
   </data>
   <data name="CheckBox4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="OK_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 3</value>
   </data>
   <data name="TableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -390,17 +393,20 @@
   <data name="RadioButtonDaily.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 48</value>
   </data>
-  <data name="&gt;&gt;CheckBox2.Parent" xml:space="preserve">
-    <value>GroupBoxWeekly</value>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;CheckBox2.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="CheckBox6.Text" xml:space="preserve">
+    <value>Friday</value>
   </data>
   <data name="RadioButtonDaily.Text" xml:space="preserve">
     <value>Daily</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>weeks on:</value>
   </data>
   <data name="&gt;&gt;Cancel_Button.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -413,6 +419,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>530, 408</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxWeekly.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
     <value>GroupBoxDaily</value>
@@ -462,6 +471,9 @@
   <data name="&gt;&gt;TextBoxWeeklyRecurs.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="CheckBoxEnabled.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 19</value>
+  </data>
   <data name="TableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 29</value>
   </data>
@@ -507,6 +519,9 @@
   <data name="&gt;&gt;CheckBox5.Name" xml:space="preserve">
     <value>CheckBox5</value>
   </data>
+  <data name="&gt;&gt;CheckBox2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="&gt;&gt;RadioButtonWeekly.Name" xml:space="preserve">
     <value>RadioButtonWeekly</value>
   </data>
@@ -534,11 +549,8 @@
   <data name="CheckBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 57</value>
   </data>
-  <data name="RadioButtonOneTime.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="GroupBoxDaily.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 140</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Edit Trigger</value>
   </data>
   <data name="CheckBox3.Text" xml:space="preserve">
     <value>Tuesday</value>
@@ -606,11 +618,14 @@
   <data name="&gt;&gt;DateTimePickerTime.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;CheckBox7.Parent" xml:space="preserve">
-    <value>GroupBoxWeekly</value>
+  <data name="GroupBoxDaily.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 140</value>
   </data>
   <data name="&gt;&gt;CheckBox3.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CheckBox7.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -627,8 +642,8 @@
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TextBoxWeeklyRecurs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 13</value>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Start:</value>
   </data>
   <data name="CheckBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 94</value>
@@ -651,8 +666,8 @@
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 16</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;TextBoxWeeklyRecurs.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;RadioButtonOneTime.Parent" xml:space="preserve">
     <value>GroupBoxSettings</value>
@@ -690,9 +705,6 @@
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RadioButtonOneTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 25</value>
-  </data>
   <data name="DateTimePickerTime.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -702,8 +714,8 @@
   <data name="&gt;&gt;GroupBoxWeekly.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="CheckBoxEnabled.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 19</value>
+  <data name="&gt;&gt;RadioButtonMontly.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DateTimePickerTime.Parent" xml:space="preserve">
     <value>GroupBoxSettings</value>
@@ -723,14 +735,8 @@
   <data name="Label4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;RadioButtonMontly.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;TextBoxRecurDays.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 13</value>
   </data>
   <data name="RadioButtonMontly.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -771,8 +777,8 @@
   <data name="CheckBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 57</value>
   </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>weeks on:</value>
+  <data name="CheckBox4.Text" xml:space="preserve">
+    <value>Wednesday</value>
   </data>
   <data name="&gt;&gt;CheckBoxEnabled.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -780,14 +786,8 @@
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
   </data>
-  <data name="&gt;&gt;TextBoxWeeklyRecurs.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 13</value>
-  </data>
-  <data name="CheckBox6.Text" xml:space="preserve">
-    <value>Friday</value>
   </data>
   <data name="TextBoxWeeklyRecurs.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -801,8 +801,8 @@
   <data name="&gt;&gt;CheckBox6.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="CheckBox4.Text" xml:space="preserve">
-    <value>Wednesday</value>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;CheckBoxEnabled.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -863,5 +863,8 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>fi</value>
   </metadata>
 </root>
