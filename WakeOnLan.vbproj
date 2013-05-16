@@ -306,6 +306,11 @@
     <Compile Include="Controls\IPAddress.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Strings.fi.Designer.vb">
+      <DependentUpon>Strings.fi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Listener.Designer.vb">
       <DependentUpon>Listener.vb</DependentUpon>
     </Compile>
@@ -513,6 +518,7 @@
     <Content Include="Documentation\Human-02\network_transmit_48.ico" />
     <None Include="Documentation\Human-02\system_software_update.png" />
     <None Include="Documentation\software_update_available.png" />
+    <None Include="Resources\flags\finland_16x16.png" />
     <Content Include="Setup\Setup.vdproj" />
     <None Include="Documentation\Splash.psd" />
     <None Include="Documentation\translation.xlsx" />
@@ -578,6 +584,9 @@
     <EmbeddedResource Include="AboutBox.de.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.fi.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutBox.fr.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
@@ -596,6 +605,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\IPAddress.resx">
       <DependentUpon>IPAddress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.fi.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.fi.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.fi.resx">
+      <DependentUpon>Explorer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Explorer.fr.resx">
       <DependentUpon>Explorer.vb</DependentUpon>
