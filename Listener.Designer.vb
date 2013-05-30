@@ -32,19 +32,19 @@ Partial Class Listener
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button_clear = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.lUDPport = New System.Windows.Forms.Label()
         Me.LabelHeader = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ListView1
         '
+        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader_IP, Me.ColumnHeader_Time, Me.ColumnHeader_Name})
         Me.ListView1.FullRowSelect = True
         Me.ListView1.LargeImageList = Me.ImageList_Large
-        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.Name = "ListView1"
         Me.ListView1.TileSize = New System.Drawing.Size(410, 52)
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -70,8 +70,8 @@ Partial Class Listener
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.WakeOnLan.My.Resources.Resources.network_transmit
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Image = Global.WakeOnLan.My.Resources.Resources.network_transmit
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
@@ -83,11 +83,16 @@ Partial Class Listener
         '
         'GroupBox1
         '
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.lUDPport)
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.Name = "Label1"
         '
         'lUDPport
         '
@@ -98,11 +103,6 @@ Partial Class Listener
         '
         resources.ApplyResources(Me.LabelHeader, "LabelHeader")
         Me.LabelHeader.Name = "LabelHeader"
-        '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Name = "Label1"
         '
         'Listener
         '
