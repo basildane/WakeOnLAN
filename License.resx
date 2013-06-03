@@ -124,10 +124,10 @@
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RichTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>411, 256</value>
+  <data name="&gt;&gt;Cancel_Button.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -152,8 +152,11 @@
   <data name="&gt;&gt;OK_Button.Parent" xml:space="preserve">
     <value>TableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;Cancel_Button.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;OK_Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RichTextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 256</value>
   </data>
   <data name="OK_Button.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -390,11 +393,8 @@ If the disclaimer of warranty and limitation of liability provided above cannot 
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
   </data>
-  <data name="TableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="RichTextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+  <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 3</value>
   </data>
   <data name="&gt;&gt;TableLayoutPanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -417,6 +417,9 @@ If the disclaimer of warranty and limitation of liability provided above cannot 
   <data name="&gt;&gt;OK_Button.Name" xml:space="preserve">
     <value>OK_Button</value>
   </data>
+  <data name="&gt;&gt;RichTextBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;TableLayoutPanel1.Name" xml:space="preserve">
     <value>TableLayoutPanel1</value>
   </data>
@@ -425,9 +428,6 @@ If the disclaimer of warranty and limitation of liability provided above cannot 
   </data>
   <data name="&gt;&gt;TableLayoutPanel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 3</value>
   </data>
   <data name="&gt;&gt;Cancel_Button.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -441,14 +441,14 @@ If the disclaimer of warranty and limitation of liability provided above cannot 
   <data name="OK_Button.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="&gt;&gt;RichTextBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>License - GNU GPL Version 3</value>
   </data>
-  <data name="&gt;&gt;OK_Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="RichTextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
   <data name="&gt;&gt;RichTextBox1.Parent" xml:space="preserve">
     <value>$this</value>

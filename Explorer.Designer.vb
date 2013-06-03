@@ -143,6 +143,7 @@ Partial Class Explorer
         Me.DeutschToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FrenchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RussianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FinnishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnglishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TaiwanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -627,7 +628,7 @@ Partial Class Explorer
         '
         'LanguageToolStripMenuItem
         '
-        Me.LanguageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PortugueseToolStripMenuItem, Me.DeutschToolStripMenuItem, Me.FrenchToolStripMenuItem, Me.RussianToolStripMenuItem, Me.EnglishToolStripMenuItem, Me.TaiwanToolStripMenuItem})
+        Me.LanguageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PortugueseToolStripMenuItem, Me.DeutschToolStripMenuItem, Me.FrenchToolStripMenuItem, Me.RussianToolStripMenuItem, Me.FinnishToolStripMenuItem, Me.EnglishToolStripMenuItem, Me.TaiwanToolStripMenuItem})
         Me.LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem"
         resources.ApplyResources(Me.LanguageToolStripMenuItem, "LanguageToolStripMenuItem")
         '
@@ -655,6 +656,13 @@ Partial Class Explorer
         resources.ApplyResources(Me.RussianToolStripMenuItem, "RussianToolStripMenuItem")
         Me.RussianToolStripMenuItem.Name = "RussianToolStripMenuItem"
         Me.RussianToolStripMenuItem.Tag = "ru-RU"
+        '
+        'FinnishToolStripMenuItem
+        '
+        Me.FinnishToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.finland_16x16
+        Me.FinnishToolStripMenuItem.Name = "FinnishToolStripMenuItem"
+        resources.ApplyResources(Me.FinnishToolStripMenuItem, "FinnishToolStripMenuItem")
+        Me.FinnishToolStripMenuItem.Tag = "fi-FI"
         '
         'EnglishToolStripMenuItem
         '
@@ -874,5 +882,6 @@ Partial Class Explorer
     Friend WithEvents ToolStripMenuItemWakeUp As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ListenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NotifyIconUpdate As System.Windows.Forms.NotifyIcon
+    Friend WithEvents FinnishToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -117,38 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="blip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\blip.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Peruuta</value>
   </data>
-  <data name="error2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\error2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
   </data>
-  <data name="software_update_available" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\software_update_available.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Toiminto:</value>
   </data>
-  <data name="network_receive_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\Human-02\network_receive_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
   </data>
-  <data name="up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\up.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="forceCheckBox.Text" xml:space="preserve">
+    <value>Pakota</value>
   </data>
-  <data name="connected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\connected.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ComputerGroupBox.Text" xml:space="preserve">
+    <value>Valitse tietokone</value>
   </data>
-  <data name="network_transmit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\Human-02\network_transmit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MessageGroupBox.Text" xml:space="preserve">
+    <value>Ponnahdusviesti</value>
   </data>
-  <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\down.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="EmailGroupBox.Text" xml:space="preserve">
+    <value>Sähköpostiviesti</value>
   </data>
-  <data name="system_software_update" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\Human-02\system_software_update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
   </data>
-  <data name="emblem_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\Human-02\emblem_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forceAll.Text" xml:space="preserve">
+    <value>Pakota</value>
   </data>
-  <data name="finland_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\finland_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AllGroupBox.Text" xml:space="preserve">
+    <value>Vaihtoehdot</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Muokkaa toimintoa</value>
   </data>
 </root>

@@ -117,38 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="blip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\blip.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Button_Search.Text" xml:space="preserve">
+    <value>Aloita haku</value>
   </data>
-  <data name="error2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\error2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button_Search.ToolTip" xml:space="preserve">
+    <value>Aloita tietokoneiden hakeminen</value>
   </data>
-  <data name="software_update_available" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\software_update_available.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ch_Name.Text" xml:space="preserve">
+    <value>Nimi</value>
   </data>
-  <data name="network_receive_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\Human-02\network_receive_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ch_OS.Text" xml:space="preserve">
+    <value>Käyttöjärjestelmä</value>
   </data>
-  <data name="up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\up.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ch_Interface.Text" xml:space="preserve">
+    <value>Rajapinnan ID</value>
   </data>
-  <data name="connected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\connected.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ch_IP.Text" xml:space="preserve">
+    <value>IP-osoite</value>
   </data>
-  <data name="network_transmit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\Human-02\network_transmit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ch_MAC.Text" xml:space="preserve">
+    <value>MAC-osoite</value>
   </data>
-  <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\down.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Button_Cancel.Text" xml:space="preserve">
+    <value>Peruuta</value>
   </data>
-  <data name="system_software_update" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\Human-02\system_software_update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button_Cancel.ToolTip" xml:space="preserve">
+    <value>Lopeta tietokoneiden hakeminen</value>
   </data>
-  <data name="emblem_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Documentation\Human-02\emblem_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 13</value>
   </data>
-  <data name="finland_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\finland_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Päätä IP-osoitteeseen</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 13</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Aloita IP-osoitteesta</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Etsi tietokoneita</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Valitse haluamasi tietokoneen valintaruutu, sen jälkeen paina OK lisätäksesi ne tietokantaan.</value>
+  </data>
+  <data name="Button_CheckAll.Text" xml:space="preserve">
+    <value>Valitse kaikki</value>
+  </data>
+  <data name="Button_UnCheckAll.Text" xml:space="preserve">
+    <value>Poista valinta kaikista</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Peruuta</value>
+  </data>
+  <data name="OK_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>683, 547</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Etsi tietokoneita</value>
   </data>
 </root>
