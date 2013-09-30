@@ -54,6 +54,12 @@ Public Class EditTask
     End Sub
 
     Private Sub OKClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
+        If (String.IsNullOrEmpty(UserIDTextBox.Text) Or String.IsNullOrEmpty(PasswordTextBox.Text)) Then
+            MessageBox.Show("You must set a proper UserID and Password for a scheduled task.", "Create / Edit task", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+            TabControlTasks.SelectedIndex = 0
+            Return
+        End If
+
         With MyTask
             .Name = NameTextBox.Text
             .Description = DescriptionTextBox.Text

@@ -82,6 +82,7 @@ Partial Class Explorer
         Me.Status = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.IPAddress = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Netbios = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Group = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ContextMenuStrip_Machines = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.WakeUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -276,7 +277,7 @@ Partial Class Explorer
         '
         'ListView
         '
-        Me.ListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.MachineName, Me.Status, Me.IPAddress, Me.Netbios})
+        Me.ListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.MachineName, Me.Status, Me.IPAddress, Me.Netbios, Me.Group})
         Me.ListView.ContextMenuStrip = Me.ContextMenuStrip_Machines
         resources.ApplyResources(Me.ListView, "ListView")
         Me.ListView.FullRowSelect = True
@@ -304,6 +305,10 @@ Partial Class Explorer
         'Netbios
         '
         resources.ApplyResources(Me.Netbios, "Netbios")
+        '
+        'Group
+        '
+        resources.ApplyResources(Me.Group, "Group")
         '
         'ContextMenuStrip_Machines
         '
@@ -883,5 +888,6 @@ Partial Class Explorer
     Friend WithEvents ListenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NotifyIconUpdate As System.Windows.Forms.NotifyIcon
     Friend WithEvents FinnishToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Group As System.Windows.Forms.ColumnHeader
 
 End Class

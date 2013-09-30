@@ -245,6 +245,7 @@ Public Class Explorer
                 l.SubItems.Add(m.Status.ToString)
                 l.SubItems.Add(m.IP)
                 l.SubItems.Add(m.Netbios)
+                l.SubItems.Add(m.Group)
                 StatusChange(m.Name, m.Status, m.IP)
             End If
         Next

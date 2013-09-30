@@ -93,7 +93,6 @@ Partial Class SplashScreen
         Me.MinimizeBox = False
         Me.Name = "SplashScreen"
         Me.ShowInTaskbar = False
-        Me.TopMost = True
         Me.TransparencyKey = System.Drawing.Color.Magenta
         CType(Me.PictureBox_logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox_GPL, System.ComponentModel.ISupportInitialize).EndInit()

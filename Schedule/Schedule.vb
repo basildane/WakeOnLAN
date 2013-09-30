@@ -284,7 +284,7 @@ Public Class Schedule
                 Result = True
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "RegisterTaskDefinition")
+                MessageBox.Show(ex.Message, "Register Task Definition")
                 Result = False
 
             End Try

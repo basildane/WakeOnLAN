@@ -32,7 +32,7 @@ Namespace My
 
 #If DEBUG Then
             My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
-            My.Settings.Language = "fi-FI"
+            'My.Settings.Language = "fi-FI"
             'My.Forms.Listener.Show()
             'Exit Sub
 #End If
@@ -49,7 +49,6 @@ Namespace My
             End If
 
             Debug.WriteLine(My.Settings.Language)
-            My.Forms.SplashScreen.Show()
 
         End Sub
 
