@@ -312,8 +312,6 @@ End Class
     End Sub
 
     Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles Worker.DoWork
-
-        'Debug.WriteLine("(BackgroundWorker_Ping_DoWork) " & e.Argument)
         Do
             Try
                 Threading.Thread.Sleep(2000)
@@ -325,13 +323,11 @@ End Class
                 End If
 
             Catch ex As Exception
-                'Debug.WriteLine("(BackgroundWorker_Ping_DoWork) exception:" & e.Result)
                 Worker.ReportProgress(0)
 
             End Try
 
         Loop Until Worker.CancellationPending = True
-
     End Sub
 
     Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles Worker.ProgressChanged

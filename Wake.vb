@@ -27,6 +27,11 @@ Module Wake
         Dim m As Byte()
 
         Try
+            If (String.IsNullOrEmpty(machine.MAC)) Then
+                MessageBox.Show(String.Format("Host {0} does not have a valid MAC address.  Cannot send wake-up message until you add a MAC address.", machine.Name), "WakeUp Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+
             m = GetMAC(machine.MAC)
 
             Debug.WriteLine(String.Format("WakeUp: [{0}] [{1}] / [{2}] port: {3} TTL: {4}", machine.Name, machine.MAC, machine.Broadcast, machine.UDPPort, machine.TTL))
