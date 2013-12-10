@@ -625,7 +625,13 @@
     <EmbeddedResource Include="Listener.fi.resx">
       <DependentUpon>Listener.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties.fi-FI.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties.fi.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties.ru-RU.resx">
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.fi.resx">

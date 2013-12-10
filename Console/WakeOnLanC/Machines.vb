@@ -76,16 +76,15 @@ End Class
 
 
 <Serializable()> Public Class Machine
-
     Public Name As String = ""
     Public MAC As String = ""
     Public IP As String = ""
     Public Broadcast As String = ""
     Public Netbios As String = ""
+    Public Method As Integer = 0
     Public Emergency As Boolean = False
     Public ShutdownCommand As String = ""
     Public Group As String = ""
     Public UDPPort As Integer = 9
     Public TTL As Integer = 128
-
 End Class

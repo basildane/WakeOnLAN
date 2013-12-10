@@ -41,6 +41,13 @@ Public Class Properties
         m.Name = MachineName.Text
         m.MAC = MAC.Text
         m.IP = IP.Text
+
+        If (rbIP.Checked) Then
+            m.Method = 0
+        Else
+            m.Method = 1
+        End If
+
         m.Broadcast = Broadcast.Text
         m.Netbios = Edit_NETBIOS.Text
         m.Emergency = CheckBox_Emergency.Checked
@@ -66,6 +73,7 @@ Public Class Properties
         Me.Delete_Button.Visible = False
         Me.IP.Text = ""
         Me.Broadcast.Text = "255.255.255.255"
+        Me.rbIP.Checked = True
         Me.UDPPort.Text = "9"
         Me.TTL.Text = "128"
         Me.ShowDialog(My.Forms.Explorer)
@@ -88,6 +96,9 @@ Public Class Properties
         Group.Text = m.Group
         UDPPort.Text = m.UDPPort
         TTL.Text = m.TTL
+
+        rbIP.Checked = (m.Method = 0)
+        rbURI.Checked = (m.Method = 1)
 
         ValidateChildren()
         Me.ShowDialog(My.Forms.Explorer)

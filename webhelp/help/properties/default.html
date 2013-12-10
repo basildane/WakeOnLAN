@@ -9,6 +9,7 @@
 <title>Home - WakeOnLAN</title>
 <style type="text/css">
 .auto-style1 {
+	border-width: 0px;
 	margin-left: 5px;
 	margin-right: 5px;
 }
@@ -17,12 +18,7 @@
 <link href="../styles/style2.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
 <link href="../styles/pages.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
 <link rel="shortcut icon" href="http://aquilawol.sourceforge.net/favicon.ico" />
-<style type="text/css">
 
-.auto-style1 {
-	border-width: 0px;
-}
-</style>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -84,8 +80,13 @@
 					the default value of 255.255.255.255 is appropriate.&nbsp; Use the Calculate 
 					button to open a helper window for this.&nbsp; See the below 
 					under "Calculate Subnet" for more information.</li>
-					<li><strong>Netbios name:</strong> This is the Windows Netbios name of the 
-					host, or the FQDN of the host.</li>
+                        <li><strong>Send WOL to</strong>: The default is to send packets to the broadcast 
+                            subnet defined as &quot;Broadcast&quot;.&nbsp; To send WOL packets over the Internet, 
+                            select the &quot;URI&quot; option and enter the fully qualified host URI.</li>
+					<li><strong>Host URI:</strong> This is the Windows Netbios name of the 
+					host, or the FQDN of the host.&nbsp; This field is required to send shutdown 
+                        commands to a Windows host, or, as a URI, to send WOL packets to a host over the 
+                        Internet.</li>
 					<li><strong>Group:</strong> This is an option group that you 
 					put the host into, for example: "Servers".</li>
 					<li><strong>Emergency shutdown:</strong> If this box is checked, then this 
@@ -106,14 +107,14 @@
 						delete this host from the database.</li>
 				</ol>
 					</td>
-					<td>
-					<img height="483" src="properties.png" width="470" class="auto-style1" /></td>
+					<td valign="top">
+					<img height="480" src="properties.png" width="470" class="auto-style1" /></td>
 				</tr>
 			</table>
 			<p></p>
 			<table style="width: 100%">
 				<tr>
-					<td>
+					<td valign="top">
 					<img height="315" src="calculate.PNG" width="300" class="auto-style1" /></td>
 					<td style="vertical-align:top"><h4>
 					Using the subnet helper</h4>
@@ -133,7 +134,7 @@
 					<span id="Subnet_directed_broadcasts" class="mw-headline">
 					Subnet directed broadcasts</span></h4>
 					<p>
-					Most user will have hosts on the same subnet as the WOL 
+					Most users will have hosts on the same subnet as the WOL 
 					computer.&nbsp; WOL packets are not routed unless you 
 					explicity configure your network to do so. By using Subnet 
 					Directed Broadcasts, you can have WOL target a specific 
@@ -143,6 +144,9 @@
 					<p>
 					This technique makes it possible to wake up groups of 
 					machines on multiple networks, and even across the Internet.</p>
+                        <p>
+					        To send WOL packets over the Internet, to named hosts, enter the FQDN in the 
+                            Host URI field and check the URI button for &quot;Send WOL to&quot;.</p>
 					</td>
 				</tr>
 			</table>

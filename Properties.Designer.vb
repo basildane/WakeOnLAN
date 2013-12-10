@@ -47,8 +47,12 @@ Partial Class Properties
         Me.IP = New WakeOnLan.IPAddressControl()
         Me.MachineName = New WakeOnLan.RegExTextBox()
         Me.MAC = New WakeOnLan.RegExTextBox()
+        Me.lbLeaveBlank = New System.Windows.Forms.Label()
+        Me.lbSendTo = New System.Windows.Forms.Label()
         Me.bCalcBroadcast = New System.Windows.Forms.Button()
         Me.Help_Button = New System.Windows.Forms.Button()
+        Me.rbIP = New System.Windows.Forms.RadioButton()
+        Me.rbURI = New System.Windows.Forms.RadioButton()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -276,6 +280,24 @@ Partial Class Properties
         Me.ToolTip1.SetToolTip(Me.MAC, resources.GetString("MAC.ToolTip"))
         Me.MAC.ValidationExpression = "^([0-9a-fA-F]{2}([-:])?){5}[0-9a-fA-F]{2}$"
         '
+        'lbLeaveBlank
+        '
+        resources.ApplyResources(Me.lbLeaveBlank, "lbLeaveBlank")
+        Me.ErrorProvider1.SetError(Me.lbLeaveBlank, resources.GetString("lbLeaveBlank.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.lbLeaveBlank, CType(resources.GetObject("lbLeaveBlank.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.lbLeaveBlank, CType(resources.GetObject("lbLeaveBlank.IconPadding"), Integer))
+        Me.lbLeaveBlank.Name = "lbLeaveBlank"
+        Me.ToolTip1.SetToolTip(Me.lbLeaveBlank, resources.GetString("lbLeaveBlank.ToolTip"))
+        '
+        'lbSendTo
+        '
+        resources.ApplyResources(Me.lbSendTo, "lbSendTo")
+        Me.ErrorProvider1.SetError(Me.lbSendTo, resources.GetString("lbSendTo.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.lbSendTo, CType(resources.GetObject("lbSendTo.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.lbSendTo, CType(resources.GetObject("lbSendTo.IconPadding"), Integer))
+        Me.lbSendTo.Name = "lbSendTo"
+        Me.ToolTip1.SetToolTip(Me.lbSendTo, resources.GetString("lbSendTo.ToolTip"))
+        '
         'bCalcBroadcast
         '
         resources.ApplyResources(Me.bCalcBroadcast, "bCalcBroadcast")
@@ -296,12 +318,38 @@ Partial Class Properties
         Me.ToolTip1.SetToolTip(Me.Help_Button, resources.GetString("Help_Button.ToolTip"))
         Me.Help_Button.UseVisualStyleBackColor = True
         '
+        'rbIP
+        '
+        resources.ApplyResources(Me.rbIP, "rbIP")
+        Me.ErrorProvider1.SetError(Me.rbIP, resources.GetString("rbIP.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.rbIP, CType(resources.GetObject("rbIP.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.rbIP, CType(resources.GetObject("rbIP.IconPadding"), Integer))
+        Me.rbIP.Name = "rbIP"
+        Me.rbIP.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.rbIP, resources.GetString("rbIP.ToolTip"))
+        Me.rbIP.UseVisualStyleBackColor = True
+        '
+        'rbURI
+        '
+        resources.ApplyResources(Me.rbURI, "rbURI")
+        Me.ErrorProvider1.SetError(Me.rbURI, resources.GetString("rbURI.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.rbURI, CType(resources.GetObject("rbURI.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.rbURI, CType(resources.GetObject("rbURI.IconPadding"), Integer))
+        Me.rbURI.Name = "rbURI"
+        Me.rbURI.TabStop = True
+        Me.ToolTip1.SetToolTip(Me.rbURI, resources.GetString("rbURI.ToolTip"))
+        Me.rbURI.UseVisualStyleBackColor = True
+        '
         'Properties
         '
         Me.AcceptButton = Me.OK_Button
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
+        Me.Controls.Add(Me.lbSendTo)
+        Me.Controls.Add(Me.rbURI)
+        Me.Controls.Add(Me.rbIP)
+        Me.Controls.Add(Me.lbLeaveBlank)
         Me.Controls.Add(Me.TTL)
         Me.Controls.Add(Me.UDPPort)
         Me.Controls.Add(Me.Help_Button)
@@ -363,5 +411,9 @@ Partial Class Properties
     Friend WithEvents lbTTL As System.Windows.Forms.Label
     Friend WithEvents TTL As WakeOnLan.RegExTextBox
     Friend WithEvents UDPPort As WakeOnLan.RegExTextBox
+    Friend WithEvents lbSendTo As System.Windows.Forms.Label
+    Friend WithEvents rbURI As System.Windows.Forms.RadioButton
+    Friend WithEvents rbIP As System.Windows.Forms.RadioButton
+    Friend WithEvents lbLeaveBlank As System.Windows.Forms.Label
 
 End Class

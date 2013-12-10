@@ -264,6 +264,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_1118139BBA38816A9A44712060A6E113"
+                    {
+                    "Name" = "8:Microsoft.ReportViewer.WinForms.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.ReportViewer.WinForms.dll"
             "TargetName" = "8:"
@@ -321,6 +326,11 @@
             "AssemblyAsmDisplayName" = "8:AutoUpdater.NET, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_B0CC8B2E5610B5F72F06BA364BC74D1A"
+                    {
+                    "Name" = "8:AutoUpdater.NET.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:AutoUpdater.NET.dll"
             "TargetName" = "8:"
@@ -378,6 +388,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_FF980E69204A364C82D9C295FF9AF456"
+                    {
+                    "Name" = "8:Microsoft.ReportViewer.Common.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.ReportViewer.Common.dll"
             "TargetName" = "8:"
@@ -474,16 +489,16 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:WakeOnLAN 2.7.5"
-        "ProductCode" = "8:{80DA3D1D-98C9-4550-B19A-EA184285092C}"
-        "PackageCode" = "8:{8E9BBA05-A5A7-438A-8548-ACC7A0650826}"
+        "ProductName" = "8:WakeOnLAN 2.7.6 (beta 1)"
+        "ProductCode" = "8:{A5B1E399-67C1-4E09-BAAA-CDBE962EB503}"
+        "PackageCode" = "8:{0F9572CC-466C-447D-8826-97326FD1A042}"
         "UpgradeCode" = "8:{20A416B6-1FE6-468D-85B4-F8952658AA27}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.7.5"
+        "ProductVersion" = "8:2.7.50015"
         "Manufacturer" = "8:Aquila Technology"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://aquilawol.sourceforge.net/"
@@ -1053,7 +1068,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0F203EC802D84D0CB8EE95FA476BFB7C"
             {
-            "SourcePath" = "8:..\\Console\\WakeOnLanC\\obj\\x86\\Release\\WakeOnLanC.exe"
+            "SourcePath" = "8:\\\\aquila\\files\\Users\\phil\\My Documents\\Projects\\WakeOnLan\\Console\\WakeOnLanC\\obj\\x86\\Release\\WakeOnLanC.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_303A410242F840E79F6DB760BFF0D7C9"
@@ -1081,7 +1096,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_742B0D135E1C400EBAB1628E8910BE27"
             {
-            "SourcePath" = "8:..\\obj\\x86\\Release\\WakeOnLan.exe"
+            "SourcePath" = "8:\\\\aquila\\files\\Users\\phil\\My Documents\\Projects\\WakeOnLan\\obj\\x86\\Release\\WakeOnLan.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_303A410242F840E79F6DB760BFF0D7C9"

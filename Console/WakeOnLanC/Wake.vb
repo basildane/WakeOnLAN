@@ -25,10 +25,18 @@ Module Wake
         Dim packet(17 * 6 - 1) As Byte
         Dim i, j As Integer
         Dim m As Byte()
+        Dim host As String
 
         Try
             m = GetMAC(machine.MAC)
-            client.Connect(machine.Broadcast, machine.UDPPort)
+
+            If (machine.Method = 0) Then
+                host = machine.Broadcast
+            Else
+                host = machine.Netbios
+            End If
+
+            client.Connect(host, machine.UDPPort)
             client.EnableBroadcast = True
             client.Ttl = machine.TTL
 
