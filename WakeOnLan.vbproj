@@ -690,6 +690,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.resx">
       <DependentUpon>Properties.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -786,6 +787,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>OptionProperties.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.pt-BR.resx">
       <Generator>ResXFileCodeGenerator</Generator>

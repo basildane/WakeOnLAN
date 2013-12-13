@@ -28,6 +28,10 @@
 		</TaggedOutputs> -->
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2013Limited\InstallShield.targets"/>
+	<ItemGroup/>
+	<ItemGroup/>
+	<ItemGroup/>
+	<ItemGroup/>
 	<ItemGroup>
 		<ProjectReference Include="..\WakeOnLan.vbproj">
 			<Name>WakeOnLan</Name>
@@ -38,7 +42,4 @@
 			<Project>{2B807DFF-133A-41DA-AFF0-365531DB2AE8}</Project>
 		</ProjectReference>
 	</ItemGroup>
-	<ItemGroup/>
-	<ItemGroup/>
-	<ItemGroup/>
 </Project>

@@ -52,7 +52,7 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
-		<subject>Wake On Lan</subject>
+		<subject>##ID_STRING4##</subject>
 		<author>##ID_STRING2##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
@@ -357,8 +357,11 @@
 		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{B4B16785-2ED9-4E7F-8F4C-7EA22CDB48D3}</td><td>MAIN_WINDOW</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{B2EFAA1C-0F20-4953-91DD-5345A283357A}</td><td>MULTIUSER</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WakeOnLan.Localized_resources</td><td>{B6E93BFD-3156-4E98-B32A-72811FF75546}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.localized_resource</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WakeOnLan.Localized_resources1</td><td>{34876FCA-05EA-4D72-81EA-3715818D0E92}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.localized_resource</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WakeOnLan.Primary_output</td><td>{80DFBEAD-8531-46CB-AAF3-8226E53F14C8}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WakeOnLan.Primary_output1</td><td>{E101AE39-D384-47D9-B622-516A6548F884}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WakeOnLanC.Primary_output</td><td>{9154A051-03B8-42AC-89C8-1F563619C4AC}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlanc.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WakeOnLanC.Primary_output1</td><td>{9B64BF31-942F-4C18-AEF5-18775E414072}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlanc.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1165,7 +1168,7 @@
 		<row><td>HELP</td><td>INSTALLDIR</td><td>Help</td><td/><td>0</td><td/></row>
 		<row><td>IMAGES</td><td>HELP</td><td>images</td><td/><td>0</td><td/></row>
 		<row><td>INFORMATION_LINKS</td><td>HELP</td><td>INFORM~1|information_links</td><td/><td>0</td><td/></row>
-		<row><td>INSTALLDIR</td><td>WAKE_ON_LAN</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>INSTALLDIR</td><td>WAKEONLAN</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
@@ -1199,6 +1202,7 @@
 		<row><td>TempFolder</td><td>TARGETDIR</td><td>.:Temp</td><td/><td>0</td><td/></row>
 		<row><td>TemplateFolder</td><td>TARGETDIR</td><td>.:ShellNew</td><td/><td>0</td><td/></row>
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
+		<row><td>WAKEONLAN</td><td>AQUILA_TECHNOLOGY</td><td>WAKEON~1|WakeOnLAN</td><td/><td>0</td><td/></row>
 		<row><td>WAKEUP</td><td>HELP</td><td>wakeup</td><td/><td>0</td><td/></row>
 		<row><td>WAKE_ON_LAN</td><td>AQUILA_TECHNOLOGY</td><td>WAKEON~1|Wake On Lan</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
@@ -1912,8 +1916,11 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT8</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>AlwaysInstall</td><td>WakeOnLan.Localized_resources</td></row>
+		<row><td>AlwaysInstall</td><td>WakeOnLan.Localized_resources1</td></row>
 		<row><td>AlwaysInstall</td><td>WakeOnLan.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>WakeOnLan.Primary_output1</td></row>
 		<row><td>AlwaysInstall</td><td>WakeOnLanC.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>WakeOnLanC.Primary_output1</td></row>
 	</table>
 
 	<table name="File">
@@ -1972,9 +1979,9 @@
 		<row><td>style3.css2</td><td>ISX_DEFAULTCOMPONENT1</td><td>style3.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\webhelp\help\styles\style3.css</td><td>1</td><td/></row>
 		<row><td>thumbs.db</td><td>ISX_DEFAULTCOMPONENT10</td><td>Thumbs.db</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\webhelp\help\properties\Thumbs.db</td><td>1</td><td/></row>
 		<row><td>triggerweekly.png</td><td>ISX_DEFAULTCOMPONENT11</td><td>TRIGGE~1.PNG|triggerWeekly.PNG</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\webhelp\help\scheduler\triggerWeekly.PNG</td><td>1</td><td/></row>
-		<row><td>wakeonlan.localized_resource</td><td>WakeOnLan.Localized_resources</td><td>WakeOnLan.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLan&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
-		<row><td>wakeonlan.primary_output</td><td>WakeOnLan.Primary_output</td><td>WakeOnLan.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLan&gt;|Built</td><td>3</td><td/></row>
-		<row><td>wakeonlanc.primary_output</td><td>WakeOnLanC.Primary_output</td><td>WakeOnLanC.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLanC&gt;|Built</td><td>3</td><td/></row>
+		<row><td>wakeonlan.localized_resource</td><td>WakeOnLan.Localized_resources1</td><td>WakeOnLan.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLan&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
+		<row><td>wakeonlan.primary_output</td><td>WakeOnLan.Primary_output1</td><td>WakeOnLan.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLan&gt;|Built</td><td>3</td><td/></row>
+		<row><td>wakeonlanc.primary_output</td><td>WakeOnLanC.Primary_output1</td><td>WakeOnLanC.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLanC&gt;|Built</td><td>3</td><td/></row>
 		<row><td>wakeup.png</td><td>ISX_DEFAULTCOMPONENT15</td><td>wakeup.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\webhelp\help\wakeup\wakeup.png</td><td>1</td><td/></row>
 		<row><td>wol_logo.png</td><td>ISX_DEFAULTCOMPONENT6</td><td>wol_logo.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\webhelp\help\images\wol_logo.png</td><td>1</td><td/></row>
 	</table>
@@ -2137,8 +2144,11 @@
 		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_71FA7AF2_EE68_412B_AA78_9D0753C6D79C_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_17F324D8_6919_4FB8_B196_8D726273B8C3_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WakeOnLan.Localized_resources</td><td/><td/><td>_4AF0E96D_92C5_4FE2_BD4E_32F7A768A388_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WakeOnLan.Localized_resources1</td><td/><td/><td>_1EE1B9AB_3F71_47C0_870C_AC5DAA6DE14B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WakeOnLan.Primary_output</td><td/><td/><td>_03D16AAB_5C09_4436_9726_8C4CB13000F8_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WakeOnLan.Primary_output1</td><td/><td/><td>_D743277E_96A0_4625_B8A1_638497D88656_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WakeOnLanC.Primary_output</td><td/><td/><td>_B705EB2F_9FCF_46AE_991D_39318C3E9C9C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WakeOnLanC.Primary_output1</td><td/><td/><td>_21BA7CCD_4097_4C53_8A0A_DB0F42C4E72E_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2761,7 +2771,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>Aquila Technology</td><td>0</td><td/><td>1445055983</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>Aquila Technology</td><td>0</td><td/><td>1713484110</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>1445055983</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>1445055983</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40FULL</td><td>1033</td><td>Microsoft .NET Framework 4.0 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>1445049903</td></row>
@@ -3574,7 +3584,7 @@
 		<row><td>IDS_PROGMSG_XML_UPDATE_FILE</td><td>1033</td><td>Updating XML file %s...</td><td>0</td><td/><td>1445055983</td></row>
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>1445055983</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>1445055983</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>Wake On Lan</td><td>0</td><td/><td>1445019247</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>WakeOnLAN</td><td>0</td><td/><td>1713461614</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>1445055983</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>1445055983</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>1445055983</td></row>
@@ -3863,9 +3873,10 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>1445055983</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>1445055983</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>1445055983</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.AquilaTech.com</td><td>0</td><td/><td>1445029423</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>Aquila Technology</td><td>0</td><td/><td>1445055983</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.AquilaTechnology.com</td><td>0</td><td/><td>1713484110</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>Aquila Technology</td><td>0</td><td/><td>1713484110</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>1445011055</td></row>
+		<row><td>ID_STRING4</td><td>1033</td><td>WakeOnLAN</td><td>0</td><td/><td>1713457385</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>1445055983</td></row>
 	</table>
 
@@ -3977,6 +3988,7 @@
 		<row><td>_0D9C1CC0BA9744DC804BFA400D0686E9.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_18879BBB957146378169DAE38F114D60.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_19AC63C4057949788540EE79D9D72289.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\Release x64\WakeOnLan.exe</td><td>0</td></row>
+		<row><td>_247EE10242404DFFAA3A312F8D75E65B.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_2C3B0D6E54E4413798F17F4922CC5438.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_2F924003FFB8434E908B547D470CE3F3.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_3C5781B00AEB4AD5B4F196B66BB3EA1F.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
@@ -3987,11 +3999,16 @@
 		<row><td>_6B3C1719D2BD48F88D61BA2D9DA12D6F.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_89F2959A2E5840BA8E6F00C2135D8CEF.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\Release x64\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_8A8D2764C6D547ACB9A282839C356E8F.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
+		<row><td>_962D9B4A2BC3449EA9C2C49EEA6D5E77.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_AECC6E667C924F9FB02039B64F79D6A9.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
+		<row><td>_Built1_7BF67C2382E94AB1A8E048CADC93CD89.exe</td><td/><td>&lt;VSSolutionFolder&gt;\Resources\connected.ico</td><td>0</td></row>
+		<row><td>_Built_356BE43ED5C74118B47B8BC4E953BE03.exe</td><td/><td>&lt;VSSolutionFolder&gt;\Resources\connected.ico</td><td>0</td></row>
 		<row><td>_D406F92C799A4CA5ABEB56918B7CF92B.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_D788F01555E74699B99717D6D8AE8E23.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_DC2CEF9D32204D3DAA8DC607234D2A0B.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
+		<row><td>_E072DDFF5E144E1792D13491BD1A9242.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_EE18D29FE3F64A58AFEBD167F22E871E.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
+		<row><td>_F2EADA8F82FB404E9B75309510AE0AF3.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_F6A2E69F93A64EB5815030566C4F6D9B.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\WakeOnLan.exe</td><td>0</td></row>
 		<row><td>_F8E617FD2429456E8B4807617EDB06C0.exe</td><td/><td>C:\Projects\WakeOnLan\bin\x86\Release x64\WakeOnLan.exe</td><td>0</td></row>
 	</table>
@@ -4109,8 +4126,8 @@
 		<col def="S0">Value</col>
 		<row><td>ActiveLanguage</td><td>1033</td></row>
 		<row><td>Comments</td><td/></row>
-		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="6d78a46bf2c52ee27034bbcad20f7f95">
-QwBEAF8AUgBPAE0AAQBFAHgAcAByAGUAcwBzAA==
+		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="de9f554a3bc05c12be9c31b998217995">
+UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 			</td></row>
 		<row><td>DefaultProductConfiguration</td><td>Express</td></row>
 		<row><td>EnableSwidtag</td><td>0</td></row>
@@ -4501,8 +4518,8 @@ QwBEAF8AUgBPAE0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{9E58345D-0854-44E7-A92E-DD639E324244}</td><td/></row>
-		<row><td>ProductName</td><td>Wake On Lan</td><td/></row>
+		<row><td>ProductCode</td><td>{A5B1E399-67C1-4E09-BAAA-CDBE962EB503}</td><td/></row>
+		<row><td>ProductName</td><td>WakeOnLAN</td><td/></row>
 		<row><td>ProductVersion</td><td>2.07.0006</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
@@ -4515,7 +4532,8 @@ QwBEAF8AUgBPAE0AAQBFAHgAcAByAGUAcwBzAA==
 		<row><td>RestartManagerOption</td><td>CloseRestart</td><td/></row>
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION40FULL</td><td/></row>
+		<row><td>SHOWLAUNCHPROGRAM</td><td>-1</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION40FULL;ISACTIONPROP2</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
 		<row><td>UpgradeCode</td><td>{53C0B87A-D701-4B9D-B14F-3B7695281A99}</td><td/></row>
@@ -4667,8 +4685,8 @@ QwBEAF8AUgBPAE0AAQBFAHgAcAByAGUAcwBzAA==
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>_Built</td><td>aquila_1_aquila_technology</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>WakeOnLan.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>_Built1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>WakeOnLan.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>_Built</td><td>aquila_1_aquila_technology</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>WakeOnLan.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built_356BE43ED5C74118B47B8BC4E953BE03.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>_Built1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>WakeOnLan.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built1_7BF67C2382E94AB1A8E048CADC93CD89.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
@@ -4791,6 +4809,7 @@ QwBEAF8AUgBPAE0AAQBFAHgAcAByAGUAcwBzAA==
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
+		<row><td>{20A416B6-1FE6-468D-85B4-F8952658AA27}</td><td>2.7.5</td><td>2.7.5</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP2</td><td>2.7.5</td></row>
 	</table>
 
 	<table name="Verb">
