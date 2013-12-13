@@ -37,6 +37,7 @@ Partial Class AboutBox
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.lAutomaticUpdate = New System.Windows.Forms.Label()
         Me.pbUpdate = New System.Windows.Forms.PictureBox()
+        Me.LabelFullVersion = New System.Windows.Forms.Label()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.pbUpdate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,8 +57,8 @@ Partial Class AboutBox
         '
         'TextBoxDescription
         '
-        resources.ApplyResources(Me.TextBoxDescription, "TextBoxDescription")
         Me.TextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None
+        resources.ApplyResources(Me.TextBoxDescription, "TextBoxDescription")
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.TabStop = False
@@ -86,11 +87,11 @@ Partial Class AboutBox
         '
         'Panel1
         '
-        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
         Me.Panel1.Controls.Add(Me.LogoPictureBox)
         Me.Panel1.Controls.Add(Me.LabelProductName)
         Me.Panel1.Controls.Add(Me.LabelCopyright)
+        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
         'label4
@@ -121,10 +122,15 @@ Partial Class AboutBox
         '
         'pbUpdate
         '
-        resources.ApplyResources(Me.pbUpdate, "pbUpdate")
         Me.pbUpdate.Image = Global.WakeOnLan.My.Resources.Resources.system_software_update
+        resources.ApplyResources(Me.pbUpdate, "pbUpdate")
         Me.pbUpdate.Name = "pbUpdate"
         Me.pbUpdate.TabStop = False
+        '
+        'LabelFullVersion
+        '
+        resources.ApplyResources(Me.LabelFullVersion, "LabelFullVersion")
+        Me.LabelFullVersion.Name = "LabelFullVersion"
         '
         'AboutBox
         '
@@ -132,6 +138,7 @@ Partial Class AboutBox
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.CancelButton = Me.OKButton
+        Me.Controls.Add(Me.LabelFullVersion)
         Me.Controls.Add(Me.pbUpdate)
         Me.Controls.Add(Me.lAutomaticUpdate)
         Me.Controls.Add(Me.LinkLabel2)
@@ -167,5 +174,6 @@ Partial Class AboutBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lAutomaticUpdate As System.Windows.Forms.Label
     Friend WithEvents pbUpdate As System.Windows.Forms.PictureBox
+    Friend WithEvents LabelFullVersion As System.Windows.Forms.Label
 
 End Class
