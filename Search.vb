@@ -24,6 +24,9 @@ Imports Microsoft.Win32
 Imports System.Management
 
 Public Class Search
+    Declare Function SendARP Lib "iphlpapi.dll" (
+        ByVal DestIP As UInt32, ByVal SrcIP As UInt32, _
+        ByVal pMacAddr As Byte(), ByRef PhyAddrLen As Integer) As Integer
 
     Private Structure Profile
         Public Name As String
@@ -102,7 +105,6 @@ Public Class Search
 
             query = New ObjectQuery("SELECT * FROM Win32_NetworkAdapterConfiguration")
             searcher = New ManagementObjectSearcher(scope, query)
-            'Dim o As New EnumerationOptions(
 
             queryCollection = searcher.Get()
 
@@ -128,15 +130,45 @@ Public Class Search
             Next
 
         Catch ex As Exception
-            p.HasError = True
-            p.OSName = ex.Message
             p.IPAddress = IP
+            p = FindMAC(p)
             If p.Name = "" Then p.Name = IP
             BackgroundWorker1.ReportProgress(Progress, p)
 
         End Try
 
     End Sub
+
+    Private Function FindMAC(p As Profile) As Profile
+        Dim addr As IPAddress
+        Dim dwRemoteIP As UInt32
+        Dim mac() As Byte = New Byte(6) {}
+        Dim len As Integer = 6
+        Dim host As IPHostEntry
+
+        Try
+            addr = IPAddress.Parse(p.IPAddress)
+            dwRemoteIP = BitConverter.ToUInt32(addr.GetAddressBytes(), 0)
+
+            If dwRemoteIP <> 0 Then
+                'retrieve the remote MAC address
+                If SendARP(dwRemoteIP, 0, mac, len) = 0 Then
+                    p.MacAddress = BitConverter.ToString(mac, 0, len)
+                    host = Dns.GetHostEntry(addr)
+                    p.Name = host.HostName
+                    p.OSName = "Unknown"
+                End If
+            End If
+
+        Catch ex As Exception
+            p.OSName = ex.Message
+            p.HasError = True
+
+        End Try
+
+        Return p
+
+    End Function
 
     Private Sub Button_Search_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Search.Click
         Me.Cursor = Cursors.WaitCursor
@@ -181,24 +213,40 @@ Public Class Search
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        Dim startIP, stopIP As Byte()
+        Dim i, startIP, stopIP As UInt32
         Dim ip As String
         Dim Progress As Integer
 
-        startIP = IPAddress.Parse(IpAddressControl_Start.Text).GetAddressBytes
-        stopIP = IPAddress.Parse(IpAddressControl_End.Text).GetAddressBytes
+        Try
+            startIP = IPToInt(IPAddress.Parse(IpAddressControl_Start.Text))
+            stopIP = IPToInt(IPAddress.Parse(IpAddressControl_End.Text))
 
-        For i As Int16 = startIP(3) To stopIP(3)
-            ip = startIP(0) & "." & startIP(1) & "." & startIP(2) & "." & i
-            Progress = (i - startIP(3) + 1) / (stopIP(3) - startIP(3) + 1) * 100
-            Poll(ip, Progress)
-            If BackgroundWorker1.CancellationPending Then
-                Exit For
-            End If
-            Application.DoEvents()
-        Next
+            For i = startIP To stopIP
+                ip = IPAddress.Parse(i).ToString()
+                Progress = (i - startIP) * 100 / (stopIP - startIP)
+                Poll(ip, Progress)
+                If BackgroundWorker1.CancellationPending Then
+                    Exit For
+                End If
+                Application.DoEvents()
+            Next
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error in Search worker", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
 
     End Sub
+
+    Function IPToInt(address As IPAddress) As UInt32
+        Dim bytes As Byte() = address.GetAddressBytes()
+
+        If BitConverter.IsLittleEndian Then
+            Array.Reverse(bytes)
+        End If
+        Dim num As UInt32 = BitConverter.ToUInt32(bytes, 0)
+        Return num
+    End Function
 
     Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
         Dim i As ListViewItem
