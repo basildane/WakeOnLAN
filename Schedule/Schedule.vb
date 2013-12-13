@@ -18,6 +18,7 @@
 
 Imports TaskScheduler
 Imports System.Security.AccessControl
+Imports System.Security.Principal
 
 Public Class Schedule
     Dim sc As TaskScheduler.TaskScheduler
@@ -303,15 +304,31 @@ Public Class Schedule
         ByVal rights As FileSystemRights, ByVal controlType As AccessControlType)
 
         Dim fSecurity As FileSecurity
+        Dim user As WindowsIdentity
+        Dim principal As WindowsPrincipal
 
         Try
             fSecurity = IO.File.GetAccessControl(fileName)
 
-            For Each rule As FileSystemAccessRule In fSecurity.GetAccessRules(True, True, GetType(Security.Principal.NTAccount))
-                Debug.WriteLine(rule.IdentityReference.Value & " : " & rule.FileSystemRights.ToString)
+            user = New WindowsIdentity(account)
+            principal = New WindowsPrincipal(user)
 
-                If String.Compare(rule.IdentityReference.Value, account, True) = 0 Then
-                    If (rule.FileSystemRights And rights) And (rule.AccessControlType = AccessControlType.Allow) Then
+            For Each rule As AuthorizationRule In fSecurity.GetAccessRules(True, True, GetType(NTAccount))
+                Dim fsAccessRule As FileSystemAccessRule = rule
+
+                If (IsNothing(fsAccessRule)) Then
+                    Continue For
+                End If
+
+                If ((fsAccessRule.FileSystemRights And FileSystemRights.Read) > 0) Then
+                    Dim ntAccount As NTAccount = rule.IdentityReference
+
+                    If (IsNothing(ntAccount)) Then
+                        Continue For
+                    End If
+
+                    If (principal.IsInRole(ntAccount.Value)) Then
+                        Debug.WriteLine(String.Format("user {0} has access in group {1}", principal.Identity.Name, ntAccount.Value))
                         Exit Sub
                     End If
                 End If
@@ -323,7 +340,7 @@ Public Class Schedule
 
         End Try
 
-        If MessageBox.Show(String.Format(My.Resources.Strings.lit_noRights, account), "Security warning", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.No Then
+        If MessageBox.Show(String.Format(My.Resources.Strings.lit_noRights, principal.Identity.Name), "Security warning", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.No Then
             Exit Sub
         End If
 

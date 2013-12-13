@@ -1,29 +1,38 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WakeOnLan", "WakeOnLan.vbproj", "{0062DCB9-BD1C-4E87-9267-E373B23FFF37}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WakeOnLanC", "Console\WakeOnLanC\WakeOnLanC.vbproj", "{2B807DFF-133A-41DA-AFF0-365531DB2AE8}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}"
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup", "Setup\Setup.isproj", "{59068264-8C0D-487E-A137-944B9DE93CE5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6981386D-A04B-4E59-ACA9-2341BCB9FDBD} = {6981386D-A04B-4E59-ACA9-2341BCB9FDBD}
+		{0062DCB9-BD1C-4E87-9267-E373B23FFF37} = {0062DCB9-BD1C-4E87-9267-E373B23FFF37}
+		{2B807DFF-133A-41DA-AFF0-365531DB2AE8} = {2B807DFF-133A-41DA-AFF0-365531DB2AE8}
+	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "webhelp", "webhelp\", "{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "webhelp", "http://localhost:33939", "{6981386D-A04B-4E59-ACA9-2341BCB9FDBD}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/webhelp"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_33939"
 		Debug.AspNetCompiler.PhysicalPath = "webhelp\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\webhelp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_33939\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/webhelp"
+		Release.AspNetCompiler.VirtualPath = "/localhost_33939"
 		Release.AspNetCompiler.PhysicalPath = "webhelp\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\webhelp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_33939\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "33939"
+		SlnRelativePath = "webhelp\"
+		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
 Global
@@ -60,27 +69,26 @@ Global
 		{2B807DFF-133A-41DA-AFF0-365531DB2AE8}.Release|Mixed Platforms.Build.0 = Release|x86
 		{2B807DFF-133A-41DA-AFF0-365531DB2AE8}.Release|x86.ActiveCfg = Release|x86
 		{2B807DFF-133A-41DA-AFF0-365531DB2AE8}.Release|x86.Build.0 = Release|x86
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Debug|Any CPU.ActiveCfg = Debug
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Debug|Mixed Platforms.Build.0 = Debug
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Debug|x86.ActiveCfg = Debug
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Debug|x86.Build.0 = Debug
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Release|Any CPU.ActiveCfg = Release
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Release|Any CPU.Build.0 = Release
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Release|Mixed Platforms.ActiveCfg = Release x64
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Release|Mixed Platforms.Build.0 = Release x64
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Release|x86.ActiveCfg = Release
-		{92DA3D86-CA13-4C14-B5FA-14A5CB1332B8}.Release|x86.Build.0 = Release
-		{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
-		{D40F708C-C6D9-40E5-B9AE-6DE675E48FE3}.Release|x86.ActiveCfg = Debug|Any CPU
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Debug|Any CPU.ActiveCfg = DVD-5
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Debug|Any CPU.Build.0 = DVD-5
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Debug|Mixed Platforms.ActiveCfg = SingleImage
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Debug|x86.ActiveCfg = DVD-5
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Debug|x86.Build.0 = DVD-5
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Release|Any CPU.ActiveCfg = SingleImage
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Release|Any CPU.Build.0 = SingleImage
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Release|Mixed Platforms.ActiveCfg = SingleImage
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Release|Mixed Platforms.Build.0 = SingleImage
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Release|x86.ActiveCfg = SingleImage
+		{59068264-8C0D-487E-A137-944B9DE93CE5}.Release|x86.Build.0 = SingleImage
+		{6981386D-A04B-4E59-ACA9-2341BCB9FDBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6981386D-A04B-4E59-ACA9-2341BCB9FDBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6981386D-A04B-4E59-ACA9-2341BCB9FDBD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6981386D-A04B-4E59-ACA9-2341BCB9FDBD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6981386D-A04B-4E59-ACA9-2341BCB9FDBD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6981386D-A04B-4E59-ACA9-2341BCB9FDBD}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6981386D-A04B-4E59-ACA9-2341BCB9FDBD}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6981386D-A04B-4E59-ACA9-2341BCB9FDBD}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6981386D-A04B-4E59-ACA9-2341BCB9FDBD}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

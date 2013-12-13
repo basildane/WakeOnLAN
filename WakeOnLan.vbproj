@@ -72,7 +72,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>C:\TEMP\bin\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>WakeOnLan.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
@@ -92,7 +92,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>WakeOnLan.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
@@ -112,7 +112,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release x64|AnyCPU'">
     <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>bin\Release x64\</OutputPath>
     <DefineConstants>Trial=false</DefineConstants>
     <BaseAddress>285212672</BaseAddress>
     <DocumentationFile>WakeOnLan.xml</DocumentationFile>
@@ -133,7 +133,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\x64\Debug\</OutputPath>
+    <OutputPath>bin\Debug x64\</OutputPath>
     <DefineConstants>Trial=false</DefineConstants>
     <BaseAddress>285212672</BaseAddress>
     <DocumentationFile>WakeOnLan.xml</DocumentationFile>
@@ -192,7 +192,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>C:\Debug\WakeOnLan\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <BaseAddress>285212672</BaseAddress>
     <DocumentationFile>WakeOnLan.xml</DocumentationFile>
     <WarningLevel>1</WarningLevel>
@@ -210,7 +210,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <DefineTrace>true</DefineTrace>
-    <OutputPath>C:\Debug\WakeOnLan\</OutputPath>
+    <OutputPath>bin\x86\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <BaseAddress>285212672</BaseAddress>
@@ -529,7 +529,6 @@
     <None Include="Documentation\Human-02\system_software_update.png" />
     <None Include="Documentation\software_update_available.png" />
     <None Include="Resources\flags\finland_16x16.png" />
-    <Content Include="Setup\Setup.vdproj" />
     <None Include="Documentation\Splash.psd" />
     <None Include="Documentation\translation.xlsx" />
     <None Include="Resources\down.wav" />
@@ -625,7 +624,13 @@
     <EmbeddedResource Include="Listener.fi.resx">
       <DependentUpon>Listener.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties.fi-FI.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties.fi.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties.ru-RU.resx">
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.fi.resx">
@@ -685,6 +690,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.resx">
       <DependentUpon>Properties.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -781,6 +787,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>OptionProperties.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.pt-BR.resx">
       <Generator>ResXFileCodeGenerator</Generator>

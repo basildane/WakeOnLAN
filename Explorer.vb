@@ -23,9 +23,17 @@ Imports AutoUpdaterDotNET
 
 Public Class Explorer
     Declare Function IsValidLocale Lib "kernel32" (ByVal Locale As Integer, ByVal dwFlags As Integer) As Integer
+    Declare Function OpenIcon Lib "user32" (ByVal hwnd As Long) As Long
+    Declare Function SetForegroundWindow Lib "user32" (ByVal hwnd As Long) As Long
+
     Const LCID_INSTALLED As Long = &H1 '-- is locale present?
 
     Private Sub Explorer_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        '' Check process list to see if there are multiple copies of WOL running.
+        '' If so, load the previous instance.
+        If UBound(Diagnostics.Process.GetProcessesByName(Diagnostics.Process.GetCurrentProcess.ProcessName)) > 0 Then
+            ActivatePrevInstance(Me.Text)
+        End If
 
         Dim auto As New Autorun()
         AutoStartWithWindowsToolStripMenuItem.Checked = auto.autorun()
@@ -102,6 +110,28 @@ Public Class Explorer
         End Try
 
         CheckUpdates()
+    End Sub
+
+
+    '' Find previous WOL and activate it
+    ''
+    '' TODO: this doesn't find window if minimized to task tray
+    Sub ActivatePrevInstance(ByVal argStrAppToFind As String)
+        Dim PrevHndl As Long
+        Dim result As Long
+
+        For Each objProcess As Process In Process.GetProcesses()
+            If UCase(objProcess.MainWindowTitle) = UCase(argStrAppToFind) Then
+                PrevHndl = objProcess.MainWindowHandle.ToInt32()
+                Exit For
+            End If
+        Next
+        If PrevHndl = 0 Then Exit Sub 'if No previous instance found exit the application.
+        ''If found
+        result = OpenIcon(PrevHndl) 'Restore the program.
+        result = SetForegroundWindow(PrevHndl) 'Activate the application.
+
+        End 'End the current instance of the application.
     End Sub
 
     Private Sub CheckUpdates()

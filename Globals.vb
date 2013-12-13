@@ -38,7 +38,7 @@ Module Globals
     Public Sub ShowHelp(parent As Control, url As String)
         Try
 #If DEBUG Then
-            Help.ShowHelp(parent, "file:///P:\WakeOnLan\webhelp\help\" + url)
+            Help.ShowHelp(parent, "file:///C:\Projects\WakeOnLan\webhelp\help\" + url)
 #Else
             Help.ShowHelp(parent, "file:///" + AppDomain.CurrentDomain.BaseDirectory + "help\" + url)
 #End If

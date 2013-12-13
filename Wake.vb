@@ -25,6 +25,7 @@ Module Wake
         Dim packet(17 * 6 - 1) As Byte
         Dim i, j As Integer
         Dim m As Byte()
+        Dim host As String
 
         Try
             If (String.IsNullOrEmpty(machine.MAC)) Then
@@ -33,9 +34,14 @@ Module Wake
             End If
 
             m = GetMAC(machine.MAC)
+            If (machine.Method = 0) Then
+                host = machine.Broadcast
+            Else
+                host = machine.Netbios
+            End If
 
-            Debug.WriteLine(String.Format("WakeUp: [{0}] [{1}] / [{2}] port: {3} TTL: {4}", machine.Name, machine.MAC, machine.Broadcast, machine.UDPPort, machine.TTL))
-            client.Connect(machine.Broadcast, machine.UDPPort)
+            Debug.WriteLine(String.Format("WakeUp: [{0}] [{1}] / [{2}] port: {3} TTL: {4}", machine.Name, machine.MAC, host, machine.UDPPort, machine.TTL))
+            client.Connect(host, machine.UDPPort)
             client.EnableBroadcast = True
             client.Ttl = machine.TTL
 

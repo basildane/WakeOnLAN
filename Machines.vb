@@ -216,13 +216,22 @@ End Class
     End Property
 
     Private _Netbios As String = ""
-
     Public Property Netbios() As String
         Get
             Return _Netbios
         End Get
         Set(ByVal value As String)
             _Netbios = value
+        End Set
+    End Property
+
+    Private _Method As Integer = 0
+    Public Property Method() As Integer
+        Get
+            Return _Method
+        End Get
+        Set(ByVal value As Integer)
+            _Method = value
         End Set
     End Property
 

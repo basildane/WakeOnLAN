@@ -63,15 +63,21 @@ Public Class ShutdownThread
 
         _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
 
-        If m.ShutdownCommand.Length Then
-            Shell(m.ShutdownCommand, AppWinStyle.Hide, False)
-        Else
-            If _Shutdown Then
-                dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
+        Try
+            If m.ShutdownCommand.Length Then
+                Shell(m.ShutdownCommand, AppWinStyle.Hide, False)
             Else
-                dwResult = AbortSystemShutdown(sMachine)
+                If _Shutdown Then
+                    dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
+                Else
+                    dwResult = AbortSystemShutdown(sMachine)
+                End If
             End If
-        End If
+
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Host: {0}{2}Command: {1}{2}Error: {3}", m.Name, m.ShutdownCommand, vbCrLf, ex.Message), "Shutdown command error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
 
         If dwResult = 0 Then
             errMessage = FormatMessage(Err.LastDllError)

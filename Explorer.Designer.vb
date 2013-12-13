@@ -306,10 +306,6 @@ Partial Class Explorer
         '
         resources.ApplyResources(Me.Netbios, "Netbios")
         '
-        'Group
-        '
-        resources.ApplyResources(Me.Group, "Group")
-        '
         'ContextMenuStrip_Machines
         '
         Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.AbortShutdownToolStripMenuItem, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.DeleteToolStripMenuItem})
