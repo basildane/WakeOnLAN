@@ -223,7 +223,10 @@ Public Class Search
 
             For i = startIP To stopIP
                 ip = IPAddress.Parse(i).ToString()
-                Progress = (i - startIP) * 100 / (stopIP - startIP)
+                If (ip.EndsWith(".255")) Then
+                    Continue For
+                End If
+                Progress = (i - startIP) * 100 / Math.Max(1, stopIP - startIP)
                 Poll(ip, Progress)
                 If BackgroundWorker1.CancellationPending Then
                     Exit For
