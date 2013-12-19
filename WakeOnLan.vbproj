@@ -601,6 +601,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AboutBox.pt-BR.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AboutBox.resx">
       <SubType>Designer</SubType>
@@ -842,6 +843,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Search.pt-BR.resx">
       <DependentUpon>Search.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.de.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
@@ -853,6 +855,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.pt-BR.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Explorer.pt-BR.resx">
       <DependentUpon>Explorer.vb</DependentUpon>
@@ -1002,6 +1005,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Help\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
