@@ -236,6 +236,30 @@ Public Class Schedule
                                     If MyAction.Force Then .Arguments &= " -f"
                                 End With
 
+                            Case Action.ActionItems.Sleep
+                                Dim actionRun As IExecAction
+
+                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                m = Machines(MyAction.Name)
+                                With actionRun
+                                    .Id = MyAction.Tag
+                                    .Path = exe
+                                    .Arguments = sPath & " -s1 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                    If MyAction.Force Then .Arguments &= " -f"
+                                End With
+
+                            Case Action.ActionItems.Hibernate
+                                Dim actionRun As IExecAction
+
+                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                m = Machines(MyAction.Name)
+                                With actionRun
+                                    .Id = MyAction.Tag
+                                    .Path = exe
+                                    .Arguments = sPath & " -s4 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                    If MyAction.Force Then .Arguments &= " -f"
+                                End With
+
                             Case Action.ActionItems.ShutdownAll
                                 Dim actionRun As IExecAction
 
@@ -244,6 +268,28 @@ Public Class Schedule
                                     .Id = MyAction.Tag
                                     .Path = exe
                                     .Arguments = sPath & " -s -all" & " -t " & My.Settings.DefaultTimeout
+                                    If MyAction.Force Then .Arguments &= " -f"
+                                End With
+
+                            Case Action.ActionItems.SleepAll
+                                Dim actionRun As IExecAction
+
+                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                With actionRun
+                                    .Id = MyAction.Tag
+                                    .Path = exe
+                                    .Arguments = sPath & " -s1 -all" & " -t " & My.Settings.DefaultTimeout
+                                    If MyAction.Force Then .Arguments &= " -f"
+                                End With
+
+                            Case Action.ActionItems.HibernateAll
+                                Dim actionRun As IExecAction
+
+                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                With actionRun
+                                    .Id = MyAction.Tag
+                                    .Path = exe
+                                    .Arguments = sPath & " -s4 -all" & " -t " & My.Settings.DefaultTimeout
                                     If MyAction.Force Then .Arguments &= " -f"
                                 End With
 
@@ -418,7 +464,7 @@ Public Class Schedule
                 Select Case task.LastTaskResult
 
                     Case "1"
-                        li.SubItems(6).Text = My.Resources.Strings.lit_Invalid & " (0x1)"
+                        li.SubItems(6).Text = IIf(task.LastRunTime.Year < 1970, String.Empty, My.Resources.Strings.lit_Invalid & " (0x1)")
 
                     Case "2"
                         li.SubItems(6).Text = My.Resources.Strings.lit_notFound & " (0x2)"

@@ -144,13 +144,19 @@ Public Class Actions
 End Class
 
 Public Class Action
-    Public ReadOnly ActionStrings() As String = { _
-        My.Resources.Strings.actions_start, _
-        My.Resources.Strings.actions_startAll, _
-        My.Resources.Strings.actions_shutdown, _
-        My.Resources.Strings.actions_shutdownAll, _
-        My.Resources.Strings.actions_popup, _
-        My.Resources.Strings.actions_email}
+    Public ReadOnly ActionStrings() As String =
+        {
+        My.Resources.Strings.actions_start,
+        My.Resources.Strings.actions_startAll,
+        My.Resources.Strings.actions_shutdown,
+        My.Resources.Strings.actions_shutdownAll,
+        My.Resources.Strings.actions_popup,
+        My.Resources.Strings.actions_email,
+        My.Resources.Strings.actions_sleep,
+        My.Resources.Strings.actions_sleepAll,
+        My.Resources.Strings.actions_hibernate,
+        My.Resources.Strings.actions_hibernateAll
+        }
 
     Public Enum ActionItems
         Start
@@ -159,6 +165,10 @@ Public Class Action
         ShutdownAll
         SendMessage
         SendEmail
+        Sleep
+        SleepAll
+        Hibernate
+        HibernateAll
     End Enum
 
     Public Name As String

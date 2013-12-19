@@ -29,11 +29,14 @@ Public Class EditAction
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         With MyAction
-            If .Mode = Action.ActionItems.ShutdownAll Then
-                .Force = forceAll.Checked
-            Else
-                .Force = forceCheckBox.Checked
-            End If
+            Select Case .Mode
+                Case Action.ActionItems.ShutdownAll, Action.ActionItems.SleepAll, Action.ActionItems.HibernateAll
+                    .Force = forceAll.Checked
+
+                Case Else
+                    .Force = forceCheckBox.Checked
+
+            End Select
 
             .EmailFrom = EmailFromTextBox.Text
             .EmailTo = EmailToTextBox.Text
@@ -62,11 +65,14 @@ Public Class EditAction
 
         With MyAction
             ActionComboBox.SelectedIndex = .Mode
-            If .Mode = Action.ActionItems.ShutdownAll Then
-                forceAll.Checked = .Force
-            Else
-                forceCheckBox.Checked = .Force
-            End If
+            Select Case .Mode
+                Case Action.ActionItems.ShutdownAll, Action.ActionItems.SleepAll, Action.ActionItems.HibernateAll
+                    forceAll.Checked = .Force
+
+                Case Else
+                    forceCheckBox.Checked = .Force
+
+            End Select
 
             EmailFromTextBox.Text = .EmailFrom
             EmailToTextBox.Text = .EmailTo
@@ -106,7 +112,7 @@ Public Class EditAction
                 MessageGroupBox.Hide()
                 EmailGroupBox.Hide()
 
-            Case Action.ActionItems.Shutdown
+            Case Action.ActionItems.Shutdown, Action.ActionItems.Sleep, Action.ActionItems.Hibernate
                 forceCheckBox.Visible = True
                 forceCheckBox.Checked = MyAction.Force
                 ComputerGroupBox.Show()
@@ -120,7 +126,7 @@ Public Class EditAction
                 MessageGroupBox.Hide()
                 EmailGroupBox.Hide()
 
-            Case Action.ActionItems.ShutdownAll
+            Case Action.ActionItems.ShutdownAll, Action.ActionItems.SleepAll, Action.ActionItems.HibernateAll
                 forceAll.Checked = MyAction.Force
                 ComputerGroupBox.Hide()
                 MessageGroupBox.Hide()

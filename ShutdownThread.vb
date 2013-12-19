@@ -18,22 +18,32 @@
 
 Imports System.Threading
 Imports System.ComponentModel
+Imports System.Management
 
 Public Class ShutdownThread
+    Public Enum Action
+        None
+        Abort
+        Shutdown
+        Sleep
+        Hibernate
+        User
+    End Enum
+
     Private WithEvents BackgroundWorker1 As New BackgroundWorker
     Private _item As ListViewItem
     Private _progressbar As ProgressBar
-    Private _Shutdown As Boolean
+    Private _action As Action
     Private _Message As String
     Private _delay As Integer
     Private _force As Boolean
     Private _reboot As Boolean
     Private errMessage As String
 
-    Public Sub New(ByVal item As ListViewItem, ByVal progressbar As ProgressBar, ByVal Shutdown As Boolean, ByVal Message As String, ByVal Delay As Integer, ByVal Force As Boolean, ByVal Reboot As Boolean)
+    Public Sub New(ByVal item As ListViewItem, ByVal progressbar As ProgressBar, ByVal action As Action, ByVal Message As String, ByVal Delay As Integer, ByVal Force As Boolean, ByVal Reboot As Boolean)
         _item = item
         _progressbar = progressbar
-        _Shutdown = Shutdown
+        _action = action
         _Message = Message
         _delay = Delay
         _force = Force
@@ -53,6 +63,7 @@ Public Class ShutdownThread
         Dim m As Machine
 
         dwReason = 0L
+        dwResult = 0
         sAlertMessage = _Message & vbNullChar
         dwDelay = _delay
         dwForce = CLng(_force)
@@ -63,16 +74,23 @@ Public Class ShutdownThread
 
         _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
 
+        If (_action <> Action.Abort And m.ShutdownCommand.Length > 0) Then _action = Action.User
+
         Try
-            If m.ShutdownCommand.Length Then
-                Shell(m.ShutdownCommand, AppWinStyle.Hide, False)
-            Else
-                If _Shutdown Then
-                    dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
-                Else
+            Select Case _action
+                Case Action.Abort
                     dwResult = AbortSystemShutdown(sMachine)
-                End If
-            End If
+
+                Case Action.Shutdown
+                    dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
+
+                Case Action.User
+                    Shell(m.ShutdownCommand, AppWinStyle.Hide, False)
+
+                Case Action.Sleep, Action.Hibernate
+                    dwResult = WMIpower(sMachine)
+
+            End Select
 
         Catch ex As Exception
             MessageBox.Show(String.Format("Host: {0}{2}Command: {1}{2}Error: {3}", m.Name, m.ShutdownCommand, vbCrLf, ex.Message), "Shutdown command error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -85,6 +103,39 @@ Public Class ShutdownThread
         e.Result = dwResult
 
     End Sub
+
+    Private Function WMIpower(sMachine As String) As Integer
+        Dim process As ManagementClass
+        Dim path As ManagementPath
+        Dim options As ConnectionOptions = New ConnectionOptions()
+        Dim inparams, outparams As ManagementBaseObject
+        Dim ProcID, retval As String
+
+        process = New ManagementClass("Win32_Process")
+        path = New ManagementPath(String.Format("{0}\root\cimv2", sMachine))
+
+        'options.Username = ""
+        'options.Password = ""
+        'process.Scope = New ManagementScope(mp1, co1)
+        process.Scope = New ManagementScope(path)
+        process.Scope.Connect()
+
+        inparams = process.GetMethodParameters("Create")
+        Select Case _action
+            Case Action.Sleep
+                inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
+
+            Case Action.Hibernate
+                inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
+
+        End Select
+
+        outparams = process.InvokeMethod("Create", inparams, Nothing)
+        ProcID = outparams("ProcessID").ToString()
+        retval = outparams("ReturnValue").ToString()
+
+        Return retval
+    End Function
 
     Private Sub backgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
 

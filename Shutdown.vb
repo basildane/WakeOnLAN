@@ -39,6 +39,18 @@ Public Class Shutdown
         shut_force.Checked = My.Settings.Force
         shut_reboot.Checked = My.Settings.Reboot
 
+        Select Case My.Settings.shutdownAction
+            Case ShutdownThread.Action.Sleep
+                rbSleep.Checked = True
+
+            Case ShutdownThread.Action.Hibernate
+                rbHibernate.Checked = True
+
+            Case Else
+                rbShutdown.Checked = True
+
+        End Select
+
         For Each l As ListViewItem In Items
             m = Machines(l.Name)
             newItem = ListView1.Items.Add(m.Name)
@@ -67,6 +79,18 @@ Public Class Shutdown
         shut_timeout.Text = 30
         shut_force.Checked = True
         shut_reboot.Checked = False
+
+        Select Case My.Settings.shutdownAction
+            Case ShutdownThread.Action.Sleep
+                rbSleep.Checked = True
+
+            Case ShutdownThread.Action.Hibernate
+                rbHibernate.Checked = True
+
+            Case Else
+                rbShutdown.Checked = True
+
+        End Select
 
         For Each m As Machine In Machines
             newItem = ListView1.Items.Add(m.Name)
@@ -98,7 +122,7 @@ Public Class Shutdown
         For Each item As ListViewItem In ListView1.Items
             If item.SubItems(1).Text = My.Resources.Strings.ShuttingDown Then
                 item.SubItems(1).Text = My.Resources.Strings.Aborting
-                Dim st As New ShutdownThread(item, ProgressBar1, False, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
+                Dim st As New ShutdownThread(item, ProgressBar1, ShutdownThread.Action.Abort, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
             End If
         Next
 
@@ -121,7 +145,9 @@ Public Class Shutdown
             meItem.SubItems(1).Text = String.Format(My.Resources.Strings.ShutDownSeconds, CountdownTime)
             If CountdownTime <= 0 Then
                 Timer1.Stop()
-                LocalShutdown.ExitWindows(RestartOptions.PowerOff, True)
+                If (rbShutdown.Checked) Then LocalShutdown.ExitWindows(RestartOptions.PowerOff, True)
+                If (rbSleep.Checked) Then LocalShutdown.ExitWindows(RestartOptions.Suspend, True)
+                If (rbHibernate.Checked) Then LocalShutdown.ExitWindows(RestartOptions.Hibernate, True)
             End If
 
         Catch ex As Exception
@@ -137,47 +163,25 @@ Public Class Shutdown
         End With
     End Sub
 
-
-
-    'If String.Compare(m.Netbios, My.Computer.Name, True) Then
-    '    If m.ShutdownCommand.Length Then
-    '        My.Forms.Explorer.ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SendShutdown, m.Name)
-    '        Shell(m.ShutdownCommand, AppWinStyle.Hide, False)
-    '    Else
-    '        My.Forms.Explorer.ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SendShutdown, m.Name)
-    '        dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
-    '        If dwResult = 0 Then
-    '            errMessage = FormatMessage(Err.LastDllError)
-    '            My.Forms.Explorer.ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.ShutdownFailed, m.Netbios, errMessage)
-    '            MessageBox.Show(errMessage, String.Format(My.Resources.Strings.ShutdownFailed, m.Name, ""), MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '        Else
-    '            My.Forms.Explorer.ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.ShutdownSuccessful, m.Name)
-    '        End If
-    '    End If
-    'Else
-    '    If dwReboot Then
-    '        If (MsgBox(My.Resources.Strings.ImmediateReboot, MsgBoxStyle.OkCancel + MsgBoxStyle.Critical) = MsgBoxResult.Ok) Then
-    '            LocalShutdown.ExitWindows(RestartOptions.Reboot, My.Settings.Force)
-    '        End If
-    '    Else
-    '        If (MsgBox(My.Resources.Strings.ImmediateShutdown, MsgBoxStyle.OkCancel + MsgBoxStyle.Critical) = MsgBoxResult.Ok) Then
-    '            LocalShutdown.ExitWindows(RestartOptions.PowerOff, My.Settings.Force)
-    '        End If
-    '    End If
-    'End If
-
     Private Sub ShutdownButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ShutdownButton.Click
+        Dim action As ShutdownThread.Action
+
         Me.Cursor = Cursors.WaitCursor
+
+        If (rbShutdown.Checked) Then action = ShutdownThread.Action.Shutdown
+        If (rbSleep.Checked) Then action = ShutdownThread.Action.Sleep
+        If (rbHibernate.Checked) Then action = ShutdownThread.Action.Hibernate
 
         My.Settings.DefaultMessage = shut_message.Text
         My.Settings.DefaultTimeout = shut_timeout.Text
         My.Settings.Force = shut_force.Checked
         My.Settings.Reboot = shut_reboot.Checked
+        My.Settings.shutdownAction = action
 
         Label_Operation.Text = My.Resources.Strings.BeginShutdown
-        For Each l As ListViewItem In ListView1.Items
-            If l.SubItems(1).Text = My.Resources.Strings.ShuttingDown Then
-                Dim st As New ShutdownThread(l, ProgressBar1, True, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
+        For Each item As ListViewItem In ListView1.Items
+            If item.SubItems(1).Text = My.Resources.Strings.ShuttingDown Then
+                Dim st As New ShutdownThread(item, ProgressBar1, action, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
             End If
         Next
 
@@ -193,3 +197,4 @@ Public Class Shutdown
     End Sub
 
 End Class
+

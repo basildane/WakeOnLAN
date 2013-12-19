@@ -18,6 +18,7 @@
 
 Imports System.Diagnostics
 Imports System.Net
+Imports System.Management
 
 Module Module1
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
@@ -30,6 +31,8 @@ Module Module1
         WakeUp
         Abort
         Debug
+        Sleep
+        Hibernate
     End Enum
 
     Enum ErrorCodes
@@ -111,6 +114,14 @@ Module Module1
                     Mode = _modeTypes.Shutdown
                     dwReboot = 0
 
+                Case "-s1"
+                    Mode = _modeTypes.Sleep
+                    dwReboot = 0
+
+                Case "-s4"
+                    Mode = _modeTypes.Hibernate
+                    dwReboot = 0
+
                 Case "-w"
                     Mode = _modeTypes.WakeUp
 
@@ -153,6 +164,9 @@ Module Module1
             Case _modeTypes.Shutdown
                 Return Shutdown()
 
+            Case _modeTypes.Sleep, _modeTypes.Hibernate
+                Return SleepHibernate()
+
             Case _modeTypes.WakeUp
                 Return DoWakeup()
 
@@ -174,6 +188,8 @@ Module Module1
         Console.WriteLine()
         Console.WriteLine("Commands are:")
         Console.WriteLine("-s   (shutdown) requires -m or -all")
+        Console.WriteLine("-s1  (sleep) requires -m or -all")
+        Console.WriteLine("-s4  (hibernate) requires -m or -all")
         Console.WriteLine("-a   (abort a shutdown) requires -m")
         Console.WriteLine("-r   (reboot)")
         Console.WriteLine("-w   (wakeup) requires -m, -mac parameter, or -all")
@@ -306,7 +322,7 @@ Module Module1
         Dim dwResult As Integer = 1
         Machines.Load(sPath)
 
-        If sMachine = "" And all = False Then
+        If ((sMachine = "") And (all = False)) Then
             Console.WriteLine("Error.  No machine specified.")
             DisplayHelp()
             Result = ErrorCodes.InvalidCommand
@@ -329,6 +345,78 @@ Module Module1
 
         Return Result
 
+    End Function
+
+    Private Function SleepHibernate() As Integer
+        Dim dwResult As Integer = 1
+
+        Try
+
+            Machines.Load(sPath)
+
+            If ((sMachine = "") And (all = False)) Then
+                Console.WriteLine("Error.  No machine specified.")
+                DisplayHelp()
+                Result = ErrorCodes.InvalidCommand
+                Return Result
+            End If
+
+            If all Then
+                For Each m As Machine In Machines
+                    Console.Write(Mode.ToString() & " sent to " & m.Name)
+                    dwResult = WMIpower(m.Netbios)
+                    ShowResult(dwResult)
+                Next
+            Else
+                Dim m As Machine
+                m = Machines(sMachine)
+                Console.Write(Mode.ToString() & " sent to " & sMachine)
+                dwResult = WMIpower(sMachine)
+                ShowResult(dwResult)
+            End If
+
+            Return Result
+
+        Catch ex As Exception
+            Console.WriteLine()
+            Console.WriteLine(ex.Message)
+            Return ErrorCodes.InvalidCommand
+
+        End Try
+
+    End Function
+
+    Private Function WMIpower(sMachine As String) As Integer
+        Dim process As ManagementClass
+        Dim path As ManagementPath
+        Dim options As ConnectionOptions = New ConnectionOptions()
+        Dim inparams, outparams As ManagementBaseObject
+        Dim ProcID, retval As String
+
+        process = New ManagementClass("Win32_Process")
+        path = New ManagementPath(String.Format("\\{0}\root\cimv2", sMachine))
+
+        'options.Username = ""
+        'options.Password = ""
+        'process.Scope = New ManagementScope(mp1, co1)
+        process.Scope = New ManagementScope(path)
+        process.Scope.Connect()
+
+        inparams = process.GetMethodParameters("Create")
+        Select Case Mode
+            Case _modeTypes.Sleep
+                inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
+
+            Case _modeTypes.Hibernate
+                inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
+
+        End Select
+
+        outparams = process.InvokeMethod("Create", inparams, Nothing)
+        ProcID = outparams("ProcessID").ToString()
+        retval = outparams("ReturnValue").ToString()
+
+        Return retval
     End Function
 
     Private Sub Listen()

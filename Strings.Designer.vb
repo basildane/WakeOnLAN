@@ -119,6 +119,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Hibernate computer.
+        '''</summary>
+        Friend Shared ReadOnly Property actions_hibernate() As String
+            Get
+                Return ResourceManager.GetString("actions_hibernate", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Hibernate All Computers.
+        '''</summary>
+        Friend Shared ReadOnly Property actions_hibernateAll() As String
+            Get
+                Return ResourceManager.GetString("actions_hibernateAll", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Popup a message.
         '''</summary>
         Friend Shared ReadOnly Property actions_popup() As String
@@ -142,6 +160,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property actions_shutdownAll() As String
             Get
                 Return ResourceManager.GetString("actions_shutdownAll", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Sleep computer.
+        '''</summary>
+        Friend Shared ReadOnly Property actions_sleep() As String
+            Get
+                Return ResourceManager.GetString("actions_sleep", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Sleep All Computers.
+        '''</summary>
+        Friend Shared ReadOnly Property actions_sleepAll() As String
+            Get
+                Return ResourceManager.GetString("actions_sleepAll", resourceCulture)
             End Get
         End Property
         
