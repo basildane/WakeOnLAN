@@ -29,28 +29,24 @@ Partial Class SplashScreen
         Me.Copyright = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox_logo = New System.Windows.Forms.PictureBox()
-        Me.PictureBox_GPL = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox_logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox_GPL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ApplicationTitle
         '
         resources.ApplyResources(Me.ApplicationTitle, "ApplicationTitle")
-        Me.ApplicationTitle.BackColor = System.Drawing.SystemColors.Control
+        Me.ApplicationTitle.BackColor = System.Drawing.Color.Transparent
         Me.ApplicationTitle.Name = "ApplicationTitle"
         '
         'Version
         '
         resources.ApplyResources(Me.Version, "Version")
-        Me.Version.BackColor = System.Drawing.SystemColors.Control
+        Me.Version.BackColor = System.Drawing.Color.Transparent
         Me.Version.Name = "Version"
         '
         'Copyright
         '
         resources.ApplyResources(Me.Copyright, "Copyright")
-        Me.Copyright.BackColor = System.Drawing.SystemColors.Control
+        Me.Copyright.BackColor = System.Drawing.Color.Transparent
         Me.Copyright.Name = "Copyright"
         '
         'Timer1
@@ -60,42 +56,29 @@ Partial Class SplashScreen
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.BackColor = System.Drawing.SystemColors.Control
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.Color.Red
         Me.Label1.Name = "Label1"
-        '
-        'PictureBox_logo
-        '
-        resources.ApplyResources(Me.PictureBox_logo, "PictureBox_logo")
-        Me.PictureBox_logo.Name = "PictureBox_logo"
-        Me.PictureBox_logo.TabStop = False
-        '
-        'PictureBox_GPL
-        '
-        resources.ApplyResources(Me.PictureBox_GPL, "PictureBox_GPL")
-        Me.PictureBox_GPL.Name = "PictureBox_GPL"
-        Me.PictureBox_GPL.TabStop = False
         '
         'SplashScreen
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.Color.Magenta
+        Me.BackgroundImage = Global.WakeOnLan.My.Resources.Resources.Splash
         Me.ControlBox = False
-        Me.Controls.Add(Me.PictureBox_GPL)
-        Me.Controls.Add(Me.PictureBox_logo)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ApplicationTitle)
         Me.Controls.Add(Me.Version)
         Me.Controls.Add(Me.Copyright)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SplashScreen"
         Me.ShowInTaskbar = False
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.TransparencyKey = System.Drawing.Color.Magenta
-        CType(Me.PictureBox_logo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox_GPL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -105,7 +88,5 @@ Partial Class SplashScreen
     Friend WithEvents Copyright As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox_logo As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox_GPL As System.Windows.Forms.PictureBox
 
 End Class

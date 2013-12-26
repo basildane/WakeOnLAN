@@ -93,7 +93,9 @@ Public Class ShutdownThread
             End Select
 
         Catch ex As Exception
-            MessageBox.Show(String.Format("Host: {0}{2}Command: {1}{2}Error: {3}", m.Name, m.ShutdownCommand, vbCrLf, ex.Message), "Shutdown command error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            errMessage = ex.Message
+            e.Result = 0
+            Return
 
         End Try
 
@@ -134,7 +136,7 @@ Public Class ShutdownThread
         ProcID = outparams("ProcessID").ToString()
         retval = outparams("ReturnValue").ToString()
 
-        Return retval
+        Return IIf(retval, 0, 1)
     End Function
 
     Private Sub backgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
@@ -143,18 +145,18 @@ Public Class ShutdownThread
             If e.Result = 0 Then
                 .ForeColor = Color.Red
                 .Text = String.Format(My.Resources.Strings.ErrorMsg, errMessage)
+                .Tag = .Text ' error
             Else
                 .ForeColor = Color.Green
                 .Text = My.Resources.Strings.Successful
+                .Tag = "" ' success
             End If
         End With
 
         With _progressbar
             .Increment(1)
-            If ShutdownMode Then
-                If .Value = .Maximum Then
-                    Shutdown.Complete()
-                End If
+            If (ShutdownMode = True) And (.Value = .Maximum) Then
+                Shutdown.Complete()
             End If
         End With
 

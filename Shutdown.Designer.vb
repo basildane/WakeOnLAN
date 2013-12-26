@@ -31,6 +31,9 @@ Partial Class Shutdown
         Me.ShutdownButton = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.rbHibernate = New System.Windows.Forms.RadioButton()
+        Me.rbSleep = New System.Windows.Forms.RadioButton()
+        Me.rbShutdown = New System.Windows.Forms.RadioButton()
         Me.shut_reboot = New System.Windows.Forms.CheckBox()
         Me.shut_force = New System.Windows.Forms.CheckBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -40,9 +43,6 @@ Partial Class Shutdown
         Me.shut_timeout = New System.Windows.Forms.TextBox()
         Me.Label_Timeout = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.rbShutdown = New System.Windows.Forms.RadioButton()
-        Me.rbSleep = New System.Windows.Forms.RadioButton()
-        Me.rbHibernate = New System.Windows.Forms.RadioButton()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -135,6 +135,27 @@ Partial Class Shutdown
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         '
+        'rbHibernate
+        '
+        resources.ApplyResources(Me.rbHibernate, "rbHibernate")
+        Me.rbHibernate.Name = "rbHibernate"
+        Me.rbHibernate.TabStop = True
+        Me.rbHibernate.UseVisualStyleBackColor = True
+        '
+        'rbSleep
+        '
+        resources.ApplyResources(Me.rbSleep, "rbSleep")
+        Me.rbSleep.Name = "rbSleep"
+        Me.rbSleep.TabStop = True
+        Me.rbSleep.UseVisualStyleBackColor = True
+        '
+        'rbShutdown
+        '
+        resources.ApplyResources(Me.rbShutdown, "rbShutdown")
+        Me.rbShutdown.Name = "rbShutdown"
+        Me.rbShutdown.TabStop = True
+        Me.rbShutdown.UseVisualStyleBackColor = True
+        '
         'shut_reboot
         '
         Me.shut_reboot.Checked = True
@@ -180,27 +201,6 @@ Partial Class Shutdown
         'Timer1
         '
         Me.Timer1.Interval = 1000
-        '
-        'rbShutdown
-        '
-        resources.ApplyResources(Me.rbShutdown, "rbShutdown")
-        Me.rbShutdown.Name = "rbShutdown"
-        Me.rbShutdown.TabStop = True
-        Me.rbShutdown.UseVisualStyleBackColor = True
-        '
-        'rbSleep
-        '
-        resources.ApplyResources(Me.rbSleep, "rbSleep")
-        Me.rbSleep.Name = "rbSleep"
-        Me.rbSleep.TabStop = True
-        Me.rbSleep.UseVisualStyleBackColor = True
-        '
-        'rbHibernate
-        '
-        resources.ApplyResources(Me.rbHibernate, "rbHibernate")
-        Me.rbHibernate.Name = "rbHibernate"
-        Me.rbHibernate.TabStop = True
-        Me.rbHibernate.UseVisualStyleBackColor = True
         '
         'Shutdown
         '

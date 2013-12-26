@@ -26,6 +26,9 @@ Public NotInheritable Class AboutBox
         LabelVersion.Text = System.String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
         Me.LabelCopyright.Text = My.Application.Info.Copyright
         LabelFullVersion.Text = My.Application.Info.Version.ToString
+#If DEBUG Then
+        LabelFullVersion.Text &= " [DEBUG]"
+#End If
 
         AutoUpdater.CurrentCulture = Application.CurrentCulture
         AutoUpdater.AppCastURL = My.Settings.updateURL

@@ -23,6 +23,7 @@ Public Class Shutdown
     Private Sub Clear()
         ShutdownMode = True
         meItem = Nothing
+        ProgressBar1.Value = 0
         ProgressBar1.Maximum = 0
         Cursor = Cursors.Default
         ListView1.Items.Clear()
@@ -130,6 +131,14 @@ Public Class Shutdown
     End Sub
 
     Public Sub Complete()
+        For Each item As ListViewItem In ListView1.Items
+            If (Not String.IsNullOrEmpty(item.SubItems(1).Tag)) Then
+                Cursor = Cursors.Default
+                Label_Operation.Text = My.Resources.Strings.lit_Error
+                Return
+            End If
+        Next
+
         If meItem Is Nothing Then Me.Close()
         If ShutdownMode Then Timer1.Start()
     End Sub
@@ -196,5 +205,8 @@ Public Class Shutdown
         Me.Close()
     End Sub
 
+    Private Sub Shutdown_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Icon = My.Resources.system_log_out
+    End Sub
 End Class
 
