@@ -1,5 +1,5 @@
 '    WakeOnLAN - Wake On LAN
-'    Copyright (C) 2004-2013 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'    Copyright (C) 2004-2014 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
 '
@@ -32,7 +32,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Wake On Lan")> 
 <Assembly: AssemblyCompany("Aquila Technology")> 
 <Assembly: AssemblyProduct("WakeOnLan")> 
-<Assembly: AssemblyCopyright("(c) 2004 - 2013, Aquila Technology, LLC.")> 
+<Assembly: AssemblyCopyright("(c) 2004 - 2014, Aquila Technology, LLC.")> 
 <Assembly: AssemblyTrademark("All rights reserved.")> 
 <Assembly: CLSCompliant(True)> 
 
@@ -49,7 +49,7 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 
-<Assembly: AssemblyVersion("2.8.0.1")> 
+<Assembly: AssemblyVersion("2.8.1.0")> 
 
 <Assembly: ComVisibleAttribute(False)> 
 <Assembly: NeutralResourcesLanguageAttribute("en-US")> 

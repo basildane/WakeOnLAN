@@ -28,7 +28,7 @@
     <DelaySign>false</DelaySign>
     <OutputType>WinExe</OutputType>
     <OptionCompare>Binary</OptionCompare>
-    <OptionExplicit>On</OptionExplicit>
+    <OptionExplicit>Off</OptionExplicit>
     <OptionStrict>Off</OptionStrict>
     <RootNamespace>WakeOnLan</RootNamespace>
     <StartupObject>WakeOnLan.My.MyApplication</StartupObject>
@@ -248,9 +248,6 @@
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoUpdater.NET">
-      <HintPath>C:\Debug\AutoUpdater\AutoUpdater.NET.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System">
@@ -1004,6 +1001,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Help\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoUpdater\AutoUpdater.NET\AutoUpdater.NET.csproj">
+      <Project>{fb9e7e6b-b19f-4f37-a708-2996190cef13}</Project>
+      <Name>AutoUpdater.NET</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
