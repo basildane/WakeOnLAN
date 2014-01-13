@@ -1,5 +1,5 @@
 ﻿'    WakeOnLAN - Wake On LAN
-'    Copyright (C) 2004-2013 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'    Copyright (C) 2004-2014 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
 '
@@ -336,7 +336,7 @@ Public Class Schedule
 
             End Try
 
-            AddFileSecurity(Machines.GetFile, My.Settings.TaskUserID, FileSystemRights.Modify, AccessControlType.Allow)
+            'AddFileSecurity(Machines.GetFile, My.Settings.TaskUserID, FileSystemRights.Modify, AccessControlType.Allow)
         End If
 
         RefreshList()
@@ -346,6 +346,8 @@ Public Class Schedule
     End Function
 
     ' Adds an ACL entry on the specified file for the specified account.
+    ' TODO: this only works with domain accounts
+    '
     Private Sub AddFileSecurity(ByVal fileName As String, ByVal account As String, _
         ByVal rights As FileSystemRights, ByVal controlType As AccessControlType)
 
