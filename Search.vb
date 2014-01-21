@@ -24,8 +24,9 @@ Imports Microsoft.Win32
 Imports System.Management
 
 Public Class Search
+
     Declare Function SendARP Lib "iphlpapi.dll" (
-        ByVal DestIP As UInt32, ByVal SrcIP As UInt32, _
+        ByVal DestIP As Int32, ByVal SrcIP As Int32, _
         ByVal pMacAddr As Byte(), ByRef PhyAddrLen As Integer) As Integer
 
     Private Structure Profile
@@ -64,16 +65,16 @@ Public Class Search
 
     Private Sub Poll(ByVal IP As String, ByVal Progress As Integer)
         Dim scope As ManagementScope
-        Dim m As ManagementObject
+        Dim managementObject As ManagementObject
         Dim searcher As ManagementObjectSearcher
         Dim queryCollection As ManagementObjectCollection
         Dim query As ObjectQuery
 
-        Dim p As New Profile
+        Dim profile As New Profile
 
         Try
             ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.Polling, IP)
-            p.HasError = False
+            profile.HasError = False
 
             If Not My.Computer.Network.Ping(IP) Then
                 BackgroundWorker1.ReportProgress(Progress, Nothing)
@@ -97,9 +98,9 @@ Public Class Search
             searcher = New ManagementObjectSearcher(scope, query)
             queryCollection = searcher.Get()
 
-            For Each m In queryCollection
-                p.Name = m("csname")
-                p.OSName = m("Caption")
+            For Each managementObject In queryCollection
+                profile.Name = managementObject("csname")
+                profile.OSName = managementObject("Caption")
                 Exit For
             Next
 
@@ -108,65 +109,64 @@ Public Class Search
 
             queryCollection = searcher.Get()
 
-            For Each m In queryCollection
-                If m("IPEnabled") Then
-                    p.NetInterface = m("Caption")
-                    If p.NetInterface.StartsWith("[") Then
+            For Each managementObject In queryCollection
+                If managementObject("IPEnabled") Then
+                    profile.NetInterface = managementObject("Caption")
+                    If profile.NetInterface.StartsWith("[") Then
                         Dim j As Int16
-                        j = InStr(p.NetInterface, "]", CompareMethod.Text)
-                        p.NetInterface = p.NetInterface.Substring(j + 1)
+                        j = InStr(profile.NetInterface, "]", CompareMethod.Text)
+                        profile.NetInterface = profile.NetInterface.Substring(j + 1)
                     End If
 
-                    For Each s As String In m("IPaddress")
-                        p.IPAddress = s
+                    For Each s As String In managementObject("IPaddress")
+                        profile.IPAddress = s
                         Exit For
                     Next
 
-                    p.MacAddress = m("MacAddress")
-                    BackgroundWorker1.ReportProgress(Progress, p)
+                    profile.MacAddress = managementObject("MacAddress")
+                    BackgroundWorker1.ReportProgress(Progress, profile)
                 Else
                     BackgroundWorker1.ReportProgress(Progress, Nothing)
                 End If
             Next
 
         Catch ex As Exception
-            p.IPAddress = IP
-            p = FindMAC(p)
-            If p.Name = "" Then p.Name = IP
-            BackgroundWorker1.ReportProgress(Progress, p)
+            profile.IPAddress = IP
+            profile = FindMAC(profile)
+            If profile.Name = "" Then profile.Name = IP
+            BackgroundWorker1.ReportProgress(Progress, profile)
 
         End Try
 
     End Sub
 
-    Private Function FindMAC(p As Profile) As Profile
-        Dim addr As IPAddress
-        Dim dwRemoteIP As UInt32
+    Private Function FindMAC(profile As Profile) As Profile
+        Dim address As IPAddress
+        Dim dwRemoteIP As Int32
         Dim mac() As Byte = New Byte(6) {}
         Dim len As Integer = 6
-        Dim host As IPHostEntry
+        Dim DNShost As IPHostEntry
 
         Try
-            addr = IPAddress.Parse(p.IPAddress)
-            dwRemoteIP = BitConverter.ToUInt32(addr.GetAddressBytes(), 0)
+            address = IPAddress.Parse(profile.IPAddress)
+            dwRemoteIP = address.GetHashCode()
 
             If dwRemoteIP <> 0 Then
-                'retrieve the remote MAC address
                 If SendARP(dwRemoteIP, 0, mac, len) = 0 Then
-                    p.MacAddress = BitConverter.ToString(mac, 0, len)
-                    host = Dns.GetHostEntry(addr)
-                    p.Name = host.HostName
-                    p.OSName = "Unknown"
+                    profile.MacAddress = BitConverter.ToString(mac, 0, len)
+                    DNShost = Dns.GetHostEntry(address)
+                    profile.Name = DNShost.HostName
+                    profile.OSName = "Unknown"
                 End If
             End If
 
         Catch ex As Exception
-            p.OSName = ex.Message
-            p.HasError = True
+            profile.OSName = ex.Message
+            profile.HasError = True
 
         End Try
 
-        Return p
+        Return profile
 
     End Function
 
@@ -241,7 +241,7 @@ Public Class Search
 
     End Sub
 
-    Function IPToInt(address As IPAddress) As UInt32
+    Private Function IPToInt(address As IPAddress) As UInt32
         Dim bytes As Byte() = address.GetAddressBytes()
 
         If BitConverter.IsLittleEndian Then
