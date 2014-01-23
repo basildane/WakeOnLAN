@@ -225,10 +225,10 @@ Partial Class EditAction
         Me.Controls.Add(Me.ActionComboBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.ComputerGroupBox)
         Me.Controls.Add(Me.EmailGroupBox)
         Me.Controls.Add(Me.MessageGroupBox)
         Me.Controls.Add(Me.AllGroupBox)
+        Me.Controls.Add(Me.ComputerGroupBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False

@@ -21,22 +21,23 @@ Imports Microsoft.Reporting.WinForms
 Public Class ReportViewer
 
     Private Sub ReportViewr_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim p(7) As ReportParameter
+        Dim p(8) As ReportParameter
 
-        p(0) = New ReportParameter("Name", My.Resources.ReportStrings.RepName.ToString, True)
-        p(1) = New ReportParameter("AllMachines", My.Resources.Strings.AllMachines.ToString, True)
-        p(2) = New ReportParameter("Title", My.Resources.Strings.Title.ToString, True)
-        p(3) = New ReportParameter("IP", My.Resources.ReportStrings.RepIP.ToString, True)
-        p(4) = New ReportParameter("MAC", My.Resources.ReportStrings.RepMAC.ToString, True)
-        p(5) = New ReportParameter("Netbios", My.Resources.ReportStrings.RepNetbios.ToString, True)
-        p(6) = New ReportParameter("Emergency", My.Resources.ReportStrings.RepEmergency.ToString, True)
-        p(7) = New ReportParameter("Shutdown", My.Resources.ReportStrings.RepShutdown.ToString, True)
+        p(0) = New ReportParameter("ReportParameterName", My.Resources.ReportStrings.RepName.ToString, True)
+        p(1) = New ReportParameter("ReportParameterGroup", My.Resources.Strings.AllMachines.ToString, True)
+        p(2) = New ReportParameter("ReportParameterTitle", My.Resources.Strings.Title.ToString, True)
+        p(3) = New ReportParameter("ReportParameterIP", My.Resources.ReportStrings.RepIP.ToString, True)
+        p(4) = New ReportParameter("ReportParameterMAC", My.Resources.ReportStrings.RepMAC.ToString, True)
+        p(5) = New ReportParameter("ReportParameterNetbios", My.Resources.ReportStrings.RepNetbios.ToString, True)
+        p(6) = New ReportParameter("ReportParameterEmergency", My.Resources.ReportStrings.RepEmergency.ToString, True)
+        p(7) = New ReportParameter("ReportParameterShutdown", My.Resources.ReportStrings.RepShutdown.ToString, True)
+        p(8) = New ReportParameter("ReportParameterBroadcast", My.Resources.ReportStrings.RepBroadcast.ToString, True)
 
         With Me.ReportViewer1.LocalReport
             .DataSources.Clear()
             .DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("MachinesDS", Machines))
             .ReportEmbeddedResource = "WakeOnLan.Report1.rdlc"
-            '.SetParameters(p)
+            .SetParameters(p)
         End With
 
         Me.ReportViewer1.RefreshReport()

@@ -117,34 +117,116 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RepBroadcast" xml:space="preserve">
-    <value>Broadcast</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button_Search.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 23</value>
   </data>
-  <data name="RepEmergency" xml:space="preserve">
-    <value>Emergency shutdown?</value>
-    <comment>Emergency shutdown?</comment>
+  <data name="Button_Search.Text" xml:space="preserve">
+    <value>Keresés kezdete</value>
   </data>
-  <data name="RepGroup" xml:space="preserve">
-    <value>Group</value>
+  <data name="Button_Search.ToolTip" xml:space="preserve">
+    <value>Gépkeresés indítása</value>
   </data>
-  <data name="RepIP" xml:space="preserve">
-    <value>IP Address</value>
-    <comment>IP Address</comment>
+  <data name="ch_Name.Text" xml:space="preserve">
+    <value>Név</value>
   </data>
-  <data name="RepMAC" xml:space="preserve">
-    <value>MAC Address</value>
-    <comment>MAC Address</comment>
+  <data name="ch_OS.Text" xml:space="preserve">
+    <value>Operációs Rendszer</value>
   </data>
-  <data name="RepName" xml:space="preserve">
-    <value>Name</value>
-    <comment>Name</comment>
+  <data name="ch_Interface.Text" xml:space="preserve">
+    <value>Csatoló ID</value>
   </data>
-  <data name="RepNetbios" xml:space="preserve">
-    <value>Netbios name</value>
-    <comment>Netbios name</comment>
+  <data name="ch_IP.Text" xml:space="preserve">
+    <value>IP cím</value>
   </data>
-  <data name="RepShutdown" xml:space="preserve">
-    <value>Shutdown command line</value>
-    <comment>Shutdown command line</comment>
+  <data name="ch_MAC.Text" xml:space="preserve">
+    <value>MAC cím</value>
+  </data>
+  <data name="ListView1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Button_Cancel.Text" xml:space="preserve">
+    <value>Mégsem</value>
+  </data>
+  <data name="Button_Cancel.ToolTip" xml:space="preserve">
+    <value>Gépkeresés megállítása</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Záró IP cím</value>
+  </data>
+  <data name="Label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Kezdő IP cím</value>
+  </data>
+  <data name="Label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Gép keresése</value>
+  </data>
+  <data name="GroupBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StatusStrip1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 475</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 61</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>A választani kívánt számítógép elé tegyen pipát, és amikor Rendbenre kattint, hozzáadódik az adatbázishoz.</value>
+  </data>
+  <data name="Label3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Button_CheckAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="Button_CheckAll.Text" xml:space="preserve">
+    <value>Mindent bejelöl</value>
+  </data>
+  <data name="Button_CheckAll.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Button_UnCheckAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 527</value>
+  </data>
+  <data name="Button_UnCheckAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 23</value>
+  </data>
+  <data name="Button_UnCheckAll.Text" xml:space="preserve">
+    <value>Minden bejelölés törlése</value>
+  </data>
+  <data name="Button_UnCheckAll.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Mégsem</value>
+  </data>
+  <data name="Cancel_Button.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>Rendben</value>
+  </data>
+  <data name="OK_Button.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Gép keresése</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

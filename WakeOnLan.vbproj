@@ -303,13 +303,33 @@
     <Compile Include="Controls\IPAddress.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Property\OptionProperties.Designer.vb">
+      <DependentUpon>OptionProperties.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="Property\OptionProperties.fi.Designer.vb">
       <DependentUpon>OptionProperties.fi.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Property\OptionProperties.hu.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OptionProperties.hu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportStrings.hu.Designer.vb">
+      <DependentUpon>ReportStrings.hu.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Report\ReportStrings.fi.Designer.vb">
       <DependentUpon>ReportStrings.fi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Strings.hu.Designer.vb">
+      <DependentUpon>Strings.hu.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -352,11 +372,6 @@
     </Compile>
     <Compile Include="License.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Property\OptionProperties.Designer.vb">
-      <DependentUpon>OptionProperties.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Report\ReportStrings.zh-TW.Designer.vb">
       <DependentUpon>ReportStrings.zh-TW.resx</DependentUpon>
@@ -592,6 +607,9 @@
     <EmbeddedResource Include="AboutBox.fr.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.hu.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutBox.pt-BR.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -606,22 +624,37 @@
     <EmbeddedResource Include="CalcSubnet.fi.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalcSubnet.hu.resx">
+      <DependentUpon>CalcSubnet.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalcSubnet.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\IPAddress.resx">
       <DependentUpon>IPAddress.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.hu.resx">
+      <DependentUpon>Explorer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="License.fi.resx">
       <DependentUpon>License.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="License.hu.resx">
+      <DependentUpon>License.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Listener.fi.resx">
+      <DependentUpon>Listener.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listener.hu.resx">
       <DependentUpon>Listener.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.fi-FI.resx">
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.fi.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties.hu.resx">
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.ru-RU.resx">
@@ -632,8 +665,28 @@
       <LastGenOutput>OptionProperties.fi.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
+    <EmbeddedResource Include="Property\OptionProperties.hu.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <LastGenOutput>OptionProperties.hu.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\OptionProperties.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionProperties.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
     <EmbeddedResource Include="Property\Options.fi.resx">
       <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\Options.hu.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportStrings.hu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReportStrings.hu.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportStrings.fi.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -643,20 +696,46 @@
     <EmbeddedResource Include="Schedule\EditAction.fi.resx">
       <DependentUpon>EditAction.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditAction.hu.resx">
+      <DependentUpon>EditAction.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTask.fi.resx">
+      <DependentUpon>EditTask.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTask.hu.resx">
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTrigger.fi.resx">
       <DependentUpon>EditTrigger.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTrigger.hu.resx">
+      <DependentUpon>EditTrigger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\Schedule.af.resx">
+      <DependentUpon>Schedule.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\Schedule.fi.resx">
+      <DependentUpon>Schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\Schedule.hu.resx">
       <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search.fi.resx">
       <DependentUpon>Search.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search.hu.resx">
+      <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.fi.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shutdown.hu.resx">
+      <DependentUpon>Shutdown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.hu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.hu.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Strings.fi.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -776,12 +855,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.pt-BR.resx">
       <DependentUpon>Properties.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Property\OptionProperties.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>OptionProperties.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.pt-BR.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -989,6 +1062,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Help\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoUpdater\AutoUpdater.NET\AutoUpdater.NET.csproj">
+      <Project>{fb9e7e6b-b19f-4f37-a708-2996190cef13}</Project>
+      <Name>AutoUpdater.NET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <COMReference Include="TaskScheduler">
       <Guid>{E34CB9F1-C7F7-424C-BE29-027DCC09363A}</Guid>
       <VersionMajor>1</VersionMajor>
@@ -998,15 +1080,6 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Help\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AutoUpdater\AutoUpdater.NET\AutoUpdater.NET.csproj">
-      <Project>{fb9e7e6b-b19f-4f37-a708-2996190cef13}</Project>
-      <Name>AutoUpdater.NET</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>

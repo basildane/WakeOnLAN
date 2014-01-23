@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>Rendben</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Mégsem</value>
+  </data>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>                    GNU General Public License
+                       3. változat, június 29, 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;
+ Mindenki másolhatja és szó szerinti másolása
+ E dokumentumot, de annak módosítása nem megengedett.
+
+                            Bevezetés
+
+  A GNU General Public License egy ingyenes, copyleft engedély
+szoftverek és más típusú munkák.
+
+  A legtöbb szoftver licencét, és egyéb gyakorlati munkák tervezése
+hogy elvegye a szabad megosztani, és változtassa meg a munkálatok. Ezzel szemben,
+a GNU General Public License célja, hogy garantálja a
+megoszthatja és módosíthatja az összes verzió a program -, hogy megbizonyosodjon arról, hogy továbbra is ingyenes
+szoftver minden felhasználó számára. Mi, a Free Software Foundation, akkor a
+GNU General Public License a legtöbb a szoftver, akkor is alkalmazni kell, hogy
+minden más munkát megjelent Így a szerzők. Lehet alkalmazni, hogy
+a programokat is.
+
+  Amikor szabad szoftverről beszélünk, akkor a szabadságra utalunk, nem
+áron. A GPL licencek célja, hogy arról, hogy
+szabadon terjeszteni a szabad szoftverek másolatait (és díj
+őket, ha akarja), hogy a forráskódját megkapod vagy megkaphatod, ha
+akarja, hogy meg tudod változtatni a szoftvert, vagy felhasználhassa a részeit új
+ingyenes programok, és tudod, hogy meg tudod csinálni ezeket a dolgokat.
+
+  A szerző jogainak védelmében, meg kell, hogy mások ne tagadja meg
+ezeket a jogokat, vagy kéri, hogy átadja a jogokat. Ezért van
+bizonyos felelősség, ha terjesztik a szoftvert, vagy ha a
+módosítják: felelősség, hogy tartsák tiszteletben a mások szabadságát.
+
+  Például, ha másolatait terjeszti egy ilyen program, hogy a
+ingyen vagy térítés ellenében, akkor át a címzettek az azonos
+szabadságjogok, amit kapott. Meg kell győződnie arról, hogy ők is megkapják,
+vagy megkaphatják a forráskódot. És meg kell számukra ezeket a kikötéseket, hogy ők
+megismerjék a jogaikat.
+
+  A fejlesztők, hogy a GNU GPL Jogai védelme két lépésből áll:
+(1) azt állítják, szerzői jog a szoftvert, és (2) a jelen licenc
+így jogi másolására, terjesztésére és / vagy módosítására.
+
+  A fejlesztők és a szerzők védelme, a GPL világosan megmagyarázza
+hogy nincs szavatosság a szabad szoftverre. Mind a felhasználók és
+szerző kedvéért, a GPL megköveteli, hogy a módosított változatokat kell tüntetni,
+megváltozott, úgy, hogy azok a problémák nem tulajdonítható, hogy tévesen
+szerzők korábbi verziók.
+
+  Egyes eszközök a tagadnia telepítéséhez vagy futtatásához
+módosított változatai a szoftver belül őket, bár a gyártó
+megteheti. Ez alapvetően összeegyeztethetetlen a céllal
+védi a felhasználók szabadságát, hogy változtassa meg a szoftver. A szisztematikus
+minta ilyen visszaélések fordul elő a területen a termékek az egyének
+használható, amely pontosan, ahol az a leginkább elfogadhatatlan. Ezért
+tervezték ezt a verziót a GPL, hogy megtiltsák a gyakorlat számára
+termékeket. Ha ilyen problémák merülnek fel jelentősen más területeken, akkor
+készek kiterjeszteni ezt a rendelkezést, hogy ezekben a tartományokban későbbi változataiban
+A GPL, szükség, hogy megvédje a szolgáltatást igénybe vevők szabadságát.
+
+  Végül minden a program állandó fenyegetettség alatt áll a szoftver szabadalmak.
+Államok nem engedélyezik szabadalom korlátozását fejlesztése és használata
+szoftver általános célú számítógépek, de azok, akik azt szeretnék, hogy
+kerülni a veszélyt, hogy a szabadalmak alkalmazzák egy ingyenes program lehetett
+hogy hatékonyan védett. Ennek elkerülése érdekében, a GPL biztosítja, hogy
+szabadalmak nem lehet használni, hogy nem teszi a program-mentes.
+
+  A pontos feltételeket a másolásra, terjesztésre és
+módosítás nyomon.
+
+                       FELTÉTELEK
+
+  0-ra. Fogalommeghatározások.
+
+  "Ez License" kifejezés 3-as verzió a GNU General Public License.
+
+  "Szerzői jog" azt is jelenti, szerzői jog, mint a törvényeket, amelyek vonatkoznak a más típusú
+munkák, mint például a félvezető maszkokat.
+
+  "A program" kifejezés más szerzői jogvédelem munka licenc alatt ezt
+License. Minden engedély "Ön". "Engedélyesek", és
+"Címzettek" lehetnek egyének vagy szervezetek.
+
+  A "módosítani" a munka azt jelenti, hogy másolni vagy módosítani részben vagy egészben a munka
+a divat igénylő szerzői jogi engedélyt, más, mint a készítése egy
+pontos másolatot. Az így létrejött alkotást az úgynevezett "módosított változata", a
+korábbi munka vagy a munka "alapján" a korábbi munka.
+
+  A "fedett munka" vagy a nem módosított Programot vagy annak egy munka alapú
+A Program.
+
+  A "hirdetik" a munka azt jelenti, hogy bármit vele, hogy anélkül,
+engedély lenne közvetlenül vagy másodlagosan felelőssé
+megsértése az alkalmazandó szerzői jogi törvény, kivéve futtatása a
+számítógép vagy módosítása saját példányt. Terjedése tartalmazza másolás,
+eloszlás (módosítással vagy anélkül), így áll a
+az állami, és néhány országban más tevékenységet is.
+
+  A "közvetíteni" a munka azt jelenti, bármilyen terjedési, amely lehetővé teszi más
+fél kezdeményezhet vagy fogadhat másolatokat. Mere interakció a felhasználót
+a számítógépes hálózat, és nincs átadása egy példányt, nem közvetíti.
+
+  Egy interaktív felhasználói felület jelenik meg: "Megfelelő Jogi közlemények"
+olyan mértékben, hogy az magában foglalja a kényelmes és jól látható
+jellemző, hogy (1) megjeleníti a megfelelő szerzői jogi, és (2)
+azt mondja a felhasználó, hogy nincs garancia a munka (kivéve a
+amennyiben garanciák állnak rendelkezésre), hogy az engedélyesek is közvetítik a
+dolgoznak jelen Licenc hatálya alatt, és hogyan megtekintéséhez ezt a dokumentumot. Ha
+A felhasználói felület a listáját felhasználói parancsok vagy lehetőségek, mint például a
+menüt, kiemelkedő elem a lista megfelel ennek a követelménynek.
+
+  1.. Forráskód.
+
+  A "forráskód" a munka azt a formáját a munka
+a módosításokat szokás végezni. "Object code": olyan non-forrás
+formában működik.
+
+  A "Standard Interface": olyan felület, vagy egy hivatalos
+szabvány által meghatározott valamely elismert szabványügyi szervezet, illetve abban az esetben,
+interfészek meghatározzák egy adott programozási nyelv, amelyik
+széles körben használják a fejlesztők dolgoznak az adott nyelven.
+
+  A "System könyvtárak" Egy végrehajtható munka is valamit, a többi
+, mint a munka egészére, hogy (a) tartalmazza a szokásos formája
+csomagolás egyik fontos eleme, de amely nem része, hogy a Major
+Komponens, és (b) csak arra szolgál, hogy lehetővé tegye a munka, hogy
+Fő összetevője, vagy, hogy végre egy szabványos felület, amely a
+megvalósítása áll a nyilvánosság forráskód formában. A
+"Fő komponens" ebben az összefüggésben azt jelenti, jelentős lényeges összetevője
+(Kernel, ablak rendszer, és így tovább) az adott operációs rendszer
+(Ha van ilyen), amelyen a végrehajtható munka fut, vagy egy használt fordítóprogram
+készítsen a munka, vagy tárgykód tolmácsot használt futtatni.
+
+  Az "A megfelelő forrás" a munka tárgykód formában minden olyan
+a forráskód előállításához szükséges, telepítse, és (egy futtatható
+munka) futtatja a tárgykód, és módosítsa a munkát, beleértve a szkripteket
+ellenőrzi azokat. Azonban ez nem tartalmazza a mű
+A rendszer könyvtárak, vagy általános célú eszközök és általánosan elérhető szabad
+programok amelyeket változatlanul elvégzett tevékenységekért, de
+amelyek nem a munka egy részét. Például a megfelelő forrás
+magában foglalja a felületkezelő definíciós fájlokat kapcsolódó forrásfájlt
+a munka, és a forráskódot a megosztott könyvtárakat és dinamikusan
+kapcsolt alprogramok, hogy a munka kifejezetten igényel,
+például intim adatkommunikációs vagy ellenőrzési folyamatok azok között,
+alprogramok és más részein a munkát.
+
+  A megfelelő forrás nem kell tartalmaznia, hogy a felhasználók
+képes regenerálódni automatikusan más részein a megfelelő
+Forrás.
+
+  A megfelelő forrása a munka forráskód formában, hogy a
+ugyanazt a munkát.
+
+  2.. Basic Engedélyek.
+
+  Minden jog keretében nyújtott Licenc adják időtartama
+szerzői a program, és visszavonhatatlan, amennyiben a megadott
+feltételek teljesülnek. Ez a licenc kifejezetten megerősíti a korlátlan
+engedélyt, hogy futtassa a módosított Program. A kimenet futtatását a
+fedett munka foglalkozik ez a dokumentum csak akkor, ha az output, mivel a
+tartalmat jelent a fedett munkát. Ez a licenc felismeri a
+jogokat fair use, vagy más, azzal egyenértékű, ahogyan a szerzői jogi törvény.
+
+  Lehet, hogy, fuss és hirdetik fedett működik, hogy nem
+közvetíteni, feltételek nélkül mindaddig, amíg a licenc egyébként maradványait
+hatályban. Lehet, hogy közvetíteni fedett munkákat másoknak azzal a kizárólagos céllal
+, hogy azokat, hogy módosítsuk kizárólag az Ön, vagy az Ön
+A létesítmények futó e művek, feltéve, hogy megfelelnek a
+a jelen Licenc közvetíti minden anyagot, amit csinál
+nem tudja ellenőrizni a szerzői jog. Azok így vagy futás a fedett munkák
+Önnek meg kell ezt kizárólag az Ön nevében, az Ön irány
+és ellenőrzés, a feltételek, amelyek tiltják őket, hogy bármilyen másolatokat
+A szerzői joggal védett anyagok kívüli kapcsolat van.
+
+  Szállító semmilyen más körülmények között használata kizárólag alatt
+Az kikötéseket. Átadásának nem megengedett, 10. fejezet
+szükségtelenné teszi.
+
+  3.. Felhasználók védelme törvényes jogait anti-kijátszásának Law.
+
+  Nincs fedett munkát úgy kell tekinteni, része a hatékony műszaki
+intézkedés a hatályos jogszabályok teljesítése cikk szerinti kötelezettségeinek
+11. A WIPO Szerzői Jogi Szerződés 20-án elfogadott 1996 decemberében vagy
+hasonló törvények tiltó vagy korlátozó megkerülése, mint
+intézkedéseket.
+
+  Ha közvetíteni a fedett munkát, akkor lemond minden jogi hatalom tiltani
+megkerülése technológiai intézkedéseket, ha ezek kijátszásának
+az erről jogok gyakorlása a jelen Licenc tekintetében
+a fedett munkát, és elhárít minden szándéka, hogy korlátozza művelet vagy
+módosítása a munka végrehajtásának eszközeként, szemben a mű
+felhasználó az Ön vagy harmadik fél törvényes jogait tiltani megkerülése
+technológiai intézkedéseket.
+
+  4.. Szállító Verbatim másolatok.
+
+  Lehet, hogy közvetíteni szó példány a Program forráskódjának mint te
+kapja meg, bármely adathordozón, feltéve, hogy jól látható és
+alkalmasan közzéteszel minden másolaton egy megfelelő szerzői jogi megjegyzés;
+érintetlenül kell hagyni minden értesítést arról, hogy jelen Licenc és az
+nem megengedő értelemben hozzá összhangban van a 7. pont vonatkozik a kódot;
+érintetlenül kell hagyni minden értesítést a jótállás hiányára, és hogy minden
+részesülők másolatot a licenc mellett a Program.
+
+  Lehet számíthatnak fel árat, vagy nincs ár minden példányt, amit közvetíteni,
+és akkor lehet támogatást nyújtani, illetve szavatossági védelemre díjazás ellenében.
+
+  5.. Szállító Módosított Forrás verziók.
+
+  Lehet, hogy közvetíteni alapuló munka a program, vagy a módosítások
+termelnek ki a Program, formájában forráskód a
+4. szakasz, feltéve, hogy akkor is megfelel az alábbi feltételek:
+
+    a) a munkát kell végeznie értesítések, hogy Ön módosított
+    , és így a megfelelő dátumot.
+
+    b) A munka kell látni értesítések, hogy ez
+    alatt kiadott jelen Licenc és bármely, hozzáadott pontban
+    7.. Ez a követelmény módosítja a követelményt 4. pontban a
+    "Érintetlenül kell hagyni minden értesítést."
+
+    c) Meg kell engedély az egész munka egészét, e
+    Licenc hogy bárki, aki birtokába jut egy példányt. Ezt
+    License tehát alkalmazni, valamint az alkalmazandó a 7. pont
+    További feltételek, hogy az egész munka, és minden alkatrész,
+    függetlenül attól, hogy hogyan vannak csomagolva. Ez a licenc nem ad
+    engedélyt, hogy engedélyt a munka bármilyen más módon, de ez nem
+    érvényteleníti az engedélyt, ha külön-külön megkapta.
+
+    d) Ha a munka az interaktív felhasználói felületek, minden kell megjeleníteni
+    Megfelelő Jogi közlemények, de ha a program interaktív
+    felületek, amelyek nem jelennek meg megfelelő jogi közlemények, a
+    munka kell, nem teszi őket erre.
+
+  Az összeállítás egy fedett munkát más önálló és független
+munkák, amelyek jellegüknél fogva nem kiterjesztése a fedett munka,
+és amelyeket nem kombinálva, mint például azt, hogy egy nagyobb program
+vagy a kötet a tárolók vagy a forgalmazási, nevezzük
+"Összevont", ha a fordítás és az ebből eredő szerzői nem
+használt, hogy korlátozza a hozzáférést, vagy törvényes jogait az összeállítás felhasználóinak
+túl az egyes munkák lehetővé teszik. Felvétele fedett munka
+egyesített nem okoz jelen Licenc kell alkalmazni a többi
+része az összesített.
+
+  6.. Szállító nem forrás Forms.
+
+  Lehet, hogy közvetíteni egy fedett munka tárgykód formában a
+A 4. és 5. szakasza, feltéve, hogy Ön is közvetíteni a
+géppel olvasható Vonatkozó forrás mellett a jelen Licenc,
+egy ilyen módon:
+
+    a) közvetíti az objektum kódot, vagy megtestesülő, a fizikai termék
+    (Beleértve a fizikai terjesztési médium), kiegészítve az
+    Megfelelő forrás rögzített tartós fizikai hordozón
+    szokásosan használt szoftver csomópont.
+
+    b) közvetíti az objektum kódot, vagy megtestesülő, a fizikai termék
+    (Beleértve a fizikai terjesztési médium), amelyhez a
+    érvényes írásos ajánlattal, legalább három évig érvényes,
+    amíg az Ön által kínált alkatrészek vagy a fogyasztók támogatása az adott termékhez
+    modell, hogy bárki, aki rendelkezik a tárgykód vagy (1) a
+    másolatát a megfelelő forrása a szoftver a
+    termék, amely jelen Licenc, a tartós fizikai
+    szokásosan alkalmazott adathordozón szoftver csomópont, az ár nem
+    több, mint az ésszerű költségek fizikailag végrehajtotta ezt
+    szállító forrás, vagy (2) való hozzáférést, hogy másolja a
+    A megfelelő forrás egy hálózati szerveren díjmentesen.
+
+    c) közvetíti egyes példányait az objektum kód egy példányát a
+    írásos ajánlat, így a megfelelő forrás. Ezt
+    alternatíva csak alkalmanként noncommercially, és
+    csak akkor, ha az objektum kódjában ilyen ajánlatként, a fenti
+    A § 6b.
+
+    d) közvetíti az objektum kódot kínál hozzáférést a kijelölt
+    helyen (ingyen vagy díj ellenében), és ezzel egyenértékű hozzáférést biztosít a
+    Megfelelő forrás ugyanúgy keresztül ugyanazon a helyen nincs
+    további díjat. Önnek nem szükséges címzettek másolni a
+    Megfelelő forrás együtt tárgykód. Ha a hely
+    másolja a tárgykód egy hálózati kiszolgáló a megfelelő forrás
+    Lehet, hogy egy másik szerveren (Ön által üzemeltetett vagy harmadik fél)
+    amely támogatja egyenértékű másolási lehetőség, feltéve, hogy fenntartsák
+    egyértelmű utasítások mellett tárgykód mondja, hol található a
+    Megfelelő forrás. Függetlenül attól, hogy milyen kiszolgálón a
+    Megfelelő forrás, akkor marad köteles biztosítani, hogy az
+    álló, ameddig szükséges, hogy megfelelnek ezeknek a követelményeknek.
+
+    e) közvetíti az objektum kódot a peer-to-peer átvitel, feltéve, hogy
+    tájékoztassa más társaik, ahol a tárgykód és a megfelelő
+    Forrása a munkát kínálnak a nagyközönség nélkül
+    díj bekezdés szerinti 6d.
+
+  A elkülöníthető része a tárgykód, aminek a forrása kizárt
+a megfelelő forrás, mint a System Library, nem kell
+tartalmazza közvetíti a tárgykód munkát.
+
+  A "User termék" vagy (1) a "fogyasztói termék", ami azt jelenti, minden
+ingó vagyon, amelyet általában a személyes, családi,
+vagy háztartási célokra, vagy (2) bármi terveztek vagy eladott beépítésre
+egy lakás. Annak megállapítására, hogy egy termék fogyasztási termék,
+Kétség esetén kell megoldani javára lefedettség. Ahhoz, hogy egy adott
+által kapott terméket egy adott felhasználó, "normálisan használt" kifejezés olyan
+tipikus vagy közös használatát, amely osztály a termék, függetlenül a status
+az adott felhasználó vagy az a mód, ahogyan az adott felhasználó
+ténylegesen használja, vagy számít, vagy várható, hogy használat során a termék. A termék
+a fogyasztói termék, függetlenül attól, hogy a termék jelentős
+kereskedelmi, ipari vagy nem fogyasztói használ, kivéve, ha a felhasználás jelentik
+az egyetlen jelentős használati mód a terméket.
+
+  "Telepítési információ" a felhasználói Product bármely módszert,
+eljárások, engedélyezési kulcs vagy egyéb szükséges információkat telepítéséhez
+és végre módosított változatai fedett munka a Felhasználó termékek a
+egy módosított változatát Vonatkozó forrása. Az információ kell
+elegendő annak biztosítására, hogy a folyamatos működése a módosított objektum
+kód semmi sem akadályozta vagy zavarta csupán azért, mert
+történt módosítás.
+
+  Ha közvetíteni egy tárgykód a munka e szakasz alapján, vagy az, vagy
+kifejezetten használható, egy felhasználói termék, és akkor fordul elő, mint a továbbító
+része a tranzakció, amelyben a jogot birtoklása és használata a
+Felhasználó termék átkerül a címzett örökre, vagy egy
+határozott idejű (függetlenül attól, hogy a tranzakció jellemzi), a
+Megfelelő forrás közvetített az e szakasz értelmében csatolni kell
+A Telepítési információk. De ez a követelmény nem vonatkozik
+ha sem Ön, sem bármely harmadik fél megtartja a képesség, hogy telepíteni
+módosított tárgykód a felhasználói Termék (például a munkának
+lett telepítve ROM).
+
+  Az a követelmény, hogy a telepítési információk nem tartalmazza
+követelmény, hogy továbbra is támogatást nyújt szolgáltatást, garanciális, és frissítések
+a munka, amelyet módosított vagy telepített a címzett, vagy
+Felhasználó Terméket általa módosított vagy telepített. Hozzáférés a
+hálózat lehet tagadni, ha a módosítás maga lényegesen és
+hátrányosan befolyásolja a működését a hálózat, vagy megsérti a szabályokat és
+protokollok kommunikációs hálózaton keresztül.
+
+  Megfelelő forrás közvetített, és a telepítési információk,
+összhangban van ebben a szakaszban kell lennie, olyan formában, hogy a nyilvánosság számára
+dokumentált (és végrehajtási elérhetővé a nyilvánosság számára
+forráskód formájában), és azt nem igényelnek speciális jelszót vagy kulcsot
+kicsomagolás, olvasás vagy másolás.
+
+  7.. További feltételek.
+
+  "További engedélyek" olyan kifejezések, amelyek kiegészítik a jelen
+Licenc azáltal, hogy kivételt egy vagy több annak feltételeit.
+További engedélyek érvényesek a teljes program
+kell kezelni, mintha ebbe License, amennyiben
+hogy azok érvényesek a hatályos törvények alapján. Ha a további engedélyek
+csak a része a program, azt a részét lehet használni, külön-külön
+az említett engedélyek, hanem az egész program továbbra is irányadó
+jelen Licenc tekintet nélkül a további jogosultságokat.
+
+  Ha közvetíteni egy példányát fedett munkát, akkor az Ön választása
+távolítsa el a további jogosultságokat adott példány, vagy annak bármely részét
+azt. (További jogosultságok akkor lehet, hogy megkövetelik a saját
+eltávolítása bizonyos esetekben, ha módosítja a munkát.) is lehet helyezni
+további jogosultságokat anyag hozzá az Ön által fedett munkát,
+, amelyhez vagy adhat megfelelő szerzői jogi engedélyt.
+
+  Bármely más rendelkezése ellenére a jelen Licenc, az anyag, amit
+hozzá egy fedett munkát, akkor (ha engedélyezte a szerzői jog tulajdonosainak
+hogy az anyag) kiegészítik a jelen Licenc feltételek:
+
+    a) lemondanak garanciát vagy korlátozza felelősségét eltérően a
+    feltételek 15. és 16. § a jelen Licenc, vagy
+
+    b) megkövetelése megőrzése meghatározott ésszerű jogi útmutatásban vagy
+    a szerző neve az, hogy az anyag, vagy a megfelelő jogi
+    Közlemények megjelenített munkák tartalmazó, vagy
+
+    c) megtiltja elferdítése eredetét, hogy az anyag, vagy
+    megköveteli, hogy módosított változatai ilyen anyagot kell jelölni
+    ésszerű módon, mint más, az eredeti változatot, vagy
+
+    d) használatának korlátozása a nyilvánosság szempontjából nevét licenc vagy
+    szerző az anyag, vagy
+
+    e) A csökkenő megadását jogait védjegyjog használata bizonyos
+    márkanevek, védjegyek vagy szolgáltatási védjegy, vagy
+
+    f) megkövetelése kártalanítás licenc és a szerzők, hogy a
+    anyag, aki közvetít az anyagot (vagy módosított változatai
+    azt) szerződéses feltételezések a felelősség, hogy a címzett, a
+    semmilyen felelősséget, hogy ezek a szerződéses feltételezések írtak elő,
+    azokat a licenc és a szerzők.
+
+  Minden egyéb, nem engedélyező kiegészítő feltételeket tartják "tovább
+korlátozások "értelmében a 10. szakasza. Amennyiben a program, mint te
+kapta meg, vagy annak bármely részét, tartalmaz egy tájékoztatót arról, hogy
+által szabályozott License egy kifejezés, amely egy további
+korlátozás, akkor távolítsa el ezt a kifejezést. Ha az engedély dokumentum
+További korlátozás, de lehetővé teszi, hogy relicensing vagy szállító e
+Licenc, akkor adjunk hozzá egy fedett munkaanyag irányadó feltételek
+Az, hogy az engedély a dokumentum, feltéve, hogy a további korlátozás nem
+nem éli túl az ilyen relicensing vagy szállító.
+
+  Ha hozzá kifejezéseket fedett munkát összhangban ebben a részben, akkor
+kell helyezni, a vonatkozó forrás fájlokat, a nyilatkozatot a
+További feltételek, hogy alkalmazzák az ezeket a fájlokat, vagy a tájékoztatót
+hol találja a megfelelő feltételeket.
+
+  További feltételek, engedékeny vagy nem megengedő, lehet azt a
+formájában külön írásos engedélyt, vagy azt kivételként;
+A fenti követelmények mindkét irányban.
+
+  8.. Megszűnése.
+
+  Lehet, hogy nem hirdetik, vagy módosítani egy fedett munkát, kivéve, ha kifejezetten
+amennyiben jelen Licenc hatálya alatt. Minden kísérlet egyébként terjeszteni vagy
+módosíthatja érvénytelen, és automatikusan megszünteti a jogait
+ez a licenc (beleértve a szabadalmi engedélyek a harmadik
+bekezdése 11. fejezet).
+
+  Azonban, ha megszűnik minden megsérti jelen Licenc, akkor a
+engedélyt egy bizonyos szerzői jog tulajdonosa vissza nem (a)
+ideiglenesen, egészen addig, amíg a szerzői jog tulajdonosa kifejezetten és
+végül megszűnik a jogosítványát, és (b) tartósan, ha a szerzői jog
+tulajdonos nem értesíti Önt a jogsértés valamilyen ésszerű módon
+előtt 60 nappal befejezése után.
+
+  Sőt, a licenc egy bizonyos szerzői jogok tulajdonosa
+visszaállította véglegesen, ha a szerzői jog tulajdonosa értesítést küld az
+megsértése valamilyen ésszerű módon, ez az első alkalom, hogy
+értesítést kapott megsértése jelen Licenc (bármilyen munka) az adott
+szerzői jog tulajdonosa, és gyógyítani a jogsértés előtti 30 napon belül
+az értesítés kézhezvételét.
+
+  Megszűnése szerinti jogaid ebben a szakaszban nem szünteti meg a
+engedélyek felek, akik megkapták másolatokat vagy jogokat tőled alatt
+jelen Licenc. Ha a jogait már megszűnt, és nem állandóan
+visszaállította, akkor nem jogosult fogadni az új engedélyek ugyanazon
+anyagnak 10. fejezet.
+
+  9.. Elfogadás Nem szükséges, amiért másolatok.
+
+  Nem kell elfogadni ezt a szabályozást annak érdekében, hogy megkapja, vagy
+fuss egy példányt a Program. Kiegészítő terjedése fedett munka
+előforduló kizárólag következtében peer-to-peer átviteli
+kap egy példányt, szintén nem igényel elfogadását. Azonban
+nem más, mint ez a licenc nem jogosítja terjeszteni vagy
+módosíthatja bármely idetartozó munkát. Ezek az intézkedések sértik a szerzői, ha nem
+nem fogadja el ezt a License. Ezért, módosításával vagy szaporító a
+fedett munka, Ön elfogadja a jelen Licenc erre.
+
+  10-ig. Automatikus engedélyezése Downstream Címzettek.
+
+  Minden alkalommal, amikor közvetíteni fedett munkát, a címzett automatikusan
+kap engedélyt az eredeti licenc, futni, módosítására és
+hirdetik, hogy a munka, vonatkozik ez License. Ön nem felelős
+betartatni a harmadik fél által a jelen Licenc.
+
+  Egy "entitás művelet" a tranzakció átadása az irányítást a
+szervezet, vagy lényegében minden vagyonát egy, vagy felosztásával az
+szervezet, illetve szervezetek összevonása. Ha terjedése fedett
+munka eredményeit a gazdálkodó egység tranzakció mindegyik fél, hogy
+tranzakció aki másolatot kap a munka is kap, amit
+engedélyeket a munkát a párt elődje érdeke volt, vagy lehetett
+hogy az előző bekezdésben, valamint a jogot, hogy birtokba a
+Megfelelő forrása a munka az elődje a kamat, ha a
+Az elődje van, vagy lehet kapni ésszerű erőfeszítéseket.
+
+  Lehet, hogy nem ró további gyakorlásának korlátozását, a
+jogokat vagy megerősített jelen Licenc hatálya alatt. Például, lehet,
+nem szabhat a licencdíj, royalty, vagy az egyéb díj gyakorlása
+szerint nyújtott ezen Jogosítványt és lehet, hogy nem kezdeményez pert
+(Beleértve a cross-követelés vagy viszontkeresetet olyan perben), azt állítva, hogy
+valamennyi szabadalmi igény sérül azáltal, hogy segítségével, értékesítés, mely a
+eladás, vagy az importáló a Program vagy annak egy részét.
+
+  11.. Szabadalmak.
+
+  A "hozzájárul" a szerzői jog tulajdonosa, aki engedélyezi, e
+Engedélyt a Program vagy a munka, amelyeken a program alapul. A
+A munka tehát engedélyezett hívják a járulékfizető "közreműködő változat".
+
+  A járulékfizető "alapvető szabadalmi igények" mind a szabadalmi igények
+tulajdonában vagy ellenőrzése alatt a hozzászóló, hogy a már megszerzett vagy
+továbbiakban szerzett, hogy sérülne valamilyen módon lehetővé
+ez a licenc, az, hogy segítségével, vagy értékesíti hozzájárul verzió,
+de nem tartalmazzák azt állítja, hogy sérülne csak a
+A későbbi módosítása a közreműködő változat. Mert
+E meghatározás alkalmazásában, "ellenőrzés" magában foglalja a jogot, hogy megadja
+szabadalom sublicenses összeegyeztethető módon a követelményeknek
+jelen Licenc.
+
+  Minden közreműködő ad Önnek nem kizárólagos, világszerte érvényes, jogdíjmentes
+szabadalmi licencet a közreműködő alapvető szabadalom azt állítja, hogy
+hogy, használata, eladni, eladási ajánlat, az import és ellenkező esetben, módosítására és
+hirdetik tartalmát a közreműködő változat.
+
+  A következő három bekezdést, a "szabadalmi licenc" minden olyan kifejezett
+szerződés vagy kötelezettségvállalás azonban denominált, nem kényszerít a szabadalom
+(Például egy kifejezett engedélye gyakorolni a szabadalom vagy szövetség nem
+perelni a szabadalmi jogsértés). A "támogatás", mint a szabadalmi licencet a
+fél azt jelenti, hogy egy ilyen megállapodás vagy kötelezettségvállalás nem kényszerít a
+szabadalmaztatni szemben a párt.
+
+  Ha közvetíteni a fedett munkát, tudatosan támaszkodva a szabadalmi licenc,
+és a megfelelő forrása a munka nem áll rendelkezésre, hogy bárki
+másolni, ingyenes, a jelen Licenc egy
+nyilvánosan elérhető hálózati kiszolgálón vagy más, könnyen hozzáférhető eszköz,
+akkor meg kell vagy (1) hatására a Vonatkozó forrás, hogy így legyen
+rendelkezésre áll, vagy (2) intézkedik, hogy megfossza magát a javára a
+szabadalmi engedélyt az adott munka, vagy (3) intézkedik, oly módon,
+megfelel a követelményeknek a jelen Licenc, hogy meghosszabbítja a szabadalom
+engedély a downstream címzettnek. "Tudatosan támaszkodva" azt jelenti, hogy
+tényleges tudás, hanem a szabadalmi licencet, a szállító a
+fedett munkát egy országban, vagy a címzett általi használata a fedett munka
+egy olyan országban, sértené egy vagy több azonosítható szabadalmat, hogy
+országban, hogy van okunk azt hinni érvényes.
+
+  Ha alapján vagy azzal kapcsolatban egy tranzakció vagy
+megállapodás, akkor közvetíteni, vagy terjeszteni beszerzésével szállítására, a
+fedett munkát, és megadja a szabadalmi licencet ad a felek
+kap a fedett munkát felhatalmazza őket, hogy használják, terjeszteni, módosítani
+vagy közvetítenek egy adott példányt a fedett munkát, akkor a szabadalmi licenc
+Ön megadja automatikusan kiterjed minden címzettnek a fedett
+a munka és a munka alapul.
+
+  A szabadalmi licence "diszkriminatív", ha az nem tartalmazza a
+körét a lefedettség, tiltja a gyakorlása, vagy
+feltétele, hogy a nem-gyakorlása egy vagy több, a jogokat, amelyek
+konkrétan keretében nyújtott License. Lehet, hogy nem közvetíti a fedett
+akkor működik, ha egy fél megállapodást kötött egy harmadik féllel, amely
+az üzleti szoftverek terjesztése, amelyek alapján meg fizetést
+hogy a harmadik fél mértéke alapján a tevékenység szállító
+a munka, és amelynek keretében a harmadik fél támogatások bármely
+fél, aki megkapja a fedett munka van, a diszkriminatív
+szabadalmi licenc (a) kapcsolatban példányban a fedett munka
+által közvetített (vagy másolat készült azok a másolat), vagy (b) elsősorban
+számára és ezzel kapcsolatban konkrét termékeket vagy válogatás, amely
+tartalmazza a fedett munkát, kivéve ha a Szerződés a megállapodást,
+, vagy, hogy a szabadalmi licencia megadása előtt március 28-ig 2007-ben.
+
+  A jelen Licenc kell értelmezni, hogy kizárja vagy korlátozza
+bármely vélelmezett engedély vagy más védelmi szabálysértési, amelyek
+egyébként áll az Ön rendelkezésére a vonatkozó szabadalmi jog.
+
+  12.. No Surrender mások szabadság.
+
+  Ha a feltételek állnak Rád (bírói rendelkezés, megállapodás, vagy
+egyébként), amelyek ellentmondanak e Licenc feltételeinek, ezek nem
+mentenek fel e Licenc feltételei. Ha nem tudja közvetíteni a
+fedett munkát annak érdekében, hogy egyszerre eleget tegyél e
+Licenc és az egyéb vonatkozó kötelezettségeket, akkor ennek következményeként előfordulhat,
+nem közvetíti egyáltalán. Például, ha egyetért a feltételekkel, hogy kötelezi Önt
+gyűjteni jogdíjat további szállító azoktól, akikkel közvetíteni
+A Program, az egyetlen módja, hogy eleget tegyen mind ezeket a kifejezéseket, és ez
+Licenc lenne, hogy teljesen tartózkodik közvetíti a Program.
+
+  13.. Használja a GNU Affero General Public License.
+
+  Bármely más rendelkezése ellenére a jelen Licenc, akkor
+engedélyt linket, vagy kombinálni borított munkát a munka engedélyezett
+alatt 3-as verzió a GNU Affero General Public License egyetlen
+kombinált munka, és közvetíteni a kapott munkát. A jelen
+Licenc továbbra is alkalmazni kell a rész, amely a fedett munka,
+de a különleges követelmények a GNU Affero General Public License,
+13. § vonatkozó interakció hálózaton keresztül kell alkalmazni a
+kombinációja, mint olyat.
+
+  14.. Felülvizsgált verziói License.
+
+  A Free Software Foundation tehet közzé felülvizsgált és / vagy új változatait
+a GNU General Public License időről időre. Ezek az új változatok
+szellemükben hasonlóak a jelenlegi változathoz, de részletekben különböznek, hogy
+új problémákat vagy aggályokat.
+
+  A dokumentum minden változata egy megkülönböztető verziószámmal. Ha a
+Program meghatározza, hogy egy bizonyos számozott változata a GNU General
+Public License "vagy bármely újabb verzióra" rá, akkor a
+lehetőség a következő feltételek egyikét, hogy számozott
+változat, vagy bármely újabb verzió által közzétett, a Free Software
+Alapítvány. Ha a Program nem határozza meg a verziószáma
+GNU General Public License, akkor dönthet úgy, valaha közölt bármely verziót
+A Free Software Foundation.
+
+  Ha a Program megadja, hogy a proxy tudja eldönteni, hogy melyik a jövőben
+A GNU General Public License is használható, hogy a proxy
+nyilvános nyilatkozat elfogadásának változata tartósan feljogosítja Önt
+választani, hogy a verzió a program.
+
+  Később engedély verzió adhat további vagy eltérő
+engedélyeket. Azonban további kötelezettségeket rótt bármely
+szerző vagy a szerzői jog tulajdonosának eredményeként az Ön által választott, hogy kövesse a
+újabb verzió.
+
+  15.. A jótállás.
+
+  NINCS GARANCIA a program, AMENNYIBEN ÁLTAL MEGENGEDETT
+VONATKOZÓ TÖRVÉNY. HA MÁS NEM ÁLL ÍRÁSBAN, A SZERZŐI JOG
+TULAJDONOSOK ÉS / VAGY MÁS FELEK A PROGRAM "AHOGY VAN",
+BÁRMILYEN KÖZVETLEN VAGY BELEÉRTVE, DE NEM KIZÁRÓLAG A
+A VONATKOZÓ GARANCIÁT ELADHATÓSÁGRA ÉS EGY ADOTT
+CÉL. A TELJES KOCKÁZAT A MINŐSÉG ÉS A program teljesítményének
+A TIÉD. HA A PROGRAM HIBÁSAN, ÖNT TERHELI KÖLTSÉGE
+MINDEN SZÜKSÉGES SZOLGÁLTATÁS, JAVÍTÁS.
+
+  16.. A felelősség korlátozása.
+
+  SEMMILYEN ESETBEN HA AZ ALKALMAZHATÓ TÖRVÉNY VAGY ÍRÁSBELI EGYEZSÉG
+SZERZŐI JOGOK HOLDER, vagy bármely más fél WHO módosítja ÉS / VAGY közvetíti
+A FENT ENGEDÉLYEZETT, SEM FELELŐS A KÁROKÉRT, BELEÉRTVE
+ÁLTALÁNOS, SPECIÁLIS, VÉLETLEN VAGY KÖVETKEZMÉNYES KÁRÉRT A
+HASZNÁLAT VAGY NEM kell használni a programot (többek ADATVESZTÉS,
+Adatok vagy PONTATLAN NYÚJTÁSÁRA VAGY VESZTESÉGEK ÖN ÁLTAL VAGY HARMADIK
+Pártok vagy HIBÁS A PROGRAM NEM MŰKÖDIK EGYÜTT MÁS PROGRAMOT)
+AKKOR SEM, HA ILYEN TULAJDONOS VAGY MÁS FÉL ÉRTESÜLT LEHETŐSÉGÉRŐL
+ILYEN KÁR.
+
+  17.. Értelmezése 15. és 16. §.
+
+  If the disclaimer of warranty and limitation of liability provided
+above cannot be given local legal effect according to their terms,
+reviewing courts shall apply local law that most closely approximates
+an absolute waiver of all civil liability in connection with the
+Program, unless a warranty or assumption of liability accompanies a
+copy of the Program in return for a fee.
+
+                     END OF TERMS AND CONDITIONS
+
+            How to Apply These Terms to Your New Programs
+
+  If you develop a new program, and you want it to be of the greatest
+possible use to the public, the best way to achieve this is to make it
+free software which everyone can redistribute and change under these terms.
+
+  To do so, attach the following notices to the program.  It is safest
+to attach them to the start of each source file to most effectively
+state the exclusion of warranty; and each file should have at least
+the "copyright" line and a pointer to where the full notice is found.
+
+    &lt;one line to give the program's name and a brief idea of what it does.&gt;
+    Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+Also add information on how to contact you by electronic and paper mail.
+
+  If the program does terminal interaction, make it output a short
+notice like this when it starts in an interactive mode:
+
+    &lt;program&gt;  Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
+
+The hypothetical commands `show w' and `show c' should show the appropriate
+parts of the General Public License.  Of course, your program's commands
+might be different; for a GUI interface, you would use an "about box".
+
+  You should also get your employer (if you work as a programmer) or school,
+if any, to sign a "copyright disclaimer" for the program, if necessary.
+For more information on this, and how to apply and follow the GNU GPL, see
+&lt;http://www.gnu.org/licenses/&gt;.
+
+  The GNU General Public License does not permit incorporating your program
+into proprietary programs.  If your program is a subroutine library, you
+may consider it more useful to permit linking proprietary applications with
+the library.  If this is what you want to do, use the GNU Lesser General
+Public License instead of this License.  But first, please read
+&lt;http://www.gnu.org/philosophy/why-not-lgpl.html&gt;.</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>GNU GPL Version 3 licensz</value>
+  </data>
+</root>

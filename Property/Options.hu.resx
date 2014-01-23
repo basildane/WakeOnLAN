@@ -117,34 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RepBroadcast" xml:space="preserve">
-    <value>Broadcast</value>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>Rendben</value>
   </data>
-  <data name="RepEmergency" xml:space="preserve">
-    <value>Emergency shutdown?</value>
-    <comment>Emergency shutdown?</comment>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Mégsem</value>
   </data>
-  <data name="RepGroup" xml:space="preserve">
-    <value>Group</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button_Default.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
   </data>
-  <data name="RepIP" xml:space="preserve">
-    <value>IP Address</value>
-    <comment>IP Address</comment>
+  <data name="Button_Default.Text" xml:space="preserve">
+    <value>Alaphelyzetbe állítás</value>
   </data>
-  <data name="RepMAC" xml:space="preserve">
-    <value>MAC Address</value>
-    <comment>MAC Address</comment>
-  </data>
-  <data name="RepName" xml:space="preserve">
-    <value>Name</value>
-    <comment>Name</comment>
-  </data>
-  <data name="RepNetbios" xml:space="preserve">
-    <value>Netbios name</value>
-    <comment>Netbios name</comment>
-  </data>
-  <data name="RepShutdown" xml:space="preserve">
-    <value>Shutdown command line</value>
-    <comment>Shutdown command line</comment>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Beállítások</value>
   </data>
 </root>

@@ -117,34 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RepBroadcast" xml:space="preserve">
-    <value>Broadcast</value>
-  </data>
   <data name="RepEmergency" xml:space="preserve">
-    <value>Emergency shutdown?</value>
+    <value>Vészleállítás?</value>
     <comment>Emergency shutdown?</comment>
   </data>
-  <data name="RepGroup" xml:space="preserve">
-    <value>Group</value>
-  </data>
   <data name="RepIP" xml:space="preserve">
-    <value>IP Address</value>
+    <value>IP cím</value>
     <comment>IP Address</comment>
   </data>
   <data name="RepMAC" xml:space="preserve">
-    <value>MAC Address</value>
+    <value>MAC cím</value>
     <comment>MAC Address</comment>
   </data>
   <data name="RepName" xml:space="preserve">
-    <value>Name</value>
+    <value>Név</value>
     <comment>Name</comment>
   </data>
   <data name="RepNetbios" xml:space="preserve">
-    <value>Netbios name</value>
+    <value>Netbios név</value>
     <comment>Netbios name</comment>
   </data>
   <data name="RepShutdown" xml:space="preserve">
-    <value>Shutdown command line</value>
+    <value>Leállítási parancssor</value>
     <comment>Shutdown command line</comment>
   </data>
 </root>

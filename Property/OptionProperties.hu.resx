@@ -117,34 +117,127 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RepBroadcast" xml:space="preserve">
-    <value>Broadcast</value>
+  <data name="Broadcast_Address" xml:space="preserve">
+    <value>Üzenetszórási cím</value>
+    <comment>Broadcast Address</comment>
   </data>
-  <data name="RepEmergency" xml:space="preserve">
-    <value>Emergency shutdown?</value>
-    <comment>Emergency shutdown?</comment>
+  <data name="Broadcast_AddressDescription" xml:space="preserve">
+    <value>Adjon meg üzenetszórási címet a WOL üzenetekszórási csomagoknak.</value>
+    <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
-  <data name="RepGroup" xml:space="preserve">
-    <value>Group</value>
+  <data name="cat_Emergency" xml:space="preserve">
+    <value>Vészbeállítások</value>
+    <comment>Emergency settings</comment>
   </data>
-  <data name="RepIP" xml:space="preserve">
-    <value>IP Address</value>
-    <comment>IP Address</comment>
+  <data name="cat_Shutdown" xml:space="preserve">
+    <value>Leállítás</value>
+    <comment>Shutdown</comment>
   </data>
-  <data name="RepMAC" xml:space="preserve">
-    <value>MAC Address</value>
-    <comment>MAC Address</comment>
+  <data name="cat_WOL" xml:space="preserve">
+    <value>WOL</value>
+    <comment>WOL</comment>
   </data>
-  <data name="RepName" xml:space="preserve">
-    <value>Name</value>
-    <comment>Name</comment>
+  <data name="Delay" xml:space="preserve">
+    <value>Várakozási idő</value>
+    <comment>Time delay</comment>
   </data>
-  <data name="RepNetbios" xml:space="preserve">
-    <value>Netbios name</value>
-    <comment>Netbios name</comment>
+  <data name="DelayDescription" xml:space="preserve">
+    <value>Alapértelmezett várakozás leállítás előtt.</value>
+    <comment>The default time delay for shutdowns.</comment>
   </data>
-  <data name="RepShutdown" xml:space="preserve">
-    <value>Shutdown command line</value>
-    <comment>Shutdown command line</comment>
+  <data name="EmergencyDelay" xml:space="preserve">
+    <value>Várakozási idő</value>
+    <comment>Time delay</comment>
+  </data>
+  <data name="EmergencyDelayDescription" xml:space="preserve">
+    <value>Várakozási idő vészleállítás előtt.</value>
+    <comment>The time delay for emergency shutdowns.</comment>
+  </data>
+  <data name="EmergencyShutdown" xml:space="preserve">
+    <value>alapértelmezett üzenet</value>
+    <comment>Default Message</comment>
+  </data>
+  <data name="EmergencyShutdownDescription" xml:space="preserve">
+    <value>A vészlállításkori üzenet.</value>
+    <comment>The emergency shutdown message.</comment>
+  </data>
+  <data name="Enable_Sound" xml:space="preserve">
+    <value>Hang engedélyezve</value>
+    <comment>Enable sound</comment>
+  </data>
+  <data name="Enable_SoundDescription" xml:space="preserve">
+    <value>Hang lejátszása, amikor elérhető a monitorozó szerver, vagy leáll a válaszadással.</value>
+    <comment>Play a sound when a monitored server comes online, or stops responding.</comment>
+  </data>
+  <data name="Force" xml:space="preserve">
+    <value>Erőltetett leállítás</value>
+    <comment>Force shutdown</comment>
+  </data>
+  <data name="ForceDescription" xml:space="preserve">
+    <value>Erőltetett távoli szerver-leállítás. A nem mentett fájlok elvesznek.</value>
+    <comment>Force remote server to shutdown.  Unsaved files will be lost.</comment>
+  </data>
+  <data name="Reboot" xml:space="preserve">
+    <value>Újraindítás</value>
+    <comment>Reboot</comment>
+  </data>
+  <data name="RebootDescription" xml:space="preserve">
+    <value>Ha igaz, akkor újraindítás leállítás után.</value>
+    <comment>If true, then reboot after shutdown.</comment>
+  </data>
+  <data name="Shutdown" xml:space="preserve">
+    <value>Alapértelmezett üzenet</value>
+    <comment>Default Message</comment>
+  </data>
+  <data name="ShutdownDescription" xml:space="preserve">
+    <value>Az alapértelmezett leállítási üzenet.</value>
+    <comment>The default shutdown message.</comment>
+  </data>
+  <data name="UDPPort" xml:space="preserve">
+    <value>UDP Port</value>
+    <comment>UDP Port</comment>
+  </data>
+  <data name="UDPPortDescription" xml:space="preserve">
+    <value>Adjon meg UDP portszámot az üzenetszóráshoz.</value>
+    <comment>Enter the UDP Port number for the broadcast messages.</comment>
+  </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Verzió</value>
+    <comment>Version</comment>
+  </data>
+  <data name="AppVersionDescription" xml:space="preserve">
+    <value>Program verzió</value>
+    <comment>Application version</comment>
+  </data>
+  <data name="cat_Application" xml:space="preserve">
+    <value>Alkalmazás</value>
+    <comment>Application</comment>
+  </data>
+  <data name="VersionFull" xml:space="preserve">
+    <value>Licensed version</value>
+    <comment>Licensed version</comment>
+  </data>
+  <data name="VersionTrial" xml:space="preserve">
+    <value>Trial version</value>
+    <comment>Trial version</comment>
+  </data>
+  <data name="Culture" xml:space="preserve">
+    <value>Nyelvkód</value>
+    <comment>Culture</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Nyelv</value>
+    <comment>Language</comment>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Licensz</value>
+    <comment>License</comment>
+  </data>
+  <data name="dbPath" xml:space="preserve">
+    <value>Adatbázis helye</value>
+    <comment>Database path</comment>
+  </data>
+  <data name="AutoCheck" xml:space="preserve">
+    <value>Automatikus frissítés-keresés</value>
   </data>
 </root>

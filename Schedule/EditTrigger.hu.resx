@@ -117,34 +117,134 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RepBroadcast" xml:space="preserve">
-    <value>Broadcast</value>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>Rendben</value>
   </data>
-  <data name="RepEmergency" xml:space="preserve">
-    <value>Emergency shutdown?</value>
-    <comment>Emergency shutdown?</comment>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Mégsem</value>
   </data>
-  <data name="RepGroup" xml:space="preserve">
-    <value>Group</value>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Napi</value>
   </data>
-  <data name="RepIP" xml:space="preserve">
-    <value>IP Address</value>
-    <comment>IP Address</comment>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
   </data>
-  <data name="RepMAC" xml:space="preserve">
-    <value>MAC Address</value>
-    <comment>MAC Address</comment>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Ismét minden:</value>
   </data>
-  <data name="RepName" xml:space="preserve">
-    <value>Name</value>
-    <comment>Name</comment>
+  <data name="DateTimePickerTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 19</value>
   </data>
-  <data name="RepNetbios" xml:space="preserve">
-    <value>Netbios name</value>
-    <comment>Netbios name</comment>
+  <data name="DateTimePickerDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 19</value>
   </data>
-  <data name="RepShutdown" xml:space="preserve">
-    <value>Shutdown command line</value>
-    <comment>Shutdown command line</comment>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 21</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Indítás:</value>
+  </data>
+  <data name="RadioButtonMontly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 17</value>
+  </data>
+  <data name="RadioButtonMontly.Text" xml:space="preserve">
+    <value>Havi</value>
+  </data>
+  <data name="RadioButtonWeekly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="RadioButtonWeekly.Text" xml:space="preserve">
+    <value>Heti</value>
+  </data>
+  <data name="RadioButtonDaily.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 17</value>
+  </data>
+  <data name="RadioButtonDaily.Text" xml:space="preserve">
+    <value>Napi</value>
+  </data>
+  <data name="RadioButtonOneTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 17</value>
+  </data>
+  <data name="RadioButtonOneTime.Text" xml:space="preserve">
+    <value>Egyszeri díjas</value>
+  </data>
+  <data name="CheckBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
+  </data>
+  <data name="CheckBox7.Text" xml:space="preserve">
+    <value>Szombat</value>
+  </data>
+  <data name="CheckBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
+  </data>
+  <data name="CheckBox6.Text" xml:space="preserve">
+    <value>Péntek</value>
+  </data>
+  <data name="CheckBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="CheckBox5.Text" xml:space="preserve">
+    <value>Csütörtök</value>
+  </data>
+  <data name="CheckBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 17</value>
+  </data>
+  <data name="CheckBox4.Text" xml:space="preserve">
+    <value>Szerda</value>
+  </data>
+  <data name="CheckBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 17</value>
+  </data>
+  <data name="CheckBox3.Text" xml:space="preserve">
+    <value>Kedd</value>
+  </data>
+  <data name="CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 17</value>
+  </data>
+  <data name="CheckBox2.Text" xml:space="preserve">
+    <value>Hétfő</value>
+  </data>
+  <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="CheckBox1.Text" xml:space="preserve">
+    <value>Vasárnap</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 16</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>héten:</value>
+  </data>
+  <data name="TextBoxWeeklyRecurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Ismét minden:</value>
+  </data>
+  <data name="GroupBoxSettings.Text" xml:space="preserve">
+    <value>Beállítások</value>
+  </data>
+  <data name="CheckBoxEnabled.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 17</value>
+  </data>
+  <data name="CheckBoxEnabled.Text" xml:space="preserve">
+    <value>Engedélyezés</value>
+  </data>
+  <data name="GroupBoxAdvanced.Text" xml:space="preserve">
+    <value>Speciális</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Kiváltó szerkesztése</value>
   </data>
 </root>

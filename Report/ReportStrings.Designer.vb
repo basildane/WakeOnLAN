@@ -65,11 +65,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Broadcast.
+        '''</summary>
+        Friend Shared ReadOnly Property RepBroadcast() As String
+            Get
+                Return ResourceManager.GetString("RepBroadcast", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Emergency shutdown?.
         '''</summary>
         Friend Shared ReadOnly Property RepEmergency() As String
             Get
                 Return ResourceManager.GetString("RepEmergency", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Group.
+        '''</summary>
+        Friend Shared ReadOnly Property RepGroup() As String
+            Get
+                Return ResourceManager.GetString("RepGroup", resourceCulture)
             End Get
         End Property
         

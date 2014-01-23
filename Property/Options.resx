@@ -149,6 +149,9 @@
   <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
     <value>Cancel_Button</value>
   </data>
+  <data name="&gt;&gt;TableLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>435, 390</value>
   </data>
@@ -163,6 +166,9 @@
   </data>
   <data name="&gt;&gt;PropertyGrid1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="OK_Button.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="OK_Button.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -195,8 +201,8 @@
   <data name="Button_Default.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 23</value>
   </data>
-  <data name="&gt;&gt;TableLayoutPanel1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="Cancel_Button.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="Button_Default.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 355</value>
@@ -219,11 +225,8 @@
   <data name="PropertyGrid1.Size" type="System.Drawing.Size, System.Drawing">
     <value>411, 318</value>
   </data>
-  <data name="Cancel_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="&gt;&gt;OK_Button.Name" xml:space="preserve">
+    <value>OK_Button</value>
   </data>
   <data name="Button_Default.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -239,9 +242,6 @@
   </data>
   <data name="&gt;&gt;PropertyGrid1.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;OK_Button.Name" xml:space="preserve">
-    <value>OK_Button</value>
   </data>
   <data name="&gt;&gt;Cancel_Button.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -261,8 +261,8 @@
   <data name="PropertyGrid1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="OK_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="TableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Options</value>
@@ -272,5 +272,8 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>hu</value>
   </metadata>
 </root>

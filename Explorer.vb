@@ -548,6 +548,10 @@ Public Class Explorer
         ChangeLanguage("fr-FR")
     End Sub
 
+    Private Sub HungaryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HungaryToolStripMenuItem.Click
+        ChangeLanguage("hu-HU")
+    End Sub
+
     Private Sub ChangeLanguage(ByVal newLang As String)
         My.Settings.Language = newLang
         My.Application.ChangeUICulture(My.Settings.Language)

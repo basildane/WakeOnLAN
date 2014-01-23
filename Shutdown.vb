@@ -205,8 +205,5 @@ Public Class Shutdown
         Me.Close()
     End Sub
 
-    Private Sub Shutdown_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Icon = My.Resources.system_log_out
-    End Sub
 End Class
 
