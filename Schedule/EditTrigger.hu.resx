@@ -126,13 +126,10 @@
   <data name="Label3.Text" xml:space="preserve">
     <value>Napi</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>Ismét minden:</value>
+    <value>Megismétlés:</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="DateTimePickerTime.Location" type="System.Drawing.Point, System.Drawing">
     <value>278, 19</value>
   </data>
@@ -161,16 +158,16 @@
     <value>Heti</value>
   </data>
   <data name="RadioButtonDaily.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
+    <value>45, 17</value>
   </data>
   <data name="RadioButtonDaily.Text" xml:space="preserve">
-    <value>Napi</value>
+    <value>Nap</value>
   </data>
   <data name="RadioButtonOneTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 17</value>
+    <value>62, 17</value>
   </data>
   <data name="RadioButtonOneTime.Text" xml:space="preserve">
-    <value>Egyszeri díjas</value>
+    <value>Egyszer</value>
   </data>
   <data name="CheckBox7.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 17</value>
@@ -226,20 +223,17 @@
   <data name="TextBoxWeeklyRecurs.Location" type="System.Drawing.Point, System.Drawing">
     <value>82, 13</value>
   </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
   <data name="Label5.Text" xml:space="preserve">
-    <value>Ismét minden:</value>
+    <value>Megismétlés:</value>
   </data>
   <data name="GroupBoxSettings.Text" xml:space="preserve">
     <value>Beállítások</value>
   </data>
   <data name="CheckBoxEnabled.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 17</value>
+    <value>93, 17</value>
   </data>
   <data name="CheckBoxEnabled.Text" xml:space="preserve">
-    <value>Engedélyezés</value>
+    <value>Engedélyezve</value>
   </data>
   <data name="GroupBoxAdvanced.Text" xml:space="preserve">
     <value>Speciális</value>

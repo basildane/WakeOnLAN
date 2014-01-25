@@ -241,13 +241,13 @@
     <value>Hiba</value>
   </data>
   <data name="lit_false" xml:space="preserve">
-    <value>FALSE</value>
+    <value>HAMIS</value>
   </data>
   <data name="lit_Invalid" xml:space="preserve">
     <value>Érvénytelen parancssor</value>
   </data>
   <data name="lit_multipleTriggers" xml:space="preserve">
-    <value>Többszörös kiváltó megadása</value>
+    <value>Többszöri vezérlés megadása</value>
   </data>
   <data name="lit_Never" xml:space="preserve">
     <value>Soha</value>
@@ -268,19 +268,19 @@
     <value>Kész</value>
   </data>
   <data name="lit_Running" xml:space="preserve">
-    <value>Futtat</value>
+    <value>Fut</value>
   </data>
   <data name="lit_true" xml:space="preserve">
-    <value>TRUE</value>
+    <value>IGAZ</value>
   </data>
   <data name="lit_Unknown" xml:space="preserve">
     <value>Ismeretlen</value>
   </data>
   <data name="OffLine" xml:space="preserve">
-    <value>Gép OFFLINE</value>
+    <value>Nem elérhető (OFFLINE) gépek</value>
   </data>
   <data name="OnLine" xml:space="preserve">
-    <value>Gép ONLINE</value>
+    <value>Elérhető (ONLINE) gépek</value>
   </data>
   <data name="Opt_BroadcastAddress" xml:space="preserve">
     <value>Üzenetszórási cím</value>
@@ -292,7 +292,7 @@
     <value>Szünet...</value>
   </data>
   <data name="Polling" xml:space="preserve">
-    <value>Szavazás {0}</value>
+    <value>{0} lekérdezése</value>
   </data>
   <data name="Properties" xml:space="preserve">
     <value>Tulajdonságok - {0}</value>
@@ -323,9 +323,6 @@
   </data>
   <data name="Skipping" xml:space="preserve">
     <value>Kihagyás...</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
   </data>
   <data name="Successful" xml:space="preserve">
     <value>Kész</value>

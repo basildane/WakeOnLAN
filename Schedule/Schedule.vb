@@ -25,6 +25,11 @@ Public Class Schedule
     Dim folder As ITaskFolder
 
     Private Sub Schedule_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.Location = My.Settings.schedulerWindowLocation
+        Me.Size = My.Settings.schedulerWindowSize
+
+        GetListViewState(ListViewSchedule, My.Settings.schedulerColumns)
+
         sc = New TaskScheduler.TaskScheduler
         sc.Connect()
 
@@ -46,6 +51,12 @@ Public Class Schedule
         End Try
 
         RefreshList()
+    End Sub
+
+    Private Sub Schedule_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        My.Settings.schedulerColumns = SaveListViewState(ListViewSchedule)
+        My.Settings.schedulerWindowLocation = Me.Location
+        My.Settings.schedulerWindowSize = Me.Size
     End Sub
 
     Private Sub RefreshList()
@@ -345,6 +356,7 @@ Public Class Schedule
 
     End Function
 
+#If False Then
     ' Adds an ACL entry on the specified file for the specified account.
     ' TODO: this only works with domain accounts
     '
@@ -406,8 +418,7 @@ Public Class Schedule
         End Try
 
     End Sub
-
-
+#End If
 
     Private Sub DisableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DisableToolStripMenuItem.Click, ToolStripButtonDisable.Click
         Dim task As IRegisteredTask

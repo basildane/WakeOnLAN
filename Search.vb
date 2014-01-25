@@ -29,6 +29,8 @@ Public Class Search
         ByVal DestIP As Int32, ByVal SrcIP As Int32, _
         ByVal pMacAddr As Byte(), ByRef PhyAddrLen As Integer) As Integer
 
+    Private Const none As String = "--none--"
+
     Private Structure Profile
         Public Name As String
         Public IPAddress As String
@@ -51,6 +53,10 @@ Public Class Search
             m.Netbios = l.SubItems(0).Text
             m.Emergency = True
             m.ShutdownCommand = ""
+            If (ComboBoxGroup.Text <> none) Then
+                m.Group = ComboBoxGroup.Text
+            End If
+
             Machines.Add(m)
         Next
 
@@ -182,8 +188,27 @@ Public Class Search
 #Region "DEMO"
 
     Private Sub Search_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim found As Boolean
+
         IpAddressControl_Start.Text = "192.168.0.1"
         IpAddressControl_End.Text = "192.168.0.20"
+
+        ComboBoxGroup.Items.Clear()
+        ComboBoxGroup.Items.Add(none)
+        For Each machine As Machine In Machines
+            If machine.Group.Length Then
+                found = False
+                For Each item As String In ComboBoxGroup.Items
+                    If item.ToString = machine.Group Then
+                        found = True
+                        Exit For
+                    End If
+                Next
+
+                If Not found Then ComboBoxGroup.Items.Add(machine.Group)
+            End If
+        Next
+        ComboBoxGroup.Text = none
 
 #If DEMO Then
         Dim i As ListViewItem

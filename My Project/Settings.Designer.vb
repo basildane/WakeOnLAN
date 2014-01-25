@@ -371,6 +371,66 @@ Namespace My
                 Me("shutdownAction") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property ShowFolders() As Boolean
+            Get
+                Return CType(Me("ShowFolders"),Boolean)
+            End Get
+            Set
+                Me("ShowFolders") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property ListView_Columns() As String
+            Get
+                Return CType(Me("ListView_Columns"),String)
+            End Get
+            Set
+                Me("ListView_Columns") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property schedulerColumns() As String
+            Get
+                Return CType(Me("schedulerColumns"),String)
+            End Get
+            Set
+                Me("schedulerColumns") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("877, 445")>  _
+        Public Property schedulerWindowSize() As Global.System.Drawing.Size
+            Get
+                Return CType(Me("schedulerWindowSize"),Global.System.Drawing.Size)
+            End Get
+            Set
+                Me("schedulerWindowSize") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0, 0")>  _
+        Public Property schedulerWindowLocation() As Global.System.Drawing.Point
+            Get
+                Return CType(Me("schedulerWindowLocation"),Global.System.Drawing.Point)
+            End Get
+            Set
+                Me("schedulerWindowLocation") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -50,4 +50,26 @@ Module Globals
 
     End Sub
 
+    Public Function SaveListViewState(ByVal listview As ListView) As String
+        Dim s As String = ""
+
+        For Each c As ColumnHeader In listview.Columns
+            s &= c.Width & " "
+        Next
+        Return s
+
+    End Function
+
+    Public Sub GetListViewState(ByVal listview As ListView, ByVal State As String)
+        Dim s() As String
+        Dim i As Int16
+
+        s = Split(State)
+        If (UBound(s) <> listview.Columns.Count) Then Exit Sub
+
+        For i = 0 To UBound(s) - 1
+            listview.Columns(i).Width = Int(s(i))
+        Next
+    End Sub
+
 End Module

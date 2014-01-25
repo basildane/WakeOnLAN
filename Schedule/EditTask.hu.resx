@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 13</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>DOMAIN\felhasználónév</value>
+  </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>59, 69</value>
   </data>
@@ -164,7 +170,7 @@
     <value>Általános</value>
   </data>
   <data name="ColumnHeader3.Text" xml:space="preserve">
-    <value>Előidéző</value>
+    <value>Feltétel</value>
   </data>
   <data name="ColumnHeader4.Text" xml:space="preserve">
     <value>Részletek</value>
@@ -185,7 +191,7 @@
     <value>A feltételek, amik kiváltják az eseményt.</value>
   </data>
   <data name="TabPage2.Text" xml:space="preserve">
-    <value>Előidézők</value>
+    <value>Vezérlők</value>
   </data>
   <data name="ActionDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>179, 332</value>
@@ -203,10 +209,10 @@
     <value>Új...</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>333, 13</value>
+    <value>317, 13</value>
   </data>
   <data name="Label6.Text" xml:space="preserve">
-    <value>Meghatározott művelet történik, amikor ez az esemény bekövetkezik.</value>
+    <value>Meghatározott művelet történik, amikor ez a feltétel bekövetkezik.</value>
   </data>
   <data name="ColumnHeader1.Text" xml:space="preserve">
     <value>Művelet</value>

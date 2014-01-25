@@ -58,7 +58,7 @@ Public Class Shutdown
             newItem.UseItemStyleForSubItems = False
 
             If String.Compare(m.Netbios, My.Computer.Name, True) Then
-                newItem.SubItems.Add(My.Resources.Strings.ShuttingDown)
+                newItem.SubItems.Add(My.Resources.Strings.lit_Ready)
                 ProgressBar1.Maximum += 1
             Else
                 newItem.SubItems.Add(My.Resources.Strings.Pausing)

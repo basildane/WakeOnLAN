@@ -34,10 +34,13 @@ Public Class Explorer
 
         Me.Text = My.Resources.Strings.Title
         ListView.View = My.Settings.ListView_View
+        GetListViewState(ListView, My.Settings.ListView_Columns)
+
         ShowGroupsToolStripMenuItem.Checked = My.Settings.ShowGroups
         SetMinimizeToTray()
 
         If Not My.Settings.ShowHotButtons Then ChangeHotButtonsPanel()
+        If Not My.Settings.ShowFolders Then ToggleFoldersVisible()
 
         ListView.ShowGroups = My.Settings.ShowGroups
         PingToolStripButton.Checked = My.Settings.Pinger
@@ -124,7 +127,7 @@ Public Class Explorer
         ToolStripStatusLabel2.Text = e.text
         If (e.status = AutoUpdateEventArgs.statusCodes.updateAvailable) Then
             NotifyIconUpdate.Visible = True
-            NotifyIconUpdate.ShowBalloonTip(0, "WakeOnLAN Update Available", e.text, ToolTipIcon.Info)
+            NotifyIconUpdate.ShowBalloonTip(0, "WakeOnLAN", e.text, ToolTipIcon.Info)
         End If
     End Sub
 
@@ -141,6 +144,7 @@ Public Class Explorer
 
     Private Sub Explorer_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         My.Settings.ListView_View = ListView.View
+        My.Settings.ListView_Columns = SaveListViewState(ListView)
 
         If Me.WindowState = FormWindowState.Normal Then
             My.Settings.MainWindow_Location = Me.Location
@@ -149,6 +153,7 @@ Public Class Explorer
 
         My.Settings.ShowGroups = ShowGroupsToolStripMenuItem.Checked
         My.Settings.ShowHotButtons = ShowHotButtonsToolStripMenuItem.Checked
+        My.Settings.ShowFolders = FoldersToolStripMenuItem.Checked
         My.Settings.Pinger = PingToolStripButton.Checked
         Machines.Save()
         Machines.Close()
@@ -302,11 +307,7 @@ Public Class Explorer
         Me.SplitContainer.Panel1Collapsed = Not FoldersToolStripMenuItem.Checked
     End Sub
 
-    Private Sub FoldersToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FoldersToolStripMenuItem.Click
-        ToggleFoldersVisible()
-    End Sub
-
-    Private Sub FoldersToolStripButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FoldersToolStripButton.Click
+    Private Sub FoldersToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FoldersToolStripMenuItem.Click, FoldersToolStripButton.Click
         ToggleFoldersVisible()
     End Sub
 
@@ -734,7 +735,7 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub ListenToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ListenToolStripMenuItem.Click
+    Private Sub ListenToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ListenToolStripMenuItem.Click, ListenerToolStripButton.Click
         My.Forms.Listener.Show()
     End Sub
 

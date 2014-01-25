@@ -23,6 +23,8 @@ Public NotInheritable Class SplashScreen
     End Sub
 
     Private Sub SplashScreen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If My.Settings.Language <> "" Then My.Application.ChangeUICulture(My.Settings.Language)
+
         ApplicationTitle.Text = My.Resources.Strings.Title
         Version.Text = System.String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
         Copyright.Text = My.Application.Info.Copyright

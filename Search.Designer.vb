@@ -29,8 +29,6 @@ Partial Class Search
         Me.ch_IP = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ch_MAC = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.IpAddressControl_End = New WakeOnLan.IPAddressControl()
-        Me.IpAddressControl_Start = New WakeOnLan.IPAddressControl()
         Me.Button_Cancel = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -45,6 +43,10 @@ Partial Class Search
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.OK_Button = New System.Windows.Forms.Button()
+        Me.ComboBoxGroup = New System.Windows.Forms.ComboBox()
+        Me.LabelAddToGroup = New System.Windows.Forms.Label()
+        Me.IpAddressControl_End = New WakeOnLan.IPAddressControl()
+        Me.IpAddressControl_Start = New WakeOnLan.IPAddressControl()
         Me.GroupBox1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -65,7 +67,6 @@ Partial Class Search
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.ShowGroups = False
-        Me.ToolTip1.SetToolTip(Me.ListView1, resources.GetString("ListView1.ToolTip"))
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
@@ -91,30 +92,15 @@ Partial Class Search
         '
         'GroupBox1
         '
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Controls.Add(Me.IpAddressControl_End)
         Me.GroupBox1.Controls.Add(Me.IpAddressControl_Start)
         Me.GroupBox1.Controls.Add(Me.Button_Cancel)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Button_Search)
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.GroupBox1, resources.GetString("GroupBox1.ToolTip"))
-        '
-        'IpAddressControl_End
-        '
-        resources.ApplyResources(Me.IpAddressControl_End, "IpAddressControl_End")
-        Me.IpAddressControl_End.BackColor = System.Drawing.SystemColors.Window
-        Me.IpAddressControl_End.Name = "IpAddressControl_End"
-        Me.ToolTip1.SetToolTip(Me.IpAddressControl_End, resources.GetString("IpAddressControl_End.ToolTip"))
-        '
-        'IpAddressControl_Start
-        '
-        resources.ApplyResources(Me.IpAddressControl_Start, "IpAddressControl_Start")
-        Me.IpAddressControl_Start.BackColor = System.Drawing.SystemColors.Window
-        Me.IpAddressControl_Start.Name = "IpAddressControl_Start"
-        Me.ToolTip1.SetToolTip(Me.IpAddressControl_Start, resources.GetString("IpAddressControl_Start.ToolTip"))
         '
         'Button_Cancel
         '
@@ -127,13 +113,11 @@ Partial Class Search
         '
         resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.ToolTip1.SetToolTip(Me.Label2, resources.GetString("Label2.ToolTip"))
         '
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.ToolTip1.SetToolTip(Me.Label1, resources.GetString("Label1.ToolTip"))
         '
         'BackgroundWorker1
         '
@@ -142,46 +126,42 @@ Partial Class Search
         '
         'StatusStrip1
         '
-        resources.ApplyResources(Me.StatusStrip1, "StatusStrip1")
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel_spacer, Me.ToolStripProgressBar1})
+        resources.ApplyResources(Me.StatusStrip1, "StatusStrip1")
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.SizingGrip = False
-        Me.ToolTip1.SetToolTip(Me.StatusStrip1, resources.GetString("StatusStrip1.ToolTip"))
         '
         'ToolStripStatusLabel1
         '
-        resources.ApplyResources(Me.ToolStripStatusLabel1, "ToolStripStatusLabel1")
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        resources.ApplyResources(Me.ToolStripStatusLabel1, "ToolStripStatusLabel1")
         '
         'ToolStripStatusLabel_spacer
         '
-        resources.ApplyResources(Me.ToolStripStatusLabel_spacer, "ToolStripStatusLabel_spacer")
         Me.ToolStripStatusLabel_spacer.Name = "ToolStripStatusLabel_spacer"
+        resources.ApplyResources(Me.ToolStripStatusLabel_spacer, "ToolStripStatusLabel_spacer")
         Me.ToolStripStatusLabel_spacer.Spring = True
         '
         'ToolStripProgressBar1
         '
-        resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
+        resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
         '
         'Label3
         '
         resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.ToolTip1.SetToolTip(Me.Label3, resources.GetString("Label3.ToolTip"))
         '
         'Button_CheckAll
         '
         resources.ApplyResources(Me.Button_CheckAll, "Button_CheckAll")
         Me.Button_CheckAll.Name = "Button_CheckAll"
-        Me.ToolTip1.SetToolTip(Me.Button_CheckAll, resources.GetString("Button_CheckAll.ToolTip"))
         Me.Button_CheckAll.UseVisualStyleBackColor = True
         '
         'Button_UnCheckAll
         '
         resources.ApplyResources(Me.Button_UnCheckAll, "Button_UnCheckAll")
         Me.Button_UnCheckAll.Name = "Button_UnCheckAll"
-        Me.ToolTip1.SetToolTip(Me.Button_UnCheckAll, resources.GetString("Button_UnCheckAll.ToolTip"))
         Me.Button_UnCheckAll.UseVisualStyleBackColor = True
         '
         'Cancel_Button
@@ -189,18 +169,43 @@ Partial Class Search
         resources.ApplyResources(Me.Cancel_Button, "Cancel_Button")
         Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Cancel_Button.Name = "Cancel_Button"
-        Me.ToolTip1.SetToolTip(Me.Cancel_Button, resources.GetString("Cancel_Button.ToolTip"))
         '
         'OK_Button
         '
         resources.ApplyResources(Me.OK_Button, "OK_Button")
         Me.OK_Button.Name = "OK_Button"
-        Me.ToolTip1.SetToolTip(Me.OK_Button, resources.GetString("OK_Button.ToolTip"))
+        '
+        'ComboBoxGroup
+        '
+        Me.ComboBoxGroup.FormattingEnabled = True
+        resources.ApplyResources(Me.ComboBoxGroup, "ComboBoxGroup")
+        Me.ComboBoxGroup.Name = "ComboBoxGroup"
+        '
+        'LabelAddToGroup
+        '
+        resources.ApplyResources(Me.LabelAddToGroup, "LabelAddToGroup")
+        Me.LabelAddToGroup.Name = "LabelAddToGroup"
+        '
+        'IpAddressControl_End
+        '
+        Me.IpAddressControl_End.BackColor = System.Drawing.SystemColors.Window
+        resources.ApplyResources(Me.IpAddressControl_End, "IpAddressControl_End")
+        Me.IpAddressControl_End.Name = "IpAddressControl_End"
+        Me.ToolTip1.SetToolTip(Me.IpAddressControl_End, resources.GetString("IpAddressControl_End.ToolTip"))
+        '
+        'IpAddressControl_Start
+        '
+        Me.IpAddressControl_Start.BackColor = System.Drawing.SystemColors.Window
+        resources.ApplyResources(Me.IpAddressControl_Start, "IpAddressControl_Start")
+        Me.IpAddressControl_Start.Name = "IpAddressControl_Start"
+        Me.ToolTip1.SetToolTip(Me.IpAddressControl_Start, resources.GetString("IpAddressControl_Start.ToolTip"))
         '
         'Search
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.LabelAddToGroup)
+        Me.Controls.Add(Me.ComboBoxGroup)
         Me.Controls.Add(Me.Cancel_Button)
         Me.Controls.Add(Me.OK_Button)
         Me.Controls.Add(Me.Button_UnCheckAll)
@@ -214,7 +219,6 @@ Partial Class Search
         Me.MinimizeBox = False
         Me.Name = "Search"
         Me.ShowInTaskbar = False
-        Me.ToolTip1.SetToolTip(Me, resources.GetString("$this.ToolTip"))
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
@@ -247,5 +251,7 @@ Partial Class Search
     Friend WithEvents IpAddressControl_Start As WakeOnLan.IPAddressControl
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
     Friend WithEvents OK_Button As System.Windows.Forms.Button
+    Friend WithEvents ComboBoxGroup As System.Windows.Forms.ComboBox
+    Friend WithEvents LabelAddToGroup As System.Windows.Forms.Label
 
 End Class

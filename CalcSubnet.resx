@@ -118,10 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="&gt;&gt;IpIP.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.8.1.3, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.9.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lIP.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>284, 277</value>
   </data>
   <data name="&gt;&gt;lHeader.Name" xml:space="preserve">
     <value>lHeader</value>
@@ -132,9 +136,6 @@
   </data>
   <data name="lIP.Text" xml:space="preserve">
     <value>IP Address</value>
-  </data>
-  <data name="&gt;&gt;IpSubnet.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;lRecommended.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -148,10 +149,6 @@
   <data name="&gt;&gt;IpIP.Name" xml:space="preserve">
     <value>IpIP</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="IpIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 64</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CalcSubnet</value>
   </data>
@@ -160,9 +157,6 @@
   </data>
   <data name="bCalculate.Text" xml:space="preserve">
     <value>Calculate</value>
-  </data>
-  <data name="&gt;&gt;lSubnet.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="lIP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -181,6 +175,9 @@
   </data>
   <data name="&gt;&gt;lHeader.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="lSubnet.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="lHeader.Text" xml:space="preserve">
     <value>This function is used to help you find the "Broadcast Address" to use, based on the IP Address and Subnet.</value>
@@ -233,29 +230,29 @@
   <data name="lHeader.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;IpIP.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="&gt;&gt;IpSubnet.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.8.1.3, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.9.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;bOK.Name" xml:space="preserve">
     <value>bOK</value>
   </data>
-  <data name="&gt;&gt;IpIP.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="IpIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 64</value>
   </data>
   <data name="&gt;&gt;lSubnet.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="lSubnet.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;IpIP.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;bCalculate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IpBroadcast.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.8.1.3, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="lRecommended.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -274,6 +271,9 @@
   </data>
   <data name="&gt;&gt;lIP.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="IpBroadcast.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="lIP.Location" type="System.Drawing.Point, System.Drawing">
     <value>52, 70</value>
@@ -332,20 +332,20 @@
   <data name="&gt;&gt;lRecommended.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>284, 277</value>
+  <data name="&gt;&gt;IpBroadcast.Type" xml:space="preserve">
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.9.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lRecommended.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lSubnet.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lHeader.Size" type="System.Drawing.Size, System.Drawing">
     <value>260, 57</value>
   </data>
-  <data name="IpBroadcast.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;IpSubnet.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lSubnet.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

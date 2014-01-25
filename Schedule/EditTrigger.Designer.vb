@@ -261,8 +261,8 @@ Partial Class EditTrigger
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
         Me.Controls.Add(Me.GroupBoxAdvanced)
-        Me.Controls.Add(Me.GroupBoxSettings)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.GroupBoxSettings)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False

@@ -122,7 +122,7 @@
     <value>109, 23</value>
   </data>
   <data name="Button_Search.Text" xml:space="preserve">
-    <value>Keresés kezdete</value>
+    <value>Keresés indítása</value>
   </data>
   <data name="Button_Search.ToolTip" xml:space="preserve">
     <value>Gépkeresés indítása</value>
@@ -142,9 +142,6 @@
   <data name="ch_MAC.Text" xml:space="preserve">
     <value>MAC cím</value>
   </data>
-  <data name="ListView1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Button_Cancel.Text" xml:space="preserve">
     <value>Mégsem</value>
   </data>
@@ -157,26 +154,14 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>Záró IP cím</value>
   </data>
-  <data name="Label2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 13</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Kezdő IP cím</value>
   </data>
-  <data name="Label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="GroupBox1.Text" xml:space="preserve">
     <value>Gép keresése</value>
-  </data>
-  <data name="GroupBox1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="StatusStrip1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>651, 475</value>
@@ -185,19 +170,13 @@
     <value>175, 61</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>A választani kívánt számítógép elé tegyen pipát, és amikor Rendbenre kattint, hozzáadódik az adatbázishoz.</value>
-  </data>
-  <data name="Label3.ToolTip" xml:space="preserve">
-    <value />
+    <value>A választani kívánt számítógép elé tegyen pipát, a Rendben -re kattintáskor, hozzáadódik az adatbázishoz.</value>
   </data>
   <data name="Button_CheckAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 23</value>
   </data>
   <data name="Button_CheckAll.Text" xml:space="preserve">
-    <value>Mindent bejelöl</value>
-  </data>
-  <data name="Button_CheckAll.ToolTip" xml:space="preserve">
-    <value />
+    <value>Mindent kijelöl</value>
   </data>
   <data name="Button_UnCheckAll.Location" type="System.Drawing.Point, System.Drawing">
     <value>456, 527</value>
@@ -206,27 +185,15 @@
     <value>131, 23</value>
   </data>
   <data name="Button_UnCheckAll.Text" xml:space="preserve">
-    <value>Minden bejelölés törlése</value>
-  </data>
-  <data name="Button_UnCheckAll.ToolTip" xml:space="preserve">
-    <value />
+    <value>Minden kijelölés törlése</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Mégsem</value>
   </data>
-  <data name="Cancel_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>Rendben</value>
   </data>
-  <data name="OK_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Gép keresése</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>
