@@ -340,6 +340,8 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
+		<row><td>AutoUpdater.NET.Localized_resources</td><td>{8B4B293E-7728-4863-9D46-CD3B51DF448A}</td><td>INSTALLDIR</td><td>2</td><td/><td>autoupdater.net.localized_re</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>AutoUpdater.NET.Primary_output</td><td>{F5D5A319-4DB7-4846-B514-139D64F4116A}</td><td>INSTALLDIR</td><td>2</td><td/><td>autoupdater.net.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_LocalTag</td><td>{F6DC2A6C-9772-4B35-851A-DCFA53571CBC}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_SystemTag</td><td>{0F40450E-7749-4447-96C9-FEF67F29FCCC}</td><td>CommonAppDataFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{965F1520-5FA6-4225-A683-276F1351F488}</td><td>HELP</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1903,6 +1905,8 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>AlwaysInstall</td><td>AutoUpdater.NET.Localized_resources</td></row>
+		<row><td>AlwaysInstall</td><td>AutoUpdater.NET.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>ISO19770_LocalTag</td></row>
 		<row><td>AlwaysInstall</td><td>ISO19770_SystemTag</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
@@ -1944,6 +1948,8 @@
 		<row><td>action.png</td><td>ISX_DEFAULTCOMPONENT10</td><td>action.PNG</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\action.PNG</td><td>1</td><td/></row>
 		<row><td>aquilatech.png</td><td>ISX_DEFAULTCOMPONENT5</td><td>AQUILA~1.PNG|aquilatech.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\aquilatech.png</td><td>1</td><td/></row>
 		<row><td>autostart.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>AUTOST~1.PNG|autostart.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\autostart.png</td><td>1</td><td/></row>
+		<row><td>autoupdater.net.localized_re</td><td>AutoUpdater.NET.Localized_resources</td><td>AutoUpdater.NET.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;AutoUpdater.NET&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
+		<row><td>autoupdater.net.primary_outp</td><td>AutoUpdater.NET.Primary_output</td><td>AutoUpdater.NET.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;AutoUpdater.NET&gt;|Built</td><td>3</td><td/></row>
 		<row><td>basildane.jpg</td><td>ISX_DEFAULTCOMPONENT3</td><td>BASILD~1.JPG|basildane.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\basildane.jpg</td><td>1</td><td/></row>
 		<row><td>bubble.png</td><td>ISX_DEFAULTCOMPONENT7</td><td>bubble.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\bubble.png</td><td>1</td><td/></row>
 		<row><td>calculate.png</td><td>ISX_DEFAULTCOMPONENT9</td><td>CALCUL~1.PNG|calculate.PNG</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\calculate.PNG</td><td>1</td><td/></row>
@@ -2138,6 +2144,8 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
+		<row><td>AutoUpdater.NET.Localized_resources</td><td/><td/><td>_BE01046B_2046_4E1B_BB95_6B1AA1207FB2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>AutoUpdater.NET.Primary_output</td><td/><td/><td>_C47FC830_CA39_42D6_B247_3B97C1BA26AA_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISO19770_LocalTag</td><td/><td/><td>_051A274E_72F7_42A5_93D3_C27FD60F74DD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISO19770_SystemTag</td><td/><td/><td>_9E071FAC_6EB8_4691_8A97_9D0973573218_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_FA5D1C90_3D1C_4070_B659_851BEB9AC511_FILTER</td><td/><td/><td/><td/></row>
@@ -2462,6 +2470,7 @@
 		<col def="S255">Value</col>
 		<col def="S255">TestValue</col>
 		<col def="i4">Type</col>
+		<row><td>AutoUpdater.NET</td><td>..\AutoUpdater\AutoUpdater.NET\AutoUpdater.NET.csproj</td><td/><td>2</td></row>
 		<row><td>CommonFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>Help</td><td>Help\Help.csproj</td><td/><td>2</td></row>
 		<row><td>ISPROJECTDIR</td><td/><td/><td>1</td></row>
@@ -4541,9 +4550,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{A0BCFD53-B397-4AB9-907B-C33E5A55B70B}</td><td/></row>
+		<row><td>ProductCode</td><td>{63262BB3-185A-4C1A-AD76-337BE94D5847}</td><td/></row>
 		<row><td>ProductName</td><td>WakeOnLAN</td><td/></row>
-		<row><td>ProductVersion</td><td>2.10.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>2.10.0001</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
