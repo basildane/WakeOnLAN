@@ -116,10 +116,13 @@ Public Class ShutdownThread
         process = New ManagementClass("Win32_Process")
         path = New ManagementPath(String.Format("{0}\root\cimv2", sMachine))
 
-        'options.Username = ""
-        'options.Password = ""
-        'process.Scope = New ManagementScope(mp1, co1)
+#If False Then
+        options.Username = ""
+        options.Password = ""
+        process.Scope = New ManagementScope(path, options)
+#Else
         process.Scope = New ManagementScope(path)
+#End If
         process.Scope.Connect()
 
         inparams = process.GetMethodParameters("Create")

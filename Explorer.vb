@@ -348,6 +348,8 @@ Public Class Explorer
 
         'Finally, set the view requested
         ListView.View = View
+
+        'ListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
     End Sub
 
     Private Sub ListToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListToolStripMenuItem1.Click

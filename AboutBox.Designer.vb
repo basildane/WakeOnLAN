@@ -57,8 +57,8 @@ Partial Class AboutBox
         '
         'TextBoxDescription
         '
-        resources.ApplyResources(Me.TextBoxDescription, "TextBoxDescription")
         Me.TextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None
+        resources.ApplyResources(Me.TextBoxDescription, "TextBoxDescription")
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.TabStop = False
@@ -87,11 +87,11 @@ Partial Class AboutBox
         '
         'Panel1
         '
-        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
         Me.Panel1.Controls.Add(Me.LogoPictureBox)
         Me.Panel1.Controls.Add(Me.LabelProductName)
         Me.Panel1.Controls.Add(Me.LabelCopyright)
+        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
         'label4
@@ -122,8 +122,8 @@ Partial Class AboutBox
         '
         'pbUpdate
         '
-        resources.ApplyResources(Me.pbUpdate, "pbUpdate")
         Me.pbUpdate.Image = Global.WakeOnLan.My.Resources.Resources.system_software_update
+        resources.ApplyResources(Me.pbUpdate, "pbUpdate")
         Me.pbUpdate.Name = "pbUpdate"
         Me.pbUpdate.TabStop = False
         '

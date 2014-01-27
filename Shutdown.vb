@@ -189,7 +189,7 @@ Public Class Shutdown
 
         Label_Operation.Text = My.Resources.Strings.BeginShutdown
         For Each item As ListViewItem In ListView1.Items
-            If item.SubItems(1).Text = My.Resources.Strings.ShuttingDown Then
+            If (item.SubItems(1).Text = My.Resources.Strings.lit_Ready) Then
                 Dim st As New ShutdownThread(item, ProgressBar1, action, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
             End If
         Next

@@ -29,8 +29,6 @@ Public Class Search
         ByVal DestIP As Int32, ByVal SrcIP As Int32, _
         ByVal pMacAddr As Byte(), ByRef PhyAddrLen As Integer) As Integer
 
-    Private Const none As String = "--none--"
-
     Private Structure Profile
         Public Name As String
         Public IPAddress As String
@@ -39,6 +37,8 @@ Public Class Search
         Public MacAddress As String
         Public HasError As Boolean
     End Structure
+
+    Private none As String = "--" & My.Resources.Strings.lit_None & "--"
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         Dim m As Machine
