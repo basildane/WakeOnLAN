@@ -74,19 +74,6 @@ Public Class Explorer
         SetView(ListView.View)
         Machines.Load()
 
-#If Testing Then
-
-        Dim m As Machine
-        For i As Int16 = 1 To 100
-            m = New Machine
-            m.Name = "Test-" & i
-            m.IP = "192.168.1." & i
-            m.Netbios = m.Name
-            Machines.Add(m)
-        Next
-
-#End If
-
         Machines.dirty = False
         LoadTree()
         Me.ListView.ListViewItemSorter = New ListViewItemComparer(My.Settings.SortColumn)
