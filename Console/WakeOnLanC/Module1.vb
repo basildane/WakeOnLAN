@@ -52,6 +52,7 @@ Module Module1
     Dim Mode As _modeTypes = _modeTypes.none
     Dim Result As Integer = ErrorCodes.OK
     Dim sPath As String = ""
+    Dim sInterface As String = ""
 
     Function Main() As Integer
 
@@ -102,6 +103,14 @@ Module Module1
                     End If
                     i += 1
                     sMAC = My.Application.CommandLineArgs.Item(i)
+
+                Case "-if"
+                    If i = My.Application.CommandLineArgs.Count - 1 Then
+                        BadCommand()
+                        Return ErrorCodes.InvalidCommand
+                    End If
+                    i += 1
+                    sInterface = My.Application.CommandLineArgs.Item(i)
 
                 Case "-all"
                     all = True
@@ -196,6 +205,7 @@ Module Module1
         Console.WriteLine("-l   (listen for WOL packets)")
         Console.WriteLine("-e   (enumerate machine list)")
         Console.WriteLine("-p   (path to machines.xml (optional))")
+        Console.WriteLine("-if  (select Interface (example -if 192.168.0.20) (optional))")
         Console.WriteLine("-d   (debug) requires -m")
         Console.WriteLine("-h   (display this help message)")
         Console.WriteLine()
@@ -251,7 +261,7 @@ Module Module1
                     Console.WriteLine("Cannot find MAC address for " & m.Name)
                 Else
                     Console.WriteLine("waking up mac: " & m.MAC)
-                    WakeUp(m)
+                    WakeUp(m, sInterface)
                 End If
             Next
             Return Result
@@ -275,12 +285,12 @@ Module Module1
             End If
             Console.WriteLine("wakeup sent to " & sMachine)
             Console.WriteLine("waking up mac: " & m.MAC)
-            WakeUp(m)
+            WakeUp(m, sInterface)
             Return ErrorCodes.OK
 
         ElseIf sMAC.Length Then
             Console.WriteLine("waking up mac: " & sMAC)
-            WakeUp(sMAC)
+            WakeUp(sMAC, sInterface)
             Return ErrorCodes.OK
 
         Else
