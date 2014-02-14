@@ -16,15 +16,10 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
-Imports System.Net.Sockets
-Imports System.Net
+Imports WOL.AquilaWOLLibrary
 
 Module Wake
     Public Sub WakeUp(ByVal machine As Machine)
-        Dim client As New UdpClient
-        Dim packet(17 * 6 - 1) As Byte
-        Dim i, j As Integer
-        Dim m As Byte()
         Dim host As String
 
         Try
@@ -33,7 +28,6 @@ Module Wake
                 Return
             End If
 
-            m = GetMAC(machine.MAC)
             If (machine.Method = 0) Then
                 host = machine.Broadcast
             Else
@@ -41,27 +35,7 @@ Module Wake
             End If
 
             Debug.WriteLine(String.Format("WakeUp: [{0}] [{1}] / [{2}] port: {3} TTL: {4}", machine.Name, machine.MAC, host, machine.UDPPort, machine.TTL))
-            client.Connect(host, machine.UDPPort)
-            client.EnableBroadcast = True
-            client.Ttl = machine.TTL
-
-            ' WOL packet contains a 6-bytes header and 16 times a 6-bytes sequence containing the MAC address.
-            ' packet =  byte(17 * 6)
-            ' Header of 0xFF 6 times.
-
-            For i = 0 To 5
-                packet(i) = &HFF
-            Next
-
-            ' Body of magic packet contains the MAC address repeated 16 times.
-
-            For i = 1 To 16
-                For j = 0 To 5
-                    packet(i * 6 + j) = m(j)
-                Next
-            Next
-
-            client.Send(packet, packet.Length)
+            WOL.AquilaWOLLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -69,20 +43,5 @@ Module Wake
         End Try
 
     End Sub
-
-    Private Function GetMAC(ByVal Mac As String) As Byte()
-        Dim i As Integer
-        Dim m(5) As Byte
-        Dim s As String
-
-        s = Replace(Mac, " ", "")
-        s = Replace(s, ":", "")
-        s = Replace(s, "-", "")
-
-        For i = 0 To 5
-            m(i) = "&H" & Mid(s, (i * 2) + 1, 2)
-        Next
-        Return m
-    End Function
 
 End Module

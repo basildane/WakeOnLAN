@@ -624,6 +624,9 @@
     <EmbeddedResource Include="CalcSubnet.fi.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalcSubnet.fr.resx">
+      <DependentUpon>CalcSubnet.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalcSubnet.hu.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
@@ -643,6 +646,9 @@
       <DependentUpon>License.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listener.fi.resx">
+      <DependentUpon>Listener.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listener.fr.resx">
       <DependentUpon>Listener.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listener.hu.resx">
@@ -1065,6 +1071,10 @@
     <ProjectReference Include="..\AutoUpdater\AutoUpdater.NET\AutoUpdater.NET.csproj">
       <Project>{fb9e7e6b-b19f-4f37-a708-2996190cef13}</Project>
       <Name>AutoUpdater.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="WOL\WOL.vbproj">
+      <Project>{e0c53654-1da8-4ab6-9b88-337a4cc4734e}</Project>
+      <Name>WOL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
