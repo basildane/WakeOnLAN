@@ -349,7 +349,7 @@ End Class
                         Status = StatusCodes.Online
                         ' return ip4 address if possible
                         If IP = "" Then
-                            For Each IPA As IPAddress In Dns.GetHostAddresses(Name)
+                            For Each IPA As IPAddress In Dns.GetHostAddresses(Netbios)
                                 If IPA.AddressFamily.ToString() = "InterNetwork" Then
                                     RaiseEvent StatusChange(Name, Status, IPA.ToString)
                                     Exit Sub
