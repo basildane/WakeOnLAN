@@ -14,7 +14,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("Aquila Technology")> 
 <Assembly: AssemblyProduct("WakeOnLan")> 
-<Assembly: AssemblyCopyright("(c) 2004 - 2014, Aquila Technology, LLC.")> 
+<Assembly: AssemblyCopyright("(c) 2004 - 2014, Aquila Technology")> 
 <Assembly: AssemblyTrademark("All rights reserved.")> 
 
 <Assembly: ComVisible(False)> 
@@ -33,7 +33,7 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("2.10.2.0")> 
-<Assembly: AssemblyFileVersion("2.10.2.0")> 
+<Assembly: AssemblyVersion("2.10.3.1")> 
+<Assembly: AssemblyFileVersion("2.10.3.1")> 
 
 <Assembly: NeutralResourcesLanguageAttribute("en-US")> 
