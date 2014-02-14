@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,147 +59,147 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 116</value>
-  </data>
-  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 13</value>
-  </data>
-  <data name="lbSendTo.Text" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
+		<value>2, 116</value>
+	</data>
+	<data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
+		<value>110, 13</value>
+	</data>
+	<data name="lbSendTo.Text" xml:space="preserve">
     <value>Отправить WOL для</value>
   </data>
-  <data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 114</value>
-  </data>
-  <data name="rbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 114</value>
-  </data>
-  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
-  </data>
-  <data name="rbIP.Text" xml:space="preserve">
+	<data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
+		<value>226, 114</value>
+	</data>
+	<data name="rbIP.Location" type="System.Drawing.Point, System.Drawing">
+		<value>118, 114</value>
+	</data>
+	<data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
+		<value>97, 17</value>
+	</data>
+	<data name="rbIP.Text" xml:space="preserve">
     <value>трансляция IP</value>
   </data>
-  <data name="lbLeaveBlank.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 87</value>
-  </data>
-  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 13</value>
-  </data>
-  <data name="lbLeaveBlank.Text" xml:space="preserve">
+	<data name="lbLeaveBlank.Location" type="System.Drawing.Point, System.Drawing">
+		<value>255, 87</value>
+	</data>
+	<data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
+		<value>157, 13</value>
+	</data>
+	<data name="lbLeaveBlank.Text" xml:space="preserve">
     <value>* Оставьте пустым для DHCP</value>
   </data>
-  <data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 368</value>
-  </data>
-  <data name="UDPPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 341</value>
-  </data>
-  <data name="bCalcBroadcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 137</value>
-  </data>
-  <data name="Broadcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 138</value>
-  </data>
-  <data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 142</value>
-  </data>
-  <data name="IP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 84</value>
-  </data>
-  <data name="MachineName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 26</value>
-  </data>
-  <data name="MAC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 58</value>
-  </data>
-  <data name="Group.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 195</value>
-  </data>
-  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 198</value>
-  </data>
-  <data name="Edit_NETBIOS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 168</value>
-  </data>
-  <data name="TextBox_Command.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 269</value>
-  </data>
-  <data name="lbShutdownCommand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 253</value>
-  </data>
-  <data name="CheckBox_Emergency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 226</value>
-  </data>
-  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 171</value>
-  </data>
-  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 33</value>
-  </data>
-  <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 61</value>
-  </data>
-  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 87</value>
-  </data>
+	<data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
+		<value>118, 368</value>
+	</data>
+	<data name="UDPPort.Location" type="System.Drawing.Point, System.Drawing">
+		<value>118, 341</value>
+	</data>
+	<data name="bCalcBroadcast.Location" type="System.Drawing.Point, System.Drawing">
+		<value>268, 137</value>
+	</data>
+	<data name="Broadcast.Location" type="System.Drawing.Point, System.Drawing">
+		<value>119, 138</value>
+	</data>
+	<data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
+		<value>54, 142</value>
+	</data>
+	<data name="IP.Location" type="System.Drawing.Point, System.Drawing">
+		<value>120, 84</value>
+	</data>
+	<data name="MachineName.Location" type="System.Drawing.Point, System.Drawing">
+		<value>119, 26</value>
+	</data>
+	<data name="MAC.Location" type="System.Drawing.Point, System.Drawing">
+		<value>119, 58</value>
+	</data>
+	<data name="Group.Location" type="System.Drawing.Point, System.Drawing">
+		<value>120, 195</value>
+	</data>
+	<data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
+		<value>16, 198</value>
+	</data>
+	<data name="Edit_NETBIOS.Location" type="System.Drawing.Point, System.Drawing">
+		<value>120, 168</value>
+	</data>
+	<data name="TextBox_Command.Location" type="System.Drawing.Point, System.Drawing">
+		<value>120, 269</value>
+	</data>
+	<data name="lbShutdownCommand.Location" type="System.Drawing.Point, System.Drawing">
+		<value>118, 253</value>
+	</data>
+	<data name="CheckBox_Emergency.Location" type="System.Drawing.Point, System.Drawing">
+		<value>121, 226</value>
+	</data>
+	<data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
+		<value>40, 171</value>
+	</data>
+	<data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
+		<value>80, 33</value>
+	</data>
+	<data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
+		<value>46, 61</value>
+	</data>
+	<data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
+		<value>59, 87</value>
+	</data>
 </root>

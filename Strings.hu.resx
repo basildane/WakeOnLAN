@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,281 +59,281 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="AbortFailed" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="AbortFailed" xml:space="preserve">
     <value>{0} gép leszakadt. Hiba: {1}</value>
   </data>
-  <data name="Aborting" xml:space="preserve">
+	<data name="Aborting" xml:space="preserve">
     <value>Megszakítás...</value>
   </data>
-  <data name="AbortingShutdown" xml:space="preserve">
+	<data name="AbortingShutdown" xml:space="preserve">
     <value>Megszakítási parancs ezen: {0}</value>
   </data>
-  <data name="AbortShutdown" xml:space="preserve">
+	<data name="AbortShutdown" xml:space="preserve">
     <value>Leállítás megszakítása folyamatban...</value>
   </data>
-  <data name="AbortSuccess" xml:space="preserve">
+	<data name="AbortSuccess" xml:space="preserve">
     <value>Megszakítás {0} kész</value>
   </data>
-  <data name="actions_email" xml:space="preserve">
+	<data name="actions_email" xml:space="preserve">
     <value>Email küldése</value>
   </data>
-  <data name="actions_hibernate" xml:space="preserve">
+	<data name="actions_hibernate" xml:space="preserve">
     <value>Gép hibernálása</value>
   </data>
-  <data name="actions_hibernateAll" xml:space="preserve">
+	<data name="actions_hibernateAll" xml:space="preserve">
     <value>Minden gép hibernálása</value>
   </data>
-  <data name="actions_popup" xml:space="preserve">
+	<data name="actions_popup" xml:space="preserve">
     <value>Üzenet küldése</value>
   </data>
-  <data name="actions_shutdown" xml:space="preserve">
+	<data name="actions_shutdown" xml:space="preserve">
     <value>Gép leállítása</value>
   </data>
-  <data name="actions_shutdownAll" xml:space="preserve">
+	<data name="actions_shutdownAll" xml:space="preserve">
     <value>Minden gép leállítása</value>
   </data>
-  <data name="actions_sleep" xml:space="preserve">
+	<data name="actions_sleep" xml:space="preserve">
     <value>Gép altatása</value>
   </data>
-  <data name="actions_sleepAll" xml:space="preserve">
+	<data name="actions_sleepAll" xml:space="preserve">
     <value>Minden gép altatása</value>
   </data>
-  <data name="actions_start" xml:space="preserve">
+	<data name="actions_start" xml:space="preserve">
     <value>Gép indítása</value>
   </data>
-  <data name="actions_startAll" xml:space="preserve">
+	<data name="actions_startAll" xml:space="preserve">
     <value>Minden gép indítása</value>
   </data>
-  <data name="AllMachines" xml:space="preserve">
+	<data name="AllMachines" xml:space="preserve">
     <value>Minden gép</value>
   </data>
-  <data name="AreYouSure" xml:space="preserve">
+	<data name="AreYouSure" xml:space="preserve">
     <value>Valóban szeretné?</value>
   </data>
-  <data name="BeginShutdown" xml:space="preserve">
+	<data name="BeginShutdown" xml:space="preserve">
     <value>Kikapcsolás indítása...</value>
   </data>
-  <data name="ChangesLost" xml:space="preserve">
+	<data name="ChangesLost" xml:space="preserve">
     <value>A változások elvesztek.</value>
   </data>
-  <data name="ChangesNotSaved" xml:space="preserve">
+	<data name="ChangesNotSaved" xml:space="preserve">
     <value>Változások elmentve</value>
   </data>
-  <data name="DefaultEmergency" xml:space="preserve">
+	<data name="DefaultEmergency" xml:space="preserve">
     <value>Vészleállítás!</value>
   </data>
-  <data name="DefaultMessage" xml:space="preserve">
+	<data name="DefaultMessage" xml:space="preserve">
     <value>A rendszer leáll!</value>
   </data>
-  <data name="Delete" xml:space="preserve">
+	<data name="Delete" xml:space="preserve">
     <value>Töröljük a(z) {0} rekordot?</value>
   </data>
-  <data name="Done" xml:space="preserve">
+	<data name="Done" xml:space="preserve">
     <value>Kész</value>
   </data>
-  <data name="EmergencyShutdown" xml:space="preserve">
+	<data name="EmergencyShutdown" xml:space="preserve">
     <value>Vészleállítás elindult</value>
   </data>
-  <data name="ErrorInvalidIP" xml:space="preserve">
+	<data name="ErrorInvalidIP" xml:space="preserve">
     <value>Érvénytelen IP cím.  Használja így: ###.###.###.###</value>
   </data>
-  <data name="ErrorInvalidMAC" xml:space="preserve">
+	<data name="ErrorInvalidMAC" xml:space="preserve">
     <value>Érvénytelen MAC cím.  használja így: ##:##:##:##:##:##</value>
   </data>
-  <data name="ErrorInvalidName" xml:space="preserve">
+	<data name="ErrorInvalidName" xml:space="preserve">
     <value>Érvénytelen gépnév</value>
   </data>
-  <data name="ErrorMsg" xml:space="preserve">
+	<data name="ErrorMsg" xml:space="preserve">
     <value>Hiba: {0}</value>
   </data>
-  <data name="ExportedTo" xml:space="preserve">
+	<data name="ExportedTo" xml:space="preserve">
     <value>Beállítások exportálva ide: [{0}]</value>
   </data>
-  <data name="HostNotResponding" xml:space="preserve">
+	<data name="HostNotResponding" xml:space="preserve">
     <value>{0} gép nem válaszol</value>
   </data>
-  <data name="ImmediateReboot" xml:space="preserve">
+	<data name="ImmediateReboot" xml:space="preserve">
     <value>AZONNAL akarja újraindítani EZT a számítógépet?</value>
   </data>
-  <data name="ImmediateShutdown" xml:space="preserve">
+	<data name="ImmediateShutdown" xml:space="preserve">
     <value>AZONNAL le akarja állítanii EZT a számítógépet?</value>
   </data>
-  <data name="ImportedFrom" xml:space="preserve">
+	<data name="ImportedFrom" xml:space="preserve">
     <value>Beállítások importálva lettek innen: {0}</value>
   </data>
-  <data name="isNew" xml:space="preserve">
+	<data name="isNew" xml:space="preserve">
     <value>Új</value>
   </data>
-  <data name="lit_at" xml:space="preserve">
+	<data name="lit_at" xml:space="preserve">
     <value>{0}-ként {1} alkalommal</value>
   </data>
-  <data name="lit_atDays" xml:space="preserve">
+	<data name="lit_atDays" xml:space="preserve">
     <value>{0}-ként minden {1} nap</value>
   </data>
-  <data name="lit_atWeeks" xml:space="preserve">
+	<data name="lit_atWeeks" xml:space="preserve">
     <value>{0}-ként minden {1} minden {2} héten, {3} indulás</value>
   </data>
-  <data name="lit_Disabled" xml:space="preserve">
+	<data name="lit_Disabled" xml:space="preserve">
     <value>Tiltva</value>
   </data>
-  <data name="lit_Enabled" xml:space="preserve">
+	<data name="lit_Enabled" xml:space="preserve">
     <value>Engedélyezés</value>
   </data>
-  <data name="lit_Error" xml:space="preserve">
+	<data name="lit_Error" xml:space="preserve">
     <value>Hiba</value>
   </data>
-  <data name="lit_false" xml:space="preserve">
+	<data name="lit_false" xml:space="preserve">
     <value>HAMIS</value>
   </data>
-  <data name="lit_Invalid" xml:space="preserve">
+	<data name="lit_Invalid" xml:space="preserve">
     <value>Érvénytelen parancssor</value>
   </data>
-  <data name="lit_multipleTriggers" xml:space="preserve">
+	<data name="lit_multipleTriggers" xml:space="preserve">
     <value>Többszöri vezérlés megadása</value>
   </data>
-  <data name="lit_Never" xml:space="preserve">
+	<data name="lit_Never" xml:space="preserve">
     <value>Soha</value>
   </data>
-  <data name="lit_None" xml:space="preserve">
+	<data name="lit_None" xml:space="preserve">
     <value>Nincs</value>
   </data>
-  <data name="lit_noRights" xml:space="preserve">
+	<data name="lit_noRights" xml:space="preserve">
     <value>{0} úgy tűnik nincs olvasási hozzáférés a WOL Ütemezeő adatbázisához. Tulajdonba vegyük?</value>
   </data>
-  <data name="lit_notFound" xml:space="preserve">
+	<data name="lit_notFound" xml:space="preserve">
     <value>Gép nem található</value>
   </data>
-  <data name="lit_Queued" xml:space="preserve">
+	<data name="lit_Queued" xml:space="preserve">
     <value>Lekérve</value>
   </data>
-  <data name="lit_Ready" xml:space="preserve">
+	<data name="lit_Ready" xml:space="preserve">
     <value>Kész</value>
   </data>
-  <data name="lit_Running" xml:space="preserve">
+	<data name="lit_Running" xml:space="preserve">
     <value>Fut</value>
   </data>
-  <data name="lit_true" xml:space="preserve">
+	<data name="lit_true" xml:space="preserve">
     <value>IGAZ</value>
   </data>
-  <data name="lit_Unknown" xml:space="preserve">
+	<data name="lit_Unknown" xml:space="preserve">
     <value>Ismeretlen</value>
   </data>
-  <data name="OffLine" xml:space="preserve">
+	<data name="OffLine" xml:space="preserve">
     <value>Nem elérhető (OFFLINE) gépek</value>
   </data>
-  <data name="OnLine" xml:space="preserve">
+	<data name="OnLine" xml:space="preserve">
     <value>Elérhető (ONLINE) gépek</value>
   </data>
-  <data name="Opt_BroadcastAddress" xml:space="preserve">
+	<data name="Opt_BroadcastAddress" xml:space="preserve">
     <value>Üzenetszórási cím</value>
   </data>
-  <data name="Opt_BroadcastDesc" xml:space="preserve">
+	<data name="Opt_BroadcastDesc" xml:space="preserve">
     <value>Adjon meg üzenetszórási címet a WOL üzenetekszórási csomagoknak.</value>
   </data>
-  <data name="Pausing" xml:space="preserve">
+	<data name="Pausing" xml:space="preserve">
     <value>Szünet...</value>
   </data>
-  <data name="Polling" xml:space="preserve">
+	<data name="Polling" xml:space="preserve">
     <value>{0} lekérdezése</value>
   </data>
-  <data name="Properties" xml:space="preserve">
+	<data name="Properties" xml:space="preserve">
     <value>Tulajdonságok - {0}</value>
   </data>
-  <data name="ResponseTime" xml:space="preserve">
+	<data name="ResponseTime" xml:space="preserve">
     <value>{0} Válaszidő {1} ms</value>
   </data>
-  <data name="SelectFile" xml:space="preserve">
+	<data name="SelectFile" xml:space="preserve">
     <value>Válasszon WakeOnLan beállításfájlt az importáláshoz</value>
   </data>
-  <data name="SendShutdown" xml:space="preserve">
+	<data name="SendShutdown" xml:space="preserve">
     <value>Leállítási parancs küldése ide: {0}</value>
   </data>
-  <data name="SentTo" xml:space="preserve">
+	<data name="SentTo" xml:space="preserve">
     <value>Felébresztés-csomag küldése ide: {0} {1}...</value>
   </data>
-  <data name="ShutdownFailed" xml:space="preserve">
+	<data name="ShutdownFailed" xml:space="preserve">
     <value>Leállítás sikertelen {0} {1} miatt.</value>
   </data>
-  <data name="ShutDownSeconds" xml:space="preserve">
+	<data name="ShutDownSeconds" xml:space="preserve">
     <value>Leállítás {0} másodprecen belül...</value>
   </data>
-  <data name="ShutdownSuccessful" xml:space="preserve">
+	<data name="ShutdownSuccessful" xml:space="preserve">
     <value>{0} leállítás kész</value>
   </data>
-  <data name="ShuttingDown" xml:space="preserve">
+	<data name="ShuttingDown" xml:space="preserve">
     <value>Leállítás...</value>
   </data>
-  <data name="Skipping" xml:space="preserve">
+	<data name="Skipping" xml:space="preserve">
     <value>Kihagyás...</value>
   </data>
-  <data name="Successful" xml:space="preserve">
+	<data name="Successful" xml:space="preserve">
     <value>Kész</value>
   </data>
-  <data name="Title" xml:space="preserve">
+	<data name="Title" xml:space="preserve">
     <value>Wake on LAN</value>
   </data>
-  <data name="Version" xml:space="preserve">
+	<data name="Version" xml:space="preserve">
     <value>{0}.{1:00}.{2} verzió</value>
   </data>
-  <data name="WhereSave" xml:space="preserve">
+	<data name="WhereSave" xml:space="preserve">
     <value>Hova szeretné menteni a beállításokat?</value>
   </data>
 </root>

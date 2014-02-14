@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,171 +59,171 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="SplitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="SplitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="NameColumnHeader.Text" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="SplitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+		<value>Fill</value>
+	</data>
+	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="SplitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+		<value>0, 0</value>
+	</data>
+	<data name="NameColumnHeader.Text" xml:space="preserve">
     <value>Name</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="NameColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>88</value>
-  </data>
-  <data name="StatusColumnHeader.Text" xml:space="preserve">
+	<assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="NameColumnHeader.Width" type="System.Int32, mscorlib">
+		<value>88</value>
+	</data>
+	<data name="StatusColumnHeader.Text" xml:space="preserve">
     <value>Status</value>
   </data>
-  <data name="TriggerColumnHeader.Text" xml:space="preserve">
+	<data name="TriggerColumnHeader.Text" xml:space="preserve">
     <value>Triggers</value>
   </data>
-  <data name="TriggerColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="StateColumnHeader.Text" xml:space="preserve">
+	<data name="TriggerColumnHeader.Width" type="System.Int32, mscorlib">
+		<value>100</value>
+	</data>
+	<data name="StateColumnHeader.Text" xml:space="preserve">
     <value>State</value>
   </data>
-  <data name="NextColumnHeader.Text" xml:space="preserve">
+	<data name="NextColumnHeader.Text" xml:space="preserve">
     <value>Next Run Time</value>
   </data>
-  <data name="NextColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="LastColumnHeader.Text" xml:space="preserve">
+	<data name="NextColumnHeader.Width" type="System.Int32, mscorlib">
+		<value>100</value>
+	</data>
+	<data name="LastColumnHeader.Text" xml:space="preserve">
     <value>Last Run Time</value>
   </data>
-  <data name="LastColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="ResultColumnHeader.Text" xml:space="preserve">
+	<data name="LastColumnHeader.Width" type="System.Int32, mscorlib">
+		<value>100</value>
+	</data>
+	<data name="ResultColumnHeader.Text" xml:space="preserve">
     <value>Last Run Result</value>
   </data>
-  <data name="ResultColumnHeader.Width" type="System.Int32, mscorlib">
-    <value>170</value>
-  </data>
-  <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="RunToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="RunToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ResultColumnHeader.Width" type="System.Int32, mscorlib">
+		<value>170</value>
+	</data>
+	<metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+		<value>17, 17</value>
+	</metadata>
+	<data name="RunToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>112, 22</value>
+	</data>
+	<data name="RunToolStripMenuItem.Text" xml:space="preserve">
     <value>Run</value>
   </data>
-  <data name="EndToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="EndToolStripMenuItem.Text" xml:space="preserve">
+	<data name="EndToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>112, 22</value>
+	</data>
+	<data name="EndToolStripMenuItem.Text" xml:space="preserve">
     <value>End</value>
   </data>
-  <data name="DisableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="DisableToolStripMenuItem.Text" xml:space="preserve">
+	<data name="DisableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>112, 22</value>
+	</data>
+	<data name="DisableToolStripMenuItem.Text" xml:space="preserve">
     <value>Disable</value>
   </data>
-  <data name="EnableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="EnableToolStripMenuItem.Text" xml:space="preserve">
+	<data name="EnableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>112, 22</value>
+	</data>
+	<data name="EnableToolStripMenuItem.Text" xml:space="preserve">
     <value>Enable</value>
   </data>
-  <data name="DeleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="DeleteToolStripMenuItem.Text" xml:space="preserve">
+	<data name="DeleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>112, 22</value>
+	</data>
+	<data name="DeleteToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="NewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="NewToolStripMenuItem.Text" xml:space="preserve">
+	<data name="NewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>112, 22</value>
+	</data>
+	<data name="NewToolStripMenuItem.Text" xml:space="preserve">
     <value>New</value>
   </data>
-  <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 136</value>
-  </data>
-  <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
+	<data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>113, 136</value>
+	</data>
+	<data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
     <value>ContextMenuStrip1</value>
   </data>
-  <data name="&gt;&gt;ContextMenuStrip1.Type" xml:space="preserve">
+	<data name="&gt;&gt;ContextMenuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ListViewSchedule.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ListViewSchedule.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ListViewSchedule.Size" type="System.Drawing.Size, System.Drawing">
-    <value>700, 407</value>
-  </data>
-  <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>370, 17</value>
-  </metadata>
-  <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
+	<data name="ListViewSchedule.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+		<value>Fill</value>
+	</data>
+	<data name="ListViewSchedule.Location" type="System.Drawing.Point, System.Drawing">
+		<value>0, 0</value>
+	</data>
+	<data name="ListViewSchedule.Size" type="System.Drawing.Size, System.Drawing">
+		<value>700, 407</value>
+	</data>
+	<metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+		<value>370, 17</value>
+	</metadata>
+	<data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+		<value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABw
@@ -265,54 +265,54 @@
         AQEBAAEBBQABgBcAA/8BAAHwAQ8GAAHAAQMGAAGAAQEGAAGAAQFGAAGAAQEGAAGAAQEGAAHAAQMGAAHw
         AQ8GAAs=
 </value>
-  </data>
-  <data name="ListViewSchedule.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ListViewSchedule.Name" xml:space="preserve">
+	</data>
+	<data name="ListViewSchedule.TabIndex" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="&gt;&gt;ListViewSchedule.Name" xml:space="preserve">
     <value>ListViewSchedule</value>
   </data>
-  <data name="&gt;&gt;ListViewSchedule.Type" xml:space="preserve">
+	<data name="&gt;&gt;ListViewSchedule.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ListViewSchedule.Parent" xml:space="preserve">
+	<data name="&gt;&gt;ListViewSchedule.Parent" xml:space="preserve">
     <value>SplitContainer1.Panel1</value>
   </data>
-  <data name="&gt;&gt;ListViewSchedule.ZOrder" xml:space="preserve">
+	<data name="&gt;&gt;ListViewSchedule.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.Panel1.Name" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.Panel1.Name" xml:space="preserve">
     <value>SplitContainer1.Panel1</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.Panel1.Type" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.Panel1.Parent" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.Panel1.Parent" xml:space="preserve">
     <value>SplitContainer1</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.Panel1.ZOrder" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="ToolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <data name="ToolStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ToolStripLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
-  </data>
-  <data name="ToolStripLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 15</value>
-  </data>
-  <data name="ToolStripLabel1.Text" xml:space="preserve">
+	<metadata name="ToolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+		<value>0, 0</value>
+	</metadata>
+	<data name="ToolStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+		<value>Fill</value>
+	</data>
+	<data name="ToolStripLabel1.Font" type="System.Drawing.Font, System.Drawing">
+		<value>Segoe UI, 9pt, style=Bold</value>
+	</data>
+	<data name="ToolStripLabel1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 15</value>
+	</data>
+	<data name="ToolStripLabel1.Text" xml:space="preserve">
     <value>Actions</value>
   </data>
-  <data name="ToolStripLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ToolStripButtonCreate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleLeft</value>
+	</data>
+	<data name="ToolStripButtonCreate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAoXSURBVFhHtVcJVJNXFo61CiiyZGGJQFhkEQu0IB5cOlit
         SkVrtcaqqIyilEI9TrdT204nM1oVZRFEBRRFiKAEQUQMAtWAomxhERFDAMFAZAskhFUMuXNfAI89rdpl
@@ -359,24 +359,24 @@
         +EcU/mkjKSJHd+l5u4WSozoP7/2kWxq+WXthLMdtGr7+33wbvspIWsjRSpTkRm8K0eFW7dM5v9aTajb+
         1fPXQ/x7jESBkOBHemmt8WQZLFtmPNFm/yABCuW/JSl0gS3/nm4AAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="ToolStripButtonCreate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ToolStripButtonCreate.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ToolStripButtonCreate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 20</value>
-  </data>
-  <data name="ToolStripButtonCreate.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonCreate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleLeft</value>
+	</data>
+	<data name="ToolStripButtonCreate.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+		<value>Magenta</value>
+	</data>
+	<data name="ToolStripButtonCreate.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 20</value>
+	</data>
+	<data name="ToolStripButtonCreate.Text" xml:space="preserve">
     <value>Create Task...</value>
   </data>
-  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 6</value>
-  </data>
-  <data name="ToolStripButtonEnable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 6</value>
+	</data>
+	<data name="ToolStripButtonEnable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALUSURBVDhPdZPdS1NxGMd/UpISSWQQddNfUYRQd1laRnWV
         kV2UvVx5YUgXZqnLFa5ZvmRN2YVidBGsFxqjGU4jaIZvjUxUdpzb1Dzbmbrl2XyZnzwnzYz63PzgOd/n
@@ -392,21 +392,21 @@
         cm4So8uIFJV04f8IKAHu2+5zvjaf6dnpze9BjsmYukw09VqQEhtG8YU4XUNdlLSVcKTsMNcsV1Fiyr9f
         pMbw9DBm1wO0fJyuPc0JUy5nzWcw2CrxTnv/ahTiJ3q83amMXsJgAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="ToolStripButtonEnable.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ToolStripButtonEnable.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ToolStripButtonEnable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 20</value>
-  </data>
-  <data name="ToolStripButtonEnable.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonEnable.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleLeft</value>
+	</data>
+	<data name="ToolStripButtonEnable.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+		<value>Magenta</value>
+	</data>
+	<data name="ToolStripButtonEnable.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 20</value>
+	</data>
+	<data name="ToolStripButtonEnable.Text" xml:space="preserve">
     <value>Enable</value>
   </data>
-  <data name="ToolStripButtonDisable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripButtonDisable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKWSURBVDhPdZL9T1JhFMfvP9YP2XS+lGgls5gzyV9qs8ZP
         VtayrTbMfCkjY8vynUx0lQmhoQ1KzXwBBQWJiyIK4gUjLnAFxrfnXrBE52d7dn8453zOec59qKPY+t/C
@@ -421,24 +421,24 @@
         YMQWWRrt3iCdXTBoNHick4d59XC2gEdZLsHzC2J86eyCzWqFhyzLTWQWqwUTg2q0S6shP3Uapg8jx4sP
         MH8cAS9qyitAy1kRmslpLS7FS/FljDW3HimkqL+Oh9KndYaVhAAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="ToolStripButtonDisable.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ToolStripButtonDisable.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ToolStripButtonDisable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 20</value>
-  </data>
-  <data name="ToolStripButtonDisable.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonDisable.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleLeft</value>
+	</data>
+	<data name="ToolStripButtonDisable.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+		<value>Magenta</value>
+	</data>
+	<data name="ToolStripButtonDisable.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 20</value>
+	</data>
+	<data name="ToolStripButtonDisable.Text" xml:space="preserve">
     <value>Disable</value>
   </data>
-  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 6</value>
-  </data>
-  <data name="ToolStripButtonRun.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 6</value>
+	</data>
+	<data name="ToolStripButtonRun.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJrSURBVDhPbZLtS5NhFMbvL/pBxD+nIMPyg4LMyMK0NJuU
         hPrBUGykbZL0ImXaC6k40cAcQvkhsgjfKgUrkcCIZGnm5mabe5wvz2Zu0z2/bp9ppnjd3HBzONd1rnPO
@@ -453,21 +453,21 @@
         515g3unGbrczOj5K+VMTh24nH0z+HxU918hpMZLffInC1mIyG3MwPMo+gCjEX8QmY75SD4poAAAAAElF
         TkSuQmCC
 </value>
-  </data>
-  <data name="ToolStripButtonRun.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ToolStripButtonRun.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ToolStripButtonRun.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 20</value>
-  </data>
-  <data name="ToolStripButtonRun.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonRun.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleLeft</value>
+	</data>
+	<data name="ToolStripButtonRun.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+		<value>Magenta</value>
+	</data>
+	<data name="ToolStripButtonRun.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 20</value>
+	</data>
+	<data name="ToolStripButtonRun.Text" xml:space="preserve">
     <value>Run</value>
   </data>
-  <data name="ToolStripButtonStop.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripButtonStop.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ7SURBVDhPfZL7S1NhGMf3xwT9BUGGKRVENdASRCNzmROH
         BRFp00C3aTip6BdpUKlT1JmXZps13LylYpqSaS6v5ZbbWLvfzpnu5rfH4zIGsy+8vIfzPt/Pec77fHnp
@@ -482,24 +482,24 @@
         52GkxCZtqVp+/wEvC65DKarAGEV2fnQMs2TSKZVQUPI66X2y9P/68nYQGokMQxSwg7D0Vz7EXLcqjZnH
         +wMR5GBU0OvPSwAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="ToolStripButtonStop.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ToolStripButtonStop.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ToolStripButtonStop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 20</value>
-  </data>
-  <data name="ToolStripButtonStop.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonStop.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleLeft</value>
+	</data>
+	<data name="ToolStripButtonStop.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+		<value>Magenta</value>
+	</data>
+	<data name="ToolStripButtonStop.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 20</value>
+	</data>
+	<data name="ToolStripButtonStop.Text" xml:space="preserve">
     <value>Stop</value>
   </data>
-  <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 6</value>
-  </data>
-  <data name="ToolStripButtonProperties.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 6</value>
+	</data>
+	<data name="ToolStripButtonProperties.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVDhPtZLdT5JhGMbf/6e0WmoW2frQhfOIWKIoDvID
         dEl+8JKCWLlAK/kopKJWOhCXWimKiugMJCs/sLFVNjHnmpgHrU46MM2ubl9NR67Ouk+e7d3zu67rvp6X
@@ -514,21 +514,21 @@
         Pr4ASYmlkBcNcc5paRbs3ZNJUCV184hONWw2X+waG1OQ34jUVA1OnTTT72xCRoYJUmo7Lk7KXZZK+5CY
         oERn5+Ru+M9xODxIJsejPDX2xW8K/IdhmF/1befG/fM1WAAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="ToolStripButtonProperties.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ToolStripButtonProperties.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ToolStripButtonProperties.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 20</value>
-  </data>
-  <data name="ToolStripButtonProperties.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonProperties.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleLeft</value>
+	</data>
+	<data name="ToolStripButtonProperties.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+		<value>Magenta</value>
+	</data>
+	<data name="ToolStripButtonProperties.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 20</value>
+	</data>
+	<data name="ToolStripButtonProperties.Text" xml:space="preserve">
     <value>Properties</value>
   </data>
-  <data name="ToolStripButtonDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripButtonDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAuKSURBVGhD7ZkJVJNXFsdTkDWsgSwkkEBCwr4jqyCiCFoF
         qqiIbCKiqLWKW921Loit1bq01rbTOe2ZjrXLqNWZcU4XFUWEhp2CsqTsSwiIoh6nTv9zA19nOu3pQRmo
@@ -582,90 +582,90 @@
         tusMn/tgqzX3uqWOzly6TCXKbwh9FsuV8rC2ZNC6zZicvL/z24fF+jeb+MxZY3MXyQAAAABJRU5ErkJg
         gg==
 </value>
-  </data>
-  <data name="ToolStripButtonDelete.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ToolStripButtonDelete.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ToolStripButtonDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 20</value>
-  </data>
-  <data name="ToolStripButtonDelete.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonDelete.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleLeft</value>
+	</data>
+	<data name="ToolStripButtonDelete.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+		<value>Magenta</value>
+	</data>
+	<data name="ToolStripButtonDelete.Size" type="System.Drawing.Size, System.Drawing">
+		<value>155, 20</value>
+	</data>
+	<data name="ToolStripButtonDelete.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="ToolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 407</value>
-  </data>
-  <data name="ToolStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ToolStrip1.Text" xml:space="preserve">
+	<data name="ToolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+		<value>0, 0</value>
+	</data>
+	<data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>157, 407</value>
+	</data>
+	<data name="ToolStrip1.TabIndex" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="ToolStrip1.Text" xml:space="preserve">
     <value>ToolStrip1</value>
   </data>
-  <data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
     <value>ToolStrip1</value>
   </data>
-  <data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStrip1.Parent" xml:space="preserve">
+	<data name="&gt;&gt;ToolStrip1.Parent" xml:space="preserve">
     <value>SplitContainer1.Panel2</value>
   </data>
-  <data name="&gt;&gt;ToolStrip1.ZOrder" xml:space="preserve">
+	<data name="&gt;&gt;ToolStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.Panel2.Name" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.Panel2.Name" xml:space="preserve">
     <value>SplitContainer1.Panel2</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.Panel2.Type" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.Panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.Panel2.Parent" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.Panel2.Parent" xml:space="preserve">
     <value>SplitContainer1</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.Panel2.ZOrder" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.Panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="SplitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>861, 407</value>
-  </data>
-  <data name="SplitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>700</value>
-  </data>
-  <data name="SplitContainer1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;SplitContainer1.Name" xml:space="preserve">
+	<data name="SplitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>861, 407</value>
+	</data>
+	<data name="SplitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+		<value>700</value>
+	</data>
+	<data name="SplitContainer1.TabIndex" type="System.Int32, mscorlib">
+		<value>1</value>
+	</data>
+	<data name="&gt;&gt;SplitContainer1.Name" xml:space="preserve">
     <value>SplitContainer1</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.Type" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.Parent" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;SplitContainer1.ZOrder" xml:space="preserve">
+	<data name="&gt;&gt;SplitContainer1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>174, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>861, 407</value>
-  </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+		<value>174, 17</value>
+	</metadata>
+	<metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+		<value>True</value>
+	</metadata>
+	<data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+		<value>6, 13</value>
+	</data>
+	<data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+		<value>861, 407</value>
+	</data>
+	<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         AAABAAoAMDAQAAEABABoBgAApgAAACAgEAABAAQA6AIAAA4HAAAQEBAAAQAEACgBAAD2CQAAMDAAAAEA
         CACoDgAAHgsAACAgAAABAAgAqAgAAMYZAAAQEAAAAQAIAGgFAABuIgAAAAAAAAEAIABpFAEA1icAADAw
         AAABACAAqCUAAD88AQAgIAAAAQAgAKgQAADnYQEAEBAAAAEAIABoBAAAj3IBACgAAAAwAAAAYAAAAAEA
@@ -2267,170 +2267,170 @@
         YVprYmJe8l5cVpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAA4AAAAAAAAAAA
         AAAAAAAAAIAAAAAAAAAAAB8AAAAfAAAAHwAAAB8AAAAfAAAAHwAAAB8AAAAfAADx/wAA
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
+	</data>
+	<data name="$this.Text" xml:space="preserve">
     <value>Wake On LAN Task Schedule</value>
   </data>
-  <data name="&gt;&gt;NameColumnHeader.Name" xml:space="preserve">
+	<data name="&gt;&gt;NameColumnHeader.Name" xml:space="preserve">
     <value>NameColumnHeader</value>
   </data>
-  <data name="&gt;&gt;NameColumnHeader.Type" xml:space="preserve">
+	<data name="&gt;&gt;NameColumnHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;StatusColumnHeader.Name" xml:space="preserve">
+	<data name="&gt;&gt;StatusColumnHeader.Name" xml:space="preserve">
     <value>StatusColumnHeader</value>
   </data>
-  <data name="&gt;&gt;StatusColumnHeader.Type" xml:space="preserve">
+	<data name="&gt;&gt;StatusColumnHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TriggerColumnHeader.Name" xml:space="preserve">
+	<data name="&gt;&gt;TriggerColumnHeader.Name" xml:space="preserve">
     <value>TriggerColumnHeader</value>
   </data>
-  <data name="&gt;&gt;TriggerColumnHeader.Type" xml:space="preserve">
+	<data name="&gt;&gt;TriggerColumnHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;StateColumnHeader.Name" xml:space="preserve">
+	<data name="&gt;&gt;StateColumnHeader.Name" xml:space="preserve">
     <value>StateColumnHeader</value>
   </data>
-  <data name="&gt;&gt;StateColumnHeader.Type" xml:space="preserve">
+	<data name="&gt;&gt;StateColumnHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NextColumnHeader.Name" xml:space="preserve">
+	<data name="&gt;&gt;NextColumnHeader.Name" xml:space="preserve">
     <value>NextColumnHeader</value>
   </data>
-  <data name="&gt;&gt;NextColumnHeader.Type" xml:space="preserve">
+	<data name="&gt;&gt;NextColumnHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LastColumnHeader.Name" xml:space="preserve">
+	<data name="&gt;&gt;LastColumnHeader.Name" xml:space="preserve">
     <value>LastColumnHeader</value>
   </data>
-  <data name="&gt;&gt;LastColumnHeader.Type" xml:space="preserve">
+	<data name="&gt;&gt;LastColumnHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ResultColumnHeader.Name" xml:space="preserve">
+	<data name="&gt;&gt;ResultColumnHeader.Name" xml:space="preserve">
     <value>ResultColumnHeader</value>
   </data>
-  <data name="&gt;&gt;ResultColumnHeader.Type" xml:space="preserve">
+	<data name="&gt;&gt;ResultColumnHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RunToolStripMenuItem.Name" xml:space="preserve">
+	<data name="&gt;&gt;RunToolStripMenuItem.Name" xml:space="preserve">
     <value>RunToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;RunToolStripMenuItem.Type" xml:space="preserve">
+	<data name="&gt;&gt;RunToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EndToolStripMenuItem.Name" xml:space="preserve">
+	<data name="&gt;&gt;EndToolStripMenuItem.Name" xml:space="preserve">
     <value>EndToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;EndToolStripMenuItem.Type" xml:space="preserve">
+	<data name="&gt;&gt;EndToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DisableToolStripMenuItem.Name" xml:space="preserve">
+	<data name="&gt;&gt;DisableToolStripMenuItem.Name" xml:space="preserve">
     <value>DisableToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;DisableToolStripMenuItem.Type" xml:space="preserve">
+	<data name="&gt;&gt;DisableToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EnableToolStripMenuItem.Name" xml:space="preserve">
+	<data name="&gt;&gt;EnableToolStripMenuItem.Name" xml:space="preserve">
     <value>EnableToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;EnableToolStripMenuItem.Type" xml:space="preserve">
+	<data name="&gt;&gt;EnableToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DeleteToolStripMenuItem.Name" xml:space="preserve">
+	<data name="&gt;&gt;DeleteToolStripMenuItem.Name" xml:space="preserve">
     <value>DeleteToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;DeleteToolStripMenuItem.Type" xml:space="preserve">
+	<data name="&gt;&gt;DeleteToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NewToolStripMenuItem.Name" xml:space="preserve">
+	<data name="&gt;&gt;NewToolStripMenuItem.Name" xml:space="preserve">
     <value>NewToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;NewToolStripMenuItem.Type" xml:space="preserve">
+	<data name="&gt;&gt;NewToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ImageList1.Name" xml:space="preserve">
+	<data name="&gt;&gt;ImageList1.Name" xml:space="preserve">
     <value>ImageList1</value>
   </data>
-  <data name="&gt;&gt;ImageList1.Type" xml:space="preserve">
+	<data name="&gt;&gt;ImageList1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripLabel1.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripLabel1.Name" xml:space="preserve">
     <value>ToolStripLabel1</value>
   </data>
-  <data name="&gt;&gt;ToolStripLabel1.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripLabel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonCreate.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonCreate.Name" xml:space="preserve">
     <value>ToolStripButtonCreate</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonCreate.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonCreate.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator1.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripSeparator1.Name" xml:space="preserve">
     <value>ToolStripSeparator1</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonEnable.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonEnable.Name" xml:space="preserve">
     <value>ToolStripButtonEnable</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonEnable.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonEnable.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonDisable.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonDisable.Name" xml:space="preserve">
     <value>ToolStripButtonDisable</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonDisable.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonDisable.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
     <value>ToolStripSeparator2</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonRun.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonRun.Name" xml:space="preserve">
     <value>ToolStripButtonRun</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonRun.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonRun.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonStop.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonStop.Name" xml:space="preserve">
     <value>ToolStripButtonStop</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonStop.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonStop.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator3.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripSeparator3.Name" xml:space="preserve">
     <value>ToolStripSeparator3</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator3.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripSeparator3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonProperties.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonProperties.Name" xml:space="preserve">
     <value>ToolStripButtonProperties</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonProperties.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonProperties.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonDelete.Name" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonDelete.Name" xml:space="preserve">
     <value>ToolStripButtonDelete</value>
   </data>
-  <data name="&gt;&gt;ToolStripButtonDelete.Type" xml:space="preserve">
+	<data name="&gt;&gt;ToolStripButtonDelete.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Timer1.Name" xml:space="preserve">
+	<data name="&gt;&gt;Timer1.Name" xml:space="preserve">
     <value>Timer1</value>
   </data>
-  <data name="&gt;&gt;Timer1.Type" xml:space="preserve">
+	<data name="&gt;&gt;Timer1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+	<data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Schedule</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+	<data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

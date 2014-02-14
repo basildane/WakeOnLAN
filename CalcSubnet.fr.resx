@@ -134,17 +134,11 @@
 	<data name="IpIP.TabIndex" type="System.Int32, mscorlib">
 		<value>0</value>
 	</data>
-	<data name="lIP.Text" xml:space="preserve">
-    <value>IP Address</value>
-  </data>
 	<data name="&gt;&gt;lRecommended.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 	<data name="&gt;&gt;lHeader.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-	<data name="lSubnet.Text" xml:space="preserve">
-    <value>Subnet</value>
   </data>
 	<data name="&gt;&gt;IpIP.Name" xml:space="preserve">
     <value>IpIP</value>
@@ -155,9 +149,6 @@
 	<data name="bCalculate.Size" type="System.Drawing.Size, System.Drawing">
 		<value>75, 23</value>
 	</data>
-	<data name="bCalculate.Text" xml:space="preserve">
-    <value>Calculate</value>
-  </data>
 	<data name="lIP.AutoSize" type="System.Boolean, mscorlib">
 		<value>True</value>
 	</data>
@@ -179,14 +170,8 @@
 	<data name="lSubnet.TabIndex" type="System.Int32, mscorlib">
 		<value>6</value>
 	</data>
-	<data name="lHeader.Text" xml:space="preserve">
-    <value>This function is used to help you find the "Broadcast Address" to use, based on the IP Address and Subnet.</value>
-  </data>
 	<data name="&gt;&gt;IpBroadcast.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-	<data name="lRecommended.Text" xml:space="preserve">
-    <value>Recommended Broadcast Address:</value>
   </data>
 	<data name="IpBroadcast.Size" type="System.Drawing.Size, System.Drawing">
 		<value>129, 24</value>
@@ -287,9 +272,6 @@
 	<data name="&gt;&gt;bCalculate.Name" xml:space="preserve">
     <value>bCalculate</value>
   </data>
-	<data name="$this.Text" xml:space="preserve">
-    <value>Calculate Subnet</value>
-  </data>
 	<data name="IpSubnet.TabIndex" type="System.Int32, mscorlib">
 		<value>1</value>
 	</data>
@@ -350,13 +332,31 @@
 	<data name="lSubnet.AutoSize" type="System.Boolean, mscorlib">
 		<value>True</value>
 	</data>
-	<data name="bOK.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
 	<metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
 		<value>True</value>
 	</metadata>
 	<metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
 		<value>hu</value>
 	</metadata>
+	<data name="lIP.Text" xml:space="preserve">
+		<value>Adresse IP</value>
+	</data>
+	<data name="lSubnet.Text" xml:space="preserve">
+		<value>Sous réseau</value>
+	</data>
+	<data name="bCalculate.Text" xml:space="preserve">
+		<value>Calculer</value>
+	</data>
+	<data name="lHeader.Text" xml:space="preserve">
+		<value>Cette fonction est utilisée pour vous aider à trouver "l'adresse de diffusion" à utiliser, basée sur l'adresse IP et le sous réseau.</value>
+	</data>
+	<data name="lRecommended.Text" xml:space="preserve">
+		<value>Adresse de diffusion recommandée:</value>
+	</data>
+	<data name="$this.Text" xml:space="preserve">
+		<value>Calculer le sous réseau</value>
+	</data>
+	<data name="bOK.Text" xml:space="preserve">
+		<value>OK</value>
+	</data>
 </root>

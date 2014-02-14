@@ -231,6 +231,9 @@
   <data name="&gt;&gt;Button_UnCheckAll.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;IpAddressControl_End.Name" xml:space="preserve">
+    <value>IpAddressControl_End</value>
+  </data>
   <data name="ch_Interface.Width" type="System.Int32, mscorlib">
     <value>203</value>
   </data>
@@ -239,9 +242,6 @@
   </data>
   <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="StatusStrip1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;StatusStrip1.Name" xml:space="preserve">
     <value>StatusStrip1</value>
@@ -294,6 +294,9 @@
   <data name="StatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 581</value>
   </data>
+  <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
+    <value>ToolTip1</value>
+  </data>
   <data name="Label2.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -317,9 +320,6 @@
   </data>
   <data name="ch_MAC.Width" type="System.Int32, mscorlib">
     <value>122</value>
-  </data>
-  <data name="Button_UnCheckAll.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;ListView1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -384,11 +384,14 @@
   <data name="ch_IP.Width" type="System.Int32, mscorlib">
     <value>101</value>
   </data>
-  <data name="&gt;&gt;IpAddressControl_End.Name" xml:space="preserve">
-    <value>IpAddressControl_End</value>
+  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;IpAddressControl_Start.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.10.1.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.10.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ToolStripStatusLabel1.Name" xml:space="preserve">
     <value>ToolStripStatusLabel1</value>
@@ -438,6 +441,9 @@
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
+  <data name="&gt;&gt;ToolStripStatusLabel_spacer.Name" xml:space="preserve">
+    <value>ToolStripStatusLabel_spacer</value>
+  </data>
   <data name="&gt;&gt;StatusStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -447,8 +453,8 @@
   <data name="&gt;&gt;BackgroundWorker1.Name" xml:space="preserve">
     <value>BackgroundWorker1</value>
   </data>
-  <data name="&gt;&gt;IpAddressControl_End.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
+  <data name="&gt;&gt;LabelAddToGroup.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;Cancel_Button.Name" xml:space="preserve">
     <value>Cancel_Button</value>
@@ -549,14 +555,11 @@
   <data name="LabelAddToGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 13</value>
   </data>
-  <data name="&gt;&gt;LabelAddToGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;IpAddressControl_Start.Name" xml:space="preserve">
     <value>IpAddressControl_Start</value>
   </data>
-  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;IpAddressControl_End.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
   </data>
   <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 440</value>
@@ -564,8 +567,8 @@
   <data name="Cancel_Button.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
-    <value>ToolTip1</value>
+  <data name="StatusStrip1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Button_CheckAll.Text" xml:space="preserve">
     <value>Check All</value>
@@ -582,8 +585,8 @@
   <data name="ToolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
   </data>
-  <data name="&gt;&gt;ToolStripStatusLabel_spacer.Name" xml:space="preserve">
-    <value>ToolStripStatusLabel_spacer</value>
+  <data name="Button_UnCheckAll.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;Label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -619,7 +622,7 @@
     <value>270</value>
   </data>
   <data name="&gt;&gt;IpAddressControl_End.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.10.1.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.10.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ListView1.Name" xml:space="preserve">
     <value>ListView1</value>
@@ -629,9 +632,6 @@
   </data>
   <data name="Button_UnCheckAll.Text" xml:space="preserve">
     <value>UnCheck All</value>
-  </data>
-  <data name="Label1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
     <value>$this</value>

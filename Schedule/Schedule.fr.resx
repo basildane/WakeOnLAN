@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,127 +59,127 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="NameColumnHeader.Text" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="NameColumnHeader.Text" xml:space="preserve">
     <value>Nom</value>
   </data>
-  <data name="StatusColumnHeader.Text" xml:space="preserve">
+	<data name="StatusColumnHeader.Text" xml:space="preserve">
     <value>Statut</value>
   </data>
-  <data name="TriggerColumnHeader.Text" xml:space="preserve">
+	<data name="TriggerColumnHeader.Text" xml:space="preserve">
     <value>Déclencheurs</value>
   </data>
-  <data name="StateColumnHeader.Text" xml:space="preserve">
+	<data name="StateColumnHeader.Text" xml:space="preserve">
     <value>Etat</value>
   </data>
-  <data name="NextColumnHeader.Text" xml:space="preserve">
+	<data name="NextColumnHeader.Text" xml:space="preserve">
     <value>Prochaine exécution</value>
   </data>
-  <data name="LastColumnHeader.Text" xml:space="preserve">
+	<data name="LastColumnHeader.Text" xml:space="preserve">
     <value>Dernière exécution</value>
   </data>
-  <data name="ResultColumnHeader.Text" xml:space="preserve">
+	<data name="ResultColumnHeader.Text" xml:space="preserve">
     <value>Résultat de la dernière exécution</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RunToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
-  </data>
-  <data name="RunToolStripMenuItem.Text" xml:space="preserve">
+	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="RunToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>129, 22</value>
+	</data>
+	<data name="RunToolStripMenuItem.Text" xml:space="preserve">
     <value>Exécuter</value>
   </data>
-  <data name="EndToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
-  </data>
-  <data name="EndToolStripMenuItem.Text" xml:space="preserve">
+	<data name="EndToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>129, 22</value>
+	</data>
+	<data name="EndToolStripMenuItem.Text" xml:space="preserve">
     <value>Fin</value>
   </data>
-  <data name="DisableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
-  </data>
-  <data name="DisableToolStripMenuItem.Text" xml:space="preserve">
+	<data name="DisableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>129, 22</value>
+	</data>
+	<data name="DisableToolStripMenuItem.Text" xml:space="preserve">
     <value>Désactiver</value>
   </data>
-  <data name="EnableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
-  </data>
-  <data name="EnableToolStripMenuItem.Text" xml:space="preserve">
+	<data name="EnableToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>129, 22</value>
+	</data>
+	<data name="EnableToolStripMenuItem.Text" xml:space="preserve">
     <value>Activer</value>
   </data>
-  <data name="DeleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
-  </data>
-  <data name="DeleteToolStripMenuItem.Text" xml:space="preserve">
+	<data name="DeleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>129, 22</value>
+	</data>
+	<data name="DeleteToolStripMenuItem.Text" xml:space="preserve">
     <value>Supprimer</value>
   </data>
-  <data name="NewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
-  </data>
-  <data name="NewToolStripMenuItem.Text" xml:space="preserve">
+	<data name="NewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>129, 22</value>
+	</data>
+	<data name="NewToolStripMenuItem.Text" xml:space="preserve">
     <value>Nouveau</value>
   </data>
-  <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 136</value>
-  </data>
-  <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
+	<data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>130, 136</value>
+	</data>
+	<data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+		<value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABw
@@ -221,9 +221,9 @@
         AQEBAAEBBQABgBcAA/8BAAHwAQ8GAAHAAQMGAAGAAQEGAAGAAQFGAAGAAQEGAAGAAQEGAAHAAQMGAAHw
         AQ8GAAs=
 </value>
-  </data>
-  <data name="ToolStripButtonCreate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="ToolStripButtonCreate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAoaSURBVFhHpVcJVJNXFo61CiiyZQFiICyyiAVaEA8uHaxW
         paK1WqEqKqMopVCP0+3UttPJjFZFWQRRAUURUlCCICIGgWpAUbawiIghgMRIZAsQAoTFkDv3RelxprVq
@@ -270,12 +270,12 @@
         Fhm/jsI/fYUjKSJHd9nP9gulR/Tu3/lJvyJqk+7CBI77tFc+8/1pdO21izKJHK1Eqe601nA9bu1evZ/X
         epmwnt16/rrFr0KOuEBI8GO8ddZ4sY2WLTOdaLOvTeC/t+J0sJpHTXoAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="ToolStripButtonCreate.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonCreate.Text" xml:space="preserve">
     <value>Créer une tâche…</value>
   </data>
-  <data name="ToolStripButtonEnable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripButtonEnable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALSSURBVDhPbZPdS1NxGMd/opEhiWQQddNfkURQd71oGeVV
         RXpR9nLlRRFdmKUtl7im+ZI1ZReG0UWwUhyjFU4jaIavI5WMHXWbmmc7U7c8m+n85DnRVOy5OT+ew/P5
@@ -291,12 +291,12 @@
         RpcRKSJt62Rzwq/4qbJVcanuInMLc1v3QY7KmHpMNPdbkOIboNhyjJ6xHu603eFY2VFuWK6jRJX/b6S2
         G9/nvmN2PUHzx7m6c5w25VFgPo/B9hDvnHdb4R96vN2pjUXGOAAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="ToolStripButtonEnable.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonEnable.Text" xml:space="preserve">
     <value>Activer</value>
   </data>
-  <data name="ToolStripButtonDisable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripButtonDisable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKUSURBVDhPhZP9T1JhFMf5x/ohm86XEq1klnMm+Utt1vzJ
         ylq21YaZL6VkbFm+k4muMiE0tEmpmS+goCBxUURBvGDEBa7I+Ha4NB2w1tmePbt353zO9/k+5xGJ0sIy
@@ -311,12 +311,12 @@
         Wo8dMo1xblFnB6bVajzOysGiaiTzYSlKy9B+QYLPXd2wmM1wkVlOgpnMJkwOqdAhrYLs1GkY3o/++1Ua
         P4wiAWrKyUPLWTGaabUWFuOF5DLGm1szCv8AjofSp8gA4ysAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="ToolStripButtonDisable.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonDisable.Text" xml:space="preserve">
     <value>Désactiver</value>
   </data>
-  <data name="ToolStripButtonRun.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripButtonRun.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJnSURBVDhPfZPtS1NhGMbPF/0g4p9TkGH5QUFmZGFamk1K
         Qv1gKDZybZL0ImXaC6k4UcEcQvkhsgjfKgUrkcCI5KSZm5tt7jidZzO36dmvx60Up3QdDpzz8FzXc133
@@ -331,12 +331,12 @@
         dyLLMuOT41R2GTh0O/X/F2o7VlXfNfJa9RS2XKK4rZTspjx0j3IPJP4BxCZjvlgsYnUAAAAASUVORK5C
         YII=
 </value>
-  </data>
-  <data name="ToolStripButtonRun.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonRun.Text" xml:space="preserve">
     <value>Exécuter</value>
   </data>
-  <data name="ToolStripButtonStop.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripButtonStop.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ7SURBVDhPfZP9S5NRFMf3xwT9BUGGKRVENdASRCNzmYrD
         gog0NXAvGk4q+kUaVOoUdeZLs80abvMlFZtNMs2pU0uX21h7d/N51L357fQsJ9LswuVe7jnn85znfr+X
@@ -351,12 +351,12 @@
         Ms/DTI5N+Sbm33/Ay7zrUAjLMUKWNQ2PwEhFWoUCcnJeB53/9zEdBL+8HYBaLMUgGeyPWfoqHmK6S5my
         +DcR5GBUxTNvrgAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="ToolStripButtonStop.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonStop.Text" xml:space="preserve">
     <value>Arrêter</value>
   </data>
-  <data name="ToolStripButtonProperties.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripButtonProperties.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKPSURBVDhPtVPbT9JhGOb/Ka2WmkW2DrpwXiFLFMVBHkCX
         5IEfCYiVC7SSQ6EVtdKBupRKUVREZyBZnrC5VTYw55qYF61uujDNnl5/NBxzrqu+m2/79j6H93nfj8PZ
@@ -371,12 +371,12 @@
         xGKkJFdAVjrKKmdkWHDwQA6Baiibp3Sr0Nrq3btIxUXNSE/X4NxZM62zCVlZJkgo7YQECVsskQwiOUkB
         p3P235/LbncjlRRPclU4lBgl+C/nD/Vt58a+BN5BAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="ToolStripButtonProperties.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonProperties.Text" xml:space="preserve">
     <value>Propriétés</value>
   </data>
-  <data name="ToolStripButtonDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripButtonDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAuWSURBVGhD7VkJVBNmEk5BznAGcpBAAgkJ942cgogiaBWo
         oiJyiYii1ipe9dZ6ILZW69Fa2273tW+71h6rVnfXfT1UFBEabgpKIOUIVwiIoj63x7cTaru62nII7va9
@@ -430,12 +430,12 @@
         tATEGxpvOW5r23GKx7632Zp91VJHZzbpphbld7T0aSRCdVjbMmjDZvBx+Duy8f9QR8ID/wKO+cxkycTb
         FgAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="ToolStripButtonDelete.Text" xml:space="preserve">
+	</data>
+	<data name="ToolStripButtonDelete.Text" xml:space="preserve">
     <value>Supprimer</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         AAABAAoAMDAQAAEABABoBgAApgAAACAgEAABAAQA6AIAAA4HAAAQEBAAAQAEACgBAAD2CQAAMDAAAAEA
         CACoDgAAHgsAACAgAAABAAgAqAgAAMYZAAAQEAAAAQAIAGgFAABuIgAAAAAAAAEAIABpFAEA1icAADAw
         AAABACAAqCUAAD88AQAgIAAAAQAgAKgQAADnYQEAEBAAAAEAIABoBAAAj3IBACgAAAAwAAAAYAAAAAEA
@@ -2037,8 +2037,11 @@
         YVprYmJe8l5cVpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAA4AAAAAAAAAAA
         AAAAAAAAAIAAAAAAAAAAAB8AAAAfAAAAHwAAAB8AAAAfAAAAHwAAAB8AAAAfAADx/wAA
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
+	</data>
+	<data name="$this.Text" xml:space="preserve">
     <value>Planificateur de tâches Wake On LAN</value>
   </data>
+	<data name="ToolStripLabel1.Text" xml:space="preserve">
+		<value>Actions</value>
+	</data>
 </root>

@@ -334,9 +334,6 @@
 	<data name="Label1.TabIndex" type="System.Int32, mscorlib">
 		<value>3</value>
 	</data>
-	<data name="LabelHeader.Text" xml:space="preserve">
-    <value>WakeOnLAN Packets received...</value>
-  </data>
 	<data name="&gt;&gt;Button_clear.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -363,9 +360,6 @@
   </data>
 	<data name="&gt;&gt;Label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="ColumnHeader_Name.Text" xml:space="preserve">
-    <value>Name</value>
   </data>
 	<data name="LabelHeader.Size" type="System.Drawing.Size, System.Drawing">
 		<value>130, 16</value>
@@ -397,9 +391,6 @@
 	<data name="Button_clear.Size" type="System.Drawing.Size, System.Drawing">
 		<value>75, 23</value>
 	</data>
-	<data name="Label1.Text" xml:space="preserve">
-    <value>UDP port 9</value>
-  </data>
 	<data name="&gt;&gt;LabelHeader.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -586,18 +577,9 @@
 	<data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-	<data name="lUDPport.Text" xml:space="preserve">
-    <value>Listening on:</value>
-  </data>
-	<data name="Button_clear.Text" xml:space="preserve">
-    <value>Clear</value>
-  </data>
 	<data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
 		<value>128, 71</value>
 	</data>
-	<data name="ColumnHeader_IP.Text" xml:space="preserve">
-    <value>IP</value>
-  </data>
 	<data name="Button_clear.Location" type="System.Drawing.Point, System.Drawing">
 		<value>12, 405</value>
 	</data>
@@ -622,17 +604,11 @@
 	<data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
-	<data name="ColumnHeader_Time.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
 	<data name="lUDPport.Size" type="System.Drawing.Size, System.Drawing">
 		<value>116, 20</value>
 	</data>
 	<data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-	<data name="$this.Text" xml:space="preserve">
-    <value>Listener</value>
   </data>
 	<data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
     <value>PictureBox1</value>
@@ -648,9 +624,6 @@
 	</data>
 	<data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-	<data name="GroupBox1.Text" xml:space="preserve">
-    <value>Network Settings</value>
   </data>
 	<data name="&gt;&gt;Button_clear.Parent" xml:space="preserve">
     <value>$this</value>
@@ -673,4 +646,25 @@
 	<metadata name="ImageList_Large.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
 		<value>17, 17</value>
 	</metadata>
+	<data name="LabelHeader.Text" xml:space="preserve">
+		<value>Paquets WOL reçu...</value>
+	</data>
+	<data name="ColumnHeader_Name.Text" xml:space="preserve">
+		<value>Nom</value>
+	</data>
+	<data name="Label1.Text" xml:space="preserve">
+		<value>UDP port 9</value>
+	</data>
+	<data name="lUDPport.Text" xml:space="preserve">
+		<value>En écoute sur:</value>
+	</data>
+	<data name="ColumnHeader_IP.Text" xml:space="preserve">
+		<value>IP</value>
+	</data>
+	<data name="ColumnHeader_Time.Text" xml:space="preserve">
+		<value>Temps</value>
+	</data>
+	<data name="GroupBox1.Text" xml:space="preserve">
+		<value>Paramètres réseau</value>
+	</data>
 </root>
