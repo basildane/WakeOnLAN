@@ -134,6 +134,30 @@
   <data name="Cancel_Button.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="LabelInterfaces.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LabelInterfaces.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="LabelInterfaces.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelInterfaces.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ComboBoxAdapters.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ComboBoxAdapters.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="ComboBoxAdapters.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ComboBoxAdapters.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="lbSendTo.Error" xml:space="preserve">
     <value />
   </data>
@@ -244,7 +268,7 @@
     <value>0</value>
   </data>
   <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 344</value>
+    <value>57, 392</value>
   </data>
   <data name="lbUDP.ToolTip" xml:space="preserve">
     <value />
@@ -256,7 +280,7 @@
     <value>0</value>
   </data>
   <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 371</value>
+    <value>79, 419</value>
   </data>
   <data name="lbTTL.ToolTip" xml:space="preserve">
     <value />
@@ -295,18 +319,6 @@
     <value>53, 142</value>
   </data>
   <data name="lbBroadcast.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="IP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="IP.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="IP.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="MachineName.Error" xml:space="preserve">
@@ -499,6 +511,18 @@
     <value>Adresse IP</value>
   </data>
   <data name="lbIP.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IP.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="IP.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="IP.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="$this.Text" xml:space="preserve">
