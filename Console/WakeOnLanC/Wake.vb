@@ -31,7 +31,7 @@ Module Wake
             WOL.AquilaWOLLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, Adapter)
 
         Catch ex As Exception
-            Console.WriteLine(ex.Message)
+            Console.WriteLine(ex.InnerException)
 
         End Try
 

@@ -26,8 +26,7 @@ Public Class CalcSubnet
 
         IpIP.Text = p.IP.Text
         IpBroadcast.Text = ""
-        IpSubnet.Text = "255.255.255.255"
-
+        IpSubnet.Text = IPAddress.Broadcast.ToString()
     End Sub
 
     Private Function GetBroadcastAddress(address As IPAddress, subnetMask As IPAddress) As IPAddress
@@ -49,8 +48,8 @@ Public Class CalcSubnet
 
     Private Sub bCalculate_Click(sender As System.Object, e As System.EventArgs) Handles bCalculate.Click
         Try
-            If (IpSubnet.Text = "255.255.255.255") Then
-                IpBroadcast.Text = "255.255.255.255"
+            If (IpSubnet.Text = IPAddress.Broadcast.ToString()) Then
+                IpBroadcast.Text = IPAddress.Broadcast.ToString()
             Else
                 IpBroadcast.Text = GetBroadcastAddress(IPAddress.Parse(IpIP.Text), IPAddress.Parse(IpSubnet.Text)).ToString()
             End If
