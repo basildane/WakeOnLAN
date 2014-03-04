@@ -38,14 +38,14 @@ Public Class Listener
     Private Sub ReceiveMessages()
         Try
             gso.EndPoint = New IPEndPoint(IPAddress.Any, 9)
-
             gso.Socket = New Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp)
             gso.Socket.EnableBroadcast = True
+
+            gso.Socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, True)
+            gso.Socket.ExclusiveAddressUse = False
+
             gso.Socket.Bind(gso.EndPoint)
-
             gso.Socket.BeginReceiveFrom(gso.Buffer, 0, gso.Buffer.Length, SocketFlags.None, gso.EndPoint, New AsyncCallback(AddressOf Async_Send_Receive), gso)
-
-            'Throw New Exception
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString, "ReceiveMessages")
