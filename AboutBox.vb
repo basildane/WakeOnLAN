@@ -17,6 +17,8 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.Globalization
+Imports System.Reflection
+Imports System.Linq
 Imports AutoUpdaterDotNET
 
 Public NotInheritable Class AboutBox
@@ -25,10 +27,17 @@ Public NotInheritable Class AboutBox
         Me.LabelProductName.Text = My.Resources.Strings.Title
         LabelVersion.Text = System.String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
         Me.LabelCopyright.Text = My.Application.Info.Copyright
-        LabelFullVersion.Text = My.Application.Info.Version.ToString
+
+        LabelVersion.Text &= " (" & My.Application.Info.Version.Revision & ")"
+
 #If DEBUG Then
-        LabelFullVersion.Text &= " [DEBUG]"
+        LabelVersion.Text &= " [DEBUG]"
 #End If
+
+        ListBox1.Items.Clear()
+        For Each a As AssemblyName In Assembly.GetExecutingAssembly().GetReferencedAssemblies().ToArray()
+            ListBox1.Items.Add(String.Format("{0}, version: {1}", a.Name, a.Version))
+        Next
 
         AutoUpdater.CurrentCulture = Application.CurrentCulture
         AutoUpdater.AppCastURL = My.Settings.updateURL
@@ -67,7 +76,7 @@ Public NotInheritable Class AboutBox
         Me.Close()
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         System.Diagnostics.Process.Start(LinkLabel1.Text)
     End Sub
 
