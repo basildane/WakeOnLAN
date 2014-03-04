@@ -34,8 +34,7 @@ Module Wake
                 host = machine.Netbios
             End If
 
-            Debug.WriteLine(String.Format("WakeUp: [{0}] [{1}] / [{2}] port: {3} TTL: {4}", machine.Name, machine.MAC, host, machine.UDPPort, machine.TTL))
-            WOL.AquilaWOLLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
+            WOL.AquilaWOLLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, machine.Adapter)
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

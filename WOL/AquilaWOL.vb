@@ -45,7 +45,11 @@ Public Class AquilaWOLLibrary
                 localEndPoint = New IPEndPoint(IPAddress.Parse(Adapter), UDPPort)
             End If
 
-            client = New UdpClient(localEndPoint)
+            client = New UdpClient()
+            client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, True)
+            client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.Broadcast, True)
+            client.ExclusiveAddressUse = False
+            client.Client.Bind(localEndPoint)
             client.Connect(Network, UDPPort)
             client.EnableBroadcast = True
             client.Ttl = TTL

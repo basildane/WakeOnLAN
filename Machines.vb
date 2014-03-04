@@ -22,7 +22,6 @@ Imports System.Net.NetworkInformation
 Imports System.Xml.Serialization
 Imports System.Net
 
-
 Module MachinesModule
     Public Machines As New MachinesClass
 End Module
@@ -90,7 +89,7 @@ Public Class MachinesClass
         For Each machine As Machine In Machines
             If (machine.Broadcast = "") Then
                 dirty = True
-                machine.Broadcast = "255.255.255.255"
+                machine.Broadcast = IPAddress.Broadcast.ToString()
             End If
             If (machine.UDPPort = 0) Then
                 dirty = True
@@ -282,6 +281,16 @@ End Class
         End Get
         Set(ByVal value As Integer)
             _TTL = value
+        End Set
+    End Property
+
+    Private _Adapter As String
+    Public Property Adapter() As String
+        Get
+            Return _Adapter
+        End Get
+        Set(value As String)
+            _Adapter = value
         End Set
     End Property
 
