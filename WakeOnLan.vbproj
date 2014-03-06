@@ -1095,7 +1095,6 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>"$(FrameworkSDKDir)Bin\NETFX 4.5.1 Tools\sgen.exe" $(TargetDir)$(TargetFileName) /t:WakeOnLan.Task /t:WakeOnLan.Machine /force</PostBuildEvent>
   </PropertyGroup>
 </Project>

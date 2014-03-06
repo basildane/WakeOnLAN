@@ -21,7 +21,7 @@ Imports System.ComponentModel
 Imports System.Management
 
 Public Class ShutdownThread
-    Public Enum Action
+    Public Enum shutdownAction
         None
         Abort
         Shutdown
@@ -33,14 +33,14 @@ Public Class ShutdownThread
     Private WithEvents BackgroundWorker1 As New BackgroundWorker
     Private _item As ListViewItem
     Private _progressbar As ProgressBar
-    Private _action As Action
+    Private _action As shutdownAction
     Private _Message As String
     Private _delay As Integer
     Private _force As Boolean
     Private _reboot As Boolean
     Private errMessage As String
 
-    Public Sub New(ByVal item As ListViewItem, ByVal progressbar As ProgressBar, ByVal action As Action, ByVal Message As String, ByVal Delay As Integer, ByVal Force As Boolean, ByVal Reboot As Boolean)
+    Public Sub New(ByVal item As ListViewItem, ByVal progressbar As ProgressBar, ByVal action As shutdownAction, ByVal Message As String, ByVal Delay As Integer, ByVal Force As Boolean, ByVal Reboot As Boolean)
         _item = item
         _progressbar = progressbar
         _action = action
@@ -74,20 +74,20 @@ Public Class ShutdownThread
 
         _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
 
-        If (_action <> Action.Abort And m.ShutdownCommand.Length > 0) Then _action = Action.User
+        If (_action <> shutdownAction.Abort And m.ShutdownCommand.Length > 0) Then _action = shutdownAction.User
 
         Try
             Select Case _action
-                Case Action.Abort
+                Case shutdownAction.Abort
                     dwResult = AbortSystemShutdown(sMachine)
 
-                Case Action.Shutdown
+                Case shutdownAction.Shutdown
                     dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
 
-                Case Action.User
+                Case shutdownAction.User
                     Shell(m.ShutdownCommand, AppWinStyle.Hide, False)
 
-                Case Action.Sleep, Action.Hibernate
+                Case shutdownAction.Sleep, shutdownAction.Hibernate
                     dwResult = WMIpower(sMachine)
 
             End Select
@@ -127,10 +127,10 @@ Public Class ShutdownThread
 
         inparams = process.GetMethodParameters("Create")
         Select Case _action
-            Case Action.Sleep
+            Case shutdownAction.Sleep
                 inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
 
-            Case Action.Hibernate
+            Case shutdownAction.Hibernate
                 inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
 
         End Select

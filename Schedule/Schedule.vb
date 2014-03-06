@@ -21,8 +21,8 @@ Imports System.Security.AccessControl
 Imports System.Security.Principal
 
 Public Class Schedule
-    Dim sc As TaskScheduler.TaskScheduler
-    Dim folder As ITaskFolder
+    Dim scheduler As TaskScheduler.TaskScheduler
+    Dim taskFolder As ITaskFolder
 
     Private Sub Schedule_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Location = My.Settings.schedulerWindowLocation
@@ -30,23 +30,23 @@ Public Class Schedule
 
         GetListViewState(ListViewSchedule, My.Settings.schedulerColumns)
 
-        sc = New TaskScheduler.TaskScheduler
-        sc.Connect()
+        scheduler = New TaskScheduler.TaskScheduler
+        scheduler.Connect()
 
-        folder = sc.GetFolder("\")
+        taskFolder = scheduler.GetFolder("\")
         Try
-            folder = folder.GetFolder("Aquila Technology")
+            taskFolder = taskFolder.GetFolder("Aquila Technology")
 
         Catch ex As Exception
-            folder = folder.CreateFolder("Aquila Technology")
+            taskFolder = taskFolder.CreateFolder("Aquila Technology")
 
         End Try
 
         Try
-            folder = folder.GetFolder("Wake On LAN")
+            taskFolder = taskFolder.GetFolder("Wake On LAN")
 
         Catch ex As Exception
-            folder = folder.CreateFolder("Wake On LAN")
+            taskFolder = taskFolder.CreateFolder("Wake On LAN")
 
         End Try
 
@@ -65,7 +65,7 @@ Public Class Schedule
 
         Timer1.Stop()
 
-        tasks = folder.GetTasks(_TASK_ENUM_FLAGS.TASK_ENUM_HIDDEN)
+        tasks = taskFolder.GetTasks(_TASK_ENUM_FLAGS.TASK_ENUM_HIDDEN)
 
         With ListViewSchedule
             .Items.Clear()
@@ -109,7 +109,7 @@ Public Class Schedule
         Dim task As IRegisteredTask
 
         For Each li As ListViewItem In ListViewSchedule.SelectedItems
-            task = folder.GetTask(li.Text)
+            task = taskFolder.GetTask(li.Text)
             task.Run(vbNull)
         Next
     End Sub
@@ -118,14 +118,14 @@ Public Class Schedule
         Dim task As IRegisteredTask
 
         For Each li As ListViewItem In ListViewSchedule.SelectedItems
-            task = folder.GetTask(li.Text)
+            task = taskFolder.GetTask(li.Text)
             task.Stop(0)
         Next
     End Sub
 
     Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteToolStripMenuItem.Click, ToolStripButtonDelete.Click
         For Each li As ListViewItem In ListViewSchedule.SelectedItems
-            folder.DeleteTask(li.Text, 0)
+            taskFolder.DeleteTask(li.Text, 0)
         Next
         RefreshList()
     End Sub
@@ -144,7 +144,7 @@ Public Class Schedule
         If ListViewSchedule.SelectedItems.Count <> 1 Then Exit Sub
         li = ListViewSchedule.SelectedItems(0)
 
-        itask = folder.GetTask(li.Text)
+        itask = taskFolder.GetTask(li.Text)
         myTask = myTask.Deserialize(itask.Definition.Data)
         If myTask Is Nothing Then Exit Sub
         Edit(myTask)
@@ -167,7 +167,7 @@ Public Class Schedule
             exe = """" & IO.Path.Combine(My.Application.Info.DirectoryPath, "WakeOnLANc.exe") & """"
 
             Try
-                iTask = sc.NewTask(0)
+                iTask = scheduler.NewTask(0)
                 With iTask
                     .RegistrationInfo.Author = My.User.Name
                     .RegistrationInfo.Description = MyTask.Description
@@ -333,11 +333,16 @@ Public Class Schedule
 
                 End With
 
+
+                'Debug.WriteLine(CStr(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\[start]", "Name", Nothing)))
+
                 iTask.Data = MyTask.Serialize
-                folder.RegisterTaskDefinition(MyTask.Name, iTask, _
+                taskFolder.RegisterTaskDefinition(MyTask.Name, iTask, _
                     _TASK_CREATION.TASK_CREATE_OR_UPDATE, _
                     My.Settings.TaskUserID, Encrypt.EnigmaDecrypt(My.Settings.TaskPassword), _
                     _TASK_LOGON_TYPE.TASK_LOGON_PASSWORD, "")
+
+                'Debug.WriteLine(CStr(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\[stop]", "Name", Nothing)))
 
                 Result = True
 
@@ -424,7 +429,7 @@ Public Class Schedule
         Dim task As IRegisteredTask
 
         For Each li As ListViewItem In ListViewSchedule.SelectedItems
-            task = folder.GetTask(li.Text)
+            task = taskFolder.GetTask(li.Text)
             task.Enabled = False
         Next
     End Sub
@@ -433,7 +438,7 @@ Public Class Schedule
         Dim task As IRegisteredTask
 
         For Each li As ListViewItem In ListViewSchedule.SelectedItems
-            task = folder.GetTask(li.Text)
+            task = taskFolder.GetTask(li.Text)
             task.Enabled = True
         Next
     End Sub
@@ -450,7 +455,7 @@ Public Class Schedule
         For Each li As ListViewItem In ListViewSchedule.Items
 
             Try
-                task = folder.GetTask(li.Text)
+                task = taskFolder.GetTask(li.Text)
                 li.SubItems(1).Text = IIf(task.Enabled, My.Resources.Strings.lit_Enabled, My.Resources.Strings.lit_Disabled)
 
                 If li.SubItems(2).Text = "" Then

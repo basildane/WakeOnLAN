@@ -364,8 +364,10 @@
 		<row><td>WakeOnLan.Localized_resources1</td><td>{34876FCA-05EA-4D72-81EA-3715818D0E92}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.localized_resource</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WakeOnLan.Primary_output</td><td>{80DFBEAD-8531-46CB-AAF3-8226E53F14C8}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WakeOnLan.Primary_output1</td><td>{E101AE39-D384-47D9-B622-516A6548F884}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WakeOnLan.XmlSerializers.dll</td><td>{A08E9318-FEAF-4B80-AF1F-5DBB63EA8B9C}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.xmlserializers.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WakeOnLanC.Primary_output</td><td>{9154A051-03B8-42AC-89C8-1F563619C4AC}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlanc.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WakeOnLanC.Primary_output1</td><td>{9B64BF31-942F-4C18-AEF5-18775E414072}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlanc.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WakeOnLanC.XmlSerializers.dll</td><td>{F098C635-2695-4992-B9F9-1A13C4F27D13}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlanc.xmlserializers.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1929,8 +1931,10 @@
 		<row><td>AlwaysInstall</td><td>WakeOnLan.Localized_resources1</td></row>
 		<row><td>AlwaysInstall</td><td>WakeOnLan.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>WakeOnLan.Primary_output1</td></row>
+		<row><td>AlwaysInstall</td><td>WakeOnLan.XmlSerializers.dll</td></row>
 		<row><td>AlwaysInstall</td><td>WakeOnLanC.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>WakeOnLanC.Primary_output1</td></row>
+		<row><td>AlwaysInstall</td><td>WakeOnLanC.XmlSerializers.dll</td></row>
 	</table>
 
 	<table name="File">
@@ -1998,7 +2002,9 @@
 		<row><td>triggerweekly.png</td><td>ISX_DEFAULTCOMPONENT10</td><td>TRIGGE~1.PNG|triggerWeekly.PNG</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\triggerWeekly.PNG</td><td>1</td><td/></row>
 		<row><td>wakeonlan.localized_resource</td><td>WakeOnLan.Localized_resources1</td><td>WakeOnLan.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLan&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
 		<row><td>wakeonlan.primary_output</td><td>WakeOnLan.Primary_output1</td><td>WakeOnLan.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLan&gt;|Built</td><td>3</td><td/></row>
+		<row><td>wakeonlan.xmlserializers.dll</td><td>WakeOnLan.XmlSerializers.dll</td><td>WAKEON~1.DLL|WakeOnLan.XmlSerializers.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\bin\Release\WakeOnLan.XmlSerializers.dll</td><td>1</td><td/></row>
 		<row><td>wakeonlanc.primary_output</td><td>WakeOnLanC.Primary_output1</td><td>WakeOnLanC.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLanC&gt;|Built</td><td>3</td><td/></row>
+		<row><td>wakeonlanc.xmlserializers.dl</td><td>WakeOnLanC.XmlSerializers.dll</td><td>WAKEON~1.DLL|WakeOnLanC.XmlSerializers.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Console\WakeOnLanC\bin\Release\WakeOnLanC.XmlSerializers.dll</td><td>1</td><td/></row>
 		<row><td>wakeup.png</td><td>ISX_DEFAULTCOMPONENT15</td><td>wakeup.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\wakeup\wakeup.png</td><td>1</td><td/></row>
 		<row><td>wol_logo.png</td><td>ISX_DEFAULTCOMPONENT5</td><td>wol_logo.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\wol_logo.png</td><td>1</td><td/></row>
 	</table>
@@ -2168,8 +2174,10 @@
 		<row><td>WakeOnLan.Localized_resources1</td><td/><td/><td>_1EE1B9AB_3F71_47C0_870C_AC5DAA6DE14B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WakeOnLan.Primary_output</td><td/><td/><td>_03D16AAB_5C09_4436_9726_8C4CB13000F8_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WakeOnLan.Primary_output1</td><td/><td/><td>_D743277E_96A0_4625_B8A1_638497D88656_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WakeOnLan.XmlSerializers.dll</td><td/><td/><td>_69F32CA7_C065_43EA_B766_E78BF0F53CB1_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WakeOnLanC.Primary_output</td><td/><td/><td>_B705EB2F_9FCF_46AE_991D_39318C3E9C9C_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WakeOnLanC.Primary_output1</td><td/><td/><td>_21BA7CCD_4097_4C53_8A0A_DB0F42C4E72E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WakeOnLanC.XmlSerializers.dll</td><td/><td/><td>_A18174AF_1A5A_4AD2_BE7B_E27A9E3D02B1_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -4171,7 +4179,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{22C5B532-1450-4988-A790-76F2EE5F86FD}</td></row>
 		<row><td>ISUSSignature</td><td>{2E77BB16-68D2-40C5-8F3C-87DD6B9E4EF9}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewRealSetupDesign,viewSetupTypes,viewAppFiles,viewISToday,viewFeatureFiles,viewRelease,viewSupportFiles,viewFileExtensions,viewShortcuts,viewUpgradePaths,viewUpdateService,viewObjects,viewDependencies,viewTextFiles,viewUI,viewTextMessages,viewSystemSearch,viewCustomActions,viewSetupDesign,viewAppV,viewServices</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewRealSetupDesign,viewSetupTypes,viewAppFiles,viewISToday,viewFeatureFiles,viewRelease,viewSupportFiles,viewFileExtensions,viewShortcuts,viewUpgradePaths,viewUpdateService,viewObjects,viewDependencies,viewTextFiles,viewUI,viewTextMessages,viewSystemSearch,viewCustomActions,viewSetupDesign,viewAppV,viewServices,viewXMLConfig</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4550,9 +4558,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{D112D960-4AF5-4BFD-8E8E-7E41267EEC58}</td><td/></row>
+		<row><td>ProductCode</td><td>{43E5965A-CD95-46CC-9C6C-AF4AC773BFC8}</td><td/></row>
 		<row><td>ProductName</td><td>WakeOnLAN</td><td/></row>
-		<row><td>ProductVersion</td><td>2.10.0003</td><td/></row>
+		<row><td>ProductVersion</td><td>2.10.0004.01</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4842,7 +4850,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
 		<row><td>{20A416B6-1FE6-468D-85B4-F8952658AA27}</td><td>2.7.5</td><td>2.7.5</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP2</td><td>2.7.5</td></row>
-		<row><td>{53C0B87A-D701-4B9D-B14F-3B7695281A99}</td><td>2.07.0006</td><td>2.10.0002</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP1</td><td>2.7.6 and up</td></row>
+		<row><td>{53C0B87A-D701-4B9D-B14F-3B7695281A99}</td><td>2.07.0006</td><td>2.10.0003</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP1</td><td>2.7.6 and up</td></row>
 	</table>
 
 	<table name="Verb">
