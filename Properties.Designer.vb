@@ -41,18 +41,20 @@ Partial Class Properties
         Me.lbBroadcast = New System.Windows.Forms.Label()
         Me.lbTTL = New System.Windows.Forms.Label()
         Me.lbUDP = New System.Windows.Forms.Label()
+        Me.lbLeaveBlank = New System.Windows.Forms.Label()
+        Me.lbSendTo = New System.Windows.Forms.Label()
         Me.TTL = New WakeOnLan.RegExTextBox()
         Me.UDPPort = New WakeOnLan.RegExTextBox()
         Me.Broadcast = New WakeOnLan.IPAddressControl()
-        Me.IP = New WakeOnLan.IPAddressControl()
         Me.MachineName = New WakeOnLan.RegExTextBox()
         Me.MAC = New WakeOnLan.RegExTextBox()
-        Me.lbLeaveBlank = New System.Windows.Forms.Label()
-        Me.lbSendTo = New System.Windows.Forms.Label()
+        Me.IP = New WakeOnLan.IPAddressControl()
         Me.bCalcBroadcast = New System.Windows.Forms.Button()
         Me.Help_Button = New System.Windows.Forms.Button()
         Me.rbIP = New System.Windows.Forms.RadioButton()
         Me.rbURI = New System.Windows.Forms.RadioButton()
+        Me.ComboBoxAdapters = New System.Windows.Forms.ComboBox()
+        Me.LabelInterfaces = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -210,6 +212,24 @@ Partial Class Properties
         Me.lbUDP.Name = "lbUDP"
         Me.ToolTip1.SetToolTip(Me.lbUDP, resources.GetString("lbUDP.ToolTip"))
         '
+        'lbLeaveBlank
+        '
+        resources.ApplyResources(Me.lbLeaveBlank, "lbLeaveBlank")
+        Me.ErrorProvider1.SetError(Me.lbLeaveBlank, resources.GetString("lbLeaveBlank.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.lbLeaveBlank, CType(resources.GetObject("lbLeaveBlank.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.lbLeaveBlank, CType(resources.GetObject("lbLeaveBlank.IconPadding"), Integer))
+        Me.lbLeaveBlank.Name = "lbLeaveBlank"
+        Me.ToolTip1.SetToolTip(Me.lbLeaveBlank, resources.GetString("lbLeaveBlank.ToolTip"))
+        '
+        'lbSendTo
+        '
+        resources.ApplyResources(Me.lbSendTo, "lbSendTo")
+        Me.ErrorProvider1.SetError(Me.lbSendTo, resources.GetString("lbSendTo.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.lbSendTo, CType(resources.GetObject("lbSendTo.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.lbSendTo, CType(resources.GetObject("lbSendTo.IconPadding"), Integer))
+        Me.lbSendTo.Name = "lbSendTo"
+        Me.ToolTip1.SetToolTip(Me.lbSendTo, resources.GetString("lbSendTo.ToolTip"))
+        '
         'TTL
         '
         resources.ApplyResources(Me.TTL, "TTL")
@@ -245,17 +265,6 @@ Partial Class Properties
         Me.Broadcast.Name = "Broadcast"
         Me.ToolTip1.SetToolTip(Me.Broadcast, resources.GetString("Broadcast.ToolTip"))
         '
-        'IP
-        '
-        resources.ApplyResources(Me.IP, "IP")
-        Me.IP.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.IP.BackColor = System.Drawing.SystemColors.Window
-        Me.ErrorProvider1.SetError(Me.IP, resources.GetString("IP.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.IP, CType(resources.GetObject("IP.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.IP, CType(resources.GetObject("IP.IconPadding"), Integer))
-        Me.IP.Name = "IP"
-        Me.ToolTip1.SetToolTip(Me.IP, resources.GetString("IP.ToolTip"))
-        '
         'MachineName
         '
         resources.ApplyResources(Me.MachineName, "MachineName")
@@ -280,23 +289,16 @@ Partial Class Properties
         Me.ToolTip1.SetToolTip(Me.MAC, resources.GetString("MAC.ToolTip"))
         Me.MAC.ValidationExpression = "^([0-9a-fA-F]{2}([-:])?){5}[0-9a-fA-F]{2}$"
         '
-        'lbLeaveBlank
+        'IP
         '
-        resources.ApplyResources(Me.lbLeaveBlank, "lbLeaveBlank")
-        Me.ErrorProvider1.SetError(Me.lbLeaveBlank, resources.GetString("lbLeaveBlank.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.lbLeaveBlank, CType(resources.GetObject("lbLeaveBlank.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.lbLeaveBlank, CType(resources.GetObject("lbLeaveBlank.IconPadding"), Integer))
-        Me.lbLeaveBlank.Name = "lbLeaveBlank"
-        Me.ToolTip1.SetToolTip(Me.lbLeaveBlank, resources.GetString("lbLeaveBlank.ToolTip"))
-        '
-        'lbSendTo
-        '
-        resources.ApplyResources(Me.lbSendTo, "lbSendTo")
-        Me.ErrorProvider1.SetError(Me.lbSendTo, resources.GetString("lbSendTo.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.lbSendTo, CType(resources.GetObject("lbSendTo.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.lbSendTo, CType(resources.GetObject("lbSendTo.IconPadding"), Integer))
-        Me.lbSendTo.Name = "lbSendTo"
-        Me.ToolTip1.SetToolTip(Me.lbSendTo, resources.GetString("lbSendTo.ToolTip"))
+        resources.ApplyResources(Me.IP, "IP")
+        Me.IP.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
+        Me.IP.BackColor = System.Drawing.SystemColors.Window
+        Me.ErrorProvider1.SetError(Me.IP, resources.GetString("IP.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.IP, CType(resources.GetObject("IP.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.IP, CType(resources.GetObject("IP.IconPadding"), Integer))
+        Me.IP.Name = "IP"
+        Me.ToolTip1.SetToolTip(Me.IP, resources.GetString("IP.ToolTip"))
         '
         'bCalcBroadcast
         '
@@ -340,12 +342,33 @@ Partial Class Properties
         Me.ToolTip1.SetToolTip(Me.rbURI, resources.GetString("rbURI.ToolTip"))
         Me.rbURI.UseVisualStyleBackColor = True
         '
+        'ComboBoxAdapters
+        '
+        resources.ApplyResources(Me.ComboBoxAdapters, "ComboBoxAdapters")
+        Me.ErrorProvider1.SetError(Me.ComboBoxAdapters, resources.GetString("ComboBoxAdapters.Error"))
+        Me.ComboBoxAdapters.FormattingEnabled = True
+        Me.ErrorProvider1.SetIconAlignment(Me.ComboBoxAdapters, CType(resources.GetObject("ComboBoxAdapters.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.ComboBoxAdapters, CType(resources.GetObject("ComboBoxAdapters.IconPadding"), Integer))
+        Me.ComboBoxAdapters.Name = "ComboBoxAdapters"
+        Me.ToolTip1.SetToolTip(Me.ComboBoxAdapters, resources.GetString("ComboBoxAdapters.ToolTip"))
+        '
+        'LabelInterfaces
+        '
+        resources.ApplyResources(Me.LabelInterfaces, "LabelInterfaces")
+        Me.ErrorProvider1.SetError(Me.LabelInterfaces, resources.GetString("LabelInterfaces.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.LabelInterfaces, CType(resources.GetObject("LabelInterfaces.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.LabelInterfaces, CType(resources.GetObject("LabelInterfaces.IconPadding"), Integer))
+        Me.LabelInterfaces.Name = "LabelInterfaces"
+        Me.ToolTip1.SetToolTip(Me.LabelInterfaces, resources.GetString("LabelInterfaces.ToolTip"))
+        '
         'Properties
         '
         Me.AcceptButton = Me.OK_Button
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
+        Me.Controls.Add(Me.LabelInterfaces)
+        Me.Controls.Add(Me.ComboBoxAdapters)
         Me.Controls.Add(Me.lbSendTo)
         Me.Controls.Add(Me.rbURI)
         Me.Controls.Add(Me.rbIP)
@@ -359,7 +382,6 @@ Partial Class Properties
         Me.Controls.Add(Me.Broadcast)
         Me.Controls.Add(Me.lbBroadcast)
         Me.Controls.Add(Me.OK_Button)
-        Me.Controls.Add(Me.IP)
         Me.Controls.Add(Me.Cancel_Button)
         Me.Controls.Add(Me.MachineName)
         Me.Controls.Add(Me.MAC)
@@ -374,6 +396,7 @@ Partial Class Properties
         Me.Controls.Add(Me.lbName)
         Me.Controls.Add(Me.lbMAC)
         Me.Controls.Add(Me.lbIP)
+        Me.Controls.Add(Me.IP)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -415,5 +438,7 @@ Partial Class Properties
     Friend WithEvents rbURI As System.Windows.Forms.RadioButton
     Friend WithEvents rbIP As System.Windows.Forms.RadioButton
     Friend WithEvents lbLeaveBlank As System.Windows.Forms.Label
+    Friend WithEvents ComboBoxAdapters As System.Windows.Forms.ComboBox
+    Friend WithEvents LabelInterfaces As System.Windows.Forms.Label
 
 End Class
