@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Wake On LAN library")> 
 <Assembly: AssemblyCompany("Aquila Technology")> 
 <Assembly: AssemblyProduct("WOL")> 
-<Assembly: AssemblyCopyright("Copyright (c) 2004 - 2014, Aquila Technology, LLC.")> 
+<Assembly: AssemblyCopyright("Copyright (c) 2004 - 2014, Aquila Technology")> 
 <Assembly: AssemblyTrademark("All rights reserved.")> 
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("2.10.3.1")> 
-<Assembly: AssemblyFileVersion("2.10.3.1")> 
+<Assembly: AssemblyVersion("2.10.4.0")> 
+<Assembly: AssemblyFileVersion("2.10.4.0")> 
