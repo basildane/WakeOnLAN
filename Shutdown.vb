@@ -41,10 +41,10 @@ Public Class Shutdown
         shut_reboot.Checked = My.Settings.Reboot
 
         Select Case My.Settings.shutdownAction
-            Case ShutdownThread.Action.Sleep
+            Case ShutdownThread.shutdownAction.Sleep
                 rbSleep.Checked = True
 
-            Case ShutdownThread.Action.Hibernate
+            Case ShutdownThread.shutdownAction.Hibernate
                 rbHibernate.Checked = True
 
             Case Else
@@ -82,10 +82,10 @@ Public Class Shutdown
         shut_reboot.Checked = False
 
         Select Case My.Settings.shutdownAction
-            Case ShutdownThread.Action.Sleep
+            Case ShutdownThread.shutdownAction.Sleep
                 rbSleep.Checked = True
 
-            Case ShutdownThread.Action.Hibernate
+            Case ShutdownThread.shutdownAction.Hibernate
                 rbHibernate.Checked = True
 
             Case Else
@@ -123,7 +123,7 @@ Public Class Shutdown
         For Each item As ListViewItem In ListView1.Items
             If item.SubItems(1).Text = My.Resources.Strings.ShuttingDown Then
                 item.SubItems(1).Text = My.Resources.Strings.Aborting
-                Dim st As New ShutdownThread(item, ProgressBar1, ShutdownThread.Action.Abort, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
+                Dim st As New ShutdownThread(item, ProgressBar1, ShutdownThread.shutdownAction.Abort, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
             End If
         Next
 
@@ -173,13 +173,13 @@ Public Class Shutdown
     End Sub
 
     Private Sub ShutdownButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ShutdownButton.Click
-        Dim action As ShutdownThread.Action
+        Dim action As ShutdownThread.shutdownAction
 
         Me.Cursor = Cursors.WaitCursor
 
-        If (rbShutdown.Checked) Then action = ShutdownThread.Action.Shutdown
-        If (rbSleep.Checked) Then action = ShutdownThread.Action.Sleep
-        If (rbHibernate.Checked) Then action = ShutdownThread.Action.Hibernate
+        If (rbShutdown.Checked) Then action = ShutdownThread.shutdownAction.Shutdown
+        If (rbSleep.Checked) Then action = ShutdownThread.shutdownAction.Sleep
+        If (rbHibernate.Checked) Then action = ShutdownThread.shutdownAction.Hibernate
 
         My.Settings.DefaultMessage = shut_message.Text
         My.Settings.DefaultTimeout = shut_timeout.Text
