@@ -50,7 +50,7 @@ Public Class Properties
         End If
 
         m.Broadcast = Broadcast.Text
-        m.Netbios = Edit_NETBIOS.Text
+        m.Netbios = tHostURI.Text
         m.Emergency = CheckBox_Emergency.Checked
         m.ShutdownCommand = TextBox_Command.Text
         m.Group = Group.Text
@@ -95,7 +95,7 @@ Public Class Properties
         MAC.Text = m.MAC
         IP.Text = m.IP
         Broadcast.Text = m.Broadcast
-        Edit_NETBIOS.Text = m.Netbios
+        tHostURI.Text = m.Netbios
         CheckBox_Emergency.Checked = m.Emergency
         TextBox_Command.Text = m.ShutdownCommand
         Group.Text = m.Group
@@ -204,6 +204,14 @@ Public Class Properties
         Globals.ShowHelp(Me, "properties\default.html")
     End Sub
 
+    Private Sub tHostURI_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles tHostURI.Validating
+        If tHostURI.IsValid() Then
+            Me.ErrorProvider1.SetError(sender, "")
+        Else
+            Me.ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidName)
+        End If
+        CheckValidation()
+    End Sub
 End Class
 
 Public Class ComboboxItem

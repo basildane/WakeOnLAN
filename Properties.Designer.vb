@@ -33,7 +33,6 @@ Partial Class Properties
         Me.TextBox_Command = New System.Windows.Forms.TextBox()
         Me.lbShutdownCommand = New System.Windows.Forms.Label()
         Me.CheckBox_Emergency = New System.Windows.Forms.CheckBox()
-        Me.Edit_NETBIOS = New System.Windows.Forms.TextBox()
         Me.Delete_Button = New System.Windows.Forms.Button()
         Me.Group = New System.Windows.Forms.TextBox()
         Me.lbGroup = New System.Windows.Forms.Label()
@@ -55,6 +54,7 @@ Partial Class Properties
         Me.rbURI = New System.Windows.Forms.RadioButton()
         Me.ComboBoxAdapters = New System.Windows.Forms.ComboBox()
         Me.LabelInterfaces = New System.Windows.Forms.Label()
+        Me.tHostURI = New WakeOnLan.RegExTextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -142,15 +142,6 @@ Partial Class Properties
         Me.CheckBox_Emergency.Name = "CheckBox_Emergency"
         Me.ToolTip1.SetToolTip(Me.CheckBox_Emergency, resources.GetString("CheckBox_Emergency.ToolTip"))
         Me.CheckBox_Emergency.UseVisualStyleBackColor = True
-        '
-        'Edit_NETBIOS
-        '
-        resources.ApplyResources(Me.Edit_NETBIOS, "Edit_NETBIOS")
-        Me.ErrorProvider1.SetError(Me.Edit_NETBIOS, resources.GetString("Edit_NETBIOS.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.Edit_NETBIOS, CType(resources.GetObject("Edit_NETBIOS.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.Edit_NETBIOS, CType(resources.GetObject("Edit_NETBIOS.IconPadding"), Integer))
-        Me.Edit_NETBIOS.Name = "Edit_NETBIOS"
-        Me.ToolTip1.SetToolTip(Me.Edit_NETBIOS, resources.GetString("Edit_NETBIOS.ToolTip"))
         '
         'Delete_Button
         '
@@ -361,12 +352,25 @@ Partial Class Properties
         Me.LabelInterfaces.Name = "LabelInterfaces"
         Me.ToolTip1.SetToolTip(Me.LabelInterfaces, resources.GetString("LabelInterfaces.ToolTip"))
         '
+        'tHostURI
+        '
+        resources.ApplyResources(Me.tHostURI, "tHostURI")
+        Me.ErrorProvider1.SetError(Me.tHostURI, resources.GetString("tHostURI.Error"))
+        Me.tHostURI.ErrorColor = System.Drawing.Color.Red
+        Me.tHostURI.ErrorMessage = Nothing
+        Me.ErrorProvider1.SetIconAlignment(Me.tHostURI, CType(resources.GetObject("tHostURI.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.tHostURI, CType(resources.GetObject("tHostURI.IconPadding"), Integer))
+        Me.tHostURI.Name = "tHostURI"
+        Me.ToolTip1.SetToolTip(Me.tHostURI, resources.GetString("tHostURI.ToolTip"))
+        Me.tHostURI.ValidationExpression = "^(?!\s*$).+"
+        '
         'Properties
         '
         Me.AcceptButton = Me.OK_Button
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
+        Me.Controls.Add(Me.tHostURI)
         Me.Controls.Add(Me.LabelInterfaces)
         Me.Controls.Add(Me.ComboBoxAdapters)
         Me.Controls.Add(Me.lbSendTo)
@@ -388,7 +392,6 @@ Partial Class Properties
         Me.Controls.Add(Me.Group)
         Me.Controls.Add(Me.lbGroup)
         Me.Controls.Add(Me.Delete_Button)
-        Me.Controls.Add(Me.Edit_NETBIOS)
         Me.Controls.Add(Me.TextBox_Command)
         Me.Controls.Add(Me.lbShutdownCommand)
         Me.Controls.Add(Me.CheckBox_Emergency)
@@ -417,7 +420,6 @@ Partial Class Properties
     Friend WithEvents TextBox_Command As System.Windows.Forms.TextBox
     Friend WithEvents lbShutdownCommand As System.Windows.Forms.Label
     Friend WithEvents CheckBox_Emergency As System.Windows.Forms.CheckBox
-    Friend WithEvents Edit_NETBIOS As System.Windows.Forms.TextBox
     Friend WithEvents Delete_Button As System.Windows.Forms.Button
     Friend WithEvents Group As System.Windows.Forms.TextBox
     Friend WithEvents lbGroup As System.Windows.Forms.Label
@@ -440,5 +442,6 @@ Partial Class Properties
     Friend WithEvents lbLeaveBlank As System.Windows.Forms.Label
     Friend WithEvents ComboBoxAdapters As System.Windows.Forms.ComboBox
     Friend WithEvents LabelInterfaces As System.Windows.Forms.Label
+    Friend WithEvents tHostURI As WakeOnLan.RegExTextBox
 
 End Class

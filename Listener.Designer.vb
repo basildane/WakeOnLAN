@@ -41,10 +41,10 @@ Partial Class Listener
         '
         'ListView1
         '
-        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader_IP, Me.ColumnHeader_Time, Me.ColumnHeader_Name})
         Me.ListView1.FullRowSelect = True
         Me.ListView1.LargeImageList = Me.ImageList_Large
+        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.Name = "ListView1"
         Me.ListView1.TileSize = New System.Drawing.Size(410, 52)
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -70,8 +70,8 @@ Partial Class Listener
         '
         'PictureBox1
         '
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Image = Global.WakeOnLan.My.Resources.Resources.network_transmit
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
@@ -83,9 +83,9 @@ Partial Class Listener
         '
         'GroupBox1
         '
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.lUDPport)
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         '
@@ -118,7 +118,6 @@ Partial Class Listener
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ListView1 As System.Windows.Forms.ListView

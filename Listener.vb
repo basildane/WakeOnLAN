@@ -28,6 +28,9 @@ Public Class Listener
 
     Private Sub Listener_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ListView1.Items.Clear()
+    End Sub
+
+    Private Sub Listener_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         ReceiveMessages()
     End Sub
 
@@ -48,7 +51,14 @@ Public Class Listener
             gso.Socket.BeginReceiveFrom(gso.Buffer, 0, gso.Buffer.Length, SocketFlags.None, gso.EndPoint, New AsyncCallback(AddressOf Async_Send_Receive), gso)
 
         Catch ex As Exception
-            MessageBox.Show(ex.ToString, "ReceiveMessages")
+            ' Handle the HelpRequested event for the following message.
+            AddHandler Me.HelpRequested, AddressOf Me.Listener_HelpRequested
+
+            MessageBox.Show(ex.Message & "." & vbCrLf & "Click HELP for advice on fixing this.", "ReceiveMessages", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, 0, True)
+
+            ' Remove the HelpRequested event handler to keep the event
+            ' from being handled for other message boxes.
+            RemoveHandler Me.HelpRequested, AddressOf Me.Listener_HelpRequested
 
         End Try
     End Sub
@@ -70,7 +80,6 @@ Public Class Listener
             Debug.WriteLine("Socket closed")
 
         Catch ex As Exception
-            Debug.WriteLine(ex.Message)
             MessageBox.Show(ex.ToString, "Async_Send_Receive")
 
         End Try
@@ -172,6 +181,11 @@ Public Class Listener
     Private Sub Button_clear_Click(sender As System.Object, e As System.EventArgs) Handles Button_clear.Click
         ListView1.Items.Clear()
     End Sub
+
+    Private Sub Listener_HelpRequested(sender As Object, hlpevent As HelpEventArgs)
+        Globals.ShowHelp(Me, "troubleshooting\listener.html")
+    End Sub
+
 End Class
 
 Friend Class StateObject
