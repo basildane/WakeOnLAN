@@ -117,28 +117,25 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="RepEmergency" xml:space="preserve">
-    <value>Hätäsammutus?</value>
-    <comment>Emergency shutdown?</comment>
+	<data name="$this.Text" xml:space="preserve">
+    <value>Bereken subnet</value>
   </data>
-	<data name="RepIP" xml:space="preserve">
-    <value>IP-osoite</value>
-    <comment>IP Address</comment>
-  </data>
-	<data name="RepMAC" xml:space="preserve">
-    <value>MAC-osoite</value>
-    <comment>MAC Address</comment>
-  </data>
-	<data name="RepName" xml:space="preserve">
-    <value>Nimi</value>
-    <comment>Name</comment>
-  </data>
-	<data name="RepNetbios" xml:space="preserve">
-    <value>Netbios nimi</value>
-    <comment>Netbios name</comment>
-  </data>
-	<data name="RepShutdown" xml:space="preserve">
-    <value>Sammuta komentokehoite</value>
-    <comment>Shutdown command line</comment>
-  </data>
+	<data name="lIP.Text" xml:space="preserve">
+		<value>IP-adres</value>
+	</data>
+	<data name="lSubnet.Text" xml:space="preserve">
+		<value>Subnet</value>
+	</data>
+	<data name="bCalculate.Text" xml:space="preserve">
+		<value>Bereken</value>
+	</data>
+	<data name="lHeader.Text" xml:space="preserve">
+		<value>Deze functie helpt bij het zoeken naar het beste "Broadcast-adres", gebaseerd op het IP-adres en het subnet.</value>
+	</data>
+	<data name="lRecommended.Text" xml:space="preserve">
+		<value>Vergestelde broadcast-adres:</value>
+	</data>
+	<data name="bOK.Text" xml:space="preserve">
+		<value>OK</value>
+	</data>
 </root>

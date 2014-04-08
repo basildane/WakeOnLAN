@@ -144,11 +144,12 @@ Partial Class Explorer
         Me.PortugueseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeutschToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FrenchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HungaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DutchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RussianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FinnishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnglishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TaiwanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HungaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchForMachinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -641,7 +642,7 @@ Partial Class Explorer
         '
         'LanguageToolStripMenuItem
         '
-        Me.LanguageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PortugueseToolStripMenuItem, Me.DeutschToolStripMenuItem, Me.FrenchToolStripMenuItem, Me.RussianToolStripMenuItem, Me.FinnishToolStripMenuItem, Me.EnglishToolStripMenuItem, Me.TaiwanToolStripMenuItem, Me.HungaryToolStripMenuItem})
+        Me.LanguageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PortugueseToolStripMenuItem, Me.DeutschToolStripMenuItem, Me.FrenchToolStripMenuItem, Me.HungaryToolStripMenuItem, Me.DutchToolStripMenuItem, Me.RussianToolStripMenuItem, Me.FinnishToolStripMenuItem, Me.EnglishToolStripMenuItem, Me.TaiwanToolStripMenuItem})
         Me.LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem"
         resources.ApplyResources(Me.LanguageToolStripMenuItem, "LanguageToolStripMenuItem")
         '
@@ -662,6 +663,18 @@ Partial Class Explorer
         resources.ApplyResources(Me.FrenchToolStripMenuItem, "FrenchToolStripMenuItem")
         Me.FrenchToolStripMenuItem.Name = "FrenchToolStripMenuItem"
         Me.FrenchToolStripMenuItem.Tag = "fr-FR"
+        '
+        'HungaryToolStripMenuItem
+        '
+        resources.ApplyResources(Me.HungaryToolStripMenuItem, "HungaryToolStripMenuItem")
+        Me.HungaryToolStripMenuItem.Name = "HungaryToolStripMenuItem"
+        Me.HungaryToolStripMenuItem.Tag = "hu-HU"
+        '
+        'DutchToolStripMenuItem
+        '
+        resources.ApplyResources(Me.DutchToolStripMenuItem, "DutchToolStripMenuItem")
+        Me.DutchToolStripMenuItem.Name = "DutchToolStripMenuItem"
+        Me.DutchToolStripMenuItem.Tag = "nl-NL"
         '
         'RussianToolStripMenuItem
         '
@@ -688,12 +701,6 @@ Partial Class Explorer
         resources.ApplyResources(Me.TaiwanToolStripMenuItem, "TaiwanToolStripMenuItem")
         Me.TaiwanToolStripMenuItem.Name = "TaiwanToolStripMenuItem"
         Me.TaiwanToolStripMenuItem.Tag = "zh-TW"
-        '
-        'HungaryToolStripMenuItem
-        '
-        resources.ApplyResources(Me.HungaryToolStripMenuItem, "HungaryToolStripMenuItem")
-        Me.HungaryToolStripMenuItem.Name = "HungaryToolStripMenuItem"
-        Me.HungaryToolStripMenuItem.Tag = "hu-HU"
         '
         'ToolsToolStripMenuItem
         '
@@ -904,5 +911,6 @@ Partial Class Explorer
     Friend WithEvents Group As System.Windows.Forms.ColumnHeader
     Friend WithEvents HungaryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ListenerToolStripButton As System.Windows.Forms.ToolStripButton
+    Friend WithEvents DutchToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

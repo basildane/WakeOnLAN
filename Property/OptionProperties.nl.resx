@@ -117,28 +117,127 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="RepEmergency" xml:space="preserve">
-    <value>Hätäsammutus?</value>
-    <comment>Emergency shutdown?</comment>
+	<data name="Broadcast_Address" xml:space="preserve">
+    <value>Broadcast-address</value>
+    <comment>Broadcast Address</comment>
   </data>
-	<data name="RepIP" xml:space="preserve">
-    <value>IP-osoite</value>
-    <comment>IP Address</comment>
+	<data name="Broadcast_AddressDescription" xml:space="preserve">
+    <value>Geef broadcast IP-adres op voor WOL broadcast pakketten.</value>
+    <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
-	<data name="RepMAC" xml:space="preserve">
-    <value>MAC-osoite</value>
-    <comment>MAC Address</comment>
+	<data name="cat_Emergency" xml:space="preserve">
+    <value>Noodinstellingen</value>
+    <comment>Emergency settings</comment>
   </data>
-	<data name="RepName" xml:space="preserve">
-    <value>Nimi</value>
-    <comment>Name</comment>
+	<data name="cat_Shutdown" xml:space="preserve">
+    <value>Afsluiten</value>
+    <comment>Shutdown</comment>
   </data>
-	<data name="RepNetbios" xml:space="preserve">
-    <value>Netbios nimi</value>
-    <comment>Netbios name</comment>
+	<data name="cat_WOL" xml:space="preserve">
+    <value>WOL</value>
+    <comment>WOL</comment>
   </data>
-	<data name="RepShutdown" xml:space="preserve">
-    <value>Sammuta komentokehoite</value>
-    <comment>Shutdown command line</comment>
+	<data name="Delay" xml:space="preserve">
+    <value>Vertragingstijd</value>
+    <comment>Time delay</comment>
+  </data>
+	<data name="DelayDescription" xml:space="preserve">
+    <value>Standaard vertragingstijd voor afsluiten</value>
+    <comment>The default time delay for shutdowns.</comment>
+  </data>
+	<data name="EmergencyDelay" xml:space="preserve">
+    <value>Vertragingstijd</value>
+    <comment>Time delay</comment>
+  </data>
+	<data name="EmergencyDelayDescription" xml:space="preserve">
+    <value>Standaard vertragingstijd voor noodafsluiten</value>
+    <comment>The time delay for emergency shutdowns.</comment>
+  </data>
+	<data name="EmergencyShutdown" xml:space="preserve">
+    <value>Standaard bericht</value>
+    <comment>Default Message</comment>
+  </data>
+	<data name="EmergencyShutdownDescription" xml:space="preserve">
+    <value>Noodafsluitbericht</value>
+    <comment>The emergency shutdown message.</comment>
+  </data>
+	<data name="Enable_Sound" xml:space="preserve">
+    <value>Geluid activeren</value>
+    <comment>Enable sound</comment>
+  </data>
+	<data name="Enable_SoundDescription" xml:space="preserve">
+    <value>Speel een geluid af, wanneer een server online komt of niet meer reageerd.</value>
+    <comment>Play a sound when a monitored server comes online, or stops responding.</comment>
+  </data>
+	<data name="Force" xml:space="preserve">
+    <value>Forceer afsluiten</value>
+    <comment>Force shutdown</comment>
+  </data>
+	<data name="ForceDescription" xml:space="preserve">
+    <value>Forceer het afsluiten van een externe server. Niet opgeslagen data gaat verloren.</value>
+    <comment>Force remote server to shutdown.  Unsaved files will be lost.</comment>
+  </data>
+	<data name="Reboot" xml:space="preserve">
+    <value>Herstart</value>
+    <comment>Reboot</comment>
+  </data>
+	<data name="RebootDescription" xml:space="preserve">
+    <value>Indien waar, herstarten na aflsuiten.</value>
+    <comment>If true, then reboot after shutdown.</comment>
+  </data>
+	<data name="Shutdown" xml:space="preserve">
+    <value>Standaard bericht</value>
+    <comment>Default Message</comment>
+  </data>
+	<data name="ShutdownDescription" xml:space="preserve">
+    <value>Standaard bericht bij afsluiten.</value>
+    <comment>The default shutdown message.</comment>
+  </data>
+	<data name="UDPPort" xml:space="preserve">
+    <value>UPD poort</value>
+    <comment>UDP Port</comment>
+  </data>
+	<data name="UDPPortDescription" xml:space="preserve">
+    <value>Geef het UDP poortnummer voor broadcast berichten op.</value>
+    <comment>Enter the UDP Port number for the broadcast messages.</comment>
+  </data>
+	<data name="AppVersion" xml:space="preserve">
+    <value>Versie</value>
+    <comment>Version</comment>
+  </data>
+	<data name="AppVersionDescription" xml:space="preserve">
+    <value>Programmaversie</value>
+    <comment>Application version</comment>
+  </data>
+	<data name="cat_Application" xml:space="preserve">
+    <value>Applicatie</value>
+    <comment>Application</comment>
+  </data>
+	<data name="VersionFull" xml:space="preserve">
+    <value>Licensed version</value>
+    <comment>Licensed version</comment>
+  </data>
+	<data name="VersionTrial" xml:space="preserve">
+    <value>Trial version</value>
+    <comment>Trial version</comment>
+  </data>
+	<data name="Culture" xml:space="preserve">
+    <value>Taalinstellingen</value>
+    <comment>Culture</comment>
+  </data>
+	<data name="Language" xml:space="preserve">
+    <value>Taal</value>
+    <comment>Language</comment>
+  </data>
+	<data name="License" xml:space="preserve">
+    <value>Licentie</value>
+    <comment>License</comment>
+  </data>
+	<data name="dbPath" xml:space="preserve">
+    <value>Databaselocatie</value>
+    <comment>Database path</comment>
+  </data>
+	<data name="AutoCheck" xml:space="preserve">
+    <value>Automatisch controleren op updates</value>
   </data>
 </root>

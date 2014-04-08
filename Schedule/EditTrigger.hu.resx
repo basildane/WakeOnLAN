@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,186 +59,189 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="OK_Button.Text" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="OK_Button.Text" xml:space="preserve">
     <value>Rendben</value>
   </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
+	<data name="Cancel_Button.Text" xml:space="preserve">
     <value>Mégsem</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
+	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+		<value>27, 13</value>
+	</data>
+	<data name="Label3.Text" xml:space="preserve">
     <value>Nap</value>
   </data>
-  <data name="Label2.Text" xml:space="preserve">
+	<data name="Label2.Text" xml:space="preserve">
     <value>Megismétlés:</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="DateTimePickerTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>278, 19</value>
-  </data>
-  <data name="DateTimePickerDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 19</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 21</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 13</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
+	<data name="DateTimePickerTime.Location" type="System.Drawing.Point, System.Drawing">
+		<value>278, 19</value>
+	</data>
+	<data name="DateTimePickerDate.Location" type="System.Drawing.Point, System.Drawing">
+		<value>154, 19</value>
+	</data>
+	<data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+		<value>105, 21</value>
+	</data>
+	<data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>43, 13</value>
+	</data>
+	<data name="Label1.Text" xml:space="preserve">
     <value>Indítás:</value>
   </data>
-  <data name="RadioButtonMontly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
-  </data>
-  <data name="RadioButtonMontly.Text" xml:space="preserve">
+	<data name="RadioButtonMontly.Size" type="System.Drawing.Size, System.Drawing">
+		<value>47, 17</value>
+	</data>
+	<data name="RadioButtonMontly.Text" xml:space="preserve">
     <value>Havi</value>
   </data>
-  <data name="RadioButtonWeekly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 17</value>
-  </data>
-  <data name="RadioButtonWeekly.Text" xml:space="preserve">
+	<data name="RadioButtonWeekly.Size" type="System.Drawing.Size, System.Drawing">
+		<value>44, 17</value>
+	</data>
+	<data name="RadioButtonWeekly.Text" xml:space="preserve">
     <value>Heti</value>
   </data>
-  <data name="RadioButtonDaily.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="RadioButtonDaily.Text" xml:space="preserve">
+	<data name="RadioButtonDaily.Size" type="System.Drawing.Size, System.Drawing">
+		<value>47, 17</value>
+	</data>
+	<data name="RadioButtonDaily.Text" xml:space="preserve">
     <value>Napi</value>
   </data>
-  <data name="RadioButtonOneTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 17</value>
-  </data>
-  <data name="RadioButtonOneTime.Text" xml:space="preserve">
+	<data name="RadioButtonOneTime.Size" type="System.Drawing.Size, System.Drawing">
+		<value>62, 17</value>
+	</data>
+	<data name="RadioButtonOneTime.Text" xml:space="preserve">
     <value>Egyszer</value>
   </data>
-  <data name="CheckBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
-  </data>
-  <data name="CheckBox7.Text" xml:space="preserve">
+	<data name="CheckBox7.Size" type="System.Drawing.Size, System.Drawing">
+		<value>67, 17</value>
+	</data>
+	<data name="CheckBox7.Text" xml:space="preserve">
     <value>Szombat</value>
   </data>
-  <data name="CheckBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 17</value>
-  </data>
-  <data name="CheckBox6.Text" xml:space="preserve">
+	<data name="CheckBox6.Size" type="System.Drawing.Size, System.Drawing">
+		<value>60, 17</value>
+	</data>
+	<data name="CheckBox6.Text" xml:space="preserve">
     <value>Péntek</value>
   </data>
-  <data name="CheckBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 17</value>
-  </data>
-  <data name="CheckBox5.Text" xml:space="preserve">
+	<data name="CheckBox5.Size" type="System.Drawing.Size, System.Drawing">
+		<value>71, 17</value>
+	</data>
+	<data name="CheckBox5.Text" xml:space="preserve">
     <value>Csütörtök</value>
   </data>
-  <data name="CheckBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 17</value>
-  </data>
-  <data name="CheckBox4.Text" xml:space="preserve">
+	<data name="CheckBox4.Size" type="System.Drawing.Size, System.Drawing">
+		<value>59, 17</value>
+	</data>
+	<data name="CheckBox4.Text" xml:space="preserve">
     <value>Szerda</value>
   </data>
-  <data name="CheckBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 17</value>
-  </data>
-  <data name="CheckBox3.Text" xml:space="preserve">
+	<data name="CheckBox3.Size" type="System.Drawing.Size, System.Drawing">
+		<value>51, 17</value>
+	</data>
+	<data name="CheckBox3.Text" xml:space="preserve">
     <value>Kedd</value>
   </data>
-  <data name="CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 17</value>
-  </data>
-  <data name="CheckBox2.Text" xml:space="preserve">
+	<data name="CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
+		<value>52, 17</value>
+	</data>
+	<data name="CheckBox2.Text" xml:space="preserve">
     <value>Hétfő</value>
   </data>
-  <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 17</value>
-  </data>
-  <data name="CheckBox1.Text" xml:space="preserve">
+	<data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>71, 17</value>
+	</data>
+	<data name="CheckBox1.Text" xml:space="preserve">
     <value>Vasárnap</value>
   </data>
-  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 16</value>
-  </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
+	<data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+		<value>119, 16</value>
+	</data>
+	<data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+		<value>37, 13</value>
+	</data>
+	<data name="Label4.Text" xml:space="preserve">
     <value>héten:</value>
   </data>
-  <data name="TextBoxWeeklyRecurs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 13</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
+	<data name="TextBoxWeeklyRecurs.Location" type="System.Drawing.Point, System.Drawing">
+		<value>82, 13</value>
+	</data>
+	<data name="Label5.Text" xml:space="preserve">
     <value>Megismétlés:</value>
   </data>
-  <data name="GroupBoxSettings.Text" xml:space="preserve">
+	<data name="GroupBoxSettings.Text" xml:space="preserve">
     <value>Beállítások</value>
   </data>
-  <data name="CheckBoxEnabled.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 17</value>
-  </data>
-  <data name="CheckBoxEnabled.Text" xml:space="preserve">
+	<data name="CheckBoxEnabled.Size" type="System.Drawing.Size, System.Drawing">
+		<value>93, 17</value>
+	</data>
+	<data name="CheckBoxEnabled.Text" xml:space="preserve">
     <value>Engedélyezve</value>
   </data>
-  <data name="GroupBoxAdvanced.Text" xml:space="preserve">
+	<data name="GroupBoxAdvanced.Text" xml:space="preserve">
     <value>Speciális</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
+	<data name="$this.Text" xml:space="preserve">
     <value>Kiváltó szerkesztése</value>
   </data>
 </root>

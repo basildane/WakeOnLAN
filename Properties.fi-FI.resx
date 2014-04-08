@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,389 +59,209 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="Cancel_Button.Error" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Cancel_Button.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Cancel_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tHostURI.Error" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tHostURI.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="tHostURI.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tHostURI.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LabelInterfaces.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LabelInterfaces.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="LabelInterfaces.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="LabelInterfaces.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxAdapters.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxAdapters.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="ComboBoxAdapters.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ComboBoxAdapters.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbSendTo.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbSendTo.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 116</value>
-  </data>
-  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 13</value>
-  </data>
-  <data name="lbSendTo.Text" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="Cancel_Button.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="tHostURI.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+		<value>MiddleRight</value>
+	</data>
+	<data name="tHostURI.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="LabelInterfaces.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+		<value>MiddleRight</value>
+	</data>
+	<data name="LabelInterfaces.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="ComboBoxAdapters.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+		<value>MiddleRight</value>
+	</data>
+	<data name="ComboBoxAdapters.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbSendTo.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
+		<value>27, 116</value>
+	</data>
+	<data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
+		<value>80, 13</value>
+	</data>
+	<data name="lbSendTo.Text" xml:space="preserve">
     <value>Lähetä WOL to</value>
   </data>
-  <data name="lbSendTo.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbURI.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbURI.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="rbURI.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="rbURI.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbIP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbIP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="rbIP.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="rbIP.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbLeaveBlank.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbLeaveBlank.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 13</value>
-  </data>
-  <data name="lbLeaveBlank.Text" xml:space="preserve">
+	<data name="rbURI.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+		<value>MiddleRight</value>
+	</data>
+	<data name="rbURI.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="rbIP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+		<value>MiddleRight</value>
+	</data>
+	<data name="rbIP.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbLeaveBlank.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
+		<value>105, 13</value>
+	</data>
+	<data name="lbLeaveBlank.Text" xml:space="preserve">
     <value>* Jätä tyhjäksi DHCP</value>
   </data>
-  <data name="lbLeaveBlank.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TTL.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TTL.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TTL.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="UDPPort.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="UDPPort.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="UDPPort.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Help_Button.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Help_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="Help_Button.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Help_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbUDP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbUDP.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbUDP.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbTTL.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbTTL.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbTTL.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="bCalcBroadcast.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="bCalcBroadcast.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="bCalcBroadcast.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="bCalcBroadcast.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Broadcast.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Broadcast.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Broadcast.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbBroadcast.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbBroadcast.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 142</value>
-  </data>
-  <data name="lbBroadcast.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MachineName.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MachineName.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="MachineName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MAC.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MAC.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="MAC.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Group.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Group.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Group.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbGroup.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbGroup.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 198</value>
-  </data>
-  <data name="lbGroup.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Delete_Button.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Delete_Button.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Delete_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBox_Command.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBox_Command.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TextBox_Command.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbShutdownCommand.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbShutdownCommand.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbShutdownCommand.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CheckBox_Emergency.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CheckBox_Emergency.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="CheckBox_Emergency.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbNetbios.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbNetbios.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 171</value>
-  </data>
-  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="lbNetbios.Text" xml:space="preserve">
+	<data name="TTL.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="UDPPort.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="Help_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+		<value>MiddleRight</value>
+	</data>
+	<data name="Help_Button.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbUDP.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbTTL.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="bCalcBroadcast.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+		<value>MiddleRight</value>
+	</data>
+	<data name="bCalcBroadcast.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="Broadcast.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbBroadcast.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
+		<value>21, 142</value>
+	</data>
+	<data name="MachineName.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="MAC.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="Group.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbGroup.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
+		<value>68, 198</value>
+	</data>
+	<data name="Delete_Button.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="TextBox_Command.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbShutdownCommand.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="CheckBox_Emergency.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbNetbios.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
+		<value>50, 171</value>
+	</data>
+	<data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
+		<value>57, 13</value>
+	</data>
+	<data name="lbNetbios.Text" xml:space="preserve">
     <value>isäntä URI</value>
   </data>
-  <data name="lbNetbios.ToolTip" xml:space="preserve">
+	<data name="lbName.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbMAC.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="lbIP.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="IP.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
+	<data name="$this.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="lbName.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbName.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbMAC.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbMAC.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbMAC.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbIP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbIP.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lbIP.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="IP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="IP.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="IP.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="OK_Button.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="OK_Button.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="OK_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
+	<data name="OK_Button.IconPadding" type="System.Int32, mscorlib">
+		<value>0</value>
+	</data>
 </root>

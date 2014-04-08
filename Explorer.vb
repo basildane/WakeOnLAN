@@ -542,6 +542,10 @@ Public Class Explorer
         ChangeLanguage("hu-HU")
     End Sub
 
+    Private Sub DutchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DutchToolStripMenuItem.Click
+        ChangeLanguage("nl-NL")
+    End Sub
+
     Private Sub ChangeLanguage(ByVal newLang As String)
         My.Settings.Language = newLang
         My.Application.ChangeUICulture(My.Settings.Language)
