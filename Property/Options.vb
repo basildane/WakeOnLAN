@@ -207,16 +207,6 @@ Public Class Options
             End Get
         End Property
 
-        <GlobalizedCategory("cat_Application"), ReadOnlyAttribute(True)> Public ReadOnly Property License() As String
-            Get
-#If Trial Then
-                Return My.Resources.OptionProperties.VersionTrial
-#Else
-                Return My.Resources.OptionProperties.VersionFull
-#End If
-            End Get
-        End Property
-
         ' References: System.Design
         Private _dbPath As String
 

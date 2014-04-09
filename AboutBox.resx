@@ -128,15 +128,15 @@
   <data name="LabelCopyright.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LabelVersion.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
   <data name="&gt;&gt;LabelVersion.Name" xml:space="preserve">
     <value>LabelVersion</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="LabelCopyright.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 18</value>
+  </data>
+  <data name="&gt;&gt;LinkLabel1.Name" xml:space="preserve">
+    <value>LinkLabel1</value>
   </data>
   <data name="LinkLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -146,9 +146,6 @@
   </data>
   <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;lAutomaticUpdate.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -165,7 +162,10 @@
   <data name="LabelCopyright.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 0, 3, 0</value>
   </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="LabelCopyright.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -176,6 +176,12 @@
   </data>
   <data name="LinkLabel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>158, 65</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>820, 528</value>
+  </data>
+  <data name="&gt;&gt;LabelVersion.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
   </data>
   <data name="&gt;&gt;TextBoxDescription.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -197,9 +203,6 @@
   </data>
   <data name="&gt;&gt;LinkLabel2.Name" xml:space="preserve">
     <value>LinkLabel2</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>716, 141</value>
   </data>
   <data name="OKButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -3758,17 +3761,14 @@
         7tE9ukf36B7do3t0j+4y+v85+BbFDYqI4gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;LogoPictureBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;ListBox1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="pbUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
   <data name="&gt;&gt;GroupBoxUpdates.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBoxDescription.Name" xml:space="preserve">
-    <value>TextBoxDescription</value>
   </data>
   <data name="lAutomaticUpdate.Location" type="System.Drawing.Point, System.Drawing">
     <value>55, 31</value>
@@ -3790,9 +3790,6 @@
   </data>
   <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="OKButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>733, 498</value>
   </data>
   <data name="LinkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3824,6 +3821,13 @@
   <data name="LinkLabel2.Text" xml:space="preserve">
     <value>http://aquilawol.sourceforge.net</value>
   </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, see &lt;http://www.gnu.org/licenses&gt;.</value>
+  </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 13</value>
   </data>
@@ -3845,11 +3849,17 @@
   <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
+  <data name="ListBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 82</value>
+  </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
   <data name="&gt;&gt;LabelProductName.Name" xml:space="preserve">
     <value>LabelProductName</value>
+  </data>
+  <data name="LinkLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
   </data>
   <data name="LinkLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -3908,8 +3918,14 @@
   <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="lAutomaticUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 16</value>
+  </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
+  </data>
+  <data name="ListBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
   </data>
   <data name="LabelVersion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3974,14 +3990,11 @@
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 65</value>
   </data>
-  <data name="&gt;&gt;LabelCopyright.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="LabelProductName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 0, 3, 0</value>
   </data>
-  <data name="lAutomaticUpdate.Text" xml:space="preserve">
-    <value>Automatic Updates</value>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="LogoPictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4061,20 +4074,11 @@
   <data name="LabelProductName.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 20</value>
   </data>
-  <data name="GroupBoxUpdates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 218</value>
-  </data>
   <data name="&gt;&gt;LinkLabel2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="LabelVersion.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;LogoPictureBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelCopyright.Text" xml:space="preserve">
-    <value>[Copyright]</value>
   </data>
   <data name="LinkLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -4091,17 +4095,20 @@
   <data name="&gt;&gt;lAutomaticUpdate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ListBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>338, 82</value>
+  <data name="LabelVersion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextBoxDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 228</value>
   </data>
   <data name="TextBoxDescription.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;LinkLabel1.Name" xml:space="preserve">
-    <value>LinkLabel1</value>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>820, 528</value>
+  <data name="lAutomaticUpdate.Text" xml:space="preserve">
+    <value>Automatic Updates</value>
   </data>
   <data name="&gt;&gt;LinkLabel2.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -4109,8 +4116,8 @@
   <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pbUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
+  <data name="LabelVersion.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
   </data>
   <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>771, 100</value>
@@ -4124,11 +4131,8 @@
   <data name="pbUpdate.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
-  <data name="&gt;&gt;LabelVersion.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxDescription.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="LabelCopyright.Text" xml:space="preserve">
+    <value>[Copyright]</value>
   </data>
   <data name="LinkLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4145,14 +4149,14 @@
   <data name="LabelCopyright.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 37</value>
   </data>
-  <data name="TextBoxDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 228</value>
+  <data name="GroupBoxUpdates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 218</value>
   </data>
-  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="LabelCopyright.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 141</value>
   </data>
   <data name="&gt;&gt;pbUpdate.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4160,17 +4164,17 @@
   <data name="LabelProductName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="LinkLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
+  <data name="&gt;&gt;LogoPictureBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="ListBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
+  <data name="OKButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>733, 498</value>
   </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Version</value>
+  <data name="&gt;&gt;LabelCopyright.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LogoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4541,15 +4545,11 @@
         +fb59vn2+fb59vn22d2cnP4fTyyy3HhLfi8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program; if not, see &lt;http://www.gnu.org/licenses&gt;.</value>
+  <data name="&gt;&gt;TextBoxDescription.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lAutomaticUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 16</value>
+  <data name="&gt;&gt;TextBoxDescription.Name" xml:space="preserve">
+    <value>TextBoxDescription</value>
   </data>
   <data name="&gt;&gt;LabelProductName.Parent" xml:space="preserve">
     <value>Panel1</value>

@@ -290,6 +290,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Must be greater than 1..
+        '''</summary>
+        Friend Shared ReadOnly Property errGreaterThan1() As String
+            Get
+                Return ResourceManager.GetString("errGreaterThan1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Invalid IP Address.  Use ###.###.###.###.
         '''</summary>
         Friend Shared ReadOnly Property ErrorInvalidIP() As String
@@ -322,6 +331,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property ErrorMsg() As String
             Get
                 Return ResourceManager.GetString("ErrorMsg", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to You must set a proper UserID and Password for a scheduled task..
+        '''</summary>
+        Friend Shared ReadOnly Property errUserID() As String
+            Get
+                Return ResourceManager.GetString("errUserID", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Must be greater than 1 and less than 52..
+        '''</summary>
+        Friend Shared ReadOnly Property errWeeks() As String
+            Get
+                Return ResourceManager.GetString("errWeeks", resourceCulture)
             End Get
         End Property
         
@@ -709,6 +736,42 @@ Namespace My.Resources
         Friend Shared ReadOnly Property Title() As String
             Get
                 Return ResourceManager.GetString("Title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Daily.
+        '''</summary>
+        Friend Shared ReadOnly Property triggerDaily() As String
+            Get
+                Return ResourceManager.GetString("triggerDaily", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Monthly.
+        '''</summary>
+        Friend Shared ReadOnly Property triggerMonthly() As String
+            Get
+                Return ResourceManager.GetString("triggerMonthly", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to One Time.
+        '''</summary>
+        Friend Shared ReadOnly Property triggerOneTime() As String
+            Get
+                Return ResourceManager.GetString("triggerOneTime", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Weekly.
+        '''</summary>
+        Friend Shared ReadOnly Property triggerWeekly() As String
+            Get
+                Return ResourceManager.GetString("triggerWeekly", resourceCulture)
             End Get
         End Property
         

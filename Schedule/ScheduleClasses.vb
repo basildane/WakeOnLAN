@@ -76,6 +76,14 @@ Public Class Triggers
 End Class
 
 Public Class Trigger
+    Private ReadOnly TriggerStrings() As String =
+    {
+         My.Resources.Strings.triggerOneTime,
+         My.Resources.Strings.triggerDaily,
+         My.Resources.Strings.triggerWeekly,
+         My.Resources.Strings.triggerMonthly
+    }
+
     Public Enum TriggerModes
         OneTime
         Daily
@@ -91,6 +99,10 @@ Public Class Trigger
     Public Daily_Recurs As Integer = 0
     Public Weekly_Recurs As Integer = 0
     Public Weekly_DaysOfWeek As Integer = 0
+
+    Public Function ModeString() As String
+        Return TriggerStrings(Mode)
+    End Function
 
     Public Overrides Function ToString() As String
         Select Case Mode

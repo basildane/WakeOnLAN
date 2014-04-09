@@ -466,7 +466,7 @@ Public Class Schedule
                             li.SubItems(2).Text = My.Resources.Strings.lit_None
 
                         Case 1
-                            li.SubItems(2).Text = MyTask.Triggers(0).ToString
+                            li.SubItems(2).Text = MyTask.Triggers(0).ModeString
 
                         Case Else
                             li.SubItems(2).Text = My.Resources.Strings.lit_multipleTriggers
@@ -476,8 +476,8 @@ Public Class Schedule
                 End If
 
                 li.SubItems(3).Text = GetState(task.State)
-                li.SubItems(4).Text = IIf(task.NextRunTime.Year < 1970, My.Resources.Strings.lit_Never, task.NextRunTime.ToString)
-                li.SubItems(5).Text = IIf(task.LastRunTime.Year < 1970, My.Resources.Strings.lit_Never, task.LastRunTime.ToString)
+                li.SubItems(4).Text = IIf(task.NextRunTime.Year < 1970, My.Resources.Strings.lit_Never, task.NextRunTime.ToString("G"))
+                li.SubItems(5).Text = IIf(task.LastRunTime.Year < 1970, My.Resources.Strings.lit_Never, task.LastRunTime.ToString("G"))
 
                 Select Case task.LastTaskResult
 

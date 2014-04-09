@@ -194,7 +194,7 @@
 		<value>64, 13</value>
 	</data>
 	<data name="lbNetbios.Text" xml:space="preserve">
-    <value>Netbios nimi</value>
+    <value>isäntä URI</value>
   </data>
 	<data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
 		<value>81, 29</value>
@@ -226,4 +226,10 @@
 	<data name="$this.Text" xml:space="preserve">
     <value>Ominaisuudet</value>
   </data>
+	<data name="lbLeaveBlank.Text" xml:space="preserve">
+		<value>* Jätä tyhjäksi DHCP</value>
+	</data>
+	<data name="lbSendTo.Text" xml:space="preserve">
+		<value>Lähetä WOL to</value>
+	</data>
 </root>

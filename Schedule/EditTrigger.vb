@@ -41,14 +41,14 @@ Public Class EditTrigger
                 Case Trigger.TriggerModes.Daily
                     Int32.TryParse(TextBoxRecurDays.Text, i)
                     If i < 1 Then
-                        MessageBox.Show("Must be greater than 1.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show(My.Resources.Strings.errGreaterThan1, My.Resources.Strings.lit_Error, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         Exit Sub
                     End If
 
                 Case Trigger.TriggerModes.Weekly
                     Int32.TryParse(TextBoxWeeklyRecurs.Text, i)
                     If i < 1 Or i > 52 Then
-                        MessageBox.Show("Must be greater than 1 and less than 52.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show(My.Resources.Strings.errWeeks, My.Resources.Strings.lit_Error, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         Exit Sub
                     End If
 
