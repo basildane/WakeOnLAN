@@ -33,7 +33,7 @@ Public Class EditTask
 
         ListViewTriggers.Items.Clear()
         For Each Trigger As Trigger In MyTask.Triggers
-            li = ListViewTriggers.Items.Add(key:=Trigger.Tag, text:=Trigger.Mode.ToString, imageIndex:=0)
+            li = ListViewTriggers.Items.Add(key:=Trigger.Tag, text:=Trigger.ModeString, imageIndex:=0)
             li.SubItems.Add(Trigger.ToString)
         Next
 
@@ -55,7 +55,7 @@ Public Class EditTask
 
     Private Sub OKClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
         If (String.IsNullOrEmpty(UserIDTextBox.Text) Or String.IsNullOrEmpty(PasswordTextBox.Text)) Then
-            MessageBox.Show("You must set a proper UserID and Password for a scheduled task.", "Create / Edit task", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+            MessageBox.Show(My.Resources.Strings.errUserID, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Hand)
             TabControlTasks.SelectedIndex = 0
             Return
         End If
@@ -133,7 +133,7 @@ Public Class EditTask
 
         If EditTrigger.ShowDialog(Me, Mytrigger) <> Windows.Forms.DialogResult.OK Then Exit Sub
 
-        li = ListViewTriggers.Items.Add(key:=Mytrigger.Tag, text:=Mytrigger.Mode.ToString, imageIndex:=0)
+        li = ListViewTriggers.Items.Add(key:=Mytrigger.Tag, text:=Mytrigger.ModeString, imageIndex:=0)
         li.SubItems.Add(Mytrigger.ToString)
         MyTask.Triggers.Add(Mytrigger)
     End Sub
@@ -155,7 +155,7 @@ Public Class EditTask
         If MyTrigger Is Nothing Then Exit Sub
 
         If EditTrigger.ShowDialog(Me, MyTrigger) <> Windows.Forms.DialogResult.OK Then Exit Sub
-        li.SubItems(0).Text = MyTrigger.Mode.ToString
+        li.SubItems(0).Text = MyTrigger.ModeString
         li.SubItems(1).Text = MyTrigger.ToString
     End Sub
 

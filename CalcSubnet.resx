@@ -118,7 +118,7 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="&gt;&gt;IpIP.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.9.1.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.10.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 	<data name="&gt;&gt;lIP.Parent" xml:space="preserve">
     <value>$this</value>
@@ -136,7 +136,7 @@
 	</data>
 	<data name="lIP.Text" xml:space="preserve">
     <value>IP Address</value>
-  </data>
+  <comment></comment></data>
 	<data name="&gt;&gt;lRecommended.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -145,7 +145,7 @@
   </data>
 	<data name="lSubnet.Text" xml:space="preserve">
     <value>Subnet</value>
-  </data>
+  <comment></comment></data>
 	<data name="&gt;&gt;IpIP.Name" xml:space="preserve">
     <value>IpIP</value>
   </data>
@@ -157,7 +157,7 @@
 	</data>
 	<data name="bCalculate.Text" xml:space="preserve">
     <value>Calculate</value>
-  </data>
+  <comment></comment></data>
 	<data name="lIP.AutoSize" type="System.Boolean, mscorlib">
 		<value>True</value>
 	</data>
@@ -181,13 +181,13 @@
 	</data>
 	<data name="lHeader.Text" xml:space="preserve">
     <value>This function is used to help you find the "Broadcast Address" to use, based on the IP Address and Subnet.</value>
-  </data>
+  <comment></comment></data>
 	<data name="&gt;&gt;IpBroadcast.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
 	<data name="lRecommended.Text" xml:space="preserve">
     <value>Recommended Broadcast Address:</value>
-  </data>
+  <comment></comment></data>
 	<data name="IpBroadcast.Size" type="System.Drawing.Size, System.Drawing">
 		<value>129, 24</value>
 	</data>
@@ -237,7 +237,7 @@
     <value>8</value>
   </data>
 	<data name="&gt;&gt;IpSubnet.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.9.1.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.10.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 	<data name="&gt;&gt;bOK.Name" xml:space="preserve">
     <value>bOK</value>
@@ -289,7 +289,7 @@
   </data>
 	<data name="$this.Text" xml:space="preserve">
     <value>Calculate Subnet</value>
-  </data>
+  <comment></comment></data>
 	<data name="IpSubnet.TabIndex" type="System.Int32, mscorlib">
 		<value>1</value>
 	</data>
@@ -333,7 +333,7 @@
     <value>1</value>
   </data>
 	<data name="&gt;&gt;IpBroadcast.Type" xml:space="preserve">
-    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.9.1.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.IPAddressControl, WakeOnLan, Version=2.10.5.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 	<data name="&gt;&gt;lRecommended.Parent" xml:space="preserve">
     <value>$this</value>
@@ -352,11 +352,11 @@
 	</data>
 	<data name="bOK.Text" xml:space="preserve">
     <value>OK</value>
-  </data>
+  <comment></comment></data>
 	<metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
 		<value>True</value>
 	</metadata>
 	<metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-		<value>hu</value>
+		<value>nl</value>
 	</metadata>
 </root>

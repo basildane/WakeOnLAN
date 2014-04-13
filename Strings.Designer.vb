@@ -290,6 +290,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Must be greater than 1..
+        '''</summary>
+        Friend Shared ReadOnly Property errGreaterThan1() As String
+            Get
+                Return ResourceManager.GetString("errGreaterThan1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Invalid IP Address.  Use ###.###.###.###.
         '''</summary>
         Friend Shared ReadOnly Property ErrorInvalidIP() As String
@@ -322,6 +331,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property ErrorMsg() As String
             Get
                 Return ResourceManager.GetString("ErrorMsg", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to You must set a proper UserID and Password for a scheduled task..
+        '''</summary>
+        Friend Shared ReadOnly Property errUserID() As String
+            Get
+                Return ResourceManager.GetString("errUserID", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Must be greater than 1 and less than 52..
+        '''</summary>
+        Friend Shared ReadOnly Property errWeeks() As String
+            Get
+                Return ResourceManager.GetString("errWeeks", resourceCulture)
             End Get
         End Property
         
@@ -378,7 +405,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("interfaceInfo", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to New.
         '''</summary>
@@ -387,16 +414,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("isNew", resourceCulture)
             End Get
         End Property
-
-        '''<summary>
-        '''  Looks up a localized string similar to {0} - trial version is limited to 3 machines.
-        '''</summary>
-        Friend Shared ReadOnly Property Limited() As String
-            Get
-                Return ResourceManager.GetString("Limited", resourceCulture)
-            End Get
-        End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to At {0} on {1}.
         '''</summary>
@@ -405,7 +423,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_at", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to At {0} every {1} day(s).
         '''</summary>
@@ -414,7 +432,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_atDays", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to At {0} every {1} every {2} weeks, starting {3}.
         '''</summary>
@@ -423,7 +441,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_atWeeks", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Disabled.
         '''</summary>
@@ -432,7 +450,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_Disabled", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Enabled.
         '''</summary>
@@ -441,7 +459,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_Enabled", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Error.
         '''</summary>
@@ -450,7 +468,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_Error", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to False.
         '''</summary>
@@ -459,7 +477,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_false", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Invalid command line.
         '''</summary>
@@ -468,7 +486,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_Invalid", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Multiple triggers defined.
         '''</summary>
@@ -477,7 +495,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_multipleTriggers", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Never.
         '''</summary>
@@ -486,7 +504,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_Never", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to None.
         '''</summary>
@@ -495,7 +513,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_None", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to {0} does not appear to have read access rights to the WOL Scheduler database. Grant access?.
         '''</summary>
@@ -504,7 +522,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_noRights", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Machine not found.
         '''</summary>
@@ -513,7 +531,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_notFound", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Queued.
         '''</summary>
@@ -522,7 +540,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_Queued", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Ready.
         '''</summary>
@@ -531,7 +549,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_Ready", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Running.
         '''</summary>
@@ -540,7 +558,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_Running", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to True.
         '''</summary>
@@ -549,7 +567,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_true", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Unknown.
         '''</summary>
@@ -558,7 +576,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("lit_Unknown", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Host is OFFLINE.
         '''</summary>
@@ -567,7 +585,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("OffLine", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Host is ONLINE.
         '''</summary>
@@ -576,7 +594,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("OnLine", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Broadcast Address.
         '''</summary>
@@ -585,7 +603,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Opt_BroadcastAddress", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Enter the broadcast IP Address for the WOL broadcast packets..
         '''</summary>
@@ -594,7 +612,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Opt_BroadcastDesc", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Pausing....
         '''</summary>
@@ -603,7 +621,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Pausing", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Polling {0}.
         '''</summary>
@@ -612,7 +630,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Polling", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Properties - {0}.
         '''</summary>
@@ -621,7 +639,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Properties", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to {0} Response Time {1} ms.
         '''</summary>
@@ -630,7 +648,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("ResponseTime", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Select a WakeOnLan settings file to import.
         '''</summary>
@@ -639,7 +657,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("SelectFile", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Sending shutdown command to {0}.
         '''</summary>
@@ -648,7 +666,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("SendShutdown", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Sent Wake Up packet to {0} at {1}....
         '''</summary>
@@ -657,7 +675,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("SentTo", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Shutdown failed for {0} {1}.
         '''</summary>
@@ -666,7 +684,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("ShutdownFailed", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Shutting down in {0} seconds....
         '''</summary>
@@ -675,7 +693,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("ShutDownSeconds", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Shutdown {0} successful.
         '''</summary>
@@ -684,7 +702,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("ShutdownSuccessful", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Shutting down....
         '''</summary>
@@ -693,7 +711,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("ShuttingDown", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Skipping....
         '''</summary>
@@ -702,7 +720,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Skipping", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Successful.
         '''</summary>
@@ -711,7 +729,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Successful", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Wake on LAN.
         '''</summary>
@@ -720,7 +738,43 @@ Namespace My.Resources
                 Return ResourceManager.GetString("Title", resourceCulture)
             End Get
         End Property
-
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Daily.
+        '''</summary>
+        Friend Shared ReadOnly Property triggerDaily() As String
+            Get
+                Return ResourceManager.GetString("triggerDaily", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Monthly.
+        '''</summary>
+        Friend Shared ReadOnly Property triggerMonthly() As String
+            Get
+                Return ResourceManager.GetString("triggerMonthly", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to One Time.
+        '''</summary>
+        Friend Shared ReadOnly Property triggerOneTime() As String
+            Get
+                Return ResourceManager.GetString("triggerOneTime", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Weekly.
+        '''</summary>
+        Friend Shared ReadOnly Property triggerWeekly() As String
+            Get
+                Return ResourceManager.GetString("triggerWeekly", resourceCulture)
+            End Get
+        End Property
+        
         '''<summary>
         '''  Looks up a localized string similar to -- use default --.
         '''</summary>
@@ -729,7 +783,7 @@ Namespace My.Resources
                 Return ResourceManager.GetString("useDefault", resourceCulture)
             End Get
         End Property
-
+        
         '''<summary>
         '''  Looks up a localized string similar to Version {0}.{1:00}.{2}.
         '''</summary>

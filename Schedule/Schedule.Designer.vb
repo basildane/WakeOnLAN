@@ -69,17 +69,19 @@ Partial Class Schedule
         '
         'SplitContainer1.Panel1
         '
+        resources.ApplyResources(Me.SplitContainer1.Panel1, "SplitContainer1.Panel1")
         Me.SplitContainer1.Panel1.Controls.Add(Me.ListViewSchedule)
         '
         'SplitContainer1.Panel2
         '
+        resources.ApplyResources(Me.SplitContainer1.Panel2, "SplitContainer1.Panel2")
         Me.SplitContainer1.Panel2.Controls.Add(Me.ToolStrip1)
         '
         'ListViewSchedule
         '
+        resources.ApplyResources(Me.ListViewSchedule, "ListViewSchedule")
         Me.ListViewSchedule.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.NameColumnHeader, Me.StatusColumnHeader, Me.TriggerColumnHeader, Me.StateColumnHeader, Me.NextColumnHeader, Me.LastColumnHeader, Me.ResultColumnHeader})
         Me.ListViewSchedule.ContextMenuStrip = Me.ContextMenuStrip1
-        resources.ApplyResources(Me.ListViewSchedule, "ListViewSchedule")
         Me.ListViewSchedule.FullRowSelect = True
         Me.ListViewSchedule.Name = "ListViewSchedule"
         Me.ListViewSchedule.SmallImageList = Me.ImageList1
@@ -116,39 +118,39 @@ Partial Class Schedule
         '
         'ContextMenuStrip1
         '
+        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RunToolStripMenuItem, Me.EndToolStripMenuItem, Me.DisableToolStripMenuItem, Me.EnableToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.NewToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
         '
         'RunToolStripMenuItem
         '
-        Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
         resources.ApplyResources(Me.RunToolStripMenuItem, "RunToolStripMenuItem")
+        Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
         '
         'EndToolStripMenuItem
         '
-        Me.EndToolStripMenuItem.Name = "EndToolStripMenuItem"
         resources.ApplyResources(Me.EndToolStripMenuItem, "EndToolStripMenuItem")
+        Me.EndToolStripMenuItem.Name = "EndToolStripMenuItem"
         '
         'DisableToolStripMenuItem
         '
-        Me.DisableToolStripMenuItem.Name = "DisableToolStripMenuItem"
         resources.ApplyResources(Me.DisableToolStripMenuItem, "DisableToolStripMenuItem")
+        Me.DisableToolStripMenuItem.Name = "DisableToolStripMenuItem"
         '
         'EnableToolStripMenuItem
         '
-        Me.EnableToolStripMenuItem.Name = "EnableToolStripMenuItem"
         resources.ApplyResources(Me.EnableToolStripMenuItem, "EnableToolStripMenuItem")
+        Me.EnableToolStripMenuItem.Name = "EnableToolStripMenuItem"
         '
         'DeleteToolStripMenuItem
         '
-        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
         resources.ApplyResources(Me.DeleteToolStripMenuItem, "DeleteToolStripMenuItem")
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
         '
         'NewToolStripMenuItem
         '
-        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         resources.ApplyResources(Me.NewToolStripMenuItem, "NewToolStripMenuItem")
+        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         '
         'ImageList1
         '
@@ -166,8 +168,8 @@ Partial Class Schedule
         '
         'ToolStripLabel1
         '
-        Me.ToolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         resources.ApplyResources(Me.ToolStripLabel1, "ToolStripLabel1")
+        Me.ToolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
         '
         'ToolStripButtonCreate
@@ -177,8 +179,8 @@ Partial Class Schedule
         '
         'ToolStripSeparator1
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         '
         'ToolStripButtonEnable
         '
@@ -192,8 +194,8 @@ Partial Class Schedule
         '
         'ToolStripSeparator2
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         '
         'ToolStripButtonRun
         '
@@ -207,8 +209,8 @@ Partial Class Schedule
         '
         'ToolStripSeparator3
         '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         '
         'ToolStripButtonProperties
         '
