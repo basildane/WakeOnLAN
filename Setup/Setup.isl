@@ -4566,9 +4566,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{3695FAA8-73CB-4A1C-9254-4BD599751AF4}</td><td/></row>
+		<row><td>ProductCode</td><td>{74D5428B-E384-46F0-9E4B-8C775E803EED}</td><td/></row>
 		<row><td>ProductName</td><td>WakeOnLAN</td><td/></row>
-		<row><td>ProductVersion</td><td>2.10.0005.02</td><td/></row>
+		<row><td>ProductVersion</td><td>2.10.0006</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
