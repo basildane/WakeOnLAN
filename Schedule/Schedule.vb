@@ -154,17 +154,17 @@ Public Class Schedule
         Dim Result As Boolean = False
         Dim m As Machine
         Dim Encrypt As New Encryption(My.Application.Info.ProductName)
-        Dim sPath As String
+        Dim machinesXML As String
 
-        sPath = "-p """ & Machines.GetFile() & """"
+        machinesXML = "-p """ & Machines.GetFile() & """"
 
         Timer1.Stop()
 
         If EditTask.ShowDialog(Me, MyTask) = Windows.Forms.DialogResult.OK Then
             Dim iTask As ITaskDefinition
-            Dim exe As String
+            Dim executable As String
 
-            exe = """" & IO.Path.Combine(My.Application.Info.DirectoryPath, "WakeOnLANc.exe") & """"
+            executable = """" & IO.Path.Combine(My.Application.Info.DirectoryPath, "WakeOnLANc.exe") & """"
 
             Try
                 iTask = scheduler.NewTask(0)
@@ -221,8 +221,8 @@ Public Class Schedule
                                 m = Machines(MyAction.Name)
                                 With actionRun
                                     .Id = MyAction.Tag
-                                    .Path = exe
-                                    .Arguments = sPath & " -w -m " & m.Name
+                                    .Path = executable
+                                    .Arguments = machinesXML & " -w -m " & m.Name
                                 End With
 
                             Case WakeOnLan.Action.ActionItems.StartAll
@@ -231,8 +231,8 @@ Public Class Schedule
                                 actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
                                 With actionRun
                                     .Id = MyAction.Tag
-                                    .Path = exe
-                                    .Arguments = sPath & " -w -all"
+                                    .Path = executable
+                                    .Arguments = machinesXML & " -w -all"
                                 End With
 
                             Case Action.ActionItems.Shutdown
@@ -242,8 +242,8 @@ Public Class Schedule
                                 m = Machines(MyAction.Name)
                                 With actionRun
                                     .Id = MyAction.Tag
-                                    .Path = exe
-                                    .Arguments = sPath & " -s -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                    .Path = executable
+                                    .Arguments = machinesXML & " -s -m " & m.Name & " -t " & My.Settings.DefaultTimeout
                                     If MyAction.Force Then .Arguments &= " -f"
                                 End With
 
@@ -254,8 +254,8 @@ Public Class Schedule
                                 m = Machines(MyAction.Name)
                                 With actionRun
                                     .Id = MyAction.Tag
-                                    .Path = exe
-                                    .Arguments = sPath & " -s1 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                    .Path = executable
+                                    .Arguments = machinesXML & " -s1 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
                                     If MyAction.Force Then .Arguments &= " -f"
                                 End With
 
@@ -266,8 +266,8 @@ Public Class Schedule
                                 m = Machines(MyAction.Name)
                                 With actionRun
                                     .Id = MyAction.Tag
-                                    .Path = exe
-                                    .Arguments = sPath & " -s4 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                    .Path = executable
+                                    .Arguments = machinesXML & " -s4 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
                                     If MyAction.Force Then .Arguments &= " -f"
                                 End With
 
@@ -277,8 +277,8 @@ Public Class Schedule
                                 actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
                                 With actionRun
                                     .Id = MyAction.Tag
-                                    .Path = exe
-                                    .Arguments = sPath & " -s -all" & " -t " & My.Settings.DefaultTimeout
+                                    .Path = executable
+                                    .Arguments = machinesXML & " -s -all" & " -t " & My.Settings.DefaultTimeout
                                     If MyAction.Force Then .Arguments &= " -f"
                                 End With
 
@@ -288,8 +288,8 @@ Public Class Schedule
                                 actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
                                 With actionRun
                                     .Id = MyAction.Tag
-                                    .Path = exe
-                                    .Arguments = sPath & " -s1 -all" & " -t " & My.Settings.DefaultTimeout
+                                    .Path = executable
+                                    .Arguments = machinesXML & " -s1 -all" & " -t " & My.Settings.DefaultTimeout
                                     If MyAction.Force Then .Arguments &= " -f"
                                 End With
 
@@ -299,8 +299,8 @@ Public Class Schedule
                                 actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
                                 With actionRun
                                     .Id = MyAction.Tag
-                                    .Path = exe
-                                    .Arguments = sPath & " -s4 -all" & " -t " & My.Settings.DefaultTimeout
+                                    .Path = executable
+                                    .Arguments = machinesXML & " -s4 -all" & " -t " & My.Settings.DefaultTimeout
                                     If MyAction.Force Then .Arguments &= " -f"
                                 End With
 
