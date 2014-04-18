@@ -282,6 +282,9 @@ Public Class Search
 
         If Not (e.UserState Is Nothing) Then
             p = e.UserState
+#If DISPLAY Then
+            p.MacAddress = p.MacAddress.Substring(0, 9) & "00:00:00"
+#End If
             i = ListView1.Items.Add(p.Name)
             i.SubItems.Add(p.OSName)
             i.SubItems.Add(p.NetInterface)
@@ -357,6 +360,10 @@ Public Class Search
                     For Each ip As String In m("IPaddress")
                         s &= "IP: " & ip & vbCrLf
                     Next
+
+#If DISPLAY Then
+                    m("MacAddress") = m("MacAddress").Substring(0, 9) & "00:00:00"
+#End If
 
                     s &= "MAC: " & m("MacAddress")
                 End If

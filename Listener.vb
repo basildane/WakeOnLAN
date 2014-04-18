@@ -94,6 +94,10 @@ Public Class Listener
                 Dim n As String = ""
 
                 li.Text = MAC
+#If DISPLAY Then
+                li.Text = li.Text.Substring(0, 9) & "00:00:00"
+#End If
+
                 li.ImageIndex = 0
                 li.SubItems.Add(Now.ToShortTimeString)
                 For Each m As Machine In Machines
