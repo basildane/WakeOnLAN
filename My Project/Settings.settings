@@ -98,5 +98,8 @@
     <Setting Name="schedulerWindowLocation" Type="System.Drawing.Point" Scope="User">
       <Value Profile="(Default)">0, 0</Value>
     </Setting>
+    <Setting Name="updateVersions" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://aquilawol.sourceforge.net/updates/version.html</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

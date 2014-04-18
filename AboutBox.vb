@@ -41,9 +41,9 @@ Public NotInheritable Class AboutBox
 
         AutoUpdater.CurrentCulture = Application.CurrentCulture
         AutoUpdater.AppCastURL = My.Settings.updateURL
+        AutoUpdater.versionURL = My.Settings.updateVersions
         AddHandler AutoUpdater.UpdateStatus, AddressOf updateStatus
         AutoUpdater.Start(0)
-
     End Sub
 
     Private Delegate Sub UpdateStatusHandler(sender As Object, e As AutoUpdateEventArgs)

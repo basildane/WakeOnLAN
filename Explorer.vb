@@ -99,6 +99,7 @@ Public Class Explorer
     Private Sub CheckUpdates()
         AutoUpdater.CurrentCulture = Application.CurrentCulture
         AutoUpdater.AppCastURL = My.Settings.updateURL
+        AutoUpdater.versionURL = My.Settings.updateVersions
         AddHandler AutoUpdater.UpdateStatus, AddressOf updateStatus
         AutoUpdater.Start(My.Settings.updateIntervalDays)
     End Sub
