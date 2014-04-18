@@ -28,6 +28,9 @@ Module Wake
             Else
                 host = machine.Netbios
             End If
+            If String.IsNullOrEmpty(Adapter) Then
+                Adapter = machine.Adapter
+            End If
             WOL.AquilaWOLLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, Adapter)
 
         Catch ex As Exception

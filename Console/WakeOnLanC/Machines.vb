@@ -87,4 +87,5 @@ End Class
     Public Group As String = ""
     Public UDPPort As Integer = 9
     Public TTL As Integer = 128
+    Public Adapter As String = ""
 End Class
