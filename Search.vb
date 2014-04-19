@@ -36,14 +36,18 @@ Public Class Search
         Public NetInterface As String
         Public MacAddress As String
         Public HasError As Boolean
+        Public WakeEnabled As String
+        Public PowerManagementEnable As String
+        Public PowerManagementActive As String
+        Public WakeOnMagicOnly As String
     End Structure
 
     Private none As String = "--" & My.Resources.Strings.lit_None & "--"
 
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
+    Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
         Dim m As Machine
 
-        For Each l As ListViewItem In ListView1.CheckedItems
+        For Each l As ListViewItem In listView.CheckedItems
             Machines.Remove(l.SubItems(0).Text)
 
             m = New Machine
@@ -64,44 +68,52 @@ Public Class Search
         Me.Close()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
+    Private Sub closeButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles closeButton.Click
         Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Close()
     End Sub
 
     Private Sub Poll(ByVal IP As String, ByVal Progress As Integer)
-        Dim scope As ManagementScope
+        Dim profile As Profile
+
+        Try
+            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.Polling, IP)
+
+            If Not My.Computer.Network.Ping(IP) Then
+                backgroundWorker.ReportProgress(Progress, Nothing)
+                Exit Sub
+            End If
+
+            profile = getWMIdata(IP)
+            backgroundWorker.ReportProgress(Progress, profile)
+
+        Catch ex As Exception
+            backgroundWorker.ReportProgress(Progress, Nothing)
+
+        End Try
+
+    End Sub
+
+    Private Function getWMIdata(IP As String) As Profile
+        Dim scope_cimv2, scope_WMI As ManagementScope
         Dim managementObject As ManagementObject
         Dim searcher As ManagementObjectSearcher
         Dim queryCollection As ManagementObjectCollection
-        Dim query As ObjectQuery
+        Dim WMIquery As ObjectQuery
 
         Dim profile As New Profile
 
         Try
-            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.Polling, IP)
             profile.HasError = False
 
-            If Not My.Computer.Network.Ping(IP) Then
-                BackgroundWorker1.ReportProgress(Progress, Nothing)
-                Exit Sub
-            End If
-
-            scope = New ManagementScope("\\" & IP & "\root\cimv2")
-            scope.Connect()
-
-            ' Use this code if you are connecting with a 
-            ' different user name and password:
-            '
-            ' Dim scope As ManagementScope
-            ' scope = New ManagementScope( _
-            '     "\\FullComputerName\root\cimv2", options)
-            ' scope.Connect()
+            scope_cimv2 = New ManagementScope("\\" & IP & "\root\cimv2")
+            scope_cimv2.Connect()
+            scope_WMI = New ManagementScope("\\" & IP & "\root\WMI")
+            scope_WMI.Connect()
 
             ' Query system for Operating System information
-
-            query = New ObjectQuery("SELECT * FROM Win32_OperatingSystem")
-            searcher = New ManagementObjectSearcher(scope, query)
+            WMIquery = New ObjectQuery("SELECT * FROM Win32_OperatingSystem")
+            searcher = New ManagementObjectSearcher(scope_cimv2, WMIquery)
             queryCollection = searcher.Get()
 
             For Each managementObject In queryCollection
@@ -110,41 +122,75 @@ Public Class Search
                 Exit For
             Next
 
-            query = New ObjectQuery("SELECT * FROM Win32_NetworkAdapterConfiguration")
-            searcher = New ManagementObjectSearcher(scope, query)
+            WMIquery = New ObjectQuery("SELECT * FROM Win32_NetworkAdapterConfiguration WHERE IPEnabled=True")
+            searcher = New ManagementObjectSearcher(scope_cimv2, WMIquery)
 
             queryCollection = searcher.Get()
 
             For Each managementObject In queryCollection
-                If managementObject("IPEnabled") Then
-                    profile.NetInterface = managementObject("Caption")
-                    If profile.NetInterface.StartsWith("[") Then
-                        Dim j As Int16
-                        j = InStr(profile.NetInterface, "]", CompareMethod.Text)
-                        profile.NetInterface = profile.NetInterface.Substring(j + 1)
-                    End If
+                For Each s As String In managementObject("IPaddress")
+                    profile.IPAddress = s
+                    Exit For
+                Next
 
-                    For Each s As String In managementObject("IPaddress")
-                        profile.IPAddress = s
-                        Exit For
-                    Next
+                WMIquery = New ObjectQuery("SELECT * FROM Win32_NetWorkAdapter WHERE AdapterTypeId=0 AND Index='" & managementObject("Index") & "'")
+                searcher = New ManagementObjectSearcher(scope_cimv2, WMIquery)
 
-                    profile.MacAddress = managementObject("MacAddress")
-                    BackgroundWorker1.ReportProgress(Progress, profile)
-                Else
-                    BackgroundWorker1.ReportProgress(Progress, Nothing)
-                End If
+                For Each managementObjectAdapter As ManagementObject In searcher.Get()
+                    profile.NetInterface = managementObjectAdapter("Description")
+                    profile.MacAddress = managementObjectAdapter("MACAddress")
+
+                    Try
+                        WMIquery = New ObjectQuery("SELECT * FROM MSPower_DeviceEnable")
+                        searcher2 = New ManagementObjectSearcher(scope_WMI, WMIquery)
+                        For Each managementObject2 As ManagementObject In searcher2.Get()
+                            If (managementObject2("InstanceName").ToString().ToUpper.StartsWith(managementObjectAdapter("PNPDeviceID"))) Then
+                                profile.PowerManagementEnable = IIf(managementObject2("Enable"), My.Resources.Strings.lit_true, My.Resources.Strings.lit_false)
+                                profile.PowerManagementActive = IIf(managementObject2("Active"), My.Resources.Strings.lit_true, My.Resources.Strings.lit_false)
+                                Exit For
+                            End If
+                        Next
+
+                        WMIquery = New ObjectQuery("SELECT * FROM MSPower_DeviceWakeEnable")
+                        searcher2 = New ManagementObjectSearcher(scope_WMI, WMIquery)
+                        For Each managementObject2 As ManagementObject In searcher2.Get()
+                            If (managementObject2("InstanceName").ToString().ToUpper.StartsWith(managementObjectAdapter("PNPDeviceID"))) Then
+                                profile.WakeEnabled = IIf(managementObject2("Enable"), My.Resources.Strings.lit_true, My.Resources.Strings.lit_false)
+                                Exit For
+                            End If
+                        Next
+
+                        WMIquery = New ObjectQuery("SELECT * FROM MSNdis_DeviceWakeOnMagicPacketOnly")
+                        searcher2 = New ManagementObjectSearcher(scope_WMI, WMIquery)
+                        For Each managementObject2 As ManagementObject In searcher2.Get()
+                            If (managementObject2("InstanceName").ToString().ToUpper.StartsWith(managementObjectAdapter("PNPDeviceID"))) Then
+                                profile.WakeOnMagicOnly = IIf(managementObject2("EnableWakeOnMagicPacketOnly"), My.Resources.Strings.lit_true, My.Resources.Strings.lit_false)
+                                Exit For
+                            End If
+                        Next
+
+                    Catch
+
+                    End Try
+
+                Next
             Next
 
         Catch ex As Exception
             profile.IPAddress = IP
             profile = FindMAC(profile)
-            If profile.Name = "" Then profile.Name = IP
-            BackgroundWorker1.ReportProgress(Progress, profile)
 
         End Try
 
-    End Sub
+        If String.IsNullOrEmpty(profile.Name) Then profile.Name = IP
+        If String.IsNullOrEmpty(profile.PowerManagementEnable) Then profile.PowerManagementEnable = My.Resources.Strings.lit_Unknown
+        If String.IsNullOrEmpty(profile.PowerManagementActive) Then profile.PowerManagementActive = My.Resources.Strings.lit_Unknown
+        If String.IsNullOrEmpty(profile.WakeEnabled) Then profile.WakeEnabled = My.Resources.Strings.lit_Unknown
+        If String.IsNullOrEmpty(profile.WakeOnMagicOnly) Then profile.WakeOnMagicOnly = My.Resources.Strings.lit_Unknown
+
+        Return profile
+
+    End Function
 
     Private Function FindMAC(profile As Profile) As Profile
         Dim address As IPAddress
@@ -162,7 +208,7 @@ Public Class Search
                     profile.MacAddress = BitConverter.ToString(mac, 0, len)
                     DNShost = Dns.GetHostEntry(address)
                     profile.Name = DNShost.HostName
-                    profile.OSName = "Unknown"
+                    profile.OSName = My.Resources.Strings.lit_Unknown
                 End If
             End If
 
@@ -176,16 +222,14 @@ Public Class Search
 
     End Function
 
-    Private Sub Button_Search_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Search.Click
+    Private Sub searchButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchBegin.Click
         Me.Cursor = Cursors.WaitCursor
-        Button_Search.Enabled = False
-        Button_Cancel.Enabled = True
+        SearchBegin.Enabled = False
+        cancelSearch.Enabled = True
         ToolStripProgressBar1.Visible = True
-        ListView1.Items.Clear()
-        BackgroundWorker1.RunWorkerAsync()
+        listView.Items.Clear()
+        backgroundWorker.RunWorkerAsync()
     End Sub
-
-#Region "DEMO"
 
     Private Sub Search_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim found As Boolean
@@ -210,34 +254,13 @@ Public Class Search
         Next
         ComboBoxGroup.Text = none
 
-#If DEMO Then
-        Dim i As ListViewItem
-
-        i = ListView1.Items.Add("Landru")
-        i.SubItems.Add("Microsoft(R) Windows(R) Server 2003, Standard Edition")
-        i.SubItems.Add("HP Network Teaming Virtual Miniport Driver")
-        i.SubItems.Add("192.168.0.4")
-        i.SubItems.Add("00:0B:33:6D:02:3A")
-
-        i = ListView1.Items.Add("Morbo")
-        i.SubItems.Add("Microsoft(R) Windows XP")
-        i.SubItems.Add("HP Network Teaming Virtual Miniport Driver")
-        i.SubItems.Add("192.168.0.8")
-        i.SubItems.Add("00:0A:13:6F:01:3A")
-
-        ToolStripProgressBar1.Visible = True
-        ToolStripProgressBar1.Value = 20
-        ToolStripStatusLabel1.Text = "Polling 129.168.0.9"
-#End If
-
-    End Sub
-#End Region
-
-    Private Sub Button_Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Cancel.Click
-        BackgroundWorker1.CancelAsync()
     End Sub
 
-    Private Sub BackgroundWorker1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+    Private Sub cancelSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancelSearch.Click
+        backgroundWorker.CancelAsync()
+    End Sub
+
+    Private Sub backgroundWorker_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles backgroundWorker.DoWork
         Dim i, startIP, stopIP As UInt32
         Dim ip As String
         Dim Progress As Integer
@@ -253,7 +276,7 @@ Public Class Search
                 End If
                 Progress = (i - startIP) * 100 / Math.Max(1, stopIP - startIP)
                 Poll(ip, Progress)
-                If BackgroundWorker1.CancellationPending Then
+                If backgroundWorker.CancellationPending Then
                     Exit For
                 End If
                 Application.DoEvents()
@@ -276,7 +299,7 @@ Public Class Search
         Return num
     End Function
 
-    Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
+    Private Sub backgroundWorker_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles backgroundWorker.ProgressChanged
         Dim i As ListViewItem
         Dim p As Profile
 
@@ -285,42 +308,39 @@ Public Class Search
 #If DISPLAY Then
             p.MacAddress = p.MacAddress.Substring(0, 9) & "00:00:00"
 #End If
-            i = ListView1.Items.Add(p.Name)
+            i = listView.Items.Add(p.Name)
             i.SubItems.Add(p.OSName)
             i.SubItems.Add(p.NetInterface)
             i.SubItems.Add(p.IPAddress)
             i.SubItems.Add(p.MacAddress)
+            i.SubItems.Add(p.WakeEnabled)
         End If
 
         ToolStripProgressBar1.Value = e.ProgressPercentage
     End Sub
 
-    Private Sub BackgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-        Button_Search.Enabled = True
-        Button_Cancel.Enabled = False
+    Private Sub backgroundWorker_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles backgroundWorker.RunWorkerCompleted
+        SearchBegin.Enabled = True
+        cancelSearch.Enabled = False
         Me.Cursor = Cursors.Default
         ToolStripStatusLabel1.Text = My.Resources.Strings.Done
         ToolStripProgressBar1.Visible = False
     End Sub
 
-    Private Sub Button_CheckAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_CheckAll.Click
-        For Each l As ListViewItem In ListView1.Items
+    Private Sub CheckAllButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckAllButton.Click
+        For Each l As ListViewItem In listView.Items
             l.Checked = True
         Next
     End Sub
 
-    Private Sub Button_UnCheckAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_UnCheckAll.Click
-        For Each l As ListViewItem In ListView1.Items
+    Private Sub UnCheckAllButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UnCheckAllButton.Click
+        For Each l As ListViewItem In listView.Items
             l.Checked = False
         Next
     End Sub
 
     Private Sub ShowDetails(ByVal l As ListViewItem)
-        Dim scope As ManagementScope
-        Dim m As ManagementObject
-        Dim searcher As ManagementObjectSearcher
-        Dim queryCollection As ManagementObjectCollection
-        Dim query As ObjectQuery
+        Dim profile As Profile
         Dim s As String = ""
 
         If l.SubItems(0).Text = "" Then
@@ -329,55 +349,29 @@ Public Class Search
             Exit Sub
         End If
 
-        Try
-            scope = New ManagementScope("\\" & l.Text & "\root\cimv2")
-            scope.Connect()
-
-            ' Query system for Operating System information
-
-            query = New ObjectQuery("SELECT * FROM Win32_OperatingSystem")
-            searcher = New ManagementObjectSearcher(scope, query)
-            queryCollection = searcher.Get()
-
-            For Each m In queryCollection
-                s = m("Caption") & vbCrLf
-                Exit For
-            Next
-
-            query = New ObjectQuery("SELECT * FROM Win32_NetworkAdapterConfiguration")
-            searcher = New ManagementObjectSearcher(scope, query)
-            queryCollection = searcher.Get()
-
-            For Each m In queryCollection
-                If m("IPEnabled") Then
-                    s &= "Network adapter: " & m("Caption") & vbCrLf
-                    'If p.NetInterface.StartsWith("[") Then
-                    '    Dim j As Int16
-                    '    j = InStr(p.NetInterface, "]", CompareMethod.Text)
-                    '    p.NetInterface = p.NetInterface.Substring(j + 1)
-                    'End If
-
-                    For Each ip As String In m("IPaddress")
-                        s &= "IP: " & ip & vbCrLf
-                    Next
-
+        profile = getWMIdata(l.SubItems(3).Text)
 #If DISPLAY Then
-                    m("MacAddress") = m("MacAddress").Substring(0, 9) & "00:00:00"
+        profile.MacAddress = profile.MacAddress.Substring(0, 9) & "00:00:00"
 #End If
 
-                    s &= "MAC: " & m("MacAddress")
-                End If
-            Next
-            MsgBox(s, MsgBoxStyle.OkOnly + MsgBoxStyle.Information, l.Text & " settings")
+        s = "OS: " & profile.OSName & vbCrLf
+        s &= "Network adapter: " & profile.NetInterface & vbCrLf
+        s &= "IP: " & profile.IPAddress & vbCrLf
 
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
 
-        End Try
+        s &= "MAC: " & profile.MacAddress & vbCrLf & vbCrLf
+        s &= "WakeOnLAN Enabled: " & profile.WakeEnabled & vbCrLf
+        s &= "Power Management Enabled: " & profile.PowerManagementEnable & vbCrLf
+        s &= "Wake by Magic Packet only: " & profile.WakeOnMagicOnly
+
+        MsgBox(s, MsgBoxStyle.OkOnly + MsgBoxStyle.Information, l.Text & " settings")
+
     End Sub
 
-    Private Sub ListView1_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListView1.DoubleClick
-        ShowDetails(ListView1.SelectedItems(0))
+    Private Sub listView_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles listView.DoubleClick
+        listView.Cursor = Cursors.WaitCursor
+        ShowDetails(listView.SelectedItems(0))
+        listView.Cursor = Cursors.Default
     End Sub
 
 End Class
