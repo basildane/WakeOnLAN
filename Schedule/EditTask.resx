@@ -136,12 +136,6 @@
 	<data name="TabPage2.Location" type="System.Drawing.Point, System.Drawing">
 		<value>4, 22</value>
 	</data>
-	<data name="TriggerNewButton.Text" xml:space="preserve">
-    <value>New...</value>
-  <comment></comment></data>
-	<data name="&gt;&gt;TriggerEditButton.Name" xml:space="preserve">
-    <value>TriggerEditButton</value>
-  </data>
 	<data name="&gt;&gt;TriggerDeleteButton.Parent" xml:space="preserve">
     <value>TabPage2</value>
   </data>
@@ -282,6 +276,9 @@
 	<data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
 		<value>6, 13</value>
 	</data>
+	<data name="PasswordTextBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
 	<data name="Label2.AutoSize" type="System.Boolean, mscorlib">
 		<value>True</value>
 	</data>
@@ -296,6 +293,9 @@
 	</data>
 	<data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
+  </data>
+	<data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 	<data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
@@ -357,9 +357,6 @@
 	<data name="&gt;&gt;TriggerEditButton.Parent" xml:space="preserve">
     <value>TabPage2</value>
   </data>
-	<data name="&gt;&gt;ActionEditButton.Name" xml:space="preserve">
-    <value>ActionEditButton</value>
-  </data>
 	<data name="PasswordTextBox.Size" type="System.Drawing.Size, System.Drawing">
 		<value>132, 20</value>
 	</data>
@@ -372,9 +369,9 @@
 	<data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-	<data name="PasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-		<value>104, 66</value>
-	</data>
+	<data name="&gt;&gt;ListViewActions.Name" xml:space="preserve">
+    <value>ListViewActions</value>
+  </data>
 	<data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
 		<value>60, 13</value>
 	</data>
@@ -462,21 +459,21 @@
 	<data name="PasswordTextBox.TabIndex" type="System.Int32, mscorlib">
 		<value>12</value>
 	</data>
-	<data name="PasswordTextBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
+	<data name="Label4.TabIndex" type="System.Int32, mscorlib">
+		<value>10</value>
+	</data>
 	<data name="ActionNewButton.Location" type="System.Drawing.Point, System.Drawing">
 		<value>6, 332</value>
 	</data>
-	<data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	<data name="&gt;&gt;TriggerEditButton.Name" xml:space="preserve">
+    <value>TriggerEditButton</value>
   </data>
 	<data name="&gt;&gt;ListViewTriggers.Name" xml:space="preserve">
     <value>ListViewTriggers</value>
   </data>
-	<data name="TabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-		<value>3, 3, 3, 3</value>
-	</data>
+	<data name="&gt;&gt;ButtonCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
 	<data name="Label7.Text" xml:space="preserve">
     <value>(domain\userid)</value>
   <comment></comment></data>
@@ -486,9 +483,9 @@
 	<data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
     <value>TabPage3</value>
   </data>
-	<data name="&gt;&gt;Label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+	<data name="PasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
+		<value>104, 66</value>
+	</data>
 	<data name="&gt;&gt;OKButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -540,9 +537,6 @@
 	<data name="&gt;&gt;Label7.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
-	<data name="TriggerNewButton.Location" type="System.Drawing.Point, System.Drawing">
-		<value>3, 339</value>
-	</data>
 	<data name="&gt;&gt;ActionNewButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -579,15 +573,18 @@
 	<data name="ActionDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
 		<value>75, 23</value>
 	</data>
+	<data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 	<data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
 		<value>3, 10</value>
 	</data>
 	<data name="&gt;&gt;ColumnHeader1.Name" xml:space="preserve">
     <value>ColumnHeader1</value>
   </data>
-	<data name="ListViewActions.TabIndex" type="System.Int32, mscorlib">
-		<value>0</value>
-	</data>
+	<data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>EditTask</value>
+  </data>
 	<data name="TabControlTasks.Size" type="System.Drawing.Size, System.Drawing">
 		<value>572, 394</value>
 	</data>
@@ -609,14 +606,14 @@
 	<data name="Label1.Text" xml:space="preserve">
     <value>Name</value>
   <comment></comment></data>
-	<data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
-		<value>564, 368</value>
-	</data>
 	<data name="&gt;&gt;TriggerEditButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
 	<data name="&gt;&gt;Label5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;DescriptionTextBox.Name" xml:space="preserve">
+    <value>DescriptionTextBox</value>
   </data>
 	<data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
 		<value>42, 69</value>
@@ -666,8 +663,8 @@
 	<data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-	<data name="&gt;&gt;ButtonCancel.Parent" xml:space="preserve">
-    <value>$this</value>
+	<data name="&gt;&gt;ActionEditButton.Name" xml:space="preserve">
+    <value>ActionEditButton</value>
   </data>
 	<data name="ColumnHeader1.Text" xml:space="preserve">
     <value>Action</value>
@@ -684,8 +681,8 @@
 	<data name="&gt;&gt;TriggerNewButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-	<data name="Label4.TabIndex" type="System.Int32, mscorlib">
-		<value>10</value>
+	<data name="ListViewActions.TabIndex" type="System.Int32, mscorlib">
+		<value>0</value>
 	</data>
 	<data name="TriggerDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
 		<value>165, 339</value>
@@ -744,9 +741,9 @@
 	<data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
 		<value>552, 121</value>
 	</data>
-	<data name="&gt;&gt;ListViewActions.Name" xml:space="preserve">
-    <value>ListViewActions</value>
-  </data>
+	<data name="TriggerNewButton.Location" type="System.Drawing.Point, System.Drawing">
+		<value>3, 339</value>
+	</data>
 	<data name="&gt;&gt;ActionNewButton.Parent" xml:space="preserve">
     <value>TabPage3</value>
   </data>
@@ -765,30 +762,33 @@
 	<data name="ActionDeleteButton.TabIndex" type="System.Int32, mscorlib">
 		<value>4</value>
 	</data>
+	<data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
 	<data name="ActionNewButton.Text" xml:space="preserve">
     <value>New...</value>
   <comment></comment></data>
 	<data name="Label4.AutoSize" type="System.Boolean, mscorlib">
 		<value>True</value>
 	</data>
-	<data name="&gt;&gt;DescriptionTextBox.Name" xml:space="preserve">
-    <value>DescriptionTextBox</value>
-  </data>
+	<data name="TabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+		<value>3, 3, 3, 3</value>
+	</data>
 	<data name="&gt;&gt;TabPage2.Parent" xml:space="preserve">
     <value>TabControlTasks</value>
   </data>
-	<data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>EditTask</value>
-  </data>
+	<data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
+		<value>564, 368</value>
+	</data>
 	<data name="Label1.AutoSize" type="System.Boolean, mscorlib">
 		<value>True</value>
 	</data>
 	<data name="TabPage1.Location" type="System.Drawing.Point, System.Drawing">
 		<value>4, 22</value>
 	</data>
-	<data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
+	<data name="TriggerNewButton.Text" xml:space="preserve">
+    <value>New...</value>
+  <comment></comment></data>
 	<data name="TriggerEditButton.TabIndex" type="System.Int32, mscorlib">
 		<value>6</value>
 	</data>
@@ -823,6 +823,6 @@
 		<value>True</value>
 	</metadata>
 	<metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-		<value>nl</value>
+		<value>ro</value>
 	</metadata>
 </root>

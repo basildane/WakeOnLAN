@@ -36,8 +36,8 @@ Namespace My
 #If DEBUG Then
             My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
             'My.Settings.dbPath = "c:\projects\test\machines.xml"
-            'My.Settings.Language = "nl-NL"
-            My.Settings.Language = "en-US"
+            My.Settings.Language = "ro-RO"
+            'My.Settings.Language = "en-US"
 #End If
 
             If My.Settings.Language = "" Then

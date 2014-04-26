@@ -124,14 +124,15 @@
 	<data name="shut_timeout.Location" type="System.Drawing.Point, System.Drawing">
 		<value>123, 49</value>
 	</data>
-	<data name="rbShutdown.Location" type="System.Drawing.Point, System.Drawing">
-		<value>123, 140</value>
+	<data name="&gt;&gt;Label_Operation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="Label_Timeout.TabIndex" type="System.Int32, mscorlib">
+		<value>50</value>
 	</data>
 	<data name="&gt;&gt;shut_force.Parent" xml:space="preserve">
     <value>GroupBox1</value>
-  </data>
-	<data name="&gt;&gt;ProgressBar1.Parent" xml:space="preserve">
-    <value>SplitContainer1.Panel1</value>
   </data>
 	<data name="&gt;&gt;Label_Operation.Parent" xml:space="preserve">
     <value>SplitContainer1.Panel1</value>
@@ -142,10 +143,6 @@
 	<data name="&gt;&gt;SplitContainer1.Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-	<data name="shut_message.Location" type="System.Drawing.Point, System.Drawing">
-		<value>123, 23</value>
-	</data>
-	<assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
 	<data name="shut_timeout.TabIndex" type="System.Int32, mscorlib">
 		<value>1</value>
 	</data>
@@ -164,16 +161,9 @@
 	<data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
 		<value>50, 110</value>
 	</data>
-	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-	<data name="ListView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-		<value>Top, Bottom, Left, Right</value>
+	<data name="Cancel_Button.Size" type="System.Drawing.Size, System.Drawing">
+		<value>100, 50</value>
 	</data>
-	<data name="&gt;&gt;Label16.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-	<data name="&gt;&gt;ColumnHeader2.Name" xml:space="preserve">
-    <value>ColumnHeader2</value>
-  </data>
 	<data name="&gt;&gt;Label_Operation.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -189,12 +179,13 @@
 	<data name="SplitContainer1.IsSplitterFixed" type="System.Boolean, mscorlib">
 		<value>True</value>
 	</data>
-	<data name="Cancel_Button.Size" type="System.Drawing.Size, System.Drawing">
-		<value>100, 50</value>
-	</data>
+	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
 	<data name="ShutdownButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
 		<value>NoControl</value>
 	</data>
+	<data name="&gt;&gt;ColumnHeader2.Name" xml:space="preserve">
+    <value>ColumnHeader2</value>
+  </data>
 	<data name="rbHibernate.Text" xml:space="preserve">
     <value>Hibernate</value>
   <comment></comment></data>
@@ -213,11 +204,8 @@
 	<data name="&gt;&gt;shut_force.Name" xml:space="preserve">
     <value>shut_force</value>
   </data>
-	<data name="Label15.Text" xml:space="preserve">
-    <value>Reboot</value>
-  <comment></comment></data>
-	<data name="rbSleep.Size" type="System.Drawing.Size, System.Drawing">
-		<value>52, 17</value>
+	<data name="SplitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>883, 359</value>
 	</data>
 	<data name="Label_Message.Location" type="System.Drawing.Point, System.Drawing">
 		<value>6, 26</value>
@@ -231,15 +219,15 @@
 	<data name="rbShutdown.Size" type="System.Drawing.Size, System.Drawing">
 		<value>73, 17</value>
 	</data>
+	<data name="Label_Timeout.Location" type="System.Drawing.Point, System.Drawing">
+		<value>17, 52</value>
+	</data>
 	<data name="$this.Text" xml:space="preserve">
     <value>Shutdown</value>
   <comment></comment></data>
 	<data name="shut_reboot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
 		<value>NoControl</value>
 	</data>
-	<data name="&gt;&gt;Label_Timeout.Name" xml:space="preserve">
-    <value>Label_Timeout</value>
-  </data>
 	<data name="&gt;&gt;rbShutdown.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -254,6 +242,9 @@
   </data>
 	<data name="Label_Message.TabIndex" type="System.Int32, mscorlib">
 		<value>55</value>
+	</data>
+	<data name="ListView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+		<value>Top, Bottom, Left, Right</value>
 	</data>
 	<data name="&gt;&gt;shut_timeout.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -465,11 +456,8 @@
 	<data name="shut_force.Size" type="System.Drawing.Size, System.Drawing">
 		<value>168, 24</value>
 	</data>
-	<data name="shut_force.TabIndex" type="System.Int32, mscorlib">
-		<value>2</value>
-	</data>
-	<data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
-    <value>SplitContainer1.Panel2</value>
+	<data name="&gt;&gt;shut_message.Name" xml:space="preserve">
+    <value>shut_message</value>
   </data>
 	<data name="Label_Operation.Location" type="System.Drawing.Point, System.Drawing">
 		<value>12, 9</value>
@@ -480,9 +468,6 @@
 	<data name="rbHibernate.Size" type="System.Drawing.Size, System.Drawing">
 		<value>71, 17</value>
 	</data>
-	<data name="SplitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-		<value>883, 359</value>
-	</data>
 	<data name="AbortButton.Text" xml:space="preserve">
     <value>Abort Shutdown</value>
   <comment></comment></data>
@@ -492,26 +477,23 @@
 	<data name="rbSleep.AutoSize" type="System.Boolean, mscorlib">
 		<value>True</value>
 	</data>
-	<data name="ShutdownButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-		<value>ImageBeforeText</value>
-	</data>
+	<data name="&gt;&gt;Label_Timeout.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
 	<data name="rbSleep.Location" type="System.Drawing.Point, System.Drawing">
 		<value>123, 163</value>
 	</data>
 	<data name="Label_Message.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
 		<value>NoControl</value>
 	</data>
-	<data name="&gt;&gt;shut_timeout.Name" xml:space="preserve">
-    <value>shut_timeout</value>
-  </data>
 	<data name="&gt;&gt;ShutdownButton.Parent" xml:space="preserve">
     <value>SplitContainer1.Panel2</value>
   </data>
 	<data name="&gt;&gt;Label_Timeout.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-	<data name="AbortButton.Location" type="System.Drawing.Point, System.Drawing">
-		<value>198, 297</value>
+	<data name="rbSleep.Size" type="System.Drawing.Size, System.Drawing">
+		<value>52, 17</value>
 	</data>
 	<data name="Label_Message.Text" xml:space="preserve">
     <value>Display message</value>
@@ -525,11 +507,8 @@
 	<data name="&gt;&gt;shut_message.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-	<data name="&gt;&gt;shut_message.Name" xml:space="preserve">
-    <value>shut_message</value>
-  </data>
-	<data name="&gt;&gt;Label_Operation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	<data name="&gt;&gt;Label_Timeout.Name" xml:space="preserve">
+    <value>Label_Timeout</value>
   </data>
 	<data name="&gt;&gt;rbSleep.Name" xml:space="preserve">
     <value>rbSleep</value>
@@ -546,6 +525,12 @@
 	<data name="&gt;&gt;ListView1.Parent" xml:space="preserve">
     <value>SplitContainer1.Panel1</value>
   </data>
+	<data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+		<value>6, 13</value>
+	</data>
+	<data name="&gt;&gt;Cancel_Button.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
 	<data name="Label_Message.Size" type="System.Drawing.Size, System.Drawing">
 		<value>86, 13</value>
 	</data>
@@ -558,8 +543,8 @@
 	<data name="ColumnHeader2.Width" type="System.Int32, mscorlib">
 		<value>346</value>
 	</data>
-	<data name="&gt;&gt;Cancel_Button.ZOrder" xml:space="preserve">
-    <value>1</value>
+	<data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
 	<data name="&gt;&gt;rbShutdown.Name" xml:space="preserve">
     <value>rbShutdown</value>
@@ -600,14 +585,14 @@
 	<data name="rbShutdown.Text" xml:space="preserve">
     <value>Shutdown</value>
   <comment></comment></data>
-	<data name="rbHibernate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-		<value>NoControl</value>
-	</data>
-	<data name="ColumnHeader2.Text" xml:space="preserve">
-    <value>Status</value>
-  <comment></comment></data>
-	<data name="&gt;&gt;shut_reboot.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	<data name="&gt;&gt;ShutdownButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;ProgressBar1.Parent" xml:space="preserve">
+    <value>SplitContainer1.Panel1</value>
+  </data>
+	<data name="&gt;&gt;Label16.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
 	<data name="&gt;&gt;Cancel_Button.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -621,8 +606,8 @@
 	<data name="Label_Operation.AutoSize" type="System.Boolean, mscorlib">
 		<value>True</value>
 	</data>
-	<data name="Label_Timeout.Location" type="System.Drawing.Point, System.Drawing">
-		<value>17, 52</value>
+	<data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+		<value>CenterScreen</value>
 	</data>
 	<data name="&gt;&gt;rbShutdown.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -639,17 +624,20 @@
 	<data name="shut_timeout.Text" xml:space="preserve">
     <value>30</value>
   <comment></comment></data>
+	<data name="AbortButton.Location" type="System.Drawing.Point, System.Drawing">
+		<value>198, 297</value>
+	</data>
 	<data name="AbortButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleLeft</value>
 	</data>
 	<data name="&gt;&gt;SplitContainer1.Panel2.Name" xml:space="preserve">
     <value>SplitContainer1.Panel2</value>
   </data>
-	<data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-		<value>CenterScreen</value>
+	<data name="shut_force.TabIndex" type="System.Int32, mscorlib">
+		<value>2</value>
 	</data>
-	<data name="&gt;&gt;ShutdownButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	<data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
+    <value>SplitContainer1.Panel2</value>
   </data>
 	<data name="&gt;&gt;AbortButton.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -663,9 +651,6 @@
 	<data name="Label_Operation.Size" type="System.Drawing.Size, System.Drawing">
 		<value>186, 24</value>
 	</data>
-	<data name="Label_Operation.Text" xml:space="preserve">
-    <value>Ready to shutdown...</value>
-  <comment></comment></data>
 	<data name="&gt;&gt;shut_message.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
@@ -682,6 +667,9 @@
     <value>SplitContainer1</value>
   </data>
 	<data name="rbSleep.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+		<value>NoControl</value>
+	</data>
+	<data name="rbHibernate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
 		<value>NoControl</value>
 	</data>
 	<data name="Cancel_Button.Text" xml:space="preserve">
@@ -735,6 +723,9 @@
 	<data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Shutdown</value>
   </data>
+	<data name="&gt;&gt;shut_reboot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 	<data name="&gt;&gt;rbHibernate.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -744,14 +735,14 @@
 	<data name="&gt;&gt;ListView1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+	<data name="Label15.Text" xml:space="preserve">
+    <value>Reboot</value>
+  <comment></comment></data>
 	<data name="shut_reboot.Location" type="System.Drawing.Point, System.Drawing">
 		<value>123, 105</value>
 	</data>
 	<data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
 	<data name="shut_force.Text" xml:space="preserve">
     <value>Force Apps Closed</value>
@@ -774,8 +765,8 @@
 	<data name="&gt;&gt;Label16.Name" xml:space="preserve">
     <value>Label16</value>
   </data>
-	<data name="AbortButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-		<value>MiddleRight</value>
+	<data name="shut_message.Location" type="System.Drawing.Point, System.Drawing">
+		<value>123, 23</value>
 	</data>
 	<data name="shut_message.TabIndex" type="System.Int32, mscorlib">
 		<value>0</value>
@@ -835,8 +826,8 @@
         gg==
 </value>
 	</data>
-	<data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-		<value>6, 13</value>
+	<data name="rbShutdown.Location" type="System.Drawing.Point, System.Drawing">
+		<value>123, 140</value>
 	</data>
 	<data name="ListView1.Size" type="System.Drawing.Size, System.Drawing">
 		<value>500, 229</value>
@@ -844,6 +835,9 @@
 	<data name="ProgressBar1.Location" type="System.Drawing.Point, System.Drawing">
 		<value>344, 12</value>
 	</data>
+	<data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Status</value>
+  <comment></comment></data>
 	<data name="&gt;&gt;SplitContainer1.Name" xml:space="preserve">
     <value>SplitContainer1</value>
   </data>
@@ -856,9 +850,9 @@
 	<data name="shut_message.Size" type="System.Drawing.Size, System.Drawing">
 		<value>184, 20</value>
 	</data>
-	<data name="Label_Message.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
+	<data name="&gt;&gt;shut_timeout.Name" xml:space="preserve">
+    <value>shut_timeout</value>
+  </data>
 	<data name="&gt;&gt;ListView1.Name" xml:space="preserve">
     <value>ListView1</value>
   </data>
@@ -886,18 +880,21 @@
 	<data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
 		<value>883, 359</value>
 	</data>
+	<data name="rbSleep.TabIndex" type="System.Int32, mscorlib">
+		<value>59</value>
+	</data>
 	<data name="&gt;&gt;Label_Message.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
 	<data name="&gt;&gt;ColumnHeader2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-	<data name="rbSleep.TabIndex" type="System.Int32, mscorlib">
-		<value>59</value>
+	<data name="SplitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+		<value>0, 0</value>
 	</data>
-	<data name="&gt;&gt;Label_Timeout.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
+	<data name="ShutdownButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+		<value>ImageBeforeText</value>
+	</data>
 	<data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
 		<value>322, 229</value>
 	</data>
@@ -960,9 +957,9 @@
         m+7MYsahj91QqhGuj3Q3Qfwb9cN+PAgbZVcAAAAASUVORK5CYII=
 </value>
 	</data>
-	<data name="&gt;&gt;Label_Timeout.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
+	<data name="Label_Message.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
 	<data name="Cancel_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
 		<value>NoControl</value>
 	</data>
@@ -971,6 +968,9 @@
 	</data>
 	<data name="&gt;&gt;rbSleep.Parent" xml:space="preserve">
     <value>GroupBox1</value>
+  </data>
+	<data name="&gt;&gt;ShutdownButton.Name" xml:space="preserve">
+    <value>ShutdownButton</value>
   </data>
 	<data name="ProgressBar1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
 		<value>Top, Right</value>
@@ -984,32 +984,32 @@
 	<data name="&gt;&gt;ProgressBar1.Name" xml:space="preserve">
     <value>ProgressBar1</value>
   </data>
+	<data name="AbortButton.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleRight</value>
+	</data>
 	<data name="rbHibernate.AutoSize" type="System.Boolean, mscorlib">
 		<value>True</value>
 	</data>
 	<data name="GroupBox1.Text" xml:space="preserve">
     <value>Shutdown options</value>
   <comment></comment></data>
-	<data name="Label_Timeout.TabIndex" type="System.Int32, mscorlib">
-		<value>50</value>
-	</data>
 	<data name="&gt;&gt;Label16.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
-	<data name="SplitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-		<value>0, 0</value>
-	</data>
+	<data name="Label_Operation.Text" xml:space="preserve">
+    <value>Ready to shutdown...</value>
+  <comment></comment></data>
 	<data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
 		<value>34, 13</value>
 	</data>
-	<data name="&gt;&gt;ShutdownButton.Name" xml:space="preserve">
-    <value>ShutdownButton</value>
+	<data name="&gt;&gt;Label_Timeout.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
 	<data name="&gt;&gt;SplitContainer1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
 	<metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-		<value>nl</value>
+		<value>ro</value>
 	</metadata>
 	<metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
 		<value>17, 17</value>
