@@ -27,12 +27,14 @@ Namespace My
     ' NetworkAvailabilityChanged: Raised when the network connection is connected or disconnected.
 
     Partial Friend Class MyApplication
+        Private Declare Function ShowWindow Lib "user32" (ByVal hWnd As System.IntPtr, ByVal nCmdShow As Int32) As Boolean
+        Private Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As Long
+        Private Declare Function SetForegroundWindow Lib "user32" (ByVal hwnd As Long) As IntPtr
 
         ' Defines:
         ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
 
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
-
 #If DEBUG Then
             My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
             'My.Settings.dbPath = "c:\projects\test\machines.xml"
@@ -52,6 +54,8 @@ Namespace My
             End If
 
             Debug.WriteLine(My.Settings.Language)
+            ' single instance only
+            singleInstance()
 
         End Sub
 
@@ -59,6 +63,24 @@ Namespace My
             My.Application.Log.WriteException(e.Exception, TraceEventType.Critical, "Application shut down at " & My.Computer.Clock.GmtTime.ToString)
         End Sub
 
+        ''' <summary>
+        ''' Search for another running instance of WOL.  If found, activate it and terminate this instance.
+        ''' </summary>
+        ''' <remarks></remarks>
+        Private Sub singleInstance()
+            Const SW_RESTORE As Int32 = 9
+            Const SW_SHOW As Int32 = 5
+            Dim hwnd As Int32
+
+            hwnd = FindWindow(Nothing, My.Resources.Strings.Title)
+            If hwnd > 0 Then
+                ShowWindow(hwnd, SW_SHOW)
+                ShowWindow(hwnd, SW_RESTORE)
+                SetForegroundWindow(hwnd)
+                End
+            End If
+
+        End Sub
     End Class
 
 End Namespace
