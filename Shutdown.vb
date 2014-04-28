@@ -205,5 +205,8 @@ Public Class Shutdown
         Me.Close()
     End Sub
 
+    Private Sub Shutdown_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Me.Dispose()
+    End Sub
 End Class
 
