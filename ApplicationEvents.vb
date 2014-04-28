@@ -36,12 +36,26 @@ Namespace My
 
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
 #If DEBUG Then
-            My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
-            'My.Settings.dbPath = "c:\projects\test\machines.xml"
-            My.Settings.Language = "ro-RO"
-            'My.Settings.Language = "en-US"
+            'My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
+            My.Settings.dbPath = "c:\projects\test\machines.xml"
+            'My.Settings.Language = "ro-RO"
+            My.Settings.Language = "en-US"
 #End If
+            configureCulture()
+            singleInstance()
+            upgradeSettings()
 
+        End Sub
+
+        Private Sub MyApplication_UnhandledException(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
+            My.Application.Log.WriteException(e.Exception, TraceEventType.Critical, "Application shut down at " & My.Computer.Clock.GmtTime.ToString)
+        End Sub
+
+        ''' <summary>
+        ''' Setup the culture and language configuration.
+        ''' </summary>
+        ''' <remarks></remarks>
+        Private Sub configureCulture()
             If My.Settings.Language = "" Then
                 My.Settings.Language = My.Application.Culture.Name
                 My.Application.ChangeUICulture(My.Settings.Language)
@@ -54,13 +68,6 @@ Namespace My
             End If
 
             Debug.WriteLine(My.Settings.Language)
-            ' single instance only
-            singleInstance()
-
-        End Sub
-
-        Private Sub MyApplication_UnhandledException(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
-            My.Application.Log.WriteException(e.Exception, TraceEventType.Critical, "Application shut down at " & My.Computer.Clock.GmtTime.ToString)
         End Sub
 
         ''' <summary>
@@ -80,6 +87,18 @@ Namespace My
                 End
             End If
 
+        End Sub
+
+        ''' <summary>
+        ''' If this is an upgrade from a previous version, try to recover the previous user settings.
+        ''' </summary>
+        ''' <remarks></remarks>
+        Private Sub upgradeSettings()
+            If My.Settings.needUpgrade Then
+                My.Settings.Upgrade()
+                My.Settings.needUpgrade = False
+                My.Settings.Save()
+            End If
         End Sub
     End Class
 
