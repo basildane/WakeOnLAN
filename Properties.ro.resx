@@ -163,12 +163,6 @@
   <data name="rbURI.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 17</value>
-  </data>
-  <data name="rbURI.Text" xml:space="preserve">
-    <value>Uri</value>
-  </data>
   <data name="rbURI.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -186,6 +180,12 @@
   </data>
   <data name="lbLeaveBlank.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 13</value>
+  </data>
+  <data name="lbLeaveBlank.Text" xml:space="preserve">
+    <value>*lasă necompletat pentru DHCP</value>
   </data>
   <data name="lbLeaveBlank.ToolTip" xml:space="preserve">
     <value />
@@ -266,7 +266,7 @@
     <value />
   </data>
   <data name="MachineName.ToolTip" xml:space="preserve">
-    <value>Acesta este numele maşinii. Inscrie un nume valid, continand litere, numere, linie punctata sau underscore</value>
+    <value>Acesta este numele maşinii. Scrie un nume valid, conţinand litere, numere, linie punctată sau linie jos.</value>
   </data>
   <data name="MAC.Error" xml:space="preserve">
     <value />
@@ -284,7 +284,13 @@
     <value />
   </data>
   <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 198</value>
+    <value>78, 198</value>
+  </data>
+  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 13</value>
+  </data>
+  <data name="lbGroup.Text" xml:space="preserve">
+    <value>Grup</value>
   </data>
   <data name="lbGroup.ToolTip" xml:space="preserve">
     <value />
@@ -293,7 +299,7 @@
     <value />
   </data>
   <data name="Delete_Button.Text" xml:space="preserve">
-    <value>Sterge</value>
+    <value>Şterge</value>
   </data>
   <data name="Delete_Button.ToolTip" xml:space="preserve">
     <value />
@@ -308,10 +314,10 @@
     <value />
   </data>
   <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 13</value>
+    <value>127, 13</value>
   </data>
   <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Linie comanda Shutdown:</value>
+    <value>Linie comandă închidere:</value>
   </data>
   <data name="lbShutdownCommand.ToolTip" xml:space="preserve">
     <value />
@@ -319,8 +325,11 @@
   <data name="CheckBox_Emergency.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
   <data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>Shutdown de urgenta?</value>
+    <value>Închidere de urgenta?</value>
   </data>
   <data name="CheckBox_Emergency.ToolTip" xml:space="preserve">
     <value />
@@ -329,7 +338,13 @@
     <value />
   </data>
   <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 171</value>
+    <value>48, 171</value>
+  </data>
+  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="lbNetbios.Text" xml:space="preserve">
+    <value>Gazdă URI</value>
   </data>
   <data name="lbNetbios.ToolTip" xml:space="preserve">
     <value />
@@ -353,7 +368,7 @@
     <value />
   </data>
   <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 61</value>
+    <value>43, 61</value>
   </data>
   <data name="lbMAC.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 13</value>

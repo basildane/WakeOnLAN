@@ -36,10 +36,10 @@ Namespace My
 
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
 #If DEBUG Then
-            'My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
-            My.Settings.dbPath = "c:\projects\test\machines.xml"
-            'My.Settings.Language = "ro-RO"
-            My.Settings.Language = "en-US"
+            My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
+            'My.Settings.dbPath = "c:\projects\test\machines.xml"
+            My.Settings.Language = "ro-RO"
+            'My.Settings.Language = "en-US"
 #End If
             configureCulture()
             singleInstance()

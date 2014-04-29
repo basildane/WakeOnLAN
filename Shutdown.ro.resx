@@ -117,7 +117,19 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>Numele maşinii</value>
+  </data>
+	<data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Statut</value>
+  </data>
 	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="Label_Operation.Size" type="System.Drawing.Size, System.Drawing">
+		<value>221, 24</value>
+	</data>
+	<data name="Label_Operation.Text" xml:space="preserve">
+    <value>Pregătit pentru închidere</value>
+  </data>
 	<data name="AbortButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -165,6 +177,9 @@
         m+7MYsahj91QqhGuj3Q3Qfwb9cN+PAgbZVcAAAAASUVORK5CYII=
 </value>
 	</data>
+	<data name="AbortButton.Text" xml:space="preserve">
+    <value>Abandonează închiderea</value>
+  </data>
 	<data name="ShutdownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -217,6 +232,51 @@
         gg==
 </value>
 	</data>
+	<data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Renunţă</value>
+  </data>
+	<data name="rbHibernate.Size" type="System.Drawing.Size, System.Drawing">
+		<value>79, 17</value>
+	</data>
+	<data name="rbHibernate.Text" xml:space="preserve">
+    <value>Hibernează</value>
+  </data>
+	<data name="rbSleep.Size" type="System.Drawing.Size, System.Drawing">
+		<value>67, 17</value>
+	</data>
+	<data name="rbSleep.Text" xml:space="preserve">
+    <value>Adoarme</value>
+  </data>
+	<data name="shut_reboot.Text" xml:space="preserve">
+    <value>Repornire după închidere</value>
+  </data>
+	<data name="shut_force.Text" xml:space="preserve">
+    <value>Forţează închiderea aplicaţiei</value>
+  </data>
+	<data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+		<value>53, 13</value>
+	</data>
+	<data name="Label15.Text" xml:space="preserve">
+    <value>Repornire</value>
+  </data>
+	<data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
+		<value>48, 13</value>
+	</data>
+	<data name="Label16.Text" xml:space="preserve">
+    <value>Forţează</value>
+  </data>
+	<data name="Label_Message.Size" type="System.Drawing.Size, System.Drawing">
+		<value>83, 13</value>
+	</data>
+	<data name="Label_Message.Text" xml:space="preserve">
+    <value>Prezintă mesajul</value>
+  </data>
+	<data name="Label_Timeout.Text" xml:space="preserve">
+    <value>Timp limită (secs)</value>
+  </data>
+	<data name="GroupBox1.Text" xml:space="preserve">
+    <value>Opţiuni de închidere</value>
+  </data>
 	<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
         AAABAAIAMDAAAAAAIACoJQAAJgAAABAQAAAAABgAaAMAAM4lAAAoAAAAMAAAAGAAAAABACAAAAAAAAAk
@@ -398,54 +458,15 @@
 </value>
 	</data>
 	<data name="$this.Text" xml:space="preserve">
-    <value>Shut down</value>
+    <value>Închide</value>
   </data>
 	<data name="ShutdownButton.Text" xml:space="preserve">
-		<value>Shutdown</value>
-	</data>
-	<data name="rbHibernate.Text" xml:space="preserve">
-		<value>Hibernează</value>
-	</data>
-	<data name="Label16.Text" xml:space="preserve">
-		<value>Forţează</value>
-	</data>
-	<data name="AbortButton.Text" xml:space="preserve">
-		<value>Renunta la Shutdown</value>
-	</data>
-	<data name="Label_Message.Text" xml:space="preserve">
-		<value>Prezinta mesajul</value>
-	</data>
-	<data name="shut_reboot.Text" xml:space="preserve">
-		<value>Repornire dupa shutdown</value>
-	</data>
-	<data name="rbSleep.Text" xml:space="preserve">
-		<value>Adoarme</value>
+		<value>Închide</value>
 	</data>
 	<data name="rbShutdown.Text" xml:space="preserve">
-		<value>Shutdown</value>
+		<value>Închide</value>
 	</data>
-	<data name="Cancel_Button.Text" xml:space="preserve">
-		<value>Renunţă</value>
-	</data>
-	<data name="ColumnHeader1.Text" xml:space="preserve">
-		<value>Numele maşinii</value>
-	</data>
-	<data name="Label15.Text" xml:space="preserve">
-		<value>Repornire</value>
-	</data>
-	<data name="shut_force.Text" xml:space="preserve">
-		<value>Forţează închiderea aplicaţiei</value>
-	</data>
-	<data name="ColumnHeader2.Text" xml:space="preserve">
-		<value>Starea</value>
-	</data>
-	<data name="Label_Timeout.Text" xml:space="preserve">
-		<value>Timp limita (secs)</value>
-	</data>
-	<data name="GroupBox1.Text" xml:space="preserve">
-		<value>Opţiunile Shutdown</value>
-	</data>
-	<data name="Label_Operation.Text" xml:space="preserve">
-		<value>Pregatit pentru shutwown</value>
+	<data name="shut_timeout.Text" xml:space="preserve">
+		<value>30</value>
 	</data>
 </root>

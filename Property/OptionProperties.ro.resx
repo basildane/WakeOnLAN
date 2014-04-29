@@ -122,7 +122,7 @@
     <comment>Broadcast Address</comment>
   </data>
 	<data name="Broadcast_AddressDescription" xml:space="preserve">
-    <value>Inscrie adresa de difuzare IP pentru pachetele de difuzare WOL</value>
+    <value>Scrie adresa de difuzare IP pentru pachetele de difuzare WOL.</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
 	<data name="cat_Emergency" xml:space="preserve">
@@ -130,7 +130,7 @@
     <comment>Emergency settings</comment>
   </data>
 	<data name="cat_Shutdown" xml:space="preserve">
-    <value>Shutdown</value>
+    <value>Închide</value>
     <comment>Shutdown</comment>
   </data>
 	<data name="cat_WOL" xml:space="preserve">
@@ -142,7 +142,7 @@
     <comment>Time delay</comment>
   </data>
 	<data name="DelayDescription" xml:space="preserve">
-    <value>Timp implicit de întârziere pentru shutdown</value>
+    <value>Timp implicit de întârziere pentru închidere.</value>
     <comment>The default time delay for shutdowns.</comment>
   </data>
 	<data name="EmergencyDelay" xml:space="preserve">
@@ -150,7 +150,7 @@
     <comment>Time delay</comment>
   </data>
 	<data name="EmergencyDelayDescription" xml:space="preserve">
-    <value>Timp de întârziere pentru shutdown de urgenţă</value>
+    <value>Timp de întârziere pentru închidere de urgenţă.</value>
     <comment>The time delay for emergency shutdowns.</comment>
   </data>
 	<data name="EmergencyShutdown" xml:space="preserve">
@@ -158,7 +158,7 @@
     <comment>Default Message</comment>
   </data>
 	<data name="EmergencyShutdownDescription" xml:space="preserve">
-    <value>Mesaj pentru shutdown de urgenţă</value>
+    <value>Mesaj pentru închidere de urgenţă.</value>
     <comment>The emergency shutdown message.</comment>
   </data>
 	<data name="Enable_Sound" xml:space="preserve">
@@ -166,15 +166,15 @@
     <comment>Enable sound</comment>
   </data>
 	<data name="Enable_SoundDescription" xml:space="preserve">
-    <value>Sună atunci când serverul monitorizat este online sau nu răspunde</value>
+    <value>Sună atunci când serverul monitorizat este online sau nu răspunde.</value>
     <comment>Play a sound when a monitored server comes online, or stops responding.</comment>
   </data>
 	<data name="Force" xml:space="preserve">
-    <value>Forţează shutdown</value>
+    <value>Forţează închiderea</value>
     <comment>Force shutdown</comment>
   </data>
 	<data name="ForceDescription" xml:space="preserve">
-    <value>Forţează serverul remote pentru shutdown. Fişierele nesalvate vor fi pierdute.</value>
+    <value>Forţează serverul remote pentru închidere. Fişierele nesalvate vor fi pierdute.</value>
     <comment>Force remote server to shutdown.  Unsaved files will be lost.</comment>
   </data>
 	<data name="Reboot" xml:space="preserve">
@@ -182,7 +182,7 @@
     <comment>Reboot</comment>
   </data>
 	<data name="RebootDescription" xml:space="preserve">
-    <value>Daca e adevărat, atunci reporneşte dupa shutdown</value>
+    <value>Dacă e adevărat, atunci reporneşte după închidere.</value>
     <comment>If true, then reboot after shutdown.</comment>
   </data>
 	<data name="Shutdown" xml:space="preserve">
@@ -190,7 +190,7 @@
     <comment>Default Message</comment>
   </data>
 	<data name="ShutdownDescription" xml:space="preserve">
-    <value>Mesajul implicit pentru shutdown</value>
+    <value>Mesajul implicit pentru închidere.</value>
     <comment>The default shutdown message.</comment>
   </data>
 	<data name="UDPPort" xml:space="preserve">
@@ -198,7 +198,7 @@
     <comment>UDP Port</comment>
   </data>
 	<data name="UDPPortDescription" xml:space="preserve">
-    <value>Inscrie portul UDP pentru mesajele de difuzare</value>
+    <value>Scrie portul UDP pentru mesajele de difuzare.</value>
     <comment>Enter the UDP Port number for the broadcast messages.</comment>
   </data>
 	<data name="AppVersion" xml:space="preserve">
@@ -206,11 +206,11 @@
     <comment>Version</comment>
   </data>
 	<data name="AppVersionDescription" xml:space="preserve">
-    <value>Versiunea programului</value>
+    <value>Versiune program</value>
     <comment>Application version</comment>
   </data>
 	<data name="cat_Application" xml:space="preserve">
-    <value>Aplicatie</value>
+    <value>Aplicaţie</value>
     <comment>Application</comment>
   </data>
 	<data name="VersionFull" xml:space="preserve">
@@ -232,4 +232,7 @@
 	<data name="AutoCheck" xml:space="preserve">
     <value>Verifica automat modernizările programului</value>
   <comment></comment></data>
+	<data name="dbPath" xml:space="preserve">
+		<value>Calea bazei de date</value>
+	</data>
 </root>
