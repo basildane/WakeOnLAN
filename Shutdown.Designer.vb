@@ -58,7 +58,6 @@ Partial Class Shutdown
         '
         'SplitContainer1.Panel1
         '
-        resources.ApplyResources(Me.SplitContainer1.Panel1, "SplitContainer1.Panel1")
         Me.SplitContainer1.Panel1.Controls.Add(Me.ListView1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ProgressBar1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label_Operation)
@@ -66,7 +65,6 @@ Partial Class Shutdown
         '
         'SplitContainer1.Panel2
         '
-        resources.ApplyResources(Me.SplitContainer1.Panel2, "SplitContainer1.Panel2")
         Me.SplitContainer1.Panel2.Controls.Add(Me.ShutdownButton)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Cancel_Button)
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox1)
@@ -122,7 +120,6 @@ Partial Class Shutdown
         '
         'GroupBox1
         '
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Controls.Add(Me.rbHibernate)
         Me.GroupBox1.Controls.Add(Me.rbSleep)
         Me.GroupBox1.Controls.Add(Me.rbShutdown)
@@ -134,6 +131,7 @@ Partial Class Shutdown
         Me.GroupBox1.Controls.Add(Me.shut_message)
         Me.GroupBox1.Controls.Add(Me.shut_timeout)
         Me.GroupBox1.Controls.Add(Me.Label_Timeout)
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         '
@@ -160,9 +158,9 @@ Partial Class Shutdown
         '
         'shut_reboot
         '
-        resources.ApplyResources(Me.shut_reboot, "shut_reboot")
         Me.shut_reboot.Checked = True
         Me.shut_reboot.CheckState = System.Windows.Forms.CheckState.Checked
+        resources.ApplyResources(Me.shut_reboot, "shut_reboot")
         Me.shut_reboot.Name = "shut_reboot"
         '
         'shut_force

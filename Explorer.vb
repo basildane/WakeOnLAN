@@ -547,6 +547,10 @@ Public Class Explorer
         ChangeLanguage("nl-NL")
     End Sub
 
+    Private Sub RomanianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RomanianToolStripMenuItem.Click
+        ChangeLanguage("ro-RO")
+    End Sub
+
     Private Sub ChangeLanguage(ByVal newLang As String)
         My.Settings.Language = newLang
         My.Application.ChangeUICulture(My.Settings.Language)

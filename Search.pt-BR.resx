@@ -117,10 +117,10 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="Button_Search.Text" xml:space="preserve">
+	<data name="SearchBegin.Text" xml:space="preserve">
     <value>Localizar agora</value>
   </data>
-	<data name="Button_Search.ToolTip" xml:space="preserve">
+	<data name="SearchBegin.ToolTip" xml:space="preserve">
     <value>Inicia a busca pelos computadores</value>
   </data>
 	<data name="ch_Name.Text" xml:space="preserve">
@@ -138,10 +138,10 @@
 	<data name="ch_MAC.Text" xml:space="preserve">
     <value>Endereço MAC</value>
   </data>
-	<data name="Button_Cancel.Text" xml:space="preserve">
+	<data name="cancelSearch.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
-	<data name="Button_Cancel.ToolTip" xml:space="preserve">
+	<data name="cancelSearch.ToolTip" xml:space="preserve">
     <value>Para a busca pelos computadores</value>
   </data>
 	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -163,13 +163,13 @@
 	<data name="Label3.Text" xml:space="preserve">
     <value>Selecione os computadores desejados e clique OK para adicioná-los no banco de dados.</value>
   </data>
-	<data name="Button_CheckAll.Text" xml:space="preserve">
+	<data name="CheckAllButton.Text" xml:space="preserve">
     <value>Marcar todos</value>
   </data>
-	<data name="Button_UnCheckAll.Text" xml:space="preserve">
+	<data name="UnCheckAllButton.Text" xml:space="preserve">
     <value>Desmarcar todos</value>
   </data>
-	<data name="Cancel_Button.Text" xml:space="preserve">
+	<data name="closeButton.Text" xml:space="preserve">
     <value>Cancelar</value>
   </data>
 	<data name="$this.Text" xml:space="preserve">

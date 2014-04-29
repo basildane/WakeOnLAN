@@ -332,7 +332,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://aquilawol.sourceforge.net/updates/AppCast.xml")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://wol.aquilatech.com/updates/AppCast.xml")>  _
         Public ReadOnly Property updateURL() As String
             Get
                 Return CType(Me("updateURL"),String)
@@ -434,11 +434,23 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://aquilawol.sourceforge.net/updates/version.html")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://wol.aquilatech.com/updates/version.html")>  _
         Public ReadOnly Property updateVersions() As String
             Get
                 Return CType(Me("updateVersions"),String)
             End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property needUpgrade() As Boolean
+            Get
+                Return CType(Me("needUpgrade"),Boolean)
+            End Get
+            Set
+                Me("needUpgrade") = value
+            End Set
         End Property
     End Class
 End Namespace

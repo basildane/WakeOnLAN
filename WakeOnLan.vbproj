@@ -351,6 +351,11 @@
     <Compile Include="Controls\IPAddress.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Property\OptionProperties.ro.Designer.vb">
+      <DependentUpon>OptionProperties.ro.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Property\OptionProperties.nl.Designer.vb">
       <DependentUpon>OptionProperties.nl.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -371,6 +376,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OptionProperties.hu.resx</DependentUpon>
     </Compile>
+    <Compile Include="Report\ReportStrings.ro.Designer.vb">
+      <DependentUpon>ReportStrings.ro.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Report\ReportStrings.nl.Designer.vb">
       <DependentUpon>ReportStrings.nl.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -383,6 +393,11 @@
     </Compile>
     <Compile Include="Report\ReportStrings.fi.Designer.vb">
       <DependentUpon>ReportStrings.fi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Strings.ro.Designer.vb">
+      <DependentUpon>Strings.ro.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -630,6 +645,7 @@
     <Content Include="Resources\flags\france_16x16.png" />
     <Content Include="Resources\flags\hungary_flag_16x16.png" />
     <Content Include="Resources\flags\netherlands_flag_16x16.png" />
+    <Content Include="Resources\flags\romania_16x16.png" />
     <Content Include="Resources\Folder_48x48.png" />
     <Content Include="Resources\flags\Germany_Flag_16x16.png" />
     <Content Include="Resources\gplv3-88x31.png" />
@@ -686,6 +702,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.ro.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutBox.ru.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
@@ -704,6 +723,9 @@
     <EmbeddedResource Include="CalcSubnet.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalcSubnet.ro.resx">
+      <DependentUpon>CalcSubnet.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\IPAddress.resx">
       <DependentUpon>IPAddress.vb</DependentUpon>
     </EmbeddedResource>
@@ -713,6 +735,9 @@
     <EmbeddedResource Include="Explorer.nl.resx">
       <DependentUpon>Explorer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.ro.resx">
+      <DependentUpon>Explorer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="License.fi.resx">
       <DependentUpon>License.vb</DependentUpon>
     </EmbeddedResource>
@@ -720,6 +745,9 @@
       <DependentUpon>License.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="License.nl.resx">
+      <DependentUpon>License.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License.ro.resx">
       <DependentUpon>License.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listener.fi.resx">
@@ -734,6 +762,9 @@
     <EmbeddedResource Include="Listener.nl.resx">
       <DependentUpon>Listener.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Listener.ro.resx">
+      <DependentUpon>Listener.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties.fi.resx">
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
@@ -742,6 +773,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.nl.resx">
       <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties.ro.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\OptionProperties.ro.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionProperties.ro.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.nl.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -775,6 +815,14 @@
     <EmbeddedResource Include="Property\Options.nl.resx">
       <DependentUpon>Options.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Property\Options.ro.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportStrings.ro.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReportStrings.ro.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportStrings.nl.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ReportStrings.nl.Designer.vb</LastGenOutput>
@@ -799,6 +847,9 @@
     <EmbeddedResource Include="Schedule\EditAction.nl.resx">
       <DependentUpon>EditAction.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditAction.ro.resx">
+      <DependentUpon>EditAction.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTask.fi.resx">
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
@@ -806,6 +857,9 @@
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTask.nl.resx">
+      <DependentUpon>EditTask.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTask.ro.resx">
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTrigger.fi.resx">
@@ -817,6 +871,9 @@
     <EmbeddedResource Include="Schedule\EditTrigger.nl.resx">
       <DependentUpon>EditTrigger.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTrigger.ro.resx">
+      <DependentUpon>EditTrigger.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\Schedule.fi.resx">
       <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
@@ -824,6 +881,9 @@
       <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\Schedule.nl.resx">
+      <DependentUpon>Schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\Schedule.ro.resx">
       <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search.fi.resx">
@@ -835,6 +895,9 @@
     <EmbeddedResource Include="Search.nl.resx">
       <DependentUpon>Search.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search.ro.resx">
+      <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.fi.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
@@ -843,6 +906,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.nl.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shutdown.ro.resx">
+      <DependentUpon>Shutdown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.ro.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.ro.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Strings.nl.resx">
       <Generator>ResXFileCodeGenerator</Generator>

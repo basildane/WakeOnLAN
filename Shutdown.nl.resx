@@ -117,7 +117,16 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>Machinenaam</value>
+  </data>
 	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="Label_Operation.Size" type="System.Drawing.Size, System.Drawing">
+		<value>204, 24</value>
+	</data>
+	<data name="Label_Operation.Text" xml:space="preserve">
+    <value>Gereed voor afsluiten...</value>
+  </data>
 	<data name="AbortButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -165,6 +174,9 @@
         m+7MYsahj91QqhGuj3Q3Qfwb9cN+PAgbZVcAAAAASUVORK5CYII=
 </value>
 	</data>
+	<data name="AbortButton.Text" xml:space="preserve">
+    <value>Afsluiten afbreken</value>
+  </data>
 	<data name="ShutdownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -217,6 +229,54 @@
         gg==
 </value>
 	</data>
+	<data name="ShutdownButton.Text" xml:space="preserve">
+    <value>Afsluiten</value>
+  </data>
+	<data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Annuleer</value>
+  </data>
+	<data name="rbHibernate.Text" xml:space="preserve">
+    <value>Sluimeren</value>
+  </data>
+	<data name="rbSleep.Size" type="System.Drawing.Size, System.Drawing">
+		<value>58, 17</value>
+	</data>
+	<data name="rbSleep.Text" xml:space="preserve">
+    <value>Slapen</value>
+  </data>
+	<data name="rbShutdown.Size" type="System.Drawing.Size, System.Drawing">
+		<value>65, 17</value>
+	</data>
+	<data name="rbShutdown.Text" xml:space="preserve">
+    <value>Afsluiten</value>
+  </data>
+	<data name="shut_reboot.Text" xml:space="preserve">
+    <value>Herstart naar afsluiten</value>
+  </data>
+	<data name="shut_force.Text" xml:space="preserve">
+    <value>Sluit programma's geforceerd</value>
+  </data>
+	<data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+		<value>44, 13</value>
+	</data>
+	<data name="Label15.Text" xml:space="preserve">
+    <value>Herstart</value>
+  </data>
+	<data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
+		<value>43, 13</value>
+	</data>
+	<data name="Label16.Text" xml:space="preserve">
+    <value>Forceer</value>
+  </data>
+	<data name="Label_Message.Size" type="System.Drawing.Size, System.Drawing">
+		<value>67, 13</value>
+	</data>
+	<data name="Label_Message.Text" xml:space="preserve">
+    <value>Toon bericht</value>
+  </data>
+	<data name="GroupBox1.Text" xml:space="preserve">
+    <value>Afsluitopties</value>
+  </data>
 	<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
         AAABAAIAMDAAAAAAIACoJQAAJgAAABAQAAAAABgAaAMAAM4lAAAoAAAAMAAAAGAAAAABACAAAAAAAAAk
@@ -400,52 +460,4 @@
 	<data name="$this.Text" xml:space="preserve">
     <value>Afsluiten</value>
   </data>
-	<data name="ShutdownButton.Text" xml:space="preserve">
-		<value>Afsluiten</value>
-	</data>
-	<data name="rbHibernate.Text" xml:space="preserve">
-		<value>Sluimeren</value>
-	</data>
-	<data name="Label16.Text" xml:space="preserve">
-		<value>Forceer</value>
-	</data>
-	<data name="Label15.Text" xml:space="preserve">
-		<value>Herstart</value>
-	</data>
-	<data name="AbortButton.Text" xml:space="preserve">
-		<value>Afsluiten afbreken</value>
-	</data>
-	<data name="Label_Message.Text" xml:space="preserve">
-		<value>Toon bericht</value>
-	</data>
-	<data name="shut_reboot.Text" xml:space="preserve">
-		<value>Herstart naar afsluiten</value>
-	</data>
-	<data name="rbSleep.Text" xml:space="preserve">
-		<value>Slapen</value>
-	</data>
-	<data name="rbShutdown.Text" xml:space="preserve">
-		<value>Afsluiten</value>
-	</data>
-	<data name="ColumnHeader2.Text" xml:space="preserve">
-		<value>Status</value>
-	</data>
-	<data name="Label_Operation.Text" xml:space="preserve">
-		<value>Gereed voor afsluiten...</value>
-	</data>
-	<data name="Cancel_Button.Text" xml:space="preserve">
-		<value>Annuleer</value>
-	</data>
-	<data name="ColumnHeader1.Text" xml:space="preserve">
-		<value>Machinenaam</value>
-	</data>
-	<data name="shut_force.Text" xml:space="preserve">
-		<value>Sluit programma's geforceerd</value>
-	</data>
-	<data name="Label_Timeout.Text" xml:space="preserve">
-		<value>Timeout (secs)</value>
-	</data>
-	<data name="GroupBox1.Text" xml:space="preserve">
-		<value>Afsluitopties</value>
-	</data>
 </root>
