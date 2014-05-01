@@ -35,15 +35,15 @@ Namespace My
         ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
 
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
-#If DEBUG Then
-            My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
-            'My.Settings.dbPath = "c:\projects\test\machines.xml"
-            My.Settings.Language = "ro-RO"
-            'My.Settings.Language = "en-US"
-#End If
             configureCulture()
             singleInstance()
             upgradeSettings()
+
+#If DEBUG Then
+            'My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
+            'My.Settings.Language = "ro-RO"
+            'My.Settings.Language = "en-US"
+#End If
 
         End Sub
 
@@ -94,9 +94,22 @@ Namespace My
         ''' </summary>
         ''' <remarks></remarks>
         Private Sub upgradeSettings()
+            Dim regKey As Microsoft.Win32.RegistryKey
+            Dim database As String
+
             If My.Settings.needUpgrade Then
                 My.Settings.Upgrade()
                 My.Settings.needUpgrade = False
+
+                Try
+                    regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
+                    database = regKey.GetValue("Database", IO.Directory.GetParent(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, Microsoft.Win32.RegistryValueOptions.None)
+                    My.Settings.dbPath = IO.Path.Combine(database, "machines.xml")
+
+                Catch ex As Exception
+
+                End Try
+
                 My.Settings.Save()
             End If
         End Sub
