@@ -117,273 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Cancel_Button.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Renunţă</value>
   </data>
-  <data name="Cancel_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tHostURI.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tHostURI.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LabelInterfaces.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LabelInterfaces.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxAdapters.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxAdapters.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbSendTo.Error" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 116</value>
-  </data>
-  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 13</value>
-  </data>
-  <data name="lbSendTo.Text" xml:space="preserve">
-    <value>Transmite WOL la</value>
-  </data>
-  <data name="lbSendTo.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbURI.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbURI.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbIP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 17</value>
-  </data>
-  <data name="rbIP.Text" xml:space="preserve">
-    <value>Difuzare IP</value>
-  </data>
-  <data name="rbIP.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbLeaveBlank.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 13</value>
+    <value>160, 13</value>
   </data>
   <data name="lbLeaveBlank.Text" xml:space="preserve">
-    <value>*lasă necompletat pentru DHCP</value>
+    <value>* lasă necompletat pentru DHCP</value>
   </data>
-  <data name="lbLeaveBlank.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TTL.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TTL.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="UDPPort.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="UDPPort.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Help_Button.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Help_Button.Text" xml:space="preserve">
-    <value>Ajutor</value>
-  </data>
-  <data name="Help_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbUDP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 393</value>
-  </data>
-  <data name="lbUDP.Text" xml:space="preserve">
-    <value>Port UDP</value>
-  </data>
-  <data name="lbUDP.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbTTL.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 419</value>
-  </data>
-  <data name="lbTTL.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="bCalcBroadcast.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="bCalcBroadcast.Text" xml:space="preserve">
-    <value>Calculează</value>
-  </data>
-  <data name="bCalcBroadcast.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Broadcast.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Broadcast.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbBroadcast.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 142</value>
-  </data>
-  <data name="lbBroadcast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
-  </data>
-  <data name="lbBroadcast.Text" xml:space="preserve">
-    <value>Difuzare</value>
-  </data>
-  <data name="lbBroadcast.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MachineName.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MachineName.ToolTip" xml:space="preserve">
-    <value>Acesta este numele maşinii. Scrie un nume valid, conţinand litere, numere, linie punctată sau linie jos.</value>
-  </data>
-  <data name="MAC.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MAC.ToolTip" xml:space="preserve">
-    <value>Scrie adresa MAC a maşinii. Aceasta este folosită pentru mesajele Trezeşte. Adresele MAC valide sunt reprezentate de 6 perechi de numere hexazecimale separate prin   ':' sau '-'. Exempu: 01:00:22:32:af:d0</value>
-  </data>
-  <data name="Group.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Group.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbGroup.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 198</value>
-  </data>
-  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="lbGroup.Text" xml:space="preserve">
-    <value>Grup</value>
-  </data>
-  <data name="lbGroup.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Delete_Button.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Delete_Button.Text" xml:space="preserve">
-    <value>Şterge</value>
-  </data>
-  <data name="Delete_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBox_Command.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBox_Command.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbShutdownCommand.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 13</value>
-  </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Linie comandă închidere:</value>
-  </data>
-  <data name="lbShutdownCommand.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CheckBox_Emergency.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 17</value>
-  </data>
-  <data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>Închidere de urgenta?</value>
-  </data>
-  <data name="CheckBox_Emergency.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbNetbios.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 171</value>
-  </data>
-  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 13</value>
-  </data>
-  <data name="lbNetbios.Text" xml:space="preserve">
-    <value>Gazdă URI</value>
-  </data>
-  <data name="lbNetbios.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbName.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 29</value>
-  </data>
-  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="lbName.Text" xml:space="preserve">
-    <value>Nume</value>
-  </data>
-  <data name="lbName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbMAC.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 61</value>
-  </data>
-  <data name="lbMAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 13</value>
-  </data>
-  <data name="lbMAC.Text" xml:space="preserve">
-    <value>Adresă MAC</value>
-  </data>
-  <data name="lbMAC.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbIP.Error" xml:space="preserve">
-    <value />
+  <data name="IP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 19</value>
   </data>
   <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 87</value>
+    <value>40, 25</value>
   </data>
   <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -391,22 +139,97 @@
   <data name="lbIP.Text" xml:space="preserve">
     <value>Adresă IP</value>
   </data>
-  <data name="lbIP.ToolTip" xml:space="preserve">
-    <value />
+  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 44</value>
   </data>
-  <data name="IP.Error" xml:space="preserve">
-    <value />
+  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 13</value>
   </data>
-  <data name="IP.ToolTip" xml:space="preserve">
-    <value />
+  <data name="lbGroup.Text" xml:space="preserve">
+    <value>Grup</value>
+  </data>
+  <data name="MachineName.ToolTip" xml:space="preserve">
+    <value>Acesta este numele maşinii. Scrie un nume valid, conţinand litere, numere, linie punctată sau linie jos.</value>
+  </data>
+  <data name="lbName.Text" xml:space="preserve">
+    <value>Nume</value>
+  </data>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="CheckBox_Emergency.Text" xml:space="preserve">
+    <value>Închidere de urgenta?</value>
+  </data>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 13</value>
+  </data>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>Linie comandă închidere:</value>
+  </data>
+  <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 26</value>
+  </data>
+  <data name="lbMAC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 13</value>
+  </data>
+  <data name="lbMAC.Text" xml:space="preserve">
+    <value>Adresă MAC</value>
+  </data>
+  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 109</value>
+  </data>
+  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="lbNetbios.Text" xml:space="preserve">
+    <value>Gazdă URI</value>
+  </data>
+  <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 54</value>
+  </data>
+  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
+  </data>
+  <data name="lbSendTo.Text" xml:space="preserve">
+    <value>Transmite WOL la</value>
+  </data>
+  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 17</value>
+  </data>
+  <data name="rbIP.Text" xml:space="preserve">
+    <value>Difuzare IP</value>
+  </data>
+  <data name="MAC.ToolTip" xml:space="preserve">
+    <value>Scrie adresa MAC a maşinii. Aceasta este folosită pentru mesajele Trezeşte. Adresele MAC valide sunt reprezentate de 6 perechi de numere hexazecimale separate prin   ':' sau '-'. Exempu: 01:00:22:32:af:d0</value>
+  </data>
+  <data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 80</value>
+  </data>
+  <data name="lbBroadcast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="lbBroadcast.Text" xml:space="preserve">
+    <value>Difuzare</value>
+  </data>
+  <data name="UDPPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 183</value>
+  </data>
+  <data name="bCalcBroadcast.Text" xml:space="preserve">
+    <value>Calculează</value>
+  </data>
+  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 186</value>
+  </data>
+  <data name="lbUDP.Text" xml:space="preserve">
+    <value>Port UDP</value>
+  </data>
+  <data name="Help_Button.Text" xml:space="preserve">
+    <value>Ajutor</value>
+  </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Şterge</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Proprietaţi</value>
-  </data>
-  <data name="OK_Button.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="OK_Button.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>
