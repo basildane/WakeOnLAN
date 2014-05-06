@@ -99,6 +99,10 @@ Public Class MachinesClass
                 dirty = True
                 machine.TTL = 128
             End If
+            If (machine.RDPPort = 0) Then
+                dirty = True
+                machine.RDPPort = 3389
+            End If
         Next
     End Sub
 
@@ -291,6 +295,16 @@ End Class
         End Get
         Set(value As String)
             _Adapter = value
+        End Set
+    End Property
+
+    Private _RDPPort As Integer
+    Public Property RDPPort() As Integer
+        Get
+            Return _RDPPort
+        End Get
+        Set(value As Integer)
+            _RDPPort = value
         End Set
     End Property
 
