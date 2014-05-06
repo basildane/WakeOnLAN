@@ -41,8 +41,6 @@ Namespace My
 
 #If DEBUG Then
             'My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
-            'My.Settings.Language = "ro-RO"
-            'My.Settings.Language = "en-US"
 #End If
 
         End Sub
@@ -56,6 +54,12 @@ Namespace My
         ''' </summary>
         ''' <remarks></remarks>
         Private Sub configureCulture()
+
+#If DEBUG Then
+            'My.Settings.Language = "ro-RO"
+            My.Settings.Language = "en-US"
+#End If
+
             If My.Settings.Language = "" Then
                 My.Settings.Language = My.Application.Culture.Name
                 My.Application.ChangeUICulture(My.Settings.Language)

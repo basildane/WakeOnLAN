@@ -4578,9 +4578,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]WakeOnLan.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{637BC8C8-FA20-463A-920A-56139494DE37}</td><td/></row>
+		<row><td>ProductCode</td><td>{2FC5C988-D11A-496E-973D-1FAA122FBAAC}</td><td/></row>
 		<row><td>ProductName</td><td>WakeOnLAN</td><td/></row>
-		<row><td>ProductVersion</td><td>2.10.0007.06</td><td/></row>
+		<row><td>ProductVersion</td><td>2.10.0007.08</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4872,7 +4872,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
 		<row><td>{20A416B6-1FE6-468D-85B4-F8952658AA27}</td><td>2.7.5</td><td>2.7.5</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP2</td><td>2.7.5</td></row>
-		<row><td>{53C0B87A-D701-4B9D-B14F-3B7695281A99}</td><td>2.07.0006</td><td>2.10.0007.04</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP1</td><td>2.7.6 and up</td></row>
+		<row><td>{53C0B87A-D701-4B9D-B14F-3B7695281A99}</td><td>2.07.0006</td><td>2.10.0007.08</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP1</td><td>2.7.6 and up</td></row>
 	</table>
 
 	<table name="Verb">
