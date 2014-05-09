@@ -88,4 +88,5 @@ End Class
     Public UDPPort As Integer = 9
     Public TTL As Integer = 128
     Public Adapter As String = ""
+    Public RDPPort As Integer = 3389
 End Class

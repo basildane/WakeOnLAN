@@ -40,7 +40,7 @@ Namespace My
             upgradeSettings()
 
 #If DEBUG Then
-            'My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
+            My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
 #End If
 
         End Sub
