@@ -59,6 +59,7 @@ Public Class Properties
         Dim item As ComboboxItem
         item = ComboBoxAdapters.SelectedItem
         m.Adapter = item.Value
+        m.RDPPort = tRDPPort.Text
         Machines.Add(m)
 
         Machines.Save()
@@ -80,6 +81,7 @@ Public Class Properties
         Me.rbIP.Checked = True
         Me.UDPPort.Text = "9"
         Me.TTL.Text = "128"
+        Me.tRDPPort.Text = "3389"
         DisplayIPv4NetworkInterfaces("")
         Me.ShowDialog(My.Forms.Explorer)
     End Sub
@@ -103,6 +105,7 @@ Public Class Properties
         TTL.Text = m.TTL
         rbIP.Checked = (m.Method = 0)
         rbURI.Checked = (m.Method = 1)
+        tRDPPort.Text = m.RDPPort
         DisplayIPv4NetworkInterfaces(m.Adapter)
         ValidateChildren()
         Me.ShowDialog(My.Forms.Explorer)

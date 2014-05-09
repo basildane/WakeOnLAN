@@ -563,7 +563,7 @@ Public Class Explorer
         Dim m As Machine
 
         m = Machines(ListView.SelectedItems(0).Name)
-        Shell("mstsc.exe -v:" & m.Netbios, AppWinStyle.NormalFocus, False)
+        Shell(String.Format("mstsc.exe -v:{0}:{1}", m.Netbios, m.RDPPort), AppWinStyle.NormalFocus, False)
     End Sub
 
     Private Sub ShutdownToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ShutdownToolStripMenuItem.Click
