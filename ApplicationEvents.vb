@@ -27,8 +27,8 @@ Namespace My
     ' NetworkAvailabilityChanged: Raised when the network connection is connected or disconnected.
 
     Partial Friend Class MyApplication
-        Private Declare Function ShowWindow Lib "user32" (ByVal hWnd As System.IntPtr, ByVal nCmdShow As Int32) As Boolean
-        Private Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As Long
+        Private Declare Function ShowWindow Lib "user32" (ByVal hWnd As IntPtr, ByVal nCmdShow As Int32) As Boolean
+        Private Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
         Private Declare Function SetForegroundWindow Lib "user32" (ByVal hwnd As Long) As IntPtr
 
         ' Defines:
@@ -81,10 +81,10 @@ Namespace My
         Private Sub singleInstance()
             Const SW_RESTORE As Int32 = 9
             Const SW_SHOW As Int32 = 5
-            Dim hwnd As Int32
+            Dim hwnd As IntPtr
 
             hwnd = FindWindow(Nothing, My.Resources.Strings.Title)
-            If hwnd > 0 Then
+            If hwnd <> IntPtr.Zero Then
                 ShowWindow(hwnd, SW_SHOW)
                 ShowWindow(hwnd, SW_RESTORE)
                 SetForegroundWindow(hwnd)
