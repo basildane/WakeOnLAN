@@ -452,6 +452,16 @@ Namespace My
                 Me("needUpgrade") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=878X6KTKWVVE"& _ 
+            "Q")>  _
+        Public ReadOnly Property donate() As String
+            Get
+                Return CType(Me("donate"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
