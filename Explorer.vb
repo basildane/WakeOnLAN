@@ -20,6 +20,7 @@ Imports System.Diagnostics
 Imports System.Windows.Forms
 Imports Microsoft.Win32
 Imports AutoUpdaterDotNET
+Imports System.Globalization
 
 Public Class Explorer
     Declare Function IsValidLocale Lib "kernel32" (ByVal Locale As Integer, ByVal dwFlags As Integer) As Integer
@@ -552,11 +553,31 @@ Public Class Explorer
     End Sub
 
     Private Sub ChangeLanguage(ByVal newLang As String)
+        Dim cultureinfo As CultureInfo
+
         My.Settings.Language = newLang
         My.Application.ChangeUICulture(My.Settings.Language)
+
         My.Settings.DefaultMessage = My.Resources.Strings.DefaultMessage
         My.Settings.emerg_message = My.Resources.Strings.DefaultEmergency
-        Application.Restart()
+        cultureinfo = New CultureInfo(newLang)
+
+        For Each c As Control In Me.Controls
+            Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(Explorer))
+            resources.ApplyResources(c, "$this", cultureinfo)
+            RefreshResources(Me, resources, cultureinfo)
+        Next
+
+    End Sub
+
+    Private Sub RefreshResources(ctrl As Control, res As System.ComponentModel.ComponentResourceManager, cultureinfo As CultureInfo)
+        ctrl.SuspendLayout()
+        res.ApplyResources(ctrl, ctrl.Name, cultureinfo)
+        For Each control As Control In ctrl.Controls
+            RefreshResources(control, res, cultureinfo)
+        Next
+        ' recursion
+        ctrl.ResumeLayout(False)
     End Sub
 
     Private Sub RDPToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RDPToolStripMenuItem.Click

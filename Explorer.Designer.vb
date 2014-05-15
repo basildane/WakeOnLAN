@@ -109,6 +109,7 @@ Partial Class Explorer
         Me.ScheduleToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ListenerToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.HotToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripButtonDonate = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -175,7 +176,6 @@ Partial Class Explorer
         Me.ListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -472,6 +472,11 @@ Partial Class Explorer
         Me.HotToolStripButton.CheckState = System.Windows.Forms.CheckState.Checked
         resources.ApplyResources(Me.HotToolStripButton, "HotToolStripButton")
         Me.HotToolStripButton.Name = "HotToolStripButton"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        resources.ApplyResources(Me.ToolStripLabel1, "ToolStripLabel1")
         '
         'ToolStripButtonDonate
         '
@@ -831,11 +836,6 @@ Partial Class Explorer
         '
         Me.NotifyIconUpdate.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
         resources.ApplyResources(Me.NotifyIconUpdate, "NotifyIconUpdate")
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        resources.ApplyResources(Me.ToolStripLabel1, "ToolStripLabel1")
         '
         'Explorer
         '
