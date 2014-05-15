@@ -117,12 +117,6 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="ColumnHeader_Time.Text" xml:space="preserve">
-    <value>Timp</value>
-  </data>
-	<data name="ColumnHeader_Name.Text" xml:space="preserve">
-    <value>Nume</value>
-  </data>
 	<data name="ImageList_Large.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
 		<value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
@@ -291,18 +285,6 @@
         AQcSAAH/AfgDAAEHEgAC/wHwAgABHxIAA/8B8AEBAf8SAAb/EgAL
 </value>
 	</data>
-	<data name="Button_clear.Text" xml:space="preserve">
-    <value>Şterge</value>
-  </data>
-	<data name="lUDPport.Text" xml:space="preserve">
-    <value>Ascultând pe:</value>
-  </data>
-	<data name="GroupBox1.Text" xml:space="preserve">
-    <value>Configurări reţea</value>
-  </data>
-	<data name="LabelHeader.Text" xml:space="preserve">
-    <value>Pachete WakeOnLAN recepţionate...</value>
-  </data>
 	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
 	<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
@@ -471,6 +453,30 @@
 </value>
 	</data>
 	<data name="$this.Text" xml:space="preserve">
-    <value>Ascultător</value>
+    <value>監控診斷工具</value>
   </data>
+	<data name="LabelHeader.Text" xml:space="preserve">
+		<value>網路喚醒收到的封包</value>
+	</data>
+	<data name="ColumnHeader_Name.Text" xml:space="preserve">
+		<value>名稱</value>
+	</data>
+	<data name="Label1.Text" xml:space="preserve">
+		<value>UDP Port 9</value>
+	</data>
+	<data name="lUDPport.Text" xml:space="preserve">
+		<value>監控：</value>
+	</data>
+	<data name="Button_clear.Text" xml:space="preserve">
+		<value>清除</value>
+	</data>
+	<data name="ColumnHeader_IP.Text" xml:space="preserve">
+		<value>IP</value>
+	</data>
+	<data name="ColumnHeader_Time.Text" xml:space="preserve">
+		<value>時間</value>
+	</data>
+	<data name="GroupBox1.Text" xml:space="preserve">
+		<value>網路設定</value>
+	</data>
 </root>

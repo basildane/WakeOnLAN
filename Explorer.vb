@@ -737,6 +737,13 @@ Public Class Explorer
         My.Forms.Listener.Show()
     End Sub
 
+    Private Sub bDonate_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ToolStripButtonDonate_Click(sender As Object, e As EventArgs) Handles ToolStripButtonDonate.Click
+        System.Diagnostics.Process.Start(My.Settings.donate)
+    End Sub
 End Class
 
 ' Implements the manual sorting of items by columns.

@@ -83,4 +83,8 @@ Public NotInheritable Class AboutBox
     Private Sub LinkLabel2_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         System.Diagnostics.Process.Start(LinkLabel2.Text)
     End Sub
+
+    Private Sub bDonate_Click(sender As Object, e As EventArgs) Handles bDonate.Click
+        System.Diagnostics.Process.Start(My.Settings.donate)
+    End Sub
 End Class

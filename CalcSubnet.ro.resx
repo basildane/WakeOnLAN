@@ -117,25 +117,32 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<data name="bCalculate.Text" xml:space="preserve">
+    <value>Calculează</value>
+  </data>
+	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="lIP.Size" type="System.Drawing.Size, System.Drawing">
+		<value>53, 13</value>
+	</data>
+	<data name="lIP.Text" xml:space="preserve">
+    <value>Adresa IP</value>
+  </data>
+	<data name="lSubnet.Size" type="System.Drawing.Size, System.Drawing">
+		<value>50, 13</value>
+	</data>
+	<data name="lSubnet.Text" xml:space="preserve">
+    <value>Subreţea</value>
+  </data>
+	<data name="lRecommended.Size" type="System.Drawing.Size, System.Drawing">
+		<value>167, 13</value>
+	</data>
+	<data name="lRecommended.Text" xml:space="preserve">
+    <value>Adresa Recomandata de Difuzare</value>
+  </data>
+	<data name="lHeader.Text" xml:space="preserve">
+    <value>Această funcţie te ajută să găsesti "Adresa de Difuzare", bazată pe adresele IP şi Subnet.</value>
+  </data>
 	<data name="$this.Text" xml:space="preserve">
     <value>Calculează subreţeaua</value>
   </data>
-	<data name="lIP.Text" xml:space="preserve">
-		<value>Adresa IP</value>
-	</data>
-	<data name="lSubnet.Text" xml:space="preserve">
-		<value>Subreţea</value>
-	</data>
-	<data name="bCalculate.Text" xml:space="preserve">
-		<value>Calculează</value>
-	</data>
-	<data name="lHeader.Text" xml:space="preserve">
-		<value>Această funcţie te ajută să găsesti "Adresa de Difuzare", bazată pe adresele IP şi Subnet.</value>
-	</data>
-	<data name="lRecommended.Text" xml:space="preserve">
-		<value>Adresa Recomandata de Difuzare</value>
-	</data>
-	<data name="bOK.Text" xml:space="preserve">
-		<value>OK</value>
-	</data>
 </root>

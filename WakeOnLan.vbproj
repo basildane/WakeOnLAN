@@ -708,6 +708,9 @@
     <EmbeddedResource Include="AboutBox.ru.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.zh-TW.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalcSubnet.fi.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
@@ -724,6 +727,9 @@
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CalcSubnet.ro.resx">
+      <DependentUpon>CalcSubnet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalcSubnet.zh-TW.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\IPAddress.resx">
@@ -750,6 +756,9 @@
     <EmbeddedResource Include="License.ro.resx">
       <DependentUpon>License.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="License.zh-TW.resx">
+      <DependentUpon>License.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Listener.fi.resx">
       <DependentUpon>Listener.vb</DependentUpon>
     </EmbeddedResource>
@@ -765,6 +774,9 @@
     <EmbeddedResource Include="Listener.ro.resx">
       <DependentUpon>Listener.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Listener.zh-TW.resx">
+      <DependentUpon>Listener.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties.fi.resx">
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
@@ -775,6 +787,9 @@
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.ro.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties.zh-TW.resx">
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.ro.resx">
@@ -850,6 +865,9 @@
     <EmbeddedResource Include="Schedule\EditAction.ro.resx">
       <DependentUpon>EditAction.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditAction.zh-TW.resx">
+      <DependentUpon>EditAction.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTask.fi.resx">
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
@@ -860,6 +878,9 @@
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTask.ro.resx">
+      <DependentUpon>EditTask.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTask.zh-TW.resx">
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTrigger.fi.resx">
@@ -874,6 +895,9 @@
     <EmbeddedResource Include="Schedule\EditTrigger.ro.resx">
       <DependentUpon>EditTrigger.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTrigger.zh-TW.resx">
+      <DependentUpon>EditTrigger.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\Schedule.fi.resx">
       <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
@@ -884,6 +908,9 @@
       <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\Schedule.ro.resx">
+      <DependentUpon>Schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\Schedule.zh-TW.resx">
       <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search.fi.resx">
@@ -898,6 +925,9 @@
     <EmbeddedResource Include="Search.ro.resx">
       <DependentUpon>Search.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search.zh-TW.resx">
+      <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.fi.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
@@ -909,6 +939,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.ro.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shutdown.zh-TW.resx">
+      <DependentUpon>Shutdown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.zh-TW.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Strings.ro.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -40,6 +40,7 @@ Partial Class AboutBox
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.bDonate = New System.Windows.Forms.Button()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBoxUpdates.SuspendLayout()
@@ -155,12 +156,20 @@ Partial Class AboutBox
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.TabStop = True
         '
+        'bDonate
+        '
+        resources.ApplyResources(Me.bDonate, "bDonate")
+        Me.bDonate.FlatAppearance.BorderSize = 0
+        Me.bDonate.Name = "bDonate"
+        Me.bDonate.UseVisualStyleBackColor = True
+        '
         'AboutBox
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.CancelButton = Me.OKButton
+        Me.Controls.Add(Me.bDonate)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TextBoxDescription)
         Me.Controls.Add(Me.GroupBoxUpdates)
@@ -180,6 +189,7 @@ Partial Class AboutBox
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents LabelProductName As System.Windows.Forms.Label
@@ -197,5 +207,6 @@ Partial Class AboutBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents bDonate As System.Windows.Forms.Button
 
 End Class

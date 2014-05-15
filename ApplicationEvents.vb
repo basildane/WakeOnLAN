@@ -56,7 +56,7 @@ Namespace My
         Private Sub configureCulture()
 
 #If DEBUG Then
-            'My.Settings.Language = "ro-RO"
+            'My.Settings.Language = "zh-TW"
             My.Settings.Language = "en-US"
 #End If
 
