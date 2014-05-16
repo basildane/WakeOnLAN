@@ -351,6 +351,11 @@
     <Compile Include="Controls\IPAddress.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Property\OptionProperties.ro.Designer.vb">
       <DependentUpon>OptionProperties.ro.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -556,12 +561,6 @@
     <Compile Include="Controls\RegexTextBox.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SplashScreen.Designer.vb">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SplashScreen.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Strings.ru.Designer.vb">
       <DependentUpon>Strings.ru.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -574,11 +573,6 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -945,9 +939,6 @@
     <EmbeddedResource Include="Shutdown.zh-TW.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen.zh-TW.resx">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Strings.ro.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.ro.Designer.vb</LastGenOutput>
@@ -1153,9 +1144,6 @@
       <DependentUpon>Explorer.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen.pt-BR.resx">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Strings.zh-TW.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.zh-TW.Designer.vb</LastGenOutput>
@@ -1192,12 +1180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Search.ru.resx">
       <DependentUpon>Search.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen.resx">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen.ru.resx">
-      <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Strings.ru.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1299,9 +1281,9 @@
       <Project>{45d56ff1-d0f9-4c71-aa72-811635043fad}</Project>
       <Name>AlphaWindow</Name>
     </ProjectReference>
-    <ProjectReference Include="Infralution.Localization\Infralution.Localization.csproj">
+    <ProjectReference Include="Localization\Localization.csproj">
       <Project>{62e6c7ea-ab84-4e44-b05a-af648e60fa6d}</Project>
-      <Name>Infralution.Localization</Name>
+      <Name>Localization</Name>
     </ProjectReference>
     <ProjectReference Include="WOL\WOL.vbproj">
       <Project>{e0c53654-1da8-4ab6-9b88-337a4cc4734e}</Project>

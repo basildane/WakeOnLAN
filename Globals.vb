@@ -22,9 +22,13 @@ Module Globals
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
     Public Declare Function InitiateSystemShutdown Lib "advapi32.dll" Alias "InitiateSystemShutdownA" (ByVal lpMachineName As String, ByVal lpMessage As String, ByVal dwTimeout As Integer, ByVal bForceAppsClosed As Integer, ByVal bRebootAfterShutdown As Integer) As Integer
     Public Declare Function AbortSystemShutdown Lib "advapi32.dll" Alias "AbortSystemShutdownA" (ByVal lpMachineName As String) As Integer
+    Public Declare Function SetForegroundWindow Lib "user32" (ByVal hwnd As Long) As IntPtr
+    Public Declare Function ShowWindow Lib "user32" (ByVal hWnd As IntPtr, ByVal nCmdShow As Int32) As Boolean
+    Public Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
 
     Public ShutdownMode As Boolean      'true if in shutdown mode, false if in abort mode
     Public meItem As ListViewItem
+    Public splashPtr As IntPtr
 
     Public Function FormatMessage(ByVal [error] As Integer) As String
         Const FORMAT_MESSAGE_FROM_SYSTEM As Short = &H1000

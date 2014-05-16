@@ -1,3 +1,23 @@
+/*
+ *   WakeOnLAN - Wake On LAN
+ *    Copyright (C) 2004-2014 Aquila Technology, LLC. <webmaster@aquilatech.com>
+ *
+ *    This file is part of WakeOnLAN.
+ *
+ *    WakeOnLAN is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    WakeOnLAN is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -7,12 +27,11 @@ using System.Windows.Forms;
 
 namespace AlphaWindow
 {
-	// This only works with Windows 2000/XP
 	public class Splash : Form
     {
         Timer timer = new Timer();
 
-		public Splash(Bitmap bitmap)
+		public Splash(Bitmap bitmap, String title, String version, String copyright, out IntPtr hwnd)
 		{
 			// Window settings
 			//this.TopMost = true;
@@ -20,7 +39,6 @@ namespace AlphaWindow
 			this.Size = bitmap.Size;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Show();				// Must be called before setting bitmap
-
 
             Graphics g = Graphics.FromImage(bitmap);
 
@@ -33,7 +51,9 @@ namespace AlphaWindow
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
             g.PixelOffsetMode = PixelOffsetMode.HighQuality;
-            g.DrawString("WakeOnLAN", new Font("Microsoft Sans Serif", 28, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(280,100), sf);
+            g.DrawString(title, new Font(FontFamily.GenericSansSerif, 30, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(280, 130), sf);
+            g.DrawString(version, new Font(FontFamily.GenericSansSerif, 18, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(80, 220));
+            g.DrawString(copyright, new Font(FontFamily.GenericSansSerif, 16, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(80, 250));
             g.Flush();
 
             this.SelectBitmap(bitmap);
@@ -41,10 +61,11 @@ namespace AlphaWindow
             timer.Tick += new EventHandler(TimerEventProcessor);
             timer.Interval = 4000;
             timer.Start();
+
+            hwnd = this.Handle;
 		}
 
-        private void TimerEventProcessor(Object myObject,
-                                            EventArgs myEventArgs)
+        private void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
         {
             timer.Stop();
             this.Close();
@@ -109,19 +130,24 @@ namespace AlphaWindow
 			}
 		}
 
-		// Let Windows drag this window for us (thinks its hitting the title bar of the window)
-		protected override void WndProc(ref Message message) 
-		{
-			if (message.Msg == APIHelp.WM_NCHITTEST) 
-			{
-				// Tell Windows that the user is on the title bar (caption)
-				message.Result= (IntPtr)APIHelp.HTCAPTION;
-			}
-			else
-			{
-				base.WndProc(ref message);
-			}
-		}
+		// Let Windows drag this window for us
+        protected override void WndProc(ref Message message)
+        {
+            switch (message.Msg)
+            {
+                case APIHelp.WM_LBUTTONUP:
+                    // let user close splashscreen by clicking
+                    message.Msg = APIHelp.WM_CLOSE;
+                    break;
+
+                case APIHelp.WM_NCHITTEST:
+                    // Tell Windows that the user is on the title bar (caption)
+                    //message.Result = (IntPtr)APIHelp.HTCAPTION;
+                    break;
+            }
+
+            base.WndProc(ref message);
+        }
 
 	}
 	
@@ -130,6 +156,8 @@ namespace AlphaWindow
 	{
 		// Required constants
 		public const Int32	WS_EX_LAYERED	= 0x80000;
+        public const Int32  WM_LBUTTONUP    = 0x202;
+        public const Int32  WM_CLOSE        = 0x0010;
 		public const Int32	HTCAPTION		= 0x02;
 		public const Int32	WM_NCHITTEST	= 0x84;
 		public const Int32	ULW_ALPHA		= 0x02;

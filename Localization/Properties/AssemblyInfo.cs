@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Infralution.Localization")]
+[assembly: AssemblyTitle("Localization")]
 [assembly: AssemblyDescription("Provides Localization Utilities for Windows Forms applications")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Infralution")]
-[assembly: AssemblyProduct("Infralution.Localization")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Localization")]
 [assembly: AssemblyCopyright("Copyright © 2009")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

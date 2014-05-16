@@ -522,7 +522,7 @@ Public Class Explorer
         menuitem = sender
         My.Settings.Language = menuitem.Tag
         menuitem.Checked = True
-        Infralution.Localization.CultureManager.ApplicationUICulture = New CultureInfo(menuitem.Tag.ToString())
+        Localization.CultureManager.ApplicationUICulture = New CultureInfo(menuitem.Tag.ToString())
         LoadTree()
         TreeView.SelectedNode = TreeView.Nodes(0)
         LoadList()
@@ -727,6 +727,10 @@ Public Class Explorer
         System.Diagnostics.Process.Start(My.Settings.donate)
     End Sub
 
+    ' Keep the SplashScreen in the foreground
+    Private Sub Explorer_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        SetForegroundWindow(Globals.splashPtr)
+    End Sub
 End Class
 
 ' Implements the manual sorting of items by columns.

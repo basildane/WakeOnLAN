@@ -16,8 +16,8 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
-Imports Infralution.Localization
 Imports System.Globalization
+Imports Localization
 Imports AlphaWindow
 
 Namespace My
@@ -31,10 +31,6 @@ Namespace My
     ' NetworkAvailabilityChanged: Raised when the network connection is connected or disconnected.
 
     Partial Friend Class MyApplication
-        Private Declare Function ShowWindow Lib "user32" (ByVal hWnd As IntPtr, ByVal nCmdShow As Int32) As Boolean
-        Private Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
-        Private Declare Function SetForegroundWindow Lib "user32" (ByVal hwnd As Long) As IntPtr
-
         ' Defines:
         ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
 
@@ -43,8 +39,7 @@ Namespace My
             singleInstance()
             upgradeSettings()
 
-            Dim bitmap As Bitmap = New Bitmap(My.Resources.Splash1)
-            Dim splash As AlphaWindow.Splash = New Splash(bitmap)
+            Dim splash As Splash = New Splash(My.Resources.Splash, My.Resources.Strings.Title, System.String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision), My.Application.Info.Copyright, Globals.splashPtr)
 
 #If DEBUG Then
             My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
