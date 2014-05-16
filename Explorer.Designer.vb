@@ -18,9 +18,9 @@ Partial Class Explorer
     Friend WithEvents TreeNodeImageList As System.Windows.Forms.ImageList
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStrip As System.Windows.Forms.ToolStrip
+    Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents FoldersToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents ListViewToolStripButton As System.Windows.Forms.ToolStripDropDownButton
-    Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ImportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
