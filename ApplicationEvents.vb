@@ -16,6 +16,10 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
+Imports Infralution.Localization
+Imports System.Globalization
+Imports AlphaWindow
+
 Namespace My
 
     ' The following events are available for MyApplication:
@@ -39,6 +43,9 @@ Namespace My
             singleInstance()
             upgradeSettings()
 
+            Dim bitmap As Bitmap = New Bitmap(My.Resources.Splash1)
+            Dim splash As AlphaWindow.Splash = New Splash(bitmap)
+
 #If DEBUG Then
             My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
 #End If
@@ -54,23 +61,16 @@ Namespace My
         ''' </summary>
         ''' <remarks></remarks>
         Private Sub configureCulture()
-
 #If DEBUG Then
             'My.Settings.Language = "zh-TW"
-            My.Settings.Language = "en-US"
+            'My.Settings.Language = "en-US"
 #End If
 
             If My.Settings.Language = "" Then
                 My.Settings.Language = My.Application.Culture.Name
-                My.Application.ChangeUICulture(My.Settings.Language)
-                My.Application.ChangeCulture(My.Settings.Language)
-                My.Settings.DefaultMessage = My.Resources.Strings.DefaultMessage
-                My.Settings.emerg_message = My.Resources.Strings.DefaultEmergency
-            Else
-                My.Application.ChangeUICulture(My.Settings.Language)
-                My.Application.ChangeCulture(My.Settings.Language)
             End If
 
+            CultureManager.ApplicationUICulture = New CultureInfo(My.Settings.Language)
             Debug.WriteLine(My.Settings.Language)
         End Sub
 

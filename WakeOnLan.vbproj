@@ -613,6 +613,7 @@
     <None Include="Documentation\Human-02\network_transmit.png" />
     <None Include="Documentation\Human-02\emblem_ok.png" />
     <None Include="Documentation\error2.png" />
+    <None Include="AlphaWindow\Splash.png" />
     <Content Include="Documentation\Human-02\network_receive_48.png" />
     <Content Include="Documentation\Human-02\network_transmit.ico" />
     <Content Include="Documentation\Human-02\network_transmit_48.ico" />
@@ -661,6 +662,7 @@
     <None Include="Resources\shutdown.ico" />
     <Content Include="Resources\signal_Vista_48x48.png" />
     <Content Include="Resources\Splash.png" />
+    <None Include="Resources\Splash2.bmp" />
     <Content Include="Resources\Stock_Index_Down_16x16.png" />
     <Content Include="Resources\Stock_Index_Up_16x16.png" />
     <Content Include="Resources\flags\Taiwan-Flag-16x16.png" />
@@ -1292,6 +1294,14 @@
     <ProjectReference Include="..\AutoUpdater\AutoUpdater.NET\AutoUpdater.NET.csproj">
       <Project>{fb9e7e6b-b19f-4f37-a708-2996190cef13}</Project>
       <Name>AutoUpdater.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="AlphaWindow\AlphaWindow.csproj">
+      <Project>{45d56ff1-d0f9-4c71-aa72-811635043fad}</Project>
+      <Name>AlphaWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="Infralution.Localization\Infralution.Localization.csproj">
+      <Project>{62e6c7ea-ab84-4e44-b05a-af648e60fa6d}</Project>
+      <Name>Infralution.Localization</Name>
     </ProjectReference>
     <ProjectReference Include="WOL\WOL.vbproj">
       <Project>{e0c53654-1da8-4ab6-9b88-337a4cc4734e}</Project>

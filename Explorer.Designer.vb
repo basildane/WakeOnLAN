@@ -176,6 +176,7 @@ Partial Class Explorer
         Me.ListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.CultureManager = New Infralution.Localization.CultureManager(Me.components)
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -837,6 +838,10 @@ Partial Class Explorer
         Me.NotifyIconUpdate.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
         resources.ApplyResources(Me.NotifyIconUpdate, "NotifyIconUpdate")
         '
+        'CultureManager
+        '
+        Me.CultureManager.ManagedControl = Me
+        '
         'Explorer
         '
         resources.ApplyResources(Me, "$this")
@@ -935,5 +940,6 @@ Partial Class Explorer
     Friend WithEvents RomanianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripButtonDonate As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents CultureManager As Infralution.Localization.CultureManager
 
 End Class

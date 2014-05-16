@@ -512,72 +512,33 @@ Public Class Explorer
         Options.ShowDialog(Me)
     End Sub
 
-    Private Sub EnglishToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnglishToolStripMenuItem.Click
-        ChangeLanguage("en-US")
+    Private Sub LanguageToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnglishToolStripMenuItem.Click, RussianToolStripMenuItem.Click, TaiwanToolStripMenuItem.Click, FinnishToolStripMenuItem.Click, PortugueseToolStripMenuItem.Click, DeutschToolStripMenuItem.Click, FrenchToolStripMenuItem.Click, HungaryToolStripMenuItem.Click, DutchToolStripMenuItem.Click, RomanianToolStripMenuItem.Click
+        Dim menuitem As ToolStripMenuItem
+
+        For Each menuitem In LanguageToolStripMenuItem.DropDownItems
+            If menuitem.Checked Then menuitem.Checked = False
+        Next
+
+        menuitem = sender
+        My.Settings.Language = menuitem.Tag
+        menuitem.Checked = True
+        Infralution.Localization.CultureManager.ApplicationUICulture = New CultureInfo(menuitem.Tag.ToString())
+        LoadTree()
+        TreeView.SelectedNode = TreeView.Nodes(0)
+        LoadList()
     End Sub
 
-    Private Sub RussianToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RussianToolStripMenuItem.Click
-        ChangeLanguage("ru-RU")
-    End Sub
 
-    Private Sub TaiwanToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TaiwanToolStripMenuItem.Click
-        ChangeLanguage("zh-TW")
-    End Sub
+    Private Sub CultureManager_UICultureChanged(newCulture As CultureInfo) Handles CultureManager.UICultureChanged
+        ListView.Groups("Online").Header = My.Resources.Strings.OnLine
+        ListView.Groups("Offline").Header = My.Resources.Strings.OffLine
+        ListView.Groups("Unknown").Header = My.Resources.Strings.lit_Unknown
 
-    Private Sub FinnishToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles FinnishToolStripMenuItem.Click
-        ChangeLanguage("fi-FI")
-    End Sub
-
-    Private Sub PortugueseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PortugueseToolStripMenuItem.Click
-        ChangeLanguage("pt-BR")
-    End Sub
-
-    Private Sub DeutschToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeutschToolStripMenuItem.Click
-        ChangeLanguage("de-DE")
-    End Sub
-
-    Private Sub FrenchToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles FrenchToolStripMenuItem.Click
-        ChangeLanguage("fr-FR")
-    End Sub
-
-    Private Sub HungaryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HungaryToolStripMenuItem.Click
-        ChangeLanguage("hu-HU")
-    End Sub
-
-    Private Sub DutchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DutchToolStripMenuItem.Click
-        ChangeLanguage("nl-NL")
-    End Sub
-
-    Private Sub RomanianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RomanianToolStripMenuItem.Click
-        ChangeLanguage("ro-RO")
-    End Sub
-
-    Private Sub ChangeLanguage(ByVal newLang As String)
-        Dim cultureinfo As CultureInfo
-
-        My.Settings.Language = newLang
-        My.Application.ChangeUICulture(My.Settings.Language)
+        ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
+        ToolStripStatusLabel2.Text = ""
 
         My.Settings.DefaultMessage = My.Resources.Strings.DefaultMessage
         My.Settings.emerg_message = My.Resources.Strings.DefaultEmergency
-        cultureinfo = New CultureInfo(newLang)
-
-        For Each c As Control In Me.Controls
-            Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(Explorer))
-            resources.ApplyResources(c, "$this", cultureinfo)
-            RefreshResources(Me, resources, cultureinfo)
-        Next
-
-    End Sub
-
-    Private Sub RefreshResources(ctrl As Control, res As System.ComponentModel.ComponentResourceManager, cultureinfo As CultureInfo)
-        ctrl.SuspendLayout()
-        res.ApplyResources(ctrl, ctrl.Name, cultureinfo)
-        For Each control As Control In ctrl.Controls
-            RefreshResources(control, res, cultureinfo)
-        Next
-        ' recursion
-        ctrl.ResumeLayout(False)
     End Sub
 
     Private Sub RDPToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RDPToolStripMenuItem.Click
@@ -765,6 +726,7 @@ Public Class Explorer
     Private Sub ToolStripButtonDonate_Click(sender As Object, e As EventArgs) Handles ToolStripButtonDonate.Click
         System.Diagnostics.Process.Start(My.Settings.donate)
     End Sub
+
 End Class
 
 ' Implements the manual sorting of items by columns.
