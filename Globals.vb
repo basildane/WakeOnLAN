@@ -16,7 +16,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
-Imports Microsoft.Win32
+Imports System.Linq
 
 Module Globals
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
@@ -42,7 +42,7 @@ Module Globals
     Public Sub ShowHelp(parent As Control, url As String)
         Try
 #If DEBUG Then
-            Help.ShowHelp(parent, "file:///C:\Projects\WakeOnLan\help\" + url)
+            Help.ShowHelp(parent, "file:///" + System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\..\help\" + url))
 #Else
             Help.ShowHelp(parent, "file:///" + AppDomain.CurrentDomain.BaseDirectory + "help\" + url)
 #End If
@@ -55,12 +55,8 @@ Module Globals
     End Sub
 
     Public Function SaveListViewState(ByVal listview As ListView) As String
-        Dim s As String = ""
 
-        For Each c As ColumnHeader In listview.Columns
-            s &= c.Width & " "
-        Next
-        Return s
+        Return listview.Columns.Cast(Of ColumnHeader)().Aggregate("", Function(current, c) current & (c.Width & " "))
 
     End Function
 

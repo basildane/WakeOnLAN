@@ -140,10 +140,10 @@ namespace AlphaWindow
                     message.Msg = APIHelp.WM_CLOSE;
                     break;
 
-                case APIHelp.WM_NCHITTEST:
-                    // Tell Windows that the user is on the title bar (caption)
-                    //message.Result = (IntPtr)APIHelp.HTCAPTION;
-                    break;
+//                case APIHelp.WM_NCHITTEST:
+//                    // Tell Windows that the user is on the title bar (caption), this allows users to drag the window
+//                    message.Result = (IntPtr)APIHelp.HTCAPTION;
+//                    break;
             }
 
             base.WndProc(ref message);
