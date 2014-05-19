@@ -17,13 +17,12 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.Windows.Forms
-Imports System.Text.RegularExpressions
 Imports System.Net.NetworkInformation
 
 Public Class Properties
-    Private _Name As String
+    Private _hostName As String
 
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
+    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
         Dim m As New Machine
         Dim r As Integer
 
@@ -37,7 +36,7 @@ Public Class Properties
             Exit Sub
         End If
 
-        Machines.Remove(_Name)
+        Machines.Remove(_hostName)
 
         m.Name = MachineName.Text
         m.MAC = MAC.Text
@@ -63,36 +62,36 @@ Public Class Properties
         Machines.Add(m)
 
         Machines.Save()
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Close()
+        DialogResult = Windows.Forms.DialogResult.OK
+        Close()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Close()
+    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+        DialogResult = Windows.Forms.DialogResult.Cancel
+        Close()
     End Sub
 
     Public Sub Create()
-        _Name = ""
-        Me.Text = String.Format(My.Resources.Strings.Properties, My.Resources.Strings.isNew)
-        Me.Delete_Button.Visible = False
-        Me.IP.Text = ""
-        Me.Broadcast.Text = Net.IPAddress.Broadcast.ToString()
-        Me.rbIP.Checked = True
-        Me.UDPPort.Text = "9"
-        Me.TTL.Text = "128"
-        Me.tRDPPort.Text = "3389"
+        _hostName = ""
+        Text = String.Format(My.Resources.Strings.Properties, My.Resources.Strings.isNew)
+        Delete_Button.Visible = False
+        IP.Text = ""
+        Broadcast.Text = Net.IPAddress.Broadcast.ToString()
+        rbIP.Checked = True
+        UDPPort.Text = "9"
+        TTL.Text = "128"
+        tRDPPort.Text = "3389"
         DisplayIPv4NetworkInterfaces("")
-        Me.ShowDialog(My.Forms.Explorer)
+        ShowDialog(My.Forms.Explorer)
     End Sub
 
-    Public Sub Edit(ByVal Name As String)
+    Public Sub Edit(ByVal hostName As String)
         Dim m As Machine
 
-        _Name = Name
-        Me.Text = String.Format(My.Resources.Strings.Properties, Name)
+        _hostName = hostName
+        Text = String.Format(My.Resources.Strings.Properties, hostName)
 
-        m = Machines(Name)
+        m = Machines(hostName)
         MachineName.Text = m.Name
         MAC.Text = m.MAC
         IP.Text = m.IP
@@ -108,10 +107,10 @@ Public Class Properties
         tRDPPort.Text = m.RDPPort
         DisplayIPv4NetworkInterfaces(m.Adapter)
         ValidateChildren()
-        Me.ShowDialog(My.Forms.Explorer)
+        ShowDialog(My.Forms.Explorer)
     End Sub
 
-    Public Sub DisplayIPv4NetworkInterfaces(DefaultAdapter As String)
+    Public Sub DisplayIPv4NetworkInterfaces(defaultAdapter As String)
         Dim nics As NetworkInterface() = NetworkInterface.GetAllNetworkInterfaces()
         Dim properties As IPGlobalProperties = IPGlobalProperties.GetIPGlobalProperties()
         Dim item As ComboboxItem
@@ -142,7 +141,7 @@ Public Class Properties
                     item.Text = String.Format("{0} - {1}", address.Address.ToString, adapter.Name)
                     item.Value = address.Address.ToString
                     ComboBoxAdapters.Items.Add(item)
-                    If (item.Value = DefaultAdapter) Then
+                    If (item.Value = defaultAdapter) Then
                         ComboBoxAdapters.SelectedItem = item
                     End If
                 End If
@@ -151,19 +150,19 @@ Public Class Properties
 
     End Sub
 
-    Private Sub Delete_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Delete_Button.Click
+    Private Sub Delete_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Delete_Button.Click
         If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format(My.Resources.Strings.Delete, 1), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
-            Machines.Remove(_Name)
-            Me.DialogResult = System.Windows.Forms.DialogResult.OK
+            Machines.Remove(_hostName)
+            DialogResult = Windows.Forms.DialogResult.OK
         Else
-            Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
+            DialogResult = Windows.Forms.DialogResult.Cancel
         End If
 
-        Me.Close()
+        Close()
     End Sub
 
     Private Sub CheckValidation()
-        For Each c As Control In Me.Controls
+        For Each c As Control In Controls
             If ErrorProvider1.GetError(c).Length Then
                 OK_Button.Enabled = False
                 Exit Sub
@@ -174,44 +173,44 @@ Public Class Properties
 
     Private Sub MachineName_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MachineName.Validating
         If MachineName.IsValid() Then
-            Me.ErrorProvider1.SetError(sender, "")
+            ErrorProvider1.SetError(sender, "")
         Else
-            Me.ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidName)
+            ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidName)
         End If
         CheckValidation()
     End Sub
 
     Private Sub MAC_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MAC.Validating
         If MAC.IsValid() Then
-            Me.ErrorProvider1.SetError(sender, "")
+            ErrorProvider1.SetError(sender, "")
         Else
-            Me.ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidMAC)
+            ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidMAC)
         End If
         CheckValidation()
     End Sub
 
     Private Sub IP_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles IP.Validating
         If IP.IsValid() Then
-            Me.ErrorProvider1.SetError(sender, "")
+            ErrorProvider1.SetError(sender, "")
         Else
-            Me.ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidIP)
+            ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidIP)
         End If
         CheckValidation()
     End Sub
 
-    Private Sub bCalcBroadcast_Click(sender As System.Object, e As System.EventArgs) Handles bCalcBroadcast.Click
+    Private Sub bCalcBroadcast_Click(sender As System.Object, e As EventArgs) Handles bCalcBroadcast.Click
         CalcSubnet.ShowDialog(Me)
     End Sub
 
-    Private Sub Help_Button_Click(sender As System.Object, e As System.EventArgs) Handles Help_Button.Click
-        Globals.ShowHelp(Me, "properties\default.html")
+    Private Sub Help_Button_Click(sender As System.Object, e As EventArgs) Handles Help_Button.Click
+        ShowHelp(Me, "properties\default.html")
     End Sub
 
     Private Sub tHostURI_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles tHostURI.Validating
         If tHostURI.IsValid() Then
-            Me.ErrorProvider1.SetError(sender, "")
+            ErrorProvider1.SetError(sender, "")
         Else
-            Me.ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidName)
+            ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidName)
         End If
         CheckValidation()
     End Sub

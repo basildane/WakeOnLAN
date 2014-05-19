@@ -17,6 +17,7 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.Linq
+Imports System.IO
 
 Module Globals
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
@@ -42,7 +43,7 @@ Module Globals
     Public Sub ShowHelp(parent As Control, url As String)
         Try
 #If DEBUG Then
-            Help.ShowHelp(parent, "file:///" + System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\..\help\" + url))
+            Help.ShowHelp(parent, "file:///" + Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\..\help\" + url))
 #Else
             Help.ShowHelp(parent, "file:///" + AppDomain.CurrentDomain.BaseDirectory + "help\" + url)
 #End If

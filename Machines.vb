@@ -155,7 +155,7 @@ Public Class MachinesClass
     End Sub
 
     Public Sub Close()
-        Dim m As Machine = Nothing
+        Dim m As Machine
 
         For i As Integer = List.Count - 1 To 0 Step -1
             m = List(i)

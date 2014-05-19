@@ -20,13 +20,13 @@ Imports System.Net
 Imports System.Net.Sockets
 
 Public Class Listener
-    Dim u As New UdpClient(9)
-    Dim ep As New IPEndPoint(IPAddress.Any, 0)
+    ReadOnly _udpClient As New UdpClient(9)
+    Dim _endPoint As New IPEndPoint(IPAddress.Any, 0)
 
     Public Sub BeginReceive()
 
         Try
-            Dim receiveBytes As [Byte]() = u.Receive(ep)
+            Dim receiveBytes As [Byte]() = _udpClient.Receive(_endPoint)
             Parse(receiveBytes)
 
         Catch e As Exception

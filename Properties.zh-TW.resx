@@ -117,47 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Cancel_Button.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>取消</value>
-  </data>
-  <data name="Cancel_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbRemoteDesktop.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbRemoteDesktop.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbLeaveBlank.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbLeaveBlank.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label1.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tRDPPort.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbRDPPort.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbRDPPort.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="IP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbIP.Error" xml:space="preserve">
-    <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
@@ -169,24 +130,6 @@
   <data name="lbIP.Text" xml:space="preserve">
     <value>IP 位址</value>
   </data>
-  <data name="lbIP.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gStatus.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gStatus.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Group.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Group.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbGroup.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>63, 44</value>
   </data>
@@ -196,17 +139,8 @@
   <data name="lbGroup.Text" xml:space="preserve">
     <value>群組</value>
   </data>
-  <data name="lbGroup.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MachineName.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="MachineName.ToolTip" xml:space="preserve">
     <value>這是電腦的名稱，輸入一個有效的名稱，包含字母，數字，破折號或下劃線。</value>
-  </data>
-  <data name="lbName.Error" xml:space="preserve">
-    <value />
   </data>
   <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -214,71 +148,17 @@
   <data name="lbName.Text" xml:space="preserve">
     <value>名稱</value>
   </data>
-  <data name="lbName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gDisplay.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gDisplay.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CheckBox_Emergency.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>
   </data>
   <data name="CheckBox_Emergency.Text" xml:space="preserve">
     <value>緊急關閉</value>
   </data>
-  <data name="CheckBox_Emergency.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbShutdownCommand.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 13</value>
   </data>
   <data name="lbShutdownCommand.Text" xml:space="preserve">
     <value>關機指令碼</value>
-  </data>
-  <data name="lbShutdownCommand.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBox_Command.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBox_Command.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gShutdown.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gShutdown.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tHostURI.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tHostURI.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LabelInterfaces.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LabelInterfaces.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxAdapters.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxAdapters.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbMAC.Error" xml:space="preserve">
-    <value />
   </data>
   <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 26</value>
@@ -289,12 +169,6 @@
   <data name="lbMAC.Text" xml:space="preserve">
     <value>MAC 位址</value>
   </data>
-  <data name="lbMAC.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbNetbios.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
     <value>35, 109</value>
   </data>
@@ -304,35 +178,8 @@
   <data name="lbNetbios.Text" xml:space="preserve">
     <value>電腦名稱</value>
   </data>
-  <data name="lbNetbios.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbSendTo.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbSendTo.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbURI.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbURI.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbIP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rbIP.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MAC.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="MAC.ToolTip" xml:space="preserve">
     <value>輸入電腦的MAC位址。MAC地址有6對十六進制數字，會用 : 或 - 分隔，例如：例如：01:00:22:32:AF:D0</value>
-  </data>
-  <data name="lbBroadcast.Error" xml:space="preserve">
-    <value />
   </data>
   <data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 80</value>
@@ -343,38 +190,8 @@
   <data name="lbBroadcast.Text" xml:space="preserve">
     <value>子網路遮罩</value>
   </data>
-  <data name="lbBroadcast.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TTL.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TTL.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Broadcast.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Broadcast.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="UDPPort.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="UDPPort.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="bCalcBroadcast.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="bCalcBroadcast.Text" xml:space="preserve">
     <value>子網路計算</value>
-  </data>
-  <data name="bCalcBroadcast.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbTTL.Error" xml:space="preserve">
-    <value />
   </data>
   <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 212</value>
@@ -385,12 +202,6 @@
   <data name="lbTTL.Text" xml:space="preserve">
     <value>存活時間 (TTL)</value>
   </data>
-  <data name="lbTTL.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lbUDP.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
     <value>36, 190</value>
   </data>
@@ -400,43 +211,16 @@
   <data name="lbUDP.Text" xml:space="preserve">
     <value>UDP端口</value>
   </data>
-  <data name="lbUDP.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gWakeUp.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gWakeUp.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Help_Button.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="Help_Button.Text" xml:space="preserve">
     <value>說明</value>
-  </data>
-  <data name="Help_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Delete_Button.Error" xml:space="preserve">
-    <value />
   </data>
   <data name="Delete_Button.Text" xml:space="preserve">
     <value>刪除</value>
   </data>
-  <data name="Delete_Button.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>版權</value>
   </data>
-  <data name="OK_Button.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>確定</value>
-  </data>
-  <data name="OK_Button.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>

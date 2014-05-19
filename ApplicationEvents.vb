@@ -35,7 +35,7 @@ Namespace My
         ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
 
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
-            configureCulture()
+            ConfigureCulture()
             singleInstance()
             upgradeSettings()
 
@@ -55,7 +55,7 @@ Namespace My
         ''' Setup the culture and language configuration.
         ''' </summary>
         ''' <remarks></remarks>
-        Private Sub configureCulture()
+        Private Sub ConfigureCulture()
 #If DEBUG Then
             'My.Settings.Language = "zh-TW"
             'My.Settings.Language = "en-US"

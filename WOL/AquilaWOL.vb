@@ -19,16 +19,16 @@
 Imports System.Net.Sockets
 Imports System.Net
 
-Public Class AquilaWOLLibrary
+Public Class AquilaWolLibrary
     ''' <summary>
     ''' Send a WOL packet to a remote computer
     ''' </summary>
-    ''' <param name="MAC">The MAC address to wake up</param>
-    ''' <param name="Network">The network broadcast address</param>
-    ''' <param name="UDPPort">WOL UDP Port</param>
-    ''' <param name="TTL">WOL Time To Live</param>
+    ''' <param name="mac">The MAC address to wake up</param>
+    ''' <param name="network">The network broadcast address</param>
+    ''' <param name="udpPort">WOL UDP Port</param>
+    ''' <param name="ttl">WOL Time To Live</param>
     ''' <remarks></remarks>
-    Public Shared Sub WakeUp(MAC As String, Optional Network As String = "255.255.255.255", Optional UDPPort As Integer = 9, Optional TTL As Integer = 128, Optional Adapter As String = "")
+    Public Shared Sub WakeUp(mac As String, Optional network As String = "255.255.255.255", Optional udpPort As Integer = 9, Optional ttl As Integer = 128, Optional adapter As String = "")
         Dim client As UdpClient
         Dim localEndPoint As IPEndPoint
 
@@ -37,12 +37,12 @@ Public Class AquilaWOLLibrary
         Dim macBytes As Byte()
 
         Try
-            macBytes = GetMAC(MAC)
+            macBytes = GetMAC(mac)
 
             If (String.IsNullOrEmpty(Adapter)) Then
-                localEndPoint = New IPEndPoint(IPAddress.Any, UDPPort)
+                localEndPoint = New IPEndPoint(IPAddress.Any, udpPort)
             Else
-                localEndPoint = New IPEndPoint(IPAddress.Parse(Adapter), UDPPort)
+                localEndPoint = New IPEndPoint(IPAddress.Parse(Adapter), udpPort)
             End If
 
             client = New UdpClient()
@@ -50,9 +50,9 @@ Public Class AquilaWOLLibrary
             client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.Broadcast, True)
             client.ExclusiveAddressUse = False
             client.Client.Bind(localEndPoint)
-            client.Connect(Network, UDPPort)
+            client.Connect(network, udpPort)
             client.EnableBroadcast = True
-            client.Ttl = TTL
+            client.Ttl = ttl
 
             ' WOL packet contains a 6-bytes header and 16 times a 6-bytes sequence containing the MAC address.
             ' packet =  byte(17 * 6)
@@ -79,12 +79,12 @@ Public Class AquilaWOLLibrary
 
     End Sub
 
-    Public Shared Sub Shutdown(Host As String)
+    Public Shared Sub Shutdown(host As String)
 
 
     End Sub
 
-    Private Shared Function GetMAC(ByVal Mac As String) As Byte()
+    Private Shared Function GetMac(ByVal mac As String) As Byte()
         Dim i As Integer
         Dim m(5) As Byte
         Dim s As String

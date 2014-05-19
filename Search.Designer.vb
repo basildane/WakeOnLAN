@@ -1,3 +1,5 @@
+Imports WakeOnLan.Controls
+
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Search
     Inherits System.Windows.Forms.Form
@@ -30,8 +32,8 @@ Partial Class Search
         Me.ch_MAC = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chEnabled = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.IpAddressControl_End = New WakeOnLan.IPAddressControl()
-        Me.IpAddressControl_Start = New WakeOnLan.IPAddressControl()
+        Me.IpAddressControl_End = New IPAddressControl()
+        Me.IpAddressControl_Start = New IPAddressControl()
         Me.cancelSearch = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -252,8 +254,8 @@ Partial Class Search
     Friend WithEvents CheckAllButton As System.Windows.Forms.Button
     Friend WithEvents UnCheckAllButton As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
-    Friend WithEvents IpAddressControl_End As WakeOnLan.IPAddressControl
-    Friend WithEvents IpAddressControl_Start As WakeOnLan.IPAddressControl
+    Friend WithEvents IpAddressControl_End As IPAddressControl
+    Friend WithEvents IpAddressControl_Start As IPAddressControl
     Friend WithEvents closeButton As System.Windows.Forms.Button
     Friend WithEvents OKButton As System.Windows.Forms.Button
     Friend WithEvents ComboBoxGroup As System.Windows.Forms.ComboBox
