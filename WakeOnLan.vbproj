@@ -396,22 +396,22 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Strings.ro.Designer.vb">
+    <Compile Include="Resources\Strings\Strings.ro.Designer.vb">
       <DependentUpon>Strings.ro.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Strings.nl.Designer.vb">
+    <Compile Include="Resources\Strings\Strings.nl.Designer.vb">
       <DependentUpon>Strings.nl.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Strings.hu.Designer.vb">
+    <Compile Include="Resources\Strings\Strings.hu.Designer.vb">
       <DependentUpon>Strings.hu.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Strings.fi.Designer.vb">
+    <Compile Include="Resources\Strings\Strings.fi.Designer.vb">
       <DependentUpon>Strings.fi.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -435,12 +435,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Strings.fr.Designer.vb">
+    <Compile Include="Resources\Strings\Strings.fr.Designer.vb">
       <DependentUpon>Strings.fr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Strings.de.Designer.vb">
+    <Compile Include="Resources\Strings\Strings.de.Designer.vb">
       <DependentUpon>Strings.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -514,12 +514,12 @@
     <Compile Include="Schedule\Schedule.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Strings.pt-BR.Designer.vb">
+    <Compile Include="Resources\Strings\Strings.pt-BR.Designer.vb">
       <DependentUpon>Strings.pt-BR.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Strings.zh-TW.Designer.vb">
+    <Compile Include="Resources\Strings\Strings.zh-TW.Designer.vb">
       <DependentUpon>Strings.zh-TW.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -556,7 +556,7 @@
     <Compile Include="Controls\RegexTextBox.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Strings.ru.Designer.vb">
+    <Compile Include="Resources\Strings\Strings.ru.Designer.vb">
       <DependentUpon>Strings.ru.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -593,7 +593,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ShutdownThread.vb" />
-    <Compile Include="Strings.Designer.vb">
+    <Compile Include="Resources\Strings\Strings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
@@ -934,22 +934,22 @@
     <EmbeddedResource Include="Shutdown.zh-TW.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.ro.resx">
+    <EmbeddedResource Include="Resources\Strings\Strings.ro.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.ro.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.nl.resx">
+    <EmbeddedResource Include="Resources\Strings\Strings.nl.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.nl.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.hu.resx">
+    <EmbeddedResource Include="Resources\Strings\Strings.hu.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.hu.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.fi.resx">
+    <EmbeddedResource Include="Resources\Strings\Strings.fi.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.fi.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
@@ -1023,7 +1023,7 @@
     <EmbeddedResource Include="Shutdown.fr.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.fr.resx">
+    <EmbeddedResource Include="Resources\Strings\Strings.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.fr.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
@@ -1045,7 +1045,7 @@
       <DependentUpon>Schedule.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.de.resx">
+    <EmbeddedResource Include="Resources\Strings\Strings.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.de.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
@@ -1129,7 +1129,7 @@
     <EmbeddedResource Include="Shutdown.pt-BR.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.pt-BR.resx">
+    <EmbeddedResource Include="Resources\Strings\Strings.pt-BR.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.pt-BR.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
@@ -1139,7 +1139,7 @@
       <DependentUpon>Explorer.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.zh-TW.resx">
+    <EmbeddedResource Include="Resources\Strings\Strings.zh-TW.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.zh-TW.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
@@ -1176,7 +1176,7 @@
     <EmbeddedResource Include="Search.ru.resx">
       <DependentUpon>Search.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.ru.resx">
+    <EmbeddedResource Include="Resources\Strings\Strings.ru.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.ru.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
@@ -1205,7 +1205,7 @@
     <EmbeddedResource Include="Shutdown.ru.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.resx">
+    <EmbeddedResource Include="Resources\Strings\Strings.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.vb</LastGenOutput>

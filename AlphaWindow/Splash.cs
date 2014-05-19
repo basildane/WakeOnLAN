@@ -29,20 +29,20 @@ namespace AlphaWindow
 {
 	public class Splash : Form
     {
-        Timer timer = new Timer();
+	    readonly Timer _timer = new Timer();
 
 		public Splash(Bitmap bitmap, String title, String version, String copyright, out IntPtr hwnd)
 		{
 			// Window settings
 			//this.TopMost = true;
-			this.ShowInTaskbar = false;
-			this.Size = bitmap.Size;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Show();				// Must be called before setting bitmap
+			ShowInTaskbar = false;
+			Size = bitmap.Size;
+			StartPosition = FormStartPosition.CenterScreen;
+			Show();				// Must be called before setting bitmap
 
             Graphics g = Graphics.FromImage(bitmap);
 
-            StringFormat sf = new StringFormat()
+            StringFormat sf = new StringFormat
             {
                 Alignment = StringAlignment.Center,
                 LineAlignment = StringAlignment.Center,
@@ -56,19 +56,19 @@ namespace AlphaWindow
             g.DrawString(copyright, new Font(FontFamily.GenericSansSerif, 16, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(80, 250));
             g.Flush();
 
-            this.SelectBitmap(bitmap);
+            SelectBitmap(bitmap);
 
-            timer.Tick += new EventHandler(TimerEventProcessor);
-            timer.Interval = 4000;
-            timer.Start();
+            _timer.Tick += TimerEventProcessor;
+            _timer.Interval = 4000;
+            _timer.Start();
 
-            hwnd = this.Handle;
+            hwnd = Handle;
 		}
 
         private void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
         {
-            timer.Stop();
-            this.Close();
+            _timer.Stop();
+            Close();
         }
 
 		// Sets the current bitmap

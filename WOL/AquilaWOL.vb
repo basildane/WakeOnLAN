@@ -73,7 +73,7 @@ Public Class AquilaWolLibrary
             client.Send(packet, packet.Length)
 
         Catch ex As Exception
-            Throw ex
+            Throw
 
         End Try
 
