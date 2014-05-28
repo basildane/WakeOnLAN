@@ -23,8 +23,6 @@ Imports System.Globalization
 
 Public Class Explorer
     Declare Function IsValidLocale Lib "kernel32" (ByVal locale As Integer, ByVal dwFlags As Integer) As Integer
-    Declare Function OpenIcon Lib "user32" (ByVal hwnd As Long) As Long
-    Declare Function SetForegroundWindow Lib "user32" (ByVal hwnd As Long) As Long
 
     Const LCID_INSTALLED As Long = &H1 '-- is locale present?
 

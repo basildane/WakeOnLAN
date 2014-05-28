@@ -18,24 +18,27 @@
 
 Imports System.Linq
 Imports System.IO
+Imports System.Runtime.InteropServices
 
 Module Globals
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
     Public Declare Function InitiateSystemShutdown Lib "advapi32.dll" Alias "InitiateSystemShutdownA" (ByVal lpMachineName As String, ByVal lpMessage As String, ByVal dwTimeout As Integer, ByVal bForceAppsClosed As Integer, ByVal bRebootAfterShutdown As Integer) As Integer
     Public Declare Function AbortSystemShutdown Lib "advapi32.dll" Alias "AbortSystemShutdownA" (ByVal lpMachineName As String) As Integer
-    Public Declare Function SetForegroundWindow Lib "user32" (ByVal hwnd As Long) As IntPtr
-    Public Declare Function ShowWindow Lib "user32" (ByVal hWnd As IntPtr, ByVal nCmdShow As Int32) As Boolean
-    Public Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
+
+    <DllImport("user32.dll")> _
+    Public Function SetForegroundWindow(ByVal hWnd As IntPtr) As <MarshalAs(UnmanagedType.Bool)> Boolean
+    End Function
 
     Public ShutdownMode As Boolean      'true if in shutdown mode, false if in abort mode
-    Public meItem As ListViewItem
-    Public splashPtr As IntPtr
+    Public MeItem As ListViewItem
+    Public SplashPtr As IntPtr
 
     Public Function FormatMessage(ByVal [error] As Integer) As String
-        Const FORMAT_MESSAGE_FROM_SYSTEM As Short = &H1000
-        Const LANG_NEUTRAL As Short = &H0
-        Dim buffer As String = Space(999)
-        FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, 0, [error], LANG_NEUTRAL, buffer, 999, 0)
+        Const FORMAT_MESSAGE_FROM_SYSTEM As UInteger = &H1000
+        Const LANG_NEUTRAL As Integer = &H0
+        Dim buffer As String = Space(1024)
+
+        FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, IntPtr.Zero, [error], LANG_NEUTRAL, buffer, 1024, IntPtr.Zero)
         buffer = Replace(Replace(buffer, Chr(13), ""), Chr(10), "")
         Return buffer.Substring(0, buffer.IndexOf(Chr(0)))
     End Function
@@ -61,7 +64,7 @@ Module Globals
 
     End Function
 
-    Public Sub GetListViewState(ByVal listview As ListView, ByVal State As String)
+    Public Sub GetListViewState(ByVal listview As ListView, ByVal state As String)
         Dim s() As String
         Dim i As Int16
 

@@ -20,6 +20,8 @@ Imports System.Globalization
 Imports Localization
 Imports AlphaWindow
 
+Imports System.Runtime.InteropServices
+
 Namespace My
 
     ' The following events are available for MyApplication:
@@ -31,6 +33,14 @@ Namespace My
     ' NetworkAvailabilityChanged: Raised when the network connection is connected or disconnected.
 
     Partial Friend Class MyApplication
+        <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)> _
+        Private Shared Function FindWindow(ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
+        End Function
+
+        <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)> _
+        Private Shared Function ShowWindow(ByVal hwnd As IntPtr, ByVal nCmdShow As Int32) As Boolean
+        End Function
+
         ' Defines:
         ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
 
@@ -39,16 +49,16 @@ Namespace My
             singleInstance()
             upgradeSettings()
 
-            Dim splash As Splash = New Splash(My.Resources.Splash, My.Resources.Strings.Title, System.String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision), My.Application.Info.Copyright, Globals.splashPtr)
+            Dim splash As Splash = New Splash(Resources.Splash, Resources.Strings.Title, System.String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision), Application.Info.Copyright, SplashPtr)
 
 #If DEBUG Then
-            My.Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
+            Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
 #End If
 
         End Sub
 
         Private Sub MyApplication_UnhandledException(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
-            My.Application.Log.WriteException(e.Exception, TraceEventType.Critical, "Application shut down at " & My.Computer.Clock.GmtTime.ToString)
+            Application.Log.WriteException(e.Exception, TraceEventType.Critical, "Application shut down at " & Computer.Clock.GmtTime.ToString)
         End Sub
 
         ''' <summary>
@@ -57,16 +67,22 @@ Namespace My
         ''' <remarks></remarks>
         Private Sub ConfigureCulture()
 #If DEBUG Then
+            'Debug.WriteLine(FormatMessage(1707))
+            Dim c As CultureInfo
+            c = New CultureInfo("zh-TW")
+
+
+
             'My.Settings.Language = "zh-TW"
             'My.Settings.Language = "en-US"
 #End If
 
-            If My.Settings.Language = "" Then
-                My.Settings.Language = My.Application.Culture.Name
+            If Settings.Language = "" Then
+                Settings.Language = Application.Culture.Name
             End If
 
-            CultureManager.ApplicationUICulture = New CultureInfo(My.Settings.Language)
-            Debug.WriteLine(My.Settings.Language)
+            CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
+            Debug.WriteLine(Settings.Language)
         End Sub
 
         ''' <summary>
@@ -78,8 +94,11 @@ Namespace My
             Const SW_SHOW As Int32 = 5
             Dim hwnd As IntPtr
 
-            hwnd = FindWindow(Nothing, My.Resources.Strings.Title)
+            hwnd = FindWindow(Nothing, Resources.Strings.Title)
+            System.Diagnostics.Debug.WriteLine("FindWindow: {0}", hwnd)
+
             If hwnd <> IntPtr.Zero Then
+                MessageBox.Show("found")
                 ShowWindow(hwnd, SW_SHOW)
                 ShowWindow(hwnd, SW_RESTORE)
                 SetForegroundWindow(hwnd)
@@ -96,14 +115,14 @@ Namespace My
             Dim regKey As Microsoft.Win32.RegistryKey
             Dim database As String
 
-            If My.Settings.needUpgrade Then
-                My.Settings.Upgrade()
-                My.Settings.needUpgrade = False
+            If Settings.needUpgrade Then
+                Settings.Upgrade()
+                Settings.needUpgrade = False
 
                 Try
                     regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
-                    database = regKey.GetValue("Database", IO.Directory.GetParent(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, Microsoft.Win32.RegistryValueOptions.None)
-                    My.Settings.dbPath = IO.Path.Combine(database, "machines.xml")
+                    database = regKey.GetValue("Database", IO.Directory.GetParent(Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, Microsoft.Win32.RegistryValueOptions.None)
+                    Settings.dbPath = IO.Path.Combine(database, "machines.xml")
 
                 Catch ex As Exception
 

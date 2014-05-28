@@ -20,55 +20,57 @@ Imports System.Windows.Forms
 Imports System.ComponentModel
 Imports WakeOnLan.GlobalizedPropertyGrid
 
-
 Public Class Options
-    Dim p As New OptionProperties
-    Dim saved_dbPath As String
-
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
+    ReadOnly p As New OptionProperties
+    Dim _savedDbPath As String
+    
+    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
 
         With p
             My.Settings.DefaultTimeout = .Delay
             My.Settings.DefaultMessage = .Shutdown
             My.Settings.emerg_delay = .EmergencyDelay
             My.Settings.emerg_message = .EmergencyShutdown
-            My.Settings.Sound = .Enable_Sound
+            My.Settings.Sound = .EnableSound
             My.Settings.Force = .Force
             My.Settings.Reboot = .Reboot
             My.Settings.dbPath = .dbPath
             My.Settings.autocheckUpdates = .AutoCheck
+            My.Settings.Language = .Language
         End With
         My.Settings.Save()
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
+        DialogResult = Windows.Forms.DialogResult.OK
 
-        If saved_dbPath <> My.Settings.dbPath Then
+        If _savedDbPath <> My.Settings.dbPath Then
             Application.Restart()
         End If
 
-        Me.Close()
+        Close()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Close()
+    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+        DialogResult = Windows.Forms.DialogResult.Cancel
+        Close()
     End Sub
 
-    Private Sub Options_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        saved_dbPath = My.Settings.dbPath
+    Private Sub Options_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+        _savedDbPath = My.Settings.dbPath
         LoadOptions()
     End Sub
 
     Private Sub LoadOptions()
+
         With p
             .Delay = My.Settings.DefaultTimeout
             .Shutdown = My.Settings.DefaultMessage
             .EmergencyDelay = My.Settings.emerg_delay
             .EmergencyShutdown = My.Settings.emerg_message
-            .Enable_Sound = My.Settings.Sound
+            .EnableSound = My.Settings.Sound
             .Force = My.Settings.Force
             .Reboot = My.Settings.Reboot
             .dbPath = My.Settings.dbPath
             .AutoCheck = My.Settings.autocheckUpdates
+            .Language = My.Settings.Language
         End With
 
         With PropertyGrid1
@@ -78,11 +80,11 @@ Public Class Options
         OK_Button.Enabled = False
     End Sub
 
-    Private Sub PropertyGrid1_PropertyValueChanged(ByVal s As Object, ByVal e As System.Windows.Forms.PropertyValueChangedEventArgs) Handles PropertyGrid1.PropertyValueChanged
+    Private Sub PropertyGrid1_PropertyValueChanged(ByVal s As Object, ByVal e As Windows.Forms.PropertyValueChangedEventArgs) Handles PropertyGrid1.PropertyValueChanged
         OK_Button.Enabled = True
     End Sub
 
-    Private Sub Button_Default_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Default.Click
+    Private Sub Button_Default_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button_Default.Click
         If MsgBox(My.Resources.Strings.AreYouSure, MsgBoxStyle.Question + MsgBoxStyle.YesNo) = MsgBoxResult.No Then
             Exit Sub
         End If
@@ -102,7 +104,7 @@ Public Class Options
         Private _sound As Boolean
 
         <TypeConverter(GetType(TrueFalseConverter))> _
-        <GlobalizedCategory("cat_WOL")> Public Property Enable_Sound() As Boolean
+        <GlobalizedCategory("cat_WOL")> Public Property EnableSound() As Boolean
             Get
                 Return _sound
             End Get
@@ -189,17 +191,17 @@ Public Class Options
             End Set
         End Property
 
-        <GlobalizedCategory("cat_Application"), ReadOnlyAttribute(True)> Public ReadOnly Property AppVersion() As String
-            Get
-                Return My.Application.Info.Version.ToString
-            End Get
-        End Property
+        '<GlobalizedCategory("cat_Application"), ReadOnlyAttribute(True)> Public ReadOnly Property AppVersion() As String
+        '    Get
+        '        Return My.Application.Info.Version.ToString
+        '    End Get
+        'End Property
 
-        <GlobalizedCategory("cat_Application"), ReadOnlyAttribute(True)> Public ReadOnly Property Language() As String
-            Get
-                Return Globalization.CultureInfo.CurrentUICulture.DisplayName.ToString
-            End Get
-        End Property
+        '<GlobalizedCategory("cat_Application"), ReadOnlyAttribute(True)> Public ReadOnly Property Language() As String
+        '    Get
+        '        Return Globalization.CultureInfo.CurrentUICulture.DisplayName.ToString
+        '    End Get
+        'End Property
 
         <GlobalizedCategory("cat_Application"), ReadOnlyAttribute(True)> Public ReadOnly Property Culture() As String
             Get
@@ -210,39 +212,53 @@ Public Class Options
         ' References: System.Design
         Private _dbPath As String
 
-        <GlobalizedCategory("cat_Application"), Editor(GetType(System.Windows.Forms.Design.FileNameEditor), GetType(System.Drawing.Design.UITypeEditor))> Public Property dbPath() As String
+        <GlobalizedCategory("cat_Application"), Editor(GetType(Windows.Forms.Design.FileNameEditor), _
+            GetType(Drawing.Design.UITypeEditor))> Public Property dbPath() As String
             Get
                 Return _dbPath
             End Get
             Set(ByVal Value As String)
                 _dbPath = Value
             End Set
+        End Property
 
+        Private _language As String
+        <GlobalizedCategory("cat_Application"), _
+            TypeConverter(GetType(Countries)), _
+            Editor(GetType(LanguageEditor), GetType(System.Drawing.Design.UITypeEditor))> _
+        Public Property Language() As String
+            Get
+                Return _language
+            End Get
+            Set(ByVal Value As String)
+                _language = Value
+            End Set
         End Property
 
     End Class
 
 End Class
 
+
 Class TrueFalseConverter
     Inherits BooleanConverter
-    Public Overrides Function ConvertTo(context As ITypeDescriptorContext, culture As System.Globalization.CultureInfo, value As Object, destinationType As Type) As Object
+    Public Overrides Function ConvertTo(context As ITypeDescriptorContext, culture As Globalization.CultureInfo, value As Object, destinationType As Type) As Object
         If TypeOf value Is Boolean AndAlso destinationType = GetType(String) Then
-            Return values(If(CBool(value), 1, 0))
+            Return _values(If(CBool(value), 1, 0))
         End If
         Return MyBase.ConvertTo(context, culture, value, destinationType)
     End Function
 
-    Public Overrides Function ConvertFrom(context As ITypeDescriptorContext, culture As System.Globalization.CultureInfo, value As Object) As Object
+    Public Overrides Function ConvertFrom(context As ITypeDescriptorContext, culture As Globalization.CultureInfo, value As Object) As Object
         Dim txt As String = TryCast(value, String)
-        If values(0) = txt Then
+        If _values(0) = txt Then
             Return False
         End If
-        If values(1) = txt Then
+        If _values(1) = txt Then
             Return True
         End If
         Return MyBase.ConvertFrom(context, culture, value)
     End Function
 
-    Private values As String() = New String() {My.Resources.Strings.lit_false, My.Resources.Strings.lit_true}
+    Private ReadOnly _values As String() = New String() {My.Resources.Strings.lit_false, My.Resources.Strings.lit_true}
 End Class

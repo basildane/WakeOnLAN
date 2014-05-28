@@ -691,54 +691,6 @@ You should have received a copy of the GNU General Public License along with thi
   <data name="&gt;&gt;ListBox1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;pbUpdate.Name" xml:space="preserve">
-    <value>pbUpdate</value>
-  </data>
-  <data name="&gt;&gt;pbUpdate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbUpdate.Parent" xml:space="preserve">
-    <value>GroupBoxUpdates</value>
-  </data>
-  <data name="&gt;&gt;pbUpdate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lAutomaticUpdate.Name" xml:space="preserve">
-    <value>lAutomaticUpdate</value>
-  </data>
-  <data name="&gt;&gt;lAutomaticUpdate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lAutomaticUpdate.Parent" xml:space="preserve">
-    <value>GroupBoxUpdates</value>
-  </data>
-  <data name="&gt;&gt;lAutomaticUpdate.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="GroupBoxUpdates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 218</value>
-  </data>
-  <data name="GroupBoxUpdates.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 108</value>
-  </data>
-  <data name="GroupBoxUpdates.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="GroupBoxUpdates.Text" xml:space="preserve">
-    <value>Online Updates</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxUpdates.Name" xml:space="preserve">
-    <value>GroupBoxUpdates</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxUpdates.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxUpdates.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxUpdates.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="pbUpdate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -795,6 +747,30 @@ You should have received a copy of the GNU General Public License along with thi
   </data>
   <data name="&gt;&gt;lAutomaticUpdate.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="GroupBoxUpdates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 218</value>
+  </data>
+  <data name="GroupBoxUpdates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 108</value>
+  </data>
+  <data name="GroupBoxUpdates.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="GroupBoxUpdates.Text" xml:space="preserve">
+    <value>Online Updates</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxUpdates.Name" xml:space="preserve">
+    <value>GroupBoxUpdates</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxUpdates.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxUpdates.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxUpdates.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="LabelVersion.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -864,78 +840,6 @@ You should have received a copy of the GNU General Public License along with thi
   </data>
   <data name="&gt;&gt;TextBoxDescription.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel2.Name" xml:space="preserve">
-    <value>LinkLabel2</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel2.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
-    <value>Label2</value>
-  </data>
-  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel1.Name" xml:space="preserve">
-    <value>LinkLabel1</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel1.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;LinkLabel1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 112</value>
-  </data>
-  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>771, 100</value>
-  </data>
-  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Version</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="LinkLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1063,6 +967,30 @@ You should have received a copy of the GNU General Public License along with thi
   <data name="&gt;&gt;LinkLabel1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 112</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>771, 100</value>
+  </data>
+  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="bDonate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1123,6 +1051,9 @@ You should have received a copy of the GNU General Public License along with thi
   <data name="&gt;&gt;bDonate.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>zh-TW</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

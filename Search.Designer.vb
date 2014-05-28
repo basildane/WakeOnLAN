@@ -31,9 +31,9 @@ Partial Class Search
         Me.ch_IP = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ch_MAC = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chEnabled = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.IpAddressControl_End = New IPAddressControl()
-        Me.IpAddressControl_Start = New IPAddressControl()
+        Me.gbSearch = New System.Windows.Forms.GroupBox()
+        Me.IpAddressControl_End = New WakeOnLan.Controls.IPAddressControl()
+        Me.IpAddressControl_Start = New WakeOnLan.Controls.IPAddressControl()
         Me.cancelSearch = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -50,7 +50,7 @@ Partial Class Search
         Me.OKButton = New System.Windows.Forms.Button()
         Me.ComboBoxGroup = New System.Windows.Forms.ComboBox()
         Me.LabelAddToGroup = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
+        Me.gbSearch.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -97,17 +97,17 @@ Partial Class Search
         '
         resources.ApplyResources(Me.chEnabled, "chEnabled")
         '
-        'GroupBox1
+        'gbSearch
         '
-        Me.GroupBox1.Controls.Add(Me.IpAddressControl_End)
-        Me.GroupBox1.Controls.Add(Me.IpAddressControl_Start)
-        Me.GroupBox1.Controls.Add(Me.cancelSearch)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.SearchBegin)
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.TabStop = False
+        Me.gbSearch.Controls.Add(Me.IpAddressControl_End)
+        Me.gbSearch.Controls.Add(Me.IpAddressControl_Start)
+        Me.gbSearch.Controls.Add(Me.cancelSearch)
+        Me.gbSearch.Controls.Add(Me.Label2)
+        Me.gbSearch.Controls.Add(Me.Label1)
+        Me.gbSearch.Controls.Add(Me.SearchBegin)
+        resources.ApplyResources(Me.gbSearch, "gbSearch")
+        Me.gbSearch.Name = "gbSearch"
+        Me.gbSearch.TabStop = False
         '
         'IpAddressControl_End
         '
@@ -219,15 +219,15 @@ Partial Class Search
         Me.Controls.Add(Me.CheckAllButton)
         Me.Controls.Add(Me.LabelDescription)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gbSearch)
         Me.Controls.Add(Me.listView)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Search"
         Me.ShowInTaskbar = False
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.gbSearch.ResumeLayout(False)
+        Me.gbSearch.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -240,7 +240,7 @@ Partial Class Search
     Friend WithEvents ch_Interface As System.Windows.Forms.ColumnHeader
     Friend WithEvents ch_IP As System.Windows.Forms.ColumnHeader
     Friend WithEvents ch_MAC As System.Windows.Forms.ColumnHeader
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents gbSearch As System.Windows.Forms.GroupBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents listView As System.Windows.Forms.ListView
