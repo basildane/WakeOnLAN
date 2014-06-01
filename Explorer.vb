@@ -22,9 +22,6 @@ Imports AutoUpdaterDotNET
 Imports System.Globalization
 
 Public Class Explorer
-    Declare Function IsValidLocale Lib "kernel32" (ByVal locale As Integer, ByVal dwFlags As Integer) As Integer
-
-    Const LCID_INSTALLED As Long = &H1 '-- is locale present?
 
     Private Sub Explorer_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
         Dim auto As New Autorun()
@@ -45,25 +42,10 @@ Public Class Explorer
         ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
         ToolStripStatusLabel2.Text = ""
 
-        For Each l As ToolStripMenuItem In LanguageToolStripMenuItem.DropDownItems
-            If l.Tag = My.Settings.Language Then
-                l.Checked = True
-            End If
-        Next
-
         ' Scheduling functions are only available in Vista and 2008 and higher
         '
         ScheduleToolStripMenuItem.Enabled = (Environment.OSVersion.Version.Major >= 6)
         ScheduleToolStripButton.Enabled = ScheduleToolStripMenuItem.Enabled
-
-        ' If Chinese character set is not installed, revert to English
-        '
-        If IsValidLocale(New CultureInfo("zh-TW").LCID, LCID_INSTALLED) = 0 Then
-            With TaiwanToolStripMenuItem
-                .Enabled = False
-                .Text = "Taiwan (Chinese)"
-            End With
-        End If
 
         ListView.Groups("Online").Header = My.Resources.Strings.OnLine
         ListView.Groups("Offline").Header = My.Resources.Strings.OffLine
@@ -72,7 +54,7 @@ Public Class Explorer
         SetView(ListView.View)
         Machines.Load()
 
-        Machines.Dirty = False
+        Machines.dirty = False
         LoadTree()
         ListView.ListViewItemSorter = New ListViewItemComparer(My.Settings.SortColumn)
 
@@ -98,7 +80,7 @@ Public Class Explorer
         AutoUpdater.CurrentCulture = Application.CurrentCulture
         AutoUpdater.AppCastURL = My.Settings.updateURL
         AutoUpdater.versionURL = My.Settings.updateVersions
-        AddHandler AutoUpdater.UpdateStatus, AddressOf updateStatus
+        AddHandler AutoUpdater.UpdateStatus, AddressOf UpdateStatus
         AutoUpdater.Start(My.Settings.updateIntervalDays)
     End Sub
 
@@ -333,7 +315,7 @@ Public Class Explorer
         Next
 
         'Finally, set the view requested
-        ListView.View = View
+        ListView.View = view
 
         'ListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
     End Sub
@@ -505,21 +487,16 @@ Public Class Explorer
         Next
     End Sub
 
-    Private Sub OptionsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OptionsToolStripMenuItem.Click
+    Private Sub OptionsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OptionsToolStripMenuItem.Click, OptionsToolStripButton.Click
         Options.ShowDialog(Me)
+        If (My.Settings.Language <> Application.CurrentCulture.IetfLanguageTag) Then
+            ChangeLanguage(My.Settings.Language)
+        End If
     End Sub
 
-    Private Sub LanguageToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EnglishToolStripMenuItem.Click, RussianToolStripMenuItem.Click, TaiwanToolStripMenuItem.Click, FinnishToolStripMenuItem.Click, PortugueseToolStripMenuItem.Click, DeutschToolStripMenuItem.Click, FrenchToolStripMenuItem.Click, HungaryToolStripMenuItem.Click, DutchToolStripMenuItem.Click, RomanianToolStripMenuItem.Click
-        Dim menuitem As ToolStripMenuItem
-
-        For Each menuitem In LanguageToolStripMenuItem.DropDownItems
-            If menuitem.Checked Then menuitem.Checked = False
-        Next
-
-        menuitem = sender
-        My.Settings.Language = menuitem.Tag
-        menuitem.Checked = True
-        Localization.CultureManager.ApplicationUICulture = New CultureInfo(menuitem.Tag.ToString())
+    Private Sub ChangeLanguage(newLanguage As String)
+        My.Settings.Language = newLanguage
+        Localization.CultureManager.ApplicationUICulture = New CultureInfo(newLanguage)
         LoadTree()
         TreeView.SelectedNode = TreeView.Nodes(0)
         LoadList()
@@ -650,7 +627,7 @@ Public Class Explorer
     End Sub
 
     Private Sub ScheduleToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ScheduleToolStripMenuItem.Click, ScheduleToolStripButton.Click
-        Schedule.Show(Me)
+        Schedule.Schedule.Show(Me)
     End Sub
 
     Private Sub LicenseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LicenseToolStripMenuItem.Click
@@ -722,7 +699,11 @@ Public Class Explorer
 
     ' Keep the SplashScreen in the foreground
     Private Sub Explorer_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        SetForegroundWindow(splashPtr)
+        SetForegroundWindow(SplashPtr)
+    End Sub
+
+    Private Sub ListView_Resize(sender As Object, e As EventArgs) Handles ListView.Resize
+        System.Diagnostics.Debug.WriteLine("resize listview")
     End Sub
 End Class
 

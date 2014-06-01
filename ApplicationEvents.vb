@@ -67,18 +67,11 @@ Namespace My
         ''' <remarks></remarks>
         Private Sub ConfigureCulture()
 #If DEBUG Then
-            'Debug.WriteLine(FormatMessage(1707))
-            Dim c As CultureInfo
-            c = New CultureInfo("zh-TW")
-
-
-
             'My.Settings.Language = "zh-TW"
-            'My.Settings.Language = "en-US"
 #End If
 
             If Settings.Language = "" Then
-                Settings.Language = Application.Culture.Name
+                Settings.Language = Application.Culture.IetfLanguageTag
             End If
 
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
@@ -95,10 +88,8 @@ Namespace My
             Dim hwnd As IntPtr
 
             hwnd = FindWindow(Nothing, Resources.Strings.Title)
-            System.Diagnostics.Debug.WriteLine("FindWindow: {0}", hwnd)
 
             If hwnd <> IntPtr.Zero Then
-                MessageBox.Show("found")
                 ShowWindow(hwnd, SW_SHOW)
                 ShowWindow(hwnd, SW_RESTORE)
                 SetForegroundWindow(hwnd)
@@ -128,7 +119,7 @@ Namespace My
 
                 End Try
 
-                My.Settings.Save()
+                Settings.Save()
             End If
         End Sub
     End Class

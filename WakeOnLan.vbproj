@@ -351,6 +351,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Property\Flags.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Flags.resx</DependentUpon>
+    </Compile>
     <Compile Include="Property\OptionProperties.ro.Designer.vb">
       <DependentUpon>OptionProperties.ro.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -376,6 +381,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OptionProperties.hu.resx</DependentUpon>
     </Compile>
+    <Compile Include="Property\Countries.vb" />
     <Compile Include="Report\ReportStrings.ro.Designer.vb">
       <DependentUpon>ReportStrings.ro.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -782,6 +788,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.zh-TW.resx">
       <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\Flags.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Flags.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.ro.resx">
       <Generator>ResXFileCodeGenerator</Generator>

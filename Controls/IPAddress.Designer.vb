@@ -1,6 +1,6 @@
 ﻿Namespace Controls
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-    Partial Class IPAddressControl
+    Partial Class IpAddressControl
         Inherits System.Windows.Forms.UserControl
 
         'UserControl overrides dispose to clean up the component list.

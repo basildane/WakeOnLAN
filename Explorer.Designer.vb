@@ -126,17 +126,6 @@ Partial Class Explorer
         Me.AutoStartWithWindowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.ResetWindowLayoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LanguageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PortugueseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeutschToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FrenchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HungaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DutchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RussianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RomanianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FinnishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EnglishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TaiwanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchForMachinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -160,8 +149,8 @@ Partial Class Explorer
         Me.PingToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ScheduleToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ListenerToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.OptionsToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.HotToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripButtonDonate = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripMenuItemWakeUp = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
@@ -392,7 +381,7 @@ Partial Class Explorer
         '
         resources.ApplyResources(Me.MenuStrip, "MenuStrip")
         Me.MenuStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.LanguageToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip.Name = "MenuStrip"
         '
         'FileToolStripMenuItem
@@ -558,74 +547,6 @@ Partial Class Explorer
         Me.ResetWindowLayoutToolStripMenuItem.Name = "ResetWindowLayoutToolStripMenuItem"
         resources.ApplyResources(Me.ResetWindowLayoutToolStripMenuItem, "ResetWindowLayoutToolStripMenuItem")
         '
-        'LanguageToolStripMenuItem
-        '
-        Me.LanguageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PortugueseToolStripMenuItem, Me.DeutschToolStripMenuItem, Me.FrenchToolStripMenuItem, Me.HungaryToolStripMenuItem, Me.DutchToolStripMenuItem, Me.RussianToolStripMenuItem, Me.RomanianToolStripMenuItem, Me.FinnishToolStripMenuItem, Me.EnglishToolStripMenuItem, Me.TaiwanToolStripMenuItem})
-        Me.LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem"
-        resources.ApplyResources(Me.LanguageToolStripMenuItem, "LanguageToolStripMenuItem")
-        '
-        'PortugueseToolStripMenuItem
-        '
-        resources.ApplyResources(Me.PortugueseToolStripMenuItem, "PortugueseToolStripMenuItem")
-        Me.PortugueseToolStripMenuItem.Name = "PortugueseToolStripMenuItem"
-        Me.PortugueseToolStripMenuItem.Tag = "pt-BR"
-        '
-        'DeutschToolStripMenuItem
-        '
-        resources.ApplyResources(Me.DeutschToolStripMenuItem, "DeutschToolStripMenuItem")
-        Me.DeutschToolStripMenuItem.Name = "DeutschToolStripMenuItem"
-        Me.DeutschToolStripMenuItem.Tag = "de-DE"
-        '
-        'FrenchToolStripMenuItem
-        '
-        resources.ApplyResources(Me.FrenchToolStripMenuItem, "FrenchToolStripMenuItem")
-        Me.FrenchToolStripMenuItem.Name = "FrenchToolStripMenuItem"
-        Me.FrenchToolStripMenuItem.Tag = "fr-FR"
-        '
-        'HungaryToolStripMenuItem
-        '
-        resources.ApplyResources(Me.HungaryToolStripMenuItem, "HungaryToolStripMenuItem")
-        Me.HungaryToolStripMenuItem.Name = "HungaryToolStripMenuItem"
-        Me.HungaryToolStripMenuItem.Tag = "hu-HU"
-        '
-        'DutchToolStripMenuItem
-        '
-        resources.ApplyResources(Me.DutchToolStripMenuItem, "DutchToolStripMenuItem")
-        Me.DutchToolStripMenuItem.Name = "DutchToolStripMenuItem"
-        Me.DutchToolStripMenuItem.Tag = "nl-NL"
-        '
-        'RussianToolStripMenuItem
-        '
-        Me.RussianToolStripMenuItem.CheckOnClick = True
-        resources.ApplyResources(Me.RussianToolStripMenuItem, "RussianToolStripMenuItem")
-        Me.RussianToolStripMenuItem.Name = "RussianToolStripMenuItem"
-        Me.RussianToolStripMenuItem.Tag = "ru-RU"
-        '
-        'RomanianToolStripMenuItem
-        '
-        resources.ApplyResources(Me.RomanianToolStripMenuItem, "RomanianToolStripMenuItem")
-        Me.RomanianToolStripMenuItem.Name = "RomanianToolStripMenuItem"
-        Me.RomanianToolStripMenuItem.Tag = "ro-RO"
-        '
-        'FinnishToolStripMenuItem
-        '
-        resources.ApplyResources(Me.FinnishToolStripMenuItem, "FinnishToolStripMenuItem")
-        Me.FinnishToolStripMenuItem.Name = "FinnishToolStripMenuItem"
-        Me.FinnishToolStripMenuItem.Tag = "fi-FI"
-        '
-        'EnglishToolStripMenuItem
-        '
-        Me.EnglishToolStripMenuItem.CheckOnClick = True
-        resources.ApplyResources(Me.EnglishToolStripMenuItem, "EnglishToolStripMenuItem")
-        Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        Me.EnglishToolStripMenuItem.Tag = "en-US"
-        '
-        'TaiwanToolStripMenuItem
-        '
-        resources.ApplyResources(Me.TaiwanToolStripMenuItem, "TaiwanToolStripMenuItem")
-        Me.TaiwanToolStripMenuItem.Name = "TaiwanToolStripMenuItem"
-        Me.TaiwanToolStripMenuItem.Tag = "zh-TW"
-        '
         'ToolsToolStripMenuItem
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.SearchForMachinesToolStripMenuItem, Me.ScheduleToolStripMenuItem, Me.ListenToolStripMenuItem})
@@ -683,7 +604,7 @@ Partial Class Explorer
         '
         resources.ApplyResources(Me.ToolStrip, "ToolStrip")
         Me.ToolStrip.ImageScalingSize = New System.Drawing.Size(30, 30)
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FoldersToolStripButton, Me.ToolStripSeparator8, Me.ListViewToolStripButton, Me.PingToolStripButton, Me.ScheduleToolStripButton, Me.ListenerToolStripButton, Me.HotToolStripButton, Me.ToolStripLabel1, Me.ToolStripButtonDonate})
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FoldersToolStripButton, Me.ToolStripSeparator8, Me.ListViewToolStripButton, Me.PingToolStripButton, Me.ScheduleToolStripButton, Me.ListenerToolStripButton, Me.OptionsToolStripButton, Me.HotToolStripButton, Me.ToolStripButtonDonate})
         Me.ToolStrip.Name = "ToolStrip"
         '
         'FoldersToolStripButton
@@ -757,6 +678,11 @@ Partial Class Explorer
         resources.ApplyResources(Me.ListenerToolStripButton, "ListenerToolStripButton")
         Me.ListenerToolStripButton.Name = "ListenerToolStripButton"
         '
+        'OptionsToolStripButton
+        '
+        resources.ApplyResources(Me.OptionsToolStripButton, "OptionsToolStripButton")
+        Me.OptionsToolStripButton.Name = "OptionsToolStripButton"
+        '
         'HotToolStripButton
         '
         Me.HotToolStripButton.Checked = True
@@ -765,15 +691,11 @@ Partial Class Explorer
         resources.ApplyResources(Me.HotToolStripButton, "HotToolStripButton")
         Me.HotToolStripButton.Name = "HotToolStripButton"
         '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        resources.ApplyResources(Me.ToolStripLabel1, "ToolStripLabel1")
-        '
         'ToolStripButtonDonate
         '
         Me.ToolStripButtonDonate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         resources.ApplyResources(Me.ToolStripButtonDonate, "ToolStripButtonDonate")
+        Me.ToolStripButtonDonate.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
         Me.ToolStripButtonDonate.Name = "ToolStripButtonDonate"
         '
         'ToolStripMenuItemWakeUp
@@ -895,16 +817,11 @@ Partial Class Explorer
     Friend WithEvents TimerPing As System.Windows.Forms.Timer
     Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents SearchForMachinesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LanguageToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EnglishToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents RussianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RDPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator10 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents AbortShutdownToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ShowHotButtonsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TaiwanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PortugueseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ScheduleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ScheduleToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents TileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -920,8 +837,6 @@ Partial Class Explorer
     Friend WithEvents TileToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HotToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents LicenseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents DeutschToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents FrenchToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MinimizeToTaskTrayToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
     Friend WithEvents ContextMenuStripTray As System.Windows.Forms.ContextMenuStrip
@@ -932,14 +847,10 @@ Partial Class Explorer
     Friend WithEvents ToolStripMenuItemWakeUp As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ListenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NotifyIconUpdate As System.Windows.Forms.NotifyIcon
-    Friend WithEvents FinnishToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Group As System.Windows.Forms.ColumnHeader
-    Friend WithEvents HungaryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ListenerToolStripButton As System.Windows.Forms.ToolStripButton
-    Friend WithEvents DutchToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents RomanianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripButtonDonate As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents CultureManager As Localization.CultureManager
+    Friend WithEvents OptionsToolStripButton As System.Windows.Forms.ToolStripButton
 
 End Class

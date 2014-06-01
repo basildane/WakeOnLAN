@@ -15,15 +15,15 @@
 '
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
-
-Imports System.Windows.Forms
 Imports System.ComponentModel
-Imports WakeOnLan.GlobalizedPropertyGrid
+Imports System.Windows.Forms
+
+'Namespace OptionProperties
 
 Public Class Options
     ReadOnly p As New OptionProperties
     Dim _savedDbPath As String
-    
+
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
 
         With p
@@ -45,12 +45,12 @@ Public Class Options
             Application.Restart()
         End If
 
-        Close()
+        Dispose()
     End Sub
 
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
         DialogResult = Windows.Forms.DialogResult.Cancel
-        Close()
+        Dispose()
     End Sub
 
     Private Sub Options_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -213,7 +213,7 @@ Public Class Options
         Private _dbPath As String
 
         <GlobalizedCategory("cat_Application"), Editor(GetType(Windows.Forms.Design.FileNameEditor), _
-            GetType(Drawing.Design.UITypeEditor))> Public Property dbPath() As String
+                                                       GetType(Drawing.Design.UITypeEditor))> Public Property dbPath() As String
             Get
                 Return _dbPath
             End Get
@@ -262,3 +262,5 @@ Class TrueFalseConverter
 
     Private ReadOnly _values As String() = New String() {My.Resources.Strings.lit_false, My.Resources.Strings.lit_true}
 End Class
+
+'End Namespace
