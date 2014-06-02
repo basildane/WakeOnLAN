@@ -199,7 +199,6 @@ Public Class Explorer
         Next
         If My.Settings.CurrentGroup = tvRoot.Text Then TreeView.SelectedNode = tvRoot
         TreeView.ResumeLayout()
-
     End Sub
 
     Private Sub TreeView_AfterSelect(ByVal sender As Object, ByVal e As Windows.Forms.TreeViewEventArgs) Handles TreeView.AfterSelect
@@ -502,7 +501,6 @@ Public Class Explorer
         LoadList()
     End Sub
 
-
     Private Sub CultureManager_UICultureChanged(newCulture As CultureInfo) Handles CultureManager.UICultureChanged
         ListView.Groups("Online").Header = My.Resources.Strings.OnLine
         ListView.Groups("Offline").Header = My.Resources.Strings.OffLine
@@ -702,9 +700,6 @@ Public Class Explorer
         SetForegroundWindow(SplashPtr)
     End Sub
 
-    Private Sub ListView_Resize(sender As Object, e As EventArgs) Handles ListView.Resize
-        System.Diagnostics.Debug.WriteLine("resize listview")
-    End Sub
 End Class
 
 ' Implements the manual sorting of items by columns.
