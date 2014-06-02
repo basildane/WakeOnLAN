@@ -1,3 +1,5 @@
+Imports WakeOnLan.Controls
+
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Search
     Inherits System.Windows.Forms.Form
@@ -29,9 +31,9 @@ Partial Class Search
         Me.ch_IP = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ch_MAC = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chEnabled = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.IpAddressControl_End = New WakeOnLan.IPAddressControl()
-        Me.IpAddressControl_Start = New WakeOnLan.IPAddressControl()
+        Me.gbSearch = New System.Windows.Forms.GroupBox()
+        Me.IpAddressControl_End = New WakeOnLan.Controls.IpAddressControl()
+        Me.IpAddressControl_Start = New WakeOnLan.Controls.IpAddressControl()
         Me.cancelSearch = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -40,7 +42,7 @@ Partial Class Search
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel_spacer = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LabelDescription = New System.Windows.Forms.Label()
         Me.CheckAllButton = New System.Windows.Forms.Button()
         Me.UnCheckAllButton = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -48,7 +50,7 @@ Partial Class Search
         Me.OKButton = New System.Windows.Forms.Button()
         Me.ComboBoxGroup = New System.Windows.Forms.ComboBox()
         Me.LabelAddToGroup = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
+        Me.gbSearch.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -96,18 +98,18 @@ Partial Class Search
         '
         resources.ApplyResources(Me.chEnabled, "chEnabled")
         '
-        'GroupBox1
+        'gbSearch
         '
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
-        Me.GroupBox1.Controls.Add(Me.IpAddressControl_End)
-        Me.GroupBox1.Controls.Add(Me.IpAddressControl_Start)
-        Me.GroupBox1.Controls.Add(Me.cancelSearch)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.SearchBegin)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.GroupBox1, resources.GetString("GroupBox1.ToolTip"))
+        resources.ApplyResources(Me.gbSearch, "gbSearch")
+        Me.gbSearch.Controls.Add(Me.IpAddressControl_End)
+        Me.gbSearch.Controls.Add(Me.IpAddressControl_Start)
+        Me.gbSearch.Controls.Add(Me.cancelSearch)
+        Me.gbSearch.Controls.Add(Me.Label2)
+        Me.gbSearch.Controls.Add(Me.Label1)
+        Me.gbSearch.Controls.Add(Me.SearchBegin)
+        Me.gbSearch.Name = "gbSearch"
+        Me.gbSearch.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.gbSearch, resources.GetString("gbSearch.ToolTip"))
         '
         'IpAddressControl_End
         '
@@ -171,11 +173,11 @@ Partial Class Search
         resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
         '
-        'Label3
+        'LabelDescription
         '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.Name = "Label3"
-        Me.ToolTip1.SetToolTip(Me.Label3, resources.GetString("Label3.ToolTip"))
+        resources.ApplyResources(Me.LabelDescription, "LabelDescription")
+        Me.LabelDescription.Name = "LabelDescription"
+        Me.ToolTip1.SetToolTip(Me.LabelDescription, resources.GetString("LabelDescription.ToolTip"))
         '
         'CheckAllButton
         '
@@ -227,9 +229,9 @@ Partial Class Search
         Me.Controls.Add(Me.OKButton)
         Me.Controls.Add(Me.UnCheckAllButton)
         Me.Controls.Add(Me.CheckAllButton)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.LabelDescription)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gbSearch)
         Me.Controls.Add(Me.listView)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -237,8 +239,8 @@ Partial Class Search
         Me.Name = "Search"
         Me.ShowInTaskbar = False
         Me.ToolTip1.SetToolTip(Me, resources.GetString("$this.ToolTip"))
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.gbSearch.ResumeLayout(False)
+        Me.gbSearch.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -251,7 +253,7 @@ Partial Class Search
     Friend WithEvents ch_Interface As System.Windows.Forms.ColumnHeader
     Friend WithEvents ch_IP As System.Windows.Forms.ColumnHeader
     Friend WithEvents ch_MAC As System.Windows.Forms.ColumnHeader
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents gbSearch As System.Windows.Forms.GroupBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents listView As System.Windows.Forms.ListView
@@ -261,12 +263,12 @@ Partial Class Search
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel_spacer As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripProgressBar1 As System.Windows.Forms.ToolStripProgressBar
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents LabelDescription As System.Windows.Forms.Label
     Friend WithEvents CheckAllButton As System.Windows.Forms.Button
     Friend WithEvents UnCheckAllButton As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
-    Friend WithEvents IpAddressControl_End As WakeOnLan.IPAddressControl
-    Friend WithEvents IpAddressControl_Start As WakeOnLan.IPAddressControl
+    Friend WithEvents IpAddressControl_End As IPAddressControl
+    Friend WithEvents IpAddressControl_Start As IPAddressControl
     Friend WithEvents closeButton As System.Windows.Forms.Button
     Friend WithEvents OKButton As System.Windows.Forms.Button
     Friend WithEvents ComboBoxGroup As System.Windows.Forms.ComboBox

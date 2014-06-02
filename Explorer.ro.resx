@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,72 +59,66 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="StatusStrip.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ToolStripContainer.BottomToolStripPanel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TreeNodeImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="TreeNodeImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+		<value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACo
@@ -167,28 +161,22 @@
         AcABAwQAAYABAAGAAQEEAAGAQAABAQEAAQEFAAEDAQABAwQAAYAB/wGAAf8EAAHBAf8BwQH/BAAE/wQA
         Cw==
 </value>
-  </data>
-  <data name="TreeView.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SplitContainer.Panel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MachineName.Text" xml:space="preserve">
+	</data>
+	<data name="MachineName.Text" xml:space="preserve">
     <value>Numele maşinii</value>
   </data>
-  <data name="Status.Text" xml:space="preserve">
+	<data name="Status.Text" xml:space="preserve">
     <value>Statut</value>
   </data>
-  <data name="IPAddress.Text" xml:space="preserve">
+	<data name="IPAddress.Text" xml:space="preserve">
     <value>adresa IP</value>
   </data>
-  <data name="Netbios.Text" xml:space="preserve">
+	<data name="Netbios.Text" xml:space="preserve">
     <value>Numele Netbios</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="WakeUpToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+	<data name="WakeUpToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgRJREFUOE+Vkd9L
         k2EcxZ+bXHXRTV1EUJhRi+VouWhFJtZYGWUL6yLCoiGYTed0kyZl9kNlpdmYy5Y/EIpymsnWjIgy3JIY
@@ -201,15 +189,15 @@
         p2fnVZ/Au+hX2lPT97yoxDhbRde3nhxvzpZbMPDlPlun9JSF9yrtVXNHcf+4ibAWAugS+CQgdTJH3MWl
         xBVufO2m92cvor4QwL9OlWpOheuk/5AQvwBOkj5Z090/eQAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="WakeUpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="WakeUpToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="WakeUpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>204, 22</value>
+	</data>
+	<data name="WakeUpToolStripMenuItem.Text" xml:space="preserve">
     <value>Trezeşte</value>
   </data>
-  <data name="ShutdownToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ShutdownToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAXZJREFUOE+VkbtO
         AlEURfkMXjNDog1UE0kg0YISGgt5BEIIARWRUNhYaGdFRP0SEQZNpJBC3gmdRjDxAyysrn+wPWdkDIMQ
@@ -220,24 +208,24 @@
         lhAo2vRknBpLCOQY8NMi2Cg6nKq5XLqkxRICl3aeLdpdJVC0COKsBRtFu/9JmsEg6Firw0bR7io/k56F
         sMXyAx35UJzJGkTgAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="ShutdownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="ShutdownToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="ShutdownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>204, 22</value>
+	</data>
+	<data name="ShutdownToolStripMenuItem.Text" xml:space="preserve">
     <value>Închide</value>
   </data>
-  <data name="ToolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 6</value>
-  </data>
-  <data name="AbortShutdownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="AbortShutdownToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ToolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
+		<value>201, 6</value>
+	</data>
+	<data name="AbortShutdownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>204, 22</value>
+	</data>
+	<data name="AbortShutdownToolStripMenuItem.Text" xml:space="preserve">
     <value>Abandonează Închiderea</value>
   </data>
-  <data name="RDPToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="RDPToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAvlJREFUOE+VknlI
         02EcxpdXqZhHRWQ6By2bDSEzOiQiDK3IShMlBQWhC8UMO3SSK69pRqI2NUsxq+mGpBbNHCrb2ubR4TxS
@@ -254,12 +242,12 @@
         Oh98ozyDVdoxMb6IL916yCSjEIsGwC0TTdvbb6MS0dVJT+PkS8QKNMmGIGzoWX5aUjsRH5fJ9/I6EWll
         ZbuZiP0bigvdzd3dK9jZieZrZWW34+dPmRNHBCTSDzOYr4zbnFI7AAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="RDPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="PropertiesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="RDPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>204, 22</value>
+	</data>
+	<data name="PropertiesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAvdJREFUOE99U3tT
         ElEc5SP4EfgIfQS/Qc40/tF/1NSfppNOVpOID9a3+ErElFVELV9oio+AFEkMXwskgWaCgohYXkVhUbHT
@@ -276,27 +264,24 @@
         tN5IjLofIr+2DcKee9mK9LtZhf/+DwJoeTg8ScAXCONZUTlXUFHvD+wRODajeFqlEQX+i+evFIrKutf+
         AmU1ycqXSx/lFtypVLMkh2n0Zz4puDy2a0gkvwHMFmrGa8qLdQAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="PropertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="PropertiesToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="PropertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>204, 22</value>
+	</data>
+	<data name="PropertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>Proprietăţi</value>
   </data>
-  <data name="DeleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="DeleteToolStripMenuItem.Text" xml:space="preserve">
+	<data name="DeleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>204, 22</value>
+	</data>
+	<data name="DeleteToolStripMenuItem.Text" xml:space="preserve">
     <value>Şterge</value>
   </data>
-  <data name="ContextMenuStrip_Machines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 142</value>
-  </data>
-  <data name="ContextMenuStrip_Machines.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ListView.Groups" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
+	<data name="ContextMenuStrip_Machines.Size" type="System.Drawing.Size, System.Drawing">
+		<value>205, 142</value>
+	</data>
+	<data name="ListView.Groups" mimetype="application/x-microsoft.net.object.binary.base64">
+		<value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
@@ -304,9 +289,9 @@
         AwAAAAZPbmxpbmUF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAA
         AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAZPbmxpbmUL
 </value>
-  </data>
-  <data name="ListView.Groups1" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
+	</data>
+	<data name="ListView.Groups1" mimetype="application/x-microsoft.net.object.binary.base64">
+		<value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
@@ -314,9 +299,9 @@
         AwAAAAdPZmZsaW5lBfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdubWVudAEA
         AAAHdmFsdWVfXwAIAgAAAAAAAAAKBgUAAAAHT2ZmbGluZQs=
 </value>
-  </data>
-  <data name="ListView.Groups2" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
+	</data>
+	<data name="ListView.Groups2" mimetype="application/x-microsoft.net.object.binary.base64">
+		<value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
@@ -324,9 +309,9 @@
         AwAAAApOZWN1bm9zY3V0Bfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdubWVu
         dAEAAAAHdmFsdWVfXwAIAgAAAAAAAAAKBgUAAAAHVW5rbm93bgs=
 </value>
-  </data>
-  <data name="ListViewLargeImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
+	</data>
+	<data name="ListViewLargeImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+		<value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACI
@@ -470,9 +455,9 @@
         AfAEAAE/Af8EAAEHBgAB/AQAAR8B+AQAAT8B/wGAAwABBwYAAf8B4AMAAR8B/wHAAwABPwH/AfgDAAEH
         BgAC/wHAAgABfwL/AYACAAP/AfACAAEfBgAD/wHAAQcE/wGAAQ8E/wHwAQEB/wYAEv8GAAs=
 </value>
-  </data>
-  <data name="ListViewSmallImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
+	</data>
+	<data name="ListViewSmallImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+		<value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADq
@@ -528,15 +513,9 @@
         AgABgAEBAYABAQGAAQECAAGAAQEBgAEBAYABAQIAAYABAQGAAQEBwAEBAgABgAEBAYABAQHAAQECAAGA
         AQEBgAEBAcABAQIAAYABAQGAAQEBwAEBAgABgAEBAYABAQHAAQECAAHAAQEBwAEBAfABAQIACw==
 </value>
-  </data>
-  <data name="ListView.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SplitContainer1.Panel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Button_Emergency.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="Button_Emergency.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAE59JREFUaEPtWWdU
         lde2zX3JtaBIs0evShELKmJAUARFkNhbjCUm0RhNxIIGFIy9xgJIFaQrRaRLExCQDtJ770U6HCkqFuZb
@@ -624,15 +603,15 @@
         cKGue8fuMUypYl274Y1zl9wY8GpK1usEnI0Jw4Tb/2cXHT6MNLuByJgdMbjjTYDiDIwccg2NHWrYw1hm
         RLLawMg+nxpi0lFD2wB9Q1srkspuqvOSwm3+r69PPvlv6oj5ax3XT6IAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="Button_Emergency.Text" xml:space="preserve">
+	</data>
+	<data name="Button_Emergency.Text" xml:space="preserve">
     <value>Închidere de Urgentă</value>
   </data>
-  <data name="Button_Emergency.ToolTip" xml:space="preserve">
+	<data name="Button_Emergency.ToolTip" xml:space="preserve">
     <value>Închide imediat toate computerele definite</value>
   </data>
-  <data name="Button_StartAll.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="Button_StartAll.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAE95JREFUaEPtmnd0
         nOWVxicJhyTnpJzdsMnuZk9CWLMJcSAElmAwNja9ZUNYIJgQWiBgmnGRK7IlV1m9j9qojHobyerV6pLV
@@ -721,39 +700,15 @@
         87f77wR/uh77SP3lBw51bN9+oO3A1r2tbvd+2Op2zwfNH9yzp/Wnzltke13kd+85IHfnzJLwwQF5KWFa
         DxyJHGRPmBDGOX6M8ugmaD3vy6EFM+J/4PW/OD/i/+KSyf4L1UaXvEyK/ZsAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="Button_StartAll.Text" xml:space="preserve">
+	</data>
+	<data name="Button_StartAll.Text" xml:space="preserve">
     <value>Porneşte tot</value>
   </data>
-  <data name="Button_StartAll.ToolTip" xml:space="preserve">
+	<data name="Button_StartAll.ToolTip" xml:space="preserve">
     <value>Porneşte toate computerele</value>
   </data>
-  <data name="SplitContainer1.Panel2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SplitContainer1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SplitContainer.Panel2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SplitContainer.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ToolStripContainer.ContentPanel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ToolStripContainer.LeftToolStripPanel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ToolStripContainer.RightToolStripPanel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ToolStripContainer.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FoldersToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="FoldersToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAw8SURBVGhD7Zh7VFTVHse595ZoaubVMvWmab4ySzPvDbOy
         NM1XmqaZlwwfmYn4hKRE3chTQEQFRWBgBmaG4SGUim8EotQyXWqSDzQtX6W8RJgHDP72/e5z9gi6+gen
@@ -809,54 +764,51 @@
         zuruBzbhIJakyPTHLLxC63GkiMG+kBE/5Zj8+v1d7iPaDNX7d95btK13XRJkGM41747usm5gv9Yvya/8
         MWqYW4tBSUs7bynY2Lnq2a6uQ+XHf7zq1Mmltbz9s/6s+7dcXP4DS6XYUAFBEkYAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="FoldersToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 34</value>
-  </data>
-  <data name="FoldersToolStripButton.Text" xml:space="preserve">
+	</data>
+	<data name="FoldersToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
+		<value>83, 34</value>
+	</data>
+	<data name="FoldersToolStripButton.Text" xml:space="preserve">
     <value>Director</value>
   </data>
-  <data name="FoldersToolStripButton.ToolTipText" xml:space="preserve">
+	<data name="FoldersToolStripButton.ToolTipText" xml:space="preserve">
     <value>Inversează prezentarea directoarelor</value>
   </data>
-  <data name="ListToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
-  </data>
-  <data name="ListToolStripMenuItem1.Text" xml:space="preserve">
+	<data name="ListToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>178, 22</value>
+	</data>
+	<data name="ListToolStripMenuItem1.Text" xml:space="preserve">
     <value>Listă</value>
   </data>
-  <data name="DetailsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
-  </data>
-  <data name="DetailsToolStripMenuItem1.Text" xml:space="preserve">
+	<data name="DetailsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>178, 22</value>
+	</data>
+	<data name="DetailsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Detalii</value>
   </data>
-  <data name="LargeIconsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
-  </data>
-  <data name="LargeIconsToolStripMenuItem1.Text" xml:space="preserve">
+	<data name="LargeIconsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>178, 22</value>
+	</data>
+	<data name="LargeIconsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Simboluri mari</value>
   </data>
-  <data name="SmallIconsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
-  </data>
-  <data name="SmallIconsToolStripMenuItem1.Text" xml:space="preserve">
+	<data name="SmallIconsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>178, 22</value>
+	</data>
+	<data name="SmallIconsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Simboluri mici</value>
   </data>
-  <data name="TileToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
-  </data>
-  <data name="TileToolStripMenuItem1.Text" xml:space="preserve">
+	<data name="TileToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>178, 22</value>
+	</data>
+	<data name="TileToolStripMenuItem1.Text" xml:space="preserve">
     <value>Simboluri complete</value>
   </data>
-  <data name="ContextMenuStripViews.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 114</value>
-  </data>
-  <data name="ContextMenuStripViews.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ListViewToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ContextMenuStripViews.Size" type="System.Drawing.Size, System.Drawing">
+		<value>179, 114</value>
+	</data>
+	<data name="ListViewToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFwSURBVEhL7ZPRK0NxFMfvffbiP/BP+DP4O7wobxIP/ghP
         v78AYaNLeVJKeXCpFVuNmm1IQ6wQKV+/7+ycnTsbs01KTn0e7m19P+eecxb8jRqayiAci/vG4MQB6tFB
@@ -866,15 +818,15 @@
         4VisYKsA5csdyCk2X4tdpB3J5kmStgLnnCKhXKh9z84Jg+379TyUlgL5+7NruRQi45BQYacEbPiwdA5I
         ZZN8ENiF2nPktTSfo4RzFCJYPgKWDAkBH36CmuC/Pq8geANXBGajqSFyqwAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="ListViewToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 34</value>
-  </data>
-  <data name="ListViewToolStripButton.Text" xml:space="preserve">
+	</data>
+	<data name="ListViewToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
+		<value>83, 34</value>
+	</data>
+	<data name="ListViewToolStripButton.Text" xml:space="preserve">
     <value>Vederi</value>
   </data>
-  <data name="PingToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="PingToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAp5SURBVGhD7ZkLUFTnFYCP0TzUXXbv3UVCGmN9JGmNpmoG
         m7YmJNJoUydq2jhRJ0YJ+GgYNT7CQ8UrLC/ltcsigqKoCMgiIj5QGpVnBAVFHgIiRix5NOmMxiaxZkzu
@@ -923,9 +875,9 @@
         kSM3bNg4d9++A3FUjWznz7cdrampqz5cXFKTn19Qk5Wzq2brtu3VSRs2Ho2Ns9hMpoiYlStXz122bNkI
         T8//9LQO4N9MV1eNFqxH3gAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="ScheduleToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="ScheduleToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAxpSURBVGhDtVkLcFbVEaaMUBBGqhjIn6AmUQyZcej4wNoS
         Gpxpq7U+Bx0KlsGOQ6Hawdg2fxirJAEkD0JIAlJeDa8AEgTKw0AhegktiAgmQBLyhLzfrz9PIFy2+53c
@@ -982,21 +934,21 @@
         WLYUvuCTZcIv1uJnrDmbMROx8JznGc+yfTDDwfoRIvhbDe7FwXzj/wgU5eKz/ccqdu7cOZyd3bdt27b7
         mX/gToA53KqjsIvufrGWurYRjs0YNOj/4Ngtwwl2iCUAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="ScheduleToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 34</value>
-  </data>
-  <data name="ScheduleToolStripButton.Text" xml:space="preserve">
+	</data>
+	<data name="ScheduleToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
+		<value>103, 34</value>
+	</data>
+	<data name="ScheduleToolStripButton.Text" xml:space="preserve">
     <value>Programare</value>
   </data>
-  <data name="ListenerToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 34</value>
-  </data>
-  <data name="ListenerToolStripButton.Text" xml:space="preserve">
+	<data name="ListenerToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
+		<value>95, 34</value>
+	</data>
+	<data name="ListenerToolStripButton.Text" xml:space="preserve">
     <value>Ascultător</value>
   </data>
-  <data name="HotToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="HotToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABGGSURBVGhDzVkHcFVHlsUzYBDKOSABCkhCBAkENnjs/bWu
         2lrvrstTM06MCSKKIILIIMIXEjmKsIBy+MoEBUAgQPokGxtksMAYRBriMN5hTBgbWOynu+f0ex+JEZ4x
@@ -1075,21 +1027,18 @@
         eK7G806czcYdm/7qvmV4no7neKxjiKGgoODf8bsfnoOxOhlwn3/Ag7/EfLn5rKqqastLS0pK3J5n4ixr
         rd1f34f5HF2oVav/AUsqP1wKqC68AAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="HotToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 34</value>
-  </data>
-  <data name="HotToolStripButton.Text" xml:space="preserve">
+	</data>
+	<data name="HotToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
+		<value>121, 34</value>
+	</data>
+	<data name="HotToolStripButton.Text" xml:space="preserve">
     <value>Butoane rapide</value>
   </data>
-  <data name="ToolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>578, 37</value>
-  </data>
-  <data name="ToolStrip.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="NewToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStrip.Size" type="System.Drawing.Size, System.Drawing">
+		<value>578, 37</value>
+	</data>
+	<data name="NewToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVDhPrZDJasJQGIXzUvoO9TX0jcQuSulCLUUECwot
         KtrSAbQWRDTg0CLBCY1xqmkcYo7c8ItJYy9Z+MHhLu453+IXzkbypY6/SeRriKXLiKaKZqh6Gjb4j+v4
@@ -1098,18 +1047,18 @@
         w81+VugMF6i3FZTEgXuB9XBfnSkqjRHeyl33AuvhxO8xitU+ch+SOwF7eeEK2Keb0OQcCMIe3/X1lqrb
         NIsAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="NewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
-  </data>
-  <data name="NewToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="NewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>231, 22</value>
+	</data>
+	<data name="NewToolStripMenuItem.Text" xml:space="preserve">
     <value>Defineste Gazdă nouă</value>
   </data>
-  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 6</value>
-  </data>
-  <data name="ImportToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+		<value>228, 6</value>
+	</data>
+	<data name="ImportToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJYSURBVDhPvZFbSBNQHIf30ENPFmlRCEWWhD0MA0Oqh5Ck
         m6KUZoWRJpS3LhiKbVPbvE53c+pKh7lN19RptTIMK4RCkQgtdZSYmgVFpZgZKnn7GptokkEP0R9+L+ec
@@ -1123,15 +1072,15 @@
         Z8rHfi+Bdo1gIW3KFTTLV3I/cxW1aWsxpHpy7fImIg9vxt9346JAk52CRnqOPFE0kovHnQ9zJiKQowd3
         sW+3kJ1Cb3y8PNm4wYN1a9xY7z5f/d+MQPATMS7uX9kMtOAAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="ImportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
-  </data>
-  <data name="ImportToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="ImportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>231, 22</value>
+	</data>
+	<data name="ImportToolStripMenuItem.Text" xml:space="preserve">
     <value>Importă Configurări</value>
   </data>
-  <data name="ExportToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ExportToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIvSURBVDhPrZLdS9NRGMd//0L33QRddFtTYzgXq8GvXENZ
         Ngwrwl5+kWZpukwTFSvTqPkG2QqXTlqtJuGkIl/AFCkRZSpZmrmiJQ41xSaCwdfznP3yuIouogeem8P5
@@ -1145,18 +1094,18 @@
         NPoGxDF4u7YeWm1OtODkiR6+nrRhtCQ0ZxoVdZsaRjXTq5QE74zLEoJ/D0laA2xoOmtG+TV7AAAAAElF
         TkSuQmCC
 </value>
-  </data>
-  <data name="ExportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
-  </data>
-  <data name="ExportToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="ExportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>231, 22</value>
+	</data>
+	<data name="ExportToolStripMenuItem.Text" xml:space="preserve">
     <value>Exportă Configurări</value>
   </data>
-  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 6</value>
-  </data>
-  <data name="PrintToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+		<value>228, 6</value>
+	</data>
+	<data name="PrintToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIqSURBVDhPrZL7T1JxAMVZP/b/tLa2Wm21mail1YZlRjid
         k6JhTApClhGmktrDWlKjK3OBDrLAMWJaY9MZZJbo0umWQIEFXRPQMB6ne788HFpbW322s93d3fM598X5
@@ -1170,15 +1119,15 @@
         HqKiTokywRVwmd+0qKoJB3mNOHDiAvaWC7GnrB67ubX5YkH53+BwfgHgHTGbZU7qDAAAAABJRU5ErkJg
         gg==
 </value>
-  </data>
-  <data name="PrintToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
-  </data>
-  <data name="PrintToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="PrintToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>231, 22</value>
+	</data>
+	<data name="PrintToolStripMenuItem.Text" xml:space="preserve">
     <value>Printează</value>
   </data>
-  <data name="PrintPreviewToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="PrintPreviewToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHXSURBVDhPrZDdS1NhAIf3z4RXXkRqEd5IoCaKROWc6YVN
         XMQkMFToZjcpQaatoVuiq+UkTTrFWR/OyuWmNaGoYDLtIkHUKfOjSJxuc0/7OHObx4+bHvjxvhe/33MO
@@ -1190,30 +1139,30 @@
         8xy+x0XsfqrF0tGYkiQFsfOwtLa1c60sh++6XBZMBazZlDRrylOC3PPqY1NYcglN6Sk+tJyhvjgbVelp
         +YMeR+wv8k9mUXz2RHSsUPwDd10kHqNu+GEAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="PrintPreviewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
-  </data>
-  <data name="PrintPreviewToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="PrintPreviewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>231, 22</value>
+	</data>
+	<data name="PrintPreviewToolStripMenuItem.Text" xml:space="preserve">
     <value>Printează pt verificare</value>
   </data>
-  <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 6</value>
-  </data>
-  <data name="ExitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
-  </data>
-  <data name="ExitToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+		<value>228, 6</value>
+	</data>
+	<data name="ExitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>231, 22</value>
+	</data>
+	<data name="ExitToolStripMenuItem.Text" xml:space="preserve">
     <value>Ieşire</value>
   </data>
-  <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
-  </data>
-  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
+	<data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>46, 20</value>
+	</data>
+	<data name="FileToolStripMenuItem.Text" xml:space="preserve">
     <value>Fişier</value>
   </data>
-  <data name="UndoToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="UndoToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGmSURBVDhPvZHdS5MBFMb3p3TX6E7c1BTHUIc2xUbEqGUz
         LaV5s6ViRvhuul0M9lFshFjmjV/bKLVajRAid6N3KYg3FkHDiWvNmXt3++udDiMd4nthD5ybc57nx+Ec
@@ -1224,15 +1173,15 @@
         ZQmD6ye20cRJwHEdv/RFfUBaf5Pu4C4+6b3F9tlVde8T191ZjMIXeWGzfxetdZWrriytj9a5ZHghD9D0
         OCGFf9PUv0a5KSJ/dZP01vr+DdRtc/LD/0EKxR+XdBDBXAMPDQAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="UndoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
-  </data>
-  <data name="UndoToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="UndoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>188, 22</value>
+	</data>
+	<data name="UndoToolStripMenuItem.Text" xml:space="preserve">
     <value>Recuperare -</value>
   </data>
-  <data name="RedoToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="RedoToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGVSURBVDhPzZHdK0NhHMf3p7jBknbBNpqbc+FtttrUrBim
         LEJeRo0lzMsK2S6M5D3vJjXFJinhZu64WolQu9FaXjrnuf56nrOl5kTIhW99L56e7/dzfuf3yP5MO+cE
@@ -1243,18 +1192,18 @@
         +J5R5Lihe5hMCUgW9pnM/Zcwjb4g33byvcJHZdFtG3ojMIy8gGu/Qq33+ecgBtE7r2F08yjtjf5uEiad
         K4Yq+mzJ47+WTPYGxTcHtykTmrAAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="RedoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
-  </data>
-  <data name="RedoToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="RedoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>188, 22</value>
+	</data>
+	<data name="RedoToolStripMenuItem.Text" xml:space="preserve">
     <value>Recuperare +</value>
   </data>
-  <data name="ToolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 6</value>
-  </data>
-  <data name="CutToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ToolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+		<value>185, 6</value>
+	</data>
+	<data name="CutToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVDhPYyAG/AcCKJMwWLlp///ZyzbBNYA033nw9H91
         6xTiDJk8d83/nmmL/1e1zgRr+Pb9x//Vm/b8T8mpIt4Vk2av/D95zmqQ5f+fvXjzPy2/5r+YEB8J3ti4
@@ -1265,15 +1214,15 @@
         ktf8N/SBBJx3yfH/dkmr/mvaJP+XkdfEb4Bf5cX/9kmrgbZ3/Vc3CwcnHvuUNf+1rBP+q5tH/Df2b8dv
         gHPGlv9mIZP+a1jF/jf0qsGvmDqAgQEAkYXpGFtqYpEAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="CutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
-  </data>
-  <data name="CutToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="CutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>188, 22</value>
+	</data>
+	<data name="CutToolStripMenuItem.Text" xml:space="preserve">
     <value>Elimină</value>
   </data>
-  <data name="CopyToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="CopyToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHgSURBVDhPvZHdS1pxGMfPn7IKieq63Y/RKw0aFF1ssEEv
         dOVFXXUVFQ3Wlg4H2dSo7A21jnUiKiPFylwttMy9GXMNNgUrzinLrGN98zxaVgu7GOwLn5vf+X0/D8/v
@@ -1285,15 +1234,15 @@
         Dx9GncgqUqUe8q7UtK+Q4PrkS7pNy8gsUKQXVDbZETk5g27cBa15DZqxVZosldWGJWQ8fp1eUCS3xF/b
         SGSX6yEr0yKruAuZhcp4uQMPHr1KL/hPYZgL78LfVeQiZg4AAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="CopyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
-  </data>
-  <data name="CopyToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="CopyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>188, 22</value>
+	</data>
+	<data name="CopyToolStripMenuItem.Text" xml:space="preserve">
     <value>Copiază</value>
   </data>
-  <data name="PasteToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="PasteToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJXSURBVDhPtZJdSFNhHMYPdGE3RR/UVVcF0U0UEVQXGYWt
         sNlikdii5SK2SckmS9tGas0cunRzadoW+THUprMSpUnREBqOvmdsRh8SOSPXsnY2N+eyeDrn3UaujCDo
@@ -1307,90 +1256,90 @@
         tlMdXGE6qLcMoG/QS76st25YC+pieRF5IKktpyxmFja38j3XaxK23XHDan+SDtCXnWBeGA8i/m7k7NxC
         frDbZmdOVZvPBPAnHWK2zV74m5PX/1UU9QOTNfjZ1V1+MwAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="PasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
-  </data>
-  <data name="PasteToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="PasteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>188, 22</value>
+	</data>
+	<data name="PasteToolStripMenuItem.Text" xml:space="preserve">
     <value>Suprapune</value>
   </data>
-  <data name="ToolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 6</value>
-  </data>
-  <data name="SelectAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 22</value>
-  </data>
-  <data name="SelectAllToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ToolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+		<value>185, 6</value>
+	</data>
+	<data name="SelectAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>188, 22</value>
+	</data>
+	<data name="SelectAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Selectează tot</value>
   </data>
-  <data name="EditToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 20</value>
-  </data>
-  <data name="EditToolStripMenuItem.Text" xml:space="preserve">
+	<data name="EditToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>62, 20</value>
+	</data>
+	<data name="EditToolStripMenuItem.Text" xml:space="preserve">
     <value>Editează</value>
   </data>
-  <data name="ToolBarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
-  </data>
-  <data name="ToolBarToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ToolBarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>269, 22</value>
+	</data>
+	<data name="ToolBarToolStripMenuItem.Text" xml:space="preserve">
     <value>Bara de unelte</value>
   </data>
-  <data name="StatusBarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
-  </data>
-  <data name="StatusBarToolStripMenuItem.Text" xml:space="preserve">
+	<data name="StatusBarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>269, 22</value>
+	</data>
+	<data name="StatusBarToolStripMenuItem.Text" xml:space="preserve">
     <value>Bara de stare</value>
   </data>
-  <data name="FoldersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
-  </data>
-  <data name="FoldersToolStripMenuItem.Text" xml:space="preserve">
+	<data name="FoldersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>269, 22</value>
+	</data>
+	<data name="FoldersToolStripMenuItem.Text" xml:space="preserve">
     <value>Directoare</value>
   </data>
-  <data name="ShowGroupsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
-  </data>
-  <data name="ShowGroupsToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ShowGroupsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>269, 22</value>
+	</data>
+	<data name="ShowGroupsToolStripMenuItem.Text" xml:space="preserve">
     <value>Arată grupuri</value>
   </data>
-  <data name="ShowHotButtonsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
-  </data>
-  <data name="ShowHotButtonsToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ShowHotButtonsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>269, 22</value>
+	</data>
+	<data name="ShowHotButtonsToolStripMenuItem.Text" xml:space="preserve">
     <value>Arată butoane rapide</value>
   </data>
-  <data name="ToolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 6</value>
-  </data>
-  <data name="MinimizeToTaskTrayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
-  </data>
-  <data name="MinimizeToTaskTrayToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ToolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+		<value>266, 6</value>
+	</data>
+	<data name="MinimizeToTaskTrayToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>269, 22</value>
+	</data>
+	<data name="MinimizeToTaskTrayToolStripMenuItem.Text" xml:space="preserve">
     <value>Arată evenimente WOL în bara de jos</value>
   </data>
-  <data name="AutoStartWithWindowsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
-  </data>
-  <data name="AutoStartWithWindowsToolStripMenuItem.Text" xml:space="preserve">
+	<data name="AutoStartWithWindowsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>269, 22</value>
+	</data>
+	<data name="AutoStartWithWindowsToolStripMenuItem.Text" xml:space="preserve">
     <value>Porneşte automat cu Windows</value>
   </data>
-  <data name="ToolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 6</value>
-  </data>
-  <data name="ResetWindowLayoutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 22</value>
-  </data>
-  <data name="ResetWindowLayoutToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ToolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
+		<value>266, 6</value>
+	</data>
+	<data name="ResetWindowLayoutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>269, 22</value>
+	</data>
+	<data name="ResetWindowLayoutToolStripMenuItem.Text" xml:space="preserve">
     <value>Revine la fereastră iniţială</value>
   </data>
-  <data name="ViewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="ViewToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ViewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>40, 20</value>
+	</data>
+	<data name="ViewToolStripMenuItem.Text" xml:space="preserve">
     <value>Vezi</value>
   </data>
-  <data name="PortugueseToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="PortugueseToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAslJREFUOE+Nk11I
         U2Ecxs/adI5mOnVz8yNTh99urpm66bJ06pyb6cwP1AvT/IgUChO/cktIjCyyiBFWaunUkHRaRCNBTc0+
@@ -1407,9 +1356,9 @@
         QZukVvyTxBS5VqaM0QaG+GeS7IHtP5LDYXl4eLB4PN6uYFw2m82iKIr6BWUfwtd3AtYaAAAAAElFTkSu
         QmCC
 </value>
-  </data>
-  <data name="DeutschToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="DeutschToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAGjSURBVDhPnZPNattQEIWnsn6iSpala1mSTUqC/QSF4h/5GfMOpossEkIWNnTTBwilm0A3bWxC
         IJu8Q5TTM7IbsvBP6IWPe2fmzGEYuLLlfNjc286+Wl203olq12a+7/+eTqcYDocYjUaYTCZ7UY0yHo9h
@@ -1420,9 +1369,9 @@
         Q2izakNcXNBgtXIeAJ8Jb8PRAf7pPmKxsL/xN2SfLCsrT06+lP3+qBwMxns5PR2Wx8efS5F02mhk7fpD
         /f8R+QvAjpbVCDcvKQAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="FrenchToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="FrenchToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAK
         6QAACukB/XXO0wAAACt0RVh0Q3JlYXRpb24gVGltZQBNaSAzMSBNcnogMjAwNCAxMzoxMjowMyArMDEw
         MMDeTuIAAAAHdElNRQfUAx8LDyZTYb9TAAACW0lEQVQ4T82P20uTcRyHfxW+GZJCB4XI6qJCCJOQEuyk
@@ -1437,9 +1386,9 @@
         ub4XUduNVt+Fd8CBw+Ggt7eXroFBJWdC0WwoVmxK41XmdEuguHVUlN2XorRdipJ2mbKlVT59/EDv6OiQ
         bW1tsvXhI/1Ndqp8PW+afDFnmnymuKeJ8Sn7n06IX5LAyi1GnPlBAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="HungaryToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="HungaryToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAGkSURBVDhPrdPJLwNxFAfw10qIbaaddtSS1jJaRaK2uGnHxXYQRdLal8RFXZycLAkXwc12VSGk
         kVCM5X8oohpNowv/yPOmDkJom8b75ZOX/N739+Y08KMUKfoqJ6uBYYaDYbmrtKmh7BC9GeQKACSz5fl9
@@ -1450,9 +1399,9 @@
         wlGWe1pGdm3gBnhGXakvLBYr9GWisUIQzYJR1vaL+MxULojleoNYoisSeZYron+TjkIBSoUSMpTJKeUs
         dfkNAMAHIRghmqY2vjoAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="DutchToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="DutchToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAHASURBVDhPY8ACGKE0NoApF8wvwhDKKcAQwsXPGMYlyBTGJUAACzKB1IZy8DOGS8gyMMxS0Lx5
         ISL5/+nguP+nQ+P/nw4hgMFq4v5fCkv63ymhsJqhV07j7kEzl/+7zJ3/7zF3AWIQDcOuUAzjA+UtgGpN
@@ -1463,9 +1412,9 @@
         RZRvZvBrW/Ewb+fz/xkb7v1P33jvf+aGu3gxRM39/wV7Xv93zO3czsDLziwrwM1upauhYmWgrW5lqKOB
         F+trqVlpqSpa8XKwWvNzswtD8yQDAxMjI3GYCYIhgIEBAG1gKEKAXdGWAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="RussianToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="RussianToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAYlJREFUOE+l089L
         AkEUB/Axzd1FW3d3XHczLaNLBP2AtEDqov0BXcoO/R+7N/1vIoSM6OLZU4eCXYtu7Z/hCvZeb7RAxFJs
@@ -1476,9 +1425,9 @@
         UpZqHk+1Nnu6tt4HzgYO3ALZnI9DWWcdb8/TDyyb4TtbeatydLBTLRf3qiel/bO/lA93q8W97ermmlmh
         2sLwRcZisYgsyxFFUeYistFolJ4zY1/IqjLYvhPq4AAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="RomanianToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="RomanianToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
         MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACw8AAAsPAZL5A6UAAAGASURBVDhPpdNNKMNhAMfxscKi
         /Rl7ifDPlpeFGcbKmpdILLUNpTQtbho15YIoF69JuXFQcuJGLlIubtxc1d+KtZK2TK4/zzPz/PeYg+Wp
@@ -1489,9 +1438,9 @@
         x4pqXGnL5EC2MQB16yYHMR1HKjdxLgQtC5RnVU3jp7vrXM6ZuiQN3dKAQJiJ9gzRDd0qlISKKMgQ3Sh/
         /aJ/B8UnCw3aaZdrFPAAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="FinnishToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="FinnishToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAJSSURBVDhPjZPfS1NhGMffzTo7bkpZbGATnXMbBN1FaNnyzMggpabuIsrIUDAKvGl5MUb76ZyK
         dhFEeWcXNneRtuxM06vuvFgNbAw5Lu0HSPSD6B/49p6z15+coA98eM/z5TnPc+Dwkn1o/tMd/H4/CQaD
@@ -1505,9 +1454,9 @@
         FsFuswkOh81lt9tcdVary1Jbu6PVKlTX1Ahms1kwGo1CeXn5MeVGKndUoyFarZYqn0XlbL9K//YzIX8B
         pPVgFwuhR4UAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="EnglishToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="EnglishToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAshJREFUOE+dk2lI
         VFEcxe8MtmjT1MygmJOa5JJZjqamPs0NkkyhzI1cUFOxmSyXXLDJmtE0kVQMpTHCJXGJSq2Ximb6IRXU
@@ -1524,9 +1473,9 @@
         IWVhJ6Es7fdRNo5OlLXD2lixnaXEkTLbtYfibNrisZ4vFC1+qP8XIb8ACHcJYTF+4HgAAAAASUVORK5C
         YII=
 </value>
-  </data>
-  <data name="TaiwanToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="TaiwanToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAArVJREFUOE+dk1tI
         02EYxr8tu/Gc06zU1GaKkJaKB2ZgJw9Nk8xD07mJp3TmzKnFtLJUNFxRV9UoyoomiYelM4c6nbrEvFBT
@@ -1542,15 +1491,15 @@
         MsoVF6DsAFR8Ww2Zljt/Q+Mh4IU70OCx0XfiOWXL0+SJtmyOlhBLjtsuayeeh28gj+sXzPPyC6OEbo9/
         CM+Tety8j/KIpUO4hY0jx/Sh/r8I+QOCnPEGx/glywAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="LanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
-  </data>
-  <data name="LanguageToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="LanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>52, 20</value>
+	</data>
+	<data name="LanguageToolStripMenuItem.Text" xml:space="preserve">
     <value>Limba</value>
   </data>
-  <data name="OptionsToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="OptionsToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAvdJREFUOE99U3tT
         ElEc5SP4EfgIfQS/Qc40/tF/1NSfppNOVpOID9a3+ErElFVELV9oio+AFEkMXwskgWaCgohYXkVhUbHT
@@ -1567,15 +1516,15 @@
         tN5IjLofIr+2DcKee9mK9LtZhf/+DwJoeTg8ScAXCONZUTlXUFHvD+wRODajeFqlEQX+i+evFIrKutf+
         AmU1ycqXSx/lFtypVLMkh2n0Zz4puDy2a0gkvwHMFmrGa8qLdQAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="OptionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="OptionsToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="OptionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>152, 22</value>
+	</data>
+	<data name="OptionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Opţiuni</value>
   </data>
-  <data name="SearchForMachinesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="SearchForMachinesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAldJREFUOE+lk21P
         UmEcxvsIfgQ/AuMlr/gGaA8wtkrANTCUB2eUgBsYgpYm4DwUMrIa6Is6TGuVs6Q3NJsS2cYylxU+TQE9
@@ -1590,15 +1539,15 @@
         urziYDBY+g9omlZQFAWpVPp3yFlSq9UVELlc/n8QkUiU5h//m5RKpcJgMEAoFCp+AXfw3IBZQRsLAAAA
         AElFTkSuQmCC
 </value>
-  </data>
-  <data name="SearchForMachinesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="SearchForMachinesToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="SearchForMachinesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>152, 22</value>
+	</data>
+	<data name="SearchForMachinesToolStripMenuItem.Text" xml:space="preserve">
     <value>Caută maşinile</value>
   </data>
-  <data name="ScheduleToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="ScheduleToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAwBJREFUOE9dkUlM
         U1EUht8GEolimIs8URfulBBWhhUhwY0hMhqjBZGSwKIxboiQVKQtEgEJMyZO1Kq40GCCiRsTSAggQ+34
@@ -1615,99 +1564,90 @@
         yUTfh5mZGaytrbGn9fb2shvS4VHtkUEx193dHUaGN2g2m/cIAWJwMDExAZvNxqCGNNMnCYJwQDT7VEua
         3T09Pec5rVbLazSazK6urmLCQ0IFQUWoO4GaQM+ohmoztVptwh9IA6TxZD9caAAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="ScheduleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="ScheduleToolStripMenuItem.Text" xml:space="preserve">
+	</data>
+	<data name="ScheduleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>152, 22</value>
+	</data>
+	<data name="ScheduleToolStripMenuItem.Text" xml:space="preserve">
     <value>Programare</value>
   </data>
-  <data name="ListenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="ListenToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ListenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>152, 22</value>
+	</data>
+	<data name="ListenToolStripMenuItem.Text" xml:space="preserve">
     <value>Ascultător</value>
   </data>
-  <data name="ToolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 20</value>
-  </data>
-  <data name="ToolsToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ToolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>53, 20</value>
+	</data>
+	<data name="ToolsToolStripMenuItem.Text" xml:space="preserve">
     <value>Unelte</value>
   </data>
-  <data name="ContentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="ContentsToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ContentsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>167, 22</value>
+	</data>
+	<data name="ContentsToolStripMenuItem.Text" xml:space="preserve">
     <value>Conţinut</value>
   </data>
-  <data name="ToolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 6</value>
-  </data>
-  <data name="LicenseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="LicenseToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ToolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+		<value>164, 6</value>
+	</data>
+	<data name="LicenseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>167, 22</value>
+	</data>
+	<data name="LicenseToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Licenţă</value>
   </data>
-  <data name="AboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="AboutToolStripMenuItem.Text" xml:space="preserve">
+	<data name="AboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>167, 22</value>
+	</data>
+	<data name="AboutToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Despre...</value>
   </data>
-  <data name="HelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
-  </data>
-  <data name="HelpToolStripMenuItem.Text" xml:space="preserve">
+	<data name="HelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+		<value>52, 20</value>
+	</data>
+	<data name="HelpToolStripMenuItem.Text" xml:space="preserve">
     <value>Ajutor</value>
   </data>
-  <data name="MenuStrip.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ToolStripContainer.TopToolStripPanel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ToolStripMenuItemWakeUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="ToolStripMenuItemWakeUp.Text" xml:space="preserve">
+	<data name="ToolStripMenuItemWakeUp.Size" type="System.Drawing.Size, System.Drawing">
+		<value>181, 22</value>
+	</data>
+	<data name="ToolStripMenuItemWakeUp.Text" xml:space="preserve">
     <value>Trezeşte...</value>
   </data>
-  <data name="ContextToolStripMenuItemOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="ContextToolStripMenuItemOpen.Text" xml:space="preserve">
+	<data name="ContextToolStripMenuItemOpen.Size" type="System.Drawing.Size, System.Drawing">
+		<value>181, 22</value>
+	</data>
+	<data name="ContextToolStripMenuItemOpen.Text" xml:space="preserve">
     <value>Deschide programul</value>
   </data>
-  <data name="ContextToolStripMenuItemExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="ContextToolStripMenuItemExit.Text" xml:space="preserve">
+	<data name="ContextToolStripMenuItemExit.Size" type="System.Drawing.Size, System.Drawing">
+		<value>181, 22</value>
+	</data>
+	<data name="ContextToolStripMenuItemExit.Text" xml:space="preserve">
     <value>Ieşire</value>
   </data>
-  <data name="ContextMenuStripTray.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 70</value>
-  </data>
-  <data name="ContextMenuStripTray.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TileToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ContextMenuStripTray.Size" type="System.Drawing.Size, System.Drawing">
+		<value>182, 70</value>
+	</data>
+	<data name="TileToolStripMenuItem.Text" xml:space="preserve">
     <value>Simboluri complete</value>
   </data>
-  <data name="SmallIconsToolStripMenuItem.Text" xml:space="preserve">
+	<data name="SmallIconsToolStripMenuItem.Text" xml:space="preserve">
     <value>Simboluri mici</value>
   </data>
-  <data name="LargeIconsToolStripMenuItem.Text" xml:space="preserve">
+	<data name="LargeIconsToolStripMenuItem.Text" xml:space="preserve">
     <value>Simboluri mari</value>
   </data>
-  <data name="DetailsToolStripMenuItem.Text" xml:space="preserve">
+	<data name="DetailsToolStripMenuItem.Text" xml:space="preserve">
     <value>Detalii</value>
   </data>
-  <data name="ListToolStripMenuItem.Text" xml:space="preserve">
+	<data name="ListToolStripMenuItem.Text" xml:space="preserve">
     <value>Listă</value>
   </data>
-  <data name="NotifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	<data name="NotifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         AAABAAgAEBAAAAEAIABoBAAAhgAAABgYAAABACAAiAkAAO4EAAAgIAAAAQAgAKgQAAB2DgAAMDAAAAEA
         IACoJQAAHh8AAEBAAAABACAAKEIAAMZEAABISAAAAQAgAIhUAADuhgAAYGAAAAEAIAColAAAdtsAAICA
         AAABACAAKAgBAB5wAQAoAAAAEAAAACAAAAABACAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -4407,9 +4347,9 @@
         AAAAAP////////////4AAAAAAAP//////////////AAAAAAf///////////////4AAAA////////////
         //////AAB///////////////////////////////////////////////
 </value>
-  </data>
-  <data name="NotifyIconUpdate.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="NotifyIconUpdate.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAABILAAASCwAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -4573,9 +4513,9 @@
         AAAD/wAA/+AAAAf/AAD/+AAAH/8AAP/8AAA//wAA///AA///AAD///////8AAP///////wAA////////
         AAA=
 </value>
-  </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
+	</data>
+	<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+		<value>
         AAABAAgAEBAAAAEAIABoBAAAhgAAABgYAAABACAAiAkAAO4EAAAgIAAAAQAgAKgQAAB2DgAAMDAAAAEA
         IACoJQAAHh8AAEBAAAABACAAKEIAAMZEAABISAAAAQAgAIhUAADuhgAAYGAAAAEAIAColAAAdtsAAICA
         AAABACAAKAgBAB5wAQAoAAAAEAAAACAAAAABACAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -7275,5 +7215,8 @@
         AAAAAP////////////4AAAAAAAP//////////////AAAAAAf///////////////4AAAA////////////
         //////AAB///////////////////////////////////////////////
 </value>
-  </data>
+	</data>
+	<data name="OptionsToolStripButton.Text" xml:space="preserve">
+		<value>Opţiuni</value>
+	</data>
 </root>

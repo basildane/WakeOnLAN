@@ -490,8 +490,68 @@
   <data name="OKButton.Text" xml:space="preserve">
     <value>確定</value>
   </data>
+  <data name="lAutomaticUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 16</value>
+  </data>
+  <data name="lAutomaticUpdate.Text" xml:space="preserve">
+    <value>自動更新</value>
+  </data>
+  <data name="GroupBoxUpdates.Text" xml:space="preserve">
+    <value>線上更新</value>
+  </data>
   <data name="TextBoxDescription.Text" xml:space="preserve">
     <value>透過網路卡發送封包喚醒遠端電腦或遠端電腦關機，在緊急狀況下可在區域網路執行全面性的電腦關機。</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Aquila WOL 首頁</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 13</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Aquila 技術支援首頁</value>
+  </data>
+  <data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 43</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="bDonate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhXAAaAIcPAP/x2//9+P7mtP+vM/+sLf7kr/7gpf7hqv7fof7ShP+xOP+zPUBRVv61Qr65oM8L
+        AhA+a3+Ddb6qfEBedYBvR/63SGB0fL+OOxA+ahA6Yu7br56fkDBUc6+FOyBKcc6/lq6qlf/CZSBJbe+n
+        Ns7AnSBDYDBKW56hlDBRbFBZVH+KiL61lf66TXCBhv/HaiBJb/61Q56knmB0fv++Wo6VjP+pJp6fjf/c
+        qI6Uid+fOWBvcXBoTSBJbiBCXn+JhEBbbt7Qqu7euv/nw/+2R0BRWI6Md8+YPY6Th/+0Qc+UNCBHar+Q
+        QI92Q++jLEBgeyBCX//Uk2B1gH+Mi/+9Wu7Vof+tL//Eat+bMP+yO//js/7Oe/7NenCCi/+2Q/7OgP+6
+        T//is1Brfv7RhP/y3b60kv7cmv+5S/7ZlO7Und7LoWB2gRA7Yv+/V56WeXBnS87Fqv/Nf/7Zl66qkX+N
+        kP7HbP6zPb61mWBgT//gro95SXB/gv/Jb//cp//v1H+Ok//Pg86/md7Opv/owv/26EBedmBhUXB/gP7B
+        X+7Zqv7Mef7CYf7CYkBfd//z3/68Uv/Gb0BSWRA7Y1Blb/+qKf66Tv/qx+7Wps+VOP7gqHB5c4BwSVBp
+        eq6smK6unN7Knf7Pfa+IQ/+4Sv/hss7EpUBgev+uMZ+ARp99P//qw1Bqe6+GP/7DZFBrgJ9+QnB/hP7d
+        n7+MOP7NfY6Wj/7nuv7pwP/57v/lvf/Znv/25f/NgP/y2//v0v/BYf/syP+1Qv+qKAAzZswAAP+ZMwAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAPACwAAAAAXAAaAAAI/wAfCBw4UJjBgwgTKlzIsKHDhwwJ
+        Spz4QFgIPmMCaNzIsaPHjyBDihzJcZCoR8IoShRmpU+tlzBjypxJs6bNmzhvNoKTUqUwPLiCCh1KtKjR
+        o0iTKl0aVFDPlWB0SZ1KtarVq1izat3KlWqlpwKF/dlFtqzZs2jTql3Ltq1btFnAlkLVq67du3jz6t3L
+        t6/fv3q/FFxEq7Dhw4gPxwDGGJgHP0ESS55MmVaQGJUzI/bSk8CqWaBDix4tmotjJ04gAGNFurXr1288
+        zHlNu3UsAhWxOMIkoLfv38B9kwLmoDcQ1aN+O3CgIbgADQ6AAF/e3HcYYJ18Qy/uvPvvQ3UMwv9gQaeA
+        +fPo059njOh8C2CyzJ9QzbjFemBS6HOSTx/YCfP9qVFAfoy9EIh6CKInBgswGFTBg4kcIOGEFFZ4AAnA
+        vEChCsCocMAGwGCwAQgcALPBhYxxAEIUwDBygCUhgkBDiAek4QpjKpAwIwd2sJiKhUBOGAclDxrUwJEN
+        KPKKAUw26aSTOAAjg5N6AIODATwAswKTcgCziQE2AMMDFWBK+SQgjDG5AjCEMIkBMJ4YQEWaT9bZ5BZI
+        NmDQAnzy2cUeZyAg6KCECmoBMEcQKgIwH3wAjAiDkgHMBAgc6oOhiCKAhgWLMkYpAj4AYwgCjk46wQSM
+        FaoqAmVoEUqffBr/pMCstM5qhgufJKDrrruiAIwEuxYBjBIJSADMD8ECo0MCvgLL7K8J/ACMJBJEAEwm
+        uuoATBvFDhvBt9/yKm4CLrBRa60GVTHAuuy26267jK07Qh6MLTFADsCUMMIAI0QCjL3xrhtwwJAAY8q6
+        JQBjxL35rmsEKO9GHHEVBv1CwMUYZ6wxxhc05nErGBMBjAmaPAFMIQR0bMLFKl9scgopMHbBxYztoAoB
+        MROxwxrAXLLxzxtPkpIwvxRt9NFIG90BA0wzTcEVRzfhRgbA9EBB0UszgTUDWv8CSw8ZUEABA0kUTQHV
+        p/zSxB1Uk53022/3JEwNcNdt991456133TU8jyWML4AHLvjghBdu+OGIJ6644WAJgwQvkEcu+eSUV275
+        5ZhnrjnlSIBV0Qy5hC766KSXbvrpqKeu+uqjz+B5WCHcIvvstNdu++2456777rzLHsLrBQ1xgy3EF2/8
+        8cgnr/zyzDfP/A1DAL/SFFAIAcD12Gev/fbcd+/99+BnLwQUU0jvE0Top6/++gep9EBAADs=
+</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

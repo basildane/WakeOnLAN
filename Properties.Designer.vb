@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Imports WakeOnLan.Controls
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Properties
     Inherits System.Windows.Forms.Form
 
@@ -42,21 +44,21 @@ Partial Class Properties
         Me.lbUDP = New System.Windows.Forms.Label()
         Me.lbSendTo = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.IP = New WakeOnLan.IPAddressControl()
-        Me.MachineName = New WakeOnLan.RegExTextBox()
-        Me.MAC = New WakeOnLan.RegExTextBox()
-        Me.TTL = New WakeOnLan.RegExTextBox()
-        Me.Broadcast = New WakeOnLan.IPAddressControl()
-        Me.UDPPort = New WakeOnLan.RegExTextBox()
+        Me.IP = New WakeOnLan.Controls.IpAddressControl()
+        Me.MachineName = New WakeOnLan.Controls.RegExTextBox()
+        Me.MAC = New WakeOnLan.Controls.RegExTextBox()
+        Me.TTL = New WakeOnLan.Controls.RegExTextBox()
+        Me.Broadcast = New WakeOnLan.Controls.IpAddressControl()
+        Me.UDPPort = New WakeOnLan.Controls.RegExTextBox()
         Me.bCalcBroadcast = New System.Windows.Forms.Button()
         Me.Help_Button = New System.Windows.Forms.Button()
         Me.rbIP = New System.Windows.Forms.RadioButton()
         Me.rbURI = New System.Windows.Forms.RadioButton()
         Me.ComboBoxAdapters = New System.Windows.Forms.ComboBox()
         Me.LabelInterfaces = New System.Windows.Forms.Label()
-        Me.tRDPPort = New WakeOnLan.RegExTextBox()
+        Me.tRDPPort = New WakeOnLan.Controls.RegExTextBox()
         Me.gWakeUp = New System.Windows.Forms.GroupBox()
-        Me.tHostURI = New WakeOnLan.RegExTextBox()
+        Me.tHostURI = New WakeOnLan.Controls.RegExTextBox()
         Me.gShutdown = New System.Windows.Forms.GroupBox()
         Me.gDisplay = New System.Windows.Forms.GroupBox()
         Me.gStatus = New System.Windows.Forms.GroupBox()
@@ -530,30 +532,30 @@ Partial Class Properties
     Friend WithEvents Group As System.Windows.Forms.TextBox
     Friend WithEvents lbGroup As System.Windows.Forms.Label
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
-    Friend WithEvents MAC As WakeOnLan.RegExTextBox
-    Friend WithEvents MachineName As WakeOnLan.RegExTextBox
+    Friend WithEvents MAC As RegExTextBox
+    Friend WithEvents MachineName As RegExTextBox
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
-    Friend WithEvents IP As WakeOnLan.IPAddressControl
-    Friend WithEvents Broadcast As WakeOnLan.IPAddressControl
+    Friend WithEvents IP As IPAddressControl
+    Friend WithEvents Broadcast As IPAddressControl
     Friend WithEvents lbBroadcast As System.Windows.Forms.Label
     Friend WithEvents bCalcBroadcast As System.Windows.Forms.Button
     Friend WithEvents Help_Button As System.Windows.Forms.Button
     Friend WithEvents lbUDP As System.Windows.Forms.Label
     Friend WithEvents lbTTL As System.Windows.Forms.Label
-    Friend WithEvents TTL As WakeOnLan.RegExTextBox
-    Friend WithEvents UDPPort As WakeOnLan.RegExTextBox
+    Friend WithEvents TTL As RegExTextBox
+    Friend WithEvents UDPPort As RegExTextBox
     Friend WithEvents lbSendTo As System.Windows.Forms.Label
     Friend WithEvents rbURI As System.Windows.Forms.RadioButton
     Friend WithEvents rbIP As System.Windows.Forms.RadioButton
     Friend WithEvents ComboBoxAdapters As System.Windows.Forms.ComboBox
     Friend WithEvents LabelInterfaces As System.Windows.Forms.Label
-    Friend WithEvents tHostURI As WakeOnLan.RegExTextBox
+    Friend WithEvents tHostURI As RegExTextBox
     Friend WithEvents gWakeUp As System.Windows.Forms.GroupBox
     Friend WithEvents gShutdown As System.Windows.Forms.GroupBox
     Friend WithEvents gDisplay As System.Windows.Forms.GroupBox
     Friend WithEvents gStatus As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents tRDPPort As WakeOnLan.RegExTextBox
+    Friend WithEvents tRDPPort As RegExTextBox
     Friend WithEvents lbRDPPort As System.Windows.Forms.Label
     Friend WithEvents lbRemoteDesktop As System.Windows.Forms.Label
     Friend WithEvents lbLeaveBlank As System.Windows.Forms.Label

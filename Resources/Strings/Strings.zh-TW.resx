@@ -118,7 +118,7 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="AbortSuccess" xml:space="preserve">
-    <value>成功取消 {0}</value>
+    <value>成功停止主機關機： {0}</value>
     <comment>Abort {machine} successful</comment>
   </data>
 	<data name="AbortingShutdown" xml:space="preserve">
@@ -126,7 +126,7 @@
     <comment>Aborting shutdown command on {0}</comment>
   </data>
 	<data name="ChangesLost" xml:space="preserve">
-    <value>你的設定會遺失</value>
+    <value>您的變更會遺失</value>
     <comment>Your changes will be lost.</comment>
   </data>
 	<data name="ChangesNotSaved" xml:space="preserve">
@@ -134,15 +134,15 @@
     <comment>Changes have not been saved</comment>
   </data>
 	<data name="EmergencyShutdown" xml:space="preserve">
-    <value>緊急關閉開始</value>
+    <value>開始緊急關機</value>
     <comment>Emergency shutdown started</comment>
   </data>
 	<data name="ExportedTo" xml:space="preserve">
-    <value>設定端口 [{0}]</value>
+    <value>設定Port [{0}]</value>
     <comment>Settings were exported to {0}</comment>
   </data>
 	<data name="HostNotResponding" xml:space="preserve">
-    <value>主機{0}沒有回應</value>
+    <value>主機 {0} 沒有回應</value>
     <comment>Host not responding</comment>
   </data>
 	<data name="ImmediateReboot" xml:space="preserve">
@@ -154,7 +154,7 @@
     <comment>This will IMMEDIATELY shutdown THIS machine.  Are you sure?</comment>
   </data>
 	<data name="ImportedFrom" xml:space="preserve">
-    <value>設定端口從{0}</value>
+    <value>設定Port從 {0}</value>
     <comment>Settings were imported from {0}</comment>
   </data>
 	<data name="OffLine" xml:space="preserve">
@@ -214,7 +214,7 @@
     <comment>Abort {machine} Error: {error message}</comment>
   </data>
 	<data name="AreYouSure" xml:space="preserve">
-    <value>你確定嗎?</value>
+    <value>您確定要刪除主機嗎?</value>
     <comment>Are you sure?</comment>
   </data>
 	<data name="Delete" xml:space="preserve">
@@ -230,7 +230,7 @@
     <comment>Properties - {0}</comment>
   </data>
 	<data name="AllMachines" xml:space="preserve">
-    <value>全部電腦群</value>
+    <value>電腦群組</value>
     <comment>All machines</comment>
   </data>
 	<data name="Aborting" xml:space="preserve">
@@ -242,7 +242,7 @@
     <comment>Abort Shutdown in progress...</comment>
   </data>
 	<data name="BeginShutdown" xml:space="preserve">
-    <value>開始中止</value>
+    <value>開始停止</value>
     <comment>Begin shutdown...</comment>
   </data>
 	<data name="Pausing" xml:space="preserve">
@@ -313,7 +313,7 @@
 		<value>啟動全部電腦</value>
 	</data>
 	<data name="lit_Unknown" xml:space="preserve">
-		<value>未知</value>
+		<value>未知!</value>
 	</data>
 	<data name="lit_at" xml:space="preserve">
 		<value>在 {0} 開啟 {1}</value>
@@ -361,9 +361,42 @@
 		<value>正在運作</value>
 	</data>
 	<data name="lit_false" xml:space="preserve">
-		<value>錯誤的</value>
+		<value>False</value>
 	</data>
 	<data name="lit_true" xml:space="preserve">
-		<value>真的</value>
+		<value>True</value>
+	</data>
+	<data name="actions_hibernate" xml:space="preserve">
+		<value>主機休眠</value>
+	</data>
+	<data name="actions_hibernateAll" xml:space="preserve">
+		<value>所有主機休眠</value>
+	</data>
+	<data name="actions_sleep" xml:space="preserve">
+		<value>主機睡眠</value>
+	</data>
+	<data name="actions_sleepAll" xml:space="preserve">
+		<value>所有主機睡眠</value>
+	</data>
+	<data name="interfaceInfo" xml:space="preserve">
+		<value>關於IPV4的訊息 {0}.{1}</value>
+	</data>
+	<data name="useDefault" xml:space="preserve">
+		<value>使用預設</value>
+	</data>
+	<data name="triggerDaily" xml:space="preserve">
+		<value>每日</value>
+	</data>
+	<data name="triggerMonthly" xml:space="preserve">
+		<value>每月</value>
+	</data>
+	<data name="triggerOneTime" xml:space="preserve">
+		<value>一次性</value>
+	</data>
+	<data name="triggerWeekly" xml:space="preserve">
+		<value>每周</value>
+	</data>
+	<data name="errUserID" xml:space="preserve">
+		<value>您必須設定一組帳號密碼來執行排程</value>
 	</data>
 </root>

@@ -118,17 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ColumnHeader1.Text" xml:space="preserve">
-    <value>機器名稱</value>
+    <value>主機名稱</value>
   </data>
   <data name="ColumnHeader2.Text" xml:space="preserve">
     <value>狀態</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Label_Operation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
+    <value>124, 24</value>
   </data>
   <data name="Label_Operation.Text" xml:space="preserve">
-    <value>準備中止</value>
+    <value>準備停止關機</value>
   </data>
   <data name="AbortButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -178,7 +178,7 @@
 </value>
   </data>
   <data name="AbortButton.Text" xml:space="preserve">
-    <value>關於中止</value>
+    <value>停止關機</value>
   </data>
   <data name="ShutdownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -233,16 +233,28 @@
 </value>
   </data>
   <data name="ShutdownButton.Text" xml:space="preserve">
-    <value>中止</value>
+    <value>關機</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>取消</value>
+  </data>
+  <data name="rbHibernate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="rbHibernate.Text" xml:space="preserve">
+    <value>休眠</value>
+  </data>
+  <data name="rbSleep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="rbSleep.Text" xml:space="preserve">
+    <value>睡眠</value>
   </data>
   <data name="rbShutdown.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 17</value>
   </data>
   <data name="rbShutdown.Text" xml:space="preserve">
-    <value>中止</value>
+    <value>關機</value>
   </data>
   <data name="shut_reboot.Text" xml:space="preserve">
     <value>重新啟動後關機</value>
@@ -250,11 +262,17 @@
   <data name="shut_force.Text" xml:space="preserve">
     <value>強制關閉應用程式</value>
   </data>
+  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 110</value>
+  </data>
   <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="Label15.Text" xml:space="preserve">
     <value>重新啟動</value>
+  </data>
+  <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 80</value>
   </data>
   <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -263,13 +281,23 @@
     <value>強制</value>
   </data>
   <data name="Label_Message.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 26</value>
+    <value>62, 26</value>
   </data>
   <data name="Label_Message.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="Label_Message.Text" xml:space="preserve">
     <value>顯示訊息</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label_Timeout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_Timeout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 52</value>
+  </data>
+  <data name="Label_Timeout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
   </data>
   <data name="Label_Timeout.Text" xml:space="preserve">
     <value>等候逾時 (秒)</value>
@@ -458,6 +486,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>中止</value>
+    <value>關機</value>
   </data>
 </root>

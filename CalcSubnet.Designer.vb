@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Imports WakeOnLan.Controls
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class CalcSubnet
     Inherits System.Windows.Forms.Form
 
@@ -25,9 +27,9 @@ Partial Class CalcSubnet
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CalcSubnet))
         Me.bCalculate = New System.Windows.Forms.Button()
         Me.bOK = New System.Windows.Forms.Button()
-        Me.IpBroadcast = New WakeOnLan.IPAddressControl()
-        Me.IpSubnet = New WakeOnLan.IPAddressControl()
-        Me.IpIP = New WakeOnLan.IPAddressControl()
+        Me.IpBroadcast = New IPAddressControl()
+        Me.IpSubnet = New IPAddressControl()
+        Me.IpIP = New IPAddressControl()
         Me.lIP = New System.Windows.Forms.Label()
         Me.lSubnet = New System.Windows.Forms.Label()
         Me.lRecommended = New System.Windows.Forms.Label()
@@ -102,9 +104,9 @@ Partial Class CalcSubnet
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents IpIP As WakeOnLan.IPAddressControl
-    Friend WithEvents IpSubnet As WakeOnLan.IPAddressControl
-    Friend WithEvents IpBroadcast As WakeOnLan.IPAddressControl
+    Friend WithEvents IpIP As IPAddressControl
+    Friend WithEvents IpSubnet As IPAddressControl
+    Friend WithEvents IpBroadcast As IPAddressControl
     Friend WithEvents bCalculate As System.Windows.Forms.Button
     Friend WithEvents bOK As System.Windows.Forms.Button
     Friend WithEvents lIP As System.Windows.Forms.Label

@@ -1,3 +1,5 @@
+'Namespace OptionProperties
+
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Options
     Inherits System.Windows.Forms.Form
@@ -82,3 +84,4 @@ Partial Class Options
     Friend WithEvents Button_Default As System.Windows.Forms.Button
 
 End Class
+'End Namespace

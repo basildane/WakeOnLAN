@@ -122,7 +122,7 @@
     <comment>Broadcast Address</comment>
   </data>
 	<data name="Broadcast_AddressDescription" xml:space="preserve">
-    <value>進入廣播IP地址的網絡喚醒廣播數據包。</value>
+    <value>進入廣播IP地址的網路喚醒廣播數據包。</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
 	<data name="cat_Emergency" xml:space="preserve">
@@ -134,7 +134,7 @@
     <comment>Shutdown</comment>
   </data>
 	<data name="cat_WOL" xml:space="preserve">
-    <value>網絡喚醒</value>
+    <value>網路喚醒</value>
     <comment>WOL</comment>
   </data>
 	<data name="Delay" xml:space="preserve">
@@ -154,7 +154,7 @@
     <comment>The time delay for emergency shutdowns.</comment>
   </data>
 	<data name="EmergencyShutdown" xml:space="preserve">
-    <value>默認郵件</value>
+    <value>預設訊息</value>
     <comment>Default Message</comment>
   </data>
 	<data name="EmergencyShutdownDescription" xml:space="preserve">
@@ -162,11 +162,11 @@
     <comment>The emergency shutdown message.</comment>
   </data>
 	<data name="Enable_Sound" xml:space="preserve">
-    <value>使無害</value>
+    <value>開啟聲音</value>
     <comment>Enable sound</comment>
   </data>
 	<data name="Enable_SoundDescription" xml:space="preserve">
-    <value>播放聲音時，監測服務器變為連線狀態，或停止響應。</value>
+    <value>播放聲音時，主機為連線狀態或停止回應。</value>
     <comment>Play a sound when a monitored server comes online, or stops responding.</comment>
   </data>
 	<data name="Force" xml:space="preserve">
@@ -174,7 +174,7 @@
     <comment>Force shutdown</comment>
   </data>
 	<data name="ForceDescription" xml:space="preserve">
-    <value>強制遠程服務器關閉。未保存的文件都將丟失。</value>
+    <value>強制遠程服務器關閉。未保存的文件都將遺失。</value>
     <comment>Force remote server to shutdown.  Unsaved files will be lost.</comment>
   </data>
 	<data name="Reboot" xml:space="preserve">
@@ -186,7 +186,7 @@
     <comment>If true, then reboot after shutdown.</comment>
   </data>
 	<data name="Shutdown" xml:space="preserve">
-    <value>默認郵件</value>
+    <value>預設訊息</value>
     <comment>Default Message</comment>
   </data>
 	<data name="ShutdownDescription" xml:space="preserve">
@@ -220,7 +220,7 @@
 		<value>語言</value>
 	</data>
 	<data name="dbPath" xml:space="preserve">
-		<value>數據路徑</value>
+		<value>參數路徑</value>
 	</data>
 	<data name="AutoCheck" xml:space="preserve">
 		<value>自動檢查更新</value>

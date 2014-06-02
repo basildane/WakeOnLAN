@@ -19,11 +19,11 @@
 Imports Microsoft.Win32
 
 Public Class Autorun
-    Dim CU As Microsoft.Win32.RegistryKey = Registry.CurrentUser.CreateSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run")
+    ReadOnly _currentUser As Microsoft.Win32.RegistryKey = Registry.CurrentUser.CreateSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run")
 
-    Property autorun As Boolean
+    Property AutoRun As Boolean
         Get
-            With CU
+            With _currentUser
                 .OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", False)
                 If (.GetValue(My.Application.Info.ProductName, "", RegistryValueOptions.None) = "") Then
                     Return False
@@ -34,7 +34,7 @@ Public Class Autorun
         End Get
 
         Set(value As Boolean)
-            With CU
+            With _currentUser
                 .OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True)
                 If (value) Then
                     .SetValue(My.Application.Info.ProductName, """" & Application.ExecutablePath & """" & " /min")

@@ -18,15 +18,13 @@
 
 Imports System.Net
 Imports System.Net.Sockets
-Imports System.Text
 
 Public Class Listener
-    Private gso As New StateObject
+    Private ReadOnly _gso As New StateObject
     Private Delegate Sub HitDelegate(ByVal ip As String)
-    Private showHit As New HitDelegate(AddressOf hit)
-    Private hitShown As Boolean = False
+    Private ReadOnly _showHit As New HitDelegate(AddressOf hit)
 
-    Private Sub Listener_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+    Private Sub Listener_Load(sender As System.Object, e As EventArgs) Handles MyBase.Load
         ListView1.Items.Clear()
     End Sub
 
@@ -34,31 +32,31 @@ Public Class Listener
         ReceiveMessages()
     End Sub
 
-    Private Sub Listener_FormClosing(sender As System.Object, e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
-        gso.Socket.Close()
+    Private Sub Listener_FormClosing(sender As System.Object, e As Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        _gso.Socket.Close()
     End Sub
 
     Private Sub ReceiveMessages()
         Try
-            gso.EndPoint = New IPEndPoint(IPAddress.Any, 9)
-            gso.Socket = New Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp)
-            gso.Socket.EnableBroadcast = True
+            _gso.EndPoint = New IPEndPoint(IPAddress.Any, 9)
+            _gso.Socket = New Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp)
+            _gso.Socket.EnableBroadcast = True
 
-            gso.Socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, True)
-            gso.Socket.ExclusiveAddressUse = False
+            _gso.Socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, True)
+            _gso.Socket.ExclusiveAddressUse = False
 
-            gso.Socket.Bind(gso.EndPoint)
-            gso.Socket.BeginReceiveFrom(gso.Buffer, 0, gso.Buffer.Length, SocketFlags.None, gso.EndPoint, New AsyncCallback(AddressOf Async_Send_Receive), gso)
+            _gso.Socket.Bind(_gso.EndPoint)
+            _gso.Socket.BeginReceiveFrom(_gso.Buffer, 0, _gso.Buffer.Length, SocketFlags.None, _gso.EndPoint, New AsyncCallback(AddressOf Async_Send_Receive), _gso)
 
         Catch ex As Exception
             ' Handle the HelpRequested event for the following message.
-            AddHandler Me.HelpRequested, AddressOf Me.Listener_HelpRequested
+            AddHandler HelpRequested, AddressOf Listener_HelpRequested
 
             MessageBox.Show(ex.Message & "." & vbCrLf & "Click HELP for advice on fixing this.", "ReceiveMessages", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, 0, True)
 
             ' Remove the HelpRequested event handler to keep the event
             ' from being handled for other message boxes.
-            RemoveHandler Me.HelpRequested, AddressOf Me.Listener_HelpRequested
+            RemoveHandler HelpRequested, AddressOf Listener_HelpRequested
 
         End Try
     End Sub
@@ -85,10 +83,10 @@ Public Class Listener
         End Try
     End Sub
 
-    Private Sub hit(MAC As String)
+    Private Sub Hit(mac As String)
         Try
             If (ListView1.InvokeRequired) Then
-                ListView1.Invoke(showHit, MAC)
+                ListView1.Invoke(_showHit, MAC)
             Else
                 Dim li As New ListViewItem
                 Dim n As String = ""
@@ -127,13 +125,12 @@ Public Class Listener
     End Sub
 
     Private Function compareMAC(mac1 As String, mac2 As String) As Int32
-        Dim _mac1, _mac2 As String
 
         Try
-            _mac1 = Replace(mac1, ":", "")
+            Dim _mac1 As String = Replace(mac1, ":", "")
             _mac1 = Replace(_mac1, "-", "")
 
-            _mac2 = Replace(mac2, ":", "")
+            Dim _mac2 As String = Replace(mac2, ":", "")
             _mac2 = Replace(_mac2, "-", "")
 
             Return StrComp(_mac1, _mac2, CompareMethod.Text)
@@ -182,12 +179,12 @@ Public Class Listener
         End Try
     End Function
 
-    Private Sub Button_clear_Click(sender As System.Object, e As System.EventArgs) Handles Button_clear.Click
+    Private Sub Button_clear_Click(sender As System.Object, e As EventArgs) Handles Button_clear.Click
         ListView1.Items.Clear()
     End Sub
 
     Private Sub Listener_HelpRequested(sender As Object, hlpevent As HelpEventArgs)
-        Globals.ShowHelp(Me, "troubleshooting\listener.html")
+        ShowHelp(Me, "troubleshooting\listener.html")
     End Sub
 
 End Class

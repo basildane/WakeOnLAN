@@ -16,10 +16,8 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
-Imports WOL.AquilaWOLLibrary
-
 Module Wake
-    Public Sub WakeUp(ByVal machine As Machine, ByVal Adapter As String)
+    Public Sub WakeUp(ByVal machine As Machine, ByVal adapter As String)
         Dim host As String
 
         Try
@@ -31,7 +29,7 @@ Module Wake
             If String.IsNullOrEmpty(Adapter) Then
                 Adapter = machine.Adapter
             End If
-            WOL.AquilaWOLLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, Adapter)
+            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, Adapter)
 
         Catch ex As Exception
             Console.WriteLine(ex.InnerException)
@@ -40,8 +38,8 @@ Module Wake
 
     End Sub
 
-    Public Sub WakeUp(ByVal MAC As String, ByVal Adapter As String)
-        WOL.AquilaWOLLibrary.WakeUp(MAC, Adapter:=Adapter)
+    Public Sub WakeUp(ByVal mac As String, ByVal adapter As String)
+        WOL.AquilaWolLibrary.WakeUp(MAC, adapter:=adapter)
     End Sub
 
 End Module

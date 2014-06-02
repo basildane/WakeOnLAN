@@ -1,90 +1,110 @@
-﻿' Copyright (c) Microsoft Corporation. All rights reserved.
+﻿'    WakeOnLAN - Wake On LAN
+'    Copyright (C) 2004-2014 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'
+'    This file is part of WakeOnLAN.
+'
+'    WakeOnLAN is free software: you can redistribute it and/or modify
+'    it under the terms of the GNU General Public License as published by
+'    the Free Software Foundation, either version 3 of the License, or
+'    (at your option) any later version.
+'
+'    WakeOnLAN is distributed in the hope that it will be useful,
+'    but WITHOUT ANY WARRANTY; without even the implied warranty of
+'    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+'    GNU General Public License for more details.
+'
+'    You should have received a copy of the GNU General Public License
+'    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
+
 Imports System.Text.RegularExpressions
 
-Public Class RegExTextBox
-    Inherits System.Windows.Forms.TextBox
+Namespace Controls
 
-    ' String representation of the RegEx that will be used to 
-    ' validate the text in the TextBox.  This is needed because
-    ' the property needs to be exposed as a string to be set
-    ' at design time.
-    Protected validationPattern As String
+    Public Class RegExTextBox
+        Inherits Windows.Forms.TextBox
 
-    ' Message that should be available if the text does not 
-    ' match the pattern.
-    Protected mErrorMessage As String
+        ' String representation of the RegEx that will be used to 
+        ' validate the text in the TextBox.  This is needed because
+        ' the property needs to be exposed as a string to be set
+        ' at design time.
+        Private _validationPattern As String
 
-    ' RegEx object that's used to perform the validation.
-    Protected mValidationExpression As Regex
+        ' Message that should be available if the text does not 
+        ' match the pattern.
+        Private _errorMessage As String
 
-    ' Default color to use if the text in the TextBox is not
-    ' valid.
-    Protected mErrorColor As Color = Color.Red
+        ' RegEx object that's used to perform the validation.
+        Private _validationExpression As Regex
 
-    ' Allow the developer to set the error message
-    ' at design time or run time.
-    Public Property ErrorMessage() As String
-        Get
-            Return mErrorMessage
-        End Get
-        Set(ByVal Value As String)
-            mErrorMessage = Value
-        End Set
-    End Property
+        ' Default color to use if the text in the TextBox is not
+        ' valid.
+        Private _errorColor As Color = Color.Red
 
-    ' If the TextBox text does not match the RegEx, then it
-    ' will be changed to this color.
-    Public Property ErrorColor() As Color
-        Get
-            Return mErrorColor
-        End Get
-        Set(ByVal Value As Color)
-            mErrorColor = Value
-        End Set
-    End Property
+        ' Allow the developer to set the error message
+        ' at design time or run time.
+        Public Property ErrorMessage() As String
+            Get
+                Return _errorMessage
+            End Get
+            Set(ByVal value As String)
+                _errorMessage = Value
+            End Set
+        End Property
 
-    ' Let's the developer determine if the text in the TextBox
-    ' is valid.
-    Public ReadOnly Property IsValid() As Boolean
-        Get
-            If Not mValidationExpression Is Nothing Then
-                Return mValidationExpression.IsMatch(Me.Text)
+        ' If the TextBox text does not match the RegEx, then it
+        ' will be changed to this color.
+        Public Property ErrorColor() As Color
+            Get
+                Return _errorColor
+            End Get
+            Set(ByVal value As Color)
+                _errorColor = Value
+            End Set
+        End Property
+
+        ' Let's the developer determine if the text in the TextBox
+        ' is valid.
+        Public ReadOnly Property IsValid() As Boolean
+            Get
+                If Not _validationExpression Is Nothing Then
+                    Return _validationExpression.IsMatch(Text)
+                Else
+                    Return True
+                End If
+            End Get
+        End Property
+
+        ' Lets the developer specify the regular expression (as
+        ' a string) that will be used to validate the text in the
+        ' TextBox.  It's important that this be setable as a string
+        ' (vs. a RegEx object) so that the developer can specify 
+        ' the RegEx pattern using the properties window.
+        Public Property ValidationExpression() As String
+            Get
+                Return _validationPattern
+            End Get
+            Set(ByVal value As String)
+                _validationExpression = New Regex(Value)
+                _validationPattern = Value
+            End Set
+        End Property
+
+        ' If the text does not match the RegEx, then change the
+        ' color of the text to the ErrorColor.  If it does match
+        ' then make sure it's displayed using the default color.
+        Protected Overrides Sub OnValidated(ByVal e As EventArgs)
+            If Not IsValid Then
+                ForeColor = _errorColor
             Else
-                Return True
+                ForeColor = DefaultForeColor
             End If
-        End Get
-    End Property
 
-    ' Lets the developer specify the regular expression (as
-    ' a string) that will be used to validate the text in the
-    ' TextBox.  It's important that this be setable as a string
-    ' (vs. a RegEx object) so that the developer can specify 
-    ' the RegEx pattern using the properties window.
-    Public Property ValidationExpression() As String
-        Get
-            Return validationPattern
-        End Get
-        Set(ByVal Value As String)
-            mValidationExpression = New Regex(Value)
-            validationPattern = Value
-        End Set
-    End Property
+            ' Any time you inherit a control, and override one of
+            ' the On... subs, it's critical that you call the On...
+            ' method of the base class, or the control won't fire
+            ' events like it's supposed to.
+            MyBase.OnValidated(e)
+        End Sub
 
-    ' If the text does not match the RegEx, then change the
-    ' color of the text to the ErrorColor.  If it does match
-    ' then make sure it's displayed using the default color.
-    Protected Overrides Sub OnValidated(ByVal e As System.EventArgs)
-        If Not Me.IsValid Then
-            Me.ForeColor = mErrorColor
-        Else
-            Me.ForeColor = DefaultForeColor
-        End If
-
-        ' Any time you inherit a control, and override one of
-        ' the On... subs, it's critical that you call the On...
-        ' method of the base class, or the control won't fire
-        ' events like it's supposed to.
-        MyBase.OnValidated(e)
-    End Sub
-
-End Class
+    End Class
+End Namespace

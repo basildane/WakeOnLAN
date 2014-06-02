@@ -17,349 +17,349 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports TaskScheduler
-Imports System.Security.AccessControl
-Imports System.Security.Principal
 
-Public Class Schedule
-    Dim scheduler As TaskScheduler.TaskScheduler
-    Dim taskFolder As ITaskFolder
+Namespace Schedule
 
-    Private Sub Schedule_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Location = My.Settings.schedulerWindowLocation
-        Me.Size = My.Settings.schedulerWindowSize
+    Public Class Schedule
+        Dim _scheduler As TaskScheduler.TaskScheduler
+        Dim _taskFolder As ITaskFolder
 
-        GetListViewState(ListViewSchedule, My.Settings.schedulerColumns)
+        Private Sub Schedule_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+            Location = My.Settings.schedulerWindowLocation
+            Size = My.Settings.schedulerWindowSize
 
-        scheduler = New TaskScheduler.TaskScheduler
-        scheduler.Connect()
+            GetListViewState(ListViewSchedule, My.Settings.schedulerColumns)
 
-        taskFolder = scheduler.GetFolder("\")
-        Try
-            taskFolder = taskFolder.GetFolder("Aquila Technology")
+            _scheduler = New TaskScheduler.TaskScheduler
+            _scheduler.Connect()
 
-        Catch ex As Exception
-            taskFolder = taskFolder.CreateFolder("Aquila Technology")
-
-        End Try
-
-        Try
-            taskFolder = taskFolder.GetFolder("Wake On LAN")
-
-        Catch ex As Exception
-            taskFolder = taskFolder.CreateFolder("Wake On LAN")
-
-        End Try
-
-        RefreshList()
-    End Sub
-
-    Private Sub Schedule_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        My.Settings.schedulerColumns = SaveListViewState(ListViewSchedule)
-        My.Settings.schedulerWindowLocation = Me.Location
-        My.Settings.schedulerWindowSize = Me.Size
-    End Sub
-
-    Private Sub RefreshList()
-        Dim tasks As IRegisteredTaskCollection
-        Dim li As ListViewItem
-
-        Timer1.Stop()
-
-        tasks = taskFolder.GetTasks(_TASK_ENUM_FLAGS.TASK_ENUM_HIDDEN)
-
-        With ListViewSchedule
-            .Items.Clear()
-            For Each t As IRegisteredTask In tasks
-                li = .Items.Add(t.Name)
-                li.ImageIndex = 0
-                li.SubItems.Add("")
-                li.SubItems.Add("")
-                li.SubItems.Add("")
-                li.SubItems.Add("")
-                li.SubItems.Add("")
-                li.SubItems.Add("")
-            Next
-        End With
-
-        UpdateTaskDisplay()
-        Timer1.Start()
-    End Sub
-
-    Private Function GetState(ByVal State As Integer) As String
-        Select Case State
-            Case 1
-                Return My.Resources.Strings.lit_Disabled
-
-            Case 2
-                Return My.Resources.Strings.lit_Queued
-
-            Case 3
-                Return My.Resources.Strings.lit_Ready
-
-            Case 4
-                Return My.Resources.Strings.lit_Running
-
-            Case Else
-                Return My.Resources.Strings.lit_Unknown
-
-        End Select
-    End Function
-
-    Private Sub RunToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RunToolStripMenuItem.Click, ToolStripButtonRun.Click
-        Dim task As IRegisteredTask
-
-        For Each li As ListViewItem In ListViewSchedule.SelectedItems
-            task = taskFolder.GetTask(li.Text)
-            task.Run(vbNull)
-        Next
-    End Sub
-
-    Private Sub EndToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EndToolStripMenuItem.Click, ToolStripButtonStop.Click
-        Dim task As IRegisteredTask
-
-        For Each li As ListViewItem In ListViewSchedule.SelectedItems
-            task = taskFolder.GetTask(li.Text)
-            task.Stop(0)
-        Next
-    End Sub
-
-    Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteToolStripMenuItem.Click, ToolStripButtonDelete.Click
-        For Each li As ListViewItem In ListViewSchedule.SelectedItems
-            taskFolder.DeleteTask(li.Text, 0)
-        Next
-        RefreshList()
-    End Sub
-
-    Private Sub NewToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewToolStripMenuItem.Click, ToolStripButtonCreate.Click
-        Dim MyTask As New Task
-
-        Edit(MyTask)
-    End Sub
-
-    Private Sub ListViewSchedule_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListViewSchedule.DoubleClick, ToolStripButtonProperties.Click
-        Dim itask As IRegisteredTask
-        Dim myTask As New Task
-        Dim li As ListViewItem
-
-        If ListViewSchedule.SelectedItems.Count <> 1 Then Exit Sub
-        li = ListViewSchedule.SelectedItems(0)
-
-        itask = taskFolder.GetTask(li.Text)
-        myTask = myTask.Deserialize(itask.Definition.Data)
-        If myTask Is Nothing Then Exit Sub
-        Edit(myTask)
-    End Sub
-
-    Private Function Edit(ByVal MyTask As Task) As Boolean
-        Dim Result As Boolean = False
-        Dim m As Machine
-        Dim Encrypt As New Encryption(My.Application.Info.ProductName)
-        Dim machinesXML As String
-
-        machinesXML = "-p """ & Machines.GetFile() & """"
-
-        Timer1.Stop()
-
-        If EditTask.ShowDialog(Me, MyTask) = Windows.Forms.DialogResult.OK Then
-            Dim iTask As ITaskDefinition
-            Dim executable As String
-
-            executable = """" & IO.Path.Combine(My.Application.Info.DirectoryPath, "WakeOnLANc.exe") & """"
-
+            _taskFolder = _scheduler.GetFolder("\")
             Try
-                iTask = scheduler.NewTask(0)
-                With iTask
-                    .RegistrationInfo.Author = My.User.Name
-                    .RegistrationInfo.Description = MyTask.Description
-                    .Settings.MultipleInstances = _TASK_INSTANCES_POLICY.TASK_INSTANCES_STOP_EXISTING
-
-                    For Each MyTrigger As Trigger In MyTask.Triggers
-                        Select Case MyTrigger.Mode
-
-                            Case Trigger.TriggerModes.OneTime
-                                Dim iTrigger As ITimeTrigger
-
-                                iTrigger = .Triggers.Create(_TASK_TRIGGER_TYPE2.TASK_TRIGGER_TIME)
-                                With iTrigger
-                                    .Id = MyTrigger.Tag
-                                    .StartBoundary = MyTrigger.StartBoundary.ToString("o")
-                                    .Enabled = MyTrigger.Enabled
-                                End With
-
-                            Case Trigger.TriggerModes.Daily
-                                Dim iTriggerDaily As IDailyTrigger
-
-                                iTriggerDaily = .Triggers.Create(_TASK_TRIGGER_TYPE2.TASK_TRIGGER_DAILY)
-                                With iTriggerDaily
-                                    .Id = MyTrigger.Tag
-                                    .StartBoundary = MyTrigger.StartBoundary.ToString("o")
-                                    .DaysInterval = MyTrigger.Daily_Recurs
-                                    .Enabled = MyTrigger.Enabled
-                                End With
-
-                            Case Trigger.TriggerModes.Weekly
-                                Dim iTriggerWeekly As IWeeklyTrigger
-
-                                iTriggerWeekly = .Triggers.Create(_TASK_TRIGGER_TYPE2.TASK_TRIGGER_WEEKLY)
-                                With iTriggerWeekly
-                                    .Id = MyTrigger.Tag
-                                    .StartBoundary = MyTrigger.StartBoundary.ToString("o")
-                                    .WeeksInterval = MyTrigger.Weekly_Recurs
-                                    .DaysOfWeek = MyTrigger.Weekly_DaysOfWeek
-                                    .Enabled = MyTrigger.Enabled
-                                End With
-
-                        End Select
-                    Next
-
-                    For Each MyAction As Action In MyTask.Actions
-                        Select Case MyAction.Mode
-                            Case WakeOnLan.Action.ActionItems.Start
-                                Dim actionRun As IExecAction
-
-                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
-                                m = Machines(MyAction.Name)
-                                With actionRun
-                                    .Id = MyAction.Tag
-                                    .Path = executable
-                                    .Arguments = machinesXML & " -w -m " & m.Name
-                                End With
-
-                            Case WakeOnLan.Action.ActionItems.StartAll
-                                Dim actionRun As IExecAction
-
-                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
-                                With actionRun
-                                    .Id = MyAction.Tag
-                                    .Path = executable
-                                    .Arguments = machinesXML & " -w -all"
-                                End With
-
-                            Case Action.ActionItems.Shutdown
-                                Dim actionRun As IExecAction
-
-                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
-                                m = Machines(MyAction.Name)
-                                With actionRun
-                                    .Id = MyAction.Tag
-                                    .Path = executable
-                                    .Arguments = machinesXML & " -s -m " & m.Name & " -t " & My.Settings.DefaultTimeout
-                                    If MyAction.Force Then .Arguments &= " -f"
-                                End With
-
-                            Case Action.ActionItems.Sleep
-                                Dim actionRun As IExecAction
-
-                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
-                                m = Machines(MyAction.Name)
-                                With actionRun
-                                    .Id = MyAction.Tag
-                                    .Path = executable
-                                    .Arguments = machinesXML & " -s1 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
-                                    If MyAction.Force Then .Arguments &= " -f"
-                                End With
-
-                            Case Action.ActionItems.Hibernate
-                                Dim actionRun As IExecAction
-
-                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
-                                m = Machines(MyAction.Name)
-                                With actionRun
-                                    .Id = MyAction.Tag
-                                    .Path = executable
-                                    .Arguments = machinesXML & " -s4 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
-                                    If MyAction.Force Then .Arguments &= " -f"
-                                End With
-
-                            Case Action.ActionItems.ShutdownAll
-                                Dim actionRun As IExecAction
-
-                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
-                                With actionRun
-                                    .Id = MyAction.Tag
-                                    .Path = executable
-                                    .Arguments = machinesXML & " -s -all" & " -t " & My.Settings.DefaultTimeout
-                                    If MyAction.Force Then .Arguments &= " -f"
-                                End With
-
-                            Case Action.ActionItems.SleepAll
-                                Dim actionRun As IExecAction
-
-                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
-                                With actionRun
-                                    .Id = MyAction.Tag
-                                    .Path = executable
-                                    .Arguments = machinesXML & " -s1 -all" & " -t " & My.Settings.DefaultTimeout
-                                    If MyAction.Force Then .Arguments &= " -f"
-                                End With
-
-                            Case Action.ActionItems.HibernateAll
-                                Dim actionRun As IExecAction
-
-                                actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
-                                With actionRun
-                                    .Id = MyAction.Tag
-                                    .Path = executable
-                                    .Arguments = machinesXML & " -s4 -all" & " -t " & My.Settings.DefaultTimeout
-                                    If MyAction.Force Then .Arguments &= " -f"
-                                End With
-
-                            Case WakeOnLan.Action.ActionItems.SendMessage
-                                Dim actionMsg As IShowMessageAction
-
-                                actionMsg = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_SHOW_MESSAGE)
-                                With actionMsg
-                                    .Id = MyAction.Tag
-                                    .Title = MyAction.MessageTitle
-                                    .MessageBody = MyAction.MessageText
-                                End With
-
-                            Case Action.ActionItems.SendEmail
-                                Dim actionEmail As IEmailAction
-
-                                actionEmail = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_SEND_EMAIL)
-                                With actionEmail
-                                    .Id = MyAction.Tag
-                                    .From = MyAction.EmailFrom
-                                    .To = MyAction.EmailTo
-                                    .Subject = MyAction.EmailSubject
-                                    .Server = MyAction.EmailServer
-                                    .Body = MyAction.EmailText
-                                End With
-
-                        End Select
-
-                    Next
-
-                End With
-
-
-                'Debug.WriteLine(CStr(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\[start]", "Name", Nothing)))
-
-                iTask.Data = MyTask.Serialize
-                taskFolder.RegisterTaskDefinition(MyTask.Name, iTask, _
-                    _TASK_CREATION.TASK_CREATE_OR_UPDATE, _
-                    My.Settings.TaskUserID, Encrypt.EnigmaDecrypt(My.Settings.TaskPassword), _
-                    _TASK_LOGON_TYPE.TASK_LOGON_PASSWORD, "")
-
-                'Debug.WriteLine(CStr(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\[stop]", "Name", Nothing)))
-
-                Result = True
+                _taskFolder = _taskFolder.GetFolder("Aquila Technology")
 
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Register Task Definition")
-                Result = False
+                _taskFolder = _taskFolder.CreateFolder("Aquila Technology")
 
             End Try
 
-            'AddFileSecurity(Machines.GetFile, My.Settings.TaskUserID, FileSystemRights.Modify, AccessControlType.Allow)
-        End If
+            Try
+                _taskFolder = _taskFolder.GetFolder("Wake On LAN")
 
-        RefreshList()
-        Timer1.Start()
-        Return Result
+            Catch ex As Exception
+                _taskFolder = _taskFolder.CreateFolder("Wake On LAN")
 
-    End Function
+            End Try
+
+            RefreshList()
+        End Sub
+
+        Private Sub Schedule_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+            My.Settings.schedulerColumns = SaveListViewState(ListViewSchedule)
+            My.Settings.schedulerWindowLocation = Location
+            My.Settings.schedulerWindowSize = Size
+        End Sub
+
+        Private Sub RefreshList()
+            Dim tasks As IRegisteredTaskCollection
+            Dim li As ListViewItem
+
+            Timer1.Stop()
+
+            tasks = _taskFolder.GetTasks(_TASK_ENUM_FLAGS.TASK_ENUM_HIDDEN)
+
+            With ListViewSchedule
+                .Items.Clear()
+                For Each t As IRegisteredTask In tasks
+                    li = .Items.Add(t.Name)
+                    li.ImageIndex = 0
+                    li.SubItems.Add("")
+                    li.SubItems.Add("")
+                    li.SubItems.Add("")
+                    li.SubItems.Add("")
+                    li.SubItems.Add("")
+                    li.SubItems.Add("")
+                Next
+            End With
+
+            UpdateTaskDisplay()
+            Timer1.Start()
+        End Sub
+
+        Private Function GetState(ByVal state As Integer) As String
+            Select Case State
+                Case 1
+                    Return My.Resources.Strings.lit_Disabled
+
+                Case 2
+                    Return My.Resources.Strings.lit_Queued
+
+                Case 3
+                    Return My.Resources.Strings.lit_Ready
+
+                Case 4
+                    Return My.Resources.Strings.lit_Running
+
+                Case Else
+                    Return My.Resources.Strings.lit_Unknown
+
+            End Select
+        End Function
+
+        Private Sub RunToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles RunToolStripMenuItem.Click, ToolStripButtonRun.Click
+            Dim task As IRegisteredTask
+
+            For Each li As ListViewItem In ListViewSchedule.SelectedItems
+                task = _taskFolder.GetTask(li.Text)
+                task.Run(vbNull)
+            Next
+        End Sub
+
+        Private Sub EndToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EndToolStripMenuItem.Click, ToolStripButtonStop.Click
+            Dim task As IRegisteredTask
+
+            For Each li As ListViewItem In ListViewSchedule.SelectedItems
+                task = _taskFolder.GetTask(li.Text)
+                task.Stop(0)
+            Next
+        End Sub
+
+        Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DeleteToolStripMenuItem.Click, ToolStripButtonDelete.Click
+            For Each li As ListViewItem In ListViewSchedule.SelectedItems
+                _taskFolder.DeleteTask(li.Text, 0)
+            Next
+            RefreshList()
+        End Sub
+
+        Private Sub NewToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, ToolStripButtonCreate.Click
+            Dim myTask As New Task
+
+            Edit(myTask)
+        End Sub
+
+        Private Sub ListViewSchedule_DoubleClick(ByVal sender As Object, ByVal e As EventArgs) Handles ListViewSchedule.DoubleClick, ToolStripButtonProperties.Click
+            Dim itask As IRegisteredTask
+            Dim myTask As New Task
+            Dim li As ListViewItem
+
+            If ListViewSchedule.SelectedItems.Count <> 1 Then Exit Sub
+            li = ListViewSchedule.SelectedItems(0)
+
+            itask = _taskFolder.GetTask(li.Text)
+            myTask = myTask.Deserialize(itask.Definition.Data)
+            If myTask Is Nothing Then Exit Sub
+            Edit(myTask)
+        End Sub
+
+        Private Function Edit(ByVal myTask As Task) As Boolean
+            Dim result As Boolean = False
+            Dim m As Machine
+            Dim encrypt As New Encryption(My.Application.Info.ProductName)
+            Dim machinesXML As String
+
+            machinesXML = "-p """ & Machines.GetFile() & """"
+
+            Timer1.Stop()
+
+            If EditTask.ShowDialog(Me, myTask) = Windows.Forms.DialogResult.OK Then
+                Dim iTask As ITaskDefinition
+                Dim executable As String
+
+                executable = """" & IO.Path.Combine(My.Application.Info.DirectoryPath, "WakeOnLANc.exe") & """"
+
+                Try
+                    iTask = _scheduler.NewTask(0)
+                    With iTask
+                        .RegistrationInfo.Author = My.User.Name
+                        .RegistrationInfo.Description = myTask.Description
+                        .Settings.MultipleInstances = _TASK_INSTANCES_POLICY.TASK_INSTANCES_STOP_EXISTING
+
+                        For Each myTrigger As Trigger In myTask.Triggers
+                            Select Case myTrigger.Mode
+
+                                Case Trigger.TriggerModes.OneTime
+                                    Dim iTrigger As ITimeTrigger
+
+                                    iTrigger = .Triggers.Create(_TASK_TRIGGER_TYPE2.TASK_TRIGGER_TIME)
+                                    With iTrigger
+                                        .Id = myTrigger.Tag
+                                        .StartBoundary = myTrigger.StartBoundary.ToString("o")
+                                        .Enabled = myTrigger.Enabled
+                                    End With
+
+                                Case Trigger.TriggerModes.Daily
+                                    Dim iTriggerDaily As IDailyTrigger
+
+                                    iTriggerDaily = .Triggers.Create(_TASK_TRIGGER_TYPE2.TASK_TRIGGER_DAILY)
+                                    With iTriggerDaily
+                                        .Id = myTrigger.Tag
+                                        .StartBoundary = myTrigger.StartBoundary.ToString("o")
+                                        .DaysInterval = myTrigger.Daily_Recurs
+                                        .Enabled = myTrigger.Enabled
+                                    End With
+
+                                Case Trigger.TriggerModes.Weekly
+                                    Dim iTriggerWeekly As IWeeklyTrigger
+
+                                    iTriggerWeekly = .Triggers.Create(_TASK_TRIGGER_TYPE2.TASK_TRIGGER_WEEKLY)
+                                    With iTriggerWeekly
+                                        .Id = myTrigger.Tag
+                                        .StartBoundary = myTrigger.StartBoundary.ToString("o")
+                                        .WeeksInterval = myTrigger.Weekly_Recurs
+                                        .DaysOfWeek = myTrigger.Weekly_DaysOfWeek
+                                        .Enabled = myTrigger.Enabled
+                                    End With
+
+                            End Select
+                        Next
+
+                        For Each myAction As Action In myTask.Actions
+                            Select Case myAction.Mode
+                                Case Action.ActionItems.Start
+                                    Dim actionRun As IExecAction
+
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    m = Machines(myAction.Name)
+                                    With actionRun
+                                        .Id = myAction.Tag
+                                        .Path = executable
+                                        .Arguments = machinesXML & " -w -m " & m.Name
+                                    End With
+
+                                Case Action.ActionItems.StartAll
+                                    Dim actionRun As IExecAction
+
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    With actionRun
+                                        .Id = myAction.Tag
+                                        .Path = executable
+                                        .Arguments = machinesXML & " -w -all"
+                                    End With
+
+                                Case Action.ActionItems.Shutdown
+                                    Dim actionRun As IExecAction
+
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    m = Machines(myAction.Name)
+                                    With actionRun
+                                        .Id = myAction.Tag
+                                        .Path = executable
+                                        .Arguments = machinesXML & " -s -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                        If myAction.Force Then .Arguments &= " -f"
+                                    End With
+
+                                Case Action.ActionItems.Sleep
+                                    Dim actionRun As IExecAction
+
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    m = Machines(myAction.Name)
+                                    With actionRun
+                                        .Id = myAction.Tag
+                                        .Path = executable
+                                        .Arguments = machinesXML & " -s1 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                        If myAction.Force Then .Arguments &= " -f"
+                                    End With
+
+                                Case Action.ActionItems.Hibernate
+                                    Dim actionRun As IExecAction
+
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    m = Machines(myAction.Name)
+                                    With actionRun
+                                        .Id = myAction.Tag
+                                        .Path = executable
+                                        .Arguments = machinesXML & " -s4 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                        If myAction.Force Then .Arguments &= " -f"
+                                    End With
+
+                                Case Action.ActionItems.ShutdownAll
+                                    Dim actionRun As IExecAction
+
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    With actionRun
+                                        .Id = myAction.Tag
+                                        .Path = executable
+                                        .Arguments = machinesXML & " -s -all" & " -t " & My.Settings.DefaultTimeout
+                                        If myAction.Force Then .Arguments &= " -f"
+                                    End With
+
+                                Case Action.ActionItems.SleepAll
+                                    Dim actionRun As IExecAction
+
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    With actionRun
+                                        .Id = myAction.Tag
+                                        .Path = executable
+                                        .Arguments = machinesXML & " -s1 -all" & " -t " & My.Settings.DefaultTimeout
+                                        If myAction.Force Then .Arguments &= " -f"
+                                    End With
+
+                                Case Action.ActionItems.HibernateAll
+                                    Dim actionRun As IExecAction
+
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    With actionRun
+                                        .Id = myAction.Tag
+                                        .Path = executable
+                                        .Arguments = machinesXML & " -s4 -all" & " -t " & My.Settings.DefaultTimeout
+                                        If myAction.Force Then .Arguments &= " -f"
+                                    End With
+
+                                Case Action.ActionItems.SendMessage
+                                    Dim actionMsg As IShowMessageAction
+
+                                    actionMsg = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_SHOW_MESSAGE)
+                                    With actionMsg
+                                        .Id = myAction.Tag
+                                        .Title = myAction.MessageTitle
+                                        .MessageBody = myAction.MessageText
+                                    End With
+
+                                Case Action.ActionItems.SendEmail
+                                    Dim actionEmail As IEmailAction
+
+                                    actionEmail = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_SEND_EMAIL)
+                                    With actionEmail
+                                        .Id = myAction.Tag
+                                        .From = myAction.EmailFrom
+                                        .To = myAction.EmailTo
+                                        .Subject = myAction.EmailSubject
+                                        .Server = myAction.EmailServer
+                                        .Body = myAction.EmailText
+                                    End With
+
+                            End Select
+
+                        Next
+
+                    End With
+
+
+                    'Debug.WriteLine(CStr(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\[start]", "Name", Nothing)))
+
+                    iTask.Data = myTask.Serialize
+                    _taskFolder.RegisterTaskDefinition(myTask.Name, iTask, _
+                                                       _TASK_CREATION.TASK_CREATE_OR_UPDATE, _
+                                                       My.Settings.TaskUserID, encrypt.EnigmaDecrypt(My.Settings.TaskPassword), _
+                                                       _TASK_LOGON_TYPE.TASK_LOGON_PASSWORD, "")
+
+                    'Debug.WriteLine(CStr(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\[stop]", "Name", Nothing)))
+
+                    result = True
+
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "Register Task Definition")
+                    result = False
+
+                End Try
+
+                'AddFileSecurity(Machines.GetFile, My.Settings.TaskUserID, FileSystemRights.Modify, AccessControlType.Allow)
+            End If
+
+            RefreshList()
+            Timer1.Start()
+            Return result
+
+        End Function
 
 #If False Then
     ' Adds an ACL entry on the specified file for the specified account.
@@ -425,87 +425,88 @@ Public Class Schedule
     End Sub
 #End If
 
-    Private Sub DisableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DisableToolStripMenuItem.Click, ToolStripButtonDisable.Click
-        Dim task As IRegisteredTask
+        Private Sub DisableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DisableToolStripMenuItem.Click, ToolStripButtonDisable.Click
+            Dim task As IRegisteredTask
 
-        For Each li As ListViewItem In ListViewSchedule.SelectedItems
-            task = taskFolder.GetTask(li.Text)
-            task.Enabled = False
-        Next
-    End Sub
+            For Each li As ListViewItem In ListViewSchedule.SelectedItems
+                task = _taskFolder.GetTask(li.Text)
+                task.Enabled = False
+            Next
+        End Sub
 
-    Private Sub EnableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnableToolStripMenuItem.Click, ToolStripButtonEnable.Click
-        Dim task As IRegisteredTask
+        Private Sub EnableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EnableToolStripMenuItem.Click, ToolStripButtonEnable.Click
+            Dim task As IRegisteredTask
 
-        For Each li As ListViewItem In ListViewSchedule.SelectedItems
-            task = taskFolder.GetTask(li.Text)
-            task.Enabled = True
-        Next
-    End Sub
+            For Each li As ListViewItem In ListViewSchedule.SelectedItems
+                task = _taskFolder.GetTask(li.Text)
+                task.Enabled = True
+            Next
+        End Sub
 
-    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
-        UpdateTaskDisplay()
-    End Sub
+        Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timer1.Tick
+            UpdateTaskDisplay()
+        End Sub
 
-    Private Sub UpdateTaskDisplay()
-        Dim task As IRegisteredTask
+        Private Sub UpdateTaskDisplay()
+            Dim task As IRegisteredTask
 
-        'ListViewSchedule.SuspendLayout()
+            'ListViewSchedule.SuspendLayout()
 
-        For Each li As ListViewItem In ListViewSchedule.Items
+            For Each li As ListViewItem In ListViewSchedule.Items
 
-            Try
-                task = taskFolder.GetTask(li.Text)
-                li.SubItems(1).Text = IIf(task.Enabled, My.Resources.Strings.lit_Enabled, My.Resources.Strings.lit_Disabled)
+                Try
+                    task = _taskFolder.GetTask(li.Text)
+                    li.SubItems(1).Text = IIf(task.Enabled, My.Resources.Strings.lit_Enabled, My.Resources.Strings.lit_Disabled)
 
-                If li.SubItems(2).Text = "" Then
-                    Dim MyTask As New Task
-                    MyTask = MyTask.Deserialize(task.Definition.Data)
-                    Select Case MyTask.Triggers.Count
-                        Case 0
-                            li.SubItems(2).Text = My.Resources.Strings.lit_None
+                    If li.SubItems(2).Text = "" Then
+                        Dim myTask As New Task
+                        myTask = myTask.Deserialize(task.Definition.Data)
+                        Select Case myTask.Triggers.Count
+                            Case 0
+                                li.SubItems(2).Text = My.Resources.Strings.lit_None
 
-                        Case 1
-                            li.SubItems(2).Text = MyTask.Triggers(0).ModeString
+                            Case 1
+                                li.SubItems(2).Text = myTask.Triggers(0).ModeString
+
+                            Case Else
+                                li.SubItems(2).Text = My.Resources.Strings.lit_multipleTriggers
+
+                        End Select
+
+                    End If
+
+                    li.SubItems(3).Text = GetState(task.State)
+                    li.SubItems(4).Text = IIf(task.NextRunTime.Year < 1970, My.Resources.Strings.lit_Never, task.NextRunTime.ToString("G"))
+                    li.SubItems(5).Text = IIf(task.LastRunTime.Year < 1970, My.Resources.Strings.lit_Never, task.LastRunTime.ToString("G"))
+
+                    Select Case task.LastTaskResult
+
+                        Case "1"
+                            li.SubItems(6).Text = IIf(task.LastRunTime.Year < 1970, String.Empty, My.Resources.Strings.lit_Invalid & " (0x1)")
+
+                        Case "2"
+                            li.SubItems(6).Text = My.Resources.Strings.lit_notFound & " (0x2)"
 
                         Case Else
-                            li.SubItems(2).Text = My.Resources.Strings.lit_multipleTriggers
+                            li.SubItems(6).Text = String.Format("{0} (0x{1})", FormatMessage(task.LastTaskResult), task.LastTaskResult.ToString("x"))
 
                     End Select
 
-                End If
+                Catch ex As Exception
+                    li.Remove()
 
-                li.SubItems(3).Text = GetState(task.State)
-                li.SubItems(4).Text = IIf(task.NextRunTime.Year < 1970, My.Resources.Strings.lit_Never, task.NextRunTime.ToString("G"))
-                li.SubItems(5).Text = IIf(task.LastRunTime.Year < 1970, My.Resources.Strings.lit_Never, task.LastRunTime.ToString("G"))
+                End Try
 
-                Select Case task.LastTaskResult
+            Next
 
-                    Case "1"
-                        li.SubItems(6).Text = IIf(task.LastRunTime.Year < 1970, String.Empty, My.Resources.Strings.lit_Invalid & " (0x1)")
+            'ListViewSchedule.ResumeLayout()
+        End Sub
 
-                    Case "2"
-                        li.SubItems(6).Text = My.Resources.Strings.lit_notFound & " (0x2)"
+        Private Sub Schedule_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Resize
+            With ListViewSchedule
+                .Columns(6).Width = .ClientRectangle.Width - (.Columns(0).Width + .Columns(1).Width + .Columns(2).Width + .Columns(3).Width + .Columns(4).Width + .Columns(5).Width) - 1
+            End With
+        End Sub
 
-                    Case Else
-                        li.SubItems(6).Text = String.Format("{0} (0x{1})", FormatMessage(task.LastTaskResult), task.LastTaskResult.ToString("x"))
-
-                End Select
-
-            Catch ex As Exception
-                li.Remove()
-
-            End Try
-
-        Next
-
-        'ListViewSchedule.ResumeLayout()
-    End Sub
-
-    Private Sub Schedule_Resize(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Resize
-        With ListViewSchedule
-            .Columns(6).Width = .ClientRectangle.Width - (.Columns(0).Width + .Columns(1).Width + .Columns(2).Width + .Columns(3).Width + .Columns(4).Width + .Columns(5).Width) - 1
-        End With
-    End Sub
-
-End Class
+    End Class
+End Namespace

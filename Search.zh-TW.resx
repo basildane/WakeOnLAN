@@ -121,13 +121,13 @@
     <value>開始搜尋</value>
   </data>
   <data name="SearchBegin.ToolTip" xml:space="preserve">
-    <value>開始搜尋電腦</value>
+    <value>開始搜尋主機</value>
   </data>
   <data name="ch_Name.Text" xml:space="preserve">
     <value>名稱</value>
   </data>
   <data name="ch_OS.Text" xml:space="preserve">
-    <value>運作系統</value>
+    <value>作業系統</value>
   </data>
   <data name="ch_Interface.Text" xml:space="preserve">
     <value>聯繫裝置身分</value>
@@ -136,16 +136,22 @@
     <value>IP位址</value>
   </data>
   <data name="ch_MAC.Text" xml:space="preserve">
-    <value>網路介面卡識別碼位址</value>
+    <value>MAC 位址</value>
   </data>
   <data name="listView.ToolTip" xml:space="preserve">
     <value />
+  </data>
+  <data name="IpAddressControl_End.ToolTip" xml:space="preserve">
+    <value>搜尋結束IP位置</value>
+  </data>
+  <data name="IpAddressControl_Start.ToolTip" xml:space="preserve">
+    <value>搜尋開始IP位置</value>
   </data>
   <data name="cancelSearch.Text" xml:space="preserve">
     <value>取消</value>
   </data>
   <data name="cancelSearch.ToolTip" xml:space="preserve">
-    <value>停止搜尋電腦</value>
+    <value>停止搜尋</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
@@ -166,29 +172,32 @@
   <data name="Label1.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>搜尋機器</value>
+  <data name="gbSearch.Text" xml:space="preserve">
+    <value>搜尋主機</value>
   </data>
-  <data name="GroupBox1.ToolTip" xml:space="preserve">
+  <data name="gbSearch.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="StatusStrip1.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>選擇所需的機器的複選框，然後點擊"確定"添加到資料庫中。</value>
+  <data name="LabelDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>725, 456</value>
   </data>
-  <data name="Label3.ToolTip" xml:space="preserve">
+  <data name="LabelDescription.Text" xml:space="preserve">
+    <value>請選擇欲加入喚醒清單主機，然後點擊"確定"。</value>
+  </data>
+  <data name="LabelDescription.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="CheckAllButton.Text" xml:space="preserve">
-    <value>檢查全部</value>
+    <value>全選</value>
   </data>
   <data name="CheckAllButton.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="UnCheckAllButton.Text" xml:space="preserve">
-    <value>所有未檢查的</value>
+    <value>取消全選</value>
   </data>
   <data name="UnCheckAllButton.ToolTip" xml:space="preserve">
     <value />
@@ -208,10 +217,19 @@
   <data name="ComboBoxGroup.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="LabelAddToGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="LabelAddToGroup.Text" xml:space="preserve">
+    <value>新增到某一群組</value>
+  </data>
   <data name="LabelAddToGroup.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>搜尋電腦</value>
+    <value>搜尋主機</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

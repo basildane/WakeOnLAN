@@ -16,7 +16,6 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
-Imports System.Diagnostics
 Imports System.Net
 Imports System.Management
 
@@ -25,8 +24,8 @@ Module Module1
     Private Declare Function InitiateSystemShutdown Lib "advapi32.dll" Alias "InitiateSystemShutdownA" (ByVal lpMachineName As String, ByVal lpMessage As String, ByVal dwTimeout As Integer, ByVal bForceAppsClosed As Integer, ByVal bRebootAfterShutdown As Integer) As Integer
     Private Declare Function AbortSystemShutdown Lib "advapi32.dll" Alias "AbortSystemShutdownA" (ByVal lpMachineName As String) As Integer
 
-    Enum _modeTypes
-        none
+    Enum ModeTypes
+        None
         Shutdown
         WakeUp
         Abort
@@ -36,23 +35,23 @@ Module Module1
     End Enum
 
     Enum ErrorCodes
-        OK = 0
+        Ok = 0
         InvalidCommand = 1
         NotFound = 2
         PermissionDenied = 5
     End Enum
 
-    Dim sMachine As String = ""
-    Dim sMAC As String = ""
-    Dim all As Boolean = False
-    Dim sAlertMessage As String = "System is shutting down" & vbNullChar
-    Dim dwDelay As Long = 30
-    Dim dwForce As Long = 0
-    Dim dwReboot As Long = 0
-    Dim Mode As _modeTypes = _modeTypes.none
-    Dim Result As Integer = ErrorCodes.OK
-    Dim sPath As String = ""
-    Dim sInterface As String = ""
+    Dim _machine As String = ""
+    Dim _mac As String = ""
+    Dim _all As Boolean = False
+    Dim _alertMessage As String = "System is shutting down" & vbNullChar
+    Dim _delay As Long = 30
+    Dim _force As Long = 0
+    Dim _reboot As Long = 0
+    Dim _mode As ModeTypes = ModeTypes.None
+    Dim _result As Integer = ErrorCodes.Ok
+    Dim _path As String = ""
+    Dim _interface As String = ""
 
     Function Main() As Integer
 
@@ -64,7 +63,7 @@ Module Module1
 
         If My.Application.CommandLineArgs.Count = 0 Then
             DisplayHelp()
-            Return ErrorCodes.OK
+            Return ErrorCodes.Ok
         End If
 
         For i = 0 To My.Application.CommandLineArgs.Count - 1
@@ -74,11 +73,11 @@ Module Module1
                         BadCommand()
                         Return ErrorCodes.InvalidCommand
                     End If
-                    dwDelay = Val(My.Application.CommandLineArgs.Item(i + 1))
+                    _delay = Val(My.Application.CommandLineArgs.Item(i + 1))
                     i += 1
 
                 Case "-f"
-                    dwForce = 1
+                    _force = 1
 
                 Case "-m"
                     If i = My.Application.CommandLineArgs.Count - 1 Then
@@ -86,7 +85,7 @@ Module Module1
                         Return ErrorCodes.InvalidCommand
                     End If
                     i += 1
-                    sMachine = My.Application.CommandLineArgs.Item(i)
+                    _machine = My.Application.CommandLineArgs.Item(i)
 
                 Case "-p"
                     If i = My.Application.CommandLineArgs.Count - 1 Then
@@ -94,7 +93,7 @@ Module Module1
                         Return ErrorCodes.InvalidCommand
                     End If
                     i += 1
-                    sPath = My.Application.CommandLineArgs.Item(i)
+                    _path = My.Application.CommandLineArgs.Item(i)
 
                 Case "-mac"
                     If i = My.Application.CommandLineArgs.Count - 1 Then
@@ -102,7 +101,7 @@ Module Module1
                         Return ErrorCodes.InvalidCommand
                     End If
                     i += 1
-                    sMAC = My.Application.CommandLineArgs.Item(i)
+                    _mac = My.Application.CommandLineArgs.Item(i)
 
                 Case "-if"
                     If i = My.Application.CommandLineArgs.Count - 1 Then
@@ -110,55 +109,55 @@ Module Module1
                         Return ErrorCodes.InvalidCommand
                     End If
                     i += 1
-                    sInterface = My.Application.CommandLineArgs.Item(i)
+                    _interface = My.Application.CommandLineArgs.Item(i)
 
                 Case "-all"
-                    all = True
+                    _all = True
 
                 Case "-r"
-                    Mode = _modeTypes.Shutdown
-                    dwReboot = 1
+                    _mode = ModeTypes.Shutdown
+                    _reboot = 1
 
                 Case "-s"
-                    Mode = _modeTypes.Shutdown
-                    dwReboot = 0
+                    _mode = ModeTypes.Shutdown
+                    _reboot = 0
 
                 Case "-s1"
-                    Mode = _modeTypes.Sleep
-                    dwReboot = 0
+                    _mode = ModeTypes.Sleep
+                    _reboot = 0
 
                 Case "-s4"
-                    Mode = _modeTypes.Hibernate
-                    dwReboot = 0
+                    _mode = ModeTypes.Hibernate
+                    _reboot = 0
 
                 Case "-w"
-                    Mode = _modeTypes.WakeUp
+                    _mode = ModeTypes.WakeUp
 
                 Case "-a"
-                    Mode = _modeTypes.Abort
+                    _mode = ModeTypes.Abort
 
                 Case "-c"
                     If i = My.Application.CommandLineArgs.Count - 1 Then
                         BadCommand()
                         Return ErrorCodes.InvalidCommand
                     End If
-                    sAlertMessage = My.Application.CommandLineArgs.Item(i + 1) & vbNullChar
+                    _alertMessage = My.Application.CommandLineArgs.Item(i + 1) & vbNullChar
                     i += 1
 
                 Case "-l"
                     Listen()
-                    Return ErrorCodes.OK
+                    Return ErrorCodes.Ok
 
                 Case "-e"
                     Enumerate()
-                    Return ErrorCodes.OK
+                    Return ErrorCodes.Ok
 
                 Case "-h"
                     DisplayHelp()
-                    Return ErrorCodes.OK
+                    Return ErrorCodes.Ok
 
                 Case "-d"
-                    Mode = _modeTypes.Debug
+                    _mode = ModeTypes.Debug
 
                 Case Else
                     DisplayHelp()
@@ -168,21 +167,21 @@ Module Module1
 
         Next
 
-        Select Case Mode
+        Select Case _mode
 
-            Case _modeTypes.Shutdown
+            Case ModeTypes.Shutdown
                 Return Shutdown()
 
-            Case _modeTypes.Sleep, _modeTypes.Hibernate
+            Case ModeTypes.Sleep, ModeTypes.Hibernate
                 Return SleepHibernate()
 
-            Case _modeTypes.WakeUp
+            Case ModeTypes.WakeUp
                 Return DoWakeup()
 
-            Case _modeTypes.Abort
+            Case ModeTypes.Abort
                 Return Abort()
 
-            Case _modeTypes.Debug
+            Case ModeTypes.Debug
                 Return ShowIPConfig()
 
             Case Else
@@ -233,8 +232,8 @@ Module Module1
         Else
             Dim errMessage As String
 
-            Result = Err.LastDllError
-            errMessage = FormatMessage(Result)
+            _result = Err.LastDllError
+            errMessage = FormatMessage(_result)
             Console.ForegroundColor = ConsoleColor.Red
             Console.WriteLine("...Error")
             Console.WriteLine(errMessage)
@@ -244,54 +243,54 @@ Module Module1
 
     Private Function DoWakeup() As Integer
 
-        If all Then
+        If _all Then
             Try
-                Machines.Load(sPath)
+                Machines.Load(_path)
 
             Catch ex As Exception
-                Result = ErrorCodes.PermissionDenied
-                Return Result
+                _result = ErrorCodes.PermissionDenied
+                Return _result
 
             End Try
 
             For Each m As Machine In Machines
                 Console.Write("Wakeup " & m.Name & "... ")
                 If m.MAC = "" Then
-                    Result = ErrorCodes.NotFound
+                    _result = ErrorCodes.NotFound
                     Console.WriteLine("Cannot find MAC address for " & m.Name)
                 Else
                     Console.WriteLine("waking up mac: " & m.MAC)
-                    WakeUp(m, sInterface)
+                    WakeUp(m, _interface)
                 End If
             Next
-            Return Result
+            Return _result
 
-        ElseIf sMachine.Length Then
+        ElseIf _machine.Length Then
             Dim m As Machine
 
             Try
-                Machines.Load(sPath)
+                Machines.Load(_path)
 
             Catch ex As Exception
-                Result = ErrorCodes.PermissionDenied
-                Return Result
+                _result = ErrorCodes.PermissionDenied
+                Return _result
 
             End Try
 
-            m = Machines(sMachine)
+            m = Machines(_machine)
             If m Is Nothing Then
-                Console.WriteLine("Cannot find machine " & sMachine)
+                Console.WriteLine("Cannot find machine " & _machine)
                 Return ErrorCodes.NotFound
             End If
-            Console.WriteLine("wakeup sent to " & sMachine)
+            Console.WriteLine("wakeup sent to " & _machine)
             Console.WriteLine("waking up mac: " & m.MAC)
-            WakeUp(m, sInterface)
-            Return ErrorCodes.OK
+            WakeUp(m, _interface)
+            Return ErrorCodes.Ok
 
-        ElseIf sMAC.Length Then
-            Console.WriteLine("waking up mac: " & sMAC)
-            WakeUp(sMAC, sInterface)
-            Return ErrorCodes.OK
+        ElseIf _mac.Length Then
+            Console.WriteLine("waking up mac: " & _mac)
+            WakeUp(_mac, _interface)
+            Return ErrorCodes.Ok
 
         Else
             Console.WriteLine("Error.  No machine or MAC specified.")
@@ -305,55 +304,53 @@ Module Module1
     Private Function Abort() As Integer
         Dim dwResult As Integer
 
-        If sMachine = "" And all = False Then
+        If _machine = "" And _all = False Then
             Console.WriteLine("Error.  No machine specified.")
             DisplayHelp()
             Return ErrorCodes.InvalidCommand
         End If
 
-        If all Then
-            Machines.Load(sPath)
+        If _all Then
+            Machines.Load(_path)
             For Each m As Machine In Machines
                 Console.Write("Abort shutdown sent to " & m.Name)
                 dwResult = AbortSystemShutdown(m.Netbios)
                 ShowResult(dwResult)
             Next
         Else
-            Console.Write("Abort shutdown sent to " & sMachine)
-            dwResult = AbortSystemShutdown(sMachine)
+            Console.Write("Abort shutdown sent to " & _machine)
+            dwResult = AbortSystemShutdown(_machine)
             ShowResult(dwResult)
         End If
 
-        Return Result
+        Return _result
 
     End Function
 
     Private Function Shutdown() As Integer
         Dim dwResult As Integer = 1
-        Machines.Load(sPath)
+        Machines.Load(_path)
 
-        If ((sMachine = "") And (all = False)) Then
+        If ((_machine = "") And (_all = False)) Then
             Console.WriteLine("Error.  No machine specified.")
             DisplayHelp()
-            Result = ErrorCodes.InvalidCommand
-            Return Result
+            _result = ErrorCodes.InvalidCommand
+            Return _result
         End If
 
-        If all Then
-            For Each m As Machine In Machines
-                Console.Write("Shutdown sent to " & m.Name)
-                dwResult = InitiateSystemShutdown(m.Netbios, sAlertMessage, dwDelay, dwForce, dwReboot)
+        If _all Then
+            For Each machine As Machine In Machines
+                Console.Write("Shutdown sent to " & machine.Name)
+                dwResult = InitiateSystemShutdown(machine.Netbios, _alertMessage, _delay, _force, _reboot)
                 ShowResult(dwResult)
             Next
         Else
-            Dim m As Machine
-            m = Machines(sMachine)
-            Console.Write("Shutdown sent to " & sMachine)
-            dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
+            Console.Write("Shutdown sent to " & _machine)
+            dwResult = InitiateSystemShutdown(_machine, _alertMessage, _delay, _force, _reboot)
             ShowResult(dwResult)
         End If
 
-        Return Result
+        Return _result
 
     End Function
 
@@ -362,30 +359,28 @@ Module Module1
 
         Try
 
-            Machines.Load(sPath)
+            Machines.Load(_path)
 
-            If ((sMachine = "") And (all = False)) Then
+            If ((_machine = "") And (_all = False)) Then
                 Console.WriteLine("Error.  No machine specified.")
                 DisplayHelp()
-                Result = ErrorCodes.InvalidCommand
-                Return Result
+                _result = ErrorCodes.InvalidCommand
+                Return _result
             End If
 
-            If all Then
-                For Each m As Machine In Machines
-                    Console.Write(Mode.ToString() & " sent to " & m.Name)
-                    dwResult = WMIpower(m.Netbios)
+            If _all Then
+                For Each machine As Machine In Machines
+                    Console.Write(_mode.ToString() & " sent to " & machine.Name)
+                    dwResult = WMIpower(machine.Netbios)
                     ShowResult(dwResult)
                 Next
             Else
-                Dim m As Machine
-                m = Machines(sMachine)
-                Console.Write(Mode.ToString() & " sent to " & sMachine)
-                dwResult = WMIpower(sMachine)
+                Console.Write(_mode.ToString() & " sent to " & _machine)
+                dwResult = WMIpower(_machine)
                 ShowResult(dwResult)
             End If
 
-            Return Result
+            Return _result
 
         Catch ex As Exception
             Console.WriteLine()
@@ -399,7 +394,7 @@ Module Module1
     Private Function WMIpower(sMachine As String) As Integer
         Dim process As ManagementClass
         Dim path As ManagementPath
-        Dim options As ConnectionOptions = New ConnectionOptions()
+        'Dim options As ConnectionOptions = New ConnectionOptions()
         Dim inparams, outparams As ManagementBaseObject
         Dim ProcID, retval As String
 
@@ -413,11 +408,11 @@ Module Module1
         process.Scope.Connect()
 
         inparams = process.GetMethodParameters("Create")
-        Select Case Mode
-            Case _modeTypes.Sleep
+        Select Case _mode
+            Case ModeTypes.Sleep
                 inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
 
-            Case _modeTypes.Hibernate
+            Case ModeTypes.Hibernate
                 inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
 
         End Select
@@ -442,7 +437,7 @@ Module Module1
     Private Sub Enumerate()
         Console.WriteLine("Enumerate machines...")
 
-        Machines.Load(sPath)
+        Machines.Load(_path)
         For Each m As Machine In Machines
             Console.ForegroundColor = ConsoleColor.Green
             Console.Write("{0}", m.Name.PadRight(10, " "))
@@ -455,13 +450,13 @@ Module Module1
         Dim ping As New NetworkInformation.Ping
         Dim reply As NetworkInformation.PingReply
 
-        If (sMachine = "") Then
+        If (_machine = "") Then
             Console.WriteLine("You must specify machine name with -m")
             Return ErrorCodes.InvalidCommand
         End If
-        Console.WriteLine("Show IP configuration for " & sMachine)
+        Console.WriteLine("Show IP configuration for " & _machine)
         Try
-            For Each IPA As IPAddress In Dns.GetHostAddresses(sMachine)
+            For Each IPA As IPAddress In Dns.GetHostAddresses(_machine)
                 Console.WriteLine("  Address: {0} Family: {1}", IPA.ToString(), IPA.AddressFamily.ToString())
             Next
 
@@ -471,9 +466,9 @@ Module Module1
 
         End Try
 
-        reply = ping.Send(sMachine, 1500)
+        reply = ping.Send(_machine, 1500)
         Console.WriteLine("Ping: " & reply.Status.ToString())
-        Return ErrorCodes.OK
+        Return ErrorCodes.Ok
 
     End Function
 

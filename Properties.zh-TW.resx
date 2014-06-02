@@ -120,6 +120,10 @@
   <data name="Cancel_Button.Error" xml:space="preserve">
     <value />
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Cancel_Button.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>取消</value>
   </data>
@@ -129,11 +133,37 @@
   <data name="lbRemoteDesktop.Error" xml:space="preserve">
     <value />
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbRemoteDesktop.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbRemoteDesktop.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbRemoteDesktop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
+  </data>
+  <data name="lbRemoteDesktop.Text" xml:space="preserve">
+    <value>遠端桌面 Port (通訊協定)</value>
+  </data>
   <data name="lbRemoteDesktop.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="lbLeaveBlank.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="lbLeaveBlank.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbLeaveBlank.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="lbLeaveBlank.Text" xml:space="preserve">
+    <value>保留給DHCP</value>
   </data>
   <data name="lbLeaveBlank.ToolTip" xml:space="preserve">
     <value />
@@ -141,14 +171,47 @@
   <data name="Label1.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="Label1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="Label1.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="tRDPPort.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="tRDPPort.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tRDPPort.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tRDPPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 49</value>
+  </data>
+  <data name="tRDPPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 20</value>
+  </data>
+  <data name="tRDPPort.ToolTip" xml:space="preserve">
+    <value>遠端桌面 Port (通訊協定)</value>
+  </data>
   <data name="lbRDPPort.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="lbRDPPort.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbRDPPort.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbRDPPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 52</value>
+  </data>
+  <data name="lbRDPPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
+  </data>
+  <data name="lbRDPPort.Text" xml:space="preserve">
+    <value>遠端桌面 Port (通訊協定)</value>
   </data>
   <data name="lbRDPPort.ToolTip" xml:space="preserve">
     <value />
@@ -156,10 +219,18 @@
   <data name="IP.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="IP.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="IP.ToolTip" xml:space="preserve">
+    <value>保留給DHCP</value>
+  </data>
   <data name="lbIP.Error" xml:space="preserve">
     <value />
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbIP.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 25</value>
   </data>
@@ -175,17 +246,32 @@
   <data name="gStatus.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="gStatus.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="gStatus.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gStatus.Text" xml:space="preserve">
+    <value>狀態 / 控制</value>
+  </data>
   <data name="gStatus.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="Group.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="Group.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="Group.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="lbGroup.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="lbGroup.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>63, 44</value>
@@ -202,11 +288,17 @@
   <data name="MachineName.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="MachineName.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="MachineName.ToolTip" xml:space="preserve">
     <value>這是電腦的名稱，輸入一個有效的名稱，包含字母，數字，破折號或下劃線。</value>
   </data>
   <data name="lbName.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="lbName.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -220,11 +312,23 @@
   <data name="gDisplay.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="gDisplay.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="gDisplay.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gDisplay.Text" xml:space="preserve">
+    <value>顯示屬性</value>
+  </data>
   <data name="gDisplay.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="CheckBox_Emergency.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="CheckBox_Emergency.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>
@@ -238,6 +342,9 @@
   <data name="lbShutdownCommand.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="lbShutdownCommand.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 13</value>
   </data>
@@ -250,11 +357,23 @@
   <data name="TextBox_Command.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="TextBox_Command.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="TextBox_Command.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="gShutdown.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="gShutdown.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="gShutdown.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gShutdown.Text" xml:space="preserve">
+    <value>關機</value>
   </data>
   <data name="gShutdown.ToolTip" xml:space="preserve">
     <value />
@@ -262,11 +381,29 @@
   <data name="tHostURI.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="tHostURI.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tHostURI.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="tHostURI.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="LabelInterfaces.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="LabelInterfaces.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="LabelInterfaces.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelInterfaces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="LabelInterfaces.Text" xml:space="preserve">
+    <value>介面</value>
   </data>
   <data name="LabelInterfaces.ToolTip" xml:space="preserve">
     <value />
@@ -274,11 +411,20 @@
   <data name="ComboBoxAdapters.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="ComboBoxAdapters.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="ComboBoxAdapters.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="ComboBoxAdapters.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="lbMAC.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="lbMAC.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 26</value>
@@ -295,6 +441,9 @@
   <data name="lbNetbios.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="lbNetbios.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
     <value>35, 109</value>
   </data>
@@ -310,11 +459,32 @@
   <data name="lbSendTo.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="lbSendTo.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="lbSendTo.Text" xml:space="preserve">
+    <value>傳送 WOL To</value>
+  </data>
   <data name="lbSendTo.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="rbURI.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="rbURI.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="rbURI.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 17</value>
+  </data>
+  <data name="rbURI.Text" xml:space="preserve">
+    <value>網址 / IP</value>
   </data>
   <data name="rbURI.ToolTip" xml:space="preserve">
     <value />
@@ -322,17 +492,35 @@
   <data name="rbIP.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="rbIP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="rbIP.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 17</value>
+  </data>
+  <data name="rbIP.Text" xml:space="preserve">
+    <value>廣播位址IP</value>
+  </data>
   <data name="rbIP.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="MAC.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="MAC.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="MAC.ToolTip" xml:space="preserve">
     <value>輸入電腦的MAC位址。MAC地址有6對十六進制數字，會用 : 或 - 分隔，例如：例如：01:00:22:32:AF:D0</value>
   </data>
   <data name="lbBroadcast.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="lbBroadcast.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 80</value>
@@ -349,11 +537,17 @@
   <data name="TTL.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="TTL.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="TTL.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="Broadcast.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="Broadcast.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="Broadcast.ToolTip" xml:space="preserve">
     <value />
@@ -361,11 +555,20 @@
   <data name="UDPPort.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="UDPPort.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="UDPPort.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="bCalcBroadcast.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="bCalcBroadcast.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="bCalcBroadcast.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="bCalcBroadcast.Text" xml:space="preserve">
     <value>子網路計算</value>
@@ -375,6 +578,9 @@
   </data>
   <data name="lbTTL.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="lbTTL.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 212</value>
@@ -391,6 +597,9 @@
   <data name="lbUDP.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="lbUDP.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
     <value>36, 190</value>
   </data>
@@ -406,20 +615,38 @@
   <data name="gWakeUp.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="gWakeUp.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="gWakeUp.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gWakeUp.Text" xml:space="preserve">
+    <value>喚醒</value>
+  </data>
   <data name="gWakeUp.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="Help_Button.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="Help_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="Help_Button.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="Help_Button.Text" xml:space="preserve">
-    <value>說明</value>
+    <value>求助</value>
   </data>
   <data name="Help_Button.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="Delete_Button.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="Delete_Button.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="Delete_Button.Text" xml:space="preserve">
     <value>刪除</value>
@@ -430,8 +657,14 @@
   <data name="$this.Text" xml:space="preserve">
     <value>版權</value>
   </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="OK_Button.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="OK_Button.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>確定</value>
