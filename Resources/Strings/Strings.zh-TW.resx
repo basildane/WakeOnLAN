@@ -134,7 +134,7 @@
     <comment>Changes have not been saved</comment>
   </data>
 	<data name="EmergencyShutdown" xml:space="preserve">
-    <value>開始緊急關機</value>
+    <value>開始立即關機</value>
     <comment>Emergency shutdown started</comment>
   </data>
 	<data name="ExportedTo" xml:space="preserve">
@@ -198,11 +198,11 @@
     <comment>Successful</comment>
   </data>
 	<data name="Title" xml:space="preserve">
-    <value>區域網路喚醒</value>
+    <value>網路喚醒</value>
     <comment>Wake on LAN</comment>
   </data>
 	<data name="Version" xml:space="preserve">
-    <value>版本： {0}.{1:00}.{2}.{3}</value>
+    <value>版本： {0}.{1:00}.{2}</value>
     <comment>Version</comment>
   </data>
 	<data name="WhereSave" xml:space="preserve">
@@ -270,11 +270,11 @@
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
 	<data name="DefaultEmergency" xml:space="preserve">
-    <value>緊急中止!</value>
+    <value>立即關機!</value>
     <comment>Emergency shutdown!</comment>
   </data>
 	<data name="DefaultMessage" xml:space="preserve">
-    <value>系統正在中止!</value>
+    <value>正在停止主機關機!</value>
     <comment>System is shutting down!</comment>
   </data>
 	<data name="Done" xml:space="preserve">

@@ -86,4 +86,5 @@ Public NotInheritable Class AboutBox
     Private Sub bDonate_Click(sender As Object, e As EventArgs) Handles bDonate.Click
         Process.Start(My.Settings.donate)
     End Sub
+
 End Class

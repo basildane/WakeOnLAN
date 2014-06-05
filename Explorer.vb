@@ -27,7 +27,6 @@ Public Class Explorer
         Dim auto As New Autorun()
         AutoStartWithWindowsToolStripMenuItem.Checked = auto.AutoRun()
 
-        Text = My.Resources.Strings.Title
         ListView.View = My.Settings.ListView_View
         GetListViewState(ListView, My.Settings.ListView_Columns)
 
@@ -39,17 +38,13 @@ Public Class Explorer
 
         ListView.ShowGroups = My.Settings.ShowGroups
         PingToolStripButton.Checked = My.Settings.Pinger
-        ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
-        ToolStripStatusLabel2.Text = ""
 
         ' Scheduling functions are only available in Vista and 2008 and higher
         '
         ScheduleToolStripMenuItem.Enabled = (Environment.OSVersion.Version.Major >= 6)
         ScheduleToolStripButton.Enabled = ScheduleToolStripMenuItem.Enabled
 
-        ListView.Groups("Online").Header = My.Resources.Strings.OnLine
-        ListView.Groups("Offline").Header = My.Resources.Strings.OffLine
-        ListView.Groups("Unknown").Header = My.Resources.Strings.lit_Unknown
+        CultureManager_UICultureChanged(Application.CurrentCulture)
 
         SetView(ListView.View)
         Machines.Load()
@@ -502,6 +497,7 @@ Public Class Explorer
     End Sub
 
     Private Sub CultureManager_UICultureChanged(newCulture As CultureInfo) Handles CultureManager.UICultureChanged
+        Text = My.Resources.Strings.Title
         ListView.Groups("Online").Header = My.Resources.Strings.OnLine
         ListView.Groups("Offline").Header = My.Resources.Strings.OffLine
         ListView.Groups("Unknown").Header = My.Resources.Strings.lit_Unknown
