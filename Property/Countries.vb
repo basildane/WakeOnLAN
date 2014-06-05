@@ -71,7 +71,7 @@ Public Class Countries : Inherits System.ComponentModel.StringConverter
 
     Public Overrides Function ConvertTo(context As ITypeDescriptorContext, culture As CultureInfo, value As Object, destinationType As Type) As Object
         If TypeOf value Is String AndAlso destinationType = GetType(String) Then
-            For i As Integer = 0 To _countryCodes.Length
+            For i As Integer = 0 To _countryCodes.Length - 1
                 If (_countryCodes(i) = value) Then
                     Return _countryNames(i)
                 End If
@@ -83,7 +83,7 @@ Public Class Countries : Inherits System.ComponentModel.StringConverter
     Public Overrides Function ConvertFrom(context As ITypeDescriptorContext, culture As CultureInfo, value As Object) As Object
         Dim txt As String = TryCast(value, String)
 
-        For i As Integer = 0 To _countryCodes.Length
+        For i As Integer = 0 To _countryCodes.Length - 1
             If (_countryNames(i) = txt) Then
                 Return _countryCodes(i)
             End If
