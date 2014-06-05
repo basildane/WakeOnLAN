@@ -16,6 +16,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
+Imports System
 Imports TaskScheduler
 
 Namespace Schedule
@@ -156,7 +157,7 @@ Namespace Schedule
             Dim encrypt As New Encryption(My.Application.Info.ProductName)
             Dim machinesXML As String
 
-            machinesXML = "-p """ & Machines.GetFile() & """"
+            machinesXML = "-p " & wrapSpaces(Machines.GetFile())
 
             Timer1.Stop()
 
@@ -164,7 +165,11 @@ Namespace Schedule
                 Dim iTask As ITaskDefinition
                 Dim executable As String
 
-                executable = """" & IO.Path.Combine(My.Application.Info.DirectoryPath, "WakeOnLANc.exe") & """"
+#If DEBUG Then
+                executable = wrapSpaces("C:\Projects\WakeOnLan\Console\WakeOnLanC\bin\Debug\WakeOnLANc.exe")
+#Else
+                executable = wrapSpaces(IO.Path.Combine(My.Application.Info.DirectoryPath, "WakeOnLANc.exe"))
+#End If
 
                 Try
                     iTask = _scheduler.NewTask(0)
@@ -222,7 +227,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -w -m " & m.Name
+                                        .Arguments = machinesXML & " -w -m " & wrapSpaces(m.Name)
                                     End With
 
                                 Case Action.ActionItems.StartAll
@@ -243,7 +248,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -s -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                        .Arguments = machinesXML & " -s -m " & wrapSpaces(m.Name) & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
                                     End With
 
@@ -255,7 +260,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -s1 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                        .Arguments = machinesXML & " -s1 -m " & wrapSpaces(m.Name) & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
                                     End With
 
@@ -267,7 +272,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -s4 -m " & m.Name & " -t " & My.Settings.DefaultTimeout
+                                        .Arguments = machinesXML & " -s4 -m " & wrapSpaces(m.Name) & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
                                     End With
 
@@ -333,16 +338,11 @@ Namespace Schedule
 
                     End With
 
-
-                    'Debug.WriteLine(CStr(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\[start]", "Name", Nothing)))
-
                     iTask.Data = myTask.Serialize
                     _taskFolder.RegisterTaskDefinition(myTask.Name, iTask, _
                                                        _TASK_CREATION.TASK_CREATE_OR_UPDATE, _
                                                        My.Settings.TaskUserID, encrypt.EnigmaDecrypt(My.Settings.TaskPassword), _
                                                        _TASK_LOGON_TYPE.TASK_LOGON_PASSWORD, "")
-
-                    'Debug.WriteLine(CStr(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\[stop]", "Name", Nothing)))
 
                     result = True
 
@@ -361,6 +361,14 @@ Namespace Schedule
 
         End Function
 
+        Private Function wrapSpaces(s As String) As String
+            If s.Contains(" ") Then
+                Return """" & s & """"
+            Else
+                Return s
+            End If
+        End Function
+        
 #If False Then
     ' Adds an ACL entry on the specified file for the specified account.
     ' TODO: this only works with domain accounts
