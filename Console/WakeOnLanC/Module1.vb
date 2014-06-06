@@ -266,7 +266,7 @@ Module Module1
             Return _result
 
         ElseIf _machine.Length Then
-            Dim m As Machine
+            Dim machine As Machine
 
             Try
                 Machines.Load(_path)
@@ -277,14 +277,14 @@ Module Module1
 
             End Try
 
-            m = Machines(_machine)
-            If m Is Nothing Then
+            machine = Machines(_machine)
+            If machine Is Nothing Then
                 Console.WriteLine("Cannot find machine " & _machine)
                 Return ErrorCodes.NotFound
             End If
             Console.WriteLine("wakeup sent to " & _machine)
-            Console.WriteLine("waking up mac: " & m.MAC)
-            WakeUp(m, _interface)
+            Console.WriteLine("waking up mac: " & machine.MAC)
+            WakeUp(machine, _interface)
             Return ErrorCodes.Ok
 
         ElseIf _mac.Length Then
@@ -303,6 +303,9 @@ Module Module1
 
     Private Function Abort() As Integer
         Dim dwResult As Integer
+        Dim machine As Machine
+
+        Machines.Load(_path)
 
         If _machine = "" And _all = False Then
             Console.WriteLine("Error.  No machine specified.")
@@ -311,15 +314,15 @@ Module Module1
         End If
 
         If _all Then
-            Machines.Load(_path)
-            For Each m As Machine In Machines
-                Console.Write("Abort shutdown sent to " & m.Name)
-                dwResult = AbortSystemShutdown(m.Netbios)
+            For Each machine In Machines
+                Console.Write("Abort shutdown sent to " & machine.Name)
+                dwResult = AbortSystemShutdown(machine.Netbios)
                 ShowResult(dwResult)
             Next
         Else
-            Console.Write("Abort shutdown sent to " & _machine)
-            dwResult = AbortSystemShutdown(_machine)
+            machine = Machines(_machine)
+            Console.Write("Abort shutdown sent to " & machine.Name)
+            dwResult = AbortSystemShutdown(machine.Netbios)
             ShowResult(dwResult)
         End If
 
@@ -329,6 +332,8 @@ Module Module1
 
     Private Function Shutdown() As Integer
         Dim dwResult As Integer = 1
+        Dim machine As Machine
+
         Machines.Load(_path)
 
         If ((_machine = "") And (_all = False)) Then
@@ -339,14 +344,25 @@ Module Module1
         End If
 
         If _all Then
-            For Each machine As Machine In Machines
+            For Each machine In Machines
                 Console.Write("Shutdown sent to " & machine.Name)
-                dwResult = InitiateSystemShutdown(machine.Netbios, _alertMessage, _delay, _force, _reboot)
+                If String.IsNullOrEmpty(machine.ShutdownCommand) Then
+                    dwResult = InitiateSystemShutdown(machine.Netbios, _alertMessage, _delay, _force, _reboot)
+                Else
+                    Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+                End If
+
                 ShowResult(dwResult)
             Next
         Else
-            Console.Write("Shutdown sent to " & _machine)
-            dwResult = InitiateSystemShutdown(_machine, _alertMessage, _delay, _force, _reboot)
+            machine = Machines(_machine)
+            Console.Write("Shutdown sent to " & machine.Name)
+            If String.IsNullOrEmpty(machine.ShutdownCommand) Then
+                dwResult = InitiateSystemShutdown(machine.Netbios, _alertMessage, _delay, _force, _reboot)
+            Else
+                Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+            End If
+
             ShowResult(dwResult)
         End If
 
@@ -356,6 +372,7 @@ Module Module1
 
     Private Function SleepHibernate() As Integer
         Dim dwResult As Integer = 1
+        Dim machine As Machine
 
         Try
 
@@ -369,14 +386,15 @@ Module Module1
             End If
 
             If _all Then
-                For Each machine As Machine In Machines
+                For Each machine In Machines
                     Console.Write(_mode.ToString() & " sent to " & machine.Name)
                     dwResult = WMIpower(machine.Netbios)
                     ShowResult(dwResult)
                 Next
             Else
-                Console.Write(_mode.ToString() & " sent to " & _machine)
-                dwResult = WMIpower(_machine)
+                machine = Machines(_machine)
+                Console.Write(_mode.ToString() & " sent to " & machine.Name)
+                dwResult = WMIpower(machine.Netbios)
                 ShowResult(dwResult)
             End If
 
