@@ -16,12 +16,11 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
-Imports System.Threading
 Imports System.ComponentModel
 Imports System.Management
 
 Public Class ShutdownThread
-    Public Enum shutdownAction
+    Public Enum ShutdownAction
         None
         Abort
         Shutdown
@@ -30,31 +29,30 @@ Public Class ShutdownThread
         User
     End Enum
 
-    Private WithEvents BackgroundWorker1 As New BackgroundWorker
-    Private _item As ListViewItem
-    Private _progressbar As ProgressBar
-    Private _action As shutdownAction
-    Private _Message As String
-    Private _delay As Integer
-    Private _force As Boolean
-    Private _reboot As Boolean
-    Private errMessage As String
+    Private WithEvents _backgroundWorker As New BackgroundWorker
+    Private ReadOnly _item As ListViewItem
+    Private ReadOnly _progressbar As ProgressBar
+    Private _action As ShutdownAction
+    Private ReadOnly _message As String
+    Private ReadOnly _delay As Integer
+    Private ReadOnly _force As Boolean
+    Private ReadOnly _reboot As Boolean
+    Private _errMessage As String
 
-    Public Sub New(ByVal item As ListViewItem, ByVal progressbar As ProgressBar, ByVal action As shutdownAction, ByVal Message As String, ByVal Delay As Integer, ByVal Force As Boolean, ByVal Reboot As Boolean)
+    Public Sub New(ByVal item As ListViewItem, ByVal progressbar As ProgressBar, ByVal action As ShutdownAction, ByVal message As String, ByVal delay As Integer, ByVal force As Boolean, ByVal reboot As Boolean)
         _item = item
         _progressbar = progressbar
         _action = action
-        _Message = Message
-        _delay = Delay
-        _force = Force
+        _Message = message
+        _delay = delay
+        _force = force
         _reboot = Reboot
-        errMessage = ""
-        BackgroundWorker1.RunWorkerAsync()
+        _errMessage = ""
+        _backgroundWorker.RunWorkerAsync()
     End Sub
 
-    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
         Dim dwResult As Integer
-        Dim dwReason As Long
         Dim sMachine As String
         Dim sAlertMessage As String
         Dim dwDelay As Long
@@ -62,7 +60,6 @@ Public Class ShutdownThread
         Dim dwReboot As Long
         Dim m As Machine
 
-        dwReason = 0L
         dwResult = 0
         sAlertMessage = _Message & vbNullChar
         dwDelay = _delay
@@ -74,33 +71,33 @@ Public Class ShutdownThread
 
         _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
 
-        If (_action <> shutdownAction.Abort And m.ShutdownCommand.Length > 0) Then _action = shutdownAction.User
+        If (_action <> ShutdownAction.Abort And m.ShutdownCommand.Length > 0) Then _action = ShutdownAction.User
 
         Try
             Select Case _action
-                Case shutdownAction.Abort
+                Case ShutdownAction.Abort
                     dwResult = AbortSystemShutdown(sMachine)
 
-                Case shutdownAction.Shutdown
+                Case ShutdownAction.Shutdown
                     dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
 
-                Case shutdownAction.User
+                Case ShutdownAction.User
                     Shell(m.ShutdownCommand, AppWinStyle.Hide, False)
 
-                Case shutdownAction.Sleep, shutdownAction.Hibernate
+                Case ShutdownAction.Sleep, ShutdownAction.Hibernate
                     dwResult = WMIpower(sMachine)
 
             End Select
 
         Catch ex As Exception
-            errMessage = ex.Message
+            _errMessage = ex.Message
             e.Result = 0
             Return
 
         End Try
 
         If dwResult = 0 Then
-            errMessage = FormatMessage(Err.LastDllError)
+            _errMessage = FormatMessage(Err.LastDllError)
         End If
         e.Result = dwResult
 
@@ -109,7 +106,6 @@ Public Class ShutdownThread
     Private Function WMIpower(sMachine As String) As Integer
         Dim process As ManagementClass
         Dim path As ManagementPath
-        Dim options As ConnectionOptions = New ConnectionOptions()
         Dim inparams, outparams As ManagementBaseObject
         Dim ProcID, retval As String
 
@@ -117,6 +113,7 @@ Public Class ShutdownThread
         path = New ManagementPath(String.Format("{0}\root\cimv2", sMachine))
 
 #If False Then
+        Dim options As ConnectionOptions = New ConnectionOptions()
         options.Username = ""
         options.Password = ""
         process.Scope = New ManagementScope(path, options)
@@ -127,10 +124,10 @@ Public Class ShutdownThread
 
         inparams = process.GetMethodParameters("Create")
         Select Case _action
-            Case shutdownAction.Sleep
+            Case ShutdownAction.Sleep
                 inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
 
-            Case shutdownAction.Hibernate
+            Case ShutdownAction.Hibernate
                 inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
 
         End Select
@@ -142,12 +139,12 @@ Public Class ShutdownThread
         Return IIf(retval, 0, 1)
     End Function
 
-    Private Sub backgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+    Private Sub backgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
 
         With _item.SubItems(1)
             If e.Result = 0 Then
                 .ForeColor = Color.Red
-                .Text = String.Format(My.Resources.Strings.ErrorMsg, errMessage)
+                .Text = String.Format(My.Resources.Strings.ErrorMsg, _errMessage)
                 .Tag = .Text ' error
             Else
                 .ForeColor = Color.Green

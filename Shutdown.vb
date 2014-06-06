@@ -18,11 +18,11 @@
 
 Public Class Shutdown
 
-    Private CountdownTime As Integer = My.Settings.emerg_delay
+    Private _countdownTime As Integer = My.Settings.emerg_delay
 
     Private Sub Clear()
         ShutdownMode = True
-        meItem = Nothing
+        MeItem = Nothing
         ProgressBar1.Value = 0
         ProgressBar1.Maximum = 0
         Cursor = Cursors.Default
@@ -41,10 +41,10 @@ Public Class Shutdown
         shut_reboot.Checked = My.Settings.Reboot
 
         Select Case My.Settings.shutdownAction
-            Case ShutdownThread.shutdownAction.Sleep
+            Case ShutdownThread.ShutdownAction.Sleep
                 rbSleep.Checked = True
 
-            Case ShutdownThread.shutdownAction.Hibernate
+            Case ShutdownThread.ShutdownAction.Hibernate
                 rbHibernate.Checked = True
 
             Case Else
@@ -62,12 +62,12 @@ Public Class Shutdown
                 ProgressBar1.Maximum += 1
             Else
                 newItem.SubItems.Add(My.Resources.Strings.Pausing)
-                meItem = newItem
+                MeItem = newItem
             End If
 
         Next
 
-        Me.ShowDialog(Parent)
+        ShowDialog(Parent)
 
     End Sub
 
@@ -82,10 +82,10 @@ Public Class Shutdown
         shut_reboot.Checked = False
 
         Select Case My.Settings.shutdownAction
-            Case ShutdownThread.shutdownAction.Sleep
+            Case ShutdownThread.ShutdownAction.Sleep
                 rbSleep.Checked = True
 
-            Case ShutdownThread.shutdownAction.Hibernate
+            Case ShutdownThread.ShutdownAction.Hibernate
                 rbHibernate.Checked = True
 
             Case Else
@@ -106,16 +106,16 @@ Public Class Shutdown
                 End If
             Else
                 newItem.SubItems.Add(My.Resources.Strings.Pausing)
-                meItem = newItem
+                MeItem = newItem
             End If
 
         Next
 
-        Me.ShowDialog(Parent)
+        ShowDialog(Parent)
 
     End Sub
 
-    Private Sub AbortButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AbortButton.Click
+    Private Sub AbortButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles AbortButton.Click
         Label_Operation.Text = My.Resources.Strings.AbortShutdown
         ShutdownMode = False
 
@@ -123,7 +123,7 @@ Public Class Shutdown
         For Each item As ListViewItem In ListView1.Items
             If item.SubItems(1).Text = My.Resources.Strings.ShuttingDown Then
                 item.SubItems(1).Text = My.Resources.Strings.Aborting
-                Dim st As New ShutdownThread(item, ProgressBar1, ShutdownThread.shutdownAction.Abort, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
+                Dim st As New ShutdownThread(item, ProgressBar1, ShutdownThread.ShutdownAction.Abort, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
             End If
         Next
 
@@ -139,7 +139,7 @@ Public Class Shutdown
             End If
         Next
 
-        If meItem Is Nothing Then Me.Close()
+        If MeItem Is Nothing Then Me.Close()
         If ShutdownMode Then Timer1.Start()
     End Sub
 
@@ -150,9 +150,9 @@ Public Class Shutdown
         End If
 
         Try
-            CountdownTime -= 1
-            meItem.SubItems(1).Text = String.Format(My.Resources.Strings.ShutDownSeconds, CountdownTime)
-            If CountdownTime <= 0 Then
+            _countdownTime -= 1
+            MeItem.SubItems(1).Text = String.Format(My.Resources.Strings.ShutDownSeconds, _countdownTime)
+            If _countdownTime <= 0 Then
                 Timer1.Stop()
                 If (rbShutdown.Checked) Then LocalShutdown.ExitWindows(RestartOptions.PowerOff, True)
                 If (rbSleep.Checked) Then LocalShutdown.ExitWindows(RestartOptions.Suspend, True)
@@ -166,20 +166,20 @@ Public Class Shutdown
 
     End Sub
 
-    Private Sub Shutdown_SizeChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.SizeChanged
+    Private Sub Shutdown_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles Me.SizeChanged
         With ListView1
             .Columns(1).Width = .ClientSize.Width - .Columns(0).Width
         End With
     End Sub
 
     Private Sub ShutdownButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ShutdownButton.Click
-        Dim action As ShutdownThread.shutdownAction
+        Dim action As ShutdownThread.ShutdownAction
 
         Me.Cursor = Cursors.WaitCursor
 
-        If (rbShutdown.Checked) Then action = ShutdownThread.shutdownAction.Shutdown
-        If (rbSleep.Checked) Then action = ShutdownThread.shutdownAction.Sleep
-        If (rbHibernate.Checked) Then action = ShutdownThread.shutdownAction.Hibernate
+        If (rbShutdown.Checked) Then action = ShutdownThread.ShutdownAction.Shutdown
+        If (rbSleep.Checked) Then action = ShutdownThread.ShutdownAction.Sleep
+        If (rbHibernate.Checked) Then action = ShutdownThread.ShutdownAction.Hibernate
 
         My.Settings.DefaultMessage = shut_message.Text
         My.Settings.DefaultTimeout = shut_timeout.Text
@@ -194,8 +194,8 @@ Public Class Shutdown
             End If
         Next
 
-        If (ListView1.Items.Count = 1) And (Not meItem Is Nothing) Then
-            CountdownTime = 0
+        If (ListView1.Items.Count = 1) And (Not MeItem Is Nothing) Then
+            _countdownTime = 0
             Complete()
         End If
 
