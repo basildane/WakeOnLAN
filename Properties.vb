@@ -26,44 +26,51 @@ Public Class Properties
         Dim m As New Machine
         Dim r As Integer
 
-        If (Not Integer.TryParse(UDPPort.Text, r)) Then
-            MessageBox.Show("UDP Port error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Exit Sub
-        End If
+        Try
+            If (Not Integer.TryParse(UDPPort.Text, r)) Then
+                MessageBox.Show("UDP Port error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
 
-        If (Not Integer.TryParse(TTL.Text, r)) Then
-            MessageBox.Show("TTL error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Exit Sub
-        End If
+            If (Not Integer.TryParse(TTL.Text, r)) Then
+                MessageBox.Show("TTL error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
 
-        Machines.Remove(_hostName)
+            Machines.Remove(_hostName)
 
-        m.Name = MachineName.Text
-        m.MAC = MAC.Text
-        m.IP = IP.Text
+            m.Name = MachineName.Text
+            m.MAC = MAC.Text
+            m.IP = IP.Text
 
-        If (rbIP.Checked) Then
-            m.Method = 0
-        Else
-            m.Method = 1
-        End If
+            If (rbIP.Checked) Then
+                m.Method = 0
+            Else
+                m.Method = 1
+            End If
 
-        m.Broadcast = Broadcast.Text
-        m.Netbios = tHostURI.Text
-        m.Emergency = CheckBox_Emergency.Checked
-        m.ShutdownCommand = TextBox_Command.Text
-        m.Group = Group.Text
-        m.UDPPort = CInt(UDPPort.Text)
-        m.TTL = CInt(TTL.Text)
-        Dim item As ComboboxItem
-        item = ComboBoxAdapters.SelectedItem
-        m.Adapter = item.Value
-        m.RDPPort = tRDPPort.Text
-        Machines.Add(m)
+            m.Broadcast = Broadcast.Text
+            m.Netbios = tHostURI.Text
+            m.Emergency = CheckBox_Emergency.Checked
+            m.ShutdownCommand = TextBox_Command.Text
+            m.Group = Group.Text
+            m.UDPPort = CInt(UDPPort.Text)
+            m.TTL = CInt(TTL.Text)
+            Dim item As ComboboxItem
+            item = ComboBoxAdapters.SelectedItem
+            m.Adapter = item.Value
+            m.RDPPort = tRDPPort.Text
+            Machines.Add(m)
 
-        Machines.Save()
-        DialogResult = Windows.Forms.DialogResult.OK
-        Close()
+            Machines.Save()
+            DialogResult = Windows.Forms.DialogResult.OK
+            Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, My.Resources.Strings.lit_Error, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
     End Sub
 
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
