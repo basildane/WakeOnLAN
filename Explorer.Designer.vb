@@ -75,6 +75,9 @@ Partial Class Explorer
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
         Me.SplitContainer = New System.Windows.Forms.SplitContainer()
         Me.TreeView = New System.Windows.Forms.TreeView()
+        Me.TreeViewContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.WakeUpToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShutDownToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TreeNodeImageList = New System.Windows.Forms.ImageList(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.ListView = New System.Windows.Forms.ListView()
@@ -175,6 +178,7 @@ Partial Class Explorer
         Me.SplitContainer.Panel1.SuspendLayout()
         Me.SplitContainer.Panel2.SuspendLayout()
         Me.SplitContainer.SuspendLayout()
+        Me.TreeViewContextMenuStrip.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -244,10 +248,27 @@ Partial Class Explorer
         '
         'TreeView
         '
+        Me.TreeView.ContextMenuStrip = Me.TreeViewContextMenuStrip
         resources.ApplyResources(Me.TreeView, "TreeView")
         Me.TreeView.ImageList = Me.TreeNodeImageList
         Me.TreeView.Name = "TreeView"
         Me.TreeView.ShowLines = False
+        '
+        'TreeViewContextMenuStrip
+        '
+        Me.TreeViewContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem1, Me.ShutDownToolStripMenuItem1})
+        Me.TreeViewContextMenuStrip.Name = "TreeViewContextMenuStrip"
+        resources.ApplyResources(Me.TreeViewContextMenuStrip, "TreeViewContextMenuStrip")
+        '
+        'WakeUpToolStripMenuItem1
+        '
+        resources.ApplyResources(Me.WakeUpToolStripMenuItem1, "WakeUpToolStripMenuItem1")
+        Me.WakeUpToolStripMenuItem1.Name = "WakeUpToolStripMenuItem1"
+        '
+        'ShutDownToolStripMenuItem1
+        '
+        resources.ApplyResources(Me.ShutDownToolStripMenuItem1, "ShutDownToolStripMenuItem1")
+        Me.ShutDownToolStripMenuItem1.Name = "ShutDownToolStripMenuItem1"
         '
         'TreeNodeImageList
         '
@@ -783,6 +804,7 @@ Partial Class Explorer
         Me.SplitContainer.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer.ResumeLayout(False)
+        Me.TreeViewContextMenuStrip.ResumeLayout(False)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -852,5 +874,8 @@ Partial Class Explorer
     Friend WithEvents ToolStripButtonDonate As System.Windows.Forms.ToolStripButton
     Friend WithEvents CultureManager As Localization.CultureManager
     Friend WithEvents OptionsToolStripButton As System.Windows.Forms.ToolStripButton
+    Friend WithEvents TreeViewContextMenuStrip As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents WakeUpToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ShutDownToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class

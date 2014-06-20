@@ -15,6 +15,7 @@
 '
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
+Imports System.Linq
 
 Public Class Shutdown
 
@@ -29,8 +30,8 @@ Public Class Shutdown
         ListView1.Items.Clear()
     End Sub
 
-    Public Sub PerformShutdown(ByVal Parent As Form, ByVal Items As ListView.SelectedListViewItemCollection)
-        Dim m As Machine
+    Public Sub PerformShutdown(ByVal Parent As Form, ByVal Items() As String)
+        Dim machine As Machine
         Dim newItem As ListViewItem
 
         Clear()
@@ -52,12 +53,12 @@ Public Class Shutdown
 
         End Select
 
-        For Each l As ListViewItem In Items
-            m = Machines(l.Name)
-            newItem = ListView1.Items.Add(m.Name)
+        For Each item As String In Items
+            machine = Machines(item)
+            newItem = ListView1.Items.Add(machine.Name)
             newItem.UseItemStyleForSubItems = False
 
-            If String.Compare(m.Netbios, My.Computer.Name, True) Then
+            If String.Compare(machine.Netbios, My.Computer.Name, True) Then
                 newItem.SubItems.Add(My.Resources.Strings.lit_Ready)
                 ProgressBar1.Maximum += 1
             Else
@@ -93,12 +94,12 @@ Public Class Shutdown
 
         End Select
 
-        For Each m As Machine In Machines
-            newItem = ListView1.Items.Add(m.Name)
+        For Each machine As Machine In Machines
+            newItem = ListView1.Items.Add(machine.Name)
             newItem.UseItemStyleForSubItems = False
 
-            If String.Compare(m.Netbios, My.Computer.Name, True) Then
-                If m.Emergency Then
+            If String.Compare(machine.Netbios, My.Computer.Name, True) Then
+                If machine.Emergency Then
                     newItem.SubItems.Add(My.Resources.Strings.ShuttingDown)
                     ProgressBar1.Maximum += 1
                 Else
@@ -120,24 +121,20 @@ Public Class Shutdown
         ShutdownMode = False
 
         Timer1.Stop()
-        For Each item As ListViewItem In ListView1.Items
-            If item.SubItems(1).Text = My.Resources.Strings.ShuttingDown Then
-                item.SubItems(1).Text = My.Resources.Strings.Aborting
-                Dim st As New ShutdownThread(item, ProgressBar1, ShutdownThread.ShutdownAction.Abort, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
-            End If
+        For Each item As ListViewItem In From item1 As ListViewItem In ListView1.Items Where item1.SubItems(1).Text = My.Resources.Strings.ShuttingDown
+            item.SubItems(1).Text = My.Resources.Strings.Aborting
+            Dim shutdownThread As New ShutdownThread(item, ProgressBar1, shutdownThread.ShutdownAction.Abort, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
         Next
 
         Me.Cursor = Cursors.Default
     End Sub
 
     Public Sub Complete()
-        For Each item As ListViewItem In ListView1.Items
-            If (Not String.IsNullOrEmpty(item.SubItems(1).Tag)) Then
-                Cursor = Cursors.Default
-                Label_Operation.Text = My.Resources.Strings.lit_Error
-                Return
-            End If
-        Next
+        If ListView1.Items.Cast(Of ListViewItem)().Any(Function(item) (Not String.IsNullOrEmpty(item.SubItems(1).Tag))) Then
+            Cursor = Cursors.Default
+            Label_Operation.Text = My.Resources.Strings.lit_Error
+            Return
+        End If
 
         If MeItem Is Nothing Then Me.Close()
         If ShutdownMode Then Timer1.Start()
@@ -188,10 +185,8 @@ Public Class Shutdown
         My.Settings.shutdownAction = action
 
         Label_Operation.Text = My.Resources.Strings.BeginShutdown
-        For Each item As ListViewItem In ListView1.Items
-            If (item.SubItems(1).Text = My.Resources.Strings.lit_Ready) Then
-                Dim st As New ShutdownThread(item, ProgressBar1, action, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
-            End If
+        For Each item As ListViewItem In From item1 As ListViewItem In ListView1.Items Where (item1.SubItems(1).Text = My.Resources.Strings.lit_Ready)
+            Dim shutdownThread As New ShutdownThread(item, ProgressBar1, action, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
         Next
 
         If (ListView1.Items.Count = 1) And (Not MeItem Is Nothing) Then

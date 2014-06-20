@@ -20,6 +20,8 @@ Imports System.Diagnostics
 Imports System.Windows.Forms
 Imports AutoUpdaterDotNET
 Imports System.Globalization
+Imports System.Windows.Forms.VisualStyles
+Imports System.Linq
 
 Public Class Explorer
 
@@ -517,8 +519,11 @@ Public Class Explorer
     End Sub
 
     Private Sub ShutdownToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ShutdownToolStripMenuItem.Click
+        Dim items As String()
+
         ResetMonitor()
-        Shutdown.PerformShutdown(Me, ListView.SelectedItems)
+        items = ListView.SelectedItems.Cast(Of ListViewItem).Select(Function(lvi As ListViewItem) lvi.Text).ToArray()
+        Shutdown.PerformShutdown(Me, items)
     End Sub
 
     Private Sub AbortShutdownToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles AbortShutdownToolStripMenuItem.Click
@@ -696,6 +701,31 @@ Public Class Explorer
         SetForegroundWindow(SplashPtr)
     End Sub
 
+    ' TreeView context menu
+    Private Sub WakeUpToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles WakeUpToolStripMenuItem1.Click
+        Dim m As Machine
+
+        For Each l As ListViewItem In ListView.Items
+            m = Machines(l.Name)
+            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SentTo, m.Name, m.MAC)
+            WakeUp(m)
+        Next
+    End Sub
+
+    Private Sub ShutDownToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ShutDownToolStripMenuItem1.Click
+        Dim items As String()
+
+        ResetMonitor()
+        items = ListView.Items.Cast(Of ListViewItem).Select(Function(lvi As ListViewItem) lvi.Text).ToArray()
+        Shutdown.PerformShutdown(Me, items)
+    End Sub
+
+    ' if user right-clicks a group, select that group
+    Private Sub TreeView_NodeMouseClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView.NodeMouseClick
+        If e.Button = MouseButtons.Right Then
+            TreeView.SelectedNode = e.Node
+        End If
+    End Sub
 End Class
 
 ' Implements the manual sorting of items by columns.
