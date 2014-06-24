@@ -1278,13 +1278,13 @@
     <Folder Include="Help\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AutoUpdater\AutoUpdater.NET\AutoUpdater.NET.csproj">
-      <Project>{fb9e7e6b-b19f-4f37-a708-2996190cef13}</Project>
-      <Name>AutoUpdater.NET</Name>
-    </ProjectReference>
     <ProjectReference Include="AlphaWindow\AlphaWindow.csproj">
       <Project>{45d56ff1-d0f9-4c71-aa72-811635043fad}</Project>
       <Name>AlphaWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="AutoUpdater.NET\AutoUpdater.NET.csproj">
+      <Project>{fb9e7e6b-b19f-4f37-a708-2996190cef13}</Project>
+      <Name>AutoUpdater.NET</Name>
     </ProjectReference>
     <ProjectReference Include="Localization\Localization.csproj">
       <Project>{62e6c7ea-ab84-4e44-b05a-af648e60fa6d}</Project>
