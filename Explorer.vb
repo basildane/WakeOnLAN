@@ -20,7 +20,6 @@ Imports System.Diagnostics
 Imports System.Windows.Forms
 Imports AutoUpdaterDotNET
 Imports System.Globalization
-Imports System.Windows.Forms.VisualStyles
 Imports System.Linq
 
 Public Class Explorer
@@ -92,7 +91,7 @@ Public Class Explorer
         ToolStripStatusLabel2.Text = e.text
         If (e.status = AutoUpdateEventArgs.statusCodes.updateAvailable) Then
             NotifyIconUpdate.Visible = True
-            NotifyIconUpdate.ShowBalloonTip(0, "WakeOnLAN", e.text, ToolTipIcon.Info)
+            NotifyIconUpdate.ShowBalloonTip(0, My.Resources.Strings.Title, e.text, ToolTipIcon.Info)
         End If
     End Sub
 
@@ -178,20 +177,12 @@ Public Class Explorer
         TreeView.Nodes.Clear()
         tvRoot = TreeView.Nodes.Add(My.Resources.Strings.AllMachines)
 
-        For Each m As Machine In Machines
-            If m.Group.Length Then
-                found = False
-                For Each n As TreeNode In tvRoot.Nodes
-                    If n.Text = m.Group Then
-                        found = True
-                        Exit For
-                    End If
-                Next
+        For Each machine As Machine In From m1 As Machine In Machines Where m1.Group.Length
+            found = tvRoot.Nodes.Cast(Of TreeNode)().Any(Function(n) n.Text = machine.Group)
 
-                If Not found Then
-                    tvNode = tvRoot.Nodes.Add(m.Group)
-                    If My.Settings.CurrentGroup = m.Group Then TreeView.SelectedNode = tvNode
-                End If
+            If Not found Then
+                tvNode = tvRoot.Nodes.Add(machine.Group)
+                If My.Settings.CurrentGroup = machine.Group Then TreeView.SelectedNode = tvNode
             End If
         Next
         If My.Settings.CurrentGroup = tvRoot.Text Then TreeView.SelectedNode = tvRoot
@@ -204,21 +195,19 @@ Public Class Explorer
     End Sub
 
     Private Sub LoadList()
-        Dim l As ListViewItem
+        Dim listViewItem As ListViewItem
 
         ListView.SuspendLayout()
         ListView.Sorting = SortOrder.None
         ListView.Items.Clear()
 
-        For Each m As Machine In Machines
-            If TreeView.SelectedNode.Level = 0 Or TreeView.SelectedNode.Text = m.Group Then
-                l = ListView.Items.Add(m.Name, m.Name, 0)
-                l.SubItems.Add(m.Status.ToString)
-                l.SubItems.Add(m.IP)
-                l.SubItems.Add(m.Netbios)
-                l.SubItems.Add(m.Group)
-                StatusChange(m.Name, m.Status, m.IP)
-            End If
+        For Each machine As Machine In From m1 As Machine In Machines Where TreeView.SelectedNode.Level = 0 Or TreeView.SelectedNode.Text = m1.Group
+            listViewItem = ListView.Items.Add(machine.Name, machine.Name, 0)
+            listViewItem.SubItems.Add(machine.Status.ToString)
+            listViewItem.SubItems.Add(machine.IP)
+            listViewItem.SubItems.Add(machine.Netbios)
+            listViewItem.SubItems.Add(machine.Group)
+            StatusChange(machine.Name, machine.Status, machine.IP)
         Next
 
         ListView.ListViewItemSorter = New ListViewItemComparer(My.Settings.SortColumn)
@@ -229,15 +218,15 @@ Public Class Explorer
 
     Private Sub DoPing()
 
-        For Each m As Machine In Machines
+        For Each machine As Machine In Machines
             If PingToolStripButton.Checked Then
-                If TreeView.SelectedNode.Level = 0 Or TreeView.SelectedNode.Text = m.Group Then
-                    m.Run()
+                If TreeView.SelectedNode.Level = 0 Or TreeView.SelectedNode.Text = machine.Group Then
+                    machine.Run()
                 Else
-                    m.Cancel()
+                    machine.Cancel()
                 End If
             Else
-                m.Cancel()
+                machine.Cancel()
             End If
         Next
 
@@ -277,33 +266,33 @@ Public Class Explorer
 
     Private Sub SetView(ByVal view As System.Windows.Forms.View)
         'Figure out which menu item should be checked
-        Dim MenuItemToCheck As ToolStripMenuItem = Nothing
+        Dim menuItemToCheck As ToolStripMenuItem = Nothing
         Select Case view
             Case view.Details
-                MenuItemToCheck = DetailsToolStripMenuItem1
+                menuItemToCheck = DetailsToolStripMenuItem1
 
             Case view.LargeIcon
-                MenuItemToCheck = LargeIconsToolStripMenuItem1
+                menuItemToCheck = LargeIconsToolStripMenuItem1
 
             Case view.List
-                MenuItemToCheck = ListToolStripMenuItem1
+                menuItemToCheck = ListToolStripMenuItem1
 
             Case view.SmallIcon
-                MenuItemToCheck = SmallIconsToolStripMenuItem1
+                menuItemToCheck = SmallIconsToolStripMenuItem1
 
             Case view.Tile
-                MenuItemToCheck = TileToolStripMenuItem1
+                menuItemToCheck = TileToolStripMenuItem1
 
             Case Else
                 Debug.Fail("Unexpected View")
                 view = view.Details
-                MenuItemToCheck = DetailsToolStripMenuItem1
+                menuItemToCheck = DetailsToolStripMenuItem1
 
         End Select
 
         'Check the appropriate menu item and deselect all others under the Views menu
         For Each menuItem As ToolStripMenuItem In ListViewToolStripButton.DropDownItems
-            If menuItem Is MenuItemToCheck Then
+            If menuItem Is menuItemToCheck Then
                 menuItem.Checked = True
             Else
                 menuItem.Checked = False
@@ -399,7 +388,7 @@ Public Class Explorer
     End Sub
 
     Private Sub TimerPing_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles TimerPing.Tick
-        Dim m As Machine
+        Dim machine As Machine
         Dim i As Integer
 
         If PingToolStripButton.Checked = False Or ListView.SelectedItems.Count <> 1 Then
@@ -407,26 +396,26 @@ Public Class Explorer
             Exit Sub
         End If
 
-        m = Machines(ListView.SelectedItems(0).Name)
+        machine = Machines(ListView.SelectedItems(0).Name)
 
         Try
-            If m.Reply Is Nothing Then
+            If machine.Reply Is Nothing Then
                 ToolStripStatusLabel1.Text = My.Resources.Strings.OffLine
-                ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.HostNotResponding, m.Name)
+                ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.HostNotResponding, machine.Name)
                 ToolStripProgressBar1.Value = 0
             Else
-                Select Case m.Reply.Status
+                Select Case machine.Reply.Status
                     Case Net.NetworkInformation.IPStatus.Success
                         ToolStripStatusLabel1.Text = My.Resources.Strings.OnLine
-                        i = m.Reply.RoundtripTime
+                        i = machine.Reply.RoundtripTime
                         If i > 10 Then i = 10
                         ToolStripProgressBar1.Visible = True
                         ToolStripProgressBar1.Value = 10 - i
-                        ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.ResponseTime, m.Name, m.Reply.RoundtripTime)
+                        ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.ResponseTime, machine.Name, machine.Reply.RoundtripTime)
 
                     Case Else
                         ToolStripStatusLabel1.Text = My.Resources.Strings.OffLine
-                        ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.HostNotResponding, m.Name)
+                        ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.HostNotResponding, machine.Name)
                         ToolStripProgressBar1.Value = 0
 
                 End Select
@@ -474,48 +463,43 @@ Public Class Explorer
     End Sub
 
     Private Sub WakeUpToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles WakeUpToolStripMenuItem.Click
-        Dim m As Machine
+        Dim machine As Machine
 
-        For Each l As ListViewItem In ListView.SelectedItems
-            m = Machines(l.Name)
-            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SentTo, m.Name, m.MAC)
-            WakeUp(m)
+        For Each listViewItem As ListViewItem In ListView.SelectedItems
+            machine = Machines(listViewItem.Name)
+            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SentTo, machine.Name, machine.MAC)
+            WakeUp(machine)
         Next
     End Sub
 
     Private Sub OptionsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OptionsToolStripMenuItem.Click, OptionsToolStripButton.Click
         Options.ShowDialog(Me)
         If (My.Settings.Language <> Application.CurrentCulture.IetfLanguageTag) Then
-            ChangeLanguage(My.Settings.Language)
+            Localization.CultureManager.ApplicationUICulture = New CultureInfo(My.Settings.Language)
+            LoadTree()
+            TreeView.SelectedNode = TreeView.Nodes(0)
+            LoadList()
+            My.Settings.DefaultMessage = My.Resources.Strings.DefaultMessage
+            My.Settings.emerg_message = My.Resources.Strings.DefaultEmergency
         End If
-    End Sub
-
-    Private Sub ChangeLanguage(newLanguage As String)
-        My.Settings.Language = newLanguage
-        Localization.CultureManager.ApplicationUICulture = New CultureInfo(newLanguage)
-        LoadTree()
-        TreeView.SelectedNode = TreeView.Nodes(0)
-        LoadList()
     End Sub
 
     Private Sub CultureManager_UICultureChanged(newCulture As CultureInfo) Handles CultureManager.UICultureChanged
         Text = My.Resources.Strings.Title
+        NotifyIcon1.Text = My.Resources.Strings.Title
         ListView.Groups("Online").Header = My.Resources.Strings.OnLine
         ListView.Groups("Offline").Header = My.Resources.Strings.OffLine
         ListView.Groups("Unknown").Header = My.Resources.Strings.lit_Unknown
 
         ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
-        ToolStripStatusLabel2.Text = ""
-
-        My.Settings.DefaultMessage = My.Resources.Strings.DefaultMessage
-        My.Settings.emerg_message = My.Resources.Strings.DefaultEmergency
+        ToolStripStatusLabel2.Text = String.Empty
     End Sub
 
     Private Sub RDPToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles RDPToolStripMenuItem.Click
-        Dim m As Machine
+        Dim machine As Machine
 
-        m = Machines(ListView.SelectedItems(0).Name)
-        Shell(String.Format("mstsc.exe -v:{0}:{1}", m.Netbios, m.RDPPort), AppWinStyle.NormalFocus, False)
+        machine = Machines(ListView.SelectedItems(0).Name)
+        Shell(String.Format("mstsc.exe -v:{0}:{1}", machine.Netbios, machine.RDPPort), AppWinStyle.NormalFocus, False)
     End Sub
 
     Private Sub ShutdownToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ShutdownToolStripMenuItem.Click
@@ -667,11 +651,11 @@ Public Class Explorer
         '
         ToolStripMenuItemWakeUp.DropDownItems.Clear()
 
-        For Each m As Machine In Machines
+        For Each machine As Machine In Machines
             Dim item As ToolStripMenuItem = New ToolStripMenuItem()
 
-            item.Name = m.Name
-            item.Text = m.Name
+            item.Name = machine.Name
+            item.Text = machine.Name
             ToolStripMenuItemWakeUp.DropDownItems.Add(item)
             AddHandler item.Click, AddressOf TaskTrayWake_Click
         Next
@@ -679,12 +663,12 @@ Public Class Explorer
 
     Private Sub TaskTrayWake_Click(sender As System.Object, e As EventArgs)
         Dim item As ToolStripMenuItem = TryCast(sender, ToolStripMenuItem)
-        Dim m As Machine
+        Dim machine As Machine
 
         If item IsNot Nothing Then
-            m = Machines(item.Name)
-            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SentTo, m.Name, m.MAC)
-            WakeUp(m)
+            machine = Machines(item.Name)
+            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SentTo, machine.Name, machine.MAC)
+            WakeUp(machine)
         End If
     End Sub
 
@@ -703,12 +687,12 @@ Public Class Explorer
 
     ' TreeView context menu
     Private Sub WakeUpToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles WakeUpToolStripMenuItem1.Click
-        Dim m As Machine
+        Dim machine As Machine
 
         For Each l As ListViewItem In ListView.Items
-            m = Machines(l.Name)
-            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SentTo, m.Name, m.MAC)
-            WakeUp(m)
+            machine = Machines(l.Name)
+            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SentTo, machine.Name, machine.MAC)
+            WakeUp(machine)
         Next
     End Sub
 
@@ -726,6 +710,7 @@ Public Class Explorer
             TreeView.SelectedNode = e.Node
         End If
     End Sub
+
 End Class
 
 ' Implements the manual sorting of items by columns.

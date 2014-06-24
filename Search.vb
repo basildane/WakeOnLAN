@@ -20,6 +20,7 @@ Imports System.Net
 Imports System.Windows.Forms
 Imports System.Management
 Imports System.Linq
+Imports WakeOnLan.My
 
 Public Class Search
 
@@ -37,27 +38,30 @@ Public Class Search
         Public WakeOnMagicOnly As String
     End Structure
 
-    Private ReadOnly _none As String = "--" & My.Resources.Strings.lit_None & "--"
+    Private ReadOnly _none As String = "--" & Resources.Strings.lit_None & "--"
 
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OKButton.Click
-        Dim m As Machine
+        Dim machine As Machine
 
-        For Each l As ListViewItem In listView.CheckedItems
-            Machines.Remove(l.SubItems(0).Text)
+        For Each listViewItem As ListViewItem In listView.CheckedItems
+            Machines.Remove(listViewItem.SubItems(0).Text)
 
-            m = New Machine
-            m.Name = l.SubItems(0).Text
-            m.MAC = l.SubItems(4).Text
-            m.IP = l.SubItems(3).Text
-            m.Netbios = l.SubItems(0).Text
-            m.Emergency = True
-            m.ShutdownCommand = ""
+            machine = New Machine
+            machine.Name = listViewItem.SubItems(0).Text
+            machine.MAC = listViewItem.SubItems(4).Text
+            machine.IP = listViewItem.SubItems(3).Text
+            machine.Netbios = listViewItem.SubItems(0).Text
+            machine.Emergency = True
+            machine.ShutdownCommand = ""
             If (ComboBoxGroup.Text <> _none) Then
-                m.Group = ComboBoxGroup.Text
+                machine.Group = ComboBoxGroup.Text
             End If
 
-            Machines.Add(m)
+            Machines.Add(machine)
         Next
+
+        MySettings.Default.SearchStart = IpAddressControl_Start.Text
+        MySettings.Default.SearchEnd = IpAddressControl_End.Text
 
         DialogResult = Windows.Forms.DialogResult.OK
         Close()
@@ -72,9 +76,9 @@ Public Class Search
         Dim profile As Profile
 
         Try
-            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.Polling, ip)
+            ToolStripStatusLabel1.Text = String.Format(Resources.Strings.Polling, ip)
 
-            If Not My.Computer.Network.Ping(ip) Then
+            If Not Computer.Network.Ping(ip) Then
                 backgroundWorker.ReportProgress(progress, Nothing)
                 Exit Sub
             End If
@@ -137,8 +141,8 @@ Public Class Search
                         searcher2 = New ManagementObjectSearcher(scopeWmi, wmiQuery)
                         For Each managementObject2 As ManagementObject In searcher2.Get()
                             If (managementObject2("InstanceName").ToString().ToUpper.StartsWith(managementObjectAdapter("PNPDeviceID"))) Then
-                                profile.PowerManagementEnable = IIf(managementObject2("Enable"), My.Resources.Strings.lit_true, My.Resources.Strings.lit_false)
-                                profile.PowerManagementActive = IIf(managementObject2("Active"), My.Resources.Strings.lit_true, My.Resources.Strings.lit_false)
+                                profile.PowerManagementEnable = IIf(managementObject2("Enable"), Resources.Strings.lit_true, Resources.Strings.lit_false)
+                                profile.PowerManagementActive = IIf(managementObject2("Active"), Resources.Strings.lit_true, Resources.Strings.lit_false)
                                 Exit For
                             End If
                         Next
@@ -147,7 +151,7 @@ Public Class Search
                         searcher2 = New ManagementObjectSearcher(scopeWmi, wmiQuery)
                         For Each managementObject2 As ManagementObject In searcher2.Get()
                             If (managementObject2("InstanceName").ToString().ToUpper.StartsWith(managementObjectAdapter("PNPDeviceID"))) Then
-                                profile.WakeEnabled = IIf(managementObject2("Enable"), My.Resources.Strings.lit_true, My.Resources.Strings.lit_false)
+                                profile.WakeEnabled = IIf(managementObject2("Enable"), Resources.Strings.lit_true, Resources.Strings.lit_false)
                                 Exit For
                             End If
                         Next
@@ -156,7 +160,7 @@ Public Class Search
                         searcher2 = New ManagementObjectSearcher(scopeWmi, wmiQuery)
                         For Each managementObject2 As ManagementObject In searcher2.Get()
                             If (managementObject2("InstanceName").ToString().ToUpper.StartsWith(managementObjectAdapter("PNPDeviceID"))) Then
-                                profile.WakeOnMagicOnly = IIf(managementObject2("EnableWakeOnMagicPacketOnly"), My.Resources.Strings.lit_true, My.Resources.Strings.lit_false)
+                                profile.WakeOnMagicOnly = IIf(managementObject2("EnableWakeOnMagicPacketOnly"), Resources.Strings.lit_true, Resources.Strings.lit_false)
                                 Exit For
                             End If
                         Next
@@ -175,10 +179,10 @@ Public Class Search
         End Try
 
         If String.IsNullOrEmpty(profile.Name) Then profile.Name = ip
-        If String.IsNullOrEmpty(profile.PowerManagementEnable) Then profile.PowerManagementEnable = My.Resources.Strings.lit_Unknown
-        If String.IsNullOrEmpty(profile.PowerManagementActive) Then profile.PowerManagementActive = My.Resources.Strings.lit_Unknown
-        If String.IsNullOrEmpty(profile.WakeEnabled) Then profile.WakeEnabled = My.Resources.Strings.lit_Unknown
-        If String.IsNullOrEmpty(profile.WakeOnMagicOnly) Then profile.WakeOnMagicOnly = My.Resources.Strings.lit_Unknown
+        If String.IsNullOrEmpty(profile.PowerManagementEnable) Then profile.PowerManagementEnable = Resources.Strings.lit_Unknown
+        If String.IsNullOrEmpty(profile.PowerManagementActive) Then profile.PowerManagementActive = Resources.Strings.lit_Unknown
+        If String.IsNullOrEmpty(profile.WakeEnabled) Then profile.WakeEnabled = Resources.Strings.lit_Unknown
+        If String.IsNullOrEmpty(profile.WakeOnMagicOnly) Then profile.WakeOnMagicOnly = Resources.Strings.lit_Unknown
 
         Return profile
 
@@ -196,11 +200,11 @@ Public Class Search
             remoteIp = address.GetHashCode()
 
             If remoteIp <> 0 Then
-                If SendArp(remoteIp, 0, mac, len) = 0 Then
+                If SendARP(remoteIp, 0, mac, len) = 0 Then
                     profile.MacAddress = BitConverter.ToString(mac, 0, len)
                     hostEntry = Dns.GetHostEntry(address)
                     profile.Name = hostEntry.HostName
-                    profile.OsName = My.Resources.Strings.lit_Unknown
+                    profile.OsName = Resources.Strings.lit_Unknown
                 End If
             End If
 
@@ -225,8 +229,8 @@ Public Class Search
     Private Sub Search_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
         Dim found As Boolean
 
-        IpAddressControl_Start.Text = "192.168.0.1"
-        IpAddressControl_End.Text = "192.168.0.20"
+        IpAddressControl_Start.Text = MySettings.Default.SearchStart
+        IpAddressControl_End.Text = MySettings.Default.SearchEnd
 
         ComboBoxGroup.Items.Clear()
         ComboBoxGroup.Items.Add(_none)
@@ -305,7 +309,7 @@ Public Class Search
         SearchBegin.Enabled = True
         cancelSearch.Enabled = False
         Cursor = Cursors.Default
-        ToolStripStatusLabel1.Text = My.Resources.Strings.Done
+        ToolStripStatusLabel1.Text = Resources.Strings.Done
         ToolStripProgressBar1.Visible = False
     End Sub
 
@@ -348,7 +352,7 @@ Public Class Search
 
     End Sub
 
-    Private Sub listView_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles listView.DoubleClick
+    Private Sub listView_DoubleClick(ByVal sender As Object, ByVal e As EventArgs) Handles listView.DoubleClick
         listView.Cursor = Cursors.WaitCursor
         ShowDetails(listView.SelectedItems(0))
         listView.Cursor = Cursors.Default

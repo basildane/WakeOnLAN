@@ -23,7 +23,7 @@ Public Class Shutdown
 
     Private Sub Clear()
         ShutdownMode = True
-        MeItem = Nothing
+        CurrentItem = Nothing
         ProgressBar1.Value = 0
         ProgressBar1.Maximum = 0
         Cursor = Cursors.Default
@@ -63,7 +63,7 @@ Public Class Shutdown
                 ProgressBar1.Maximum += 1
             Else
                 newItem.SubItems.Add(My.Resources.Strings.Pausing)
-                MeItem = newItem
+                CurrentItem = newItem
             End If
 
         Next
@@ -107,7 +107,7 @@ Public Class Shutdown
                 End If
             Else
                 newItem.SubItems.Add(My.Resources.Strings.Pausing)
-                MeItem = newItem
+                CurrentItem = newItem
             End If
 
         Next
@@ -120,13 +120,13 @@ Public Class Shutdown
         Label_Operation.Text = My.Resources.Strings.AbortShutdown
         ShutdownMode = False
 
-        Timer1.Stop()
+        timer.Stop()
         For Each item As ListViewItem In From item1 As ListViewItem In ListView1.Items Where item1.SubItems(1).Text = My.Resources.Strings.ShuttingDown
             item.SubItems(1).Text = My.Resources.Strings.Aborting
             Dim shutdownThread As New ShutdownThread(item, ProgressBar1, shutdownThread.ShutdownAction.Abort, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
         Next
 
-        Me.Cursor = Cursors.Default
+        Cursor = Cursors.Default
     End Sub
 
     Public Sub Complete()
@@ -136,28 +136,28 @@ Public Class Shutdown
             Return
         End If
 
-        If MeItem Is Nothing Then Me.Close()
-        If ShutdownMode Then Timer1.Start()
+        If CurrentItem Is Nothing Then Close()
+        If ShutdownMode Then timer.Start()
     End Sub
 
-    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+    Private Sub timer_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles timer.Tick
         If Not ShutdownMode Then
-            Timer1.Stop()
+            timer.Stop()
             Exit Sub
         End If
 
         Try
             _countdownTime -= 1
-            MeItem.SubItems(1).Text = String.Format(My.Resources.Strings.ShutDownSeconds, _countdownTime)
+            CurrentItem.SubItems(1).Text = String.Format(My.Resources.Strings.ShutDownSeconds, _countdownTime)
             If _countdownTime <= 0 Then
-                Timer1.Stop()
+                timer.Stop()
                 If (rbShutdown.Checked) Then LocalShutdown.ExitWindows(RestartOptions.PowerOff, True)
                 If (rbSleep.Checked) Then LocalShutdown.ExitWindows(RestartOptions.Suspend, True)
                 If (rbHibernate.Checked) Then LocalShutdown.ExitWindows(RestartOptions.Hibernate, True)
             End If
 
         Catch ex As Exception
-            Timer1.Stop()
+            timer.Stop()
 
         End Try
 
@@ -169,10 +169,10 @@ Public Class Shutdown
         End With
     End Sub
 
-    Private Sub ShutdownButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ShutdownButton.Click
+    Private Sub ShutdownButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ShutdownButton.Click
         Dim action As ShutdownThread.ShutdownAction
 
-        Me.Cursor = Cursors.WaitCursor
+        Cursor = Cursors.WaitCursor
 
         If (rbShutdown.Checked) Then action = ShutdownThread.ShutdownAction.Shutdown
         If (rbSleep.Checked) Then action = ShutdownThread.ShutdownAction.Sleep
@@ -189,19 +189,19 @@ Public Class Shutdown
             Dim shutdownThread As New ShutdownThread(item, ProgressBar1, action, shut_message.Text, shut_timeout.Text, shut_force.Checked, shut_reboot.Checked)
         Next
 
-        If (ListView1.Items.Count = 1) And (Not MeItem Is Nothing) Then
+        If (ListView1.Items.Count = 1) And (Not CurrentItem Is Nothing) Then
             _countdownTime = 0
             Complete()
         End If
 
     End Sub
 
-    Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
-        Me.Close()
+    Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+        Close()
     End Sub
 
     Private Sub Shutdown_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        Me.Dispose()
+        Dispose()
     End Sub
 End Class
 

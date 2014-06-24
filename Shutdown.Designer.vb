@@ -42,7 +42,7 @@ Partial Class Shutdown
         Me.shut_message = New System.Windows.Forms.TextBox()
         Me.shut_timeout = New System.Windows.Forms.TextBox()
         Me.Label_Timeout = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.timer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -200,9 +200,9 @@ Partial Class Shutdown
         resources.ApplyResources(Me.Label_Timeout, "Label_Timeout")
         Me.Label_Timeout.Name = "Label_Timeout"
         '
-        'Timer1
+        'timer
         '
-        Me.Timer1.Interval = 1000
+        Me.timer.Interval = 1000
         '
         'Shutdown
         '
@@ -223,7 +223,7 @@ Partial Class Shutdown
     Friend WithEvents AbortButton As System.Windows.Forms.Button
     Friend WithEvents Label_Operation As System.Windows.Forms.Label
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents timer As System.Windows.Forms.Timer
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader

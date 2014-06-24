@@ -30,6 +30,7 @@ using System.Reflection;
 using System.Resources;
 using System.Threading;
 using System.Windows.Forms;
+
 namespace Localization
 {
     /// <summary>

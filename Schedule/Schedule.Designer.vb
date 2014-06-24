@@ -54,7 +54,7 @@
             Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
             Me.ToolStripButtonProperties = New System.Windows.Forms.ToolStripButton()
             Me.ToolStripButtonDelete = New System.Windows.Forms.ToolStripButton()
-            Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+            Me.timer = New System.Windows.Forms.Timer(Me.components)
             CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SplitContainer1.Panel1.SuspendLayout()
             Me.SplitContainer1.Panel2.SuspendLayout()
@@ -223,9 +223,9 @@
             resources.ApplyResources(Me.ToolStripButtonDelete, "ToolStripButtonDelete")
             Me.ToolStripButtonDelete.Name = "ToolStripButtonDelete"
             '
-            'Timer1
+            'timer
             '
-            Me.Timer1.Interval = 1000
+            Me.timer.Interval = 1000
             '
             'Schedule
             '
@@ -258,7 +258,7 @@
         Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents NewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
         Friend WithEvents StateColumnHeader As System.Windows.Forms.ColumnHeader
-        Friend WithEvents Timer1 As System.Windows.Forms.Timer
+        Friend WithEvents timer As System.Windows.Forms.Timer
         Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
         Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
         Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel

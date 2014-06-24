@@ -57,16 +57,16 @@ Public Class EditTrigger
 
             End Select
 
-            .Daily_Recurs = TextBoxRecurDays.Text
-            .Weekly_Recurs = TextBoxWeeklyRecurs.Text
+            .DailyRecurs = TextBoxRecurDays.Text
+            .WeeklyRecurs = TextBoxWeeklyRecurs.Text
 
-            .Weekly_DaysOfWeek = 0
+            .WeeklyDaysOfWeek = 0
             For i = 1 To 7
                 Dim c As CheckBox
 
                 c = GroupBoxWeekly.Controls("CheckBox" & i)
                 If c.Checked Then
-                    .Weekly_DaysOfWeek += CInt(2 ^ (i - 1))
+                    .WeeklyDaysOfWeek += CInt(2 ^ (i - 1))
                 End If
 
             Next
@@ -100,14 +100,14 @@ Public Class EditTrigger
 
         DateTimePickerDate.Value = MyTrigger.StartBoundary
         DateTimePickerTime.Value = MyTrigger.StartBoundary
-        TextBoxRecurDays.Text = MyTrigger.Daily_Recurs
-        TextBoxWeeklyRecurs.Text = MyTrigger.Weekly_Recurs
+        TextBoxRecurDays.Text = MyTrigger.DailyRecurs
+        TextBoxWeeklyRecurs.Text = MyTrigger.WeeklyRecurs
 
         For i As Integer = 1 To 7
             Dim c As CheckBox
 
             c = GroupBoxWeekly.Controls("CheckBox" & i)
-            c.Checked = (MyTrigger.Weekly_DaysOfWeek And CInt(2 ^ (i - 1))) > 0
+            c.Checked = (MyTrigger.WeeklyDaysOfWeek And CInt(2 ^ (i - 1))) > 0
         Next
 
         CheckBoxEnabled.Checked = MyTrigger.Enabled

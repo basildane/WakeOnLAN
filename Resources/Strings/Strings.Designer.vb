@@ -164,6 +164,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Shutdown Group.
+        '''</summary>
+        Friend Shared ReadOnly Property actions_shutdownGroup() As String
+            Get
+                Return ResourceManager.GetString("actions_shutdownGroup", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Sleep computer.
         '''</summary>
         Friend Shared ReadOnly Property actions_sleep() As String
@@ -196,6 +205,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property actions_startAll() As String
             Get
                 Return ResourceManager.GetString("actions_startAll", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Start Group.
+        '''</summary>
+        Friend Shared ReadOnly Property actions_startGroup() As String
+            Get
+                Return ResourceManager.GetString("actions_startGroup", resourceCulture)
             End Get
         End Property
         
