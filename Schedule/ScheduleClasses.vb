@@ -41,10 +41,9 @@ Public Class Task
         Return System.Text.UTF8Encoding.UTF8.GetString(mstream.ToArray)
     End Function
 
-    Public Function Deserialize(ByVal Data As String) As Task
+    Public Function Deserialize(ByVal data As String) As Task
         Dim serializer As New XmlSerializer(GetType(Task))
         Dim mstream As New IO.MemoryStream
-        Dim xmltextwriter As New Xml.XmlTextWriter(mstream, System.Text.Encoding.UTF8)
 
         Try
             mstream = New IO.MemoryStream(System.Text.UTF8Encoding.UTF8.GetBytes(Data))
@@ -63,20 +62,20 @@ End Class
 Public Class Triggers
     Inherits CollectionBase
 
-    Default Public ReadOnly Property Item(ByVal Index As Integer) As Trigger
+    Default Public ReadOnly Property Item(ByVal index As Integer) As Trigger
         Get
             Return List.Item(Index)
         End Get
     End Property
 
-    Public Sub Add(ByVal Trigger As Trigger)
+    Public Sub Add(ByVal trigger As Trigger)
         List.Add(Trigger)
     End Sub
 
 End Class
 
 Public Class Trigger
-    Private ReadOnly TriggerStrings() As String =
+    Private ReadOnly _triggerStrings() As String =
     {
          My.Resources.Strings.triggerOneTime,
          My.Resources.Strings.triggerDaily,
@@ -96,36 +95,36 @@ Public Class Trigger
     Public Mode As TriggerModes
     Public StartBoundary As DateTime
     Public Enabled As Boolean = True
-    Public Daily_Recurs As Integer = 0
-    Public Weekly_Recurs As Integer = 0
-    Public Weekly_DaysOfWeek As Integer = 0
+    Public DailyRecurs As Integer = 0
+    Public WeeklyRecurs As Integer = 0
+    Public WeeklyDaysOfWeek As Integer = 0
 
     Public Function ModeString() As String
-        Return TriggerStrings(Mode)
+        Return _triggerStrings(Mode)
     End Function
 
     Public Overrides Function ToString() As String
         Select Case Mode
-            Case Trigger.TriggerModes.OneTime
+            Case TriggerModes.OneTime
                 Return String.Format(My.Resources.Strings.lit_at, StartBoundary.ToShortDateString, StartBoundary.ToShortTimeString)
 
-            Case Trigger.TriggerModes.Daily
-                Return String.Format(My.Resources.Strings.lit_atDays, StartBoundary.ToShortTimeString, Daily_Recurs)
+            Case TriggerModes.Daily
+                Return String.Format(My.Resources.Strings.lit_atDays, StartBoundary.ToShortTimeString, DailyRecurs)
 
-            Case Trigger.TriggerModes.Weekly
+            Case TriggerModes.Weekly
                 Dim s As String = ""
 
-                If Weekly_DaysOfWeek >= 127 Then
+                If WeeklyDaysOfWeek >= 127 Then
                     s = "weekday"
                 Else
                     For i As Integer = 1 To 7
-                        If (CInt(2 ^ (i - 1)) And Weekly_DaysOfWeek) > 0 Then
+                        If (CInt(2 ^ (i - 1)) And WeeklyDaysOfWeek) > 0 Then
                             s &= WeekdayName(i, True) & ","
                         End If
                     Next
                 End If
                 s = s.TrimEnd(","c)
-                Return String.Format(My.Resources.Strings.lit_atWeeks, StartBoundary.ToShortTimeString, s, Weekly_Recurs, StartBoundary.ToShortDateString)
+                Return String.Format(My.Resources.Strings.lit_atWeeks, StartBoundary.ToShortTimeString, s, WeeklyRecurs, StartBoundary.ToShortDateString)
 
             Case TriggerModes.Monthly
                 Return ""
@@ -143,13 +142,13 @@ End Class
 Public Class Actions
     Inherits CollectionBase
 
-    Default Public ReadOnly Property Item(ByVal Index As Integer) As Action
+    Default Public ReadOnly Property Item(ByVal index As Integer) As Action
         Get
             Return List.Item(Index)
         End Get
     End Property
 
-    Public Sub Add(ByVal Action As Action)
+    Public Sub Add(ByVal action As Action)
         List.Add(Action)
     End Sub
 
@@ -167,7 +166,9 @@ Public Class Action
         My.Resources.Strings.actions_sleep,
         My.Resources.Strings.actions_sleepAll,
         My.Resources.Strings.actions_hibernate,
-        My.Resources.Strings.actions_hibernateAll
+        My.Resources.Strings.actions_hibernateAll,
+        My.Resources.Strings.actions_startGroup,
+        My.Resources.Strings.actions_shutdownGroup
         }
 
     Public Enum ActionItems
@@ -181,6 +182,8 @@ Public Class Action
         SleepAll
         Hibernate
         HibernateAll
+        StartGroup
+        ShutdownGroup
     End Enum
 
     Public Name As String

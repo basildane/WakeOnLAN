@@ -17,18 +17,19 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.Windows.Forms
+Imports System.Linq
 
 Public Class EditAction
-    Private MyAction As Action
+    Private _myAction As Action
 
     Public Overloads Function ShowDialog(ByVal owner As Form, ByRef Action As Action) As Windows.Forms.DialogResult
-        MyAction = Action
+        _myAction = Action
 
-        Return MyBase.ShowDialog(owner)
+        Return ShowDialog(owner)
     End Function
 
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
-        With MyAction
+    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
+        With _myAction
             Select Case .Mode
                 Case Action.ActionItems.ShutdownAll, Action.ActionItems.SleepAll, Action.ActionItems.HibernateAll
                     .Force = forceAll.Checked
@@ -48,22 +49,22 @@ Public Class EditAction
             .MessageText = MessageTextBox.Text
         End With
 
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Close()
+        DialogResult = Windows.Forms.DialogResult.OK
+        Close()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Close()
+    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+        DialogResult = Windows.Forms.DialogResult.Cancel
+        Close()
     End Sub
 
-    Private Sub EditAction_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub EditAction_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
         ActionComboBox.Items.Clear()
-        For Each method As String In MyAction.ActionStrings
+        For Each method As String In _myAction.ActionStrings
             ActionComboBox.Items.Add(method)
         Next
 
-        With MyAction
+        With _myAction
             ActionComboBox.SelectedIndex = .Mode
             Select Case .Mode
                 Case Action.ActionItems.ShutdownAll, Action.ActionItems.SleepAll, Action.ActionItems.HibernateAll
@@ -85,74 +86,133 @@ Public Class EditAction
         End With
     End Sub
 
-    Private Sub ActionComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ActionComboBox.SelectedIndexChanged
+    Private Sub ActionComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ActionComboBox.SelectedIndexChanged
         RefreshDisplay()
     End Sub
 
     Private Sub RefreshDisplay()
-        MyAction.Mode = ActionComboBox.SelectedIndex
+        _myAction.Mode = ActionComboBox.SelectedIndex
 
-        Select Case MyAction.Mode
+        Try
+            Select Case _myAction.Mode
 
-            Case Action.ActionItems.Start
-                forceCheckBox.Visible = False
-                ComputerGroupBox.Show()
-                MachinesComboBox.Items.Clear()
-                For Each m As Machine In Machines
-                    MachinesComboBox.Items.Add(m.Name)
-                Next
-                MachinesComboBox.SelectedIndex = MachinesComboBox.FindStringExact(MyAction.Name)
-                AllGroupBox.Hide()
-                MessageGroupBox.Hide()
-                EmailGroupBox.Hide()
+                Case Action.ActionItems.Start
+                    forceCheckBox.Visible = False
+                    ComputerGroupBox.Show()
+                    MachinesComboBox.Items.Clear()
 
-            Case Action.ActionItems.StartAll
-                AllGroupBox.Hide()
-                ComputerGroupBox.Hide()
-                MessageGroupBox.Hide()
-                EmailGroupBox.Hide()
+                    Dim names = (From machine In Machines
+                        Order By machine.name
+                        Select machine.Name).ToArray()
 
-            Case Action.ActionItems.Shutdown, Action.ActionItems.Sleep, Action.ActionItems.Hibernate
-                forceCheckBox.Visible = True
-                forceCheckBox.Checked = MyAction.Force
-                ComputerGroupBox.Show()
-                MachinesComboBox.Items.Clear()
-                For Each m As Machine In Machines
-                    MachinesComboBox.Items.Add(m.Name)
-                Next
-                MachinesComboBox.SelectedIndex = MachinesComboBox.FindStringExact(MyAction.Name)
-                forceCheckBox.Checked = MyAction.Force
-                AllGroupBox.Hide()
-                MessageGroupBox.Hide()
-                EmailGroupBox.Hide()
+                    MachinesComboBox.Items.AddRange(names)
+                    MachinesComboBox.SelectedIndex = MachinesComboBox.FindStringExact(_myAction.Name)
+                    AllGroupBox.Hide()
+                    MessageGroupBox.Hide()
+                    EmailGroupBox.Hide()
+                    If String.IsNullOrEmpty(MachinesComboBox.SelectedItem) Then
+                        MachinesComboBox.SelectedIndex = 0
+                    End If
 
-            Case Action.ActionItems.ShutdownAll, Action.ActionItems.SleepAll, Action.ActionItems.HibernateAll
-                forceAll.Checked = MyAction.Force
-                ComputerGroupBox.Hide()
-                MessageGroupBox.Hide()
-                EmailGroupBox.Hide()
-                AllGroupBox.Show()
+                Case Action.ActionItems.StartGroup
+                    forceCheckBox.Visible = False
+                    ComputerGroupBox.Show()
+                    MachinesComboBox.Items.Clear()
 
-            Case Action.ActionItems.SendMessage
-                ComputerGroupBox.Hide()
+                    Dim groups = (From machine In Machines
+                            Order By machine.Group Ascending
+                            Where Not String.IsNullOrEmpty(machine.Group)
+                            Select machine.Group Distinct
+                            ).ToArray()
 
-                MessageTitleTextBox.Text = MyAction.MessageTitle
-                MessageTextBox.Text = MyAction.MessageText
-                MessageGroupBox.Show()
-                AllGroupBox.Hide()
-                EmailGroupBox.Hide()
+                    MachinesComboBox.Items.AddRange(groups)
+                    MachinesComboBox.SelectedIndex = MachinesComboBox.FindStringExact(_myAction.Name)
+                    AllGroupBox.Hide()
+                    MessageGroupBox.Hide()
+                    EmailGroupBox.Hide()
+                    If String.IsNullOrEmpty(MachinesComboBox.SelectedItem) Then
+                        MachinesComboBox.SelectedIndex = 0
+                    End If
 
-            Case Action.ActionItems.SendEmail
-                EmailGroupBox.Show()
-                AllGroupBox.Hide()
-                ComputerGroupBox.Hide()
-                MessageGroupBox.Hide()
+                Case Action.ActionItems.StartAll
+                    AllGroupBox.Hide()
+                    ComputerGroupBox.Hide()
+                    MessageGroupBox.Hide()
+                    EmailGroupBox.Hide()
 
-        End Select
+                Case Action.ActionItems.Shutdown, Action.ActionItems.Sleep, Action.ActionItems.Hibernate
+                    forceCheckBox.Visible = True
+                    forceCheckBox.Checked = _myAction.Force
+                    ComputerGroupBox.Show()
+                    MachinesComboBox.Items.Clear()
+
+                    Dim names = (From machine In Machines
+                        Order By machine.name
+                        Select machine.Name).ToArray()
+
+                    MachinesComboBox.Items.AddRange(names)
+                    MachinesComboBox.SelectedIndex = MachinesComboBox.FindStringExact(_myAction.Name)
+                    forceCheckBox.Checked = _myAction.Force
+                    AllGroupBox.Hide()
+                    MessageGroupBox.Hide()
+                    EmailGroupBox.Hide()
+                    If String.IsNullOrEmpty(MachinesComboBox.SelectedItem) Then
+                        MachinesComboBox.SelectedIndex = 0
+                    End If
+
+                Case Action.ActionItems.ShutdownGroup
+                    forceCheckBox.Visible = True
+                    forceCheckBox.Checked = _myAction.Force
+                    ComputerGroupBox.Show()
+                    MachinesComboBox.Items.Clear()
+
+                    Dim groups = (From g In Machines
+                            Order By g.Group Ascending
+                            Where Not String.IsNullOrEmpty(g.Group)
+                            Select g.Group Distinct
+                            ).ToArray()
+
+                    MachinesComboBox.Items.AddRange(groups)
+                    MachinesComboBox.SelectedIndex = MachinesComboBox.FindStringExact(_myAction.Name)
+                    If String.IsNullOrEmpty(MachinesComboBox.SelectedItem) Then
+                        MachinesComboBox.SelectedIndex = 0
+                    End If
+
+                    forceCheckBox.Checked = _myAction.Force
+                    AllGroupBox.Hide()
+                    MessageGroupBox.Hide()
+                    EmailGroupBox.Hide()
+
+                Case Action.ActionItems.ShutdownAll, Action.ActionItems.SleepAll, Action.ActionItems.HibernateAll
+                    forceAll.Checked = _myAction.Force
+                    ComputerGroupBox.Hide()
+                    MessageGroupBox.Hide()
+                    EmailGroupBox.Hide()
+                    AllGroupBox.Show()
+
+                Case Action.ActionItems.SendMessage
+                    ComputerGroupBox.Hide()
+                    MessageTitleTextBox.Text = _myAction.MessageTitle
+                    MessageTextBox.Text = _myAction.MessageText
+                    MessageGroupBox.Show()
+                    AllGroupBox.Hide()
+                    EmailGroupBox.Hide()
+
+                Case Action.ActionItems.SendEmail
+                    EmailGroupBox.Show()
+                    AllGroupBox.Hide()
+                    ComputerGroupBox.Hide()
+                    MessageGroupBox.Hide()
+
+            End Select
+
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 
-    Private Sub MachinesComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MachinesComboBox.SelectedIndexChanged
-        MyAction.Name = MachinesComboBox.Items(MachinesComboBox.SelectedIndex).ToString
+    Private Sub MachinesComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles MachinesComboBox.SelectedIndexChanged
+        _myAction.Name = MachinesComboBox.Items(MachinesComboBox.SelectedIndex).ToString
     End Sub
 End Class

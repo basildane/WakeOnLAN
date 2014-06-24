@@ -81,16 +81,16 @@ Partial Class EditAction
         '
         'ActionComboBox
         '
-        resources.ApplyResources(Me.ActionComboBox, "ActionComboBox")
         Me.ActionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ActionComboBox.FormattingEnabled = True
+        resources.ApplyResources(Me.ActionComboBox, "ActionComboBox")
         Me.ActionComboBox.Name = "ActionComboBox"
         '
         'ComputerGroupBox
         '
-        resources.ApplyResources(Me.ComputerGroupBox, "ComputerGroupBox")
         Me.ComputerGroupBox.Controls.Add(Me.forceCheckBox)
         Me.ComputerGroupBox.Controls.Add(Me.MachinesComboBox)
+        resources.ApplyResources(Me.ComputerGroupBox, "ComputerGroupBox")
         Me.ComputerGroupBox.Name = "ComputerGroupBox"
         Me.ComputerGroupBox.TabStop = False
         '
@@ -102,18 +102,18 @@ Partial Class EditAction
         '
         'MachinesComboBox
         '
-        resources.ApplyResources(Me.MachinesComboBox, "MachinesComboBox")
         Me.MachinesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.MachinesComboBox.FormattingEnabled = True
+        resources.ApplyResources(Me.MachinesComboBox, "MachinesComboBox")
         Me.MachinesComboBox.Name = "MachinesComboBox"
         '
         'MessageGroupBox
         '
-        resources.ApplyResources(Me.MessageGroupBox, "MessageGroupBox")
         Me.MessageGroupBox.Controls.Add(Me.MessageTextBox)
         Me.MessageGroupBox.Controls.Add(Me.MessageTitleTextBox)
         Me.MessageGroupBox.Controls.Add(Me.Label3)
         Me.MessageGroupBox.Controls.Add(Me.Label2)
+        resources.ApplyResources(Me.MessageGroupBox, "MessageGroupBox")
         Me.MessageGroupBox.Name = "MessageGroupBox"
         Me.MessageGroupBox.TabStop = False
         '
@@ -139,7 +139,6 @@ Partial Class EditAction
         '
         'EmailGroupBox
         '
-        resources.ApplyResources(Me.EmailGroupBox, "EmailGroupBox")
         Me.EmailGroupBox.Controls.Add(Me.EmailServerTextBox)
         Me.EmailGroupBox.Controls.Add(Me.EmailSubjectTextBox)
         Me.EmailGroupBox.Controls.Add(Me.EmailToTextBox)
@@ -150,6 +149,7 @@ Partial Class EditAction
         Me.EmailGroupBox.Controls.Add(Me.EmailFromTextBox)
         Me.EmailGroupBox.Controls.Add(Me.Label4)
         Me.EmailGroupBox.Controls.Add(Me.Label5)
+        resources.ApplyResources(Me.EmailGroupBox, "EmailGroupBox")
         Me.EmailGroupBox.Name = "EmailGroupBox"
         Me.EmailGroupBox.TabStop = False
         '
@@ -205,8 +205,8 @@ Partial Class EditAction
         '
         'AllGroupBox
         '
-        resources.ApplyResources(Me.AllGroupBox, "AllGroupBox")
         Me.AllGroupBox.Controls.Add(Me.forceAll)
+        resources.ApplyResources(Me.AllGroupBox, "AllGroupBox")
         Me.AllGroupBox.Name = "AllGroupBox"
         Me.AllGroupBox.TabStop = False
         '
@@ -225,10 +225,10 @@ Partial Class EditAction
         Me.Controls.Add(Me.ActionComboBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.ComputerGroupBox)
         Me.Controls.Add(Me.EmailGroupBox)
         Me.Controls.Add(Me.MessageGroupBox)
         Me.Controls.Add(Me.AllGroupBox)
-        Me.Controls.Add(Me.ComputerGroupBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False

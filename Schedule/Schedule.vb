@@ -64,7 +64,7 @@ Namespace Schedule
             Dim tasks As IRegisteredTaskCollection
             Dim li As ListViewItem
 
-            Timer1.Stop()
+            timer.Stop()
 
             tasks = _taskFolder.GetTasks(_TASK_ENUM_FLAGS.TASK_ENUM_HIDDEN)
 
@@ -83,7 +83,7 @@ Namespace Schedule
             End With
 
             UpdateTaskDisplay()
-            Timer1.Start()
+            timer.Start()
         End Sub
 
         Private Function GetState(ByVal state As Integer) As String
@@ -159,7 +159,7 @@ Namespace Schedule
 
             machinesXML = "-p " & wrapSpaces(Machines.GetFile())
 
-            Timer1.Stop()
+            timer.Stop()
 
             If EditTask.ShowDialog(Me, myTask) = Windows.Forms.DialogResult.OK Then
                 Dim iTask As ITaskDefinition
@@ -198,7 +198,7 @@ Namespace Schedule
                                     With iTriggerDaily
                                         .Id = myTrigger.Tag
                                         .StartBoundary = myTrigger.StartBoundary.ToString("o")
-                                        .DaysInterval = myTrigger.Daily_Recurs
+                                        .DaysInterval = myTrigger.DailyRecurs
                                         .Enabled = myTrigger.Enabled
                                     End With
 
@@ -209,8 +209,8 @@ Namespace Schedule
                                     With iTriggerWeekly
                                         .Id = myTrigger.Tag
                                         .StartBoundary = myTrigger.StartBoundary.ToString("o")
-                                        .WeeksInterval = myTrigger.Weekly_Recurs
-                                        .DaysOfWeek = myTrigger.Weekly_DaysOfWeek
+                                        .WeeksInterval = myTrigger.WeeklyRecurs
+                                        .DaysOfWeek = myTrigger.WeeklyDaysOfWeek
                                         .Enabled = myTrigger.Enabled
                                     End With
 
@@ -228,6 +228,16 @@ Namespace Schedule
                                         .Id = myAction.Tag
                                         .Path = executable
                                         .Arguments = machinesXML & " -w -m " & wrapSpaces(m.Name)
+                                    End With
+
+                                Case Action.ActionItems.StartGroup
+                                    Dim actionRun As IExecAction
+
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    With actionRun
+                                        .Id = myAction.Tag
+                                        .Path = executable
+                                        .Arguments = machinesXML & " -w -g " & wrapSpaces(myAction.Name)
                                     End With
 
                                 Case Action.ActionItems.StartAll
@@ -273,6 +283,17 @@ Namespace Schedule
                                         .Id = myAction.Tag
                                         .Path = executable
                                         .Arguments = machinesXML & " -s4 -m " & wrapSpaces(m.Name) & " -t " & My.Settings.DefaultTimeout
+                                        If myAction.Force Then .Arguments &= " -f"
+                                    End With
+
+                                Case Action.ActionItems.ShutdownGroup
+                                    Dim actionRun As IExecAction
+
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    With actionRun
+                                        .Id = myAction.Tag
+                                        .Path = executable
+                                        .Arguments = machinesXML & " -s -g " & wrapSpaces(myAction.Name) & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
                                     End With
 
@@ -356,7 +377,7 @@ Namespace Schedule
             End If
 
             RefreshList()
-            Timer1.Start()
+            timer.Start()
             Return result
 
         End Function
@@ -368,7 +389,7 @@ Namespace Schedule
                 Return s
             End If
         End Function
-        
+
 #If False Then
     ' Adds an ACL entry on the specified file for the specified account.
     ' TODO: this only works with domain accounts
@@ -451,7 +472,7 @@ Namespace Schedule
             Next
         End Sub
 
-        Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timer1.Tick
+        Private Sub timer_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles timer.Tick
             UpdateTaskDisplay()
         End Sub
 

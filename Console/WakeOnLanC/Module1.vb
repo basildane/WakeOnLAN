@@ -18,6 +18,8 @@
 
 Imports System.Net
 Imports System.Management
+Imports System.Linq
+Imports System.Threading
 
 Module Module1
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
@@ -41,13 +43,14 @@ Module Module1
         PermissionDenied = 5
     End Enum
 
-    Dim _machine As String = ""
-    Dim _mac As String = ""
+    Dim _machine As String = String.Empty
+    Dim _mac As String = String.Empty
     Dim _all As Boolean = False
     Dim _alertMessage As String = "System is shutting down" & vbNullChar
     Dim _delay As Long = 30
     Dim _force As Long = 0
     Dim _reboot As Long = 0
+    Dim _group As String = String.Empty
     Dim _mode As ModeTypes = ModeTypes.None
     Dim _result As Integer = ErrorCodes.Ok
     Dim _path As String = ""
@@ -102,6 +105,14 @@ Module Module1
                     End If
                     i += 1
                     _mac = My.Application.CommandLineArgs.Item(i)
+
+                Case "-g"
+                    If i = My.Application.CommandLineArgs.Count - 1 Then
+                        BadCommand()
+                        Return ErrorCodes.InvalidCommand
+                    End If
+                    i += 1
+                    _group = My.Application.CommandLineArgs.Item(i)
 
                 Case "-if"
                     If i = My.Application.CommandLineArgs.Count - 1 Then
@@ -195,12 +206,12 @@ Module Module1
     Private Sub DisplayHelp()
         Console.WriteLine()
         Console.WriteLine("Commands are:")
-        Console.WriteLine("-s   (shutdown) requires -m or -all")
+        Console.WriteLine("-s   (shutdown) requires -m, -g or -all")
         Console.WriteLine("-s1  (sleep) requires -m or -all")
         Console.WriteLine("-s4  (hibernate) requires -m or -all")
         Console.WriteLine("-a   (abort a shutdown) requires -m")
         Console.WriteLine("-r   (reboot)")
-        Console.WriteLine("-w   (wakeup) requires -m, -mac parameter, or -all")
+        Console.WriteLine("-w   (wakeup) requires -m, -g, -mac parameter, or -all")
         Console.WriteLine("-l   (listen for WOL packets)")
         Console.WriteLine("-e   (enumerate machine list)")
         Console.WriteLine("-p   (path to machines.xml (optional))")
@@ -210,11 +221,12 @@ Module Module1
         Console.WriteLine()
         Console.WriteLine("options:")
         Console.WriteLine("-t xx      delay (xx = seconds).  For Shutdown and Reboot commands.")
-        Console.WriteLine("-f         force files closed.  For Shutdown and reboot commands.")
+        Console.WriteLine("-f         force files closed.  For Shutdown and Reboot commands.")
         Console.WriteLine("-m xx      xx = machine name.")
-        Console.WriteLine("-mac xxxxxxxx = mac address.")
+        Console.WriteLine("-mac xx    xx = mac address.")
+        Console.WriteLine("-g xx      xx = group name.  To wakeup or shutdown a group of machines.")
         Console.WriteLine("-all       all machines.")
-        Console.WriteLine("-c ""xx""    xx = comment.  Options for Shutdown and Reboot.")
+        Console.WriteLine("-c ""xx""  xx = comment.  Options for Shutdown and Reboot.")
         Console.WriteLine()
         Console.WriteLine("note.  Use -m with -w to send to a specific subnet.")
     End Sub
@@ -242,6 +254,7 @@ Module Module1
     End Sub
 
     Private Function DoWakeup() As Integer
+        Dim machine As Machine
 
         If _all Then
             Try
@@ -253,21 +266,19 @@ Module Module1
 
             End Try
 
-            For Each m As Machine In Machines
-                Console.Write("Wakeup " & m.Name & "... ")
-                If m.MAC = "" Then
+            For Each machine In Machines
+                Console.Write("Wakeup " & machine.Name & "... ")
+                If machine.MAC = "" Then
                     _result = ErrorCodes.NotFound
-                    Console.WriteLine("Cannot find MAC address for " & m.Name)
+                    Console.WriteLine("Cannot find MAC address for " & machine.Name)
                 Else
-                    Console.WriteLine("waking up mac: " & m.MAC)
-                    WakeUp(m, _interface)
+                    Console.WriteLine("waking up mac: " & machine.MAC)
+                    WakeUp(machine, _interface)
                 End If
             Next
             Return _result
 
         ElseIf _machine.Length Then
-            Dim machine As Machine
-
             Try
                 Machines.Load(_path)
 
@@ -290,6 +301,25 @@ Module Module1
         ElseIf _mac.Length Then
             Console.WriteLine("waking up mac: " & _mac)
             WakeUp(_mac, _interface)
+            Return ErrorCodes.Ok
+
+        ElseIf _group.Length Then
+            Try
+                Machines.Load(_path)
+
+            Catch ex As Exception
+                _result = ErrorCodes.PermissionDenied
+                Return _result
+
+            End Try
+
+            Console.WriteLine("waking up group: " & _group)
+            For Each machine In From machine1 As Machine In Machines Where machine1.Group = _group
+                Console.WriteLine("  > " & machine.Name)
+                WakeUp(machine, _interface)
+                Thread.Sleep(500)
+            Next
+            Console.WriteLine("Done.")
             Return ErrorCodes.Ok
 
         Else
@@ -336,7 +366,7 @@ Module Module1
 
         Machines.Load(_path)
 
-        If ((_machine = "") And (_all = False)) Then
+        If (String.IsNullOrEmpty(_machine) And String.IsNullOrEmpty(_group) And (_all = False)) Then
             Console.WriteLine("Error.  No machine specified.")
             DisplayHelp()
             _result = ErrorCodes.InvalidCommand
@@ -348,22 +378,62 @@ Module Module1
                 Console.Write("Shutdown sent to " & machine.Name)
                 If String.IsNullOrEmpty(machine.ShutdownCommand) Then
                     dwResult = InitiateSystemShutdown(machine.Netbios, _alertMessage, _delay, _force, _reboot)
+                    ShowResult(dwResult)
                 Else
-                    Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
-                End If
+                    Try
+                        Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+                        Console.WriteLine("...Successful")
 
-                ShowResult(dwResult)
+                    Catch ex As Exception
+                        Console.ForegroundColor = ConsoleColor.Red
+                        Console.Write("...Error: ")
+                        Console.WriteLine(ex.Message)
+                        Console.ResetColor()
+
+                    End Try
+                End If
             Next
+        ElseIf (_group.Length) Then
+            Console.WriteLine("Shutdown group: " & _group)
+            For Each machine In From machine1 As Machine In Machines Where machine1.Group = _group
+                Console.Write("  > " & machine.Name)
+                If String.IsNullOrEmpty(machine.ShutdownCommand) Then
+                    dwResult = InitiateSystemShutdown(machine.Netbios, _alertMessage, _delay, _force, _reboot)
+                    ShowResult(dwResult)
+                Else
+                    Try
+                        Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+                        Console.WriteLine("...Successful")
+
+                    Catch ex As Exception
+                        Console.ForegroundColor = ConsoleColor.Red
+                        Console.Write("...Error: ")
+                        Console.WriteLine(ex.Message)
+                        Console.ResetColor()
+
+                    End Try
+                End If
+            Next
+            Console.WriteLine("Done.")
         Else
             machine = Machines(_machine)
             Console.Write("Shutdown sent to " & machine.Name)
             If String.IsNullOrEmpty(machine.ShutdownCommand) Then
                 dwResult = InitiateSystemShutdown(machine.Netbios, _alertMessage, _delay, _force, _reboot)
+                ShowResult(dwResult)
             Else
-                Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
-            End If
+                Try
+                    Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+                    Console.WriteLine("...Successful")
 
-            ShowResult(dwResult)
+                Catch ex As Exception
+                    Console.ForegroundColor = ConsoleColor.Red
+                    Console.Write("...Error: ")
+                    Console.WriteLine(ex.Message)
+                    Console.ResetColor()
+
+                End Try
+            End If
         End If
 
         Return _result
@@ -494,10 +564,16 @@ Module Module1
     Private Function FormatMessage(ByVal [error] As Integer) As String
         Const FORMAT_MESSAGE_FROM_SYSTEM As Short = &H1000
         Const LANG_NEUTRAL As Short = &H0
-        Dim buffer As String = Space(999)
-        FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, 0, [error], LANG_NEUTRAL, buffer, 999, 0)
+        Dim buffer As String = Space(1024)
+
+        FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, 0, [error], LANG_NEUTRAL, buffer, 1024, 0)
         buffer = Replace(Replace(buffer, Chr(13), ""), Chr(10), "")
-        Return buffer.Substring(0, buffer.IndexOf(Chr(0)))
+        If buffer.Contains(Chr(0)) Then
+            buffer = buffer.Substring(0, buffer.IndexOf(Chr(0)))
+        Else
+            buffer = String.Empty
+        End If
+        Return buffer
     End Function
 
 End Module
