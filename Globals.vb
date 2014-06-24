@@ -30,7 +30,7 @@ Module Globals
     End Function
 
     Public ShutdownMode As Boolean      'true if in shutdown mode, false if in abort mode
-    Public MeItem As ListViewItem
+    Public CurrentItem As ListViewItem
     Public SplashPtr As IntPtr
 
     Public Function FormatMessage(ByVal [error] As Integer) As String
@@ -40,7 +40,12 @@ Module Globals
 
         FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, IntPtr.Zero, [error], LANG_NEUTRAL, buffer, 1024, IntPtr.Zero)
         buffer = Replace(Replace(buffer, Chr(13), ""), Chr(10), "")
-        Return buffer.Substring(0, buffer.IndexOf(Chr(0)))
+        If buffer.Contains(Chr(0)) Then
+            buffer = buffer.Substring(0, buffer.IndexOf(Chr(0)))
+        Else
+            buffer = String.Empty
+        End If
+        Return buffer
     End Function
 
     Public Sub ShowHelp(parent As Control, url As String)
@@ -68,7 +73,7 @@ Module Globals
         Dim s() As String
         Dim i As Int16
 
-        s = Split(State)
+        s = Split(state)
         If (UBound(s) <> listview.Columns.Count) Then Exit Sub
 
         For i = 0 To UBound(s) - 1

@@ -58,7 +58,7 @@ Public Class ShutdownThread
         Dim dwDelay As Long
         Dim dwForce As Long
         Dim dwReboot As Long
-        Dim m As Machine
+        Dim machine As Machine
 
         dwResult = 0
         sAlertMessage = _Message & vbNullChar
@@ -66,12 +66,12 @@ Public Class ShutdownThread
         dwForce = CLng(_force)
         dwReboot = CLng(_reboot)
 
-        m = Machines(_item.Text)
-        sMachine = "\\" & m.Netbios
+        machine = Machines(_item.Text)
+        sMachine = "\\" & machine.Netbios
 
         _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
 
-        If (_action <> ShutdownAction.Abort And m.ShutdownCommand.Length > 0) Then _action = ShutdownAction.User
+        If (_action <> ShutdownAction.Abort And machine.ShutdownCommand.Length > 0) Then _action = ShutdownAction.User
 
         Try
             Select Case _action
@@ -82,7 +82,7 @@ Public Class ShutdownThread
                     dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
 
                 Case ShutdownAction.User
-                    Shell(m.ShutdownCommand, AppWinStyle.Hide, False)
+                    Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
 
                 Case ShutdownAction.Sleep, ShutdownAction.Hibernate
                     dwResult = WMIpower(sMachine)
