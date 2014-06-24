@@ -19,7 +19,6 @@
 Imports System.Globalization
 Imports Localization
 Imports AlphaWindow
-
 Imports System.Runtime.InteropServices
 
 Namespace My
@@ -69,11 +68,7 @@ Namespace My
 #If DEBUG Then
             'My.Settings.Language = "zh-TW"
 #End If
-
-            If Settings.Language = "" Then
-                Settings.Language = Application.Culture.IetfLanguageTag
-            End If
-
+            If String.IsNullOrEmpty(Settings.Language) Then Settings.Language = "en-US"
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
             Debug.WriteLine(Settings.Language)
         End Sub
