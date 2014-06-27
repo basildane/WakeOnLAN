@@ -33,7 +33,7 @@
 	<ItemGroup/>
 	<ItemGroup/>
 	<ItemGroup>
-		<ProjectReference Include="..\..\AutoUpdater\AutoUpdater.NET\AutoUpdater.NET.csproj">
+		<ProjectReference Include="..\AutoUpdater.NET\AutoUpdater.NET.csproj">
 			<Name>AutoUpdater.NET</Name>
 			<Project>{FB9E7E6B-B19F-4F37-A708-2996190CEF13}</Project>
 		</ProjectReference>

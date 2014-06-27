@@ -341,8 +341,8 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>AutoUpdater.NET.Localized_resources</td><td>{8B4B293E-7728-4863-9D46-CD3B51DF448A}</td><td>INSTALLDIR</td><td>2</td><td/><td>autoupdater.net.localized_re</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>AutoUpdater.NET.Primary_output</td><td>{F5D5A319-4DB7-4846-B514-139D64F4116A}</td><td>INSTALLDIR</td><td>2</td><td/><td>autoupdater.net.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>AutoUpdater.NET.Localized_resources</td><td>{CCD221CD-5AA6-4560-9E6D-E5BBF4CF2CC8}</td><td>INSTALLDIR</td><td>2</td><td/><td>autoupdater.net.localized_re</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>AutoUpdater.NET.Primary_output</td><td>{BC80EFAE-2F4E-4C02-8181-AE4CD6616E7B}</td><td>INSTALLDIR</td><td>2</td><td/><td>autoupdater.net.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_LocalTag</td><td>{F6DC2A6C-9772-4B35-851A-DCFA53571CBC}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_SystemTag</td><td>{0F40450E-7749-4447-96C9-FEF67F29FCCC}</td><td>CommonAppDataFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{7C76CCEF-DCE5-4B6A-8516-AAFE77E5AD15}</td><td>HELP</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1961,8 +1961,8 @@
 		<row><td>action2.png</td><td>ISX_DEFAULTCOMPONENT10</td><td>action2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\action2.png</td><td>1</td><td/></row>
 		<row><td>aquilatech.png</td><td>ISX_DEFAULTCOMPONENT5</td><td>AQUILA~1.PNG|aquilatech.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\aquilatech.png</td><td>1</td><td/></row>
 		<row><td>autostart.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>AUTOST~1.PNG|autostart.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\autostart.png</td><td>1</td><td/></row>
-		<row><td>autoupdater.net.localized_re</td><td>AutoUpdater.NET.Localized_resources</td><td>AutoUpdater.NET.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;AutoUpdater.NET&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
-		<row><td>autoupdater.net.primary_outp</td><td>AutoUpdater.NET.Primary_output</td><td>AutoUpdater.NET.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;AutoUpdater.NET&gt;|Built</td><td>3</td><td/></row>
+		<row><td>autoupdater.net.localized_re</td><td>AutoUpdater.NET.Localized_resources</td><td>AutoUpdater.NET.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;AutoUpdater.NET1&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
+		<row><td>autoupdater.net.primary_outp</td><td>AutoUpdater.NET.Primary_output</td><td>AutoUpdater.NET.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;AutoUpdater.NET1&gt;|Built</td><td>3</td><td/></row>
 		<row><td>basildane.jpg</td><td>ISX_DEFAULTCOMPONENT3</td><td>BASILD~1.JPG|basildane.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\basildane.jpg</td><td>1</td><td/></row>
 		<row><td>bubble.png</td><td>ISX_DEFAULTCOMPONENT7</td><td>bubble.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\bubble.png</td><td>1</td><td/></row>
 		<row><td>calculate.png</td><td>ISX_DEFAULTCOMPONENT9</td><td>CALCUL~1.PNG|calculate.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\calculate.png</td><td>1</td><td/></row>
@@ -2155,8 +2155,8 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>AutoUpdater.NET.Localized_resources</td><td/><td/><td>_BE01046B_2046_4E1B_BB95_6B1AA1207FB2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>AutoUpdater.NET.Primary_output</td><td/><td/><td>_C47FC830_CA39_42D6_B247_3B97C1BA26AA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>AutoUpdater.NET.Localized_resources</td><td/><td/><td>_13A05E68_9BC1_462A_8A46_2C623673B9BC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>AutoUpdater.NET.Primary_output</td><td/><td/><td>_7CCE0A0D_66F7_42AD_8F7A_EDAA2EFA4BB9_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISO19770_LocalTag</td><td/><td/><td>_051A274E_72F7_42A5_93D3_C27FD60F74DD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISO19770_SystemTag</td><td/><td/><td>_9E071FAC_6EB8_4691_8A97_9D0973573218_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_64913699_A330_4815_BA48_032A72A28C50_FILTER</td><td/><td/><td/><td/></row>
@@ -2485,6 +2485,7 @@
 		<col def="S255">TestValue</col>
 		<col def="i4">Type</col>
 		<row><td>AutoUpdater.NET</td><td>..\AutoUpdater\AutoUpdater.NET\AutoUpdater.NET.csproj</td><td/><td>2</td></row>
+		<row><td>AutoUpdater.NET1</td><td>AutoUpdater.NET\AutoUpdater.NET.csproj</td><td/><td>2</td></row>
 		<row><td>CommonFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>Help</td><td>Help\Help.csproj</td><td/><td>2</td></row>
 		<row><td>ISPROJECTDIR</td><td/><td/><td>1</td></row>
@@ -3914,9 +3915,9 @@
 		<row><td>ID_STRING2</td><td>1033</td><td>Aquila Technology</td><td>0</td><td/><td>1713484110</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>1445011055</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>WakeOnLAN</td><td>0</td><td/><td>1713457385</td></row>
-		<row><td>ID_STRING5</td><td>1033</td><td>http://wol.AquilaTech.com</td><td>0</td><td/><td>178390824</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>http://wol.AquilaTech.com</td><td>0</td><td/><td>-618484953</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>https://sourceforge.net/projects/aquilawol/files/</td><td>0</td><td/><td>-1105094392</td></row>
-		<row><td>ID_STRING7</td><td>1033</td><td>Support forum</td><td>0</td><td/><td>-1105088024</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>User Forum</td><td>0</td><td/><td>-618474713</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>1445055983</td></row>
 	</table>
 
@@ -4567,9 +4568,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]WakeOnLan.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{029BF83A-9046-4C17-BDB0-11787A6E42A3}</td><td/></row>
+		<row><td>ProductCode</td><td>{F1BFC237-FDAA-4CF7-A0DC-257D9616CCD6}</td><td/></row>
 		<row><td>ProductName</td><td>WakeOnLAN</td><td/></row>
-		<row><td>ProductVersion</td><td>2.10.0011.02</td><td/></row>
+		<row><td>ProductVersion</td><td>2.10.0012</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4861,7 +4862,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
 		<row><td>{20A416B6-1FE6-468D-85B4-F8952658AA27}</td><td>2.7.5</td><td>2.7.5</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP2</td><td>2.7.5</td></row>
-		<row><td>{53C0B87A-D701-4B9D-B14F-3B7695281A99}</td><td>2.07.0006</td><td>2.10.0011.02</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP1</td><td>2.7.6 and up</td></row>
+		<row><td>{53C0B87A-D701-4B9D-B14F-3B7695281A99}</td><td>2.07.0006</td><td></td><td>1033</td><td>768</td><td/><td>ISACTIONPROP1</td><td>2.7.6 and up</td></row>
 	</table>
 
 	<table name="Verb">
