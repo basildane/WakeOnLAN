@@ -20,6 +20,7 @@ Imports System.Net
 Imports System.Windows.Forms
 Imports System.Management
 Imports System.Linq
+Imports AlphaWindow
 Imports WakeOnLan.My
 
 Public Class Search
@@ -37,6 +38,8 @@ Public Class Search
         Public PowerManagementActive As String
         Public WakeOnMagicOnly As String
     End Structure
+
+    Private ReadOnly _lvwColumnSorter As ListViewColumnSorter
 
     Private ReadOnly _none As String = "--" & Resources.Strings.lit_None & "--"
 
@@ -222,6 +225,7 @@ Public Class Search
         SearchBegin.Enabled = False
         cancelSearch.Enabled = True
         ToolStripProgressBar1.Visible = True
+        listView.ListViewItemSorter = Nothing
         listView.Items.Clear()
         backgroundWorker.RunWorkerAsync()
     End Sub
@@ -234,7 +238,10 @@ Public Class Search
 
         ComboBoxGroup.Items.Clear()
         ComboBoxGroup.Items.Add(_none)
-        For Each machine As Machine In From _machine As Machine In Machines Where _machine.Group.Length
+        For Each machine As Machine In
+            From el As Machine In Machines
+            Where el.Group.Length
+
             found = ComboBoxGroup.Items.Cast(Of String)().Any(Function(item) item.ToString = machine.Group)
             If Not found Then ComboBoxGroup.Items.Add(machine.Group)
         Next
@@ -252,8 +259,8 @@ Public Class Search
         Dim progress As Integer
 
         Try
-            startIp = IPToInt(IPAddress.Parse(IpAddressControl_Start.Text))
-            stopIp = IPToInt(IPAddress.Parse(IpAddressControl_End.Text))
+            startIp = IpToInt(IPAddress.Parse(IpAddressControl_Start.Text))
+            stopIp = IpToInt(IPAddress.Parse(IpAddressControl_End.Text))
 
             For i = startIp To stopIp
                 ip = IPAddress.Parse(i).ToString()
@@ -274,16 +281,6 @@ Public Class Search
         End Try
 
     End Sub
-
-    Private Function IPToInt(address As IPAddress) As UInt32
-        Dim bytes As Byte() = address.GetAddressBytes()
-
-        If BitConverter.IsLittleEndian Then
-            Array.Reverse(bytes)
-        End If
-        Dim num As UInt32 = BitConverter.ToUInt32(bytes, 0)
-        Return num
-    End Function
 
     Private Sub backgroundWorker_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles backgroundWorker.ProgressChanged
         Dim i As ListViewItem
@@ -311,6 +308,7 @@ Public Class Search
         Cursor = Cursors.Default
         ToolStripStatusLabel1.Text = Resources.Strings.Done
         ToolStripProgressBar1.Visible = False
+        listView.ListViewItemSorter = _lvwColumnSorter
     End Sub
 
     Private Sub CheckAllButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CheckAllButton.Click
@@ -358,4 +356,46 @@ Public Class Search
         listView.Cursor = Cursors.Default
     End Sub
 
+    Private Sub listView_ColumnClick(sender As Object, e As ColumnClickEventArgs) Handles listView.ColumnClick
+        ' Determine if the clicked column is already the column that is 
+        ' being sorted.
+        If (e.Column = _lvwColumnSorter.SortColumn) Then
+            ' Reverse the current sort direction for this column.
+            If (_lvwColumnSorter.Order = SortOrder.Ascending) Then
+                _lvwColumnSorter.Order = SortOrder.Descending
+            Else
+                _lvwColumnSorter.Order = SortOrder.Ascending
+            End If
+        Else
+            ' Set the column number that is to be sorted; default to ascending.
+            _lvwColumnSorter.SortColumn = e.Column
+            _lvwColumnSorter.Order = SortOrder.Ascending
+        End If
+        If (e.Column = 3) Then
+            _lvwColumnSorter.ObjectType = "IP"
+        Else
+            _lvwColumnSorter.ObjectType = "String"
+        End If
+
+        Settings.SearchSortColumn = _lvwColumnSorter.SortColumn
+        Settings.SearchSortDirection = _lvwColumnSorter.Order
+
+        ' Perform the sort with these new sort options.
+        listView.SetSortIcon(_lvwColumnSorter.SortColumn, _lvwColumnSorter.Order)
+        listView.Sort()
+    End Sub
+
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Create an instance of a ListView column sorter and assign it 
+        ' to the ListView control.
+        _lvwColumnSorter = New ListViewColumnSorter()
+        listView.ListViewItemSorter = _lvwColumnSorter
+        _lvwColumnSorter.SortColumn = Settings.SearchSortColumn
+        _lvwColumnSorter.Order = Settings.SearchSortDirection
+        listView.SetSortIcon(_lvwColumnSorter.SortColumn, _lvwColumnSorter.Order)
+    End Sub
 End Class

@@ -462,6 +462,30 @@ Namespace My
                 Return CType(Me("donate"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property SearchSortColumn() As Integer
+            Get
+                Return CType(Me("SearchSortColumn"),Integer)
+            End Get
+            Set
+                Me("SearchSortColumn") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property SearchSortDirection() As Integer
+            Get
+                Return CType(Me("SearchSortDirection"),Integer)
+            End Get
+            Set
+                Me("SearchSortDirection") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

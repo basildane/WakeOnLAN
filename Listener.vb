@@ -18,11 +18,13 @@
 
 Imports System.Net
 Imports System.Net.Sockets
+Imports System.Runtime.Remoting.Messaging
+Imports System.Threading
 
 Public Class Listener
     Private ReadOnly _gso As New StateObject
     Private Delegate Sub HitDelegate(ByVal ip As String)
-    Private ReadOnly _showHit As New HitDelegate(AddressOf hit)
+    Private ReadOnly _showHit As New HitDelegate(AddressOf Hit)
 
     Private Sub Listener_Load(sender As System.Object, e As EventArgs) Handles MyBase.Load
         ListView1.Items.Clear()
@@ -38,7 +40,7 @@ Public Class Listener
 
     Private Sub ReceiveMessages()
         Try
-            _gso.EndPoint = New IPEndPoint(IPAddress.Any, 9)
+            _gso.EndPoint = New IPEndPoint(IPAddress.Any, RegExTextBoxPort.Text)
             _gso.Socket = New Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp)
             _gso.Socket.EnableBroadcast = True
 
@@ -69,7 +71,7 @@ Public Class Listener
             so = ar.AsyncState
             i = so.Socket.EndReceiveFrom(ar, so.EndPoint)
             Debug.WriteLine(Parse(so.Buffer, i))
-            hit(Parse(so.Buffer, i))
+            Hit(Parse(so.Buffer, i))
 
             'Setup to receive the next packet
             so.Socket.BeginReceiveFrom(so.Buffer, 0, so.Buffer.Length, SocketFlags.None, so.EndPoint, New AsyncCallback(AddressOf Async_Send_Receive), so)
@@ -83,15 +85,24 @@ Public Class Listener
         End Try
     End Sub
 
+    Private Sub ButtonSet_Click(sender As Object, e As EventArgs) Handles ButtonSet.Click
+        If (_gso.Socket Is Nothing) Then Return
+        _gso.Socket.Dispose()
+        Application.DoEvents()
+        Thread.Sleep(800)
+        '_gso.Socket.Close()
+        ReceiveMessages()
+    End Sub
+
     Private Sub Hit(mac As String)
         Try
             If (ListView1.InvokeRequired) Then
-                ListView1.Invoke(_showHit, MAC)
+                ListView1.Invoke(_showHit, mac)
             Else
                 Dim li As New ListViewItem
                 Dim n As String = ""
 
-                li.Text = MAC
+                li.Text = mac
 #If DISPLAY Then
                 li.Text = li.Text.Substring(0, 9) & "00:00:00"
 #End If
@@ -99,7 +110,7 @@ Public Class Listener
                 li.ImageIndex = 0
                 li.SubItems.Add(Now.ToShortTimeString)
                 For Each m As Machine In Machines
-                    If (compareMAC(m.MAC, MAC) = 0) Then
+                    If (compareMAC(m.MAC, mac) = 0) Then
                         n = m.Name
                     End If
                 Next
@@ -187,6 +198,13 @@ Public Class Listener
         ShowHelp(Me, "troubleshooting\listener.html")
     End Sub
 
+    Private Sub RegExTextBoxPort_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RegExTextBoxPort.Validating
+        If RegExTextBoxPort.IsValid() Then
+            ErrorProvider1.SetError(sender, "")
+        Else
+            ErrorProvider1.SetError(sender, "Invalid Port")
+        End If
+    End Sub
 End Class
 
 Friend Class StateObject

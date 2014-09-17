@@ -51,7 +51,7 @@ Namespace My
             Dim splash As Splash = New Splash(Resources.Splash, Resources.Strings.Title, System.String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision), Application.Info.Copyright, SplashPtr)
 
 #If DEBUG Then
-            Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
+            'Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
 #End If
 
         End Sub

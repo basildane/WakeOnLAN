@@ -18,11 +18,20 @@
 
 Imports System.Diagnostics
 Imports System.Windows.Forms
+Imports AlphaWindow
 Imports AutoUpdaterDotNET
 Imports System.Globalization
 Imports System.Linq
 
 Public Class Explorer
+    Private ReadOnly _lvwColumnSorter As New ListViewColumnSorter()
+
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+    End Sub
 
     Private Sub Explorer_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
         Dim auto As New Autorun()
@@ -52,8 +61,6 @@ Public Class Explorer
 
         Machines.dirty = False
         LoadTree()
-        ListView.ListViewItemSorter = New ListViewItemComparer(My.Settings.SortColumn)
-
         Location = My.Settings.MainWindow_Location
         Size = My.Settings.MainWindow_Size
         MenuStrip.Location = New Point(0, 0)
@@ -88,10 +95,10 @@ Public Class Explorer
             Return
         End If
 
-        ToolStripStatusLabel2.Text = e.text
-        If (e.status = AutoUpdateEventArgs.statusCodes.updateAvailable) Then
+        ToolStripStatusLabel2.Text = e.Text
+        If (e.Status = AutoUpdateEventArgs.StatusCodes.updateAvailable) Then
             NotifyIconUpdate.Visible = True
-            NotifyIconUpdate.ShowBalloonTip(0, My.Resources.Strings.Title, e.text, ToolTipIcon.Info)
+            NotifyIconUpdate.ShowBalloonTip(0, My.Resources.Strings.Title, e.Text, ToolTipIcon.Info)
         End If
     End Sub
 
@@ -161,6 +168,7 @@ Public Class Explorer
 
             End Select
             ListView.Items(hostName).Group = ListView.Groups(Status.ToString)
+            ListView.Sort()
 
         Catch ex As Exception
             Debug.WriteLine("(statuschange error)" & ex.Message)
@@ -199,6 +207,7 @@ Public Class Explorer
 
         ListView.SuspendLayout()
         ListView.Sorting = SortOrder.None
+        ListView.ListViewItemSorter = Nothing
         ListView.Items.Clear()
 
         For Each machine As Machine In From m1 As Machine In Machines Where TreeView.SelectedNode.Level = 0 Or TreeView.SelectedNode.Text = m1.Group
@@ -210,8 +219,18 @@ Public Class Explorer
             StatusChange(machine.Name, machine.Status, machine.IP)
         Next
 
-        ListView.ListViewItemSorter = New ListViewItemComparer(My.Settings.SortColumn)
-        ListView.Sorting = My.Settings.SortDirection
+        ListView.ListViewItemSorter = _lvwColumnSorter
+        _lvwColumnSorter.SortColumn = My.Settings.SortColumn
+        _lvwColumnSorter.Order = My.Settings.SortDirection
+        If (_lvwColumnSorter.SortColumn = 2) Then
+            _lvwColumnSorter.ObjectType = "IP"
+        Else
+            _lvwColumnSorter.ObjectType = "String"
+        End If
+
+        ListView.SetSortIcon(_lvwColumnSorter.SortColumn, _lvwColumnSorter.Order)
+        ListView.Sort()
+
         ListView.ResumeLayout()
         DoPing()
     End Sub
@@ -343,15 +362,32 @@ Public Class Explorer
     End Sub
 
     Private Sub ListView_ColumnClick(ByVal sender As Object, ByVal e As Windows.Forms.ColumnClickEventArgs) Handles ListView.ColumnClick
-        If e.Column = My.Settings.SortColumn Then
-            If My.Settings.SortDirection = 1 Then
-                My.Settings.SortDirection = 2
+        ' Determine if the clicked column is already the column that is 
+        ' being sorted.
+        If (e.Column = _lvwColumnSorter.SortColumn) Then
+            ' Reverse the current sort direction for this column.
+            If (_lvwColumnSorter.Order = SortOrder.Ascending) Then
+                _lvwColumnSorter.Order = SortOrder.Descending
             Else
-                My.Settings.SortDirection = 1
+                _lvwColumnSorter.Order = SortOrder.Ascending
             End If
+        Else
+            ' Set the column number that is to be sorted; default to ascending.
+            _lvwColumnSorter.SortColumn = e.Column
+            _lvwColumnSorter.Order = SortOrder.Ascending
         End If
-        My.Settings.SortColumn = e.Column
-        ListView.ListViewItemSorter = New ListViewItemComparer(My.Settings.SortColumn)
+
+        If (e.Column = 2) Then
+            _lvwColumnSorter.ObjectType = "IP"
+        Else
+            _lvwColumnSorter.ObjectType = "String"
+        End If
+        My.Settings.SortColumn = _lvwColumnSorter.SortColumn
+        My.Settings.SortDirection = _lvwColumnSorter.Order
+
+        ' Perform the sort with these new sort options.
+        ListView.SetSortIcon(_lvwColumnSorter.SortColumn, _lvwColumnSorter.Order)
+        ListView.Sort()
     End Sub
 
     Private Sub ListView_DoubleClick(ByVal sender As Object, ByVal e As EventArgs) Handles ListView.DoubleClick
@@ -711,54 +747,4 @@ Public Class Explorer
         End If
     End Sub
 
-End Class
-
-' Implements the manual sorting of items by columns.
-Class ListViewItemComparer
-    Implements IComparer
-
-    Private ReadOnly _column As Integer
-
-    Public Sub New()
-        _column = 0
-    End Sub
-
-    Public Sub New(ByVal column As Integer)
-        _column = column
-    End Sub
-
-    Public Function Compare(ByVal x As Object, ByVal y As Object) As Integer Implements IComparer.Compare
-        Dim direction As Int16
-
-        direction = IIf(My.Settings.SortDirection = 1, 1, -1)
-
-        If _column = 2 Then
-            Try
-                Return ((ConvDotIP2Long(CType(x, ListViewItem).SubItems(_column).Text)) - ConvDotIP2Long(CType(y, ListViewItem).SubItems(_column).Text)) * direction
-
-            Catch ex As Exception
-                Debug.WriteLine("compare:" & ex.Message)
-
-            End Try
-            Return 0
-        End If
-        Return [String].Compare(CType(x, ListViewItem).SubItems(_column).Text, CType(y, ListViewItem).SubItems(_column).Text) * direction
-    End Function
-
-    Private Function ConvDotIP2Long(ByVal dotIp As String) As Long
-        Dim ipArray() As String
-
-        ConvDotIP2Long = 0
-        Try
-            ipArray = Split(dotIp, ".")
-            For i As Int16 = 0 To UBound(ipArray)
-                ConvDotIP2Long += ((ipArray(i) Mod 256) * (256 ^ (4 - i)))
-            Next
-
-        Catch ex As Exception
-            Debug.WriteLine(ex.Message)
-
-        End Try
-
-    End Function
 End Class

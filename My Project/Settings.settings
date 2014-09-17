@@ -107,5 +107,11 @@
     <Setting Name="donate" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=878X6KTKWVVEQ</Value>
     </Setting>
+    <Setting Name="SearchSortColumn" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SearchSortDirection" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

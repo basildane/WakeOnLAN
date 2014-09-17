@@ -19,6 +19,8 @@
 Imports System.Linq
 Imports System.IO
 Imports System.Runtime.InteropServices
+Imports System.Net
+Imports System.Configuration
 
 Module Globals
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
@@ -80,5 +82,25 @@ Module Globals
             listview.Columns(i).Width = Int(s(i))
         Next
     End Sub
+
+    Public Function IpToInt(address As IPAddress) As UInt32
+        Dim bytes As Byte() = address.GetAddressBytes()
+
+        If BitConverter.IsLittleEndian Then
+            Array.Reverse(bytes)
+        End If
+        Dim num As UInt32 = BitConverter.ToUInt32(bytes, 0)
+        Return num
+    End Function
+
+    Public Function IpToInt(address As String) As UInt32
+        Dim _address As IPAddress
+
+        If (IPAddress.TryParse(address, _address)) Then
+            Return IpToInt(_address)
+        Else
+            Return 0
+        End If
+    End Function
 
 End Module
