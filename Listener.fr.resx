@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,76 +59,88 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<data name="&gt;&gt;lUDPport.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ColumnHeader_Time.Text" xml:space="preserve">
+    <value>Temps</value>
   </data>
-	<data name="&gt;&gt;ListView1.Name" xml:space="preserve">
-    <value>ListView1</value>
+  <data name="ColumnHeader_Name.Text" xml:space="preserve">
+    <value>Nom</value>
   </data>
-	<data name="&gt;&gt;ImageList_Large.Name" xml:space="preserve">
-    <value>ImageList_Large</value>
+  <data name="LabelHeader.Text" xml:space="preserve">
+    <value>Paquets WOL reçu...</value>
   </data>
-	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-	<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-		<value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 20</value>
+  </data>
+  <data name="lUDPport.Text" xml:space="preserve">
+    <value>En écoute sur:</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 102</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Paramètres réseau</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
         AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAABILAAASCwAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -292,123 +304,13 @@
         wAAAAwAA///AAAADAAD//8AAAAMAAP//wAAAAwAA///AAAADAAD//8AAAAMAAP///////wAA////////
         AAA=
 </value>
-	</data>
-	<data name="ListView1.Location" type="System.Drawing.Point, System.Drawing">
-		<value>149, 28</value>
-	</data>
-	<assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-	<data name="ListView1.TabIndex" type="System.Int32, mscorlib">
-		<value>0</value>
-	</data>
-	<data name="&gt;&gt;ListView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-	<data name="LabelHeader.Location" type="System.Drawing.Point, System.Drawing">
-		<value>146, 9</value>
-	</data>
-	<data name="&gt;&gt;ColumnHeader_Time.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Listener</value>
-  </data>
-	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-	<data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-		<value>NoControl</value>
-	</data>
-	<data name="&gt;&gt;ImageList_Large.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;Button_clear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="Button_clear.TabIndex" type="System.Int32, mscorlib">
-		<value>2</value>
-	</data>
-	<data name="&gt;&gt;Button_clear.Name" xml:space="preserve">
-    <value>Button_clear</value>
-  </data>
-	<data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-		<value>6, 13</value>
-	</data>
-	<data name="Label1.TabIndex" type="System.Int32, mscorlib">
-		<value>3</value>
-	</data>
-	<data name="&gt;&gt;Button_clear.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-	<data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-	<data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-	<data name="lUDPport.TabIndex" type="System.Int32, mscorlib">
-		<value>2</value>
-	</data>
-	<data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
-		<value>3</value>
-	</data>
-	<data name="LabelHeader.TabIndex" type="System.Int32, mscorlib">
-		<value>4</value>
-	</data>
-	<data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-	<data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="LabelHeader.Size" type="System.Drawing.Size, System.Drawing">
-		<value>130, 16</value>
-	</data>
-	<data name="ListView1.Size" type="System.Drawing.Size, System.Drawing">
-		<value>420, 400</value>
-	</data>
-	<data name="&gt;&gt;ColumnHeader_Name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;lUDPport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;LabelHeader.Name" xml:space="preserve">
-    <value>LabelHeader</value>
-  </data>
-	<data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-	<data name="&gt;&gt;ColumnHeader_IP.Name" xml:space="preserve">
-    <value>ColumnHeader_IP</value>
-  </data>
-	<data name="lUDPport.Location" type="System.Drawing.Point, System.Drawing">
-		<value>6, 22</value>
-	</data>
-	<data name="&gt;&gt;ListView1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-	<data name="Button_clear.Size" type="System.Drawing.Size, System.Drawing">
-		<value>75, 23</value>
-	</data>
-	<data name="&gt;&gt;LabelHeader.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-	<data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-		<value>128, 128</value>
-	</data>
-	<data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-	<data name="&gt;&gt;ColumnHeader_IP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="ImageList_Large.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-		<value>
+  <data name="ImageList_Large.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACi
-        JQAAAk1TRnQBSQFMAwEBAAG4AQABzAEAATABAAEwAQAE/wEZARAI/wFCAU0BNgcAATYDAAEoAwABwAMA
+        JQAAAk1TRnQBSQFMAwEBAAHUAQAB1AEAATABAAEwAQAE/wEZAQAI/wFCAU0BNgcAATYDAAEoAwABwAMA
         ATADAAEBAQABGAYAAWz/AP8AbwAD/wH0Ae8B7AHqAdcBzAHnAdABwwHnAdABwgHrAdkB0AH4AfUB8wYA
         AfMC8QHZAdABzwHJAbsBuAG+AasBqAG3AaABnQGwAZcBlAGtAZIBjgGtAZIBjgGuAZMBjwGzAZsBlwG6
         AaUBogHDAbIBrwHSAcYBxAHlAeAB3wH6Avn/APYAAfMB7QHpAd4BrAGNAdoBiQFbAd8BkwFrAeABmQFz
@@ -568,103 +470,7 @@
         BAABBxIAAeAEAAEHEgAB4AQAAQcSAAHgBAABBxIAAeAEAAEHEgAB4AQAAQcSAAHgBAABBxIAAfAEAAEH
         EgAB+AQAAQcSAAH4BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH+BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH+
         BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH+BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH/BAABBxIAAf8BgAMA
-        AQcSAAH/AfgDAAEHEgAC/wHwAgABHxIAA/8B8AEBAf8SAAb/KAAL
+        AQcSAAH/AfgDAAEHEgAC/wHwAgABHxIAA/8B8AEBAf8SAAb/EgAL
 </value>
-	</data>
-	<data name="&gt;&gt;ListView1.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
-	<data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-		<value>128, 71</value>
-	</data>
-	<data name="Button_clear.Location" type="System.Drawing.Point, System.Drawing">
-		<value>12, 405</value>
-	</data>
-	<data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-		<value>6, 42</value>
-	</data>
-	<data name="&gt;&gt;LabelHeader.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-	<data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-		<value>12, 12</value>
-	</data>
-	<data name="&gt;&gt;LabelHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;ColumnHeader_Name.Name" xml:space="preserve">
-    <value>ColumnHeader_Name</value>
-  </data>
-	<data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
-		<value>1</value>
-	</data>
-	<data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-	<data name="lUDPport.Size" type="System.Drawing.Size, System.Drawing">
-		<value>116, 20</value>
-	</data>
-	<data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-	<data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
-    <value>PictureBox1</value>
-  </data>
-	<data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-		<value>12, 147</value>
-	</data>
-	<data name="&gt;&gt;lUDPport.Name" xml:space="preserve">
-    <value>lUDPport</value>
-  </data>
-	<data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-		<value>116, 20</value>
-	</data>
-	<data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-	<data name="&gt;&gt;Button_clear.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-	<data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-		<value>581, 443</value>
-	</data>
-	<data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;ColumnHeader_Time.Name" xml:space="preserve">
-    <value>ColumnHeader_Time</value>
-  </data>
-	<data name="&gt;&gt;lUDPport.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-	<metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-		<value>True</value>
-	</metadata>
-	<metadata name="ImageList_Large.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-		<value>17, 17</value>
-	</metadata>
-	<data name="LabelHeader.Text" xml:space="preserve">
-		<value>Paquets WOL reçu...</value>
-	</data>
-	<data name="ColumnHeader_Name.Text" xml:space="preserve">
-		<value>Nom</value>
-	</data>
-	<data name="Label1.Text" xml:space="preserve">
-		<value>UDP port 9</value>
-	</data>
-	<data name="lUDPport.Text" xml:space="preserve">
-		<value>En écoute sur:</value>
-	</data>
-	<data name="ColumnHeader_IP.Text" xml:space="preserve">
-		<value>IP</value>
-	</data>
-	<data name="ColumnHeader_Time.Text" xml:space="preserve">
-		<value>Temps</value>
-	</data>
-	<data name="GroupBox1.Text" xml:space="preserve">
-		<value>Paramètres réseau</value>
-	</data>
 </root>
