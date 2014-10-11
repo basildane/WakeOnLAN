@@ -44,6 +44,9 @@ Namespace My
         ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
 
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
+            If (Control.ModifierKeys = Keys.Control) Then
+                SafeMode.ShowDialog()
+            End If
             ConfigureCulture()
             singleInstance()
             upgradeSettings()

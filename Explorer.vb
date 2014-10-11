@@ -35,6 +35,7 @@ Public Class Explorer
 
     Private Sub Explorer_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
         Dim auto As New Autorun()
+
         AutoStartWithWindowsToolStripMenuItem.Checked = auto.AutoRun()
 
         ListView.View = My.Settings.ListView_View
