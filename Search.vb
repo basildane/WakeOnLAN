@@ -25,8 +25,6 @@ Imports WakeOnLan.My
 
 Public Class Search
 
-    Declare Function SendARP Lib "iphlpapi.dll" (ByVal DestIP As Int32, ByVal SrcIP As Int32, ByVal pMacAddr As Byte(), ByRef PhyAddrLen As Integer) As Integer
-
     Private Structure Profile
         Public Name As String
         Public IpAddress As String

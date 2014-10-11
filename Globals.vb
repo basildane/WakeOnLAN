@@ -20,12 +20,12 @@ Imports System.Linq
 Imports System.IO
 Imports System.Runtime.InteropServices
 Imports System.Net
-Imports System.Configuration
 
 Module Globals
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
     Public Declare Function InitiateSystemShutdown Lib "advapi32.dll" Alias "InitiateSystemShutdownA" (ByVal lpMachineName As String, ByVal lpMessage As String, ByVal dwTimeout As Integer, ByVal bForceAppsClosed As Integer, ByVal bRebootAfterShutdown As Integer) As Integer
     Public Declare Function AbortSystemShutdown Lib "advapi32.dll" Alias "AbortSystemShutdownA" (ByVal lpMachineName As String) As Integer
+    Public Declare Function SendARP Lib "iphlpapi.dll" (ByVal DestIP As Int32, ByVal SrcIP As Int32, ByVal pMacAddr As Byte(), ByRef PhyAddrLen As Integer) As Integer
 
     <DllImport("user32.dll")> _
     Public Function SetForegroundWindow(ByVal hWnd As IntPtr) As <MarshalAs(UnmanagedType.Bool)> Boolean
@@ -102,5 +102,24 @@ Module Globals
             Return 0
         End If
     End Function
+
+    Public Function CompareMac(mac1 As String, mac2 As String) As Int32
+
+        Try
+            Dim _mac1 As String = Replace(mac1, ":", "")
+            _mac1 = Replace(_mac1, "-", "")
+
+            Dim _mac2 As String = Replace(mac2, ":", "")
+            _mac2 = Replace(_mac2, "-", "")
+
+            Return StrComp(_mac1, _mac2, CompareMethod.Text)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString, "compareMAC")
+
+        End Try
+
+    End Function
+
 
 End Module

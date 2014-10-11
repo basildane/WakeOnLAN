@@ -135,24 +135,6 @@ Public Class Listener
         End Try
     End Sub
 
-    Private Function compareMAC(mac1 As String, mac2 As String) As Int32
-
-        Try
-            Dim _mac1 As String = Replace(mac1, ":", "")
-            _mac1 = Replace(_mac1, "-", "")
-
-            Dim _mac2 As String = Replace(mac2, ":", "")
-            _mac2 = Replace(_mac2, "-", "")
-
-            Return StrComp(_mac1, _mac2, CompareMethod.Text)
-
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString, "compareMAC")
-
-        End Try
-
-    End Function
-
     Private Function Parse(ByVal b As Byte(), l As Integer) As String
         Dim i As Int16
         Dim s As String = ""

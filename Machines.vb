@@ -78,7 +78,6 @@ Public Class MachinesClass
 
         Catch ex As Exception
             Debug.WriteLine(ex.Message)
-            'MessageBox.Show(ex.Message, My.Resources.Strings.ChangesNotSaved, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
 
@@ -105,7 +104,7 @@ Public Class MachinesClass
         Next
     End Sub
 
-    Public Sub Export(ByVal Filename As String)
+    Public Sub Export(ByVal filename As String)
         Dim serializer As New XmlSerializer(GetType(MachinesClass))
         Dim writer As IO.StreamWriter
 
@@ -170,10 +169,9 @@ End Class
 
 
 <Serializable()> Public Class Machine
-    Private WithEvents Worker As New BackgroundWorker
+    Private WithEvents backgroundWorker As New BackgroundWorker
     Private WithEvents ping As New Ping
-    Private PingComplete As Boolean = True
-    Private _Run As Boolean = False
+    Private _run As Boolean = False
 
     <XmlIgnore()> Public Reply As PingReply
 
@@ -318,61 +316,84 @@ End Class
     Public Event StatusChange(ByVal Name As String, ByVal status As StatusCodes, ByVal IpAddress As String)
 
     Public Sub New()
-        Worker.WorkerSupportsCancellation = True
+        backgroundWorker.WorkerSupportsCancellation = True
     End Sub
 
     Public Sub Run()
-        _Run = True
-        If Worker.IsBusy Then Exit Sub
+        _run = True
+        If backgroundWorker.IsBusy Then Exit Sub
 
-        Worker.WorkerReportsProgress = True
+        backgroundWorker.WorkerReportsProgress = True
         If IP.Length Then
-            Worker.RunWorkerAsync(IP)
+            backgroundWorker.RunWorkerAsync(IP)
         Else
-            Worker.RunWorkerAsync(Netbios)
+            backgroundWorker.RunWorkerAsync(Netbios)
         End If
     End Sub
 
     Public Function Busy() As Boolean
-        Return Worker.IsBusy
+        Return backgroundWorker.IsBusy
     End Function
 
     Public Sub Cancel()
-        _Run = False
-        Worker.CancelAsync()
+        _run = False
+        backgroundWorker.CancelAsync()
     End Sub
 
-    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles Worker.DoWork
+    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles BackgroundWorker.DoWork
         Do
             Try
                 Threading.Thread.Sleep(2000)
                 Reply = ping.Send(e.Argument, 1500)
                 If Reply.Status = IPStatus.Success Then
-                    Worker.ReportProgress(100)
+                    backgroundWorker.ReportProgress(100)
                 Else
-                    Worker.ReportProgress(0)
+                    backgroundWorker.ReportProgress(0)
                 End If
 
             Catch ex As Exception
-                Worker.ReportProgress(0)
+                backgroundWorker.ReportProgress(0)
 
             End Try
 
-        Loop Until Worker.CancellationPending = True
+        Loop Until backgroundWorker.CancellationPending = True
     End Sub
 
-    Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles Worker.ProgressChanged
+    Private Sub backgroundWorker_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker.ProgressChanged
         Try
-            If Worker.CancellationPending Then Exit Sub
+            If backgroundWorker.CancellationPending Then Exit Sub
 
             Select Case e.ProgressPercentage
                 Case 100
                     If Status <> StatusCodes.Online Then
                         Status = StatusCodes.Online
+
                         ' return ip4 address if possible
                         If IP = "" Then
                             For Each IPA As IPAddress In Dns.GetHostAddresses(Netbios)
                                 If IPA.AddressFamily.ToString() = "InterNetwork" Then
+                                    ' verify that we have the correct MAC
+
+                                    Dim remoteIp As Int32
+                                    Dim remoteMac() As Byte = New Byte(6) {}
+                                    Dim len As Integer = 6
+
+                                    Try
+                                        remoteIp = IPA.GetHashCode()
+
+                                        If remoteIp <> 0 Then
+                                            If SendARP(remoteIp, 0, remoteMac, len) = 0 Then
+                                                If CompareMac(BitConverter.ToString(remoteMac, 0, len), MAC) Then
+                                                    Status = StatusCodes.Offline
+                                                    Exit Sub
+                                                End If
+                                            End If
+                                        End If
+
+                                    Catch
+
+                                    End Try
+
                                     RaiseEvent StatusChange(Name, Status, IPA.ToString)
                                     Exit Sub
                                 End If
@@ -398,11 +419,10 @@ End Class
 
     End Sub
 
-    Private Sub BackgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles Worker.RunWorkerCompleted
+    Private Sub backgroundWorker_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles backgroundWorker.RunWorkerCompleted
         Try
             Debug.WriteLine("(BackgroundWorker_Ping_RunWorkerCompleted) " & Name & " " & e.Result)
-            If _Run Then
-                'Debug.WriteLine("*** worker completed - rerun")
+            If _run Then
                 Run()
                 Exit Sub
             End If
