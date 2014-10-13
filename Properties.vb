@@ -60,6 +60,7 @@ Public Class Properties
             item = ComboBoxAdapters.SelectedItem
             m.Adapter = item.Value
             m.RDPPort = tRDPPort.Text
+            m.Note = TextBox_Notes.Text
             Machines.Add(m)
 
             Machines.Save()
@@ -79,15 +80,16 @@ Public Class Properties
     End Sub
 
     Public Sub Create()
-        _hostName = ""
+        _hostName = String.Empty
         Text = String.Format(My.Resources.Strings.Properties, My.Resources.Strings.isNew)
         Delete_Button.Visible = False
-        IP.Text = ""
+        IP.Text = String.Empty
         Broadcast.Text = Net.IPAddress.Broadcast.ToString()
         rbIP.Checked = True
         UDPPort.Text = "9"
         TTL.Text = "128"
         tRDPPort.Text = "3389"
+        TextBox_Notes.Text = String.Empty
         DisplayIPv4NetworkInterfaces("")
         ShowDialog(My.Forms.Explorer)
     End Sub
@@ -112,12 +114,13 @@ Public Class Properties
         rbIP.Checked = (m.Method = 0)
         rbURI.Checked = (m.Method = 1)
         tRDPPort.Text = m.RDPPort
+        TextBox_Notes.Text = m.Note
         DisplayIPv4NetworkInterfaces(m.Adapter)
         ValidateChildren()
         ShowDialog(My.Forms.Explorer)
     End Sub
 
-    Public Sub DisplayIPv4NetworkInterfaces(defaultAdapter As String)
+    Private Sub DisplayIPv4NetworkInterfaces(defaultAdapter As String)
         Dim nics As NetworkInterface() = NetworkInterface.GetAllNetworkInterfaces()
         Dim properties As IPGlobalProperties = IPGlobalProperties.GetIPGlobalProperties()
         Dim item As ComboboxItem

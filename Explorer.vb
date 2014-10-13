@@ -216,6 +216,7 @@ Public Class Explorer
             listViewItem.SubItems.Add(machine.Status.ToString)
             listViewItem.SubItems.Add(machine.IP)
             listViewItem.SubItems.Add(machine.Netbios)
+            listViewItem.SubItems.Add(machine.Note)
             listViewItem.SubItems.Add(machine.Group)
             StatusChange(machine.Name, machine.Status, machine.IP)
         Next

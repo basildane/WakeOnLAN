@@ -305,6 +305,16 @@ End Class
         End Set
     End Property
 
+    Private _note As String
+    Public Property Note() As String
+        Get
+            Return _note
+        End Get
+        Set(value As String)
+            _note = value
+        End Set
+    End Property
+
     Public Enum StatusCodes As Integer
         Online
         Offline

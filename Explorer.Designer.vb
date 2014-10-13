@@ -169,6 +169,7 @@ Partial Class Explorer
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
+        Me.Note = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -294,7 +295,7 @@ Partial Class Explorer
         '
         'ListView
         '
-        Me.ListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.MachineName, Me.Status, Me.IPAddress, Me.Netbios, Me.Group})
+        Me.ListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.MachineName, Me.Status, Me.IPAddress, Me.Netbios, Me.Note, Me.Group})
         Me.ListView.ContextMenuStrip = Me.ContextMenuStrip_Machines
         resources.ApplyResources(Me.ListView, "ListView")
         Me.ListView.FullRowSelect = True
@@ -785,6 +786,10 @@ Partial Class Explorer
         '
         Me.CultureManager.ManagedControl = Me
         '
+        'Note
+        '
+        resources.ApplyResources(Me.Note, "Note")
+        '
         'Explorer
         '
         resources.ApplyResources(Me, "$this")
@@ -877,5 +882,6 @@ Partial Class Explorer
     Friend WithEvents TreeViewContextMenuStrip As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents WakeUpToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ShutDownToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Note As System.Windows.Forms.ColumnHeader
 
 End Class
