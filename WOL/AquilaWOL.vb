@@ -18,8 +18,23 @@
 
 Imports System.Net.Sockets
 Imports System.Net
+Imports System.Management
 
 Public Class AquilaWolLibrary
+    Public Enum ShutdownFlags
+        Logoff = 0
+        ForcedLogoff = 4
+        Shutdown = 1
+        ForcedShutdown = 5
+        Reboot = 2
+        ForcedReboot = 6
+        PowerOff = 8
+        ForcedPoweroff = 12
+        '''
+        Sleep = 100
+        Hibernate = 101
+    End Enum
+
     ''' <summary>
     ''' Send a WOL packet to a remote computer
     ''' </summary>
@@ -37,12 +52,12 @@ Public Class AquilaWolLibrary
         Dim macBytes As Byte()
 
         Try
-            macBytes = GetMAC(mac)
+            macBytes = GetMac(mac)
 
-            If (String.IsNullOrEmpty(Adapter)) Then
+            If (String.IsNullOrEmpty(adapter)) Then
                 localEndPoint = New IPEndPoint(IPAddress.Any, udpPort)
             Else
-                localEndPoint = New IPEndPoint(IPAddress.Parse(Adapter), udpPort)
+                localEndPoint = New IPEndPoint(IPAddress.Parse(adapter), udpPort)
             End If
 
             client = New UdpClient()
@@ -79,17 +94,66 @@ Public Class AquilaWolLibrary
 
     End Sub
 
-    Public Shared Sub Shutdown(host As String)
+    Public Shared Function Shutdown(host As String, flags As ShutdownFlags, Optional userid As String = "", Optional password As String = "", Optional domain As String = "") As Boolean
+        Dim process As ManagementClass
+        Dim scope As ManagementScope
+        Dim options As ConnectionOptions = New ConnectionOptions()
+        Dim query As SelectQuery
+        Dim searcher As ManagementObjectSearcher
+        Dim inparams, outparams As ManagementBaseObject
+        Dim retval As UInt32
 
+        process = New ManagementClass("Win32_Process")
 
-    End Sub
+        If (String.IsNullOrEmpty(userid)) Then
+            scope = New ManagementScope(String.Format("{0}\root\cimv2", host))
+            process.Scope = scope
+        Else
+            options.Username = userid
+            options.Password = password
+            options.Authority = "ntlmdomain:" & domain
+            scope = New ManagementScope(String.Format("{0}\root\cimv2", host), options)
+        End If
+
+        process.Scope.Connect()
+
+        If (flags = ShutdownFlags.Sleep Or flags = ShutdownFlags.Hibernate) Then
+            inparams = process.GetMethodParameters("Create")
+            Select Case flags
+                Case ShutdownFlags.Sleep
+                    inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
+
+                Case ShutdownFlags.Hibernate
+                    inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
+
+            End Select
+
+            outparams = process.InvokeMethod("Create", inparams, Nothing)
+            retval = outparams("ReturnValue")
+        Else
+            query = New SelectQuery("SELECT * FROM Win32_OperatingSystem WHERE Primary=true")
+            searcher = New ManagementObjectSearcher(scope, query)
+
+            For Each managementObject As ManagementObject In searcher.Get()
+                Debug.WriteLine(managementObject("Caption"))
+
+                inparams = managementObject.GetMethodParameters("Win32Shutdown")
+                inparams("Flags") = flags
+                outparams = managementObject.InvokeMethod("Win32Shutdown", inparams, Nothing)
+
+                retval = outparams("ReturnValue")
+            Next
+        End If
+
+        Return IIf(retval, 0, 1)
+    End Function
 
     Private Shared Function GetMac(ByVal mac As String) As Byte()
         Dim i As Integer
         Dim m(5) As Byte
         Dim s As String
 
-        s = Replace(Mac, " ", "")
+        s = Replace(mac, " ", "")
         s = Replace(s, ":", "")
         s = Replace(s, "-", "")
 

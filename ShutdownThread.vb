@@ -18,6 +18,7 @@
 
 Imports System.ComponentModel
 Imports System.Management
+Imports WOL
 
 Public Class ShutdownThread
     Public Enum ShutdownAction
@@ -43,10 +44,10 @@ Public Class ShutdownThread
         _item = item
         _progressbar = progressbar
         _action = action
-        _Message = message
+        _message = message
         _delay = delay
         _force = force
-        _reboot = Reboot
+        _reboot = reboot
         _errMessage = ""
         _backgroundWorker.RunWorkerAsync()
     End Sub
@@ -61,7 +62,7 @@ Public Class ShutdownThread
         Dim machine As Machine
 
         dwResult = 0
-        sAlertMessage = _Message & vbNullChar
+        sAlertMessage = _message & vbNullChar
         dwDelay = _delay
         dwForce = CLng(_force)
         dwReboot = CLng(_reboot)
@@ -79,13 +80,29 @@ Public Class ShutdownThread
                     dwResult = AbortSystemShutdown(sMachine)
 
                 Case ShutdownAction.Shutdown
-                    dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
+                    If (dwForce) Then
+                        If (dwReboot) Then
+                            dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.ForcedReboot)
+                        Else
+                            dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.ForcedShutdown)
+                        End If
+                    Else
+                        If (dwReboot) Then
+                            dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.Reboot)
+                        Else
+                            dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.Shutdown)
+                        End If
+                    End If
+                    'dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
 
                 Case ShutdownAction.User
                     Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
 
-                Case ShutdownAction.Sleep, ShutdownAction.Hibernate
-                    dwResult = WMIpower(sMachine)
+                Case ShutdownAction.Sleep
+                    dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.Sleep)
+
+                Case ShutdownAction.Hibernate
+                    dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.Hibernate)
 
             End Select
 
@@ -102,42 +119,6 @@ Public Class ShutdownThread
         e.Result = dwResult
 
     End Sub
-
-    Private Function WMIpower(sMachine As String) As Integer
-        Dim process As ManagementClass
-        Dim path As ManagementPath
-        Dim inparams, outparams As ManagementBaseObject
-        Dim ProcID, retval As String
-
-        process = New ManagementClass("Win32_Process")
-        path = New ManagementPath(String.Format("{0}\root\cimv2", sMachine))
-
-#If False Then
-        Dim options As ConnectionOptions = New ConnectionOptions()
-        options.Username = ""
-        options.Password = ""
-        process.Scope = New ManagementScope(path, options)
-#Else
-        process.Scope = New ManagementScope(path)
-#End If
-        process.Scope.Connect()
-
-        inparams = process.GetMethodParameters("Create")
-        Select Case _action
-            Case ShutdownAction.Sleep
-                inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
-
-            Case ShutdownAction.Hibernate
-                inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
-
-        End Select
-
-        outparams = process.InvokeMethod("Create", inparams, Nothing)
-        ProcID = outparams("ProcessID").ToString()
-        retval = outparams("ReturnValue").ToString()
-
-        Return IIf(retval, 0, 1)
-    End Function
 
     Private Sub backgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
 
