@@ -353,7 +353,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to You must set a proper UserID and Password for a scheduled task..
+        '''  Looks up a localized string similar to You must set a proper UseridDialog and Password for a scheduled task..
         '''</summary>
         Friend Shared ReadOnly Property errUserID() As String
             Get
