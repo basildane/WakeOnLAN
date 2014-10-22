@@ -68,25 +68,29 @@ Public Class MachinesClass
 
     End Sub
 
-    Public Sub Add(ByVal Machine As Machine)
-        List.Add(Machine)
+    Public Sub Add(ByVal machine As Machine)
+        List.Add(machine)
     End Sub
 
 End Class
 
 
 <Serializable()> Public Class Machine
-    Public Name As String = ""
-    Public MAC As String = ""
-    Public IP As String = ""
-    Public Broadcast As String = ""
-    Public Netbios As String = ""
+    Public Name As String = String.Empty
+    Public MAC As String = String.Empty
+    Public IP As String = String.Empty
+    Public Broadcast As String = String.Empty
+    Public Netbios As String = String.Empty
     Public Method As Integer = 0
     Public Emergency As Boolean = False
-    Public ShutdownCommand As String = ""
-    Public Group As String = ""
+    Public ShutdownCommand As String = String.Empty
+    Public Group As String = String.Empty
     Public UDPPort As Integer = 9
     Public TTL As Integer = 128
-    Public Adapter As String = ""
+    Public Adapter As String = String.Empty
     Public RDPPort As Integer = 3389
+    Public Note As String = String.Empty
+    Public UserID As String = String.Empty
+    Public Password As String = String.Empty
+    Public Domain As String = String.Empty
 End Class

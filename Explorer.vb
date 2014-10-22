@@ -548,26 +548,6 @@ Public Class Explorer
         Shutdown.PerformShutdown(Me, items)
     End Sub
 
-    Private Sub AbortShutdownToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles AbortShutdownToolStripMenuItem.Click
-        Dim dwResult As Integer
-        Dim m As Machine
-
-        Cursor = Cursors.WaitCursor
-        ResetMonitor()
-        For Each l As ListViewItem In ListView.SelectedItems
-            m = Machines(l.Name)
-
-            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.AbortingShutdown, m.Name)
-            dwResult = AbortSystemShutdown("\\" & m.Netbios)
-            If dwResult = 0 Then
-                ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.AbortFailed, m.Netbios, FormatMessage(Err.LastDllError))
-            Else
-                ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.AbortSuccess, m.Netbios)
-            End If
-        Next
-        Cursor = Cursors.Default
-    End Sub
-
     Private Sub PropertiesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PropertiesToolStripMenuItem.Click
         Properties.Edit(ListView.SelectedItems(0).Name)
         If Properties.DialogResult = Windows.Forms.DialogResult.OK Then

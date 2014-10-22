@@ -18,9 +18,14 @@
 
 Imports System.Windows.Forms
 Imports System.Net.NetworkInformation
+Imports System.Linq
 
 Public Class Properties
     Private _hostName As String
+    Private _userID As String
+    Private _password As String
+    Private _domain As String
+    Private _encryption As New Encryption(My.Application.Info.ProductName)
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
         Dim m As New Machine
@@ -61,6 +66,9 @@ Public Class Properties
             m.Adapter = item.Value
             m.RDPPort = tRDPPort.Text
             m.Note = TextBox_Notes.Text
+            m.UserID = _userID
+            m.Password = _encryption.EnigmaEncrypt(_password)
+            m.Domain = _domain
             Machines.Add(m)
 
             Machines.Save()
@@ -115,6 +123,9 @@ Public Class Properties
         rbURI.Checked = (m.Method = 1)
         tRDPPort.Text = m.RDPPort
         TextBox_Notes.Text = m.Note
+        _userID = m.UserID
+        _password = _encryption.EnigmaDecrypt(m.Password)
+        _domain = m.Domain
         DisplayIPv4NetworkInterfaces(m.Adapter)
         ValidateChildren()
         ShowDialog(My.Forms.Explorer)
@@ -172,11 +183,9 @@ Public Class Properties
     End Sub
 
     Private Sub CheckValidation()
-        For Each c As Control In Controls
-            If ErrorProvider1.GetError(c).Length Then
-                OK_Button.Enabled = False
-                Exit Sub
-            End If
+        For Each c As Control In From c1 As Control In Controls Where ErrorProvider1.GetError(c1).Length
+            OK_Button.Enabled = False
+            Exit Sub
         Next
         OK_Button.Enabled = True
     End Sub
@@ -223,6 +232,20 @@ Public Class Properties
             ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidName)
         End If
         CheckValidation()
+    End Sub
+
+    Private Sub bUserID_Click(sender As Object, e As EventArgs) Handles bUserID.Click
+        Dim userIdDialog As New UseridDialog
+
+        userIdDialog.tUserId.Text = _userID
+        userIdDialog.tPassword.Text = _password
+        userIdDialog.tDomain.Text = _domain
+
+        If (userIdDialog.ShowDialog(Me) = DialogResult.OK) Then
+            _userID = userIdDialog.tUserId.Text
+            _password = userIdDialog.tPassword.Text
+            _domain = userIdDialog.tDomain.Text
+        End If
     End Sub
 End Class
 

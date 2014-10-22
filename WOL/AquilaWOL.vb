@@ -30,7 +30,6 @@ Public Class AquilaWolLibrary
         ForcedReboot = 6
         PowerOff = 8
         ForcedPoweroff = 12
-        '''
         Sleep = 100
         Hibernate = 101
     End Enum
@@ -94,58 +93,80 @@ Public Class AquilaWolLibrary
 
     End Sub
 
-    Public Shared Function Shutdown(host As String, flags As ShutdownFlags, Optional userid As String = "", Optional password As String = "", Optional domain As String = "") As Boolean
+    ''' <summary>
+    ''' Shutdown a Windows host.
+    ''' </summary>
+    ''' <param name="host">The name or IP of the computer to shutdown.</param>
+    ''' <param name="flags">One of the ShutdownFlags, such as Reboot, Sleep, etc.</param>
+    ''' <param name="userid">Optional userid credentials.</param>
+    ''' <param name="password">Optional password.</param>
+    ''' <param name="domain">Optional Domain name.</param>
+    ''' <returns>0: Success, else Win32 error code.</returns>
+    ''' <remarks></remarks>
+    Public Shared Function Shutdown(host As String,
+                                    flags As ShutdownFlags,
+                                    Optional userid As String = "",
+                                    Optional password As String = "",
+                                    Optional domain As String = "") As UInteger
+
         Dim process As ManagementClass
         Dim scope As ManagementScope
         Dim options As ConnectionOptions = New ConnectionOptions()
         Dim query As SelectQuery
         Dim searcher As ManagementObjectSearcher
         Dim inparams, outparams As ManagementBaseObject
-        Dim retval As UInt32
+        Dim retval As UInteger
+        Const wmiPath As String = "\\{0}\root\cimv2"
 
-        process = New ManagementClass("Win32_Process")
+        Try
+            process = New ManagementClass("Win32_Process")
 
-        If (String.IsNullOrEmpty(userid)) Then
-            scope = New ManagementScope(String.Format("{0}\root\cimv2", host))
+            If (String.IsNullOrEmpty(userid)) Then
+                scope = New ManagementScope(String.Format(wmiPath, host))
+            Else
+                options.Username = userid
+                options.Password = password
+                options.Authority = "ntlmdomain:" & domain
+                scope = New ManagementScope(String.Format(wmiPath, host), options)
+            End If
             process.Scope = scope
-        Else
-            options.Username = userid
-            options.Password = password
-            options.Authority = "ntlmdomain:" & domain
-            scope = New ManagementScope(String.Format("{0}\root\cimv2", host), options)
-        End If
+            process.Scope.Connect()
+            LocalShutdown.EnableToken("SeShutdownPrivilege")
 
-        process.Scope.Connect()
+            If (flags = ShutdownFlags.Sleep Or flags = ShutdownFlags.Hibernate) Then
+                inparams = process.GetMethodParameters("Create")
+                Select Case flags
+                    Case ShutdownFlags.Sleep
+                        inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
 
-        If (flags = ShutdownFlags.Sleep Or flags = ShutdownFlags.Hibernate) Then
-            inparams = process.GetMethodParameters("Create")
-            Select Case flags
-                Case ShutdownFlags.Sleep
-                    inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
+                    Case ShutdownFlags.Hibernate
+                        inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
 
-                Case ShutdownFlags.Hibernate
-                    inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
+                End Select
 
-            End Select
-
-            outparams = process.InvokeMethod("Create", inparams, Nothing)
-            retval = outparams("ReturnValue")
-        Else
-            query = New SelectQuery("SELECT * FROM Win32_OperatingSystem WHERE Primary=true")
-            searcher = New ManagementObjectSearcher(scope, query)
-
-            For Each managementObject As ManagementObject In searcher.Get()
-                Debug.WriteLine(managementObject("Caption"))
-
-                inparams = managementObject.GetMethodParameters("Win32Shutdown")
-                inparams("Flags") = flags
-                outparams = managementObject.InvokeMethod("Win32Shutdown", inparams, Nothing)
-
+                outparams = process.InvokeMethod("Create", inparams, Nothing)
                 retval = outparams("ReturnValue")
-            Next
-        End If
+            Else
+                query = New SelectQuery("SELECT * FROM Win32_OperatingSystem WHERE Primary=true")
+                searcher = New ManagementObjectSearcher(scope, query)
 
-        Return IIf(retval, 0, 1)
+                For Each managementObject As ManagementObject In searcher.Get()
+                    Debug.WriteLine(managementObject("Caption"))
+
+                    inparams = managementObject.GetMethodParameters("Win32Shutdown")
+                    inparams("Flags") = flags
+                    outparams = managementObject.InvokeMethod("Win32Shutdown", inparams, Nothing)
+
+                    retval = outparams("ReturnValue")
+                Next
+            End If
+
+        Catch ex As Exception
+            retval = Err.Number
+
+        End Try
+
+        Return retval
     End Function
 
     Private Shared Function GetMac(ByVal mac As String) As Byte()

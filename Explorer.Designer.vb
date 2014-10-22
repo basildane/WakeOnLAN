@@ -85,12 +85,12 @@ Partial Class Explorer
         Me.Status = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.IPAddress = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Netbios = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Note = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Group = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ContextMenuStrip_Machines = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.WakeUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
-        Me.AbortShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RDPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PropertiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -169,7 +169,6 @@ Partial Class Explorer
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
-        Me.Note = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -324,13 +323,17 @@ Partial Class Explorer
         '
         resources.ApplyResources(Me.Netbios, "Netbios")
         '
+        'Note
+        '
+        resources.ApplyResources(Me.Note, "Note")
+        '
         'Group
         '
         resources.ApplyResources(Me.Group, "Group")
         '
         'ContextMenuStrip_Machines
         '
-        Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.AbortShutdownToolStripMenuItem, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ContextMenuStrip_Machines.Name = "ContextMenuStrip_Machines"
         resources.ApplyResources(Me.ContextMenuStrip_Machines, "ContextMenuStrip_Machines")
         '
@@ -348,11 +351,6 @@ Partial Class Explorer
         '
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
         resources.ApplyResources(Me.ToolStripSeparator10, "ToolStripSeparator10")
-        '
-        'AbortShutdownToolStripMenuItem
-        '
-        Me.AbortShutdownToolStripMenuItem.Name = "AbortShutdownToolStripMenuItem"
-        resources.ApplyResources(Me.AbortShutdownToolStripMenuItem, "AbortShutdownToolStripMenuItem")
         '
         'RDPToolStripMenuItem
         '
@@ -651,7 +649,6 @@ Partial Class Explorer
         '
         Me.ContextMenuStripViews.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListToolStripMenuItem1, Me.DetailsToolStripMenuItem1, Me.LargeIconsToolStripMenuItem1, Me.SmallIconsToolStripMenuItem1, Me.TileToolStripMenuItem1})
         Me.ContextMenuStripViews.Name = "ContextMenuStripViews"
-        Me.ContextMenuStripViews.OwnerItem = Me.ListViewToolStripButton
         Me.ContextMenuStripViews.ShowCheckMargin = True
         Me.ContextMenuStripViews.ShowImageMargin = False
         resources.ApplyResources(Me.ContextMenuStripViews, "ContextMenuStripViews")
@@ -786,10 +783,6 @@ Partial Class Explorer
         '
         Me.CultureManager.ManagedControl = Me
         '
-        'Note
-        '
-        resources.ApplyResources(Me.Note, "Note")
-        '
         'Explorer
         '
         resources.ApplyResources(Me, "$this")
@@ -846,7 +839,6 @@ Partial Class Explorer
     Friend WithEvents SearchForMachinesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RDPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator10 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents AbortShutdownToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ShowHotButtonsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ScheduleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

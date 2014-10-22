@@ -17,7 +17,6 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.ComponentModel
-Imports System.Management
 Imports WOL
 
 Public Class ShutdownThread
@@ -33,9 +32,7 @@ Public Class ShutdownThread
     Private WithEvents _backgroundWorker As New BackgroundWorker
     Private ReadOnly _item As ListViewItem
     Private ReadOnly _progressbar As ProgressBar
-    Private _action As ShutdownAction
-    Private ReadOnly _message As String
-    Private ReadOnly _delay As Integer
+    Private ReadOnly _action As ShutdownAction
     Private ReadOnly _force As Boolean
     Private ReadOnly _reboot As Boolean
     Private _errMessage As String
@@ -54,83 +51,70 @@ Public Class ShutdownThread
 
     Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
         Dim dwResult As Integer
-        Dim sMachine As String
-        Dim sAlertMessage As String
-        Dim dwDelay As Long
-        Dim dwForce As Long
-        Dim dwReboot As Long
         Dim machine As Machine
-
-        dwResult = 0
-        sAlertMessage = _message & vbNullChar
-        dwDelay = _delay
-        dwForce = CLng(_force)
-        dwReboot = CLng(_reboot)
+        Dim flags As AquilaWolLibrary.ShutdownFlags
+        Dim encryption As New Encryption(My.Application.Info.ProductName)
 
         machine = Machines(_item.Text)
-        sMachine = "\\" & machine.Netbios
-
         _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
 
-        If (_action <> ShutdownAction.Abort And machine.ShutdownCommand.Length > 0) Then _action = ShutdownAction.User
+        If (_action <> ShutdownAction.Abort And machine.ShutdownCommand.Length > 0) Then
+            Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+            Return
+        End If
 
         Try
             Select Case _action
-                Case ShutdownAction.Abort
-                    dwResult = AbortSystemShutdown(sMachine)
-
                 Case ShutdownAction.Shutdown
-                    If (dwForce) Then
-                        If (dwReboot) Then
-                            dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.ForcedReboot)
+                    If (_force) Then
+                        If (_reboot) Then
+                            flags = AquilaWolLibrary.ShutdownFlags.ForcedReboot
                         Else
-                            dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.ForcedShutdown)
+                            flags = AquilaWolLibrary.ShutdownFlags.ForcedShutdown
                         End If
                     Else
-                        If (dwReboot) Then
-                            dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.Reboot)
+                        If (_reboot) Then
+                            flags = AquilaWolLibrary.ShutdownFlags.Reboot
                         Else
-                            dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.Shutdown)
+                            flags = AquilaWolLibrary.ShutdownFlags.Shutdown
                         End If
                     End If
-                    'dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
-
-                Case ShutdownAction.User
-                    Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
 
                 Case ShutdownAction.Sleep
-                    dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.Sleep)
+                    flags = AquilaWolLibrary.ShutdownFlags.Sleep
 
                 Case ShutdownAction.Hibernate
-                    dwResult = AquilaWolLibrary.Shutdown(sMachine, AquilaWolLibrary.ShutdownFlags.Hibernate)
+                    flags = AquilaWolLibrary.ShutdownFlags.Hibernate
 
             End Select
 
+            dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
+
         Catch ex As Exception
             _errMessage = ex.Message
-            e.Result = 0
+            e.Result = 1
             Return
 
         End Try
 
-        If dwResult = 0 Then
-            _errMessage = FormatMessage(Err.LastDllError)
+        If dwResult <> 0 Then
+            _errMessage = FormatMessage(dwResult)
         End If
         e.Result = dwResult
 
     End Sub
 
-    Private Sub backgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
+    Private Sub backgroundWorker_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
 
         With _item.SubItems(1)
-            If e.Result = 0 Then
+            If e.Result <> 0 Then
                 .ForeColor = Color.Red
                 .Text = String.Format(My.Resources.Strings.ErrorMsg, _errMessage)
                 .Tag = .Text ' error
             Else
                 .ForeColor = Color.Green
                 .Text = My.Resources.Strings.Successful
-                .Tag = "" ' success
+                .Tag = String.Empty ' success
             End If
         End With
 

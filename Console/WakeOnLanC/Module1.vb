@@ -17,14 +17,12 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.Net
-Imports System.Management
 Imports System.Linq
 Imports System.Threading
+Imports WOL
 
 Module Module1
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
-    Private Declare Function InitiateSystemShutdown Lib "advapi32.dll" Alias "InitiateSystemShutdownA" (ByVal lpMachineName As String, ByVal lpMessage As String, ByVal dwTimeout As Integer, ByVal bForceAppsClosed As Integer, ByVal bRebootAfterShutdown As Integer) As Integer
-    Private Declare Function AbortSystemShutdown Lib "advapi32.dll" Alias "AbortSystemShutdownA" (ByVal lpMachineName As String) As Integer
 
     Enum ModeTypes
         None
@@ -46,7 +44,7 @@ Module Module1
     Dim _machine As String = String.Empty
     Dim _mac As String = String.Empty
     Dim _all As Boolean = False
-    Dim _alertMessage As String = "System is shutting down" & vbNullChar
+    Dim _alertMessage As String = "System is shutting down"
     Dim _delay As Long = 30
     Dim _force As Long = 0
     Dim _reboot As Long = 0
@@ -57,9 +55,6 @@ Module Module1
     Dim _interface As String = ""
 
     Function Main() As Integer
-
-        Dim i As Integer
-
         Console.ForegroundColor = ConsoleColor.Green
         Console.WriteLine(My.Application.Info.Title & " " & My.Application.Info.Version.ToString)
         Console.ResetColor()
@@ -69,7 +64,7 @@ Module Module1
             Return ErrorCodes.Ok
         End If
 
-        For i = 0 To My.Application.CommandLineArgs.Count - 1
+        For i As Integer = 0 To My.Application.CommandLineArgs.Count - 1
             Select Case My.Application.CommandLineArgs.Item(i)
                 Case "-t"
                     If i = My.Application.CommandLineArgs.Count - 1 Then
@@ -152,7 +147,7 @@ Module Module1
                         BadCommand()
                         Return ErrorCodes.InvalidCommand
                     End If
-                    _alertMessage = My.Application.CommandLineArgs.Item(i + 1) & vbNullChar
+                    _alertMessage = My.Application.CommandLineArgs.Item(i + 1)
                     i += 1
 
                 Case "-l"
@@ -180,11 +175,8 @@ Module Module1
 
         Select Case _mode
 
-            Case ModeTypes.Shutdown
+            Case ModeTypes.Shutdown, ModeTypes.Sleep, ModeTypes.Hibernate
                 Return Shutdown()
-
-            Case ModeTypes.Sleep, ModeTypes.Hibernate
-                Return SleepHibernate()
 
             Case ModeTypes.WakeUp
                 Return DoWakeup()
@@ -209,7 +201,7 @@ Module Module1
         Console.WriteLine("-s   (shutdown) requires -m, -g or -all")
         Console.WriteLine("-s1  (sleep) requires -m or -all")
         Console.WriteLine("-s4  (hibernate) requires -m or -all")
-        Console.WriteLine("-a   (abort a shutdown) requires -m")
+        Console.WriteLine("-a   (abort a shutdown) requires -m (depreciated)")
         Console.WriteLine("-r   (reboot)")
         Console.WriteLine("-w   (wakeup) requires -m, -g, -mac parameter, or -all")
         Console.WriteLine("-l   (listen for WOL packets)")
@@ -226,7 +218,7 @@ Module Module1
         Console.WriteLine("-mac xx    xx = mac address.")
         Console.WriteLine("-g xx      xx = group name.  To wakeup or shutdown a group of machines.")
         Console.WriteLine("-all       all machines.")
-        Console.WriteLine("-c ""xx""  xx = comment.  Options for Shutdown and Reboot.")
+        Console.WriteLine("-c ""xx""  xx = popup message.  Optional popup message.")
         Console.WriteLine()
         Console.WriteLine("note.  Use -m with -w to send to a specific subnet.")
     End Sub
@@ -239,16 +231,14 @@ Module Module1
     End Sub
 
     Private Sub ShowResult(ByVal dwResult As Integer)
-        If dwResult Then
-            Console.WriteLine("...Successful")
-        Else
-            Dim errMessage As String
+        Dim result As String
 
-            _result = Err.LastDllError
-            errMessage = FormatMessage(_result)
+        result = FormatMessage(dwResult)
+        If dwResult = 0 Then
+            Console.WriteLine("..." & result)
+        Else
             Console.ForegroundColor = ConsoleColor.Red
-            Console.WriteLine("...Error")
-            Console.WriteLine(errMessage)
+            Console.WriteLine("...Error: " & result)
             Console.ResetColor()
         End If
     End Sub
@@ -332,37 +322,14 @@ Module Module1
     End Function
 
     Private Function Abort() As Integer
-        Dim dwResult As Integer
-        Dim machine As Machine
-
-        Machines.Load(_path)
-
-        If _machine = "" And _all = False Then
-            Console.WriteLine("Error.  No machine specified.")
-            DisplayHelp()
-            Return ErrorCodes.InvalidCommand
-        End If
-
-        If _all Then
-            For Each machine In Machines
-                Console.Write("Abort shutdown sent to " & machine.Name)
-                dwResult = AbortSystemShutdown(machine.Netbios)
-                ShowResult(dwResult)
-            Next
-        Else
-            machine = Machines(_machine)
-            Console.Write("Abort shutdown sent to " & machine.Name)
-            dwResult = AbortSystemShutdown(machine.Netbios)
-            ShowResult(dwResult)
-        End If
-
-        Return _result
-
+        Console.WriteLine("Error.  Abort command is depreciated.")
+        Return ErrorCodes.InvalidCommand
     End Function
 
     Private Function Shutdown() As Integer
-        Dim dwResult As Integer = 1
+        Dim dwResult As Integer = 0
         Dim machine As Machine
+        Dim flags As AquilaWolLibrary.ShutdownFlags
 
         Machines.Load(_path)
 
@@ -373,11 +340,31 @@ Module Module1
             Return _result
         End If
 
+        If _mode = ModeTypes.Shutdown Then
+            If _force Then
+                If _reboot Then
+                    flags = AquilaWolLibrary.ShutdownFlags.ForcedReboot
+                Else
+                    flags = AquilaWolLibrary.ShutdownFlags.ForcedShutdown
+                End If
+            Else
+                If _reboot Then
+                    flags = AquilaWolLibrary.ShutdownFlags.Reboot
+                Else
+                    flags = AquilaWolLibrary.ShutdownFlags.Shutdown
+                End If
+            End If
+        ElseIf _mode = ModeTypes.Hibernate Then
+            flags = AquilaWolLibrary.ShutdownFlags.Hibernate
+        ElseIf _mode = ModeTypes.Sleep Then
+            flags = AquilaWolLibrary.ShutdownFlags.Sleep
+        End If
+
         If _all Then
             For Each machine In Machines
-                Console.Write("Shutdown sent to " & machine.Name)
+                Console.WriteLine(String.Format("Command {0} to {1}", flags.ToString(), machine.Name))
                 If String.IsNullOrEmpty(machine.ShutdownCommand) Then
-                    dwResult = InitiateSystemShutdown(machine.Netbios, _alertMessage, _delay, _force, _reboot)
+                    dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, GetPassword(machine), machine.Domain)
                     ShowResult(dwResult)
                 Else
                     Try
@@ -394,11 +381,11 @@ Module Module1
                 End If
             Next
         ElseIf (_group.Length) Then
-            Console.WriteLine("Shutdown group: " & _group)
+            Console.WriteLine(String.Format("Command {0} to group: {1}", flags.ToString(), _group))
             For Each machine In From machine1 As Machine In Machines Where machine1.Group = _group
                 Console.Write("  > " & machine.Name)
                 If String.IsNullOrEmpty(machine.ShutdownCommand) Then
-                    dwResult = InitiateSystemShutdown(machine.Netbios, _alertMessage, _delay, _force, _reboot)
+                    dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, GetPassword(machine), machine.Domain)
                     ShowResult(dwResult)
                 Else
                     Try
@@ -417,9 +404,12 @@ Module Module1
             Console.WriteLine("Done.")
         Else
             machine = Machines(_machine)
-            Console.Write("Shutdown sent to " & machine.Name)
+            Console.Write(flags.ToString() & " sent to " & machine.Name)
             If String.IsNullOrEmpty(machine.ShutdownCommand) Then
-                dwResult = InitiateSystemShutdown(machine.Netbios, _alertMessage, _delay, _force, _reboot)
+                'TODO: show _alertMessage
+                'TODO: handle _delay
+                PopupMessage(machine.Netbios, _alertMessage)
+                dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, GetPassword(machine), machine.Domain)
                 ShowResult(dwResult)
             Else
                 Try
@@ -440,77 +430,18 @@ Module Module1
 
     End Function
 
-    Private Function SleepHibernate() As Integer
-        Dim dwResult As Integer = 1
-        Dim machine As Machine
+    Private Function GetPassword(machine As Machine) As String
+        If String.IsNullOrEmpty(machine.UserID) Then Return String.Empty
 
-        Try
-
-            Machines.Load(_path)
-
-            If ((_machine = "") And (_all = False)) Then
-                Console.WriteLine("Error.  No machine specified.")
-                DisplayHelp()
-                _result = ErrorCodes.InvalidCommand
-                Return _result
-            End If
-
-            If _all Then
-                For Each machine In Machines
-                    Console.Write(_mode.ToString() & " sent to " & machine.Name)
-                    dwResult = WMIpower(machine.Netbios)
-                    ShowResult(dwResult)
-                Next
-            Else
-                machine = Machines(_machine)
-                Console.Write(_mode.ToString() & " sent to " & machine.Name)
-                dwResult = WMIpower(machine.Netbios)
-                ShowResult(dwResult)
-            End If
-
-            Return _result
-
-        Catch ex As Exception
-            Console.WriteLine()
-            Console.WriteLine(ex.Message)
-            Return ErrorCodes.InvalidCommand
-
-        End Try
-
+        Dim encryption As New Encryption(My.Application.Info.ProductName)
+        Return encryption.EnigmaDecrypt(machine.Password)
     End Function
 
-    Private Function WMIpower(sMachine As String) As Integer
-        Dim process As ManagementClass
-        Dim path As ManagementPath
-        'Dim options As ConnectionOptions = New ConnectionOptions()
-        Dim inparams, outparams As ManagementBaseObject
-        Dim ProcID, retval As String
-
-        process = New ManagementClass("Win32_Process")
-        path = New ManagementPath(String.Format("\\{0}\root\cimv2", sMachine))
-
-        'options.Username = ""
-        'options.Password = ""
-        'process.Scope = New ManagementScope(mp1, co1)
-        process.Scope = New ManagementScope(path)
-        process.Scope.Connect()
-
-        inparams = process.GetMethodParameters("Create")
-        Select Case _mode
-            Case ModeTypes.Sleep
-                inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
-
-            Case ModeTypes.Hibernate
-                inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
-
-        End Select
-
-        outparams = process.InvokeMethod("Create", inparams, Nothing)
-        ProcID = outparams("ProcessID").ToString()
-        retval = outparams("ReturnValue").ToString()
-
-        Return retval
-    End Function
+    Private Sub PopupMessage(host As String, message As String)
+        If (Not String.IsNullOrEmpty(message)) Then
+            Shell(String.Format("msg * /server:{0} ""{1}""", host, message), AppWinStyle.Hide, False)
+        End If
+    End Sub
 
     Private Sub Listen()
         Dim sn As New Listener
