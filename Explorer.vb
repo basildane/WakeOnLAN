@@ -694,10 +694,6 @@ Public Class Explorer
         My.Forms.Listener.Show()
     End Sub
 
-    Private Sub ToolStripButtonDonate_Click(sender As Object, e As EventArgs) Handles ToolStripButtonDonate.Click
-        Process.Start(My.Settings.donate)
-    End Sub
-
     ' Keep the SplashScreen in the foreground
     Private Sub Explorer_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         SetForegroundWindow(SplashPtr)
@@ -729,4 +725,7 @@ Public Class Explorer
         End If
     End Sub
 
+    Private Sub DonateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DonateToolStripMenuItem.Click
+        Process.Start(My.Settings.donate)
+    End Sub
 End Class
