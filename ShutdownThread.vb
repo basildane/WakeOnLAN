@@ -27,6 +27,7 @@ Public Class ShutdownThread
         Sleep
         Hibernate
         User
+        Logoff
     End Enum
 
     Private WithEvents _backgroundWorker As New BackgroundWorker
@@ -85,6 +86,13 @@ Public Class ShutdownThread
 
                 Case ShutdownAction.Hibernate
                     flags = AquilaWolLibrary.ShutdownFlags.Hibernate
+
+                Case ShutdownAction.Logoff
+                    If (_force) Then
+                        flags = AquilaWolLibrary.ShutdownFlags.ForcedLogoff
+                    Else
+                        flags = AquilaWolLibrary.ShutdownFlags.Logoff
+                    End If
 
             End Select
 

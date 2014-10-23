@@ -137,6 +137,7 @@ Partial Class Explorer
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.DonateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LicenseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip = New System.Windows.Forms.ToolStrip()
@@ -154,7 +155,6 @@ Partial Class Explorer
         Me.ListenerToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OptionsToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.HotToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButtonDonate = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripMenuItemWakeUp = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ContextMenuStripTray = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -596,7 +596,7 @@ Partial Class Explorer
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.ToolStripSeparator6, Me.LicenseToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.ToolStripSeparator6, Me.DonateToolStripMenuItem, Me.LicenseToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         resources.ApplyResources(Me.HelpToolStripMenuItem, "HelpToolStripMenuItem")
         '
@@ -609,6 +609,11 @@ Partial Class Explorer
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         resources.ApplyResources(Me.ToolStripSeparator6, "ToolStripSeparator6")
+        '
+        'DonateToolStripMenuItem
+        '
+        Me.DonateToolStripMenuItem.Name = "DonateToolStripMenuItem"
+        resources.ApplyResources(Me.DonateToolStripMenuItem, "DonateToolStripMenuItem")
         '
         'LicenseToolStripMenuItem
         '
@@ -624,7 +629,7 @@ Partial Class Explorer
         '
         resources.ApplyResources(Me.ToolStrip, "ToolStrip")
         Me.ToolStrip.ImageScalingSize = New System.Drawing.Size(30, 30)
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FoldersToolStripButton, Me.ToolStripSeparator8, Me.ListViewToolStripButton, Me.PingToolStripButton, Me.ScheduleToolStripButton, Me.ListenerToolStripButton, Me.OptionsToolStripButton, Me.HotToolStripButton, Me.ToolStripButtonDonate})
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FoldersToolStripButton, Me.ToolStripSeparator8, Me.ListViewToolStripButton, Me.PingToolStripButton, Me.ScheduleToolStripButton, Me.ListenerToolStripButton, Me.OptionsToolStripButton, Me.HotToolStripButton})
         Me.ToolStrip.Name = "ToolStrip"
         '
         'FoldersToolStripButton
@@ -649,6 +654,7 @@ Partial Class Explorer
         '
         Me.ContextMenuStripViews.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListToolStripMenuItem1, Me.DetailsToolStripMenuItem1, Me.LargeIconsToolStripMenuItem1, Me.SmallIconsToolStripMenuItem1, Me.TileToolStripMenuItem1})
         Me.ContextMenuStripViews.Name = "ContextMenuStripViews"
+        Me.ContextMenuStripViews.OwnerItem = Me.ListViewToolStripButton
         Me.ContextMenuStripViews.ShowCheckMargin = True
         Me.ContextMenuStripViews.ShowImageMargin = False
         resources.ApplyResources(Me.ContextMenuStripViews, "ContextMenuStripViews")
@@ -709,13 +715,6 @@ Partial Class Explorer
         Me.HotToolStripButton.CheckState = System.Windows.Forms.CheckState.Checked
         resources.ApplyResources(Me.HotToolStripButton, "HotToolStripButton")
         Me.HotToolStripButton.Name = "HotToolStripButton"
-        '
-        'ToolStripButtonDonate
-        '
-        Me.ToolStripButtonDonate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.ToolStripButtonDonate, "ToolStripButtonDonate")
-        Me.ToolStripButtonDonate.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
-        Me.ToolStripButtonDonate.Name = "ToolStripButtonDonate"
         '
         'ToolStripMenuItemWakeUp
         '
@@ -868,12 +867,12 @@ Partial Class Explorer
     Friend WithEvents NotifyIconUpdate As System.Windows.Forms.NotifyIcon
     Friend WithEvents Group As System.Windows.Forms.ColumnHeader
     Friend WithEvents ListenerToolStripButton As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButtonDonate As System.Windows.Forms.ToolStripButton
     Friend WithEvents CultureManager As Localization.CultureManager
     Friend WithEvents OptionsToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents TreeViewContextMenuStrip As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents WakeUpToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ShutDownToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Note As System.Windows.Forms.ColumnHeader
+    Friend WithEvents DonateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

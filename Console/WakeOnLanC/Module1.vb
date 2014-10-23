@@ -364,6 +364,7 @@ Module Module1
             For Each machine In Machines
                 Console.WriteLine(String.Format("Command {0} to {1}", flags.ToString(), machine.Name))
                 If String.IsNullOrEmpty(machine.ShutdownCommand) Then
+                    PopupMessage(machine.Netbios, _alertMessage)
                     dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, GetPassword(machine), machine.Domain)
                     ShowResult(dwResult)
                 Else
@@ -385,6 +386,7 @@ Module Module1
             For Each machine In From machine1 As Machine In Machines Where machine1.Group = _group
                 Console.Write("  > " & machine.Name)
                 If String.IsNullOrEmpty(machine.ShutdownCommand) Then
+                    PopupMessage(machine.Netbios, _alertMessage)
                     dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, GetPassword(machine), machine.Domain)
                     ShowResult(dwResult)
                 Else
@@ -406,7 +408,6 @@ Module Module1
             machine = Machines(_machine)
             Console.Write(flags.ToString() & " sent to " & machine.Name)
             If String.IsNullOrEmpty(machine.ShutdownCommand) Then
-                'TODO: show _alertMessage
                 'TODO: handle _delay
                 PopupMessage(machine.Netbios, _alertMessage)
                 dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, GetPassword(machine), machine.Domain)
