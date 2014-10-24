@@ -381,7 +381,7 @@ End Class
         backgroundWorker.CancelAsync()
     End Sub
 
-    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles BackgroundWorker.DoWork
+    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles backgroundWorker.DoWork
         Do
             Try
                 Threading.Thread.Sleep(2000)
@@ -419,19 +419,28 @@ End Class
                             newStatus = StatusCodes.Offline
 
                             For Each ipAddress As IPAddress In From IPA1 In Dns.GetHostAddresses(Netbios) Where IPA1.AddressFamily.ToString() = "InterNetwork"
-                                Dim remoteIp As Int32
+                                Dim remoteIp As Integer
                                 Dim remoteMac() As Byte = New Byte(6) {}
+                                Dim dWord As Integer
+                                Dim sendInterface As Integer
                                 Dim len As Integer = 6
 
                                 Try
-                                    remoteIp = ipAddress.GetHashCode()
+                                    If String.IsNullOrEmpty(Adapter) Then
+                                        sendInterface = 0
+                                    Else
+                                        sendInterface = ipAddress.Parse(Adapter).GetHashCode()
+                                    End If
 
+                                    remoteIp = ipAddress.GetHashCode()
                                     If remoteIp <> 0 Then
-                                        If SendARP(remoteIp, 0, remoteMac, len) = 0 Then
+                                        dWord = SendARP(remoteIp, sendInterface, remoteMac, len)
+                                        If dWord = 0 Or dWord = 67 Then
                                             '
                                             ' we found a matching MAC, the host is officially ONLINE
+                                            ' 67 = ERROR_BAD_NET_NAME: if host on another subnet, just ignore the error
                                             '
-                                            If CompareMac(BitConverter.ToString(remoteMac, 0, len), MAC) = 0 Then
+                                            If CompareMac(BitConverter.ToString(remoteMac, 0, len), MAC) = 0 Or dWord = 67 Then
                                                 newStatus = StatusCodes.Online
                                                 newIpAddress = ipAddress.ToString()
                                                 Exit For
