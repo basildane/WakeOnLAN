@@ -53,6 +53,9 @@ Public Class Search
             machine.IP = listViewItem.SubItems(3).Text
             machine.Netbios = listViewItem.SubItems(0).Text
             machine.Emergency = True
+            machine.UDPPort = 9
+            machine.TTL = 128
+            machine.RDPPort = 3389
             machine.ShutdownCommand = ""
             If (ComboBoxGroup.Text <> _none) Then
                 machine.Group = ComboBoxGroup.Text
