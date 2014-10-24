@@ -21,6 +21,8 @@ Imports System.Net
 Imports System.Management
 
 Public Class AquilaWolLibrary
+    Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
+
     Public Enum ShutdownFlags
         Logoff = 0
         ForcedLogoff = 4
@@ -103,11 +105,11 @@ Public Class AquilaWolLibrary
     ''' <param name="domain">Optional Domain name.</param>
     ''' <returns>0: Success, else Win32 error code.</returns>
     ''' <remarks></remarks>
-    Public Shared Function Shutdown(host As String,
+    Public Shared Sub Shutdown(host As String,
                                     flags As ShutdownFlags,
                                     Optional userid As String = "",
                                     Optional password As String = "",
-                                    Optional domain As String = "") As UInteger
+                                    Optional domain As String = "")
 
         Dim process As ManagementClass
         Dim scope As ManagementScope
@@ -162,11 +164,29 @@ Public Class AquilaWolLibrary
             End If
 
         Catch ex As Exception
-            retval = Err.Number
+            Throw
 
         End Try
 
-        Return retval
+        If retval <> 0 Then
+            Throw New Exception(FormatMessage(Err.Number))
+        End If
+
+    End Sub
+
+    Private Shared Function FormatMessage(ByVal [error] As Integer) As String
+        Const FORMAT_MESSAGE_FROM_SYSTEM As UInteger = &H1000
+        Const LANG_NEUTRAL As Integer = &H0
+        Dim buffer As String = Space(1024)
+
+        FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, IntPtr.Zero, [error], LANG_NEUTRAL, buffer, 1024, IntPtr.Zero)
+        buffer = Replace(Replace(buffer, Chr(13), ""), Chr(10), "")
+        If buffer.Contains(Chr(0)) Then
+            buffer = buffer.Substring(0, buffer.IndexOf(Chr(0)))
+        Else
+            buffer = String.Empty
+        End If
+        Return buffer
     End Function
 
     Private Shared Function GetMac(ByVal mac As String) As Byte()

@@ -51,7 +51,6 @@ Public Class ShutdownThread
     End Sub
 
     Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
-        Dim dwResult As Integer
         Dim machine As Machine
         Dim flags As AquilaWolLibrary.ShutdownFlags
         Dim encryption As New Encryption(My.Application.Info.ProductName)
@@ -96,7 +95,7 @@ Public Class ShutdownThread
 
             End Select
 
-            dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
+            AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
 
         Catch ex As Exception
             _errMessage = ex.Message
@@ -105,10 +104,7 @@ Public Class ShutdownThread
 
         End Try
 
-        If dwResult <> 0 Then
-            _errMessage = FormatMessage(dwResult)
-        End If
-        e.Result = dwResult
+        e.Result = 0
 
     End Sub
 

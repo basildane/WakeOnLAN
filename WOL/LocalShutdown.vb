@@ -220,7 +220,10 @@ End Enum
             Return "Unspecified error [" + number.ToString() + "]"
         End Try
     End Function
+
 End Class
+
+
 
 ' The exception that is thrown when an error occures when requesting a specific privilege.
 Public Class PrivilegeException
