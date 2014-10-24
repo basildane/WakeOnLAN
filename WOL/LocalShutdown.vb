@@ -17,9 +17,9 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System
-Imports System.Text
 Imports System.Diagnostics
 Imports System.Runtime.InteropServices
+Imports WOL.AquilaWolLibrary
 
 ' An LUID is a 64-bit value guaranteed to be unique only on the system on which it was generated. The uniqueness of a locally unique identifier (LUID) is guaranteed only until the system is restarted.
 <StructLayout(LayoutKind.Sequential, Pack:=1)> _
@@ -54,9 +54,6 @@ Public Class LocalShutdown
 
     ' <summary>The privilege is enabled.</summary>
     Private Const SE_PRIVILEGE_ENABLED As Integer = &H2
-
-    ' <summary>Specifies that the function should search the system message-table resource(s) for the requested message.</summary>
-    Private Const FORMAT_MESSAGE_FROM_SYSTEM As Integer = &H1000
 
     ' The LoadLibrary function maps the specified executable module into the address space of the calling process.
     ' <param name="lpLibFileName">Pointer to a null-terminated string that names the executable module (either a .dll or .exe file). The name specified is the file name of the module and is not related to the name stored in the library module itself, as specified by the LIBRARY keyword in the module-definition (.def) file.</param>
@@ -98,83 +95,6 @@ Public Class LocalShutdown
     ' <returns>If the function succeeds, the return value is nonzero. To determine whether the function adjusted all of the specified privileges, call Marshal.GetLastWin32Error.</returns>
     Private Declare Ansi Function AdjustTokenPrivileges Lib "advapi32" (ByVal TokenHandle As IntPtr, ByVal DisableAllPrivileges As Integer, ByRef NewState As TOKEN_PRIVILEGES, ByVal BufferLength As Integer, ByRef PreviousState As TOKEN_PRIVILEGES, ByRef ReturnLength As Integer) As Integer
 
-    ' The FormatMessage function formats a message string. The function requires a message definition as input. The message definition can come from a buffer passed into the function. It can come from a message table resource in an already-loaded module. Or the caller can ask the function to search the system's message table resource(s) for the message definition. The function finds the message definition in a message table resource based on a message identifier and a language identifier. The function copies the formatted message text to an output buffer, processing any embedded insert sequences if requested.
-    ' <param name="dwFlags">Specifies aspects of the formatting process and how to interpret the lpSource parameter. The low-order byte of dwFlags specifies how the function handles line breaks in the output buffer. The low-order byte can also specify the maximum width of a formatted output line.</param>
-    ' <param name="lpSource">Specifies the location of the message definition. The type of this parameter depends upon the settings in the dwFlags parameter.</param>
-    ' <param name="dwMessageId">Specifies the message identifier for the requested message. This parameter is ignored if dwFlags includes FORMAT_MESSAGE_FROM_STRING.</param>
-    ' <param name="dwLanguageId">Specifies the language identifier for the requested message. This parameter is ignored if dwFlags includes FORMAT_MESSAGE_FROM_STRING.</param>
-    ' <param name="lpBuffer">Pointer to a buffer for the formatted (and null-terminated) message. If dwFlags includes FORMAT_MESSAGE_ALLOCATE_BUFFER, the function allocates a buffer using the LocalAlloc function, and places the pointer to the buffer at the address specified in lpBuffer.</param>
-    ' <param name="nSize">If the FORMAT_MESSAGE_ALLOCATE_BUFFER flag is not set, this parameter specifies the maximum number of TCHARs that can be stored in the output buffer. If FORMAT_MESSAGE_ALLOCATE_BUFFER is set, this parameter specifies the minimum number of TCHARs to allocate for an output buffer. For ANSI text, this is the number of bytes; for Unicode text, this is the number of characters.</param>
-    ' <param name="Arguments">Pointer to an array of values that are used as insert values in the formatted message. A %1 in the format string indicates the first value in the Arguments array; a %2 indicates the second argument; and so on.</param>
-    ' <returns>If the function succeeds, the return value is the number of TCHARs stored in the output buffer, excluding the terminating null character.<br></br><br>If the function fails, the return value is zero. To get extended error information, call Marshal.GetLastWin32Error.</br></returns>
-    Private Declare Ansi Function FormatMessage Lib "kernel32" Alias "FormatMessageA" (ByVal dwFlags As Integer, ByVal lpSource As IntPtr, ByVal dwMessageId As Integer, ByVal dwLanguageId As Integer, ByVal lpBuffer As StringBuilder, ByVal nSize As Integer, ByVal Arguments As Integer) As Integer
-
-#If False Then
-'Imports Microsoft.VisualBasic
-
-
-Public Enum RestartOptions
-    LogOff = 0
-    PowerOff = 8
-    Reboot = 2
-    ShutDown = 1
-    Suspend = -1
-    Hibernate = -2
-End Enum
-
-    ' <summary>Forces processes to terminate. When this flag is set, the system does not send the WM_QUERYENDSESSION and WM_ENDSESSION messages. This can cause the applications to lose data. Therefore, you should only use this flag in an emergency.</summary>
-    Private Const EWX_FORCE As Integer = 4
-
-    ' The SetSuspendState function suspends the system by shutting power down. Depending on the Hibernate parameter, the system either enters a suspend (sleep) state or hibernation (S4). If the ForceFlag parameter is TRUE, the system suspends operation immediately; if it is FALSE, the system requests permission from all applications and device drivers before doing so.
-    ' <param name="Hibernate">Specifies the state of the system. If TRUE, the system hibernates. If FALSE, the system is suspended.</param>
-    ' <param name="ForceCritical">Forced suspension. If TRUE, the function broadcasts a PBT_APMSUSPEND event to each application and driver, then immediately suspends operation. If FALSE, the function broadcasts a PBT_APMQUERYSUSPEND event to each application to request permission to suspend operation.</param>
-    ' <param name="DisableWakeEvent">If TRUE, the system disables all wake events. If FALSE, any system wake events remain enabled.</param>
-    ' <returns>If the function succeeds, the return value is nonzero.<br></br><br>If the function fails, the return value is zero. To get extended error information, call Marshal.GetLastWin32Error.</br></returns>
-    Private Declare Ansi Function SetSuspendState Lib "powrprof" (ByVal Hibernate As Integer, ByVal ForceCritical As Integer, ByVal DisableWakeEvent As Integer) As Integer
-
-    ' The ExitWindowsEx function either logs off the current user, shuts down the system, or shuts down and restarts the system. It sends the WM_QUERYENDSESSION message to all applications to determine if they can be terminated.
-    ' <param name="uFlags">Specifies the type of shutdown.</param>
-    ' <param name="dwReserved">This parameter is ignored.</param>
-    ' <returns>If the function succeeds, the return value is nonzero.<br></br><br>If the function fails, the return value is zero. To get extended error information, call Marshal.GetLastWin32Error.</br></returns>
-    Private Declare Ansi Function ExitWindowsEx Lib "user32" (ByVal uFlags As Integer, ByVal dwReserved As Integer) As Integer
-
-    ' <param name="how">One of the RestartOptions values that specifies how to exit windows.</param>
-    ' <param name="force">True if the exit has to be forced, false otherwise.</param>
-    ' <exception cref="PrivilegeException">There was an error while requesting a required privilege.</exception>
-    ' <exception cref="PlatformNotSupportedException">The requested exit method is not supported on this platform.</exception>
-    Public Shared Sub ExitWindows(ByVal how As RestartOptions, ByVal force As Boolean)
-        Select Case how
-            Case RestartOptions.Suspend
-                SuspendSystem(False, force)
-            Case RestartOptions.Hibernate
-                SuspendSystem(True, force)
-            Case Else
-                ExitWindows(CType(how, Integer), force)
-        End Select
-    End Sub
-
-    ' Exits windows (and tries to enable any required access rights, if necesarry).
-    ' <param name="how">One of the RestartOptions values that specifies how to exit windows.</param>
-    ' <param name="force">True if the exit has to be forced, false otherwise.</param>
-    ' <remarks>This method cannot hibernate or suspend the system.</remarks>
-    ' <exception cref="PrivilegeException">There was an error while requesting a required privilege.</exception>
-    Protected Shared Sub ExitWindows(ByVal how As Integer, ByVal force As Boolean)
-        EnableToken("SeShutdownPrivilege")
-        If force Then how = how Or EWX_FORCE
-        If ExitWindowsEx(how, 0) = 0 Then Throw New PrivilegeException(FormatError(Marshal.GetLastWin32Error))
-    End Sub
-
-    ' Suspends or hibernates the system.
-    ' <param name="hibernate">True if the system has to hibernate, false if the system has to be suspended.</param>
-    ' <param name="force">True if the exit has to be forced, false otherwise.</param>
-    ' <exception cref="PlatformNotSupportedException">The requested exit method is not supported on this platform.</exception>
-    Protected Shared Sub SuspendSystem(ByVal hibernate As Boolean, ByVal force As Boolean)
-        If Not CheckEntryPoint("powrprof.dll", "SetSuspendState") Then Throw New PlatformNotSupportedException("The SetSuspendState method is not supported on this system!")
-        SetSuspendState(CType(IIf(hibernate, 1, 0), Integer), CType(IIf(force, 1, 0), Integer), 0)
-    End Sub
-
-#End If
-
     ' Tries to enable the specified privilege.
     ' <param name="privilege">The privilege to enable.</param>
     ' <exception cref="PrivilegeException">There was an error while requesting a required privilege.</exception>
@@ -184,12 +104,12 @@ End Enum
         Dim privilegeLUID As LUID
         Dim newPrivileges As TOKEN_PRIVILEGES
         Dim tokenPrivileges As TOKEN_PRIVILEGES
-        If OpenProcessToken(Process.GetCurrentProcess.Handle, TOKEN_ADJUST_PRIVILEGES Or TOKEN_QUERY, tokenHandle) = 0 Then Throw New PrivilegeException(FormatError(Marshal.GetLastWin32Error))
-        If LookupPrivilegeValue("", privilege, privilegeLUID) = 0 Then Throw New PrivilegeException(FormatError(Marshal.GetLastWin32Error))
+        If OpenProcessToken(Process.GetCurrentProcess.Handle, TOKEN_ADJUST_PRIVILEGES Or TOKEN_QUERY, tokenHandle) = 0 Then Throw New PrivilegeException(FormatMessage(Marshal.GetLastWin32Error))
+        If LookupPrivilegeValue("", privilege, privilegeLUID) = 0 Then Throw New PrivilegeException(FormatMessage(Marshal.GetLastWin32Error))
         tokenPrivileges.PrivilegeCount = 1
         tokenPrivileges.Privileges.Attributes = SE_PRIVILEGE_ENABLED
         tokenPrivileges.Privileges.pLuid = privilegeLUID
-        If AdjustTokenPrivileges(tokenHandle, 0, tokenPrivileges, 4 + (12 * tokenPrivileges.PrivilegeCount), newPrivileges, 4 + (12 * newPrivileges.PrivilegeCount)) = 0 Then Throw New PrivilegeException(FormatError(Marshal.GetLastWin32Error))
+        If AdjustTokenPrivileges(tokenHandle, 0, tokenPrivileges, 4 + (12 * tokenPrivileges.PrivilegeCount), newPrivileges, 4 + (12 * newPrivileges.PrivilegeCount)) = 0 Then Throw New PrivilegeException(FormatMessage(Marshal.GetLastWin32Error))
     End Sub
 
     ' Checks whether a specified method exists on the local computer.
@@ -206,19 +126,6 @@ End Enum
             FreeLibrary(libPtr)
         End If
         Return False
-    End Function
-
-    ' Formats an error number into an error message.
-    ' <param name="number">The error number to convert.</param>
-    ' <returns>A string representation of the specified error number.</returns>
-    Protected Shared Function FormatError(ByVal number As Integer) As String
-        Try
-            Dim buffer As New StringBuilder(255)
-            FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM, IntPtr.Zero, number, 0, buffer, buffer.Capacity, 0)
-            Return buffer.ToString()
-        Catch e As Exception
-            Return "Unspecified error [" + number.ToString() + "]"
-        End Try
     End Function
 
 End Class

@@ -18,6 +18,7 @@
 
 Imports System.ComponentModel
 Imports WOL
+Imports WOL.AquilaWolLibrary
 
 Public Class ShutdownThread
     Public Enum ShutdownAction
@@ -52,7 +53,7 @@ Public Class ShutdownThread
 
     Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
         Dim machine As Machine
-        Dim flags As AquilaWolLibrary.ShutdownFlags
+        Dim flags As ShutdownFlags
         Dim encryption As New Encryption(My.Application.Info.ProductName)
 
         machine = Machines(_item.Text)
@@ -68,29 +69,29 @@ Public Class ShutdownThread
                 Case ShutdownAction.Shutdown
                     If (_force) Then
                         If (_reboot) Then
-                            flags = AquilaWolLibrary.ShutdownFlags.ForcedReboot
+                            flags = ShutdownFlags.ForcedReboot
                         Else
-                            flags = AquilaWolLibrary.ShutdownFlags.ForcedShutdown
+                            flags = ShutdownFlags.ForcedShutdown
                         End If
                     Else
                         If (_reboot) Then
-                            flags = AquilaWolLibrary.ShutdownFlags.Reboot
+                            flags = ShutdownFlags.Reboot
                         Else
-                            flags = AquilaWolLibrary.ShutdownFlags.Shutdown
+                            flags = ShutdownFlags.Shutdown
                         End If
                     End If
 
                 Case ShutdownAction.Sleep
-                    flags = AquilaWolLibrary.ShutdownFlags.Sleep
+                    flags = ShutdownFlags.Sleep
 
                 Case ShutdownAction.Hibernate
-                    flags = AquilaWolLibrary.ShutdownFlags.Hibernate
+                    flags = ShutdownFlags.Hibernate
 
                 Case ShutdownAction.Logoff
                     If (_force) Then
-                        flags = AquilaWolLibrary.ShutdownFlags.ForcedLogoff
+                        flags = ShutdownFlags.ForcedLogoff
                     Else
-                        flags = AquilaWolLibrary.ShutdownFlags.Logoff
+                        flags = ShutdownFlags.Logoff
                     End If
 
             End Select

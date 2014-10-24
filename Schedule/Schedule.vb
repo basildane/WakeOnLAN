@@ -18,6 +18,7 @@
 
 Imports System
 Imports TaskScheduler
+Imports WOL
 
 Namespace Schedule
 
@@ -87,7 +88,7 @@ Namespace Schedule
         End Sub
 
         Private Function GetState(ByVal state As Integer) As String
-            Select Case State
+            Select Case state
                 Case 1
                     Return My.Resources.Strings.lit_Disabled
 
@@ -517,7 +518,7 @@ Namespace Schedule
                             li.SubItems(6).Text = My.Resources.Strings.lit_notFound & " (0x2)"
 
                         Case Else
-                            li.SubItems(6).Text = String.Format("{0} (0x{1})", FormatMessage(task.LastTaskResult), task.LastTaskResult.ToString("x"))
+                            li.SubItems(6).Text = String.Format("{0} (0x{1})", AquilaWolLibrary.FormatMessage(task.LastTaskResult), task.LastTaskResult.ToString("x"))
 
                     End Select
 

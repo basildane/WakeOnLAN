@@ -169,17 +169,18 @@ Public Class AquilaWolLibrary
         End Try
 
         If retval <> 0 Then
-            Throw New Exception(FormatMessage(Err.Number))
+            Throw New Exception(FormatMessage(retval))
         End If
 
     End Sub
 
-    Private Shared Function FormatMessage(ByVal [error] As Integer) As String
+    Public Shared Function FormatMessage(ByVal [error] As Integer) As String
         Const FORMAT_MESSAGE_FROM_SYSTEM As UInteger = &H1000
         Const LANG_NEUTRAL As Integer = &H0
-        Dim buffer As String = Space(1024)
+        Const bufferLen As Integer = 1024
+        Dim buffer As String = Space(bufferLen)
 
-        FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, IntPtr.Zero, [error], LANG_NEUTRAL, buffer, 1024, IntPtr.Zero)
+        FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, IntPtr.Zero, [error], LANG_NEUTRAL, buffer, bufferLen, IntPtr.Zero)
         buffer = Replace(Replace(buffer, Chr(13), ""), Chr(10), "")
         If buffer.Contains(Chr(0)) Then
             buffer = buffer.Substring(0, buffer.IndexOf(Chr(0)))

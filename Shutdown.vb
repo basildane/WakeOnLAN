@@ -222,6 +222,7 @@ Public Class Shutdown
 
         If (Not String.IsNullOrEmpty(shut_message.Text)) Then
             For Each item As ListViewItem In From item1 As ListViewItem In ListView1.Items Where (item1.SubItems(1).Text <> My.Resources.Strings.Pausing)
+                item.SubItems(1).Text = My.Resources.Strings.lit_Ready
                 PopupMessage(item.Text, shut_message.Text)
             Next
         End If

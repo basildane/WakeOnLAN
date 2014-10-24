@@ -20,10 +20,9 @@ Imports System.Net
 Imports System.Linq
 Imports System.Threading
 Imports WOL
+Imports WOL.AquilaWolLibrary
 
 Module Module1
-    Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
-
     Enum ModeTypes
         None
         Shutdown
@@ -230,19 +229,6 @@ Module Module1
         DisplayHelp()
     End Sub
 
-    Private Sub ShowResult(ByVal dwResult As Integer)
-        Dim result As String
-
-        result = FormatMessage(dwResult)
-        If dwResult = 0 Then
-            Console.WriteLine("..." & result)
-        Else
-            Console.ForegroundColor = ConsoleColor.Red
-            Console.WriteLine("...Error: " & result)
-            Console.ResetColor()
-        End If
-    End Sub
-
     Private Function DoWakeup() As Integer
         Dim machine As Machine
 
@@ -327,9 +313,9 @@ Module Module1
     End Function
 
     Private Function Shutdown() As Integer
-        Dim dwResult As Integer = 0
+        'TODO: handle _delay
         Dim machine As Machine
-        Dim flags As AquilaWolLibrary.ShutdownFlags
+        Dim flags As ShutdownFlags
 
         Machines.Load(_path)
 
@@ -343,100 +329,66 @@ Module Module1
         If _mode = ModeTypes.Shutdown Then
             If _force Then
                 If _reboot Then
-                    flags = AquilaWolLibrary.ShutdownFlags.ForcedReboot
+                    flags = ShutdownFlags.ForcedReboot
                 Else
-                    flags = AquilaWolLibrary.ShutdownFlags.ForcedShutdown
+                    flags = ShutdownFlags.ForcedShutdown
                 End If
             Else
                 If _reboot Then
-                    flags = AquilaWolLibrary.ShutdownFlags.Reboot
+                    flags = ShutdownFlags.Reboot
                 Else
-                    flags = AquilaWolLibrary.ShutdownFlags.Shutdown
+                    flags = ShutdownFlags.Shutdown
                 End If
             End If
         ElseIf _mode = ModeTypes.Hibernate Then
-            flags = AquilaWolLibrary.ShutdownFlags.Hibernate
+            flags = ShutdownFlags.Hibernate
         ElseIf _mode = ModeTypes.Sleep Then
-            flags = AquilaWolLibrary.ShutdownFlags.Sleep
+            flags = ShutdownFlags.Sleep
         End If
 
         If _all Then
             For Each machine In Machines
                 Console.WriteLine(String.Format("Command {0} to {1}", flags.ToString(), machine.Name))
-                If String.IsNullOrEmpty(machine.ShutdownCommand) Then
-                    PopupMessage(machine.Netbios, _alertMessage)
-                    dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, GetPassword(machine), machine.Domain)
-                    ShowResult(dwResult)
-                Else
-                    Try
-                        Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
-                        Console.WriteLine("...Successful")
-
-                    Catch ex As Exception
-                        Console.ForegroundColor = ConsoleColor.Red
-                        Console.Write("...Error: ")
-                        Console.WriteLine(ex.Message)
-                        Console.ResetColor()
-
-                    End Try
-                End If
+                ProcessMachine(machine, flags)
             Next
         ElseIf (_group.Length) Then
             Console.WriteLine(String.Format("Command {0} to group: {1}", flags.ToString(), _group))
             For Each machine In From machine1 As Machine In Machines Where machine1.Group = _group
                 Console.Write("  > " & machine.Name)
-                If String.IsNullOrEmpty(machine.ShutdownCommand) Then
-                    PopupMessage(machine.Netbios, _alertMessage)
-                    dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, GetPassword(machine), machine.Domain)
-                    ShowResult(dwResult)
-                Else
-                    Try
-                        Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
-                        Console.WriteLine("...Successful")
-
-                    Catch ex As Exception
-                        Console.ForegroundColor = ConsoleColor.Red
-                        Console.Write("...Error: ")
-                        Console.WriteLine(ex.Message)
-                        Console.ResetColor()
-
-                    End Try
-                End If
+                ProcessMachine(machine, flags)
             Next
             Console.WriteLine("Done.")
         Else
             machine = Machines(_machine)
             Console.Write(flags.ToString() & " sent to " & machine.Name)
-            If String.IsNullOrEmpty(machine.ShutdownCommand) Then
-                'TODO: handle _delay
-                PopupMessage(machine.Netbios, _alertMessage)
-                dwResult = AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, GetPassword(machine), machine.Domain)
-                ShowResult(dwResult)
-            Else
-                Try
-                    Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
-                    Console.WriteLine("...Successful")
-
-                Catch ex As Exception
-                    Console.ForegroundColor = ConsoleColor.Red
-                    Console.Write("...Error: ")
-                    Console.WriteLine(ex.Message)
-                    Console.ResetColor()
-
-                End Try
-            End If
+            ProcessMachine(machine, flags)
         End If
 
         Return _result
 
     End Function
 
-    Private Function GetPassword(machine As Machine) As String
-        If String.IsNullOrEmpty(machine.UserID) Then Return String.Empty
-
+    Private Sub ProcessMachine(machine As Machine, flags As AquilaWolLibrary.ShutdownFlags)
         Dim encryption As New Encryption(My.Application.Info.ProductName)
-        Return encryption.EnigmaDecrypt(machine.Password)
-    End Function
+
+        Try
+            If String.IsNullOrEmpty(machine.ShutdownCommand) Then
+                PopupMessage(machine.Netbios, _alertMessage)
+                AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
+            Else
+                Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+            End If
+            Console.WriteLine("...Successful")
+
+        Catch ex As Exception
+            Console.ForegroundColor = ConsoleColor.Red
+            Console.Write("...Error: ")
+            Console.WriteLine(ex.Message)
+            Console.ResetColor()
+
+        End Try
+
+    End Sub
 
     Private Sub PopupMessage(host As String, message As String)
         If (Not String.IsNullOrEmpty(message)) Then
@@ -490,22 +442,6 @@ Module Module1
         Console.WriteLine("Ping: " & reply.Status.ToString())
         Return ErrorCodes.Ok
 
-    End Function
-
-
-    Private Function FormatMessage(ByVal [error] As Integer) As String
-        Const FORMAT_MESSAGE_FROM_SYSTEM As Short = &H1000
-        Const LANG_NEUTRAL As Short = &H0
-        Dim buffer As String = Space(1024)
-
-        FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, 0, [error], LANG_NEUTRAL, buffer, 1024, 0)
-        buffer = Replace(Replace(buffer, Chr(13), ""), Chr(10), "")
-        If buffer.Contains(Chr(0)) Then
-            buffer = buffer.Substring(0, buffer.IndexOf(Chr(0)))
-        Else
-            buffer = String.Empty
-        End If
-        Return buffer
     End Function
 
 End Module
