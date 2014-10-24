@@ -169,6 +169,7 @@ Partial Class Explorer
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
+        Me.ResetWindowLayoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -723,7 +724,7 @@ Partial Class Explorer
         '
         'ContextMenuStripTray
         '
-        Me.ContextMenuStripTray.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContextToolStripMenuItemOpen, Me.ToolStripMenuItemWakeUp, Me.ContextToolStripMenuItemExit})
+        Me.ContextMenuStripTray.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContextToolStripMenuItemOpen, Me.ToolStripMenuItemWakeUp, Me.ResetWindowLayoutToolStripMenuItem1, Me.ContextToolStripMenuItemExit})
         Me.ContextMenuStripTray.Name = "ContextMenuStripTray"
         resources.ApplyResources(Me.ContextMenuStripTray, "ContextMenuStripTray")
         '
@@ -781,6 +782,11 @@ Partial Class Explorer
         'CultureManager
         '
         Me.CultureManager.ManagedControl = Me
+        '
+        'ResetWindowLayoutToolStripMenuItem1
+        '
+        Me.ResetWindowLayoutToolStripMenuItem1.Name = "ResetWindowLayoutToolStripMenuItem1"
+        resources.ApplyResources(Me.ResetWindowLayoutToolStripMenuItem1, "ResetWindowLayoutToolStripMenuItem1")
         '
         'Explorer
         '
@@ -874,5 +880,6 @@ Partial Class Explorer
     Friend WithEvents ShutDownToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Note As System.Windows.Forms.ColumnHeader
     Friend WithEvents DonateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ResetWindowLayoutToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class

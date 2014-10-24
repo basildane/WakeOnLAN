@@ -346,7 +346,7 @@ Public Class Explorer
         SetView(View.Tile)
     End Sub
 
-    Private Sub ResetWindowLayoutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ResetWindowLayoutToolStripMenuItem.Click
+    Private Sub ResetWindowLayoutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ResetWindowLayoutToolStripMenuItem.Click, ResetWindowLayoutToolStripMenuItem1.Click
         Size = New Size(650, 490)
         Location = New Point(100, 100)
     End Sub
