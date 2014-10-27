@@ -17,7 +17,8 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.ComponentModel
-Imports System.Management
+Imports WOL
+Imports WOL.AquilaWolLibrary
 
 Public Class ShutdownThread
     Public Enum ShutdownAction
@@ -27,14 +28,13 @@ Public Class ShutdownThread
         Sleep
         Hibernate
         User
+        Logoff
     End Enum
 
     Private WithEvents _backgroundWorker As New BackgroundWorker
     Private ReadOnly _item As ListViewItem
     Private ReadOnly _progressbar As ProgressBar
-    Private _action As ShutdownAction
-    Private ReadOnly _message As String
-    Private ReadOnly _delay As Integer
+    Private ReadOnly _action As ShutdownAction
     Private ReadOnly _force As Boolean
     Private ReadOnly _reboot As Boolean
     Private _errMessage As String
@@ -43,113 +43,88 @@ Public Class ShutdownThread
         _item = item
         _progressbar = progressbar
         _action = action
-        _Message = message
+        _message = message
         _delay = delay
         _force = force
-        _reboot = Reboot
+        _reboot = reboot
         _errMessage = ""
         _backgroundWorker.RunWorkerAsync()
     End Sub
 
     Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
-        Dim dwResult As Integer
-        Dim sMachine As String
-        Dim sAlertMessage As String
-        Dim dwDelay As Long
-        Dim dwForce As Long
-        Dim dwReboot As Long
         Dim machine As Machine
-
-        dwResult = 0
-        sAlertMessage = _Message & vbNullChar
-        dwDelay = _delay
-        dwForce = CLng(_force)
-        dwReboot = CLng(_reboot)
-
-        machine = Machines(_item.Text)
-        sMachine = "\\" & machine.Netbios
-
-        _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
-
-        If (_action <> ShutdownAction.Abort And machine.ShutdownCommand.Length > 0) Then _action = ShutdownAction.User
+        Dim flags As ShutdownFlags
+        Dim encryption As New Encryption(My.Application.Info.ProductName)
 
         Try
+            machine = Machines(_item.Text)
+            _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
+
+            If (_action <> ShutdownAction.Abort And machine.ShutdownCommand.Length > 0) Then
+                Dim cmd As String
+
+                cmd = machine.ShutdownCommand
+                cmd = cmd.Replace("$USER", machine.UserID)
+                cmd = cmd.Replace("$PASS", encryption.EnigmaDecrypt(machine.Password))
+                Shell(cmd, AppWinStyle.Hide, False)
+                Return
+            End If
+
             Select Case _action
-                Case ShutdownAction.Abort
-                    dwResult = AbortSystemShutdown(sMachine)
-
                 Case ShutdownAction.Shutdown
-                    dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
+                    If (_force) Then
+                        If (_reboot) Then
+                            flags = ShutdownFlags.ForcedReboot
+                        Else
+                            flags = ShutdownFlags.ForcedShutdown
+                        End If
+                    Else
+                        If (_reboot) Then
+                            flags = ShutdownFlags.Reboot
+                        Else
+                            flags = ShutdownFlags.Shutdown
+                        End If
+                    End If
 
-                Case ShutdownAction.User
-                    Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+                Case ShutdownAction.Sleep
+                    flags = ShutdownFlags.Sleep
 
-                Case ShutdownAction.Sleep, ShutdownAction.Hibernate
-                    dwResult = WMIpower(sMachine)
+                Case ShutdownAction.Hibernate
+                    flags = ShutdownFlags.Hibernate
+
+                Case ShutdownAction.Logoff
+                    If (_force) Then
+                        flags = ShutdownFlags.ForcedLogoff
+                    Else
+                        flags = ShutdownFlags.Logoff
+                    End If
 
             End Select
 
+            AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
+
         Catch ex As Exception
             _errMessage = ex.Message
-            e.Result = 0
+            e.Result = 1
             Return
 
         End Try
 
-        If dwResult = 0 Then
-            _errMessage = FormatMessage(Err.LastDllError)
-        End If
-        e.Result = dwResult
+        e.Result = 0
 
     End Sub
 
-    Private Function WMIpower(sMachine As String) As Integer
-        Dim process As ManagementClass
-        Dim path As ManagementPath
-        Dim inparams, outparams As ManagementBaseObject
-        Dim ProcID, retval As String
-
-        process = New ManagementClass("Win32_Process")
-        path = New ManagementPath(String.Format("{0}\root\cimv2", sMachine))
-
-#If False Then
-        Dim options As ConnectionOptions = New ConnectionOptions()
-        options.Username = ""
-        options.Password = ""
-        process.Scope = New ManagementScope(path, options)
-#Else
-        process.Scope = New ManagementScope(path)
-#End If
-        process.Scope.Connect()
-
-        inparams = process.GetMethodParameters("Create")
-        Select Case _action
-            Case ShutdownAction.Sleep
-                inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Standby"
-
-            Case ShutdownAction.Hibernate
-                inparams("CommandLine") = "rundll32.exe powrprof.dll,SetSuspendState Hibernate"
-
-        End Select
-
-        outparams = process.InvokeMethod("Create", inparams, Nothing)
-        ProcID = outparams("ProcessID").ToString()
-        retval = outparams("ReturnValue").ToString()
-
-        Return IIf(retval, 0, 1)
-    End Function
-
-    Private Sub backgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
+    Private Sub backgroundWorker_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
 
         With _item.SubItems(1)
             If e.Result = 0 Then
+                .ForeColor = Color.Green
+                .Text = My.Resources.Strings.Successful
+                .Tag = String.Empty ' success
+            Else
                 .ForeColor = Color.Red
                 .Text = String.Format(My.Resources.Strings.ErrorMsg, _errMessage)
                 .Tag = .Text ' error
-            Else
-                .ForeColor = Color.Green
-                .Text = My.Resources.Strings.Successful
-                .Tag = "" ' success
             End If
         End With
 

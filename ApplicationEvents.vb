@@ -44,6 +44,8 @@ Namespace My
         ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
 
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
+            Dim version As String
+
             If (Control.ModifierKeys = Keys.Control) Then
                 SafeMode.ShowDialog()
             End If
@@ -51,7 +53,13 @@ Namespace My
             singleInstance()
             upgradeSettings()
 
-            Dim splash As Splash = New Splash(Resources.Splash, Resources.Strings.Title, System.String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision), Application.Info.Copyright, SplashPtr)
+            version = System.String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
+
+            If (Application.Info.Version.Revision > 0) Then
+                version &= " BETA " & Application.Info.Version.Revision
+            End If
+
+            Dim splash As Splash = New Splash(Resources.Splash, Resources.Strings.Title, version, Application.Info.Copyright, SplashPtr)
 
 #If DEBUG Then
             'Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
@@ -60,6 +68,10 @@ Namespace My
         End Sub
 
         Private Sub MyApplication_UnhandledException(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
+            Dim crash As New Crash()
+
+            crash.exception = e.Exception
+            crash.ShowDialog()
             Application.Log.WriteException(e.Exception, TraceEventType.Critical, "Application shut down at " & Computer.Clock.GmtTime.ToString)
         End Sub
 

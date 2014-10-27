@@ -346,9 +346,18 @@ Public Class Explorer
         SetView(View.Tile)
     End Sub
 
-    Private Sub ResetWindowLayoutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ResetWindowLayoutToolStripMenuItem.Click
+    Private Sub ResetWindowLayoutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ResetWindowLayoutToolStripMenuItem.Click, ResetWindowLayoutToolStripMenuItem1.Click
+        My.Settings.MinimizeToTray = False
+
         Size = New Size(650, 490)
         Location = New Point(100, 100)
+        MinimizeToTaskTrayToolStripMenuItem.Checked = My.Settings.MinimizeToTray
+        ShowInTaskbar = Not My.Settings.MinimizeToTray
+        NotifyIcon1.Visible = My.Settings.MinimizeToTray
+        Show()
+        WindowState = FormWindowState.Normal
+        BringToFront()
+        Activate()
     End Sub
 
     Private Sub PingToolStripButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PingToolStripButton.Click
@@ -548,26 +557,6 @@ Public Class Explorer
         Shutdown.PerformShutdown(Me, items)
     End Sub
 
-    Private Sub AbortShutdownToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles AbortShutdownToolStripMenuItem.Click
-        Dim dwResult As Integer
-        Dim m As Machine
-
-        Cursor = Cursors.WaitCursor
-        ResetMonitor()
-        For Each l As ListViewItem In ListView.SelectedItems
-            m = Machines(l.Name)
-
-            ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.AbortingShutdown, m.Name)
-            dwResult = AbortSystemShutdown("\\" & m.Netbios)
-            If dwResult = 0 Then
-                ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.AbortFailed, m.Netbios, FormatMessage(Err.LastDllError))
-            Else
-                ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.AbortSuccess, m.Netbios)
-            End If
-        Next
-        Cursor = Cursors.Default
-    End Sub
-
     Private Sub PropertiesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PropertiesToolStripMenuItem.Click
         Properties.Edit(ListView.SelectedItems(0).Name)
         If Properties.DialogResult = Windows.Forms.DialogResult.OK Then
@@ -714,10 +703,6 @@ Public Class Explorer
         My.Forms.Listener.Show()
     End Sub
 
-    Private Sub ToolStripButtonDonate_Click(sender As Object, e As EventArgs) Handles ToolStripButtonDonate.Click
-        Process.Start(My.Settings.donate)
-    End Sub
-
     ' Keep the SplashScreen in the foreground
     Private Sub Explorer_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         SetForegroundWindow(SplashPtr)
@@ -749,4 +734,7 @@ Public Class Explorer
         End If
     End Sub
 
+    Private Sub DonateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DonateToolStripMenuItem.Click
+        Process.Start(My.Settings.donate)
+    End Sub
 End Class

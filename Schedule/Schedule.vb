@@ -18,6 +18,7 @@
 
 Imports System
 Imports TaskScheduler
+Imports WOL
 
 Namespace Schedule
 
@@ -87,7 +88,7 @@ Namespace Schedule
         End Sub
 
         Private Function GetState(ByVal state As Integer) As String
-            Select Case State
+            Select Case state
                 Case 1
                     Return My.Resources.Strings.lit_Disabled
 

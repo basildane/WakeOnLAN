@@ -20,6 +20,7 @@ Imports System.ComponentModel
 Imports System.Net.NetworkInformation
 Imports System.Xml.Serialization
 Imports System.Net
+Imports System.Linq
 
 Module MachinesModule
     Public Machines As New MachinesClass
@@ -32,8 +33,8 @@ Public Class MachinesClass
 
     Default Public Property Item(ByVal Name As String) As Machine
         Get
-            For Each m As Machine In List
-                If m.Name = Name Then Return m
+            For Each m As Machine In From m1 As Machine In List Where m1.Name = Name
+                Return m
             Next
             Return Nothing
         End Get
@@ -109,13 +110,13 @@ Public Class MachinesClass
         Dim writer As IO.StreamWriter
 
         Try
-            writer = New IO.StreamWriter(Filename)
+            writer = New IO.StreamWriter(filename)
             serializer.Serialize(writer, Machines)
             writer.Close()
 
         Catch ex As UnauthorizedAccessException
             If (MessageBox.Show(ex.Message, My.Resources.Strings.ChangesNotSaved, MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error) = DialogResult.Retry) Then
-                Export(Filename)
+                Export(filename)
             End If
 
         Catch ex As Exception
@@ -315,6 +316,36 @@ End Class
         End Set
     End Property
 
+    Private _userid As String
+    Public Property UserID() As String
+        Get
+            Return _userid
+        End Get
+        Set(value As String)
+            _userid = value
+        End Set
+    End Property
+
+    Private _password As String
+    Public Property Password() As String
+        Get
+            Return _password
+        End Get
+        Set(value As String)
+            _password = value
+        End Set
+    End Property
+
+    Private _domain As String
+    Public Property Domain() As String
+        Get
+            Return _domain
+        End Get
+        Set(value As String)
+            _domain = value
+        End Set
+    End Property
+
     Public Enum StatusCodes As Integer
         Online
         Offline
@@ -350,7 +381,7 @@ End Class
         backgroundWorker.CancelAsync()
     End Sub
 
-    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles BackgroundWorker.DoWork
+    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles backgroundWorker.DoWork
         Do
             Try
                 Threading.Thread.Sleep(2000)
@@ -369,49 +400,64 @@ End Class
         Loop Until backgroundWorker.CancellationPending = True
     End Sub
 
-    Private Sub backgroundWorker_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker.ProgressChanged
+    Private Sub backgroundWorker_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles backgroundWorker.ProgressChanged
+        Dim newStatus As StatusCodes
+        Dim newIpAddress As String
+
         Try
             If backgroundWorker.CancellationPending Then Exit Sub
 
             Select Case e.ProgressPercentage
                 Case 100
-                    If Status <> StatusCodes.Online Then
-                        Status = StatusCodes.Online
+                    newStatus = StatusCodes.Online
+                    newIpAddress = Reply.Address.ToString
 
-                        ' return ip4 address if possible
-                        If IP = "" Then
-                            For Each IPA As IPAddress In Dns.GetHostAddresses(Netbios)
-                                If IPA.AddressFamily.ToString() = "InterNetwork" Then
-                                    ' verify that we have the correct MAC
+                    If Status = StatusCodes.Unknown Then
+                        ' if the host is DHCP, try to resolve the correct IP and verify the MAC.
+                        ' if we cannot find a matching interface with our MAC, assume the host is OFFLINE.
+                        If IP = String.Empty Then
+                            newStatus = StatusCodes.Offline
 
-                                    Dim remoteIp As Int32
-                                    Dim remoteMac() As Byte = New Byte(6) {}
-                                    Dim len As Integer = 6
+                            For Each ipAddress As IPAddress In From IPA1 In Dns.GetHostAddresses(Netbios) Where IPA1.AddressFamily.ToString() = "InterNetwork"
+                                Dim remoteIp As Integer
+                                Dim remoteMac() As Byte = New Byte(6) {}
+                                Dim dWord As Integer
+                                Dim sendInterface As Integer
+                                Dim len As Integer = 6
 
-                                    Try
-                                        remoteIp = IPA.GetHashCode()
+                                Try
+                                    If String.IsNullOrEmpty(Adapter) Then
+                                        sendInterface = 0
+                                    Else
+                                        sendInterface = ipAddress.Parse(Adapter).GetHashCode()
+                                    End If
 
-                                        If remoteIp <> 0 Then
-                                            If SendARP(remoteIp, 0, remoteMac, len) = 0 Then
-                                                If CompareMac(BitConverter.ToString(remoteMac, 0, len), MAC) Then
-                                                    Status = StatusCodes.Offline
-                                                    Exit Sub
-                                                End If
+                                    remoteIp = ipAddress.GetHashCode()
+                                    If remoteIp <> 0 Then
+                                        dWord = SendARP(remoteIp, sendInterface, remoteMac, len)
+                                        If dWord = 0 Or dWord = 67 Then
+                                            '
+                                            ' we found a matching MAC, the host is officially ONLINE
+                                            ' 67 = ERROR_BAD_NET_NAME: if host on another subnet, just ignore the error
+                                            '
+                                            If CompareMac(BitConverter.ToString(remoteMac, 0, len), MAC) = 0 Or dWord = 67 Then
+                                                newStatus = StatusCodes.Online
+                                                newIpAddress = ipAddress.ToString()
+                                                Exit For
                                             End If
                                         End If
+                                    End If
 
-                                    Catch
+                                Catch
 
-                                    End Try
-
-                                    RaiseEvent StatusChange(Name, Status, IPA.ToString)
-                                    Exit Sub
-                                End If
+                                End Try
                             Next
-
                         End If
+                    End If
 
-                        RaiseEvent StatusChange(Name, Status, Reply.Address.ToString)
+                    If (Status <> newStatus) Then
+                        Status = newStatus
+                        RaiseEvent StatusChange(Name, Status, newIpAddress)
                     End If
 
                 Case Else

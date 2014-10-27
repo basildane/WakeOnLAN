@@ -85,12 +85,12 @@ Partial Class Explorer
         Me.Status = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.IPAddress = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Netbios = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Note = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Group = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ContextMenuStrip_Machines = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.WakeUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
-        Me.AbortShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RDPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PropertiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -137,6 +137,7 @@ Partial Class Explorer
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.DonateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LicenseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip = New System.Windows.Forms.ToolStrip()
@@ -154,11 +155,11 @@ Partial Class Explorer
         Me.ListenerToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OptionsToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.HotToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButtonDonate = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripMenuItemWakeUp = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ContextMenuStripTray = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ContextToolStripMenuItemOpen = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetWindowLayoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextToolStripMenuItemExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerPing = New System.Windows.Forms.Timer(Me.components)
         Me.TileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -169,7 +170,6 @@ Partial Class Explorer
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
-        Me.Note = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -324,13 +324,17 @@ Partial Class Explorer
         '
         resources.ApplyResources(Me.Netbios, "Netbios")
         '
+        'Note
+        '
+        resources.ApplyResources(Me.Note, "Note")
+        '
         'Group
         '
         resources.ApplyResources(Me.Group, "Group")
         '
         'ContextMenuStrip_Machines
         '
-        Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.AbortShutdownToolStripMenuItem, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ContextMenuStrip_Machines.Name = "ContextMenuStrip_Machines"
         resources.ApplyResources(Me.ContextMenuStrip_Machines, "ContextMenuStrip_Machines")
         '
@@ -348,11 +352,6 @@ Partial Class Explorer
         '
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
         resources.ApplyResources(Me.ToolStripSeparator10, "ToolStripSeparator10")
-        '
-        'AbortShutdownToolStripMenuItem
-        '
-        Me.AbortShutdownToolStripMenuItem.Name = "AbortShutdownToolStripMenuItem"
-        resources.ApplyResources(Me.AbortShutdownToolStripMenuItem, "AbortShutdownToolStripMenuItem")
         '
         'RDPToolStripMenuItem
         '
@@ -598,7 +597,7 @@ Partial Class Explorer
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.ToolStripSeparator6, Me.LicenseToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.ToolStripSeparator6, Me.DonateToolStripMenuItem, Me.LicenseToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         resources.ApplyResources(Me.HelpToolStripMenuItem, "HelpToolStripMenuItem")
         '
@@ -611,6 +610,11 @@ Partial Class Explorer
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         resources.ApplyResources(Me.ToolStripSeparator6, "ToolStripSeparator6")
+        '
+        'DonateToolStripMenuItem
+        '
+        Me.DonateToolStripMenuItem.Name = "DonateToolStripMenuItem"
+        resources.ApplyResources(Me.DonateToolStripMenuItem, "DonateToolStripMenuItem")
         '
         'LicenseToolStripMenuItem
         '
@@ -626,7 +630,7 @@ Partial Class Explorer
         '
         resources.ApplyResources(Me.ToolStrip, "ToolStrip")
         Me.ToolStrip.ImageScalingSize = New System.Drawing.Size(30, 30)
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FoldersToolStripButton, Me.ToolStripSeparator8, Me.ListViewToolStripButton, Me.PingToolStripButton, Me.ScheduleToolStripButton, Me.ListenerToolStripButton, Me.OptionsToolStripButton, Me.HotToolStripButton, Me.ToolStripButtonDonate})
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FoldersToolStripButton, Me.ToolStripSeparator8, Me.ListViewToolStripButton, Me.PingToolStripButton, Me.ScheduleToolStripButton, Me.ListenerToolStripButton, Me.OptionsToolStripButton, Me.HotToolStripButton})
         Me.ToolStrip.Name = "ToolStrip"
         '
         'FoldersToolStripButton
@@ -713,13 +717,6 @@ Partial Class Explorer
         resources.ApplyResources(Me.HotToolStripButton, "HotToolStripButton")
         Me.HotToolStripButton.Name = "HotToolStripButton"
         '
-        'ToolStripButtonDonate
-        '
-        Me.ToolStripButtonDonate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.ToolStripButtonDonate, "ToolStripButtonDonate")
-        Me.ToolStripButtonDonate.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
-        Me.ToolStripButtonDonate.Name = "ToolStripButtonDonate"
-        '
         'ToolStripMenuItemWakeUp
         '
         Me.ToolStripMenuItemWakeUp.Name = "ToolStripMenuItemWakeUp"
@@ -727,7 +724,7 @@ Partial Class Explorer
         '
         'ContextMenuStripTray
         '
-        Me.ContextMenuStripTray.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContextToolStripMenuItemOpen, Me.ToolStripMenuItemWakeUp, Me.ContextToolStripMenuItemExit})
+        Me.ContextMenuStripTray.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContextToolStripMenuItemOpen, Me.ToolStripMenuItemWakeUp, Me.ResetWindowLayoutToolStripMenuItem1, Me.ContextToolStripMenuItemExit})
         Me.ContextMenuStripTray.Name = "ContextMenuStripTray"
         resources.ApplyResources(Me.ContextMenuStripTray, "ContextMenuStripTray")
         '
@@ -735,6 +732,11 @@ Partial Class Explorer
         '
         Me.ContextToolStripMenuItemOpen.Name = "ContextToolStripMenuItemOpen"
         resources.ApplyResources(Me.ContextToolStripMenuItemOpen, "ContextToolStripMenuItemOpen")
+        '
+        'ResetWindowLayoutToolStripMenuItem1
+        '
+        Me.ResetWindowLayoutToolStripMenuItem1.Name = "ResetWindowLayoutToolStripMenuItem1"
+        resources.ApplyResources(Me.ResetWindowLayoutToolStripMenuItem1, "ResetWindowLayoutToolStripMenuItem1")
         '
         'ContextToolStripMenuItemExit
         '
@@ -785,10 +787,6 @@ Partial Class Explorer
         'CultureManager
         '
         Me.CultureManager.ManagedControl = Me
-        '
-        'Note
-        '
-        resources.ApplyResources(Me.Note, "Note")
         '
         'Explorer
         '
@@ -846,7 +844,6 @@ Partial Class Explorer
     Friend WithEvents SearchForMachinesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RDPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator10 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents AbortShutdownToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ShowHotButtonsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ScheduleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -876,12 +873,13 @@ Partial Class Explorer
     Friend WithEvents NotifyIconUpdate As System.Windows.Forms.NotifyIcon
     Friend WithEvents Group As System.Windows.Forms.ColumnHeader
     Friend WithEvents ListenerToolStripButton As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButtonDonate As System.Windows.Forms.ToolStripButton
     Friend WithEvents CultureManager As Localization.CultureManager
     Friend WithEvents OptionsToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents TreeViewContextMenuStrip As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents WakeUpToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ShutDownToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Note As System.Windows.Forms.ColumnHeader
+    Friend WithEvents DonateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ResetWindowLayoutToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class

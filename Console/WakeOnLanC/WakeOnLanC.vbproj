@@ -231,6 +231,7 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encryption.vb" />
     <Compile Include="Listener.vb" />
     <Compile Include="Machines.vb" />
     <Compile Include="Module1.vb" />

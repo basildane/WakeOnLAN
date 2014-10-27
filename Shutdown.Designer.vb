@@ -43,6 +43,9 @@ Partial Class Shutdown
         Me.shut_timeout = New System.Windows.Forms.TextBox()
         Me.Label_Timeout = New System.Windows.Forms.Label()
         Me.timer = New System.Windows.Forms.Timer(Me.components)
+        Me.pre_timer = New System.Windows.Forms.Timer(Me.components)
+        Me.toolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.rbLogoff = New System.Windows.Forms.RadioButton()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -58,7 +61,6 @@ Partial Class Shutdown
         '
         'SplitContainer1.Panel1
         '
-        resources.ApplyResources(Me.SplitContainer1.Panel1, "SplitContainer1.Panel1")
         Me.SplitContainer1.Panel1.Controls.Add(Me.ListView1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ProgressBar1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label_Operation)
@@ -66,7 +68,6 @@ Partial Class Shutdown
         '
         'SplitContainer1.Panel2
         '
-        resources.ApplyResources(Me.SplitContainer1.Panel2, "SplitContainer1.Panel2")
         Me.SplitContainer1.Panel2.Controls.Add(Me.ShutdownButton)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Cancel_Button)
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox1)
@@ -80,6 +81,7 @@ Partial Class Shutdown
         Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.ListView1.Name = "ListView1"
         Me.ListView1.ShowGroups = False
+        Me.ListView1.ShowItemToolTips = True
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
@@ -122,7 +124,7 @@ Partial Class Shutdown
         '
         'GroupBox1
         '
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
+        Me.GroupBox1.Controls.Add(Me.rbLogoff)
         Me.GroupBox1.Controls.Add(Me.rbHibernate)
         Me.GroupBox1.Controls.Add(Me.rbSleep)
         Me.GroupBox1.Controls.Add(Me.rbShutdown)
@@ -134,6 +136,7 @@ Partial Class Shutdown
         Me.GroupBox1.Controls.Add(Me.shut_message)
         Me.GroupBox1.Controls.Add(Me.shut_timeout)
         Me.GroupBox1.Controls.Add(Me.Label_Timeout)
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         '
@@ -160,9 +163,9 @@ Partial Class Shutdown
         '
         'shut_reboot
         '
-        resources.ApplyResources(Me.shut_reboot, "shut_reboot")
         Me.shut_reboot.Checked = True
         Me.shut_reboot.CheckState = System.Windows.Forms.CheckState.Checked
+        resources.ApplyResources(Me.shut_reboot, "shut_reboot")
         Me.shut_reboot.Name = "shut_reboot"
         '
         'shut_force
@@ -204,6 +207,21 @@ Partial Class Shutdown
         '
         Me.timer.Interval = 1000
         '
+        'pre_timer
+        '
+        Me.pre_timer.Interval = 1000
+        '
+        'toolTip
+        '
+        Me.toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning
+        '
+        'rbLogoff
+        '
+        resources.ApplyResources(Me.rbLogoff, "rbLogoff")
+        Me.rbLogoff.Name = "rbLogoff"
+        Me.rbLogoff.TabStop = True
+        Me.rbLogoff.UseVisualStyleBackColor = True
+        '
         'Shutdown
         '
         resources.ApplyResources(Me, "$this")
@@ -242,4 +260,7 @@ Partial Class Shutdown
     Friend WithEvents rbHibernate As System.Windows.Forms.RadioButton
     Friend WithEvents rbSleep As System.Windows.Forms.RadioButton
     Friend WithEvents rbShutdown As System.Windows.Forms.RadioButton
+    Friend WithEvents pre_timer As System.Windows.Forms.Timer
+    Friend WithEvents toolTip As System.Windows.Forms.ToolTip
+    Friend WithEvents rbLogoff As System.Windows.Forms.RadioButton
 End Class

@@ -23,8 +23,6 @@ Imports System.Net
 
 Module Globals
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
-    Public Declare Function InitiateSystemShutdown Lib "advapi32.dll" Alias "InitiateSystemShutdownA" (ByVal lpMachineName As String, ByVal lpMessage As String, ByVal dwTimeout As Integer, ByVal bForceAppsClosed As Integer, ByVal bRebootAfterShutdown As Integer) As Integer
-    Public Declare Function AbortSystemShutdown Lib "advapi32.dll" Alias "AbortSystemShutdownA" (ByVal lpMachineName As String) As Integer
     Public Declare Function SendARP Lib "iphlpapi.dll" (ByVal DestIP As Int32, ByVal SrcIP As Int32, ByVal pMacAddr As Byte(), ByRef PhyAddrLen As Integer) As Integer
 
     <DllImport("user32.dll")> _
@@ -34,21 +32,6 @@ Module Globals
     Public ShutdownMode As Boolean      'true if in shutdown mode, false if in abort mode
     Public CurrentItem As ListViewItem
     Public SplashPtr As IntPtr
-
-    Public Function FormatMessage(ByVal [error] As Integer) As String
-        Const FORMAT_MESSAGE_FROM_SYSTEM As UInteger = &H1000
-        Const LANG_NEUTRAL As Integer = &H0
-        Dim buffer As String = Space(1024)
-
-        FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, IntPtr.Zero, [error], LANG_NEUTRAL, buffer, 1024, IntPtr.Zero)
-        buffer = Replace(Replace(buffer, Chr(13), ""), Chr(10), "")
-        If buffer.Contains(Chr(0)) Then
-            buffer = buffer.Substring(0, buffer.IndexOf(Chr(0)))
-        Else
-            buffer = String.Empty
-        End If
-        Return buffer
-    End Function
 
     Public Sub ShowHelp(parent As Control, url As String)
         Try
@@ -82,6 +65,24 @@ Module Globals
             listview.Columns(i).Width = Int(s(i))
         Next
     End Sub
+
+    Public Function FormatMessage(ByVal [error] As Integer) As String
+        Const FORMAT_MESSAGE_FROM_SYSTEM As UInteger = &H1000
+        Const LANG_NEUTRAL As Integer = &H0
+        Const bufferLen As Integer = 1024
+        Dim buffer As String = Space(bufferLen)
+
+        FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM, IntPtr.Zero, [error], LANG_NEUTRAL, buffer, bufferLen, IntPtr.Zero)
+        buffer = Replace(Replace(buffer, Chr(13), ""), Chr(10), "")
+        If buffer.Contains(Chr(0)) Then
+            buffer = buffer.Substring(0, buffer.IndexOf(Chr(0)))
+        Else
+            buffer = String.Empty
+        End If
+        Return buffer
+    End Function
+
+
 
     Public Function IpToInt(address As IPAddress) As UInt32
         Dim bytes As Byte() = address.GetAddressBytes()
@@ -120,6 +121,5 @@ Module Globals
         End Try
 
     End Function
-
 
 End Module
