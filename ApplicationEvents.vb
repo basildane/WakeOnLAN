@@ -68,6 +68,10 @@ Namespace My
         End Sub
 
         Private Sub MyApplication_UnhandledException(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
+            Dim crash As New Crash()
+
+            crash.exception = e.Exception
+            crash.ShowDialog()
             Application.Log.WriteException(e.Exception, TraceEventType.Critical, "Application shut down at " & Computer.Clock.GmtTime.ToString)
         End Sub
 
