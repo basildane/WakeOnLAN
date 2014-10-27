@@ -56,15 +56,20 @@ Public Class ShutdownThread
         Dim flags As ShutdownFlags
         Dim encryption As New Encryption(My.Application.Info.ProductName)
 
-        machine = Machines(_item.Text)
-        _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
-
-        If (_action <> ShutdownAction.Abort And machine.ShutdownCommand.Length > 0) Then
-            Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
-            Return
-        End If
-
         Try
+            machine = Machines(_item.Text)
+            _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
+
+            If (_action <> ShutdownAction.Abort And machine.ShutdownCommand.Length > 0) Then
+                Dim cmd As String
+
+                cmd = machine.ShutdownCommand
+                cmd = cmd.Replace("$USER", machine.UserID)
+                cmd = cmd.Replace("$PASS", encryption.EnigmaDecrypt(machine.Password))
+                Shell(cmd, AppWinStyle.Hide, False)
+                Return
+            End If
+
             Select Case _action
                 Case ShutdownAction.Shutdown
                     If (_force) Then
@@ -112,14 +117,14 @@ Public Class ShutdownThread
     Private Sub backgroundWorker_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
 
         With _item.SubItems(1)
-            If e.Result <> 0 Then
-                .ForeColor = Color.Red
-                .Text = String.Format(My.Resources.Strings.ErrorMsg, _errMessage)
-                .Tag = .Text ' error
-            Else
+            If e.Result = 0 Then
                 .ForeColor = Color.Green
                 .Text = My.Resources.Strings.Successful
                 .Tag = String.Empty ' success
+            Else
+                .ForeColor = Color.Red
+                .Text = String.Format(My.Resources.Strings.ErrorMsg, _errMessage)
+                .Tag = .Text ' error
             End If
         End With
 

@@ -346,6 +346,12 @@
     <Compile Include="Controls\IPAddress.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Crash.Designer.vb">
+      <DependentUpon>Crash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Crash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ListViewColumnSorter.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -617,6 +623,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Wake.vb" />
+    <EmbeddedResource Include="Crash.resx">
+      <DependentUpon>Crash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UseridDialog.resx">
       <DependentUpon>UseridDialog.vb</DependentUpon>
     </EmbeddedResource>

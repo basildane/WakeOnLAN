@@ -518,7 +518,7 @@ Namespace Schedule
                             li.SubItems(6).Text = My.Resources.Strings.lit_notFound & " (0x2)"
 
                         Case Else
-                            li.SubItems(6).Text = String.Format("{0} (0x{1})", AquilaWolLibrary.FormatMessage(task.LastTaskResult), task.LastTaskResult.ToString("x"))
+                            li.SubItems(6).Text = String.Format("{0} (0x{1})", FormatMessage(task.LastTaskResult), task.LastTaskResult.ToString("x"))
 
                     End Select
 

@@ -45,7 +45,7 @@ Friend Structure TOKEN_PRIVILEGES
 End Structure
 
 ' Implements methods to exit Windows.
-Public Class LocalShutdown
+Friend Class LocalShutdown
     ' <summary>Required to enable or disable the privileges in an access token.</summary>
     Private Const TOKEN_ADJUST_PRIVILEGES As Integer = &H20
 
@@ -133,7 +133,7 @@ End Class
 
 
 ' The exception that is thrown when an error occures when requesting a specific privilege.
-Public Class PrivilegeException
+Friend Class PrivilegeException
 
     Inherits Exception
     ' Initializes a new instance of the PrivilegeException class.

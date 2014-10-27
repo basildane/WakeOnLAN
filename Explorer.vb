@@ -347,8 +347,17 @@ Public Class Explorer
     End Sub
 
     Private Sub ResetWindowLayoutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ResetWindowLayoutToolStripMenuItem.Click, ResetWindowLayoutToolStripMenuItem1.Click
+        My.Settings.MinimizeToTray = False
+
         Size = New Size(650, 490)
         Location = New Point(100, 100)
+        MinimizeToTaskTrayToolStripMenuItem.Checked = My.Settings.MinimizeToTray
+        ShowInTaskbar = Not My.Settings.MinimizeToTray
+        NotifyIcon1.Visible = My.Settings.MinimizeToTray
+        Show()
+        WindowState = FormWindowState.Normal
+        BringToFront()
+        Activate()
     End Sub
 
     Private Sub PingToolStripButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PingToolStripButton.Click

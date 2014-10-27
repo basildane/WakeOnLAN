@@ -220,12 +220,12 @@ Public Class Shutdown
         My.Settings.shutdownAction = action
         Label_Operation.Text = My.Resources.Strings.BeginShutdown
 
-        If (Not String.IsNullOrEmpty(shut_message.Text)) Then
-            For Each item As ListViewItem In From item1 As ListViewItem In ListView1.Items Where (item1.SubItems(1).Text <> My.Resources.Strings.Pausing)
-                item.SubItems(1).Text = My.Resources.Strings.lit_Ready
+        For Each item As ListViewItem In From item1 As ListViewItem In ListView1.Items Where (item1.SubItems(1).Text <> My.Resources.Strings.Pausing)
+            item.SubItems(1).Text = My.Resources.Strings.lit_Ready
+            If (Not String.IsNullOrEmpty(shut_message.Text)) Then
                 PopupMessage(item.Text, shut_message.Text)
-            Next
-        End If
+            End If
+        Next
 
         _preCountdown = shut_timeout.Text
         pre_timer.Start()
@@ -233,9 +233,14 @@ Public Class Shutdown
     End Sub
 
     Private Sub PopupMessage(host As String, message As String)
-        If (Not String.IsNullOrEmpty(message)) Then
-            Shell(String.Format("msg * /server:{0} ""{1}""", host, message), AppWinStyle.Hide, False)
-        End If
+        Try
+            If (Not String.IsNullOrEmpty(message)) Then
+                Shell(String.Format("msg * /server:{0} ""{1}""", host, message), AppWinStyle.Hide, False)
+            End If
+
+        Catch
+
+        End Try
     End Sub
 
     Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click

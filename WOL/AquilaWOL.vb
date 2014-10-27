@@ -174,7 +174,7 @@ Public Class AquilaWolLibrary
 
     End Sub
 
-    Public Shared Function FormatMessage(ByVal [error] As Integer) As String
+    Friend Shared Function FormatMessage(ByVal [error] As Integer) As String
         Const FORMAT_MESSAGE_FROM_SYSTEM As UInteger = &H1000
         Const LANG_NEUTRAL As Integer = &H0
         Const bufferLen As Integer = 1024

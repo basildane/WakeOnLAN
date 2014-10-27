@@ -27,7 +27,9 @@ Public NotInheritable Class AboutBox
         LabelVersion.Text = System.String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
         LabelCopyright.Text = My.Application.Info.Copyright
 
-        LabelVersion.Text &= " (" & My.Application.Info.Version.Revision & ")"
+        If My.Application.Info.Version.Revision > 0 Then
+            LabelVersion.Text &= " BETA " & My.Application.Info.Version.Revision
+        End If
 
 #If DEBUG Then
         LabelVersion.Text &= " [DEBUG]"
@@ -41,7 +43,7 @@ Public NotInheritable Class AboutBox
         AutoUpdater.CurrentCulture = Application.CurrentCulture
         AutoUpdater.AppCastURL = My.Settings.updateURL
         AutoUpdater.versionURL = My.Settings.updateVersions
-        AddHandler AutoUpdater.UpdateStatus, AddressOf updateStatus
+        AddHandler AutoUpdater.UpdateStatus, AddressOf UpdateStatus
         AutoUpdater.Start(0)
     End Sub
 

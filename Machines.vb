@@ -453,7 +453,9 @@ End Class
                                 End Try
                             Next
                         End If
+                    End If
 
+                    If (Status <> newStatus) Then
                         Status = newStatus
                         RaiseEvent StatusChange(Name, Status, newIpAddress)
                     End If

@@ -159,6 +159,7 @@ Partial Class Explorer
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ContextMenuStripTray = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ContextToolStripMenuItemOpen = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetWindowLayoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextToolStripMenuItemExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerPing = New System.Windows.Forms.Timer(Me.components)
         Me.TileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -169,7 +170,6 @@ Partial Class Explorer
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
-        Me.ResetWindowLayoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -733,6 +733,11 @@ Partial Class Explorer
         Me.ContextToolStripMenuItemOpen.Name = "ContextToolStripMenuItemOpen"
         resources.ApplyResources(Me.ContextToolStripMenuItemOpen, "ContextToolStripMenuItemOpen")
         '
+        'ResetWindowLayoutToolStripMenuItem1
+        '
+        Me.ResetWindowLayoutToolStripMenuItem1.Name = "ResetWindowLayoutToolStripMenuItem1"
+        resources.ApplyResources(Me.ResetWindowLayoutToolStripMenuItem1, "ResetWindowLayoutToolStripMenuItem1")
+        '
         'ContextToolStripMenuItemExit
         '
         Me.ContextToolStripMenuItemExit.Name = "ContextToolStripMenuItemExit"
@@ -782,11 +787,6 @@ Partial Class Explorer
         'CultureManager
         '
         Me.CultureManager.ManagedControl = Me
-        '
-        'ResetWindowLayoutToolStripMenuItem1
-        '
-        Me.ResetWindowLayoutToolStripMenuItem1.Name = "ResetWindowLayoutToolStripMenuItem1"
-        resources.ApplyResources(Me.ResetWindowLayoutToolStripMenuItem1, "ResetWindowLayoutToolStripMenuItem1")
         '
         'Explorer
         '
