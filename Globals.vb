@@ -95,7 +95,7 @@ Module Globals
     End Function
 
     Public Function IpToInt(address As String) As UInt32
-        Dim _address As IPAddress
+        Dim _address As IPAddress = Nothing
 
         If (IPAddress.TryParse(address, _address)) Then
             Return IpToInt(_address)

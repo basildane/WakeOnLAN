@@ -103,7 +103,6 @@ Public Class AquilaWolLibrary
     ''' <param name="userid">Optional userid credentials.</param>
     ''' <param name="password">Optional password.</param>
     ''' <param name="domain">Optional Domain name.</param>
-    ''' <returns>0: Success, else Win32 error code.</returns>
     ''' <remarks></remarks>
     Public Shared Sub Shutdown(host As String,
                                     flags As ShutdownFlags,

@@ -101,8 +101,9 @@ Public Class EditAction
                     ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
-                    Dim names = (From machine In Machines
-                        Order By machine.name
+                    Dim names() As String =
+                        (From machine As Machine In Machines
+                        Order By machine.Name
                         Select machine.Name).ToArray()
 
                     MachinesComboBox.Items.AddRange(names)
@@ -119,8 +120,9 @@ Public Class EditAction
                     ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
-                    Dim groups = (From machine In Machines
-                            Order By machine.Group Ascending
+                    Dim groups() As String =
+                        (From machine As Machine In Machines
+                            Order By machine.Group
                             Where Not String.IsNullOrEmpty(machine.Group)
                             Select machine.Group Distinct
                             ).ToArray()
@@ -146,8 +148,9 @@ Public Class EditAction
                     ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
-                    Dim names = (From machine In Machines
-                        Order By machine.name
+                    Dim names() As String =
+                        (From machine As Machine In Machines
+                        Order By machine.Name
                         Select machine.Name).ToArray()
 
                     MachinesComboBox.Items.AddRange(names)
@@ -166,10 +169,11 @@ Public Class EditAction
                     ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
-                    Dim groups = (From g In Machines
-                            Order By g.Group Ascending
-                            Where Not String.IsNullOrEmpty(g.Group)
-                            Select g.Group Distinct
+                    Dim groups() As String =
+                        (From machine As Machine In Machines
+                            Order By machine.Group
+                            Where Not String.IsNullOrEmpty(machine.Group)
+                            Select machine.Group Distinct
                             ).ToArray()
 
                     MachinesComboBox.Items.AddRange(groups)
