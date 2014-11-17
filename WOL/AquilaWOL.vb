@@ -36,6 +36,14 @@ Public Class AquilaWolLibrary
         Hibernate = 101
     End Enum
 
+    Public Enum EventId As Integer
+        WakeUp = 1
+        Shutdown = 2
+        Up = 100
+        Down = 101
+        [Error] = 1000
+    End Enum
+
     ''' <summary>
     ''' Send a WOL packet to a remote computer
     ''' </summary>
@@ -171,6 +179,10 @@ Public Class AquilaWolLibrary
             Throw New Exception(FormatMessage(retval))
         End If
 
+    End Sub
+
+    Public Shared Sub WriteLog(message As String, entryType As EventLogEntryType, eventId As EventId)
+        EventLog.WriteEntry(My.Application.Info.ProductName, message, entryType, eventId)
     End Sub
 
     Friend Shared Function FormatMessage(ByVal [error] As Integer) As String

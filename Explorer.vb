@@ -141,6 +141,8 @@ Public Class Explorer
 
                 Case Machine.StatusCodes.Offline
                     If ListView.Items(hostName).ImageIndex = 2 Then
+                        WOL.AquilaWolLibrary.WriteLog(String.Format("Host ""{0}"" is offline.", hostName), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.Down)
+
                         If My.Settings.Sound Then
                             My.Computer.Audio.Play(My.Resources.down, AudioPlayMode.Background)
                         End If
@@ -153,6 +155,8 @@ Public Class Explorer
 
                 Case Machine.StatusCodes.Online
                     If ListView.Items(hostName).ImageIndex = 1 Then
+                        WOL.AquilaWolLibrary.WriteLog(String.Format("Host ""{0}"" is online.", hostName), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.Up)
+
                         If My.Settings.Sound Then
                             My.Computer.Audio.Play(My.Resources.up, AudioPlayMode.Background)
                         End If

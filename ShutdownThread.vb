@@ -102,8 +102,10 @@ Public Class ShutdownThread
             End Select
 
             AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
+            WriteLog(String.Format("Sending {0} to ""{1}""", _action.ToString(), machine.Name), EventLogEntryType.Information, EventId.Shutdown)
 
         Catch ex As Exception
+            WriteLog(String.Format("Shutdown error on host {0}{1}: {2}", machine.Name, vbCrLf, ex.Message), EventLogEntryType.Error, EventId.Error)
             _errMessage = ex.Message
             e.Result = 1
             Return

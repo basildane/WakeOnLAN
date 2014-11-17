@@ -59,12 +59,30 @@ Namespace My
                 version &= " BETA " & Application.Info.Version.Revision
             End If
 
+            CreateEventLog()
+
             Dim splash As Splash = New Splash(Resources.Splash, Resources.Strings.Title, version, Application.Info.Copyright, SplashPtr)
 
 #If DEBUG Then
             'Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
 #End If
 
+        End Sub
+
+        Private Sub CreateEventLog()
+            Try
+                If Not EventLog.SourceExists(Application.Info.ProductName) Then
+                    EventLog.CreateEventSource(Application.Info.ProductName, "Application")
+                End If
+
+            Catch se As Security.SecurityException
+                Dim c As New Elevate()
+                c.ShowDialog()
+
+            Catch ex As Exception
+                Debug.WriteLine(ex.Message)
+
+            End Try
         End Sub
 
         Private Sub MyApplication_UnhandledException(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException

@@ -49,9 +49,7 @@ Module Globals
     End Sub
 
     Public Function SaveListViewState(ByVal listview As ListView) As String
-
         Return listview.Columns.Cast(Of ColumnHeader)().Aggregate("", Function(current, c) current & (c.Width & " "))
-
     End Function
 
     Public Sub GetListViewState(ByVal listview As ListView, ByVal state As String)
@@ -81,8 +79,6 @@ Module Globals
         End If
         Return buffer
     End Function
-
-
 
     Public Function IpToInt(address As IPAddress) As UInt32
         Dim bytes As Byte() = address.GetAddressBytes()

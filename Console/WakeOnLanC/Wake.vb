@@ -29,7 +29,9 @@ Module Wake
             If String.IsNullOrEmpty(Adapter) Then
                 Adapter = machine.Adapter
             End If
-            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, Adapter)
+
+            EventLog.WriteEntry(My.Application.Info.ProductName, String.Format("WakeUp sent to {0}", machine.Name), EventLogEntryType.Information, 1)
+            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, adapter)
 
         Catch ex As Exception
             Console.WriteLine(ex.InnerException)

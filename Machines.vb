@@ -126,40 +126,40 @@ Public Class MachinesClass
 
     End Sub
 
-    Public Sub Add(ByVal Machine As Machine)
-        List.Add(Machine)
-        AddHandler Machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
+    Public Sub Add(ByVal machine As Machine)
+        List.Add(machine)
+        AddHandler machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
 
         If My.Forms.Explorer.PingToolStripButton.Checked Then
-            Machine.Run()
+            machine.Run()
         End If
         dirty = True
 
     End Sub
 
-    Public Sub Remove(ByVal Name As String)
-        Dim m As Machine = Nothing
+    Public Sub Remove(ByVal name As String)
+        Dim machine As Machine = Nothing
         Dim i As Integer
 
         For i = 0 To List.Count - 1
-            m = List(i)
-            If m.Name = Name Then Exit For
+            machine = List(i)
+            If machine.Name = name Then Exit For
         Next
         If i = List.Count Then Exit Sub
 
-        m.Cancel()
-        RemoveHandler m.StatusChange, AddressOf My.Forms.Explorer.StatusChange
+        machine.Cancel()
+        RemoveHandler machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
         List.RemoveAt(i)
         dirty = True
     End Sub
 
     Public Sub Close()
-        Dim m As Machine
+        Dim machine As Machine
 
         For i As Integer = List.Count - 1 To 0 Step -1
-            m = List(i)
-            m.Cancel()
-            RemoveHandler m.StatusChange, AddressOf My.Forms.Explorer.StatusChange
+            machine = List(i)
+            machine.Cancel()
+            RemoveHandler machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
             List.RemoveAt(i)
             dirty = True
         Next
