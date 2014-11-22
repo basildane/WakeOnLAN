@@ -379,12 +379,14 @@ Module Module1
                 Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
             End If
             Console.WriteLine("...Successful")
+            WriteLog(String.Format("Sending {0} to ""{1}""", flags.ToString(), machine.Name), EventLogEntryType.Information, EventId.Shutdown)
 
         Catch ex As Exception
             Console.ForegroundColor = ConsoleColor.Red
             Console.Write("...Error: ")
             Console.WriteLine(ex.Message)
             Console.ResetColor()
+            WriteLog(String.Format("Shutdown error on host {0}{1}: {2}", machine.Name, vbCrLf, ex.Message), EventLogEntryType.Error, EventId.Error)
 
         End Try
 

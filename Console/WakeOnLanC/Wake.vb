@@ -30,10 +30,11 @@ Module Wake
                 Adapter = machine.Adapter
             End If
 
-            EventLog.WriteEntry(My.Application.Info.ProductName, String.Format("WakeUp sent to {0}", machine.Name), EventLogEntryType.Information, 1)
             WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, adapter)
+            WOL.AquilaWolLibrary.WriteLog(String.Format("WakeUp sent to ""{0}""", machine.Name), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.WakeUp)
 
         Catch ex As Exception
+            WOL.AquilaWolLibrary.WriteLog(String.Format("WakeUp error: {0}", ex.Message), EventLogEntryType.Error, WOL.AquilaWolLibrary.EventId.Error)
             Console.WriteLine(ex.InnerException)
 
         End Try
