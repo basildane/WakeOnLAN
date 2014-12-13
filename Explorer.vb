@@ -741,4 +741,13 @@ Public Class Explorer
     Private Sub DonateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DonateToolStripMenuItem.Click
         Process.Start(My.Settings.donate)
     End Sub
+
+    Private Sub EventLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EventLogToolStripMenuItem.Click, EventLogToolStripButton.Click
+        Try
+            History.Show(Me)
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

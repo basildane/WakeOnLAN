@@ -124,6 +124,7 @@ Partial Class Explorer
         Me.FoldersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowGroupsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowHotButtonsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EventLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.MinimizeToTaskTrayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AutoStartWithWindowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -170,6 +171,7 @@ Partial Class Explorer
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
+        Me.EventLogToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -504,7 +506,7 @@ Partial Class Explorer
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem, Me.FoldersToolStripMenuItem, Me.ShowGroupsToolStripMenuItem, Me.ShowHotButtonsToolStripMenuItem, Me.ToolStripSeparator7, Me.MinimizeToTaskTrayToolStripMenuItem, Me.AutoStartWithWindowsToolStripMenuItem, Me.ToolStripSeparator9, Me.ResetWindowLayoutToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem, Me.FoldersToolStripMenuItem, Me.ShowGroupsToolStripMenuItem, Me.ShowHotButtonsToolStripMenuItem, Me.EventLogToolStripMenuItem, Me.ToolStripSeparator7, Me.MinimizeToTaskTrayToolStripMenuItem, Me.AutoStartWithWindowsToolStripMenuItem, Me.ToolStripSeparator9, Me.ResetWindowLayoutToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         resources.ApplyResources(Me.ViewToolStripMenuItem, "ViewToolStripMenuItem")
         '
@@ -542,6 +544,11 @@ Partial Class Explorer
         Me.ShowHotButtonsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ShowHotButtonsToolStripMenuItem.Name = "ShowHotButtonsToolStripMenuItem"
         resources.ApplyResources(Me.ShowHotButtonsToolStripMenuItem, "ShowHotButtonsToolStripMenuItem")
+        '
+        'EventLogToolStripMenuItem
+        '
+        Me.EventLogToolStripMenuItem.Name = "EventLogToolStripMenuItem"
+        resources.ApplyResources(Me.EventLogToolStripMenuItem, "EventLogToolStripMenuItem")
         '
         'ToolStripSeparator7
         '
@@ -630,7 +637,7 @@ Partial Class Explorer
         '
         resources.ApplyResources(Me.ToolStrip, "ToolStrip")
         Me.ToolStrip.ImageScalingSize = New System.Drawing.Size(30, 30)
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FoldersToolStripButton, Me.ToolStripSeparator8, Me.ListViewToolStripButton, Me.PingToolStripButton, Me.ScheduleToolStripButton, Me.ListenerToolStripButton, Me.OptionsToolStripButton, Me.HotToolStripButton})
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FoldersToolStripButton, Me.ToolStripSeparator8, Me.ListViewToolStripButton, Me.PingToolStripButton, Me.ScheduleToolStripButton, Me.ListenerToolStripButton, Me.EventLogToolStripButton, Me.OptionsToolStripButton, Me.HotToolStripButton})
         Me.ToolStrip.Name = "ToolStrip"
         '
         'FoldersToolStripButton
@@ -788,6 +795,11 @@ Partial Class Explorer
         '
         Me.CultureManager.ManagedControl = Me
         '
+        'EventLogToolStripButton
+        '
+        resources.ApplyResources(Me.EventLogToolStripButton, "EventLogToolStripButton")
+        Me.EventLogToolStripButton.Name = "EventLogToolStripButton"
+        '
         'Explorer
         '
         resources.ApplyResources(Me, "$this")
@@ -881,5 +893,7 @@ Partial Class Explorer
     Friend WithEvents Note As System.Windows.Forms.ColumnHeader
     Friend WithEvents DonateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ResetWindowLayoutToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EventLogToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EventLogToolStripButton As System.Windows.Forms.ToolStripButton
 
 End Class

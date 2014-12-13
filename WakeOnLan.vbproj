@@ -46,7 +46,7 @@
     <ManifestCertificateThumbprint>6BA011669D4A445C0B403B0E13758E8395362D2D</ManifestCertificateThumbprint>
     <ManifestKeyFile>
     </ManifestKeyFile>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <PublishUrl>\\squidward.aquila.local\software\wakeonlan\</PublishUrl>
@@ -358,6 +358,12 @@
     <Compile Include="Elevate.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="History.Designer.vb">
+      <DependentUpon>History.vb</DependentUpon>
+    </Compile>
+    <Compile Include="History.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ListViewColumnSorter.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -634,6 +640,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elevate.resx">
       <DependentUpon>Elevate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UseridDialog.resx">
       <DependentUpon>UseridDialog.vb</DependentUpon>
@@ -1322,6 +1331,10 @@
     <ProjectReference Include="AutoUpdater.NET\AutoUpdater.NET.csproj">
       <Project>{fb9e7e6b-b19f-4f37-a708-2996190cef13}</Project>
       <Name>AutoUpdater.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="EventLogViewer\EventLogViewer.vbproj">
+      <Project>{2026F255-7A75-41C6-BA50-4B7738A313CE}</Project>
+      <Name>EventLogViewer</Name>
     </ProjectReference>
     <ProjectReference Include="Localization\Localization.csproj">
       <Project>{62e6c7ea-ab84-4e44-b05a-af648e60fa6d}</Project>

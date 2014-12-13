@@ -181,8 +181,20 @@ Public Class AquilaWolLibrary
 
     End Sub
 
+    ''' <summary>
+    ''' Write the EventLog record for this event.
+    ''' </summary>
+    ''' <param name="message"></param>
+    ''' <param name="entryType"></param>
+    ''' <param name="eventId"></param>
+    ''' <remarks>If no event source has been created for WOL, just skip it.</remarks>
     Public Shared Sub WriteLog(message As String, entryType As EventLogEntryType, eventId As EventId)
-        EventLog.WriteEntry(My.Application.Info.ProductName, message, entryType, eventId)
+        Try
+            EventLog.WriteEntry(My.Application.Info.ProductName, message, entryType, eventId)
+
+        Catch ex As System.SystemException
+
+        End Try
     End Sub
 
     Friend Shared Function FormatMessage(ByVal [error] As Integer) As String
