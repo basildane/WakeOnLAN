@@ -95,14 +95,17 @@ namespace AlphaWindow
 				// Set parameters for layered window update
 				APIHelp.Size newSize = new APIHelp.Size(bitmap.Width, bitmap.Height);	// Size window to match bitmap
 				APIHelp.Point sourceLocation = new APIHelp.Point(0, 0);
-				APIHelp.Point newLocation = new APIHelp.Point(this.Left, this.Top);		// Same as this window
-				APIHelp.BLENDFUNCTION blend = new APIHelp.BLENDFUNCTION();
-				blend.BlendOp             = APIHelp.AC_SRC_OVER;						// Only works with a 32bpp bitmap
-				blend.BlendFlags          = 0;											// Always 0
-				blend.SourceConstantAlpha = 255;										// Set to 255 for per-pixel alpha values
-				blend.AlphaFormat         = APIHelp.AC_SRC_ALPHA;						// Only works when the bitmap contains an alpha channel
+				APIHelp.Point newLocation = new APIHelp.Point(Left - 22, Top);		    // Same as this window, offset by 22 to compensate
+                                                                                        // for transparent border
+				APIHelp.BLENDFUNCTION blend = new APIHelp.BLENDFUNCTION
+				{
+				    BlendOp = APIHelp.AC_SRC_OVER,
+				    BlendFlags = 0,
+				    SourceConstantAlpha = 255,
+				    AlphaFormat = APIHelp.AC_SRC_ALPHA
+				};
 
-				// Update the window
+			    // Update the window
 				APIHelp.UpdateLayeredWindow(Handle, screenDc, ref newLocation, ref newSize,
 					memDc, ref sourceLocation, 0, ref blend, APIHelp.ULW_ALPHA);
 			}
