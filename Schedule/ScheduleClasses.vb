@@ -189,6 +189,7 @@ Public Class Action
     Public Name As String
     Public Mode As ActionItems
     Public Force As Boolean
+    Public Reboot As Boolean
 
     Public EmailFrom As String = ""
     Public EmailTo As String = ""

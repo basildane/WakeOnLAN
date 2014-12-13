@@ -156,9 +156,9 @@ Namespace Schedule
             Dim result As Boolean = False
             Dim m As Machine
             Dim encrypt As New Encryption(My.Application.Info.ProductName)
-            Dim machinesXML As String
+            Dim machinesXml As String
 
-            machinesXML = "-p " & wrapSpaces(Machines.GetFile())
+            machinesXml = "-p " & wrapSpaces(Machines.GetFile())
 
             timer.Stop()
 
@@ -228,7 +228,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -w -m " & wrapSpaces(m.Name)
+                                        .Arguments = machinesXml & " -w -m " & wrapSpaces(m.Name)
                                     End With
 
                                 Case Action.ActionItems.StartGroup
@@ -238,7 +238,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -w -g " & wrapSpaces(myAction.Name)
+                                        .Arguments = machinesXml & " -w -g " & wrapSpaces(myAction.Name)
                                     End With
 
                                 Case Action.ActionItems.StartAll
@@ -248,7 +248,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -w -all"
+                                        .Arguments = machinesXml & " -w -all"
                                     End With
 
                                 Case Action.ActionItems.Shutdown
@@ -259,8 +259,9 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -s -m " & wrapSpaces(m.Name) & " -t " & My.Settings.DefaultTimeout
+                                        .Arguments = machinesXml & " -s -m " & wrapSpaces(m.Name) & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
+                                        If myAction.Reboot Then .Arguments &= " -r"
                                     End With
 
                                 Case Action.ActionItems.Sleep
@@ -271,7 +272,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -s1 -m " & wrapSpaces(m.Name) & " -t " & My.Settings.DefaultTimeout
+                                        .Arguments = machinesXml & " -s1 -m " & wrapSpaces(m.Name) & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
                                     End With
 
@@ -283,7 +284,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -s4 -m " & wrapSpaces(m.Name) & " -t " & My.Settings.DefaultTimeout
+                                        .Arguments = machinesXml & " -s4 -m " & wrapSpaces(m.Name) & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
                                     End With
 
@@ -294,8 +295,9 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -s -g " & wrapSpaces(myAction.Name) & " -t " & My.Settings.DefaultTimeout
+                                        .Arguments = machinesXml & " -s -g " & wrapSpaces(myAction.Name) & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
+                                        If myAction.Reboot Then .Arguments &= " -r"
                                     End With
 
                                 Case Action.ActionItems.ShutdownAll
@@ -305,8 +307,9 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -s -all" & " -t " & My.Settings.DefaultTimeout
+                                        .Arguments = machinesXml & " -s -all" & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
+                                        If myAction.Reboot Then .Arguments &= " -r"
                                     End With
 
                                 Case Action.ActionItems.SleepAll
@@ -316,7 +319,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -s1 -all" & " -t " & My.Settings.DefaultTimeout
+                                        .Arguments = machinesXml & " -s1 -all" & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
                                     End With
 
@@ -327,7 +330,7 @@ Namespace Schedule
                                     With actionRun
                                         .Id = myAction.Tag
                                         .Path = executable
-                                        .Arguments = machinesXML & " -s4 -all" & " -t " & My.Settings.DefaultTimeout
+                                        .Arguments = machinesXml & " -s4 -all" & " -t " & My.Settings.DefaultTimeout
                                         If myAction.Force Then .Arguments &= " -f"
                                     End With
 

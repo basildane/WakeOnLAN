@@ -255,6 +255,36 @@
   <data name="&gt;&gt;ActionComboBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="RebootCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RebootCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RebootCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 127</value>
+  </data>
+  <data name="RebootCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 17</value>
+  </data>
+  <data name="RebootCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RebootCheckBox.Text" xml:space="preserve">
+    <value>Reboot after shutdown</value>
+  </data>
+  <data name="&gt;&gt;RebootCheckBox.Name" xml:space="preserve">
+    <value>RebootCheckBox</value>
+  </data>
+  <data name="&gt;&gt;RebootCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RebootCheckBox.Parent" xml:space="preserve">
+    <value>ComputerGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RebootCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="forceCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -262,13 +292,13 @@
     <value>19, 100</value>
   </data>
   <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 17</value>
+    <value>113, 17</value>
   </data>
   <data name="forceCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="forceCheckBox.Text" xml:space="preserve">
-    <value>Force</value>
+    <value>Force apps closed</value>
   </data>
   <data name="&gt;&gt;forceCheckBox.Name" xml:space="preserve">
     <value>forceCheckBox</value>
@@ -280,7 +310,7 @@
     <value>ComputerGroupBox</value>
   </data>
   <data name="&gt;&gt;forceCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="MachinesComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 55</value>
@@ -301,7 +331,7 @@
     <value>ComputerGroupBox</value>
   </data>
   <data name="&gt;&gt;MachinesComboBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="ComputerGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 59</value>
@@ -325,7 +355,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ComputerGroupBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="MessageTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 56</value>
@@ -448,7 +478,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MessageGroupBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="EmailServerTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 98</value>
@@ -715,7 +745,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;EmailGroupBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
+  </data>
+  <data name="RebootAll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RebootAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RebootAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 65</value>
+  </data>
+  <data name="RebootAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 17</value>
+  </data>
+  <data name="RebootAll.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RebootAll.Text" xml:space="preserve">
+    <value>Reboot after shutdown</value>
+  </data>
+  <data name="&gt;&gt;RebootAll.Name" xml:space="preserve">
+    <value>RebootAll</value>
+  </data>
+  <data name="&gt;&gt;RebootAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RebootAll.Parent" xml:space="preserve">
+    <value>AllGroupBox</value>
+  </data>
+  <data name="&gt;&gt;RebootAll.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="forceAll.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -742,7 +802,7 @@
     <value>AllGroupBox</value>
   </data>
   <data name="&gt;&gt;forceAll.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="AllGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 59</value>
@@ -766,7 +826,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AllGroupBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

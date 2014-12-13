@@ -29,6 +29,7 @@ Partial Class EditAction
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ActionComboBox = New System.Windows.Forms.ComboBox()
         Me.ComputerGroupBox = New System.Windows.Forms.GroupBox()
+        Me.RebootCheckBox = New System.Windows.Forms.CheckBox()
         Me.forceCheckBox = New System.Windows.Forms.CheckBox()
         Me.MachinesComboBox = New System.Windows.Forms.ComboBox()
         Me.MessageGroupBox = New System.Windows.Forms.GroupBox()
@@ -49,6 +50,7 @@ Partial Class EditAction
         Me.Label5 = New System.Windows.Forms.Label()
         Me.AllGroupBox = New System.Windows.Forms.GroupBox()
         Me.forceAll = New System.Windows.Forms.CheckBox()
+        Me.RebootAll = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ComputerGroupBox.SuspendLayout()
         Me.MessageGroupBox.SuspendLayout()
@@ -88,11 +90,18 @@ Partial Class EditAction
         '
         'ComputerGroupBox
         '
+        Me.ComputerGroupBox.Controls.Add(Me.RebootCheckBox)
         Me.ComputerGroupBox.Controls.Add(Me.forceCheckBox)
         Me.ComputerGroupBox.Controls.Add(Me.MachinesComboBox)
         resources.ApplyResources(Me.ComputerGroupBox, "ComputerGroupBox")
         Me.ComputerGroupBox.Name = "ComputerGroupBox"
         Me.ComputerGroupBox.TabStop = False
+        '
+        'RebootCheckBox
+        '
+        resources.ApplyResources(Me.RebootCheckBox, "RebootCheckBox")
+        Me.RebootCheckBox.Name = "RebootCheckBox"
+        Me.RebootCheckBox.UseVisualStyleBackColor = True
         '
         'forceCheckBox
         '
@@ -205,6 +214,7 @@ Partial Class EditAction
         '
         'AllGroupBox
         '
+        Me.AllGroupBox.Controls.Add(Me.RebootAll)
         Me.AllGroupBox.Controls.Add(Me.forceAll)
         resources.ApplyResources(Me.AllGroupBox, "AllGroupBox")
         Me.AllGroupBox.Name = "AllGroupBox"
@@ -216,6 +226,12 @@ Partial Class EditAction
         Me.forceAll.Name = "forceAll"
         Me.forceAll.UseVisualStyleBackColor = True
         '
+        'RebootAll
+        '
+        resources.ApplyResources(Me.RebootAll, "RebootAll")
+        Me.RebootAll.Name = "RebootAll"
+        Me.RebootAll.UseVisualStyleBackColor = True
+        '
         'EditAction
         '
         Me.AcceptButton = Me.OK_Button
@@ -225,10 +241,10 @@ Partial Class EditAction
         Me.Controls.Add(Me.ActionComboBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.AllGroupBox)
         Me.Controls.Add(Me.ComputerGroupBox)
         Me.Controls.Add(Me.EmailGroupBox)
         Me.Controls.Add(Me.MessageGroupBox)
-        Me.Controls.Add(Me.AllGroupBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -273,5 +289,7 @@ Partial Class EditAction
     Friend WithEvents forceCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents AllGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents forceAll As System.Windows.Forms.CheckBox
+    Friend WithEvents RebootCheckBox As System.Windows.Forms.CheckBox
+    Friend WithEvents RebootAll As System.Windows.Forms.CheckBox
 
 End Class

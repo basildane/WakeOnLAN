@@ -39,6 +39,15 @@ Public Class EditAction
 
             End Select
 
+            Select Case .Mode
+                Case Action.ActionItems.Shutdown, Action.ActionItems.ShutdownAll, Action.ActionItems.ShutdownGroup
+                    .Reboot = RebootCheckBox.Checked
+
+                Case Else
+                    .Reboot = False
+
+            End Select
+
             .EmailFrom = EmailFromTextBox.Text
             .EmailTo = EmailToTextBox.Text
             .EmailSubject = EmailSubjectTextBox.Text
@@ -145,8 +154,15 @@ Public Class EditAction
                 Case Action.ActionItems.Shutdown, Action.ActionItems.Sleep, Action.ActionItems.Hibernate
                     forceCheckBox.Visible = True
                     forceCheckBox.Checked = _myAction.Force
+                    RebootCheckBox.Checked = _myAction.Reboot
                     ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
+
+                    If _myAction.Mode = Action.ActionItems.Shutdown Then
+                        RebootCheckBox.Visible = True
+                    Else
+                        RebootCheckBox.Visible = False
+                    End If
 
                     Dim names() As String =
                         (From machine As Machine In Machines
@@ -166,6 +182,8 @@ Public Class EditAction
                 Case Action.ActionItems.ShutdownGroup
                     forceCheckBox.Visible = True
                     forceCheckBox.Checked = _myAction.Force
+                    RebootCheckBox.Visible = True
+                    RebootCheckBox.Checked = _myAction.Reboot
                     ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
@@ -182,13 +200,18 @@ Public Class EditAction
                         MachinesComboBox.SelectedIndex = 0
                     End If
 
-                    forceCheckBox.Checked = _myAction.Force
                     AllGroupBox.Hide()
                     MessageGroupBox.Hide()
                     EmailGroupBox.Hide()
 
                 Case Action.ActionItems.ShutdownAll, Action.ActionItems.SleepAll, Action.ActionItems.HibernateAll
                     forceAll.Checked = _myAction.Force
+                    If (_myAction.Mode = Action.ActionItems.ShutdownAll) Then
+                        RebootAll.Visible = True
+                    Else
+                        RebootAll.Visible = False
+                    End If
+                    RebootAll.Checked = _myAction.Reboot
                     ComputerGroupBox.Hide()
                     MessageGroupBox.Hide()
                     EmailGroupBox.Hide()
@@ -219,4 +242,5 @@ Public Class EditAction
     Private Sub MachinesComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles MachinesComboBox.SelectedIndexChanged
         _myAction.Name = MachinesComboBox.Items(MachinesComboBox.SelectedIndex).ToString
     End Sub
+
 End Class
