@@ -18,7 +18,6 @@
 
 Imports System.Net
 Imports System.Net.Sockets
-Imports System.Runtime.Remoting.Messaging
 Imports System.Threading
 
 Public Class Listener
@@ -90,7 +89,6 @@ Public Class Listener
         _gso.Socket.Dispose()
         Application.DoEvents()
         Thread.Sleep(800)
-        '_gso.Socket.Close()
         ReceiveMessages()
     End Sub
 

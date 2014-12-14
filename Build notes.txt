@@ -12,12 +12,12 @@ Do not change upgrade-code.
 Test help.
 
 Release:
-WakeOnLAN.2.10.15
+WakeOnLAN.2.10.16
 Beta:
-WakeOnLAN.2.10.15-50
+WakeOnLAN.2.10.16-00
 
 ---Library---
-WOL.2.10.15
+WOL.2.10.16
 
 Validate Languages
 en
@@ -30,3 +30,6 @@ pt-BR
 ro
 ru
 zh-TW
+
+EventLog source:
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\eventlog\Application\WakeOnLan

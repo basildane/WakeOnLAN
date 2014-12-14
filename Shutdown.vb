@@ -183,7 +183,6 @@ Public Class Shutdown
                 My.Settings.Reboot = shut_reboot.Checked
                 My.Settings.shutdownAction = action
 
-                'TODO: test here
                 Label_Operation.Text = My.Resources.Strings.BeginShutdown
                 For Each item As ListViewItem In From item1 As ListViewItem In ListView1.Items
                                                  Where (item1.SubItems(1).Text = My.Resources.Strings.Pausing)
@@ -263,7 +262,7 @@ Public Class Shutdown
             Next
 
             If (ListView1.Items.Count = 1) And (Not CurrentItem Is Nothing) Then
-                _countdownTime = 0
+                _countdownTime = 1
                 Complete()
             End If
         End If
