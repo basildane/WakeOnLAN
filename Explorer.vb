@@ -641,7 +641,12 @@ Public Class Explorer
     End Sub
 
     Private Sub ScheduleToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ScheduleToolStripMenuItem.Click, ScheduleToolStripButton.Click
-        Schedule.Schedule.Show(Me)
+        Try
+            Schedule.Schedule.Show(Me)
+
+        Catch
+
+        End Try
     End Sub
 
     Private Sub LicenseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LicenseToolStripMenuItem.Click
