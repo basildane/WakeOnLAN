@@ -49,8 +49,8 @@ Partial Class EditAction
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.AllGroupBox = New System.Windows.Forms.GroupBox()
-        Me.forceAll = New System.Windows.Forms.CheckBox()
         Me.RebootAll = New System.Windows.Forms.CheckBox()
+        Me.forceAll = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ComputerGroupBox.SuspendLayout()
         Me.MessageGroupBox.SuspendLayout()
@@ -220,17 +220,17 @@ Partial Class EditAction
         Me.AllGroupBox.Name = "AllGroupBox"
         Me.AllGroupBox.TabStop = False
         '
-        'forceAll
-        '
-        resources.ApplyResources(Me.forceAll, "forceAll")
-        Me.forceAll.Name = "forceAll"
-        Me.forceAll.UseVisualStyleBackColor = True
-        '
         'RebootAll
         '
         resources.ApplyResources(Me.RebootAll, "RebootAll")
         Me.RebootAll.Name = "RebootAll"
         Me.RebootAll.UseVisualStyleBackColor = True
+        '
+        'forceAll
+        '
+        resources.ApplyResources(Me.forceAll, "forceAll")
+        Me.forceAll.Name = "forceAll"
+        Me.forceAll.UseVisualStyleBackColor = True
         '
         'EditAction
         '
@@ -241,10 +241,10 @@ Partial Class EditAction
         Me.Controls.Add(Me.ActionComboBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.AllGroupBox)
         Me.Controls.Add(Me.ComputerGroupBox)
         Me.Controls.Add(Me.EmailGroupBox)
         Me.Controls.Add(Me.MessageGroupBox)
+        Me.Controls.Add(Me.AllGroupBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False

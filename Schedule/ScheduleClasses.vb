@@ -95,8 +95,8 @@ Public Class Trigger
     Public Mode As TriggerModes
     Public StartBoundary As DateTime
     Public Enabled As Boolean = True
-    Public DailyRecurs As Integer = 0
-    Public WeeklyRecurs As Integer = 0
+    Public DailyRecurs As Integer = 1
+    Public WeeklyRecurs As Integer = 1
     Public WeeklyDaysOfWeek As Integer = 0
 
     Public Function ModeString() As String

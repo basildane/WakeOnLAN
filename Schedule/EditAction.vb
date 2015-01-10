@@ -107,6 +107,7 @@ Public Class EditAction
 
                 Case Action.ActionItems.Start
                     forceCheckBox.Visible = False
+                    RebootCheckBox.Visible = False
                     ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
@@ -126,6 +127,7 @@ Public Class EditAction
 
                 Case Action.ActionItems.StartGroup
                     forceCheckBox.Visible = False
+                    RebootCheckBox.Visible = False
                     ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
