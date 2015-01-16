@@ -119,7 +119,7 @@ Public Class Trigger
                 Else
                     For i As Integer = 1 To 7
                         If (CInt(2 ^ (i - 1)) And WeeklyDaysOfWeek) > 0 Then
-                            s &= WeekdayName(i, True) & ","
+                            s &= WeekdayName(i, True, FirstDayOfWeek.Sunday) & ","
                         End If
                     Next
                 End If

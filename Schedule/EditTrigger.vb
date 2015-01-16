@@ -20,22 +20,22 @@ Imports System.Windows.Forms
 
 Public Class EditTrigger
 
-    Dim MyTrigger As Trigger
+    Dim _trigger As Trigger
 
     Public Overloads Function ShowDialog(ByVal owner As Form, ByRef trigger As Trigger) As Windows.Forms.DialogResult
-        MyTrigger = trigger
+        _trigger = trigger
 
         Return MyBase.ShowDialog(owner)
     End Function
 
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
-        With MyTrigger
+    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
+        With _trigger
             Dim i As Integer
 
             .StartBoundary = FormatDateTime(DateTimePickerDate.Value, DateFormat.ShortDate) & " " & FormatDateTime(DateTimePickerTime.Value, DateFormat.ShortTime)
             .Enabled = CheckBoxEnabled.Checked
 
-            Select Case MyTrigger.Mode
+            Select Case _trigger.Mode
                 Case Trigger.TriggerModes.OneTime
 
                 Case Trigger.TriggerModes.Daily
@@ -73,17 +73,17 @@ Public Class EditTrigger
 
         End With
 
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Close()
+        DialogResult = Windows.Forms.DialogResult.OK
+        Close()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Close()
+    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+        DialogResult = Windows.Forms.DialogResult.Cancel
+        Close()
     End Sub
 
-    Private Sub EditTrigger_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Select Case MyTrigger.Mode
+    Private Sub EditTrigger_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+        Select Case _trigger.Mode
             Case Trigger.TriggerModes.OneTime
                 RadioButtonOneTime.Checked = True
 
@@ -98,35 +98,36 @@ Public Class EditTrigger
 
         End Select
 
-        DateTimePickerDate.Value = MyTrigger.StartBoundary
-        DateTimePickerTime.Value = MyTrigger.StartBoundary
-        TextBoxRecurDays.Text = MyTrigger.DailyRecurs
-        TextBoxWeeklyRecurs.Text = MyTrigger.WeeklyRecurs
+        DateTimePickerDate.Value = _trigger.StartBoundary
+        DateTimePickerTime.Value = _trigger.StartBoundary
+        TextBoxRecurDays.Text = _trigger.DailyRecurs
+        TextBoxWeeklyRecurs.Text = _trigger.WeeklyRecurs
 
         For i As Integer = 1 To 7
             Dim c As CheckBox
 
             c = GroupBoxWeekly.Controls("CheckBox" & i)
-            c.Checked = (MyTrigger.WeeklyDaysOfWeek And CInt(2 ^ (i - 1))) > 0
+            c.Text = WeekdayName(i, False, FirstDayOfWeek.Sunday)
+            c.Checked = (_trigger.WeeklyDaysOfWeek And CInt(2 ^ (i - 1))) > 0
         Next
 
-        CheckBoxEnabled.Checked = MyTrigger.Enabled
+        CheckBoxEnabled.Checked = _trigger.Enabled
     End Sub
 
-    Private Sub RadioButtonOneTime_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButtonOneTime.CheckedChanged
-        MyTrigger.Mode = Trigger.TriggerModes.OneTime
+    Private Sub RadioButtonOneTime_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioButtonOneTime.CheckedChanged
+        _trigger.Mode = Trigger.TriggerModes.OneTime
         GroupBoxDaily.Hide()
         GroupBoxWeekly.Hide()
     End Sub
 
-    Private Sub RadioButtonDaily_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButtonDaily.CheckedChanged
-        MyTrigger.Mode = Trigger.TriggerModes.Daily
+    Private Sub RadioButtonDaily_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioButtonDaily.CheckedChanged
+        _trigger.Mode = Trigger.TriggerModes.Daily
         GroupBoxDaily.Show()
         GroupBoxWeekly.Hide()
     End Sub
 
-    Private Sub RadioButtonWeekly_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButtonWeekly.CheckedChanged
-        MyTrigger.Mode = Trigger.TriggerModes.Weekly
+    Private Sub RadioButtonWeekly_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioButtonWeekly.CheckedChanged
+        _trigger.Mode = Trigger.TriggerModes.Weekly
         GroupBoxDaily.Hide()
         GroupBoxWeekly.Show()
     End Sub

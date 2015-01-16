@@ -131,9 +131,7 @@ namespace AutoUpdaterDotNET
 
         private static void BackgroundWorkerDoWork(object sender, DoWorkEventArgs e)
         {
-            int compareResult = 1;
-            string lastcheck = "";
-            int days;
+            int compareResult;
             AutoUpdateEventArgs args = new AutoUpdateEventArgs();
 
             Thread.CurrentThread.CurrentUICulture = CurrentCulture;
@@ -142,47 +140,55 @@ namespace AutoUpdaterDotNET
             var titleAttribute = (AssemblyTitleAttribute)GetAttribute(mainAssembly, typeof(AssemblyTitleAttribute));
             AppTitle = titleAttribute != null ? titleAttribute.Title : mainAssembly.GetName().Name;
             var appCompany = companyAttribute != null ? companyAttribute.Company : "";
-            days = (int)e.Argument;
+            int days = (int)e.Argument;
 
             RegistryLocation = string.Format(@"Software\{0}\{1}\AutoUpdater", appCompany, AppTitle);
 
-            RegistryKey updateKey = Registry.CurrentUser.OpenSubKey(RegistryLocation, true);
-
-            if (updateKey == null)
-            {
-                updateKey = Registry.CurrentUser.CreateSubKey(RegistryLocation);
-            }
+            RegistryKey updateKey = Registry.CurrentUser.OpenSubKey(RegistryLocation, true) ??
+                                    Registry.CurrentUser.CreateSubKey(RegistryLocation);
 
             object remindLaterTime = updateKey.GetValue("remindlater");
             if (remindLaterTime == null && days > 0)
             {
-                lastcheck = updateKey.GetValue("lastcheck", "").ToString();
-                if (lastcheck != "")
+                string lastcheck = updateKey.GetValue("lastcheck", "").ToString();
+                if (!String.IsNullOrEmpty(lastcheck))
                 {
-                    DateTime lastcheckDate = Convert.ToDateTime(lastcheck, CultureInfo.CreateSpecificCulture("en-US"));
-                    compareResult = DateTime.Compare(DateTime.Now, lastcheckDate.AddDays(days));
-
-                    if (compareResult < 0)
+                    try
                     {
-                        args.Status = AutoUpdateEventArgs.StatusCodes.delayed;
-                        args.Text = string.Format(Strings.sLastCheck, lastcheckDate.ToString("D", CurrentCulture));
-                        OnUpdateStatus(args);
-                        return;
+                        DateTime lastcheckDate = Convert.ToDateTime(lastcheck, CultureInfo.InvariantCulture);
+                        compareResult = DateTime.Compare(DateTime.Now, lastcheckDate.AddDays(days));
+
+                        if (compareResult < 0)
+                        {
+                            args.Status = AutoUpdateEventArgs.StatusCodes.delayed;
+                            args.Text = string.Format(Strings.sLastCheck, lastcheckDate.ToString("D", CurrentCulture));
+                            OnUpdateStatus(args);
+                            return;
+                        }
+                    }
+                    catch (Exception)
+                    {
                     }
                 }
             }
 
             if (remindLaterTime != null && days > 0)
             {
-                DateTime remindLater = Convert.ToDateTime(remindLaterTime.ToString(), CultureInfo.CreateSpecificCulture("en-US"));
-
-                compareResult = DateTime.Compare(DateTime.Now, remindLater);
-
-                if (compareResult < 0)
+                try
                 {
-                    var updateForm = new UpdateForm(true);
-                    updateForm.SetTimer(remindLater);
-                    return;
+                    DateTime remindLater = Convert.ToDateTime(remindLaterTime.ToString(), CultureInfo.InvariantCulture);
+
+                    compareResult = DateTime.Compare(DateTime.Now, remindLater);
+
+                    if (compareResult < 0)
+                    {
+                        var updateForm = new UpdateForm(true);
+                        updateForm.SetTimer(remindLater);
+                        return;
+                    }
+                }
+                catch (Exception)
+                {
                 }
             }
 
@@ -274,9 +280,9 @@ namespace AutoUpdaterDotNET
                 }
             }
 
-            updateKey.SetValue("lastcheck", DateTime.Now.ToString());
+            updateKey.SetValue("lastcheck", DateTime.Now.ToString(CultureInfo.InvariantCulture));
             updateKey.Close();
-            runBrowserThread(versionURL);
+            RunBrowserThread(versionURL);
 
 #if DEBUG
             if (days == -1)
@@ -300,24 +306,21 @@ namespace AutoUpdaterDotNET
                 return;
             }
 
-            if (CurrentVersion > InstalledVersion)
+            if (CurrentVersion <= InstalledVersion) return;
+            args.Status = AutoUpdateEventArgs.StatusCodes.updateAvailable;
+            args.Text = Strings.sUpdateAvailable;
+            OnUpdateStatus(args);
+
+            if (days == 0)
             {
-                args.Status = AutoUpdateEventArgs.StatusCodes.updateAvailable;
-                args.Text = Strings.sUpdateAvailable;
-                OnUpdateStatus(args);
-
-                if (days == 0)
-                {
-                    var thread = new Thread(ShowUI);
-                    thread.CurrentCulture = thread.CurrentUICulture = CurrentCulture ?? Application.CurrentCulture;
-                    thread.SetApartmentState(ApartmentState.STA);
-                    thread.Start();
-                }
+                var thread = new Thread(ShowUI);
+                thread.CurrentCulture = thread.CurrentUICulture = CurrentCulture ?? Application.CurrentCulture;
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
             }
-
         }
 
-        private static void runBrowserThread(String url)
+        private static void RunBrowserThread(String url)
         {
             var th = new Thread(() =>
             {
