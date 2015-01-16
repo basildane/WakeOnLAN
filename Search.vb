@@ -51,6 +51,7 @@ Public Class Search
             machine.Name = listViewItem.SubItems(0).Text
             machine.MAC = listViewItem.SubItems(4).Text
             machine.IP = listViewItem.SubItems(3).Text
+            machine.Broadcast = IPAddress.Broadcast.ToString()
             machine.Netbios = listViewItem.SubItems(0).Text
             machine.Emergency = True
             machine.UDPPort = 9
