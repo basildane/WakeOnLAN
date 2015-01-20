@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Wake On LAN library")> 
 <Assembly: AssemblyCompany("Aquila Technology")> 
 <Assembly: AssemblyProduct("WOL")> 
-<Assembly: AssemblyCopyright("Copyright (c) 2004 - 2014, Aquila Technology")> 
+<Assembly: AssemblyCopyright("Copyright (c) 2004 - 2015, Aquila Technology")> 
 <Assembly: AssemblyTrademark("All rights reserved.")> 
 
 <Assembly: ComVisible(False)>
