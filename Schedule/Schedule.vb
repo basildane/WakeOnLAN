@@ -27,8 +27,10 @@ Namespace Schedule
         Dim _taskFolder As ITaskFolder
 
         Private Sub Schedule_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
-            Location = My.Settings.schedulerWindowLocation
-            Size = My.Settings.schedulerWindowSize
+            If (My.Settings.schedulerWindowLocation.X > 0 And My.Settings.schedulerWindowLocation.Y > 0 And My.Settings.schedulerWindowLocation.X < My.Computer.Screen.WorkingArea.Right And My.Settings.schedulerWindowLocation.Y < My.Computer.Screen.WorkingArea.Height) Then
+                Location = My.Settings.schedulerWindowLocation
+                Size = My.Settings.schedulerWindowSize
+            End If
 
             GetListViewState(ListViewSchedule, My.Settings.schedulerColumns)
 
@@ -56,9 +58,11 @@ Namespace Schedule
         End Sub
 
         Private Sub Schedule_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-            My.Settings.schedulerColumns = SaveListViewState(ListViewSchedule)
-            My.Settings.schedulerWindowLocation = Location
-            My.Settings.schedulerWindowSize = Size
+            If WindowState = FormWindowState.Normal Then
+                My.Settings.schedulerColumns = SaveListViewState(ListViewSchedule)
+                My.Settings.schedulerWindowLocation = Location
+                My.Settings.schedulerWindowSize = Size
+            End If
         End Sub
 
         Private Sub RefreshList()
