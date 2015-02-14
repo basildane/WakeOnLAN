@@ -22,9 +22,11 @@ Imports AlphaWindow
 Imports AutoUpdaterDotNET
 Imports System.Globalization
 Imports System.Linq
+Imports System.ComponentModel
 
 Public Class Explorer
     Private ReadOnly _lvwColumnSorter As New ListViewColumnSorter()
+    Dim WithEvents _historyBackgroundworker As New BackgroundWorker()
 
     Public Sub New()
 
@@ -748,11 +750,13 @@ Public Class Explorer
     End Sub
 
     Private Sub EventLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EventLogToolStripMenuItem.Click, EventLogToolStripButton.Click
-        Try
-            History.Show(Me)
-
-        Catch ex As Exception
-
-        End Try
+        If (Not _historyBackgroundworker.IsBusy) Then
+            _historyBackgroundworker.RunWorkerAsync()
+        End If
     End Sub
+
+    Private Sub HistoryBackgroundworker_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _historyBackgroundworker.DoWork
+        History.ShowDialog()
+    End Sub
+
 End Class
