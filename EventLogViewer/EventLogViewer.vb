@@ -181,14 +181,12 @@ Public Class EventLogViewer
             End If
 
             ' Update the text of the bbuttons 
-            btnErrors.Text = numErrors.ToString + " Errors"
-            btnWarnings.Text = numWarnings.ToString + " Warnings"
-            btnMessages.Text = numMessages.ToString + " Messages"
-
-            ' Update the tooltip text 
-            btnErrors.ToolTipText = numErrors.ToString + " Errors"
-            btnWarnings.ToolTipText = numWarnings.ToString + " Warnings"
-            btnMessages.ToolTipText = numMessages.ToString + " Messages"
+            btnErrors.Text = String.Format(My.Resources.Strings.Errors, numErrors)
+            btnErrors.ToolTipText = btnErrors.Text
+            btnWarnings.Text = String.Format(My.Resources.Strings.Warnings, numWarnings)
+            btnWarnings.ToolTipText = btnWarnings.Text
+            btnMessages.Text = String.Format(My.Resources.Strings.Messages, numMessages)
+            btnMessages.ToolTipText = btnMessages.Text
         End If
     End Sub
 
@@ -259,6 +257,13 @@ Public Class EventLogViewer
 
 #Region " Event Handlers "
     Public Sub Populate()
+        btnErrors.Text = String.Format(My.Resources.Strings.Errors, numErrors)
+        btnErrors.ToolTipText = btnErrors.Text
+        btnWarnings.Text = String.Format(My.Resources.Strings.Warnings, numWarnings)
+        btnWarnings.ToolTipText = btnWarnings.Text
+        btnMessages.Text = String.Format(My.Resources.Strings.Messages, numMessages)
+        btnMessages.ToolTipText = btnMessages.Text
+
         DataGridView1.SuspendLayout()
         Application.UseWaitCursor = True
         Application.DoEvents()
@@ -333,12 +338,12 @@ Public Class EventLogViewer
             Next
 
             ' Update the buttons 
-            btnErrors.Text = numErrors.ToString + " Errors"
-            btnErrors.ToolTipText = numErrors.ToString + " Errors"
-            btnWarnings.Text = numWarnings.ToString + " Warnings"
-            btnWarnings.ToolTipText = numWarnings.ToString + " Warnings"
-            btnMessages.Text = numMessages.ToString + " Messages"
-            btnMessages.ToolTipText = numMessages.ToString + " Messages"
+            btnErrors.Text = String.Format(My.Resources.Strings.Errors, numErrors)
+            btnErrors.ToolTipText = btnErrors.Text
+            btnWarnings.Text = String.Format(My.Resources.Strings.Warnings, numWarnings)
+            btnWarnings.ToolTipText = btnWarnings.Text
+            btnMessages.Text = String.Format(My.Resources.Strings.Messages, numMessages)
+            btnMessages.ToolTipText = btnMessages.Text
 
             ' Create a binding source that will be used to filter the dataset
             bs = New BindingSource(ds, "Events")
@@ -348,12 +353,23 @@ Public Class EventLogViewer
 
             ' Auto size all columns except the message column
             For Each col As DataGridViewColumn In DataGridView1.Columns
-                If col.Name <> "Message" Then
-                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader
-                End If
                 If col.Name = "Date/Time" Then
+                    col.HeaderText = My.Resources.Strings.col_Date
                     col.ValueType = GetType(DateTime)
                     DataGridView1.Sort(col, System.ComponentModel.ListSortDirection.Descending)
+                End If
+                If col.Name = "Type" Then
+                    col.HeaderText = My.Resources.Strings.col_Type
+                End If
+                If col.Name = "EventID" Then
+                    col.HeaderText = My.Resources.Strings.col_EventID
+                End If
+                If col.Name = "Message" Then
+                    col.HeaderText = My.Resources.Strings.col_Message
+                End If
+                If col.Name <> "Message" Then
+                    'col.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
                 End If
             Next
 

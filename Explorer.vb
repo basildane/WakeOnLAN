@@ -23,6 +23,7 @@ Imports AutoUpdaterDotNET
 Imports System.Globalization
 Imports System.Linq
 Imports System.ComponentModel
+Imports System.Threading
 
 Public Class Explorer
     Private ReadOnly _lvwColumnSorter As New ListViewColumnSorter()
@@ -751,11 +752,12 @@ Public Class Explorer
 
     Private Sub EventLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EventLogToolStripMenuItem.Click, EventLogToolStripButton.Click
         If (Not _historyBackgroundworker.IsBusy) Then
-            _historyBackgroundworker.RunWorkerAsync()
+            _historyBackgroundworker.RunWorkerAsync(Thread.CurrentThread.CurrentUICulture)
         End If
     End Sub
 
     Private Sub HistoryBackgroundworker_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _historyBackgroundworker.DoWork
+        Thread.CurrentThread.CurrentUICulture = e.Argument
         History.ShowDialog()
     End Sub
 

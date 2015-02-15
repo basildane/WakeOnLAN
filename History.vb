@@ -15,8 +15,11 @@
 '
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
+Imports System.Globalization
 
 Public Class History
+
+    Public Property cultureInfo() As CultureInfo
 
     Private Sub History_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Dispose()
@@ -26,4 +29,5 @@ Public Class History
         EventLogViewer1.Source = My.Application.Info.ProductName
         EventLogViewer1.Populate()
     End Sub
+
 End Class

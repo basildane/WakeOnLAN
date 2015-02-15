@@ -123,17 +123,94 @@
   <data name="ColumnHeader_Name.Text" xml:space="preserve">
     <value>Naam</value>
   </data>
+  <data name="LabelHeader.Error" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LabelHeader.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LabelHeader.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="LabelHeader.Text" xml:space="preserve">
     <value>WakeOnLAN pakketten ontvangen...</value>
+  </data>
+  <data name="ButtonSet.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ButtonSet.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="ButtonSet.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ButtonSet.Text" xml:space="preserve">
+    <value>Zetten</value>
+  </data>
+  <data name="RegExTextBoxPort.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegExTextBoxPort.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="RegExTextBoxPort.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="Label1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lUDPport.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lUDPport.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lUDPport.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="lUDPport.Text" xml:space="preserve">
     <value>Luiteren op:</value>
   </data>
+  <data name="GroupBox1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="GroupBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="GroupBox1.Text" xml:space="preserve">
     <value>Netwerkinstellingen</value>
   </data>
+  <data name="Button_clear.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Button_clear.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="Button_clear.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="Button_clear.Text" xml:space="preserve">
     <value>Wissen</value>
+  </data>
+  <data name="PictureBox1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PictureBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="PictureBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -305,12 +382,21 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Luisteraar</value>
   </data>
+  <data name="ListView1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListView1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="ListView1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="ImageList_Large.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACi
-        JQAAAk1TRnQBSQFMAwEBAAH8AQAB/AEAATABAAEwAQAE/wEZAQAI/wFCAU0BNgcAATYDAAEoAwABwAMA
+        JQAAAk1TRnQBSQFMAwEBAAEEAQEBBAEBATABAAEwAQAE/wEZAQAI/wFCAU0BNgcAATYDAAEoAwABwAMA
         ATADAAEBAQABGAYAAWz/AP8AbwAD/wH0Ae8B7AHqAdcBzAHnAdABwwHnAdABwgHrAdkB0AH4AfUB8wYA
         AfMC8QHZAdABzwHJAbsBuAG+AasBqAG3AaABnQGwAZcBlAGtAZIBjgGtAZIBjgGuAZMBjwGzAZsBlwG6
         AaUBogHDAbIBrwHSAcYBxAHlAeAB3wH6Avn/APYAAfMB7QHpAd4BrAGNAdoBiQFbAd8BkwFrAeABmQFz

@@ -99,7 +99,7 @@ Namespace My
         ''' <remarks></remarks>
         Private Sub ConfigureCulture()
 #If DEBUG Then
-            'My.Settings.Language = "zh-TW"
+            My.Settings.Language = "nl-NL"
 #End If
             If String.IsNullOrEmpty(Settings.Language) Then Settings.Language = "en-US"
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)

@@ -37,7 +37,7 @@ Partial Class SafeMode
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(341, 64)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "You're holding the CTRL key. Do you want to start WOL in safe mode?"
+        Me.Label1.Text = "Je hebt de CTRL-toets ingedrukt. Wil je WOL in veilige modus starten?"
         '
         'Panel1
         '

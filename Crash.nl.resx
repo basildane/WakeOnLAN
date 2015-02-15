@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ErrorGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Error.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 20</value>
   </data>
-  <data name="MessageGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Message.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lTitle.Text" xml:space="preserve">
+    <value>Er is een onbekende fout opgetreden</value>
   </data>
-  <data name="NotFoundGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\NotFound.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Foutbericht</value>
   </data>
-  <data name="WarningGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Warning.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Dump</value>
   </data>
 </root>

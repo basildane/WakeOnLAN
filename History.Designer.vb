@@ -28,27 +28,21 @@ Partial Class History
         '
         'EventLogViewer1
         '
-        Me.EventLogViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        resources.ApplyResources(Me.EventLogViewer1, "EventLogViewer1")
         Me.EventLogViewer1.IsCategoryVisible = False
         Me.EventLogViewer1.IsEventIDVisible = True
         Me.EventLogViewer1.IsSourceVisible = False
-        Me.EventLogViewer1.Location = New System.Drawing.Point(0, 0)
         Me.EventLogViewer1.Log = "Application"
         Me.EventLogViewer1.Name = "EventLogViewer1"
-        Me.EventLogViewer1.Size = New System.Drawing.Size(1034, 612)
         Me.EventLogViewer1.Source = Nothing
-        Me.EventLogViewer1.TabIndex = 0
         '
         'History
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1034, 612)
         Me.Controls.Add(Me.EventLogViewer1)
         Me.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "History"
-        Me.Text = "WOL History"
         Me.ResumeLayout(False)
 
     End Sub
