@@ -127,9 +127,6 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Elevate privilege</value>
-  </data>
   <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
     <value>PictureBox1</value>
   </data>
@@ -143,11 +140,8 @@
   <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 30</value>
-  </data>
-  <data name="&gt;&gt;btnElevate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Elevate</value>
   </data>
   <data name="btnElevate.Text" xml:space="preserve">
     <value>OK</value>
@@ -171,8 +165,14 @@
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
   <data name="btnElevate.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 209</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -221,7 +221,7 @@
         XTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriXeW/h/sYH6AdFD6UeVjxS
         fNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2dmnafvvF05dOJZ+nPFmYKf5X+
         tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/MF72Rf3P4LeNt37vwd5MLWe+x7ys/
-        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAACw8BkvkDpQAASexJREFUeF7tfQd4VNX2
+        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDgAACw4BQL7hQQAASexJREFUeF7tfQd4VNX2
         fbAXREDs+mxPsStIVRCwIs3us9C79N6LipQgvffeIYT0EEgoIRA6BJIAofeuYG+//V9rn3tmbsJ1ZCwP
         3l/u960vM3cmycxda7dz9jk3REQu4R8Mz5OX8M+B58lL+OfA8+Ql/HPgeTJYVKtWLaRWrVohH3/8sf6s
         Xr16SNWqVUNq164V0qBBg5B27drrc76vYcOGIT179tLnH3/cSM/VrFkzpEuXrvi9aiFt2rTV1/g7/Ds1
@@ -540,9 +540,6 @@
         58Dz5CX8UyAh/w8spCqdMfbqpwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Elevate</value>
-  </data>
   <data name="btnElevate.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 26</value>
   </data>
@@ -570,11 +567,14 @@
   <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;btnElevate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 30</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Elevate privilege</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

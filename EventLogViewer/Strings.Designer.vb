@@ -101,7 +101,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to {0} Errors EN.
+        '''  Looks up a localized string similar to {0} Errors.
         '''</summary>
         Friend Shared ReadOnly Property Errors() As String
             Get

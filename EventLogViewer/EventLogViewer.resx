@@ -139,15 +139,8 @@
   <data name="&gt;&gt;FindLabel.Name" xml:space="preserve">
     <value>FindLabel</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnErrors.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
   <data name="NotFoundLabel.Text" xml:space="preserve">
     <value>No events found</value>
-  </data>
-  <data name="FindLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 20</value>
   </data>
   <data name="&gt;&gt;ToolStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -155,11 +148,15 @@
   <data name="&gt;&gt;DataGridView1.Name" xml:space="preserve">
     <value>DataGridView1</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="DataGridView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;SourceLabel.Name" xml:space="preserve">
     <value>SourceLabel</value>
+  </data>
+  <data name="ButtonSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 23</value>
   </data>
   <data name="btnWarnings.Text" xml:space="preserve">
     <value>0 Warnings</value>
@@ -173,8 +170,8 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="SourceLabel.Text" xml:space="preserve">
-    <value>Source:</value>
+  <data name="&gt;&gt;FindLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnErrors.ToolTipText" xml:space="preserve">
     <value>0 Errors</value>
@@ -189,9 +186,6 @@
   <data name="&gt;&gt;NotFoundLabel.Name" xml:space="preserve">
     <value>NotFoundLabel</value>
   </data>
-  <data name="&gt;&gt;FindLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;btnWarnings.Name" xml:space="preserve">
     <value>btnWarnings</value>
   </data>
@@ -201,14 +195,17 @@
   <data name="ToolStrip1.Text" xml:space="preserve">
     <value>ToolStrip1</value>
   </data>
-  <data name="SourceSeparator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 23</value>
+  <data name="&gt;&gt;btnWarnings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnWarnings.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 20</value>
   </data>
   <data name="&gt;&gt;SourceLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMessages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="SourceLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
@@ -231,8 +228,8 @@
   <data name="ToolStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 1, 1, 1</value>
   </data>
-  <data name="ButtonSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 23</value>
+  <data name="FindLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 20</value>
   </data>
   <data name="btnMessages.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 20</value>
@@ -249,11 +246,11 @@
   <data name="&gt;&gt;EventImage.Name" xml:space="preserve">
     <value>EventImage</value>
   </data>
-  <data name="btnWarnings.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
   <data name="NotFoundLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="ButtonSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 23</value>
   </data>
   <data name="DataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -270,9 +267,6 @@
   <data name="NotFoundLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 20</value>
   </data>
-  <data name="&gt;&gt;btnWarnings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;SourceCombo.Name" xml:space="preserve">
     <value>SourceCombo</value>
   </data>
@@ -282,14 +276,11 @@
   <data name="btnMessages.Text" xml:space="preserve">
     <value>0 Messages</value>
   </data>
-  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>728, 25</value>
-  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnMessages.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>728, 25</value>
   </data>
   <data name="&gt;&gt;ButtonSeparator2.Name" xml:space="preserve">
     <value>ButtonSeparator2</value>
@@ -299,6 +290,9 @@
   </data>
   <data name="FindText.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 23</value>
+  </data>
+  <data name="SourceLabel.Text" xml:space="preserve">
+    <value>Source:</value>
   </data>
   <data name="&gt;&gt;btnErrors.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -321,14 +315,20 @@
   <data name="&gt;&gt;btnErrors.Name" xml:space="preserve">
     <value>btnErrors</value>
   </data>
+  <data name="SourceSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 23</value>
+  </data>
+  <data name="FindLabel.Text" xml:space="preserve">
+    <value>Find:</value>
+  </data>
   <data name="btnErrors.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="btnMessages.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="ButtonSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 23</value>
+  <data name="btnWarnings.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;EventImage.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -339,8 +339,8 @@
   <data name="btnWarnings.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="FindLabel.Text" xml:space="preserve">
-    <value>Find:</value>
+  <data name="btnErrors.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EventLogViewer</value>

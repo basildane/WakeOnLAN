@@ -50,20 +50,20 @@ Partial Class CalcSubnet
         '
         'IpBroadcast
         '
-        resources.ApplyResources(Me.IpBroadcast, "IpBroadcast")
         Me.IpBroadcast.BackColor = System.Drawing.SystemColors.Window
+        resources.ApplyResources(Me.IpBroadcast, "IpBroadcast")
         Me.IpBroadcast.Name = "IpBroadcast"
         '
         'IpSubnet
         '
-        resources.ApplyResources(Me.IpSubnet, "IpSubnet")
         Me.IpSubnet.BackColor = System.Drawing.SystemColors.Window
+        resources.ApplyResources(Me.IpSubnet, "IpSubnet")
         Me.IpSubnet.Name = "IpSubnet"
         '
         'IpIP
         '
-        resources.ApplyResources(Me.IpIP, "IpIP")
         Me.IpIP.BackColor = System.Drawing.SystemColors.Window
+        resources.ApplyResources(Me.IpIP, "IpIP")
         Me.IpIP.Name = "IpIP"
         '
         'lIP

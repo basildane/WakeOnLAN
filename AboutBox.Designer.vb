@@ -73,11 +73,11 @@ Partial Class AboutBox
         '
         'Panel1
         '
+        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.BackColor = System.Drawing.SystemColors.Window
         Me.Panel1.Controls.Add(Me.LogoPictureBox)
         Me.Panel1.Controls.Add(Me.LabelProductName)
         Me.Panel1.Controls.Add(Me.LabelCopyright)
-        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
         'label4
@@ -87,23 +87,23 @@ Partial Class AboutBox
         '
         'ListBox1
         '
+        resources.ApplyResources(Me.ListBox1, "ListBox1")
         Me.ListBox1.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ListBox1.FormattingEnabled = True
-        resources.ApplyResources(Me.ListBox1, "ListBox1")
         Me.ListBox1.Name = "ListBox1"
         '
         'GroupBoxUpdates
         '
+        resources.ApplyResources(Me.GroupBoxUpdates, "GroupBoxUpdates")
         Me.GroupBoxUpdates.Controls.Add(Me.pbUpdate)
         Me.GroupBoxUpdates.Controls.Add(Me.lAutomaticUpdate)
-        resources.ApplyResources(Me.GroupBoxUpdates, "GroupBoxUpdates")
         Me.GroupBoxUpdates.Name = "GroupBoxUpdates"
         Me.GroupBoxUpdates.TabStop = False
         '
         'pbUpdate
         '
-        Me.pbUpdate.Image = Global.WakeOnLan.My.Resources.Resources.system_software_update
         resources.ApplyResources(Me.pbUpdate, "pbUpdate")
+        Me.pbUpdate.Image = Global.WakeOnLan.My.Resources.Resources.system_software_update
         Me.pbUpdate.Name = "pbUpdate"
         Me.pbUpdate.TabStop = False
         '
@@ -124,13 +124,13 @@ Partial Class AboutBox
         '
         'GroupBox1
         '
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Controls.Add(Me.LinkLabel2)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.LabelVersion)
         Me.GroupBox1.Controls.Add(Me.ListBox1)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.LinkLabel1)
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         '
