@@ -37,6 +37,10 @@
 			<Name>AutoUpdater.NET</Name>
 			<Project>{FB9E7E6B-B19F-4F37-A708-2996190CEF13}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\EventLogViewer\EventLogViewer.vbproj">
+			<Name>EventLogViewer</Name>
+			<Project>{2026F255-7A75-41C6-BA50-4B7738A313CE}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\WakeOnLan.vbproj">
 			<Name>WakeOnLan</Name>
 			<Project>{0062DCB9-BD1C-4E87-9267-E373B23FFF37}</Project>

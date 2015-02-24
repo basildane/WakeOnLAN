@@ -17,14 +17,14 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 Imports System.ComponentModel
 Imports System.Windows.Forms
-
-'Namespace OptionProperties
+Imports Microsoft.Win32
 
 Public Class Options
     ReadOnly p As New OptionProperties
     Dim _savedDbPath As String
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
+        Dim regKey As Microsoft.Win32.RegistryKey
 
         With p
             My.Settings.DefaultTimeout = .Delay
@@ -42,6 +42,16 @@ Public Class Options
         DialogResult = Windows.Forms.DialogResult.OK
 
         If _savedDbPath <> My.Settings.dbPath Then
+            Try
+                regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", True)
+                regKey.SetValue("Database", IO.Path.GetDirectoryName(My.Settings.dbPath), RegistryValueKind.String)
+                regKey.Close()
+
+            Catch ex As Exception
+                MessageBox.Show(Me, ex.Message, "Save database path")
+
+            End Try
+
             Application.Restart()
         End If
 

@@ -49,9 +49,10 @@ Namespace My
             If (Control.ModifierKeys = Keys.Control) Then
                 SafeMode.ShowDialog()
             End If
-            ConfigureCulture()
+
             singleInstance()
             upgradeSettings()
+            ConfigureCulture()
 
             version = System.String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
 
@@ -99,7 +100,7 @@ Namespace My
         ''' <remarks></remarks>
         Private Sub ConfigureCulture()
 #If DEBUG Then
-            My.Settings.Language = "nl-NL"
+            'My.Settings.Language = "nl-NL"
 #End If
             If String.IsNullOrEmpty(Settings.Language) Then Settings.Language = "en-US"
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
@@ -133,22 +134,34 @@ Namespace My
         Private Sub upgradeSettings()
             Dim regKey As Microsoft.Win32.RegistryKey
             Dim database As String
+            Dim newPath As String
+            Dim filename As String
 
             If Settings.needUpgrade Then
                 Settings.Upgrade()
                 Settings.needUpgrade = False
-
-                Try
-                    regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
-                    database = regKey.GetValue("Database", IO.Directory.GetParent(Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, Microsoft.Win32.RegistryValueOptions.None)
-                    Settings.dbPath = IO.Path.Combine(database, "machines.xml")
-
-                Catch ex As Exception
-
-                End Try
-
                 Settings.Save()
             End If
+
+            Try
+                regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
+                database = regKey.GetValue("Database", IO.Directory.GetParent(Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, Microsoft.Win32.RegistryValueOptions.None)
+                regKey.Close()
+                filename = IO.Path.GetFileName(Settings.dbPath)
+                If (String.IsNullOrEmpty(filename)) Then
+                    filename = "machines.xml"
+                End If
+                newPath = IO.Path.Combine(database, filename)
+
+                If (Settings.dbPath <> newPath) Then
+                    Settings.dbPath = newPath
+                    Settings.Save()
+                End If
+
+            Catch ex As Exception
+
+            End Try
+
         End Sub
     End Class
 

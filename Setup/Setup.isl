@@ -267,6 +267,10 @@
 		<row><td>NewBinary2</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\New.ibd</td></row>
 		<row><td>NewBinary20</td><td/><td>C:\Projects\WakeOnLan\Documentation\Welcome.jpg</td></row>
 		<row><td>NewBinary21</td><td/><td>C:\Projects\WakeOnLan\Documentation\banner.jpg</td></row>
+		<row><td>NewBinary22</td><td/><td>C:\Projects\WakeOnLan\Resources\SetDatabasePath.vbs</td></row>
+		<row><td>NewBinary23</td><td/><td>C:\Projects\WakeOnLan\Resources\SetDatabasePath.vbs</td></row>
+		<row><td>NewBinary24</td><td/><td>C:\Projects\WakeOnLan\Resources\SetDatabasePath.vbs</td></row>
+		<row><td>NewBinary25</td><td/><td>C:\Projects\WakeOnLan\Resources\SetDatabasePath.vbs</td></row>
 		<row><td>NewBinary3</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\Up.ibd</td></row>
 		<row><td>NewBinary4</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\WarningIcon.ibd</td></row>
 		<row><td>NewBinary5</td><td/><td>C:\Projects\WakeOnLan\Documentation\Welcome.jpg</td></row>
@@ -345,6 +349,8 @@
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>AutoUpdater.NET.Localized_resources</td><td>{CCD221CD-5AA6-4560-9E6D-E5BBF4CF2CC8}</td><td>INSTALLDIR</td><td>2</td><td/><td>autoupdater.net.localized_re</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>AutoUpdater.NET.Primary_output</td><td>{BC80EFAE-2F4E-4C02-8181-AE4CD6616E7B}</td><td>INSTALLDIR</td><td>2</td><td/><td>autoupdater.net.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>EventLogViewer.Localized_resources</td><td>{00E14F54-09D8-4A8C-A154-ABEE73380EA3}</td><td>INSTALLDIR</td><td>2</td><td/><td>eventlogviewer.localized_res</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>EventLogViewer.Primary_output</td><td>{BB7C66DA-90ED-432F-9629-6002F9807A0B}</td><td>INSTALLDIR</td><td>2</td><td/><td>eventlogviewer.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_LocalTag</td><td>{F6DC2A6C-9772-4B35-851A-DCFA53571CBC}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_SystemTag</td><td>{0F40450E-7749-4447-96C9-FEF67F29FCCC}</td><td>CommonAppDataFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{6BE34C25-D7E7-40EE-9772-C20464B260D5}</td><td>HELP</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1043,10 +1049,12 @@
 		<row><td>SetupCompleteError</td><td>Finish</td><td>DoAction</td><td>CleanUp</td><td>ISSCRIPTRUNNING="1"</td><td>1</td></row>
 		<row><td>SetupCompleteError</td><td>Finish</td><td>DoAction</td><td>ShowMsiLog</td><td>MsiLogFileLocation And (ISSHOWMSILOG="1")</td><td>3</td></row>
 		<row><td>SetupCompleteError</td><td>Finish</td><td>EndDialog</td><td>Exit</td><td>1</td><td>2</td></row>
-		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>CleanUp</td><td>ISSCRIPTRUNNING="1"</td><td>1</td></row>
-		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>LAUNCHPROGRAM And PROGRAMFILETOLAUNCHATEND &lt;&gt; "" And NOT Installed</td><td>2</td></row>
-		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>ShowMsiLog</td><td>MsiLogFileLocation And (ISSHOWMSILOG="1") And NOT ISENABLEDWUSFINISHDIALOG</td><td>7</td></row>
-		<row><td>SetupCompleteSuccess</td><td>OK</td><td>EndDialog</td><td>Exit</td><td>1</td><td>3</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>CleanUp</td><td>ISSCRIPTRUNNING="1"</td><td>5</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>LAUNCHPROGRAM And PROGRAMFILETOLAUNCHATEND &lt;&gt; "" And NOT Installed</td><td>6</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>NewCustomAction2</td><td>Not Installed</td><td>3</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>NewCustomAction3</td><td>Installed</td><td>1</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>ShowMsiLog</td><td>MsiLogFileLocation And (ISSHOWMSILOG="1") And NOT ISENABLEDWUSFINISHDIALOG</td><td>11</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>EndDialog</td><td>Exit</td><td>1</td><td>7</td></row>
 		<row><td>SetupError</td><td>A</td><td>EndDialog</td><td>ErrorAbort</td><td>1</td><td>0</td></row>
 		<row><td>SetupError</td><td>C</td><td>EndDialog</td><td>ErrorCancel</td><td>1</td><td>0</td></row>
 		<row><td>SetupError</td><td>I</td><td>EndDialog</td><td>ErrorIgnore</td><td>1</td><td>0</td></row>
@@ -1105,8 +1113,12 @@
 		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
 		<row><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>1</td><td>NewBinary19</td><td>LaunchProgram</td><td/><td/></row>
+		<row><td>NewCustomAction1</td><td>6</td><td>NewBinary23</td><td>setdatabase</td><td/><td/></row>
+		<row><td>NewCustomAction2</td><td>6</td><td>NewBinary24</td><td>writedatabase</td><td/><td/></row>
+		<row><td>NewCustomAction3</td><td>6</td><td>NewBinary25</td><td>writedatabase</td><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
 		<row><td>SetAllUsersProfileNT</td><td>51</td><td>ALLUSERSPROFILE</td><td>[%SystemRoot]\Profiles\All Users</td><td/><td/></row>
+		<row><td>SetDatabasePath</td><td>6</td><td>NewBinary22</td><td>setdatabase</td><td/><td/></row>
 		<row><td>ShowMsiLog</td><td>226</td><td>SystemFolder</td><td>[SystemFolder]notepad.exe "[MsiLogFileLocation]"</td><td/><td>Shows Property-driven MSI Log</td></row>
 		<row><td>setAllUsersProfile2K</td><td>51</td><td>ALLUSERSPROFILE</td><td>[%ALLUSERSPROFILE]</td><td/><td/></row>
 		<row><td>setUserProfileNT</td><td>51</td><td>USERPROFILE</td><td>[%USERPROFILE]</td><td/><td/></row>
@@ -1924,6 +1936,8 @@
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>AutoUpdater.NET.Localized_resources</td></row>
 		<row><td>AlwaysInstall</td><td>AutoUpdater.NET.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>EventLogViewer.Localized_resources</td></row>
+		<row><td>AlwaysInstall</td><td>EventLogViewer.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>ISO19770_LocalTag</td></row>
 		<row><td>AlwaysInstall</td><td>ISO19770_SystemTag</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
@@ -1998,6 +2012,8 @@
 		<row><td>default.html9</td><td>ISX_DEFAULTCOMPONENT12</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\default.html</td><td>1</td><td/></row>
 		<row><td>dll.png</td><td>ISX_DEFAULTCOMPONENT8</td><td>dll.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\dll.png</td><td>1</td><td/></row>
 		<row><td>email2.png</td><td>ISX_DEFAULTCOMPONENT13</td><td>email2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\email2.png</td><td>1</td><td/></row>
+		<row><td>eventlogviewer.localized_res</td><td>EventLogViewer.Localized_resources</td><td>EventLogViewer.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EventLogViewer&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
+		<row><td>eventlogviewer.primary_outpu</td><td>EventLogViewer.Primary_output</td><td>EventLogViewer.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EventLogViewer&gt;|Built</td><td>3</td><td/></row>
 		<row><td>gpl.png</td><td>ISX_DEFAULTCOMPONENT6</td><td>gpl.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\gpl.png</td><td>1</td><td/></row>
 		<row><td>history.png</td><td>ISX_DEFAULTCOMPONENT5</td><td>history.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\eventlog\history.png</td><td>1</td><td/></row>
 		<row><td>index.html</td><td>ISX_DEFAULTCOMPONENT3</td><td>INDEX~1.HTM|index.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\index.html</td><td>1</td><td/></row>
@@ -2184,6 +2200,8 @@
 		<col def="S0">Miscellaneous</col>
 		<row><td>AutoUpdater.NET.Localized_resources</td><td/><td/><td>_13A05E68_9BC1_462A_8A46_2C623673B9BC_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>AutoUpdater.NET.Primary_output</td><td/><td/><td>_7CCE0A0D_66F7_42AD_8F7A_EDAA2EFA4BB9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>EventLogViewer.Localized_resources</td><td/><td/><td>_E8E5AF3B_3437_43DB_9E30_5CB50A741EBF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>EventLogViewer.Primary_output</td><td/><td/><td>_99D44F66_7ACC_48F7_BC59_8A59FF5BAEE1_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISO19770_LocalTag</td><td/><td/><td>_051A274E_72F7_42A5_93D3_C27FD60F74DD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISO19770_SystemTag</td><td/><td/><td>_9E071FAC_6EB8_4691_8A97_9D0973573218_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_BFC206B8_E6E7_4161_8FFC_5694DC4AB768_FILTER</td><td/><td/><td/><td/></row>
@@ -2517,6 +2535,7 @@
 		<row><td>AutoUpdater.NET</td><td>..\AutoUpdater\AutoUpdater.NET\AutoUpdater.NET.csproj</td><td/><td>2</td></row>
 		<row><td>AutoUpdater.NET1</td><td>AutoUpdater.NET\AutoUpdater.NET.csproj</td><td/><td>2</td></row>
 		<row><td>CommonFilesFolder</td><td/><td/><td>1</td></row>
+		<row><td>EventLogViewer</td><td>EventLogViewer\EventLogViewer.vbproj</td><td/><td>2</td></row>
 		<row><td>Help</td><td>Help\Help.csproj</td><td/><td>2</td></row>
 		<row><td>ISPROJECTDIR</td><td/><td/><td>1</td></row>
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
@@ -4160,7 +4179,7 @@
 		<row><td>RegisterUser</td><td/><td>6000</td><td>RegisterUser</td><td/></row>
 		<row><td>RemoveDuplicateFiles</td><td/><td>3400</td><td>RemoveDuplicateFiles</td><td/></row>
 		<row><td>RemoveEnvironmentStrings</td><td/><td>3300</td><td>RemoveEnvironmentStrings</td><td/></row>
-		<row><td>RemoveExistingProducts</td><td/><td>1410</td><td>RemoveExistingProducts</td><td/></row>
+		<row><td>RemoveExistingProducts</td><td/><td>6601</td><td>RemoveExistingProducts</td><td/></row>
 		<row><td>RemoveFiles</td><td/><td>3500</td><td>RemoveFiles</td><td/></row>
 		<row><td>RemoveFolders</td><td/><td>3600</td><td>RemoveFolders</td><td/></row>
 		<row><td>RemoveIniValues</td><td/><td>3100</td><td>RemoveIniValues</td><td/></row>
@@ -4198,8 +4217,8 @@
 		<col def="S0">Value</col>
 		<row><td>ActiveLanguage</td><td>1033</td></row>
 		<row><td>Comments</td><td/></row>
-		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="de9f554a3bc05c12be9c31b998217995">
-UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
+		<row><td>CurrentMedia</td><td dt:dt="bin.base64" md5="a4f66fafb30885f14d732b73e196bba0">
+RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 			</td></row>
 		<row><td>DefaultProductConfiguration</td><td>Express</td></row>
 		<row><td>EnableSwidtag</td><td>1</td></row>
@@ -4254,10 +4273,12 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>LaunchConditions</td><td>Not Installed</td><td>410</td><td>LaunchConditions</td><td/></row>
 		<row><td>MaintenanceWelcome</td><td>Installed And Not RESUME And Not Preselected And Not PATCH</td><td>1230</td><td>MaintenanceWelcome</td><td/></row>
 		<row><td>MigrateFeatureStates</td><td/><td>1200</td><td>MigrateFeatureStates</td><td/></row>
+		<row><td>NewCustomAction1</td><td>Installed</td><td>1208</td><td/><td/></row>
 		<row><td>PatchWelcome</td><td>Installed And PATCH And Not IS_MAJOR_UPGRADE</td><td>1205</td><td>Patch Panel</td><td/></row>
 		<row><td>RMCCPSearch</td><td>Not CCP_SUCCESS And CCP_TEST</td><td>600</td><td>RMCCPSearch</td><td/></row>
 		<row><td>ResolveSource</td><td>Not Installed</td><td>990</td><td>ResolveSource</td><td/></row>
 		<row><td>SetAllUsersProfileNT</td><td>VersionNT = 400</td><td>970</td><td/><td/></row>
+		<row><td>SetDatabasePath</td><td>Not Installed</td><td>1207</td><td/><td/></row>
 		<row><td>SetupCompleteError</td><td/><td>-3</td><td>SetupCompleteError</td><td/></row>
 		<row><td>SetupCompleteSuccess</td><td/><td>-1</td><td>SetupCompleteSuccess</td><td/></row>
 		<row><td>SetupInitialization</td><td/><td>420</td><td>SetupInitialization</td><td/></row>
@@ -4598,9 +4619,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]WakeOnLan.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{A36C22E0-2170-4D8E-BD77-CD5D3F8FD898}</td><td/></row>
+		<row><td>ProductCode</td><td>{4DE751D5-BD83-4B3A-8549-515F9112600D}</td><td/></row>
 		<row><td>ProductName</td><td>WakeOnLAN</td><td/></row>
-		<row><td>ProductVersion</td><td>2.10.0018.10</td><td/></row>
+		<row><td>ProductVersion</td><td>2.10.0018.36</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4670,7 +4691,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">Component_</col>
 		<col def="I4">ISAttributes</col>
 		<row><td>Registry1</td><td>1</td><td>Software</td><td/><td/><td>ISX_DEFAULTCOMPONENT16</td><td>1</td></row>
-		<row><td>Registry2</td><td>1</td><td>Software\Aquila Technology\WakeOnLAN</td><td>Database</td><td>[DATABASEDIR]</td><td>ISX_DEFAULTCOMPONENT16</td><td>0</td></row>
+		<row><td>Registry2</td><td>1</td><td>Software\Aquila Technology\WakeOnLAN</td><td/><td/><td>ISX_DEFAULTCOMPONENT16</td><td>1</td></row>
 	</table>
 
 	<table name="RemoveFile">

@@ -27,7 +27,7 @@ Imports System.Threading
 
 Public Class Explorer
     Private ReadOnly _lvwColumnSorter As New ListViewColumnSorter()
-    Dim WithEvents _historyBackgroundworker As New BackgroundWorker()
+    Private WithEvents _historyBackgroundworker As New BackgroundWorker()
 
     Public Sub New()
 
@@ -527,14 +527,21 @@ Public Class Explorer
     End Sub
 
     Private Sub OptionsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OptionsToolStripMenuItem.Click, OptionsToolStripButton.Click
+        Dim splitter, splitter1 As Integer
+
         Options.ShowDialog(Me)
         If (My.Settings.Language <> Application.CurrentCulture.IetfLanguageTag) Then
+            ' save the splitter position, the CultureManager sometimes moves them
+            '
+            splitter1 = SplitContainer1.SplitterDistance
+            splitter = SplitContainer.SplitterDistance
             Localization.CultureManager.ApplicationUICulture = New CultureInfo(My.Settings.Language)
             LoadTree()
             TreeView.SelectedNode = TreeView.Nodes(0)
-            LoadList()
             My.Settings.DefaultMessage = My.Resources.Strings.DefaultMessage
             My.Settings.emerg_message = My.Resources.Strings.DefaultEmergency
+            SplitContainer.SplitterDistance = splitter
+            SplitContainer1.SplitterDistance = splitter1
         End If
     End Sub
 
