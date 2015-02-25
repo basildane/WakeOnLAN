@@ -26,6 +26,7 @@ Public NotInheritable Class AboutBox
         LabelProductName.Text = My.Resources.Strings.Title
         LabelVersion.Text = System.String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
         LabelCopyright.Text = My.Application.Info.Copyright
+        LabelCulture.Text = My.Application.Culture.CurrentUICulture.NativeName.ToString()
 
         If My.Application.Info.Version.Revision > 0 Then
             LabelVersion.Text &= " BETA " & My.Application.Info.Version.Revision
@@ -37,7 +38,7 @@ Public NotInheritable Class AboutBox
 
         ListBox1.Items.Clear()
         For Each a As AssemblyName In Assembly.GetExecutingAssembly().GetReferencedAssemblies().ToArray()
-            ListBox1.Items.Add(String.Format("{0}, version: {1}", a.Name, a.Version))
+            ListBox1.Items.Add(String.Format("{0}, {1}: {2}", a.Name, GroupBox1.Text, a.Version))
         Next
 
         AutoUpdater.CurrentCulture = Application.CurrentCulture
@@ -74,7 +75,7 @@ Public NotInheritable Class AboutBox
     End Sub
 
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OKButton.Click
-        Close()
+        Dispose()
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
