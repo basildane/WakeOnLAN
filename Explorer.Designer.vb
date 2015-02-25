@@ -172,6 +172,7 @@ Partial Class Explorer
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
+        Me.ClearIPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -336,7 +337,7 @@ Partial Class Explorer
         '
         'ContextMenuStrip_Machines
         '
-        Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.ClearIPToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ContextMenuStrip_Machines.Name = "ContextMenuStrip_Machines"
         resources.ApplyResources(Me.ContextMenuStrip_Machines, "ContextMenuStrip_Machines")
         '
@@ -800,6 +801,11 @@ Partial Class Explorer
         '
         Me.CultureManager.ManagedControl = Me
         '
+        'ClearIPToolStripMenuItem
+        '
+        Me.ClearIPToolStripMenuItem.Name = "ClearIPToolStripMenuItem"
+        resources.ApplyResources(Me.ClearIPToolStripMenuItem, "ClearIPToolStripMenuItem")
+        '
         'Explorer
         '
         resources.ApplyResources(Me, "$this")
@@ -895,5 +901,6 @@ Partial Class Explorer
     Friend WithEvents ResetWindowLayoutToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EventLogToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EventLogToolStripButton As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ClearIPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

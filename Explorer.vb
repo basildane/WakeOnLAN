@@ -619,15 +619,26 @@ Public Class Explorer
 
     End Sub
 
-    Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DeleteToolStripMenuItem.Click
+    Private Sub ClearIPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearIPToolStripMenuItem.Click
+        Dim m As Machine
 
+        If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format("Remove IP Address from {0} record(s)", ListView.SelectedItems.Count), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
+            For Each l As ListViewItem In ListView.SelectedItems
+                m = Machines(l.Name)
+                m.IP = String.Empty
+                Machines.Update(m)
+                l.SubItems(2).Text = String.Empty
+            Next
+        End If
+    End Sub
+
+    Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DeleteToolStripMenuItem.Click
         If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format("Delete {0} record(s)", ListView.SelectedItems.Count), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
             For Each l As ListViewItem In ListView.SelectedItems
                 Machines.Remove(l.Name)
                 l.Remove()
             Next
         End If
-
     End Sub
 
     Private Sub ShowHotButtonsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ShowHotButtonsToolStripMenuItem.Click, HotToolStripButton.Click

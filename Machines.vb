@@ -79,6 +79,9 @@ Public Class MachinesClass
 
         Catch ex As Exception
             Debug.WriteLine(ex.Message)
+#If DEBUG Then
+            MessageBox.Show(ex.Message, "Error reading file")
+#End If
 
         End Try
 
@@ -135,6 +138,10 @@ Public Class MachinesClass
         End If
         dirty = True
 
+    End Sub
+
+    Public Sub Update(ByVal machine As Machine)
+        dirty = True
     End Sub
 
     Public Sub Remove(ByVal name As String)
