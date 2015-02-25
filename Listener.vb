@@ -19,14 +19,17 @@
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading
+Imports System.Linq
 
 Public Class Listener
     Private ReadOnly _gso As New StateObject
-    Private Delegate Sub HitDelegate(ByVal ip As String)
+    Private Delegate Sub HitDelegate(ByVal so As StateObject, ByVal bytesRead As Integer, packetInfo As IPPacketInformation)
     Private ReadOnly _showHit As New HitDelegate(AddressOf Hit)
 
     Private Sub Listener_Load(sender As System.Object, e As EventArgs) Handles MyBase.Load
         ListView1.Items.Clear()
+        TextBoxDetails.Clear()
+        TextBoxDetails.Font = New Font(FontFamily.GenericMonospace, TextBoxDetails.Font.Size)
     End Sub
 
     Private Sub Listener_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
@@ -41,13 +44,15 @@ Public Class Listener
         Try
             _gso.EndPoint = New IPEndPoint(IPAddress.Any, RegExTextBoxPort.Text)
             _gso.Socket = New Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp)
+            '_gso.Socket = New Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.IP)
             _gso.Socket.EnableBroadcast = True
 
             _gso.Socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, True)
+            '_gso.Socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.HeaderIncluded, True)
             _gso.Socket.ExclusiveAddressUse = False
 
             _gso.Socket.Bind(_gso.EndPoint)
-            _gso.Socket.BeginReceiveFrom(_gso.Buffer, 0, _gso.Buffer.Length, SocketFlags.None, _gso.EndPoint, New AsyncCallback(AddressOf Async_Send_Receive), _gso)
+            _gso.Socket.BeginReceiveMessageFrom(_gso.Buffer, 0, _gso.Buffer.Length, SocketFlags.None, _gso.EndPoint, New AsyncCallback(AddressOf Async_Send_Receive), _gso)
 
         Catch ex As Exception
             ' Handle the HelpRequested event for the following message.
@@ -64,19 +69,21 @@ Public Class Listener
 
     Private Sub Async_Send_Receive(ByVal ar As IAsyncResult)
         Dim so As StateObject
-        Dim i As Integer
+        Dim bytesRead As Integer
+        Dim flags = SocketFlags.None
+        Dim packetInfo As IPPacketInformation
 
         Try
             so = ar.AsyncState
-            i = so.Socket.EndReceiveFrom(ar, so.EndPoint)
-            Debug.WriteLine(Parse(so.Buffer, i))
-            Hit(Parse(so.Buffer, i))
+            bytesRead = so.Socket.EndReceiveMessageFrom(ar, flags, so.EndPoint, packetInfo)
+            Debug.WriteLine(Parse(so.Buffer, bytesRead))
+            Hit(so, bytesRead, packetInfo)
 
             'Setup to receive the next packet
-            so.Socket.BeginReceiveFrom(so.Buffer, 0, so.Buffer.Length, SocketFlags.None, so.EndPoint, New AsyncCallback(AddressOf Async_Send_Receive), so)
+            so.Socket.BeginReceiveMessageFrom(so.Buffer, 0, so.Buffer.Length, SocketFlags.None, so.EndPoint, New AsyncCallback(AddressOf Async_Send_Receive), so)
 
         Catch eod As ObjectDisposedException
-            Debug.WriteLine("Socket closed")
+            Debug.WriteLine("Socket closed normally")
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString, "Async_Send_Receive")
@@ -92,14 +99,17 @@ Public Class Listener
         ReceiveMessages()
     End Sub
 
-    Private Sub Hit(mac As String)
+    Private Sub Hit(so As StateObject, bytesRead As Integer, packetInfo As IPPacketInformation)
+        Dim mac As String
+        Dim i As Integer
+
         Try
             If (ListView1.InvokeRequired) Then
-                ListView1.Invoke(_showHit, mac)
+                ListView1.Invoke(_showHit, so, bytesRead, packetInfo)
             Else
                 Dim li As New ListViewItem
-                Dim n As String = ""
 
+                mac = Parse(so.Buffer, bytesRead)
                 li.Text = mac
 #If DISPLAY Then
                 li.Text = li.Text.Substring(0, 9) & "00:00:00"
@@ -107,12 +117,11 @@ Public Class Listener
 
                 li.ImageIndex = 0
                 li.SubItems.Add(Now.ToShortTimeString)
-                For Each m As Machine In Machines
-                    If (compareMAC(m.MAC, mac) = 0) Then
-                        n = m.Name
-                    End If
-                Next
-                li.SubItems.Add(n)
+                Dim hostName As String = (From m As Machine In Machines
+                    Where (CompareMac(m.MAC, mac) = 0)
+                    Select m.Name).FirstOrDefault()
+
+                li.SubItems.Add(hostName)
 
                 ' always insert it at the top
                 ListView1.Items.Insert(0, li)
@@ -121,6 +130,33 @@ Public Class Listener
                 ' in the listview sorting
                 ListView1.Alignment = ListViewAlignment.Default
                 ListView1.Alignment = ListViewAlignment.Top
+
+                TextBoxDetails.AppendText(String.Format("{0} {1} {0}{2}", "---------------------", "Received Packet", Environment.NewLine))
+                TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Date: ", Now.ToLongDateString(), Environment.NewLine))
+                TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Time: ", Now.ToLongTimeString(), Environment.NewLine))
+                TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Source: ", so.EndPoint.ToString(), Environment.NewLine))
+                TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Destination: ", packetInfo.Address.ToString(), Environment.NewLine))
+                TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Length: ", bytesRead, Environment.NewLine))
+                TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Protocol: ", so.Socket.ProtocolType.ToString(), Environment.NewLine))
+                TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Port: ", RegExTextBoxPort.Text, Environment.NewLine))
+                'TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "TTL: ", so.Socket.Ttl.ToString(), Environment.NewLine))
+                TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Hostname: ", hostName, Environment.NewLine))
+
+                TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}{2}", "MAC Address:", mac, Environment.NewLine))
+
+                TextBoxDetails.AppendText(String.Format("Raw Data:{0}", Environment.NewLine))
+                For row As Integer = 0 To (bytesRead / 16) - 1
+                    TextBoxDetails.AppendText(String.Format("{0,-10}", ""))
+                    For column As Integer = 0 To 15
+                        i = column + row * 16
+                        If i > bytesRead Then Exit For
+                        TextBoxDetails.AppendText(String.Format("{0:X02} ", so.Buffer(i)))
+                    Next
+                    TextBoxDetails.AppendText(Environment.NewLine)
+                    If i > bytesRead Then Exit For
+                Next
+
+                TextBoxDetails.AppendText(String.Format("{0}{0}", Environment.NewLine))
 
                 If My.Settings.Sound Then
                     My.Computer.Audio.Play(My.Resources.blip, AudioPlayMode.Background)
@@ -172,6 +208,7 @@ Public Class Listener
 
     Private Sub Button_clear_Click(sender As System.Object, e As EventArgs) Handles Button_clear.Click
         ListView1.Items.Clear()
+        TextBoxDetails.Clear()
     End Sub
 
     Private Sub Listener_HelpRequested(sender As Object, hlpevent As HelpEventArgs)
@@ -185,6 +222,7 @@ Public Class Listener
             ErrorProvider1.SetError(sender, "Invalid Port")
         End If
     End Sub
+
 End Class
 
 Friend Class StateObject

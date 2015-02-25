@@ -38,6 +38,7 @@ Partial Class Listener
         Me.lUDPport = New System.Windows.Forms.Label()
         Me.LabelHeader = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.TextBoxDetails = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,13 +46,10 @@ Partial Class Listener
         '
         'ListView1
         '
-        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader_IP, Me.ColumnHeader_Time, Me.ColumnHeader_Name})
-        Me.ErrorProvider1.SetError(Me.ListView1, resources.GetString("ListView1.Error"))
         Me.ListView1.FullRowSelect = True
-        Me.ErrorProvider1.SetIconAlignment(Me.ListView1, CType(resources.GetObject("ListView1.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.ListView1, CType(resources.GetObject("ListView1.IconPadding"), Integer))
         Me.ListView1.LargeImageList = Me.ImageList_Large
+        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.Name = "ListView1"
         Me.ListView1.TileSize = New System.Drawing.Size(410, 52)
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -77,89 +75,71 @@ Partial Class Listener
         '
         'PictureBox1
         '
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.ErrorProvider1.SetError(Me.PictureBox1, resources.GetString("PictureBox1.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.PictureBox1, CType(resources.GetObject("PictureBox1.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.PictureBox1, CType(resources.GetObject("PictureBox1.IconPadding"), Integer))
         Me.PictureBox1.Image = Global.WakeOnLan.My.Resources.Resources.network_transmit
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
         'Button_clear
         '
         resources.ApplyResources(Me.Button_clear, "Button_clear")
-        Me.ErrorProvider1.SetError(Me.Button_clear, resources.GetString("Button_clear.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.Button_clear, CType(resources.GetObject("Button_clear.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.Button_clear, CType(resources.GetObject("Button_clear.IconPadding"), Integer))
         Me.Button_clear.Name = "Button_clear"
         Me.Button_clear.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Controls.Add(Me.ButtonSet)
         Me.GroupBox1.Controls.Add(Me.RegExTextBoxPort)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.lUDPport)
-        Me.ErrorProvider1.SetError(Me.GroupBox1, resources.GetString("GroupBox1.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.GroupBox1, CType(resources.GetObject("GroupBox1.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.GroupBox1, CType(resources.GetObject("GroupBox1.IconPadding"), Integer))
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         '
         'ButtonSet
         '
         resources.ApplyResources(Me.ButtonSet, "ButtonSet")
-        Me.ErrorProvider1.SetError(Me.ButtonSet, resources.GetString("ButtonSet.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.ButtonSet, CType(resources.GetObject("ButtonSet.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.ButtonSet, CType(resources.GetObject("ButtonSet.IconPadding"), Integer))
         Me.ButtonSet.Name = "ButtonSet"
         Me.ButtonSet.UseVisualStyleBackColor = True
         '
         'RegExTextBoxPort
         '
-        resources.ApplyResources(Me.RegExTextBoxPort, "RegExTextBoxPort")
-        Me.ErrorProvider1.SetError(Me.RegExTextBoxPort, resources.GetString("RegExTextBoxPort.Error"))
         Me.RegExTextBoxPort.ErrorColor = System.Drawing.Color.Red
         Me.RegExTextBoxPort.ErrorMessage = ""
-        Me.ErrorProvider1.SetIconAlignment(Me.RegExTextBoxPort, CType(resources.GetObject("RegExTextBoxPort.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.RegExTextBoxPort, CType(resources.GetObject("RegExTextBoxPort.IconPadding"), Integer))
+        resources.ApplyResources(Me.RegExTextBoxPort, "RegExTextBoxPort")
         Me.RegExTextBoxPort.Name = "RegExTextBoxPort"
         Me.RegExTextBoxPort.ValidationExpression = "^(6553[0-5]|655[0-2]\d|65[0-4]\d{2}|6[0-4]\d{3}|5\d{4}|[0-9]\d{0,3})$"
         '
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
-        Me.ErrorProvider1.SetError(Me.Label1, resources.GetString("Label1.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.Label1, CType(resources.GetObject("Label1.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.Label1, CType(resources.GetObject("Label1.IconPadding"), Integer))
         Me.Label1.Name = "Label1"
         '
         'lUDPport
         '
         resources.ApplyResources(Me.lUDPport, "lUDPport")
-        Me.ErrorProvider1.SetError(Me.lUDPport, resources.GetString("lUDPport.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.lUDPport, CType(resources.GetObject("lUDPport.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.lUDPport, CType(resources.GetObject("lUDPport.IconPadding"), Integer))
         Me.lUDPport.Name = "lUDPport"
         '
         'LabelHeader
         '
         resources.ApplyResources(Me.LabelHeader, "LabelHeader")
-        Me.ErrorProvider1.SetError(Me.LabelHeader, resources.GetString("LabelHeader.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.LabelHeader, CType(resources.GetObject("LabelHeader.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.LabelHeader, CType(resources.GetObject("LabelHeader.IconPadding"), Integer))
         Me.LabelHeader.Name = "LabelHeader"
         '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        resources.ApplyResources(Me.ErrorProvider1, "ErrorProvider1")
+        '
+        'TextBoxDetails
+        '
+        resources.ApplyResources(Me.TextBoxDetails, "TextBoxDetails")
+        Me.TextBoxDetails.Name = "TextBoxDetails"
+        Me.TextBoxDetails.ReadOnly = True
         '
         'Listener
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.TextBoxDetails)
         Me.Controls.Add(Me.LabelHeader)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button_clear)
@@ -172,6 +152,7 @@ Partial Class Listener
         Me.GroupBox1.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
@@ -188,4 +169,5 @@ Partial Class Listener
     Friend WithEvents RegExTextBoxPort As WakeOnLan.Controls.RegExTextBox
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents ButtonSet As System.Windows.Forms.Button
+    Friend WithEvents TextBoxDetails As System.Windows.Forms.TextBox
 End Class
