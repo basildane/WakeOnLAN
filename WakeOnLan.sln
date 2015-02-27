@@ -17,11 +17,6 @@ Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup", "Setup\Setup.isproj
 		{2B807DFF-133A-41DA-AFF0-365531DB2AE8} = {2B807DFF-133A-41DA-AFF0-365531DB2AE8}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{6F5B6787-F0EC-4C94-B840-7DE83CCC4DA6}"
-	ProjectSection(SolutionItems) = preProject
-		Build notes.txt = Build notes.txt
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agent", "Agent\Agent.csproj", "{1F0A33A9-002F-42EA-91B1-7FEC1E3F8474}"
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "SetupAgent", "SetupAgent\SetupAgent.isproj", "{83AEC925-7B26-428D-BB05-CB5B87BCBB55}"

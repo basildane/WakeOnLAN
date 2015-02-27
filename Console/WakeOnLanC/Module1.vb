@@ -231,7 +231,8 @@ Module Module1
 
     Private Function DoWakeup() As Integer
         Dim machine As Machine
-
+        'Dim nets As String() = {"255.255.255.0", "255.255.255.128"}
+        
         If _all Then
             Try
                 Machines.Load(_path)
@@ -269,8 +270,16 @@ Module Module1
                 Console.WriteLine("Cannot find machine " & _machine)
                 Return ErrorCodes.NotFound
             End If
-            Console.WriteLine("wakeup sent to " & _machine)
-            Console.WriteLine("waking up mac: " & machine.MAC)
+            Console.Write("wakeup sent to ")
+            Console.ForegroundColor = ConsoleColor.Cyan
+            Console.WriteLine(_machine)
+            Console.ResetColor()
+            Console.Write("waking up mac: " & machine.MAC & " broadcast: ")
+            If (machine.Method = 0) Then
+                Console.WriteLine(machine.Broadcast)
+            Else
+                Console.WriteLine(machine.Netbios)
+            End If
             WakeUp(machine, _interface)
             Return ErrorCodes.Ok
 
