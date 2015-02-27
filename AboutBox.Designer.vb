@@ -28,6 +28,7 @@ Partial Class AboutBox
         Me.LabelProductName = New System.Windows.Forms.Label()
         Me.LabelCopyright = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LabelCulture = New System.Windows.Forms.Label()
         Me.label4 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.GroupBoxUpdates = New System.Windows.Forms.GroupBox()
@@ -35,18 +36,17 @@ Partial Class AboutBox
         Me.lAutomaticUpdate = New System.Windows.Forms.Label()
         Me.LabelVersion = New System.Windows.Forms.Label()
         Me.TextBoxDescription = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxVersion = New System.Windows.Forms.GroupBox()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.bDonate = New System.Windows.Forms.Button()
-        Me.LabelCulture = New System.Windows.Forms.Label()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBoxUpdates.SuspendLayout()
         CType(Me.pbUpdate, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        Me.GroupBoxVersion.SuspendLayout()
         Me.SuspendLayout()
         '
         'LogoPictureBox
@@ -81,6 +81,12 @@ Partial Class AboutBox
         Me.Panel1.Controls.Add(Me.LabelCopyright)
         resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
+        '
+        'LabelCulture
+        '
+        resources.ApplyResources(Me.LabelCulture, "LabelCulture")
+        Me.LabelCulture.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.LabelCulture.Name = "LabelCulture"
         '
         'label4
         '
@@ -124,17 +130,17 @@ Partial Class AboutBox
         resources.ApplyResources(Me.TextBoxDescription, "TextBoxDescription")
         Me.TextBoxDescription.Name = "TextBoxDescription"
         '
-        'GroupBox1
+        'GroupBoxVersion
         '
-        Me.GroupBox1.Controls.Add(Me.LinkLabel2)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.LabelVersion)
-        Me.GroupBox1.Controls.Add(Me.ListBox1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.LinkLabel1)
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.TabStop = False
+        Me.GroupBoxVersion.Controls.Add(Me.LinkLabel2)
+        Me.GroupBoxVersion.Controls.Add(Me.Label2)
+        Me.GroupBoxVersion.Controls.Add(Me.LabelVersion)
+        Me.GroupBoxVersion.Controls.Add(Me.ListBox1)
+        Me.GroupBoxVersion.Controls.Add(Me.Label1)
+        Me.GroupBoxVersion.Controls.Add(Me.LinkLabel1)
+        resources.ApplyResources(Me.GroupBoxVersion, "GroupBoxVersion")
+        Me.GroupBoxVersion.Name = "GroupBoxVersion"
+        Me.GroupBoxVersion.TabStop = False
         '
         'LinkLabel2
         '
@@ -165,12 +171,6 @@ Partial Class AboutBox
         Me.bDonate.Name = "bDonate"
         Me.bDonate.UseVisualStyleBackColor = True
         '
-        'LabelCulture
-        '
-        resources.ApplyResources(Me.LabelCulture, "LabelCulture")
-        Me.LabelCulture.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.LabelCulture.Name = "LabelCulture"
-        '
         'AboutBox
         '
         resources.ApplyResources(Me, "$this")
@@ -178,7 +178,7 @@ Partial Class AboutBox
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.CancelButton = Me.OKButton
         Me.Controls.Add(Me.bDonate)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GroupBoxVersion)
         Me.Controls.Add(Me.TextBoxDescription)
         Me.Controls.Add(Me.GroupBoxUpdates)
         Me.Controls.Add(Me.label4)
@@ -194,8 +194,8 @@ Partial Class AboutBox
         Me.GroupBoxUpdates.ResumeLayout(False)
         Me.GroupBoxUpdates.PerformLayout()
         CType(Me.pbUpdate, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.GroupBoxVersion.ResumeLayout(False)
+        Me.GroupBoxVersion.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -210,7 +210,7 @@ Partial Class AboutBox
     Friend WithEvents lAutomaticUpdate As System.Windows.Forms.Label
     Friend WithEvents LabelVersion As System.Windows.Forms.Label
     Private WithEvents TextBoxDescription As System.Windows.Forms.Label
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBoxVersion As System.Windows.Forms.GroupBox
     Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label

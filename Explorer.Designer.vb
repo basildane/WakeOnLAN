@@ -93,6 +93,7 @@ Partial Class Explorer
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.RDPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PropertiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearIPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListViewLargeImageList = New System.Windows.Forms.ImageList(Me.components)
         Me.ListViewSmallImageList = New System.Windows.Forms.ImageList(Me.components)
@@ -172,7 +173,6 @@ Partial Class Explorer
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
-        Me.ClearIPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -365,6 +365,11 @@ Partial Class Explorer
         '
         resources.ApplyResources(Me.PropertiesToolStripMenuItem, "PropertiesToolStripMenuItem")
         Me.PropertiesToolStripMenuItem.Name = "PropertiesToolStripMenuItem"
+        '
+        'ClearIPToolStripMenuItem
+        '
+        Me.ClearIPToolStripMenuItem.Name = "ClearIPToolStripMenuItem"
+        resources.ApplyResources(Me.ClearIPToolStripMenuItem, "ClearIPToolStripMenuItem")
         '
         'DeleteToolStripMenuItem
         '
@@ -800,11 +805,6 @@ Partial Class Explorer
         'CultureManager
         '
         Me.CultureManager.ManagedControl = Me
-        '
-        'ClearIPToolStripMenuItem
-        '
-        Me.ClearIPToolStripMenuItem.Name = "ClearIPToolStripMenuItem"
-        resources.ApplyResources(Me.ClearIPToolStripMenuItem, "ClearIPToolStripMenuItem")
         '
         'Explorer
         '

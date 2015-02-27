@@ -38,7 +38,7 @@ Public NotInheritable Class AboutBox
 
         ListBox1.Items.Clear()
         For Each a As AssemblyName In Assembly.GetExecutingAssembly().GetReferencedAssemblies().ToArray()
-            ListBox1.Items.Add(String.Format("{0}, {1}: {2}", a.Name, GroupBox1.Text, a.Version))
+            ListBox1.Items.Add(String.Format("{0}, {1}: {2}", a.Name, GroupBoxVersion.Text, a.Version))
         Next
 
         AutoUpdater.CurrentCulture = Application.CurrentCulture

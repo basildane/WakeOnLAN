@@ -353,7 +353,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to You must set a proper UseridDialog and Password for a scheduled task..
+        '''  Looks up a localized string similar to You must set a proper UserID and Password for a scheduled task..
         '''</summary>
         Friend Shared ReadOnly Property errUserID() As String
             Get
@@ -457,6 +457,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property lit_atWeeks() As String
             Get
                 Return ResourceManager.GetString("lit_atWeeks", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Delete {0} record(s).
+        '''</summary>
+        Friend Shared ReadOnly Property lit_DeleteRecords() As String
+            Get
+                Return ResourceManager.GetString("lit_DeleteRecords", resourceCulture)
             End Get
         End Property
         
@@ -565,6 +574,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property lit_Ready() As String
             Get
                 Return ResourceManager.GetString("lit_Ready", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Remove IP Address from {0} record(s).
+        '''</summary>
+        Friend Shared ReadOnly Property lit_RemoveIP() As String
+            Get
+                Return ResourceManager.GetString("lit_RemoveIP", resourceCulture)
             End Get
         End Property
         

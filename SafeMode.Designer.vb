@@ -22,6 +22,7 @@ Partial Class SafeMode
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SafeMode))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ButtonYes = New System.Windows.Forms.Button()
@@ -33,59 +34,43 @@ Partial Class SafeMode
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(108, 27)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(341, 64)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Je hebt de CTRL-toets ingedrukt. Wil je WOL in veilige modus starten?"
         '
         'Panel1
         '
+        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel1.Controls.Add(Me.ButtonYes)
         Me.Panel1.Controls.Add(Me.ButtonNo)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 113)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(486, 47)
-        Me.Panel1.TabIndex = 1
         '
         'ButtonYes
         '
-        Me.ButtonYes.Location = New System.Drawing.Point(308, 13)
+        resources.ApplyResources(Me.ButtonYes, "ButtonYes")
         Me.ButtonYes.Name = "ButtonYes"
-        Me.ButtonYes.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonYes.TabIndex = 1
-        Me.ButtonYes.Text = "&Yes"
         Me.ButtonYes.UseVisualStyleBackColor = True
         '
         'ButtonNo
         '
+        resources.ApplyResources(Me.ButtonNo, "ButtonNo")
         Me.ButtonNo.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.ButtonNo.Location = New System.Drawing.Point(399, 13)
         Me.ButtonNo.Name = "ButtonNo"
-        Me.ButtonNo.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonNo.TabIndex = 0
-        Me.ButtonNo.Text = "&No"
         Me.ButtonNo.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Image = Global.WakeOnLan.My.Resources.Resources.question
-        Me.PictureBox1.Location = New System.Drawing.Point(26, 27)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(64, 64)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
         'SafeMode
         '
         Me.AcceptButton = Me.ButtonYes
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.ButtonNo
-        Me.ClientSize = New System.Drawing.Size(486, 160)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
@@ -95,8 +80,6 @@ Partial Class SafeMode
         Me.Name = "SafeMode"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "AquilaWOL"
         Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
