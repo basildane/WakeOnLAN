@@ -353,26 +353,46 @@
 		<row><td>EventLogViewer.Primary_output</td><td>{BB7C66DA-90ED-432F-9629-6002F9807A0B}</td><td>INSTALLDIR</td><td>2</td><td/><td>eventlogviewer.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_LocalTag</td><td>{F6DC2A6C-9772-4B35-851A-DCFA53571CBC}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_SystemTag</td><td>{0F40450E-7749-4447-96C9-FEF67F29FCCC}</td><td>CommonAppDataFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td>{6BE34C25-D7E7-40EE-9772-C20464B260D5}</td><td>HELP</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{FD0D70A9-4C47-4EBF-BA1C-15FC4222D625}</td><td>COMMAND_LINE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT10</td><td>{5E0B744F-DFE6-4CD9-B893-7F15787AAB20}</td><td>MAIN_WINDOW</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT11</td><td>{63DC2C91-2C34-4057-891D-48C82E697860}</td><td>MULTIUSER</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT12</td><td>{A2BBBCCC-A5D7-4F68-9F0E-AB57446013E4}</td><td>PROPERTIES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT13</td><td>{D7442196-AED7-46CC-A4A6-2C4B96C0D7EC}</td><td>SCHEDULER</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT14</td><td>{5A1B7DD9-86E1-4679-B78E-B2E2E8997A35}</td><td>SEARCH</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT15</td><td>{2D4BB703-B389-4F5A-AED2-BB2868964466}</td><td>SHUTDOWN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td>{50010998-2FE2-4228-B1CC-20785FA1445D}</td><td>HELP</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{8B016B03-903F-48B8-B36B-B93755D76579}</td><td>_VTI_CNF</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT10</td><td>{33A0074B-8CB2-4348-B34A-9EA7B1E3580D}</td><td>_VTI_CNF4</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT11</td><td>{71679A42-3826-43A3-983D-0D88AFD8CE3D}</td><td>EVENTLOG</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT12</td><td>{91EF1DC2-AAFD-4CCD-B79B-BFC79C5F5CB5}</td><td>_VTI_CNF5</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT13</td><td>{42219C2C-8266-4C30-8212-10005796F54A}</td><td>FAQ</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT14</td><td>{CD79CC1D-B0B4-48AB-BDE6-E93634432161}</td><td>_VTI_CNF6</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT15</td><td>{C6E98010-2592-496C-9D51-68860AE43607}</td><td>GETTING_STARTED</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT16</td><td>{18D125A0-CBDC-4001-AA03-9E722231F89B}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT17</td><td>{BC235769-826A-481E-991F-C1C854BC63F0}</td><td>STYLES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT18</td><td>{C41A460B-B8DA-47C4-BC88-7A50843DFB2D}</td><td>TROUBLESHOOTING</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT19</td><td>{AA71DAE8-67EE-433C-B12E-1E7D00EE9948}</td><td>WAKEUP</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{ACB8C5FC-85FA-4010-8B3B-72D3D924235F}</td><td>CONTACT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{6A5CE70E-A744-46C5-9B0B-B16DD765D470}</td><td>CSSMENU</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{540615B4-59F0-4A2E-8BD1-5B140C22469C}</td><td>IMAGES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{8655D927-B363-42CD-BB4C-393C76B96F23}</td><td>EVENTLOG</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{34F56458-B744-4FA5-A3A5-80E4FF8F6BF5}</td><td>FAQ</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{9FDD2EE2-6F79-4208-9251-81E4B83D68DC}</td><td>GETTING_STARTED</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{51FE9E27-4109-4F04-87DE-4F6E04C28F41}</td><td>IMAGES1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{F9E7AD54-0374-4D3B-A280-84585AC89BC2}</td><td>INFORMATION_LINKS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT17</td><td>{6FD9DCE1-9EC2-448A-A829-FD31D6E4670A}</td><td>_VTI_CNF7</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT18</td><td>{150049D0-973E-4043-ABD9-ED6B93D9D95C}</td><td>IMAGES1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT19</td><td>{0ABD4604-1A56-418A-BEEC-379727EEDD30}</td><td>_VTI_CNF8</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{C7880107-C5A3-4341-8784-CBDA58778331}</td><td>_VTI_PVT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT20</td><td>{BC0949D5-ACAE-49DA-95A1-678DDE7A7747}</td><td>INFORMATION_LINKS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT21</td><td>{5E82EB63-614C-4858-90A6-225BDEC54F2D}</td><td>_VTI_CNF9</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT22</td><td>{7F79554B-4F3C-4C9E-B81D-9FA2D3CC24D6}</td><td>MAIN_WINDOW</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT23</td><td>{54ACEA4E-A83D-4FDB-8CBA-03B698E9C9AA}</td><td>_VTI_CNF10</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT24</td><td>{D01A9D2E-64E4-4E23-8C64-845B4988AEB0}</td><td>MULTIUSER</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT25</td><td>{8B54E6C2-BC64-443B-99F2-AA222D4E5AA3}</td><td>_VTI_CNF11</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT26</td><td>{60784904-73BA-4346-9789-A1CE3EE281CA}</td><td>PROPERTIES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT27</td><td>{3C754588-82FE-4197-A754-2CE920EDC2D2}</td><td>_VTI_CNF12</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT28</td><td>{49A5855D-010D-425B-A6F6-A60733D2B2AB}</td><td>SCHEDULER</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT29</td><td>{D77A1941-C351-4704-A742-1D2244D572A9}</td><td>_VTI_CNF13</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{00F76DBC-2F0E-4F22-A80D-83778E721937}</td><td>COMMAND_LINE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT30</td><td>{841D93A5-CE47-4FC0-ADD0-51688BFC89A8}</td><td>SEARCH</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT31</td><td>{1BDD37E8-2A15-401E-9D07-1A4E783E50C5}</td><td>_VTI_CNF14</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT32</td><td>{CD12FAEE-53A0-45BA-A443-B9AEC9DA2E91}</td><td>SHUTDOWN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT33</td><td>{2C7D5679-1CCA-4B9A-9AD5-1C77839A64A8}</td><td>_VTI_CNF15</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT34</td><td>{929EF5F8-70B6-4E83-A01A-FEC33577135B}</td><td>STYLES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT35</td><td>{E138B3D9-6573-4F30-A3DE-EF19CAAE91C1}</td><td>_VTI_CNF16</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT36</td><td>{A8D49FF5-B393-439B-BEA3-6A3D4549AC9B}</td><td>TROUBLESHOOTING</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT37</td><td>{97914490-0EA6-423A-B84F-DEC8FB5AB35E}</td><td>_VTI_CNF17</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT38</td><td>{6B45CEB4-79C4-4B5A-B1E0-EB487B4A6E7A}</td><td>WAKEUP</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT39</td><td>{FBE91D38-811A-42C3-ABE7-D041AF090262}</td><td>_VTI_CNF18</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{CDB50CE5-FAE1-4A29-9A05-832EF9B9AD65}</td><td>_VTI_CNF1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{F565796C-8FB9-4E2E-8B2D-F799B7461E4E}</td><td>CONTACT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{911CB607-9B57-4CD1-B23F-1D3278176D7D}</td><td>_VTI_CNF2</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{91C02C75-78E6-465B-B09C-7E20C036DF1B}</td><td>CSSMENU</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{F94ADC9E-17DE-4338-B8DA-F194C9DC1AC9}</td><td>IMAGES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{81C2A284-5D74-4B0D-B57D-76D65F026803}</td><td>_VTI_CNF3</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WakeOnLan.Localized_resources</td><td>{B6E93BFD-3156-4E98-B32A-72811FF75546}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.localized_resource</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WakeOnLan.Localized_resources1</td><td>{34876FCA-05EA-4D72-81EA-3715818D0E92}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.localized_resource</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WakeOnLan.Primary_output</td><td>{80DFBEAD-8531-46CB-AAF3-8226E53F14C8}</td><td>INSTALLDIR</td><td>2</td><td/><td>wakeonlan.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1242,6 +1262,26 @@
 		<row><td>WAKE_ON_LAN</td><td>AQUILA_TECHNOLOGY</td><td>WAKEON~1|Wake On Lan</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF</td><td>HELP</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF1</td><td>COMMAND_LINE</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF10</td><td>MAIN_WINDOW</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF11</td><td>MULTIUSER</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF12</td><td>PROPERTIES</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF13</td><td>SCHEDULER</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF14</td><td>SEARCH</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF15</td><td>SHUTDOWN</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF16</td><td>STYLES</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF17</td><td>TROUBLESHOOTING</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF18</td><td>WAKEUP</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF2</td><td>CONTACT</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF3</td><td>IMAGES</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF4</td><td>CSSMENU</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF5</td><td>EVENTLOG</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF6</td><td>FAQ</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF7</td><td>GETTING_STARTED</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF8</td><td>IMAGES1</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_CNF9</td><td>INFORMATION_LINKS</td><td>_vti_cnf</td><td/><td>0</td><td/></row>
+		<row><td>_VTI_PVT</td><td>HELP</td><td>_vti_pvt</td><td/><td>0</td><td/></row>
 		<row><td>aquila_1_aquila_technology</td><td>ProgramMenuFolder</td><td>AQUILA~1|Aquila Technology</td><td/><td>1</td><td/></row>
 	</table>
 
@@ -1953,7 +1993,27 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT18</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT19</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT20</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT21</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT22</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT23</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT24</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT25</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT26</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT27</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT28</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT29</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT3</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT30</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT31</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT32</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT33</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT34</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT35</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT36</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT37</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT38</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT39</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT5</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT6</td></row>
@@ -1982,79 +2042,143 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>accessdenied.png</td><td>ISX_DEFAULTCOMPONENT18</td><td>ACCESS~1.PNG|accessDenied.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\accessDenied.png</td><td>1</td><td/></row>
-		<row><td>action2.png</td><td>ISX_DEFAULTCOMPONENT13</td><td>action2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\action2.png</td><td>1</td><td/></row>
-		<row><td>aquilatech.png</td><td>ISX_DEFAULTCOMPONENT8</td><td>AQUILA~1.PNG|aquilatech.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\aquilatech.png</td><td>1</td><td/></row>
-		<row><td>autostart.png</td><td>ISX_DEFAULTCOMPONENT6</td><td>AUTOST~1.PNG|autostart.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\autostart.png</td><td>1</td><td/></row>
+		<row><td>accessdenied.png</td><td>ISX_DEFAULTCOMPONENT36</td><td>ACCESS~1.PNG|accessDenied.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\accessDenied.png</td><td>1</td><td/></row>
+		<row><td>accessdenied.png1</td><td>ISX_DEFAULTCOMPONENT37</td><td>ACCESS~1.PNG|accessDenied.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\_vti_cnf\accessDenied.png</td><td>1</td><td/></row>
+		<row><td>action2.png</td><td>ISX_DEFAULTCOMPONENT28</td><td>action2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\action2.png</td><td>1</td><td/></row>
+		<row><td>action2.png1</td><td>ISX_DEFAULTCOMPONENT29</td><td>action2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\_vti_cnf\action2.png</td><td>1</td><td/></row>
+		<row><td>aquilatech.png</td><td>ISX_DEFAULTCOMPONENT18</td><td>AQUILA~1.PNG|aquilatech.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\aquilatech.png</td><td>1</td><td/></row>
+		<row><td>aquilatech.png1</td><td>ISX_DEFAULTCOMPONENT19</td><td>AQUILA~1.PNG|aquilatech.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\_vti_cnf\aquilatech.png</td><td>1</td><td/></row>
+		<row><td>autostart.png</td><td>ISX_DEFAULTCOMPONENT13</td><td>AUTOST~1.PNG|autostart.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\autostart.png</td><td>1</td><td/></row>
+		<row><td>autostart.png1</td><td>ISX_DEFAULTCOMPONENT14</td><td>AUTOST~1.PNG|autostart.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\_vti_cnf\autostart.png</td><td>1</td><td/></row>
 		<row><td>autoupdater.net.localized_re</td><td>AutoUpdater.NET.Localized_resources</td><td>AutoUpdater.NET.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;AutoUpdater.NET1&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
 		<row><td>autoupdater.net.primary_outp</td><td>AutoUpdater.NET.Primary_output</td><td>AutoUpdater.NET.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;AutoUpdater.NET1&gt;|Built</td><td>3</td><td/></row>
-		<row><td>basildane.jpg</td><td>ISX_DEFAULTCOMPONENT6</td><td>BASILD~1.JPG|basildane.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\basildane.jpg</td><td>1</td><td/></row>
-		<row><td>bubble.png</td><td>ISX_DEFAULTCOMPONENT10</td><td>bubble.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\bubble.png</td><td>1</td><td/></row>
-		<row><td>calculate.png</td><td>ISX_DEFAULTCOMPONENT12</td><td>CALCUL~1.PNG|calculate.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\calculate.png</td><td>1</td><td/></row>
-		<row><td>caret.png</td><td>ISX_DEFAULTCOMPONENT4</td><td>caret.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\images\caret.png</td><td>1</td><td/></row>
-		<row><td>create.png</td><td>ISX_DEFAULTCOMPONENT13</td><td>create.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\create.png</td><td>1</td><td/></row>
-		<row><td>credentials.png</td><td>ISX_DEFAULTCOMPONENT12</td><td>CREDEN~1.PNG|credentials.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\credentials.png</td><td>1</td><td/></row>
-		<row><td>databasepath.png</td><td>ISX_DEFAULTCOMPONENT11</td><td>DATABA~1.PNG|databasepath.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\multiuser\databasepath.png</td><td>1</td><td/></row>
-		<row><td>default.html</td><td>ISX_DEFAULTCOMPONENT1</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\command_line\default.html</td><td>1</td><td/></row>
-		<row><td>default.html1</td><td>ISX_DEFAULTCOMPONENT2</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\contact\default.html</td><td>1</td><td/></row>
-		<row><td>default.html10</td><td>ISX_DEFAULTCOMPONENT13</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\default.html</td><td>1</td><td/></row>
-		<row><td>default.html11</td><td>ISX_DEFAULTCOMPONENT14</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\search\default.html</td><td>1</td><td/></row>
-		<row><td>default.html12</td><td>ISX_DEFAULTCOMPONENT15</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\shutdown\default.html</td><td>1</td><td/></row>
-		<row><td>default.html13</td><td>ISX_DEFAULTCOMPONENT18</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\default.html</td><td>1</td><td/></row>
-		<row><td>default.html14</td><td>ISX_DEFAULTCOMPONENT19</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\wakeup\default.html</td><td>1</td><td/></row>
-		<row><td>default.html2</td><td>ISX_DEFAULTCOMPONENT</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\default.html</td><td>1</td><td/></row>
-		<row><td>default.html3</td><td>ISX_DEFAULTCOMPONENT5</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\eventlog\default.html</td><td>1</td><td/></row>
-		<row><td>default.html4</td><td>ISX_DEFAULTCOMPONENT6</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\default.html</td><td>1</td><td/></row>
-		<row><td>default.html5</td><td>ISX_DEFAULTCOMPONENT7</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\default.html</td><td>1</td><td/></row>
-		<row><td>default.html6</td><td>ISX_DEFAULTCOMPONENT9</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\information_links\default.html</td><td>1</td><td/></row>
-		<row><td>default.html7</td><td>ISX_DEFAULTCOMPONENT10</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\default.html</td><td>1</td><td/></row>
-		<row><td>default.html8</td><td>ISX_DEFAULTCOMPONENT11</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\multiuser\default.html</td><td>1</td><td/></row>
-		<row><td>default.html9</td><td>ISX_DEFAULTCOMPONENT12</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\default.html</td><td>1</td><td/></row>
-		<row><td>dll.png</td><td>ISX_DEFAULTCOMPONENT8</td><td>dll.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\dll.png</td><td>1</td><td/></row>
-		<row><td>email2.png</td><td>ISX_DEFAULTCOMPONENT13</td><td>email2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\email2.png</td><td>1</td><td/></row>
+		<row><td>basildane.jpg</td><td>ISX_DEFAULTCOMPONENT13</td><td>BASILD~1.JPG|basildane.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\basildane.jpg</td><td>1</td><td/></row>
+		<row><td>basildane.jpg1</td><td>ISX_DEFAULTCOMPONENT14</td><td>BASILD~1.JPG|basildane.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\_vti_cnf\basildane.jpg</td><td>1</td><td/></row>
+		<row><td>botinfs.cnf</td><td>ISX_DEFAULTCOMPONENT2</td><td>botinfs.cnf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_pvt\botinfs.cnf</td><td>1</td><td/></row>
+		<row><td>bots.cnf</td><td>ISX_DEFAULTCOMPONENT2</td><td>bots.cnf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_pvt\bots.cnf</td><td>1</td><td/></row>
+		<row><td>bubble.png</td><td>ISX_DEFAULTCOMPONENT22</td><td>bubble.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\bubble.png</td><td>1</td><td/></row>
+		<row><td>bubble.png1</td><td>ISX_DEFAULTCOMPONENT23</td><td>bubble.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\_vti_cnf\bubble.png</td><td>1</td><td/></row>
+		<row><td>calculate.png</td><td>ISX_DEFAULTCOMPONENT26</td><td>CALCUL~1.PNG|calculate.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\calculate.png</td><td>1</td><td/></row>
+		<row><td>calculate.png1</td><td>ISX_DEFAULTCOMPONENT27</td><td>CALCUL~1.PNG|calculate.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\_vti_cnf\calculate.png</td><td>1</td><td/></row>
+		<row><td>caret.png</td><td>ISX_DEFAULTCOMPONENT8</td><td>caret.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\images\caret.png</td><td>1</td><td/></row>
+		<row><td>caret.png1</td><td>ISX_DEFAULTCOMPONENT9</td><td>caret.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\images\_vti_cnf\caret.png</td><td>1</td><td/></row>
+		<row><td>create.png</td><td>ISX_DEFAULTCOMPONENT28</td><td>create.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\create.png</td><td>1</td><td/></row>
+		<row><td>create.png1</td><td>ISX_DEFAULTCOMPONENT29</td><td>create.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\_vti_cnf\create.png</td><td>1</td><td/></row>
+		<row><td>credentials.png</td><td>ISX_DEFAULTCOMPONENT26</td><td>CREDEN~1.PNG|credentials.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\credentials.png</td><td>1</td><td/></row>
+		<row><td>credentials.png1</td><td>ISX_DEFAULTCOMPONENT27</td><td>CREDEN~1.PNG|credentials.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\_vti_cnf\credentials.png</td><td>1</td><td/></row>
+		<row><td>databasepath.png</td><td>ISX_DEFAULTCOMPONENT24</td><td>DATABA~1.PNG|databasepath.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\multiuser\databasepath.png</td><td>1</td><td/></row>
+		<row><td>databasepath.png1</td><td>ISX_DEFAULTCOMPONENT25</td><td>DATABA~1.PNG|databasepath.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\multiuser\_vti_cnf\databasepath.png</td><td>1</td><td/></row>
+		<row><td>default.html</td><td>ISX_DEFAULTCOMPONENT</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\default.html</td><td>1</td><td/></row>
+		<row><td>default.html1</td><td>ISX_DEFAULTCOMPONENT1</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html10</td><td>ISX_DEFAULTCOMPONENT15</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\default.html</td><td>1</td><td/></row>
+		<row><td>default.html11</td><td>ISX_DEFAULTCOMPONENT17</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html12</td><td>ISX_DEFAULTCOMPONENT20</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\information_links\default.html</td><td>1</td><td/></row>
+		<row><td>default.html13</td><td>ISX_DEFAULTCOMPONENT21</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\information_links\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html14</td><td>ISX_DEFAULTCOMPONENT22</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\default.html</td><td>1</td><td/></row>
+		<row><td>default.html15</td><td>ISX_DEFAULTCOMPONENT23</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html16</td><td>ISX_DEFAULTCOMPONENT24</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\multiuser\default.html</td><td>1</td><td/></row>
+		<row><td>default.html17</td><td>ISX_DEFAULTCOMPONENT25</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\multiuser\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html18</td><td>ISX_DEFAULTCOMPONENT26</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\default.html</td><td>1</td><td/></row>
+		<row><td>default.html19</td><td>ISX_DEFAULTCOMPONENT27</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html2</td><td>ISX_DEFAULTCOMPONENT3</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\command_line\default.html</td><td>1</td><td/></row>
+		<row><td>default.html20</td><td>ISX_DEFAULTCOMPONENT28</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\default.html</td><td>1</td><td/></row>
+		<row><td>default.html21</td><td>ISX_DEFAULTCOMPONENT29</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html22</td><td>ISX_DEFAULTCOMPONENT30</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\search\default.html</td><td>1</td><td/></row>
+		<row><td>default.html23</td><td>ISX_DEFAULTCOMPONENT31</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\search\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html24</td><td>ISX_DEFAULTCOMPONENT32</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\shutdown\default.html</td><td>1</td><td/></row>
+		<row><td>default.html25</td><td>ISX_DEFAULTCOMPONENT33</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\shutdown\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html26</td><td>ISX_DEFAULTCOMPONENT36</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\default.html</td><td>1</td><td/></row>
+		<row><td>default.html27</td><td>ISX_DEFAULTCOMPONENT37</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html28</td><td>ISX_DEFAULTCOMPONENT38</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\wakeup\default.html</td><td>1</td><td/></row>
+		<row><td>default.html29</td><td>ISX_DEFAULTCOMPONENT39</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\wakeup\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html3</td><td>ISX_DEFAULTCOMPONENT4</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\command_line\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html4</td><td>ISX_DEFAULTCOMPONENT5</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\contact\default.html</td><td>1</td><td/></row>
+		<row><td>default.html5</td><td>ISX_DEFAULTCOMPONENT6</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\contact\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html6</td><td>ISX_DEFAULTCOMPONENT11</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\eventlog\default.html</td><td>1</td><td/></row>
+		<row><td>default.html7</td><td>ISX_DEFAULTCOMPONENT12</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\eventlog\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>default.html8</td><td>ISX_DEFAULTCOMPONENT13</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\default.html</td><td>1</td><td/></row>
+		<row><td>default.html9</td><td>ISX_DEFAULTCOMPONENT14</td><td>DEFAUL~1.HTM|default.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\_vti_cnf\default.html</td><td>1</td><td/></row>
+		<row><td>deptodoc.btr</td><td>ISX_DEFAULTCOMPONENT2</td><td>deptodoc.btr</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_pvt\deptodoc.btr</td><td>1</td><td/></row>
+		<row><td>dll.png</td><td>ISX_DEFAULTCOMPONENT18</td><td>dll.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\dll.png</td><td>1</td><td/></row>
+		<row><td>dll.png1</td><td>ISX_DEFAULTCOMPONENT19</td><td>dll.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\_vti_cnf\dll.png</td><td>1</td><td/></row>
+		<row><td>doctodep.btr</td><td>ISX_DEFAULTCOMPONENT2</td><td>doctodep.btr</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_pvt\doctodep.btr</td><td>1</td><td/></row>
+		<row><td>email2.png</td><td>ISX_DEFAULTCOMPONENT28</td><td>email2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\email2.png</td><td>1</td><td/></row>
+		<row><td>email2.png1</td><td>ISX_DEFAULTCOMPONENT29</td><td>email2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\_vti_cnf\email2.png</td><td>1</td><td/></row>
 		<row><td>eventlogviewer.localized_res</td><td>EventLogViewer.Localized_resources</td><td>EventLogViewer.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EventLogViewer&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
 		<row><td>eventlogviewer.primary_outpu</td><td>EventLogViewer.Primary_output</td><td>EventLogViewer.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;EventLogViewer&gt;|Built</td><td>3</td><td/></row>
-		<row><td>gpl.png</td><td>ISX_DEFAULTCOMPONENT6</td><td>gpl.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\gpl.png</td><td>1</td><td/></row>
-		<row><td>history.png</td><td>ISX_DEFAULTCOMPONENT5</td><td>history.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\eventlog\history.png</td><td>1</td><td/></row>
-		<row><td>index.html</td><td>ISX_DEFAULTCOMPONENT3</td><td>INDEX~1.HTM|index.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\index.html</td><td>1</td><td/></row>
-		<row><td>layout.css</td><td>ISX_DEFAULTCOMPONENT17</td><td>layout.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\layout.css</td><td>1</td><td/></row>
-		<row><td>listener.html</td><td>ISX_DEFAULTCOMPONENT18</td><td>LISTEN~1.HTM|listener.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\listener.html</td><td>1</td><td/></row>
-		<row><td>listener.png</td><td>ISX_DEFAULTCOMPONENT18</td><td>listener.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\listener.png</td><td>1</td><td/></row>
-		<row><td>llama.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>llama.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\contact\llama.png</td><td>1</td><td/></row>
-		<row><td>luke.png</td><td>ISX_DEFAULTCOMPONENT6</td><td>luke.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\luke.png</td><td>1</td><td/></row>
-		<row><td>main.png</td><td>ISX_DEFAULTCOMPONENT8</td><td>main.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\main.png</td><td>1</td><td/></row>
-		<row><td>main.png1</td><td>ISX_DEFAULTCOMPONENT10</td><td>main.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\main.png</td><td>1</td><td/></row>
-		<row><td>menu.png</td><td>ISX_DEFAULTCOMPONENT4</td><td>menu.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\images\menu.png</td><td>1</td><td/></row>
-		<row><td>network.png</td><td>ISX_DEFAULTCOMPONENT7</td><td>network.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\network.png</td><td>1</td><td/></row>
-		<row><td>network_small.png</td><td>ISX_DEFAULTCOMPONENT7</td><td>NETWOR~1.PNG|network_small.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\network_small.png</td><td>1</td><td/></row>
-		<row><td>pages.css</td><td>ISX_DEFAULTCOMPONENT17</td><td>pages.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\pages.css</td><td>1</td><td/></row>
-		<row><td>properties.png</td><td>ISX_DEFAULTCOMPONENT12</td><td>PROPER~1.PNG|properties.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\properties.png</td><td>1</td><td/></row>
-		<row><td>properties2.png</td><td>ISX_DEFAULTCOMPONENT7</td><td>PROPER~1.PNG|properties2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\properties2.png</td><td>1</td><td/></row>
-		<row><td>properties_small2.png</td><td>ISX_DEFAULTCOMPONENT7</td><td>PROPER~1.PNG|properties_small2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\properties_small2.png</td><td>1</td><td/></row>
-		<row><td>right_click.png</td><td>ISX_DEFAULTCOMPONENT7</td><td>RIGHT_~1.PNG|right_click.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\right_click.png</td><td>1</td><td/></row>
-		<row><td>safe_mode.html</td><td>ISX_DEFAULTCOMPONENT18</td><td>SAFE_M~1.HTM|safe_mode.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\safe_mode.html</td><td>1</td><td/></row>
-		<row><td>safe_mode.png</td><td>ISX_DEFAULTCOMPONENT18</td><td>SAFE_M~1.PNG|safe_mode.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\safe_mode.png</td><td>1</td><td/></row>
-		<row><td>scheduler.png</td><td>ISX_DEFAULTCOMPONENT13</td><td>SCHEDU~1.PNG|scheduler.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\scheduler.png</td><td>1</td><td/></row>
-		<row><td>script.js</td><td>ISX_DEFAULTCOMPONENT3</td><td>script.js</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\script.js</td><td>1</td><td/></row>
-		<row><td>search.png</td><td>ISX_DEFAULTCOMPONENT14</td><td>search.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\search\search.png</td><td>1</td><td/></row>
-		<row><td>shutdown.png</td><td>ISX_DEFAULTCOMPONENT15</td><td>shutdown.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\shutdown\shutdown.png</td><td>1</td><td/></row>
-		<row><td>style.css</td><td>ISX_DEFAULTCOMPONENT17</td><td>style.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\style.css</td><td>1</td><td/></row>
-		<row><td>style1.css</td><td>ISX_DEFAULTCOMPONENT17</td><td>style1.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\style1.css</td><td>1</td><td/></row>
-		<row><td>style2.css</td><td>ISX_DEFAULTCOMPONENT17</td><td>style2.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\style2.css</td><td>1</td><td/></row>
-		<row><td>style3.css</td><td>ISX_DEFAULTCOMPONENT17</td><td>style3.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\style3.css</td><td>1</td><td/></row>
-		<row><td>styles.css</td><td>ISX_DEFAULTCOMPONENT3</td><td>styles.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\styles.css</td><td>1</td><td/></row>
-		<row><td>thumbs.db</td><td>ISX_DEFAULTCOMPONENT4</td><td>Thumbs.db</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\images\Thumbs.db</td><td>1</td><td/></row>
-		<row><td>thumbs.db1</td><td>ISX_DEFAULTCOMPONENT5</td><td>Thumbs.db</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\eventlog\Thumbs.db</td><td>1</td><td/></row>
-		<row><td>triggerweekly3.png</td><td>ISX_DEFAULTCOMPONENT13</td><td>TRIGGE~1.PNG|triggerWeekly3.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\triggerWeekly3.png</td><td>1</td><td/></row>
-		<row><td>usershutdown.png</td><td>ISX_DEFAULTCOMPONENT15</td><td>USERSH~1.PNG|userShutdown.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\shutdown\userShutdown.png</td><td>1</td><td/></row>
+		<row><td>fpdbw.ico</td><td>ISX_DEFAULTCOMPONENT2</td><td>fpdbw.ico</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_pvt\fpdbw.ico</td><td>1</td><td/></row>
+		<row><td>gpl.png</td><td>ISX_DEFAULTCOMPONENT13</td><td>gpl.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\gpl.png</td><td>1</td><td/></row>
+		<row><td>gpl.png1</td><td>ISX_DEFAULTCOMPONENT14</td><td>gpl.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\_vti_cnf\gpl.png</td><td>1</td><td/></row>
+		<row><td>history.png</td><td>ISX_DEFAULTCOMPONENT11</td><td>history.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\eventlog\history.png</td><td>1</td><td/></row>
+		<row><td>history.png1</td><td>ISX_DEFAULTCOMPONENT12</td><td>history.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\eventlog\_vti_cnf\history.png</td><td>1</td><td/></row>
+		<row><td>index.html</td><td>ISX_DEFAULTCOMPONENT7</td><td>INDEX~1.HTM|index.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\index.html</td><td>1</td><td/></row>
+		<row><td>index.html1</td><td>ISX_DEFAULTCOMPONENT10</td><td>INDEX~1.HTM|index.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\_vti_cnf\index.html</td><td>1</td><td/></row>
+		<row><td>layout.css</td><td>ISX_DEFAULTCOMPONENT34</td><td>layout.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\layout.css</td><td>1</td><td/></row>
+		<row><td>layout.css1</td><td>ISX_DEFAULTCOMPONENT35</td><td>layout.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\_vti_cnf\layout.css</td><td>1</td><td/></row>
+		<row><td>linkinfo.btr</td><td>ISX_DEFAULTCOMPONENT2</td><td>linkinfo.btr</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_pvt\linkinfo.btr</td><td>1</td><td/></row>
+		<row><td>listener.html</td><td>ISX_DEFAULTCOMPONENT36</td><td>LISTEN~1.HTM|listener.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\listener.html</td><td>1</td><td/></row>
+		<row><td>listener.html1</td><td>ISX_DEFAULTCOMPONENT37</td><td>LISTEN~1.HTM|listener.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\_vti_cnf\listener.html</td><td>1</td><td/></row>
+		<row><td>listener.png</td><td>ISX_DEFAULTCOMPONENT36</td><td>listener.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\listener.png</td><td>1</td><td/></row>
+		<row><td>listener.png1</td><td>ISX_DEFAULTCOMPONENT37</td><td>listener.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\_vti_cnf\listener.png</td><td>1</td><td/></row>
+		<row><td>llama.png</td><td>ISX_DEFAULTCOMPONENT5</td><td>llama.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\contact\llama.png</td><td>1</td><td/></row>
+		<row><td>llama.png1</td><td>ISX_DEFAULTCOMPONENT6</td><td>llama.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\contact\_vti_cnf\llama.png</td><td>1</td><td/></row>
+		<row><td>luke.png</td><td>ISX_DEFAULTCOMPONENT13</td><td>luke.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\luke.png</td><td>1</td><td/></row>
+		<row><td>luke.png1</td><td>ISX_DEFAULTCOMPONENT14</td><td>luke.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\faq\_vti_cnf\luke.png</td><td>1</td><td/></row>
+		<row><td>main.png</td><td>ISX_DEFAULTCOMPONENT18</td><td>main.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\main.png</td><td>1</td><td/></row>
+		<row><td>main.png1</td><td>ISX_DEFAULTCOMPONENT19</td><td>main.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\_vti_cnf\main.png</td><td>1</td><td/></row>
+		<row><td>main.png2</td><td>ISX_DEFAULTCOMPONENT22</td><td>main.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\main.png</td><td>1</td><td/></row>
+		<row><td>main.png3</td><td>ISX_DEFAULTCOMPONENT23</td><td>main.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\main_window\_vti_cnf\main.png</td><td>1</td><td/></row>
+		<row><td>menu.png</td><td>ISX_DEFAULTCOMPONENT8</td><td>menu.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\images\menu.png</td><td>1</td><td/></row>
+		<row><td>menu.png1</td><td>ISX_DEFAULTCOMPONENT9</td><td>menu.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\images\_vti_cnf\menu.png</td><td>1</td><td/></row>
+		<row><td>network.png</td><td>ISX_DEFAULTCOMPONENT15</td><td>network.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\network.png</td><td>1</td><td/></row>
+		<row><td>network.png1</td><td>ISX_DEFAULTCOMPONENT17</td><td>network.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\_vti_cnf\network.png</td><td>1</td><td/></row>
+		<row><td>network_small.png</td><td>ISX_DEFAULTCOMPONENT15</td><td>NETWOR~1.PNG|network_small.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\network_small.png</td><td>1</td><td/></row>
+		<row><td>network_small.png1</td><td>ISX_DEFAULTCOMPONENT17</td><td>NETWOR~1.PNG|network_small.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\_vti_cnf\network_small.png</td><td>1</td><td/></row>
+		<row><td>pages.css</td><td>ISX_DEFAULTCOMPONENT34</td><td>pages.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\pages.css</td><td>1</td><td/></row>
+		<row><td>pages.css1</td><td>ISX_DEFAULTCOMPONENT35</td><td>pages.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\_vti_cnf\pages.css</td><td>1</td><td/></row>
+		<row><td>properties.png</td><td>ISX_DEFAULTCOMPONENT26</td><td>PROPER~1.PNG|properties.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\properties.png</td><td>1</td><td/></row>
+		<row><td>properties.png1</td><td>ISX_DEFAULTCOMPONENT27</td><td>PROPER~1.PNG|properties.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\properties\_vti_cnf\properties.png</td><td>1</td><td/></row>
+		<row><td>properties2.png</td><td>ISX_DEFAULTCOMPONENT15</td><td>PROPER~1.PNG|properties2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\properties2.png</td><td>1</td><td/></row>
+		<row><td>properties2.png1</td><td>ISX_DEFAULTCOMPONENT17</td><td>PROPER~1.PNG|properties2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\_vti_cnf\properties2.png</td><td>1</td><td/></row>
+		<row><td>properties_small2.png</td><td>ISX_DEFAULTCOMPONENT15</td><td>PROPER~1.PNG|properties_small2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\properties_small2.png</td><td>1</td><td/></row>
+		<row><td>properties_small2.png1</td><td>ISX_DEFAULTCOMPONENT17</td><td>PROPER~1.PNG|properties_small2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\_vti_cnf\properties_small2.png</td><td>1</td><td/></row>
+		<row><td>right_click.png</td><td>ISX_DEFAULTCOMPONENT15</td><td>RIGHT_~1.PNG|right_click.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\right_click.png</td><td>1</td><td/></row>
+		<row><td>right_click.png1</td><td>ISX_DEFAULTCOMPONENT17</td><td>RIGHT_~1.PNG|right_click.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\getting_started\_vti_cnf\right_click.png</td><td>1</td><td/></row>
+		<row><td>safe_mode.html</td><td>ISX_DEFAULTCOMPONENT36</td><td>SAFE_M~1.HTM|safe_mode.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\safe_mode.html</td><td>1</td><td/></row>
+		<row><td>safe_mode.html1</td><td>ISX_DEFAULTCOMPONENT37</td><td>SAFE_M~1.HTM|safe_mode.html</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\_vti_cnf\safe_mode.html</td><td>1</td><td/></row>
+		<row><td>safe_mode.png</td><td>ISX_DEFAULTCOMPONENT36</td><td>SAFE_M~1.PNG|safe_mode.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\safe_mode.png</td><td>1</td><td/></row>
+		<row><td>safe_mode.png1</td><td>ISX_DEFAULTCOMPONENT37</td><td>SAFE_M~1.PNG|safe_mode.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\troubleshooting\_vti_cnf\safe_mode.png</td><td>1</td><td/></row>
+		<row><td>scheduler.png</td><td>ISX_DEFAULTCOMPONENT28</td><td>SCHEDU~1.PNG|scheduler.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\scheduler.png</td><td>1</td><td/></row>
+		<row><td>scheduler.png1</td><td>ISX_DEFAULTCOMPONENT29</td><td>SCHEDU~1.PNG|scheduler.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\_vti_cnf\scheduler.png</td><td>1</td><td/></row>
+		<row><td>script.js</td><td>ISX_DEFAULTCOMPONENT7</td><td>script.js</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\script.js</td><td>1</td><td/></row>
+		<row><td>script.js1</td><td>ISX_DEFAULTCOMPONENT10</td><td>script.js</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\_vti_cnf\script.js</td><td>1</td><td/></row>
+		<row><td>search.png</td><td>ISX_DEFAULTCOMPONENT30</td><td>search.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\search\search.png</td><td>1</td><td/></row>
+		<row><td>search.png1</td><td>ISX_DEFAULTCOMPONENT31</td><td>search.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\search\_vti_cnf\search.png</td><td>1</td><td/></row>
+		<row><td>service.cnf</td><td>ISX_DEFAULTCOMPONENT2</td><td>service.cnf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_pvt\service.cnf</td><td>1</td><td/></row>
+		<row><td>service.lck</td><td>ISX_DEFAULTCOMPONENT2</td><td>service.lck</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_pvt\service.lck</td><td>1</td><td/></row>
+		<row><td>services.cnf</td><td>ISX_DEFAULTCOMPONENT2</td><td>services.cnf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_pvt\services.cnf</td><td>1</td><td/></row>
+		<row><td>shutdown.png</td><td>ISX_DEFAULTCOMPONENT32</td><td>shutdown.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\shutdown\shutdown.png</td><td>1</td><td/></row>
+		<row><td>shutdown.png1</td><td>ISX_DEFAULTCOMPONENT33</td><td>shutdown.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\shutdown\_vti_cnf\shutdown.png</td><td>1</td><td/></row>
+		<row><td>structure.cnf</td><td>ISX_DEFAULTCOMPONENT2</td><td>STRUCT~1.CNF|structure.cnf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\_vti_pvt\structure.cnf</td><td>1</td><td/></row>
+		<row><td>style.css</td><td>ISX_DEFAULTCOMPONENT34</td><td>style.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\style.css</td><td>1</td><td/></row>
+		<row><td>style.css1</td><td>ISX_DEFAULTCOMPONENT35</td><td>style.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\styles\_vti_cnf\style.css</td><td>1</td><td/></row>
+		<row><td>styles.css</td><td>ISX_DEFAULTCOMPONENT7</td><td>styles.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\styles.css</td><td>1</td><td/></row>
+		<row><td>styles.css1</td><td>ISX_DEFAULTCOMPONENT10</td><td>styles.css</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\cssmenu\_vti_cnf\styles.css</td><td>1</td><td/></row>
+		<row><td>triggerweekly3.png</td><td>ISX_DEFAULTCOMPONENT28</td><td>TRIGGE~1.PNG|triggerWeekly3.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\triggerWeekly3.png</td><td>1</td><td/></row>
+		<row><td>triggerweekly3.png1</td><td>ISX_DEFAULTCOMPONENT29</td><td>TRIGGE~1.PNG|triggerWeekly3.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\scheduler\_vti_cnf\triggerWeekly3.png</td><td>1</td><td/></row>
+		<row><td>usershutdown.png</td><td>ISX_DEFAULTCOMPONENT32</td><td>USERSH~1.PNG|userShutdown.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\shutdown\userShutdown.png</td><td>1</td><td/></row>
+		<row><td>usershutdown.png1</td><td>ISX_DEFAULTCOMPONENT33</td><td>USERSH~1.PNG|userShutdown.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\shutdown\_vti_cnf\userShutdown.png</td><td>1</td><td/></row>
 		<row><td>wakeonlan.localized_resource</td><td>WakeOnLan.Localized_resources1</td><td>WakeOnLan.Localized resources</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLan&gt;|LocalizedResourceDlls</td><td>3</td><td/></row>
 		<row><td>wakeonlan.primary_output</td><td>WakeOnLan.Primary_output1</td><td>WakeOnLan.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLan&gt;|Built</td><td>3</td><td/></row>
 		<row><td>wakeonlan.xmlserializers.dll</td><td>WakeOnLan.XmlSerializers.dll</td><td>WAKEON~1.DLL|WakeOnLan.XmlSerializers.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\bin\Release\WakeOnLan.XmlSerializers.dll</td><td>1</td><td/></row>
 		<row><td>wakeonlanc.primary_output</td><td>WakeOnLanC.Primary_output1</td><td>WakeOnLanC.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WakeOnLanC&gt;|Built</td><td>3</td><td/></row>
 		<row><td>wakeonlanc.xmlserializers.dl</td><td>WakeOnLanC.XmlSerializers.dll</td><td>WAKEON~1.DLL|WakeOnLanC.XmlSerializers.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Console\WakeOnLanC\bin\Release\WakeOnLanC.XmlSerializers.dll</td><td>1</td><td/></row>
-		<row><td>wakeup.png</td><td>ISX_DEFAULTCOMPONENT19</td><td>wakeup.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\wakeup\wakeup.png</td><td>1</td><td/></row>
-		<row><td>wol_logo.png</td><td>ISX_DEFAULTCOMPONENT8</td><td>wol_logo.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\wol_logo.png</td><td>1</td><td/></row>
-		<row><td>world.png</td><td>ISX_DEFAULTCOMPONENT8</td><td>world.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\world.png</td><td>1</td><td/></row>
+		<row><td>wakeup.png</td><td>ISX_DEFAULTCOMPONENT38</td><td>wakeup.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\wakeup\wakeup.png</td><td>1</td><td/></row>
+		<row><td>wakeup.png1</td><td>ISX_DEFAULTCOMPONENT39</td><td>wakeup.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\wakeup\_vti_cnf\wakeup.png</td><td>1</td><td/></row>
+		<row><td>wol_logo.png</td><td>ISX_DEFAULTCOMPONENT18</td><td>wol_logo.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\wol_logo.png</td><td>1</td><td/></row>
+		<row><td>wol_logo.png1</td><td>ISX_DEFAULTCOMPONENT19</td><td>wol_logo.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\_vti_cnf\wol_logo.png</td><td>1</td><td/></row>
+		<row><td>world.png</td><td>ISX_DEFAULTCOMPONENT18</td><td>world.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\world.png</td><td>1</td><td/></row>
+		<row><td>world.png1</td><td>ISX_DEFAULTCOMPONENT19</td><td>world.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Projects\WakeOnLan\Help\images\_vti_cnf\world.png</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2204,26 +2328,46 @@
 		<row><td>EventLogViewer.Primary_output</td><td/><td/><td>_99D44F66_7ACC_48F7_BC59_8A59FF5BAEE1_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISO19770_LocalTag</td><td/><td/><td>_051A274E_72F7_42A5_93D3_C27FD60F74DD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISO19770_SystemTag</td><td/><td/><td>_9E071FAC_6EB8_4691_8A97_9D0973573218_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_BFC206B8_E6E7_4161_8FFC_5694DC4AB768_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_793BAE9D_D9E3_49BA_BDE9_BD2BC4460C7F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT10</td><td/><td/><td>_B51D4BAB_75EA_4D0D_815D_B7AF005A1422_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT11</td><td/><td/><td>_C49B37FC_CC11_406B_9E03_071ED35849C2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT12</td><td/><td/><td>_3B4469CC_9734_47C3_A3BA_7C95765D8A44_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT13</td><td/><td/><td>_B8C2857F_4B3F_4AFE_8314_6BE132C26DBD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT14</td><td/><td/><td>_6D82C389_E959_4BD1_9F36_946BBB87AF60_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT15</td><td/><td/><td>_2AA13203_9F94_4450_A52E_AB820F30EA13_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_F5AC00C4_C6EA_4102_B763_B32778FCFB93_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_6FF1561C_9406_4BE7_92F7_AC0C27B46375_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT10</td><td/><td/><td>_6B014381_8A3A_4042_AE5A_5FD4F151E448_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT11</td><td/><td/><td>_30573BD9_147B_4BF1_AFA8_2657B6EF6C14_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT12</td><td/><td/><td>_91D82919_6A26_471A_8D92_3BEFC5F424C9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT13</td><td/><td/><td>_D1982601_B21C_4E50_B159_32740F7CED0A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT14</td><td/><td/><td>_9F650F82_6EEE_4D21_B55B_3DC617D3CA4A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT15</td><td/><td/><td>_60D51C2B_DB5A_46F4_B834_DDC20C84FF61_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT16</td><td/><td/><td>_13B6982C_FF3C_4998_9D86_ADE4AE7DAC15_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT17</td><td/><td/><td>_941CEEEA_D441_4D0C_B19C_59A34237548F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT18</td><td/><td/><td>_83C54B50_4BD6_4CD4_8835_99970E2D7131_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT19</td><td/><td/><td>_673E5C02_E8BF_4340_90F2_FF963B459859_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_FC9F1153_A187_4777_91A2_B7607CC4815E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_042D7731_3396_42F1_A004_CC032088ECEA_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_7E5D7CBB_F89D_47E1_9DEE_38ED72310597_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_4B23ECEE_04F9_4A8B_8E6E_14CAE0C61FA0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_D39A6806_5231_4A58_948B_AD15A943A17D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_C848C925_81B2_40BF_9C70_FB97E477E372_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_44918DB7_A0EC_494B_9A5B_8BBF004E1C6D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_53BBF992_3FC1_4CBB_B667_BF8A81263233_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT17</td><td/><td/><td>_5C5C849D_1518_4535_9EC8_31C4A47F4A71_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT18</td><td/><td/><td>_444D3EDB_6A03_4001_BED4_D0A58DA4F2E3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT19</td><td/><td/><td>_633DB93B_22AC_44BF_A626_A13E7F08D027_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_64E3321B_BBA6_4F4F_B763_9E509E15DA2B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT20</td><td/><td/><td>_580926B0_9388_41E7_94CA_8CD76E7D6BEE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT21</td><td/><td/><td>_CD54D853_8E13_43B9_9CAF_812DB8B2802B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT22</td><td/><td/><td>_FA3AE4BC_57B5_4F4B_B875_3019D1F5AD98_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT23</td><td/><td/><td>_C4AE1E34_57E5_49A1_9068_D8AA30086B53_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT24</td><td/><td/><td>_D65B2AB2_DEB5_4C74_BF0C_14EFCBA16CAA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT25</td><td/><td/><td>_7EEF2664_AD08_4897_B967_1EECF3BE1DE5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT26</td><td/><td/><td>_C715091C_0AF6_4B80_8A67_609CABAFA0B1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT27</td><td/><td/><td>_44444FEF_0CAC_46E1_83C6_3DE6E1E106D4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT28</td><td/><td/><td>_DFBD16D9_A8CB_45A8_9F53_328D00057A2D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT29</td><td/><td/><td>_75A03B39_2827_41AD_A4C8_971541C249FA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_A744D48E_489A_400A_9A10_A21FFD132631_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT30</td><td/><td/><td>_929AF3B4_75AD_4D04_9238_D35CF36B4A7E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT31</td><td/><td/><td>_5294FDA5_D094_4E7A_8750_6DFEAA93D19D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT32</td><td/><td/><td>_F35537A1_E29F_4580_811B_58A6413DC81F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT33</td><td/><td/><td>_F66D4D1A_B773_46E7_AD4B_9C6312AB4644_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT34</td><td/><td/><td>_5207FA92_4C15_49CF_82F8_5A9F7046D722_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT35</td><td/><td/><td>_18FD35F0_4D29_406D_A3A3_EECF8252F5EE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT36</td><td/><td/><td>_D4F82862_5D60_4714_ADAD_84AD798990EA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT37</td><td/><td/><td>_7744AB0B_8DA3_46CF_A8FC_0B410060CFB8_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT38</td><td/><td/><td>_EA66149D_E4B0_4F46_A4CB_1F724236EA34_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT39</td><td/><td/><td>_211DADBD_5151_49E5_99C8_327E6E75B1CA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_25E18B60_9EA3_46B0_A98E_486E58E11B91_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_F4241BD8_93AF_4669_92D6_13591029B101_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_92C60603_385D_4198_8306_973DF4058004_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_C2ED18DC_3311_45AC_BDF8_5C804E9BBCA1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_DA1E4567_6613_4144_B0E6_04ADC3557801_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_BD1EB53D_BDBA_40F3_96D3_97F52747F568_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WakeOnLan.Localized_resources</td><td/><td/><td>_4AF0E96D_92C5_4FE2_BD4E_32F7A768A388_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WakeOnLan.Localized_resources1</td><td/><td/><td>_1EE1B9AB_3F71_47C0_870C_AC5DAA6DE14B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WakeOnLan.Primary_output</td><td/><td/><td>_03D16AAB_5C09_4436_9726_8C4CB13000F8_FILTER</td><td/><td/><td/><td/></row>
@@ -2537,6 +2681,7 @@
 		<row><td>CommonFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>EventLogViewer</td><td>EventLogViewer\EventLogViewer.vbproj</td><td/><td>2</td></row>
 		<row><td>Help</td><td>Help\Help.csproj</td><td/><td>2</td></row>
+		<row><td>Help1</td><td>http://localhost:34995</td><td/><td>2</td></row>
 		<row><td>ISPROJECTDIR</td><td/><td/><td>1</td></row>
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
