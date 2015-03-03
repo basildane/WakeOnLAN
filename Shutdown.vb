@@ -220,6 +220,7 @@ Public Class Shutdown
         Label_Operation.Text = My.Resources.Strings.BeginShutdown
 
         For Each item As ListViewItem In From item1 As ListViewItem In ListView1.Items Where (item1.SubItems(1).Text <> My.Resources.Strings.Pausing)
+            item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
             item.SubItems(1).Text = My.Resources.Strings.lit_Ready
             If (Not String.IsNullOrEmpty(shut_message.Text)) Then
                 PopupMessage(Machines(item.Text).Netbios, shut_message.Text)
@@ -266,6 +267,10 @@ Public Class Shutdown
                 Complete()
             End If
         End If
+    End Sub
+
+    Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
+        MessageBox.Show(ListView1.SelectedItems(0).SubItems(1).Text, ListView1.SelectedItems(0).SubItems(0).Text)
     End Sub
 
 End Class

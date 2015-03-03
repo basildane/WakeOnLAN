@@ -48,8 +48,15 @@ Public Class ShutdownThread
         _force = force
         _reboot = reboot
         _errMessage = ""
+        _backgroundWorker.WorkerReportsProgress = True
         _backgroundWorker.RunWorkerAsync()
     End Sub
+
+    Private Enum State
+        Idle = 0
+        Running = 1
+        Completed = 2
+    End Enum
 
     Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
         Dim machine As Machine
@@ -58,46 +65,83 @@ Public Class ShutdownThread
 
         Try
             machine = Machines(_item.Text)
-            _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
+            _backgroundWorker.ReportProgress(State.Running)
 
-            If (_action <> ShutdownAction.Abort And machine.ShutdownCommand.Length > 0) Then
-                Dim cmd As String
+            Select Case machine.ShutdownMethod
+                Case MachinesClass.ShutdownMethods.WMI
+                    Select Case _action
+                        Case ShutdownAction.Shutdown
+                            If (_force) Then
+                                If (_reboot) Then
+                                    flags = ShutdownFlags.ForcedReboot
+                                Else
+                                    flags = ShutdownFlags.ForcedShutdown
+                                End If
+                            Else
+                                If (_reboot) Then
+                                    flags = ShutdownFlags.Reboot
+                                Else
+                                    flags = ShutdownFlags.Shutdown
+                                End If
+                            End If
 
-                cmd = machine.ShutdownCommand
-                cmd = cmd.Replace("$USER", machine.UserID)
-                cmd = cmd.Replace("$PASS", encryption.EnigmaDecrypt(machine.Password))
-                Shell(cmd, AppWinStyle.Hide, False)
-                Return
-            End If
+                        Case ShutdownAction.Sleep
+                            flags = ShutdownFlags.Sleep
 
-            Select Case _action
-                Case ShutdownAction.Shutdown
-                    If (_force) Then
-                        If (_reboot) Then
-                            flags = ShutdownFlags.ForcedReboot
-                        Else
-                            flags = ShutdownFlags.ForcedShutdown
-                        End If
-                    Else
-                        If (_reboot) Then
-                            flags = ShutdownFlags.Reboot
-                        Else
-                            flags = ShutdownFlags.Shutdown
-                        End If
+                        Case ShutdownAction.Hibernate
+                            flags = ShutdownFlags.Hibernate
+
+                        Case ShutdownAction.Logoff
+                            If (_force) Then
+                                flags = ShutdownFlags.ForcedLogoff
+                            Else
+                                flags = ShutdownFlags.Logoff
+                            End If
+
+                    End Select
+
+                Case MachinesClass.ShutdownMethods.Custom
+                    If (_action <> ShutdownAction.Abort) Then
+                        Dim cmd As String
+
+                        cmd = machine.ShutdownCommand
+                        cmd = cmd.Replace("$USER", machine.UserID)
+                        cmd = cmd.Replace("$PASS", encryption.EnigmaDecrypt(machine.Password))
+                        Shell(cmd, AppWinStyle.Hide, False)
+                        Return
                     End If
+                    
+                Case MachinesClass.ShutdownMethods.Legacy
+                    Select Case _action
+                        Case ShutdownAction.Shutdown
+                            If (_force) Then
+                                If (_reboot) Then
+                                    flags = ShutdownFlags.LegacyForcedReboot
+                                Else
+                                    flags = ShutdownFlags.LegacyForcedShutdown
+                                End If
+                            Else
+                                If (_reboot) Then
+                                    flags = ShutdownFlags.LegacyReboot
+                                Else
+                                    flags = ShutdownFlags.LegacyShutdown
+                                End If
+                            End If
 
-                Case ShutdownAction.Sleep
-                    flags = ShutdownFlags.Sleep
+                            'Case ShutdownAction.Sleep
+                            '    flags = ShutdownFlags.Sleep
 
-                Case ShutdownAction.Hibernate
-                    flags = ShutdownFlags.Hibernate
+                            'Case ShutdownAction.Hibernate
+                            '    flags = ShutdownFlags.Hibernate
 
-                Case ShutdownAction.Logoff
-                    If (_force) Then
-                        flags = ShutdownFlags.ForcedLogoff
-                    Else
-                        flags = ShutdownFlags.Logoff
-                    End If
+                            'Case ShutdownAction.Logoff
+                            '    If (_force) Then
+                            '        flags = ShutdownFlags.ForcedLogoff
+                            '    Else
+                            '        flags = ShutdownFlags.Logoff
+                            '    End If
+
+                    End Select
 
             End Select
 
@@ -116,8 +160,17 @@ Public Class ShutdownThread
 
     End Sub
 
-    Private Sub backgroundWorker_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
+    Private Sub backgroundWorker_ProgressChanged(ByVal sender As Object, ByVal e As ProgressChangedEventArgs) Handles _backgroundWorker.ProgressChanged
+        Select Case e.ProgressPercentage
+            Case State.Running
+                _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
+                _item.SubItems(1).Text = "Please wait..."
 
+        End Select
+
+    End Sub
+
+    Private Sub backgroundWorker_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
         With _item.SubItems(1)
             If e.Result = 0 Then
                 .ForeColor = Color.Green

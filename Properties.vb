@@ -69,6 +69,7 @@ Public Class Properties
             m.UserID = _userID
             m.Password = _encryption.EnigmaEncrypt(_password)
             m.Domain = _domain
+            m.ShutdownMethod = ComboBoxShutdownMethod.SelectedIndex
             Machines.Add(m)
 
             Machines.Save()
@@ -97,6 +98,7 @@ Public Class Properties
         UDPPort.Text = "9"
         TTL.Text = "128"
         tRDPPort.Text = "3389"
+        ComboBoxShutdownMethod.SelectedIndex = 0
         TextBox_Notes.Text = String.Empty
         DisplayIPv4NetworkInterfaces("")
         ShowDialog(My.Forms.Explorer)
@@ -126,6 +128,8 @@ Public Class Properties
         _userID = m.UserID
         _password = _encryption.EnigmaDecrypt(m.Password)
         _domain = m.Domain
+        ComboBoxShutdownMethod.SelectedIndex = m.ShutdownMethod
+
         DisplayIPv4NetworkInterfaces(m.Adapter)
         ValidateChildren()
         ShowDialog(My.Forms.Explorer)

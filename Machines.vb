@@ -30,6 +30,11 @@ Public Class MachinesClass
     Inherits CollectionBase
 
     Public dirty As Boolean = False
+    Public Enum ShutdownMethods As Integer
+        WMI = 0
+        Custom = 1
+        Legacy = 2
+    End Enum
 
     Default Public Property Item(ByVal Name As String) As Machine
         Get
@@ -350,6 +355,16 @@ End Class
         End Get
         Set(value As String)
             _domain = value
+        End Set
+    End Property
+
+    Private _shutdownMethod As MachinesClass.ShutdownMethods
+    Public Property ShutdownMethod() As MachinesClass.ShutdownMethods
+        Get
+            Return _shutdownMethod
+        End Get
+        Set(value As MachinesClass.ShutdownMethods)
+            _shutdownMethod = value
         End Set
     End Property
 
