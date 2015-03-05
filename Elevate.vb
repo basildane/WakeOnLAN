@@ -4,7 +4,7 @@ Public Class Elevate
     <DllImport("user32", CharSet:=CharSet.Auto, SetLastError:=True)> _
     Shared Function SendMessage( _
         ByVal hWnd As IntPtr, _
-        ByVal Msg As UInt32, _
+        ByVal msg As UInt32, _
         ByVal wParam As Integer, _
         ByVal lParam As IntPtr) _
         As Integer
@@ -14,8 +14,8 @@ Public Class Elevate
 
     Private Sub CreateEventSource_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Update the Self-elevate button to show the UAC shield icon.
-        Me.btnElevate.FlatStyle = FlatStyle.System
-        SendMessage(Me.btnElevate.Handle, BCM_SETSHIELD, 0, New IntPtr(1))
+        btnElevate.FlatStyle = FlatStyle.System
+        SendMessage(btnElevate.Handle, BCM_SETSHIELD, 0, New IntPtr(1))
     End Sub
 
     Private Sub btnElevate_Click(sender As Object, e As EventArgs) Handles btnElevate.Click

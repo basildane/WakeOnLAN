@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -124,30 +124,15 @@
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 13</value>
-  </data>
-  <data name="lbLeaveBlank.Text" xml:space="preserve">
-    <value>* Оставьте пустым для DHCP</value>
-  </data>
-  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 23</value>
-  </data>
-  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="lbIP.Text" xml:space="preserve">
-    <value>IP-адрес</value>
-  </data>
   <data name="Group.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Group.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 51</value>
+  </data>
   <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 44</value>
+    <value>6, 54</value>
   </data>
   <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 13</value>
@@ -155,11 +140,8 @@
   <data name="lbGroup.Text" xml:space="preserve">
     <value>Название группы</value>
   </data>
-  <data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
   <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 18</value>
+    <value>67, 28</value>
   </data>
   <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 13</value>
@@ -167,23 +149,11 @@
   <data name="lbName.Text" xml:space="preserve">
     <value>Имя</value>
   </data>
-  <data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 17</value>
-  </data>
-  <data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>Выключить немедленно?</value>
-  </data>
-  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 13</value>
-  </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Завершение работы из командной строки:</value>
-  </data>
-  <data name="TextBox_Command.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="MachineName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 25</value>
   </data>
   <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 26</value>
@@ -227,6 +197,42 @@
   <data name="MAC.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
+  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 13</value>
+  </data>
+  <data name="lbLeaveBlank.Text" xml:space="preserve">
+    <value>* Оставьте пустым для DHCP</value>
+  </data>
+  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 23</value>
+  </data>
+  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="lbIP.Text" xml:space="preserve">
+    <value>IP-адрес</value>
+  </data>
+  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="TextBox_Command.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 13</value>
+  </data>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>Завершение работы из командной строки:</value>
+  </data>
+  <data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 17</value>
+  </data>
+  <data name="CheckBox_Emergency.Text" xml:space="preserve">
+    <value>Выключить немедленно?</value>
+  </data>
   <data name="Delete_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
@@ -241,5 +247,25 @@
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>ОК</value>
+  </data>
+  <data name="MachineName.ErrorMessage" xml:space="preserve">
+    <value>Invalid computer name</value>
+    <comment>Invalid computer name</comment>
+  </data>
+  <data name="tHostURI.ErrorMessage" xml:space="preserve">
+    <value>Invalid computer name</value>
+    <comment>Invalid computer name</comment>
+  </data>
+  <data name="MAC.ErrorMessage" xml:space="preserve">
+    <value>Неправильный MAC адресс. Используйте ##:##:##:##</value>
+    <comment>Invalid MAC Address.  Use ##:##:##:##:##:##</comment>
+  </data>
+  <data name="Broadcast.ErrorMessage" xml:space="preserve">
+    <value>Неправильный IP адресс. Используйте ###.###.###.###</value>
+    <comment>Invalid IP Address.  Use ###.###.###.###</comment>
+  </data>
+  <data name="IP.ErrorMessage" xml:space="preserve">
+    <value>Неправильный IP адресс. Используйте ###.###.###.###</value>
+    <comment>Invalid IP Address.  Use ###.###.###.###</comment>
   </data>
 </root>

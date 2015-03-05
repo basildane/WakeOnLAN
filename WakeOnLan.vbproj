@@ -628,13 +628,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    <Compile Include="UseridDialog.Designer.vb">
-      <DependentUpon>UseridDialog.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UseridDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Wake.vb" />
+    <EmbeddedResource Include="Controls\RegexTextBox.resx">
+      <DependentUpon>RegexTextBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Crash.nl.resx">
       <DependentUpon>Crash.vb</DependentUpon>
     </EmbeddedResource>
@@ -655,12 +652,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SafeMode.nl.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UseridDialog.nl.resx">
-      <DependentUpon>UseridDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UseridDialog.resx">
-      <DependentUpon>UseridDialog.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="Documentation\Human-02\network_transmit.png" />
     <None Include="Documentation\Human-02\emblem_ok.png" />
@@ -1030,6 +1021,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.fi.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Explorer.fi.resx">
       <DependentUpon>Explorer.vb</DependentUpon>

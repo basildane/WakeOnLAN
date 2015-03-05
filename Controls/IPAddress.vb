@@ -1,4 +1,6 @@
-﻿'    WakeOnLAN - Wake On LAN
+﻿Imports System.ComponentModel
+
+'    WakeOnLAN - Wake On LAN
 '    Copyright (C) 2004-2015 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
@@ -22,6 +24,22 @@ Namespace Controls
         Public Shadows Event TextChanged()
 
         Private _value As String = String.Empty
+
+        ' Message that should be available if the text does not 
+        ' match the pattern.
+        Private _errorMessage As String
+
+        ' Allow the developer to set the error message
+        ' at design time or run time.
+        <Localizable(True)> _
+        Public Property ErrorMessage() As String
+            Get
+                Return _errorMessage
+            End Get
+            Set(ByVal value As String)
+                _errorMessage = value
+            End Set
+        End Property
 
         Private Sub txtIP_GotFocus(ByVal sender As Object, ByVal e As EventArgs) Handles txtIP1.GotFocus, txtIP2.GotFocus, txtIP3.GotFocus, txtIP4.GotFocus
             Dim txtBox As TextBox = DirectCast(sender, TextBox)
@@ -71,7 +89,6 @@ Namespace Controls
         End Sub
 
         Private Sub txtIP_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles txtIP1.Validating, txtIP2.Validating, txtIP3.Validating, txtIP4.Validating
-            Debug.WriteLine("validating part")
             Dim txtBox As TextBox = DirectCast(sender, TextBox)
 
             If txtBox.Text = String.Empty Then Return
@@ -83,7 +100,6 @@ Namespace Controls
                 End If
             End If
 
-            Debug.WriteLine("validate part failed")
             txtBox.ForeColor = Color.Red
             e.Cancel = True
 
@@ -130,7 +146,6 @@ Namespace Controls
         End Property
 
         Private Sub IPAddress_Validated(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Validated
-            Debug.WriteLine("validated: " & _value)
             RaiseEvent TextChanged()
         End Sub
 

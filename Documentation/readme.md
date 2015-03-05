@@ -1,3 +1,20 @@
+# WakeOnLAN 2.10.19
+
+## Beta 15 - _Mar 3 2015_
+
+* Shutdown for Workgroups.  To use this, open properties for the host you want to shutdown.
+Click on "Password".  Enter a userid and password.  You can leave the domain blank.
+Click on Shutdown Method, select "Legacy".
+
+![Properties](https://sourceforge.net/p/aquilawol/discussion/1105198/thread/4500fb3a/351b/attachment/clip1.png)
+
+------
+
+## Beta 10 - _Mar 1 2015_
+
+* Testing new ideas for Shutdown on Workgroup type computers.
+
+
 # WakeOnLAN 2.10.18
 
 ## Beta 40 - _Feb 24 2015_

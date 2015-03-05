@@ -70,7 +70,7 @@ Public Class Listener
     Private Sub Async_Send_Receive(ByVal ar As IAsyncResult)
         Dim so As StateObject
         Dim bytesRead As Integer
-        Dim flags = SocketFlags.None
+        Dim flags As SocketFlags = SocketFlags.None
         Dim packetInfo As IPPacketInformation
 
         Try

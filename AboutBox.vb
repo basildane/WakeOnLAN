@@ -26,7 +26,7 @@ Public NotInheritable Class AboutBox
         LabelProductName.Text = My.Resources.Strings.Title
         LabelVersion.Text = System.String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
         LabelCopyright.Text = My.Application.Info.Copyright
-        LabelCulture.Text = My.Application.Culture.CurrentUICulture.NativeName.ToString()
+        LabelCulture.Text = Globalization.CultureInfo.CurrentUICulture.NativeName.ToString()
 
         If My.Application.Info.Version.Revision > 0 Then
             LabelVersion.Text &= " BETA " & My.Application.Info.Version.Revision

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,187 +59,216 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-	<data name="Cancel_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-		<value>MiddleRight</value>
-	</data>
-	<data name="Cancel_Button.Text" xml:space="preserve">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Cancel_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Annuler</value>
   </data>
-	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-	<data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
-		<value>134, 13</value>
-	</data>
-	<data name="lbLeaveBlank.Text" xml:space="preserve">
-    <value>* laisser vide pour le DHCP</value>
+  <data name="Group.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
-	<data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-		<value>MiddleRight</value>
-	</data>
-	<data name="lbIP.Text" xml:space="preserve">
-    <value>Adresse IP</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 54</value>
   </data>
-	<data name="Group.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-		<value>MiddleRight</value>
-	</data>
-	<data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
-		<value>53, 44</value>
-	</data>
-	<data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
-		<value>42, 13</value>
-	</data>
-	<data name="lbGroup.Text" xml:space="preserve">
+  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="lbGroup.Text" xml:space="preserve">
     <value>Groupe</value>
   </data>
-	<data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-		<value>MiddleRight</value>
-	</data>
-	<data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
-		<value>66, 16</value>
-	</data>
-	<data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
-		<value>29, 13</value>
-	</data>
-	<data name="lbName.Text" xml:space="preserve">
+  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 28</value>
+  </data>
+  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="lbName.Text" xml:space="preserve">
     <value>Nom</value>
   </data>
-	<data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-		<value>MiddleRight</value>
-	</data>
-	<data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
-		<value>107, 17</value>
-	</data>
-	<data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>Arrêt d'urgence ?</value>
+  <data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
-	<data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-		<value>161, 13</value>
-	</data>
-	<data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Ligne de commande pour l'arrêt :</value>
+  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 207</value>
   </data>
-	<data name="TextBox_Command.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-		<value>MiddleRight</value>
-	</data>
-	<data name="lbMAC.Text" xml:space="preserve">
+  <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 230</value>
+  </data>
+  <data name="lbMAC.Text" xml:space="preserve">
     <value>Adresse MAC</value>
   </data>
-	<data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
-		<value>7, 109</value>
-	</data>
-	<data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
-		<value>88, 13</value>
-	</data>
-	<data name="lbNetbios.Text" xml:space="preserve">
-    <value>Adresse de l'hôte</value>
-  </data>
-	<data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
-		<value>11, 54</value>
-	</data>
-	<data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
-		<value>83, 13</value>
-	</data>
-	<data name="lbSendTo.Text" xml:space="preserve">
-    <value>Envoyer WOL à</value>
-  </data>
-	<data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
-		<value>237, 52</value>
-	</data>
-	<data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
-		<value>43, 17</value>
-	</data>
-	<data name="rbURI.Text" xml:space="preserve">
-    <value>URl</value>
-  </data>
-	<data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
-		<value>133, 17</value>
-	</data>
-	<data name="rbIP.Text" xml:space="preserve">
-    <value>Adresse IP de diffusion</value>
-  </data>
-	<data name="MAC.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-		<value>MiddleRight</value>
-	</data>
-	<data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
-		<value>100, 209</value>
-	</data>
-	<data name="bCalcBroadcast.Text" xml:space="preserve">
+  <data name="bCalcBroadcast.Text" xml:space="preserve">
     <value>Calculer</value>
   </data>
-	<data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
-		<value>66, 212</value>
-	</data>
-	<data name="Help_Button.Text" xml:space="preserve">
+  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 109</value>
+  </data>
+  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="lbNetbios.Text" xml:space="preserve">
+    <value>Adresse de l'hôte</value>
+  </data>
+  <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 54</value>
+  </data>
+  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 13</value>
+  </data>
+  <data name="lbSendTo.Text" xml:space="preserve">
+    <value>Envoyer WOL à</value>
+  </data>
+  <data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 52</value>
+  </data>
+  <data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 17</value>
+  </data>
+  <data name="rbURI.Text" xml:space="preserve">
+    <value>URl</value>
+  </data>
+  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 17</value>
+  </data>
+  <data name="rbIP.Text" xml:space="preserve">
+    <value>Adresse IP de diffusion</value>
+  </data>
+  <data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 230</value>
+  </data>
+  <data name="MAC.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
+  </data>
+  <data name="lbLeaveBlank.Text" xml:space="preserve">
+    <value>* laisser vide pour le DHCP</value>
+  </data>
+  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 29</value>
+  </data>
+  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="lbIP.Text" xml:space="preserve">
+    <value>Adresse IP</value>
+  </data>
+  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="TextBox_Command.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 13</value>
+  </data>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>Ligne de commande pour l'arrêt :</value>
+  </data>
+  <data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 17</value>
+  </data>
+  <data name="CheckBox_Emergency.Text" xml:space="preserve">
+    <value>Arrêt d'urgence ?</value>
+  </data>
+  <data name="Help_Button.Text" xml:space="preserve">
     <value>Aide</value>
   </data>
-	<data name="Delete_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-		<value>MiddleRight</value>
-	</data>
-	<data name="Delete_Button.Text" xml:space="preserve">
+  <data name="Delete_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
     <value>Supprimer</value>
   </data>
-	<data name="$this.Text" xml:space="preserve">
+  <data name="$this.Text" xml:space="preserve">
     <value>Propriétés</value>
   </data>
-	<data name="OK_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-		<value>MiddleRight</value>
-	</data>
+  <data name="OK_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="MachineName.ErrorMessage" xml:space="preserve">
+    <value>Nom d'ordinateur invalide</value>
+    <comment>Invalid computer name</comment>
+  </data>
+  <data name="tHostURI.ErrorMessage" xml:space="preserve">
+    <value>Nom d'ordinateur invalide</value>
+    <comment>Invalid computer name</comment>
+  </data>
+  <data name="MAC.ErrorMessage" xml:space="preserve">
+    <value>Adresse MAC invalide. Utiliser ##:##:##:##:##:##</value>
+    <comment>Invalid MAC Address.  Use ##:##:##:##:##:##</comment>
+  </data>
+  <data name="Broadcast.ErrorMessage" xml:space="preserve">
+    <value>Adresse IP invalide. Utiliser ###.###.###.###</value>
+    <comment>Invalid IP Address.  Use ###.###.###.###</comment>
+  </data>
+  <data name="IP.ErrorMessage" xml:space="preserve">
+    <value>Adresse IP invalide. Utiliser ###.###.###.###</value>
+    <comment>Invalid IP Address.  Use ###.###.###.###</comment>
+  </data>
 </root>

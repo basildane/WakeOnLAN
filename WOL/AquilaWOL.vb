@@ -216,7 +216,7 @@ Public Class AquilaWolLibrary
         Dim dwDelay As Long
         Dim shutdownCommand As New StringBuilder("/c ")
         Dim p As New Process
-        Dim [error] As String
+        Dim [error] As String = String.Empty
 
         Try
             dwDelay = 0

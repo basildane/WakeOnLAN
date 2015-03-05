@@ -21,28 +21,14 @@ Imports System.Net.NetworkInformation
 Imports System.Linq
 
 Public Class Properties
-    Private _hostName As String
-    Private _userID As String
-    Private _password As String
-    Private _domain As String
-    Private _encryption As New Encryption(My.Application.Info.ProductName)
+    Private _previousHostName As String
+    Private ReadOnly _encryption As New Encryption(My.Application.Info.ProductName)
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
         Dim m As New Machine
-        Dim r As Integer
 
         Try
-            If (Not Integer.TryParse(UDPPort.Text, r)) Then
-                MessageBox.Show("UDP Port error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
-            End If
-
-            If (Not Integer.TryParse(TTL.Text, r)) Then
-                MessageBox.Show("TTL error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
-            End If
-
-            Machines.Remove(_hostName)
+            Machines.Remove(_previousHostName)
 
             m.Name = MachineName.Text
             m.MAC = MAC.Text
@@ -66,9 +52,9 @@ Public Class Properties
             m.Adapter = item.Value
             m.RDPPort = tRDPPort.Text
             m.Note = TextBox_Notes.Text
-            m.UserID = _userID
-            m.Password = _encryption.EnigmaEncrypt(_password)
-            m.Domain = _domain
+            m.UserID = tUserId.Text
+            m.Password = _encryption.EnigmaEncrypt(tPassword.Text)
+            m.Domain = tDomain.Text
             m.ShutdownMethod = ComboBoxShutdownMethod.SelectedIndex
             Machines.Add(m)
 
@@ -89,7 +75,7 @@ Public Class Properties
     End Sub
 
     Public Sub Create()
-        _hostName = String.Empty
+        _previousHostName = String.Empty
         Text = String.Format(My.Resources.Strings.Properties, My.Resources.Strings.isNew)
         Delete_Button.Visible = False
         IP.Text = String.Empty
@@ -107,7 +93,7 @@ Public Class Properties
     Public Sub Edit(ByVal hostName As String)
         Dim m As Machine
 
-        _hostName = hostName
+        _previousHostName = hostName
         Text = String.Format(My.Resources.Strings.Properties, hostName)
 
         m = Machines(hostName)
@@ -125,9 +111,9 @@ Public Class Properties
         rbURI.Checked = (m.Method = 1)
         tRDPPort.Text = m.RDPPort
         TextBox_Notes.Text = m.Note
-        _userID = m.UserID
-        _password = _encryption.EnigmaDecrypt(m.Password)
-        _domain = m.Domain
+        tUserId.Text = m.UserID
+        tPassword.Text = _encryption.EnigmaDecrypt(m.Password)
+        tDomain.Text = m.Domain
         ComboBoxShutdownMethod.SelectedIndex = m.ShutdownMethod
 
         DisplayIPv4NetworkInterfaces(m.Adapter)
@@ -177,7 +163,7 @@ Public Class Properties
 
     Private Sub Delete_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Delete_Button.Click
         If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format(My.Resources.Strings.Delete, 1), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
-            Machines.Remove(_hostName)
+            Machines.Remove(_previousHostName)
             DialogResult = Windows.Forms.DialogResult.OK
         Else
             DialogResult = Windows.Forms.DialogResult.Cancel
@@ -186,39 +172,28 @@ Public Class Properties
         Close()
     End Sub
 
-    Private Sub CheckValidation()
-        For Each c As Control In From c1 As Control In Controls Where ErrorProvider1.GetError(c1).Length
-            OK_Button.Enabled = False
-            Exit Sub
+    Private Sub Controls_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MachineName.Validating, tHostURI.Validating, MAC.Validating, Broadcast.Validating, IP.Validating, UDPPort.Validating, TTL.Validating
+        If sender.IsValid() Then
+            ErrorProvider1.SetError(sender, String.Empty)
+        Else
+            ErrorProvider1.SetError(sender, sender.ErrorMessage)
+        End If
+
+        For Each tab As TabPage In TabControl1.TabPages
+            For Each c As Control In tab.Controls
+                If ErrorProvider1.GetError(c).Length Then
+                    OK_Button.Enabled = False
+
+                    Dim rc As Rectangle = TabControl1.GetTabRect(tab.TabIndex)
+                    ErrorProvider1.SetIconPadding(TabControl1, -rc.Right)
+                    ErrorProvider1.SetError(TabControl1, ErrorProvider1.GetError(c).ToString())
+                    Exit Sub
+                End If
+            Next
         Next
+
+        ErrorProvider1.SetError(TabControl1, String.Empty)
         OK_Button.Enabled = True
-    End Sub
-
-    Private Sub MachineName_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MachineName.Validating
-        If MachineName.IsValid() Then
-            ErrorProvider1.SetError(sender, "")
-        Else
-            ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidName)
-        End If
-        CheckValidation()
-    End Sub
-
-    Private Sub MAC_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MAC.Validating
-        If MAC.IsValid() Then
-            ErrorProvider1.SetError(sender, "")
-        Else
-            ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidMAC)
-        End If
-        CheckValidation()
-    End Sub
-
-    Private Sub IP_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles IP.Validating
-        If IP.IsValid() Then
-            ErrorProvider1.SetError(sender, "")
-        Else
-            ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidIP)
-        End If
-        CheckValidation()
     End Sub
 
     Private Sub bCalcBroadcast_Click(sender As System.Object, e As EventArgs) Handles bCalcBroadcast.Click
@@ -229,28 +204,10 @@ Public Class Properties
         ShowHelp(Me, "properties\default.html")
     End Sub
 
-    Private Sub tHostURI_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles tHostURI.Validating
-        If tHostURI.IsValid() Then
-            ErrorProvider1.SetError(sender, "")
-        Else
-            ErrorProvider1.SetError(sender, My.Resources.Strings.ErrorInvalidName)
-        End If
-        CheckValidation()
+    Private Sub MachineName_TextChanged(sender As Object, e As EventArgs) Handles MachineName.TextChanged
+        Text = String.Format(My.Resources.Strings.Properties, MachineName.Text)
     End Sub
 
-    Private Sub bUserID_Click(sender As Object, e As EventArgs) Handles bUserID.Click
-        Dim userIdDialog As New UseridDialog
-
-        userIdDialog.tUserId.Text = _userID
-        userIdDialog.tPassword.Text = _password
-        userIdDialog.tDomain.Text = _domain
-
-        If (userIdDialog.ShowDialog(Me) = DialogResult.OK) Then
-            _userID = userIdDialog.tUserId.Text
-            _password = userIdDialog.tPassword.Text
-            _domain = userIdDialog.tDomain.Text
-        End If
-    End Sub
 End Class
 
 Public Class ComboboxItem
