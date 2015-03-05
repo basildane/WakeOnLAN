@@ -57,7 +57,7 @@ Public Class Properties
             m.Domain = tDomain.Text
             m.ShutdownMethod = ComboBoxShutdownMethod.SelectedIndex
             Machines.Add(m)
-
+            
             Machines.Save()
             DialogResult = Windows.Forms.DialogResult.OK
             Close()
@@ -164,6 +164,7 @@ Public Class Properties
     Private Sub Delete_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Delete_Button.Click
         If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format(My.Resources.Strings.Delete, 1), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
             Machines.Remove(_previousHostName)
+            Machines.Save()
             DialogResult = Windows.Forms.DialogResult.OK
         Else
             DialogResult = Windows.Forms.DialogResult.Cancel

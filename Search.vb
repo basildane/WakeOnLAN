@@ -57,13 +57,14 @@ Public Class Search
             machine.UDPPort = 9
             machine.TTL = 128
             machine.RDPPort = 3389
-            machine.ShutdownCommand = ""
+            machine.ShutdownCommand = String.Empty
             If (ComboBoxGroup.Text <> _none) Then
                 machine.Group = ComboBoxGroup.Text
             End If
 
             Machines.Add(machine)
         Next
+        Machines.Save()
 
         MySettings.Default.SearchStart = IpAddressControl_Start.Text
         MySettings.Default.SearchEnd = IpAddressControl_End.Text

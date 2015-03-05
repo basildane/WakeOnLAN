@@ -638,6 +638,7 @@ Public Class Explorer
                 Machines.Remove(l.Name)
                 l.Remove()
             Next
+            Machines.Save()
         End If
     End Sub
 
