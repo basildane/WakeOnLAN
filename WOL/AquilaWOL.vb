@@ -219,7 +219,7 @@ Public Class AquilaWolLibrary
         Dim [error] As String = String.Empty
 
         Try
-            dwDelay = 0
+            dwDelay = 30
 
             If (Not String.IsNullOrEmpty(userid)) Then
                 shutdownCommand.AppendFormat("net use \\{0}\IPC$ {1} /User:{2} & ", host, password, userid)
@@ -241,6 +241,10 @@ Public Class AquilaWolLibrary
                     shutdownCommand.Append(" /r /f")
 
             End Select
+
+            If Not String.IsNullOrEmpty(message) Then
+                shutdownCommand.AppendFormat(" /c ""{0}""", message)
+            End If
 
             ' Define variables to track the peak
             ' memory usage of the process.

@@ -35,6 +35,7 @@ Public Class ShutdownThread
     Private ReadOnly _item As ListViewItem
     Private ReadOnly _progressbar As ProgressBar
     Private ReadOnly _action As ShutdownAction
+    Private ReadOnly _message As String
     Private ReadOnly _force As Boolean
     Private ReadOnly _reboot As Boolean
     Private _errMessage As String
@@ -145,7 +146,7 @@ Public Class ShutdownThread
 
             End Select
 
-            AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
+            AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain, _message)
             WriteLog(String.Format("Sending {0} to ""{1}""", _action.ToString(), machine.Name), EventLogEntryType.Information, EventId.Shutdown)
 
         Catch ex As Exception

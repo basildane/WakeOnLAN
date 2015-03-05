@@ -4764,9 +4764,9 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]WakeOnLan.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{F9A3BE44-3580-453C-BD5C-27FDC2EF6E0F}</td><td/></row>
+		<row><td>ProductCode</td><td>{69720C05-CE1D-47DA-85B7-A63D4174400A}</td><td/></row>
 		<row><td>ProductName</td><td>WakeOnLAN</td><td/></row>
-		<row><td>ProductVersion</td><td>2.10.0019.15</td><td/></row>
+		<row><td>ProductVersion</td><td>2.10.0019.21</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

@@ -18,13 +18,18 @@
 
 Imports System.Xml.Serialization
 
-
 Module MachinesModule
     Public Machines As New MachinesClass
 End Module
 
 Public Class MachinesClass
     Inherits CollectionBase
+
+    Public Enum ShutdownMethods As Integer
+        WMI = 0
+        Custom = 1
+        Legacy = 2
+    End Enum
 
     Default Public Property Item(ByVal Name As String) As Machine
         Get
@@ -45,7 +50,7 @@ Public Class MachinesClass
     End Property
 
     Public Sub Load(Path As String)
-        If (Path = "") Then
+        If String.IsNullOrEmpty(Path) Then
             Path = IO.Path.Combine(IO.Directory.GetParent(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, "machines.xml")
         End If
 
@@ -93,4 +98,5 @@ End Class
     Public UserID As String = String.Empty
     Public Password As String = String.Empty
     Public Domain As String = String.Empty
+    Public ShutdownMethod As MachinesClass.ShutdownMethods = MachinesClass.ShutdownMethods.WMI
 End Class

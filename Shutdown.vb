@@ -139,7 +139,7 @@ Public Class Shutdown
         timer.Stop()
         For Each item As ListViewItem In From item1 As ListViewItem In ListView1.Items
             item.SubItems(1).Text = My.Resources.Strings.lit_Ready
-            PopupMessage(item.Text, String.Format(My.Resources.Strings.AbortingShutdown, item.Text))
+            PopupMessage(Machines(item.Text), String.Format(My.Resources.Strings.AbortingShutdown, item.Text))
         Next
 
         Cursor = Cursors.Default
@@ -223,7 +223,7 @@ Public Class Shutdown
             item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
             item.SubItems(1).Text = My.Resources.Strings.lit_Ready
             If (Not String.IsNullOrEmpty(shut_message.Text)) Then
-                PopupMessage(Machines(item.Text).Netbios, shut_message.Text)
+                PopupMessage(Machines(item.Text), shut_message.Text)
             End If
         Next
 
@@ -232,11 +232,19 @@ Public Class Shutdown
 
     End Sub
 
-    Private Sub PopupMessage(host As String, message As String)
+    Private Sub PopupMessage(machine As Machine, message As String)
         Try
-            If (Not String.IsNullOrEmpty(message)) Then
-                Shell(String.Format("msg * /server:{0} ""{1}""", host, message), AppWinStyle.Hide, False)
-            End If
+            If (String.IsNullOrEmpty(message)) Then Return
+
+            Select Case machine.ShutdownMethod
+                Case MachinesClass.ShutdownMethods.WMI
+                    Shell(String.Format("msg * /server:{0} ""{1}""", machine.Netbios, message), AppWinStyle.Hide, False)
+
+                Case MachinesClass.ShutdownMethods.Custom
+
+                Case MachinesClass.ShutdownMethods.Legacy
+
+            End Select
 
         Catch
 

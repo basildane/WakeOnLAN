@@ -111,9 +111,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="EventLogViewer.nl-BE.resx">
-      <DependentUpon>EventLogViewer.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EventLogViewer.nl.resx">
       <DependentUpon>EventLogViewer.vb</DependentUpon>
     </EmbeddedResource>

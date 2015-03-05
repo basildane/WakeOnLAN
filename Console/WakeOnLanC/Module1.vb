@@ -231,7 +231,6 @@ Module Module1
 
     Private Function DoWakeup() As Integer
         Dim machine As Machine
-        'Dim nets As String() = {"255.255.255.0", "255.255.255.128"}
         
         If _all Then
             Try
@@ -381,12 +380,37 @@ Module Module1
         Dim encryption As New Encryption(My.Application.Info.ProductName)
 
         Try
-            If String.IsNullOrEmpty(machine.ShutdownCommand) Then
-                PopupMessage(machine.Netbios, _alertMessage)
-                AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
-            Else
-                Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
-            End If
+            Select Case machine.ShutdownMethod
+                Case MachinesClass.ShutdownMethods.WMI
+                    PopupMessage(machine.Netbios, _alertMessage)
+                    AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
+
+                Case MachinesClass.ShutdownMethods.Custom
+                    Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+
+                Case MachinesClass.ShutdownMethods.Legacy
+                    Select Case flags
+                        Case ShutdownFlags.Shutdown
+                            flags = ShutdownFlags.LegacyShutdown
+
+                        Case ShutdownFlags.ForcedShutdown
+                            flags = ShutdownFlags.LegacyForcedShutdown
+
+                        Case ShutdownFlags.Reboot
+                            flags = ShutdownFlags.LegacyReboot
+
+                        Case ShutdownFlags.ForcedReboot
+                            flags = ShutdownFlags.LegacyForcedReboot
+
+                        Case Else
+                            Throw New Exception(String.Format("{0} not supported with Legacy shutdown method.", flags.ToString()))
+
+                    End Select
+
+                    AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain, _alertMessage)
+
+            End Select
+
             Console.WriteLine("...Successful")
             WriteLog(String.Format("Sending {0} to ""{1}""", flags.ToString(), machine.Name), EventLogEntryType.Information, EventId.Shutdown)
 
