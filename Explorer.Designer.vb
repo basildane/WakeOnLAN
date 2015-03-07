@@ -88,6 +88,7 @@ Partial Class Explorer
         Me.Note = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Group = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ContextMenuStrip_Machines = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.NewToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.WakeUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
@@ -337,9 +338,15 @@ Partial Class Explorer
         '
         'ContextMenuStrip_Machines
         '
-        Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.ClearIPToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem1, Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.ClearIPToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ContextMenuStrip_Machines.Name = "ContextMenuStrip_Machines"
         resources.ApplyResources(Me.ContextMenuStrip_Machines, "ContextMenuStrip_Machines")
+        '
+        'NewToolStripMenuItem1
+        '
+        Me.NewToolStripMenuItem1.Image = Global.WakeOnLan.My.Resources.Resources._new
+        Me.NewToolStripMenuItem1.Name = "NewToolStripMenuItem1"
+        resources.ApplyResources(Me.NewToolStripMenuItem1, "NewToolStripMenuItem1")
         '
         'WakeUpToolStripMenuItem
         '
@@ -368,11 +375,13 @@ Partial Class Explorer
         '
         'ClearIPToolStripMenuItem
         '
+        Me.ClearIPToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.eraser_exclamation
         Me.ClearIPToolStripMenuItem.Name = "ClearIPToolStripMenuItem"
         resources.ApplyResources(Me.ClearIPToolStripMenuItem, "ClearIPToolStripMenuItem")
         '
         'DeleteToolStripMenuItem
         '
+        Me.DeleteToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.deletered
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
         resources.ApplyResources(Me.DeleteToolStripMenuItem, "DeleteToolStripMenuItem")
         '
@@ -421,6 +430,7 @@ Partial Class Explorer
         '
         'NewToolStripMenuItem
         '
+        Me.NewToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources._new
         resources.ApplyResources(Me.NewToolStripMenuItem, "NewToolStripMenuItem")
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         '
@@ -902,5 +912,6 @@ Partial Class Explorer
     Friend WithEvents EventLogToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EventLogToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents ClearIPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NewToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class

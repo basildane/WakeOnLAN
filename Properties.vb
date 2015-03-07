@@ -18,7 +18,6 @@
 
 Imports System.Windows.Forms
 Imports System.Net.NetworkInformation
-Imports System.Linq
 
 Public Class Properties
     Private _previousHostName As String
@@ -194,6 +193,12 @@ Public Class Properties
         Next
 
         ErrorProvider1.SetError(TabControl1, String.Empty)
+
+        If String.IsNullOrEmpty(MachineName.Text) Then Return
+        If String.IsNullOrEmpty(MAC.Text) Then Return
+        If String.IsNullOrEmpty(tHostURI.Text) Then Return
+        If String.IsNullOrEmpty(Broadcast.Text) Then Return
+
         OK_Button.Enabled = True
     End Sub
 

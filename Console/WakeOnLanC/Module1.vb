@@ -22,7 +22,7 @@ Imports System.Threading
 Imports WOL
 Imports WOL.AquilaWolLibrary
 
-Module Module1
+Public Module Module1
     Enum ModeTypes
         None
         Shutdown
@@ -231,7 +231,7 @@ Module Module1
 
     Private Function DoWakeup() As Integer
         Dim machine As Machine
-        
+
         If _all Then
             Try
                 Machines.Load(_path)

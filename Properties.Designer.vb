@@ -88,8 +88,8 @@ Partial Class Properties
         '
         'OK_Button
         '
-        Me.ErrorProvider1.SetIconAlignment(Me.OK_Button, CType(resources.GetObject("OK_Button.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
         resources.ApplyResources(Me.OK_Button, "OK_Button")
+        Me.ErrorProvider1.SetIconAlignment(Me.OK_Button, CType(resources.GetObject("OK_Button.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
         Me.OK_Button.Name = "OK_Button"
         '
         'Cancel_Button

@@ -375,8 +375,19 @@ Public Class Explorer
         ListView.ShowGroups = ShowGroupsToolStripMenuItem.Checked
     End Sub
 
-    Private Sub ContextMenuStrip_Machines_Opening(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip_Machines.Opening
+    Private Sub ContextMenuStrip_Machines_Opening(ByVal sender As System.Object, ByVal e As CancelEventArgs) Handles ContextMenuStrip_Machines.Opening
+        Dim showThem As Boolean
+
         PropertiesToolStripMenuItem.Visible = (ListView.SelectedItems.Count = 1)
+        showThem = ListView.SelectedItems.Count > 0
+
+        WakeUpToolStripMenuItem.Visible = showThem
+        ToolStripSeparator10.Visible = showThem
+        ShutdownToolStripMenuItem.Visible = showThem
+        RDPToolStripMenuItem.Visible = showThem
+        ClearIPToolStripMenuItem.Visible = showThem
+        DeleteToolStripMenuItem.Visible = showThem
+
     End Sub
 
     Private Sub ListView_ColumnClick(ByVal sender As Object, ByVal e As Windows.Forms.ColumnClickEventArgs) Handles ListView.ColumnClick
@@ -579,7 +590,7 @@ Public Class Explorer
         Properties.Dispose()
     End Sub
 
-    Private Sub NewToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click
+    Private Sub NewToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripMenuItem1.Click
         Properties.Create()
         If Properties.DialogResult = Windows.Forms.DialogResult.OK Then
             LoadTree()

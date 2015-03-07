@@ -108,6 +108,7 @@ Public Class ShutdownThread
                         cmd = machine.ShutdownCommand
                         cmd = cmd.Replace("$USER", machine.UserID)
                         cmd = cmd.Replace("$PASS", encryption.EnigmaDecrypt(machine.Password))
+                        cmd = cmd.Replace("$HOST", machine.Netbios)
                         Shell(cmd, AppWinStyle.Hide, False)
                         Return
                     End If

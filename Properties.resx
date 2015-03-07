@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="OK_Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -140,7 +144,6 @@
   <data name="Cancel_Button.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Cancel_Button.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
@@ -343,7 +346,7 @@
     <value>MachineName</value>
   </data>
   <data name="&gt;&gt;MachineName.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;MachineName.Parent" xml:space="preserve">
     <value>TabProperties</value>
@@ -394,7 +397,7 @@
     <value>tHostURI</value>
   </data>
   <data name="&gt;&gt;tHostURI.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tHostURI.Parent" xml:space="preserve">
     <value>TabWakeUp</value>
@@ -772,7 +775,7 @@
     <value>TTL</value>
   </data>
   <data name="&gt;&gt;TTL.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TTL.Parent" xml:space="preserve">
     <value>TabWakeUp</value>
@@ -796,7 +799,7 @@
     <value>UDPPort</value>
   </data>
   <data name="&gt;&gt;UDPPort.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;UDPPort.Parent" xml:space="preserve">
     <value>TabWakeUp</value>
@@ -823,7 +826,7 @@
     <value>Broadcast</value>
   </data>
   <data name="&gt;&gt;Broadcast.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Broadcast.Parent" xml:space="preserve">
     <value>TabWakeUp</value>
@@ -850,7 +853,7 @@
     <value>MAC</value>
   </data>
   <data name="&gt;&gt;MAC.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;MAC.Parent" xml:space="preserve">
     <value>TabWakeUp</value>
@@ -1054,7 +1057,7 @@
     <value>107, 25</value>
   </data>
   <data name="IP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 24</value>
+    <value>129, 20</value>
   </data>
   <data name="IP.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1063,7 +1066,7 @@
     <value>IP</value>
   </data>
   <data name="&gt;&gt;IP.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;IP.Parent" xml:space="preserve">
     <value>TabStatus</value>
@@ -1090,7 +1093,7 @@
     <value>tRDPPort</value>
   </data>
   <data name="&gt;&gt;tRDPPort.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tRDPPort.Parent" xml:space="preserve">
     <value>TabStatus</value>
@@ -1141,7 +1144,7 @@
     <value>tDomain</value>
   </data>
   <data name="&gt;&gt;tDomain.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tDomain.Parent" xml:space="preserve">
     <value>TabShutdown</value>
@@ -1165,7 +1168,7 @@
     <value>tPassword</value>
   </data>
   <data name="&gt;&gt;tPassword.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tPassword.Parent" xml:space="preserve">
     <value>TabShutdown</value>
@@ -1189,7 +1192,7 @@
     <value>tUserId</value>
   </data>
   <data name="&gt;&gt;tUserId.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.10.19.21, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tUserId.Parent" xml:space="preserve">
     <value>TabShutdown</value>
