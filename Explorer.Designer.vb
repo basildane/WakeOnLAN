@@ -338,7 +338,7 @@ Partial Class Explorer
         '
         'ContextMenuStrip_Machines
         '
-        Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem1, Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.ClearIPToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.NewToolStripMenuItem1, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.ClearIPToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ContextMenuStrip_Machines.Name = "ContextMenuStrip_Machines"
         resources.ApplyResources(Me.ContextMenuStrip_Machines, "ContextMenuStrip_Machines")
         '
