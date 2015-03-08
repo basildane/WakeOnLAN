@@ -30,6 +30,11 @@ Public Class MachinesClass
     Inherits CollectionBase
 
     Public dirty As Boolean = False
+    Public Enum ShutdownMethods As Integer
+        WMI = 0
+        Custom = 1
+        Legacy = 2
+    End Enum
 
     Default Public Property Item(ByVal Name As String) As Machine
         Get
@@ -60,7 +65,7 @@ Public Class MachinesClass
     End Sub
 
     Public Function GetFile() As String
-        If My.Settings.dbPath = "" Then
+        If String.IsNullOrEmpty(My.Settings.dbPath) Then
             My.Settings.dbPath = IO.Path.Combine(IO.Directory.GetParent(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, "machines.xml")
         End If
 
@@ -145,18 +150,12 @@ Public Class MachinesClass
     End Sub
 
     Public Sub Remove(ByVal name As String)
-        Dim machine As Machine = Nothing
-        Dim i As Integer
+        Dim machine As Machine = Machines(name)
 
-        For i = 0 To List.Count - 1
-            machine = List(i)
-            If machine.Name = name Then Exit For
-        Next
-        If i = List.Count Then Exit Sub
-
+        If machine Is Nothing Then Return
         machine.Cancel()
         RemoveHandler machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
-        List.RemoveAt(i)
+        List.Remove(machine)
         dirty = True
     End Sub
 
@@ -167,8 +166,6 @@ Public Class MachinesClass
             machine = List(i)
             machine.Cancel()
             RemoveHandler machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
-            List.RemoveAt(i)
-            dirty = True
         Next
     End Sub
 
@@ -350,6 +347,16 @@ End Class
         End Get
         Set(value As String)
             _domain = value
+        End Set
+    End Property
+
+    Private _shutdownMethod As MachinesClass.ShutdownMethods
+    Public Property ShutdownMethod() As MachinesClass.ShutdownMethods
+        Get
+            Return _shutdownMethod
+        End Get
+        Set(value As MachinesClass.ShutdownMethods)
+            _shutdownMethod = value
         End Set
     End Property
 

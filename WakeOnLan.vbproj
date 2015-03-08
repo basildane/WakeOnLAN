@@ -628,13 +628,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    <Compile Include="UseridDialog.Designer.vb">
-      <DependentUpon>UseridDialog.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UseridDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Wake.vb" />
+    <EmbeddedResource Include="Controls\RegexTextBox.resx">
+      <DependentUpon>RegexTextBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Crash.nl.resx">
       <DependentUpon>Crash.vb</DependentUpon>
     </EmbeddedResource>
@@ -655,12 +652,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SafeMode.nl.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UseridDialog.nl.resx">
-      <DependentUpon>UseridDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UseridDialog.resx">
-      <DependentUpon>UseridDialog.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="Documentation\Human-02\network_transmit.png" />
     <None Include="Documentation\Human-02\emblem_ok.png" />
@@ -685,6 +676,8 @@
     <Compile Include="Property\GlobalizedDescriptor.vb" />
     <Content Include="Resources\blip.wav" />
     <Content Include="Resources\btn_donate_LG.gif" />
+    <None Include="Resources\deletered.png" />
+    <None Include="Resources\eraser_exclamation.png" />
     <Content Include="Resources\flags\Brazil_Flag_16x16.png" />
     <Content Include="Resources\calendar_16x16.png" />
     <Content Include="Resources\calendar_48x48.png" />
@@ -711,6 +704,7 @@
     <Content Include="Resources\Network-Remote-Desktop-16x16.png" />
     <Content Include="Resources\flags\Portugal-Flag-16x16.png" />
     <Content Include="Resources\flags\RussiaFlag16x16.png" />
+    <None Include="Resources\new.png" />
     <Content Include="Resources\question.png" />
     <Content Include="Resources\Search_16x16.png" />
     <Content Include="Resources\SetDatabasePath.vbs" />
@@ -1030,6 +1024,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.fi.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Explorer.fi.resx">
       <DependentUpon>Explorer.vb</DependentUpon>

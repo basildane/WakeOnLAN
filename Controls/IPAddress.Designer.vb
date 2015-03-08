@@ -23,13 +23,13 @@
         'Do not modify it using the code editor.
         <System.Diagnostics.DebuggerStepThrough()> _
         Private Sub InitializeComponent()
-            Me.txtIP4 = New System.Windows.Forms.TextBox
-            Me.dot3 = New System.Windows.Forms.Label
-            Me.txtIP3 = New System.Windows.Forms.TextBox
-            Me.dot2 = New System.Windows.Forms.Label
-            Me.txtIP2 = New System.Windows.Forms.TextBox
-            Me.dot1 = New System.Windows.Forms.Label
-            Me.txtIP1 = New System.Windows.Forms.TextBox
+            Me.txtIP4 = New System.Windows.Forms.TextBox()
+            Me.dot3 = New System.Windows.Forms.Label()
+            Me.txtIP3 = New System.Windows.Forms.TextBox()
+            Me.dot2 = New System.Windows.Forms.Label()
+            Me.txtIP2 = New System.Windows.Forms.TextBox()
+            Me.dot1 = New System.Windows.Forms.Label()
+            Me.txtIP1 = New System.Windows.Forms.TextBox()
             Me.SuspendLayout()
             '
             'txtIP4
@@ -107,9 +107,10 @@
             Me.txtIP1.Text = "255"
             Me.txtIP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
-            'IPAddressControl
+            'IpAddressControl
             '
             Me.BackColor = System.Drawing.SystemColors.Window
+            Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.Controls.Add(Me.txtIP4)
             Me.Controls.Add(Me.dot3)
             Me.Controls.Add(Me.txtIP3)
@@ -117,8 +118,8 @@
             Me.Controls.Add(Me.txtIP2)
             Me.Controls.Add(Me.dot1)
             Me.Controls.Add(Me.txtIP1)
-            Me.Name = "IPAddressControl"
-            Me.Size = New System.Drawing.Size(129, 24)
+            Me.Name = "IpAddressControl"
+            Me.Size = New System.Drawing.Size(127, 18)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 

@@ -55,6 +55,7 @@
             Me.ToolStripButtonProperties = New System.Windows.Forms.ToolStripButton()
             Me.ToolStripButtonDelete = New System.Windows.Forms.ToolStripButton()
             Me.timer = New System.Windows.Forms.Timer(Me.components)
+            Me.CultureManager1 = New Localization.CultureManager(Me.components)
             CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SplitContainer1.Panel1.SuspendLayout()
             Me.SplitContainer1.Panel2.SuspendLayout()
@@ -70,19 +71,17 @@
             '
             'SplitContainer1.Panel1
             '
-            resources.ApplyResources(Me.SplitContainer1.Panel1, "SplitContainer1.Panel1")
             Me.SplitContainer1.Panel1.Controls.Add(Me.ListViewSchedule)
             '
             'SplitContainer1.Panel2
             '
-            resources.ApplyResources(Me.SplitContainer1.Panel2, "SplitContainer1.Panel2")
             Me.SplitContainer1.Panel2.Controls.Add(Me.ToolStrip1)
             '
             'ListViewSchedule
             '
-            resources.ApplyResources(Me.ListViewSchedule, "ListViewSchedule")
             Me.ListViewSchedule.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.NameColumnHeader, Me.StatusColumnHeader, Me.TriggerColumnHeader, Me.StateColumnHeader, Me.NextColumnHeader, Me.LastColumnHeader, Me.ResultColumnHeader})
             Me.ListViewSchedule.ContextMenuStrip = Me.ContextMenuStrip1
+            resources.ApplyResources(Me.ListViewSchedule, "ListViewSchedule")
             Me.ListViewSchedule.FullRowSelect = True
             Me.ListViewSchedule.Name = "ListViewSchedule"
             Me.ListViewSchedule.SmallImageList = Me.ImageList1
@@ -119,39 +118,39 @@
             '
             'ContextMenuStrip1
             '
-            resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
             Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RunToolStripMenuItem, Me.EndToolStripMenuItem, Me.DisableToolStripMenuItem, Me.EnableToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.NewToolStripMenuItem})
             Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+            resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
             '
             'RunToolStripMenuItem
             '
-            resources.ApplyResources(Me.RunToolStripMenuItem, "RunToolStripMenuItem")
             Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
+            resources.ApplyResources(Me.RunToolStripMenuItem, "RunToolStripMenuItem")
             '
             'EndToolStripMenuItem
             '
-            resources.ApplyResources(Me.EndToolStripMenuItem, "EndToolStripMenuItem")
             Me.EndToolStripMenuItem.Name = "EndToolStripMenuItem"
+            resources.ApplyResources(Me.EndToolStripMenuItem, "EndToolStripMenuItem")
             '
             'DisableToolStripMenuItem
             '
-            resources.ApplyResources(Me.DisableToolStripMenuItem, "DisableToolStripMenuItem")
             Me.DisableToolStripMenuItem.Name = "DisableToolStripMenuItem"
+            resources.ApplyResources(Me.DisableToolStripMenuItem, "DisableToolStripMenuItem")
             '
             'EnableToolStripMenuItem
             '
-            resources.ApplyResources(Me.EnableToolStripMenuItem, "EnableToolStripMenuItem")
             Me.EnableToolStripMenuItem.Name = "EnableToolStripMenuItem"
+            resources.ApplyResources(Me.EnableToolStripMenuItem, "EnableToolStripMenuItem")
             '
             'DeleteToolStripMenuItem
             '
-            resources.ApplyResources(Me.DeleteToolStripMenuItem, "DeleteToolStripMenuItem")
             Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+            resources.ApplyResources(Me.DeleteToolStripMenuItem, "DeleteToolStripMenuItem")
             '
             'NewToolStripMenuItem
             '
-            resources.ApplyResources(Me.NewToolStripMenuItem, "NewToolStripMenuItem")
             Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
+            resources.ApplyResources(Me.NewToolStripMenuItem, "NewToolStripMenuItem")
             '
             'ImageList1
             '
@@ -169,8 +168,8 @@
             '
             'ToolStripLabel1
             '
-            resources.ApplyResources(Me.ToolStripLabel1, "ToolStripLabel1")
             Me.ToolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+            resources.ApplyResources(Me.ToolStripLabel1, "ToolStripLabel1")
             Me.ToolStripLabel1.Name = "ToolStripLabel1"
             '
             'ToolStripButtonCreate
@@ -180,8 +179,8 @@
             '
             'ToolStripSeparator1
             '
-            resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
             Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+            resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
             '
             'ToolStripButtonEnable
             '
@@ -195,8 +194,8 @@
             '
             'ToolStripSeparator2
             '
-            resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
             Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+            resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
             '
             'ToolStripButtonRun
             '
@@ -210,8 +209,8 @@
             '
             'ToolStripSeparator3
             '
-            resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
             Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+            resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
             '
             'ToolStripButtonProperties
             '
@@ -226,6 +225,10 @@
             'timer
             '
             Me.timer.Interval = 1000
+            '
+            'CultureManager1
+            '
+            Me.CultureManager1.ManagedControl = Me
             '
             'Schedule
             '
@@ -274,5 +277,6 @@
         Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
         Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
         Friend WithEvents TriggerColumnHeader As System.Windows.Forms.ColumnHeader
+        Friend WithEvents CultureManager1 As Localization.CultureManager
     End Class
 End Namespace

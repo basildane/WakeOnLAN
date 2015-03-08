@@ -17,6 +17,7 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.Text.RegularExpressions
+Imports System.ComponentModel
 
 Namespace Controls
 
@@ -42,12 +43,13 @@ Namespace Controls
 
         ' Allow the developer to set the error message
         ' at design time or run time.
+        <Localizable(True)> _
         Public Property ErrorMessage() As String
             Get
                 Return _errorMessage
             End Get
             Set(ByVal value As String)
-                _errorMessage = Value
+                _errorMessage = value
             End Set
         End Property
 
@@ -58,7 +60,7 @@ Namespace Controls
                 Return _errorColor
             End Get
             Set(ByVal value As Color)
-                _errorColor = Value
+                _errorColor = value
             End Set
         End Property
 
@@ -84,8 +86,8 @@ Namespace Controls
                 Return _validationPattern
             End Get
             Set(ByVal value As String)
-                _validationExpression = New Regex(Value)
-                _validationPattern = Value
+                _validationExpression = New Regex(value)
+                _validationPattern = value
             End Set
         End Property
 
@@ -106,5 +108,10 @@ Namespace Controls
             MyBase.OnValidated(e)
         End Sub
 
+        Private Sub InitializeComponent()
+            Me.SuspendLayout()
+            Me.ResumeLayout(False)
+
+        End Sub
     End Class
 End Namespace

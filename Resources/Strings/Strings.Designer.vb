@@ -317,33 +317,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Invalid IP Address.  Use ###.###.###.###.
-        '''</summary>
-        Friend Shared ReadOnly Property ErrorInvalidIP() As String
-            Get
-                Return ResourceManager.GetString("ErrorInvalidIP", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to Invalid MAC Address.  Use ##:##:##:##:##:##.
-        '''</summary>
-        Friend Shared ReadOnly Property ErrorInvalidMAC() As String
-            Get
-                Return ResourceManager.GetString("ErrorInvalidMAC", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to Invalid computer name.
-        '''</summary>
-        Friend Shared ReadOnly Property ErrorInvalidName() As String
-            Get
-                Return ResourceManager.GetString("ErrorInvalidName", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to Error: {0}.
         '''</summary>
         Friend Shared ReadOnly Property ErrorMsg() As String

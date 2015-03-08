@@ -50,6 +50,8 @@ Namespace My
                 SafeMode.ShowDialog()
             End If
 
+            Debug.WriteLine("CommonApplicationData: " & Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData))
+
             singleInstance()
             upgradeSettings()
             ConfigureCulture()

@@ -112,6 +112,7 @@ Partial Class Search
         'IpAddressControl_End
         '
         Me.IpAddressControl_End.BackColor = System.Drawing.SystemColors.Window
+        Me.IpAddressControl_End.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         resources.ApplyResources(Me.IpAddressControl_End, "IpAddressControl_End")
         Me.IpAddressControl_End.Name = "IpAddressControl_End"
         Me.ToolTip1.SetToolTip(Me.IpAddressControl_End, resources.GetString("IpAddressControl_End.ToolTip"))
@@ -119,6 +120,7 @@ Partial Class Search
         'IpAddressControl_Start
         '
         Me.IpAddressControl_Start.BackColor = System.Drawing.SystemColors.Window
+        Me.IpAddressControl_Start.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         resources.ApplyResources(Me.IpAddressControl_Start, "IpAddressControl_Start")
         Me.IpAddressControl_Start.Name = "IpAddressControl_Start"
         Me.ToolTip1.SetToolTip(Me.IpAddressControl_Start, resources.GetString("IpAddressControl_Start.ToolTip"))

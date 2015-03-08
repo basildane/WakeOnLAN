@@ -12,10 +12,12 @@ Do not change upgrade-code.
 Test help.
 
 Release:
-WakeOnLAN.2.10.19
+WakeOnLAN.2.11.0
 
 Beta:
-WakeOnLAN.2.10.18-40
+WakeOnLAN.2.10.19-21
+
+Command line test pattern: -m "Windows 10 Test" -s -p "C:\TEMP\test2\wol2.xml"
 
 Library:
 WOL.2.10.16
@@ -34,3 +36,17 @@ zh-TW
 
 EventLog source:
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\eventlog\Application\WakeOnLan
+
+
+Workgroup machines:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+
+"LocalAccountTokenFilterPolicy"=dword:00000001
+
+When user name and password are not the same on both computers change the following on the remote computer:
+Change Local Security Policy
+
+RUN secpol.msc
+
+Local Security Policy, Security Settings, Local Policies, User Rights Assignment
+Add "Everyone" to "Force shutdown from a remote system" 

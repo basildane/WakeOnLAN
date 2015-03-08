@@ -19,9 +19,12 @@
 Imports System.Net.Sockets
 Imports System.Net
 Imports System.Management
+Imports System.Text
+Imports System.IO
 
 Public Class AquilaWolLibrary
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
+    Private Declare Function InitiateSystemShutdown Lib "advapi32.dll" Alias "InitiateSystemShutdownA" (ByVal lpMachineName As String, ByVal lpMessage As String, ByVal dwTimeout As Integer, ByVal bForceAppsClosed As Integer, ByVal bRebootAfterShutdown As Integer) As Integer
 
     Public Enum ShutdownFlags
         Logoff = 0
@@ -34,6 +37,10 @@ Public Class AquilaWolLibrary
         ForcedPoweroff = 12
         Sleep = 100
         Hibernate = 101
+        LegacyShutdown = 102
+        LegacyForcedShutdown = 103
+        LegacyReboot = 104
+        LegacyForcedReboot = 105
     End Enum
 
     Public Enum EventId As Integer
@@ -111,8 +118,27 @@ Public Class AquilaWolLibrary
     ''' <param name="userid">Optional userid credentials.</param>
     ''' <param name="password">Optional password.</param>
     ''' <param name="domain">Optional Domain name.</param>
+    ''' <param name="message">Optional Shutdown message.</param>
     ''' <remarks></remarks>
     Public Shared Sub Shutdown(host As String,
+                                    flags As ShutdownFlags,
+                                    Optional userid As String = "",
+                                    Optional password As String = "",
+                                    Optional domain As String = "",
+                                    Optional message As String = "")
+
+        Select Case flags
+            Case ShutdownFlags.LegacyShutdown, ShutdownFlags.LegacyForcedShutdown, ShutdownFlags.LegacyReboot, ShutdownFlags.LegacyForcedReboot
+                ShutdownLegacy(host, flags, userid, password, message)
+
+            Case Else
+                shutdownWMI(host, flags, userid, password, domain)
+
+        End Select
+
+    End Sub
+
+    Private Shared Sub shutdownWMI(host As String,
                                     flags As ShutdownFlags,
                                     Optional userid As String = "",
                                     Optional password As String = "",
@@ -178,6 +204,217 @@ Public Class AquilaWolLibrary
         If retval <> 0 Then
             Throw New Exception(FormatMessage(retval))
         End If
+
+    End Sub
+
+    Private Shared Sub ShutdownLegacy(host As String,
+                                    flags As ShutdownFlags,
+                                    Optional userid As String = "",
+                                    Optional password As String = "",
+                                    Optional message As String = "")
+
+        Dim dwDelay As Long
+        Dim shutdownCommand As New StringBuilder("/c ")
+        Dim p As New Process
+        Dim [error] As String = String.Empty
+
+        Try
+            dwDelay = 30
+
+            If (Not String.IsNullOrEmpty(userid)) Then
+                shutdownCommand.AppendFormat("net use \\{0}\IPC$ {1} /User:{2} & ", host, password, userid)
+            End If
+
+            shutdownCommand.AppendFormat("shutdown /m \\{0} /t {1}", host, dwDelay)
+
+            Select Case flags
+                Case ShutdownFlags.LegacyShutdown
+                    shutdownCommand.Append(" /s")
+
+                Case ShutdownFlags.LegacyForcedShutdown
+                    shutdownCommand.Append(" /s /f")
+
+                Case ShutdownFlags.LegacyReboot
+                    shutdownCommand.Append(" /r")
+
+                Case ShutdownFlags.LegacyForcedReboot
+                    shutdownCommand.Append(" /r /f")
+
+            End Select
+
+            If Not String.IsNullOrEmpty(message) Then
+                shutdownCommand.AppendFormat(" /c ""{0}""", message)
+            End If
+
+            ' Define variables to track the peak
+            ' memory usage of the process.
+            Dim peakPagedMem As Long = 0
+            Dim peakWorkingSet As Long = 0
+            Dim peakVirtualMem As Long = 0
+
+            Dim pi As ProcessStartInfo = New ProcessStartInfo()
+            pi.Arguments = shutdownCommand.ToString()
+            pi.FileName = "cmd.exe"
+            pi.CreateNoWindow = True
+            pi.WindowStyle = ProcessWindowStyle.Hidden
+            pi.UseShellExecute = False
+            pi.RedirectStandardError = True
+            pi.RedirectStandardOutput = False
+            p.StartInfo = pi
+            p.Start()
+
+            ' Display process statistics until
+            ' the user closes the program.
+            Do
+                If Not p.HasExited Then
+
+                    ' Refresh the current process property values.
+                    p.Refresh()
+
+                    Debug.WriteLine("")
+
+                    ' Display current process statistics.
+
+                    Debug.WriteLine("  Process: " & p.StartInfo.FileName)
+                    Debug.WriteLine("Arguments: " & p.StartInfo.Arguments.ToString())
+                    Debug.WriteLine("-------------------------------------")
+
+                    Debug.WriteLine("  physical memory usage: {0}", p.WorkingSet64)
+                    Debug.WriteLine("  base priority: {0}", p.BasePriority)
+                    Debug.WriteLine("  priority class: {0}", p.PriorityClass)
+                    Debug.WriteLine("  user processor time: {0}", p.UserProcessorTime)
+                    Debug.WriteLine("  privileged processor time: {0}", p.PrivilegedProcessorTime)
+                    Debug.WriteLine("  total processor time: {0}", p.TotalProcessorTime)
+                    Debug.WriteLine("  PagedSystemMemorySize64: {0}", p.PagedSystemMemorySize64)
+                    Debug.WriteLine("  PagedMemorySize64: {0}", p.PagedMemorySize64)
+
+                    ' Update the values for the overall peak memory statistics.
+                    peakPagedMem = p.PeakPagedMemorySize64
+                    peakVirtualMem = p.PeakVirtualMemorySize64
+                    peakWorkingSet = p.PeakWorkingSet64
+
+                    If p.Responding Then
+                        Debug.WriteLine("Status = Running")
+                    Else
+                        Debug.WriteLine("Status = Not Responding")
+                    End If
+                End If
+
+                [error] &= p.StandardError.ReadToEnd()
+                Debug.WriteLine("error: " & [error].ToString())
+
+            Loop While Not p.WaitForExit(1000)
+
+            Debug.WriteLine("")
+            Debug.WriteLine("Process exit code: {0}", p.ExitCode)
+
+            ' Display peak memory statistics for the process.
+            Debug.WriteLine("Peak physical memory usage of the process: {0}", peakWorkingSet)
+            Debug.WriteLine("Peak paged memory usage of the process: {0}", peakPagedMem)
+            Debug.WriteLine("Peak virtual memory usage of the process: {0}", peakVirtualMem)
+
+            If (p.ExitCode <> 0) Then
+                Throw New Exception([error])
+            End If
+
+        Finally
+            If Not p Is Nothing Then
+                p.Close()
+            End If
+
+        End Try
+
+#If False Then
+
+Imports System.ComponentModel
+Imports System.Management
+
+Public Class ShutdownThread
+    Public Enum ShutdownAction
+        None
+        Abort
+        Shutdown
+        Sleep
+        Hibernate
+        User
+    End Enum
+
+    Private WithEvents _backgroundWorker As New BackgroundWorker
+    Private ReadOnly _item As ListViewItem
+    Private ReadOnly _progressbar As ProgressBar
+    Private _action As ShutdownAction
+    Private ReadOnly _message As String
+    Private ReadOnly _delay As Integer
+    Private ReadOnly _force As Boolean
+    Private ReadOnly _reboot As Boolean
+    Private _errMessage As String
+
+    Public Sub New(ByVal item As ListViewItem, ByVal progressbar As ProgressBar, ByVal action As ShutdownAction, ByVal message As String, ByVal delay As Integer, ByVal force As Boolean, ByVal reboot As Boolean)
+        _item = item
+        _progressbar = progressbar
+        _action = action
+        _Message = message
+        _delay = delay
+        _force = force
+        _reboot = Reboot
+        _errMessage = ""
+        _backgroundWorker.RunWorkerAsync()
+    End Sub
+
+    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
+        Dim dwResult As Integer
+        Dim sMachine As String
+        Dim sAlertMessage As String
+        Dim dwDelay As Long
+        Dim dwForce As Long
+        Dim dwReboot As Long
+        Dim machine As Machine
+
+        dwResult = 0
+        sAlertMessage = _Message & vbNullChar
+        dwDelay = _delay
+        dwForce = CLng(_force)
+        dwReboot = CLng(_reboot)
+
+        machine = Machines(_item.Text)
+        sMachine = "\\" & machine.Netbios
+
+        _item.SubItems(1).ForeColor = Color.FromKnownColor(KnownColor.WindowText)
+
+        If (_action <> ShutdownAction.Abort And machine.ShutdownCommand.Length > 0) Then _action = ShutdownAction.User
+
+        Try
+            Select Case _action
+                Case ShutdownAction.Abort
+                    dwResult = AbortSystemShutdown(sMachine)
+
+                Case ShutdownAction.Shutdown
+                    dwResult = InitiateSystemShutdown(sMachine, sAlertMessage, dwDelay, dwForce, dwReboot)
+
+                Case ShutdownAction.User
+                    Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+
+                Case ShutdownAction.Sleep, ShutdownAction.Hibernate
+                    dwResult = WMIpower(sMachine)
+
+            End Select
+
+        Catch ex As Exception
+            _errMessage = ex.Message
+            e.Result = 0
+            Return
+
+        End Try
+
+        If dwResult = 0 Then
+            _errMessage = FormatMessage(Err.LastDllError)
+        End If
+        e.Result = dwResult
+
+    End Sub
+
+#End If
+
 
     End Sub
 

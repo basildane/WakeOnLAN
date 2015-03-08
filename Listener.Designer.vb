@@ -39,6 +39,7 @@ Partial Class Listener
         Me.LabelHeader = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TextBoxDetails = New System.Windows.Forms.TextBox()
+        Me.CultureManager1 = New Localization.CultureManager(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -105,7 +106,6 @@ Partial Class Listener
         'RegExTextBoxPort
         '
         Me.RegExTextBoxPort.ErrorColor = System.Drawing.Color.Red
-        Me.RegExTextBoxPort.ErrorMessage = ""
         resources.ApplyResources(Me.RegExTextBoxPort, "RegExTextBoxPort")
         Me.RegExTextBoxPort.Name = "RegExTextBoxPort"
         Me.RegExTextBoxPort.ValidationExpression = "^(6553[0-5]|655[0-2]\d|65[0-4]\d{2}|6[0-4]\d{3}|5\d{4}|[0-9]\d{0,3})$"
@@ -134,6 +134,10 @@ Partial Class Listener
         resources.ApplyResources(Me.TextBoxDetails, "TextBoxDetails")
         Me.TextBoxDetails.Name = "TextBoxDetails"
         Me.TextBoxDetails.ReadOnly = True
+        '
+        'CultureManager1
+        '
+        Me.CultureManager1.ManagedControl = Me
         '
         'Listener
         '
@@ -170,4 +174,5 @@ Partial Class Listener
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents ButtonSet As System.Windows.Forms.Button
     Friend WithEvents TextBoxDetails As System.Windows.Forms.TextBox
+    Friend WithEvents CultureManager1 As Localization.CultureManager
 End Class

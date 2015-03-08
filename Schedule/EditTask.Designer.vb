@@ -62,32 +62,32 @@ Partial Class EditTask
         '
         'TabControlTasks
         '
-        resources.ApplyResources(Me.TabControlTasks, "TabControlTasks")
         Me.TabControlTasks.Controls.Add(Me.TabPage1)
         Me.TabControlTasks.Controls.Add(Me.TabPage2)
         Me.TabControlTasks.Controls.Add(Me.TabPage3)
+        resources.ApplyResources(Me.TabControlTasks, "TabControlTasks")
         Me.TabControlTasks.Name = "TabControlTasks"
         Me.TabControlTasks.SelectedIndex = 0
         '
         'TabPage1
         '
-        resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Controls.Add(Me.DescriptionTextBox)
         Me.TabPage1.Controls.Add(Me.NameTextBox)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.Label1)
+        resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.PasswordTextBox)
         Me.GroupBox1.Controls.Add(Me.UserIDTextBox)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         '
@@ -100,6 +100,7 @@ Partial Class EditTask
         '
         resources.ApplyResources(Me.PasswordTextBox, "PasswordTextBox")
         Me.PasswordTextBox.Name = "PasswordTextBox"
+        Me.PasswordTextBox.UseSystemPasswordChar = True
         '
         'UserIDTextBox
         '
@@ -138,20 +139,20 @@ Partial Class EditTask
         '
         'TabPage2
         '
-        resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Controls.Add(Me.ListViewTriggers)
         Me.TabPage2.Controls.Add(Me.TriggerDeleteButton)
         Me.TabPage2.Controls.Add(Me.TriggerEditButton)
         Me.TabPage2.Controls.Add(Me.TriggerNewButton)
         Me.TabPage2.Controls.Add(Me.Label5)
+        resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'ListViewTriggers
         '
-        resources.ApplyResources(Me.ListViewTriggers, "ListViewTriggers")
         Me.ListViewTriggers.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader3, Me.ColumnHeader4})
         Me.ListViewTriggers.FullRowSelect = True
+        resources.ApplyResources(Me.ListViewTriggers, "ListViewTriggers")
         Me.ListViewTriggers.Name = "ListViewTriggers"
         Me.ListViewTriggers.UseCompatibleStateImageBehavior = False
         Me.ListViewTriggers.View = System.Windows.Forms.View.Details
@@ -189,12 +190,12 @@ Partial Class EditTask
         '
         'TabPage3
         '
-        resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Controls.Add(Me.ActionDeleteButton)
         Me.TabPage3.Controls.Add(Me.ActionEditButton)
         Me.TabPage3.Controls.Add(Me.ActionNewButton)
         Me.TabPage3.Controls.Add(Me.Label6)
         Me.TabPage3.Controls.Add(Me.ListViewActions)
+        resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
@@ -223,9 +224,9 @@ Partial Class EditTask
         '
         'ListViewActions
         '
-        resources.ApplyResources(Me.ListViewActions, "ListViewActions")
         Me.ListViewActions.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
         Me.ListViewActions.FullRowSelect = True
+        resources.ApplyResources(Me.ListViewActions, "ListViewActions")
         Me.ListViewActions.Name = "ListViewActions"
         Me.ListViewActions.UseCompatibleStateImageBehavior = False
         Me.ListViewActions.View = System.Windows.Forms.View.Details
@@ -240,8 +241,8 @@ Partial Class EditTask
         '
         'ButtonCancel
         '
-        resources.ApplyResources(Me.ButtonCancel, "ButtonCancel")
         Me.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        resources.ApplyResources(Me.ButtonCancel, "ButtonCancel")
         Me.ButtonCancel.Name = "ButtonCancel"
         Me.ButtonCancel.UseVisualStyleBackColor = True
         '
