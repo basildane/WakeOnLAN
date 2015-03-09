@@ -20,6 +20,7 @@ Imports System.Globalization
 Imports Localization
 Imports AlphaWindow
 Imports System.Runtime.InteropServices
+Imports Machines
 
 Namespace My
 
@@ -44,8 +45,6 @@ Namespace My
         ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
 
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
-            Dim version As String
-
             If (Control.ModifierKeys = Keys.Control) Then
                 SafeMode.ShowDialog()
             End If
@@ -56,7 +55,7 @@ Namespace My
             upgradeSettings()
             ConfigureCulture()
 
-            version = System.String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
+            Dim version As String = System.String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
 
             If (Application.Info.Version.Revision > 0) Then
                 version &= " BETA " & Application.Info.Version.Revision

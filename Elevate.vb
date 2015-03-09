@@ -4,7 +4,7 @@ Public Class Elevate
     <DllImport("user32", CharSet:=CharSet.Auto, SetLastError:=True)> _
     Shared Function SendMessage( _
         ByVal hWnd As IntPtr, _
-        ByVal msg As UInt32, _
+        ByVal msg As Integer, _
         ByVal wParam As Integer, _
         ByVal lParam As IntPtr) _
         As Integer

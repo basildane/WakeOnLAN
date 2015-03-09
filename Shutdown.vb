@@ -16,6 +16,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 Imports System.Linq
+Imports Machines
 
 Public Class Shutdown
 
@@ -237,12 +238,12 @@ Public Class Shutdown
             If (String.IsNullOrEmpty(message)) Then Return
 
             Select Case machine.ShutdownMethod
-                Case MachinesClass.ShutdownMethods.WMI
+                Case machine.ShutdownMethods.WMI
                     Shell(String.Format("msg * /server:{0} ""{1}""", machine.Netbios, message), AppWinStyle.Hide, False)
 
-                Case MachinesClass.ShutdownMethods.Custom
+                Case machine.ShutdownMethods.Custom
 
-                Case MachinesClass.ShutdownMethods.Legacy
+                Case machine.ShutdownMethods.Legacy
 
             End Select
 

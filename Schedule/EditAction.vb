@@ -18,6 +18,7 @@
 
 Imports System.Windows.Forms
 Imports System.Linq
+Imports Machines
 
 Public Class EditAction
     Private _myAction As Action

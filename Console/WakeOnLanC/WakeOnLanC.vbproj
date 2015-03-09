@@ -294,6 +294,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Machines\Machines.vbproj">
+      <Project>{8c0d2e86-fff9-44f0-9158-be5d783c0ab0}</Project>
+      <Name>Machines</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\WOL\WOL.vbproj">
       <Project>{e0c53654-1da8-4ab6-9b88-337a4cc4734e}</Project>
       <Name>WOL</Name>

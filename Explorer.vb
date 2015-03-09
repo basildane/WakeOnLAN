@@ -24,6 +24,7 @@ Imports System.Globalization
 Imports System.Linq
 Imports System.ComponentModel
 Imports System.Threading
+Imports Machines
 
 Public Class Explorer
     Private ReadOnly _lvwColumnSorter As New ListViewColumnSorter()

@@ -17,6 +17,7 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.Xml.Serialization
+Imports Machines
 
 Module MachinesModule
     Public Machines As New MachinesClass
@@ -24,12 +25,6 @@ End Module
 
 Public Class MachinesClass
     Inherits CollectionBase
-
-    Public Enum ShutdownMethods As Integer
-        WMI = 0
-        Custom = 1
-        Legacy = 2
-    End Enum
 
     Default Public Property Item(ByVal Name As String) As Machine
         Get
@@ -77,26 +72,4 @@ Public Class MachinesClass
         List.Add(machine)
     End Sub
 
-End Class
-
-
-<Serializable()> Public Class Machine
-    Public Name As String = String.Empty
-    Public MAC As String = String.Empty
-    Public IP As String = String.Empty
-    Public Broadcast As String = String.Empty
-    Public Netbios As String = String.Empty
-    Public Method As Integer = 0
-    Public Emergency As Boolean = False
-    Public ShutdownCommand As String = String.Empty
-    Public Group As String = String.Empty
-    Public UDPPort As Integer = 9
-    Public TTL As Integer = 128
-    Public Adapter As String = String.Empty
-    Public RDPPort As Integer = 3389
-    Public Note As String = String.Empty
-    Public UserID As String = String.Empty
-    Public Password As String = String.Empty
-    Public Domain As String = String.Empty
-    Public ShutdownMethod As MachinesClass.ShutdownMethods = MachinesClass.ShutdownMethods.WMI
 End Class

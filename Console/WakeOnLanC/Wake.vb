@@ -15,6 +15,7 @@
 '
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
+Imports Machines
 
 Module Wake
     Public Sub WakeUp(ByVal machine As Machine, ByVal adapter As String)

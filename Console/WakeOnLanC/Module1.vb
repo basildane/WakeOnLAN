@@ -19,6 +19,7 @@
 Imports System.Net
 Imports System.Linq
 Imports System.Threading
+Imports Machines
 Imports WOL
 Imports WOL.AquilaWolLibrary
 
@@ -31,6 +32,7 @@ Public Module Module1
         Debug
         Sleep
         Hibernate
+        Enumerate
     End Enum
 
     Enum ErrorCodes
@@ -154,8 +156,7 @@ Public Module Module1
                     Return ErrorCodes.Ok
 
                 Case "-e"
-                    Enumerate()
-                    Return ErrorCodes.Ok
+                    _mode = ModeTypes.Enumerate
 
                 Case "-h"
                     DisplayHelp()
@@ -185,6 +186,9 @@ Public Module Module1
 
             Case ModeTypes.Debug
                 Return ShowIPConfig()
+
+            Case ModeTypes.Enumerate
+                Enumerate()
 
             Case Else
                 BadCommand()
@@ -381,14 +385,14 @@ Public Module Module1
 
         Try
             Select Case machine.ShutdownMethod
-                Case MachinesClass.ShutdownMethods.WMI
+                Case machine.ShutdownMethods.WMI
                     PopupMessage(machine.Netbios, _alertMessage)
                     AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
 
-                Case MachinesClass.ShutdownMethods.Custom
+                Case machine.ShutdownMethods.Custom
                     Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
 
-                Case MachinesClass.ShutdownMethods.Legacy
+                Case machine.ShutdownMethods.Legacy
                     Select Case flags
                         Case ShutdownFlags.Shutdown
                             flags = ShutdownFlags.LegacyShutdown
@@ -447,9 +451,9 @@ Public Module Module1
         Machines.Load(_path)
         For Each m As Machine In Machines
             Console.ForegroundColor = ConsoleColor.Green
-            Console.Write("{0}", m.Name.PadRight(10, " "))
+            Console.Write("{0,-16}", m.Name)
             Console.ResetColor()
-            Console.WriteLine(" IP: {0} MAC: {1}", m.IP.PadRight(16, " "), m.MAC)
+            Console.WriteLine(" IP: {0,-16} MAC: {1}", m.IP, m.MAC)
         Next
     End Sub
 
