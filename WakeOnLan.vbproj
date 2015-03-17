@@ -352,12 +352,6 @@
     <Compile Include="Crash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elevate.Designer.vb">
-      <DependentUpon>Elevate.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Elevate.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="History.Designer.vb">
       <DependentUpon>History.vb</DependentUpon>
     </Compile>
@@ -637,12 +631,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Crash.resx">
       <DependentUpon>Crash.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Elevate.nl.resx">
-      <DependentUpon>Elevate.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Elevate.resx">
-      <DependentUpon>Elevate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="History.nl.resx">
       <DependentUpon>History.vb</DependentUpon>
