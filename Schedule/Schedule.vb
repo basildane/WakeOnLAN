@@ -56,6 +56,7 @@ Namespace Schedule
             End Try
 
             RefreshList()
+
         End Sub
 
         Private Sub Schedule_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -71,9 +72,8 @@ Namespace Schedule
             Dim li As ListViewItem
 
             timer.Stop()
-
             tasks = _taskFolder.GetTasks(_TASK_ENUM_FLAGS.TASK_ENUM_HIDDEN)
-
+            ListViewSchedule.SuspendLayout()
             With ListViewSchedule
                 .Items.Clear()
                 For Each t As IRegisteredTask In tasks
@@ -89,6 +89,7 @@ Namespace Schedule
             End With
 
             UpdateTaskDisplay()
+            ListViewSchedule.ResumeLayout()
             timer.Start()
         End Sub
 
@@ -340,13 +341,19 @@ Namespace Schedule
                                     End With
 
                                 Case Action.ActionItems.SendMessage
-                                    Dim actionMsg As IShowMessageAction
+                                    Dim actionRun As IExecAction
 
-                                    actionMsg = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_SHOW_MESSAGE)
-                                    With actionMsg
+                                    actionRun = .Actions.Create(_TASK_ACTION_TYPE.TASK_ACTION_EXEC)
+                                    m = Machines(myAction.Name)
+
+                                    If m Is Nothing Then
+                                        MessageBox.Show("Unable to locate host " + myAction.Name, "Task Scheduler")
+                                        Continue For
+                                    End If
+                                    With actionRun
                                         .Id = myAction.Tag
-                                        .Title = myAction.MessageTitle
-                                        .MessageBody = myAction.MessageText
+                                        .Path = executable
+                                        .Arguments = machinesXml & " -m " & wrapSpaces(m.Name) & " -msg -c " & wrapSpaces(myAction.MessageText)
                                     End With
 
                                 Case Action.ActionItems.SendEmail
@@ -488,7 +495,7 @@ Namespace Schedule
         Private Sub UpdateTaskDisplay()
             Dim task As IRegisteredTask
 
-            'ListViewSchedule.SuspendLayout()
+            ListViewSchedule.SuspendLayout()
 
             For Each li As ListViewItem In ListViewSchedule.Items
 
@@ -537,13 +544,22 @@ Namespace Schedule
 
             Next
 
-            'ListViewSchedule.ResumeLayout()
+            ListViewSchedule.ResumeLayout()
         End Sub
 
         Private Sub Schedule_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Resize
             With ListViewSchedule
                 .Columns(6).Width = .ClientRectangle.Width - (.Columns(0).Width + .Columns(1).Width + .Columns(2).Width + .Columns(3).Width + .Columns(4).Width + .Columns(5).Width) - 1
             End With
+        End Sub
+
+    End Class
+
+    Public Class ffListView
+        Inherits ListView
+
+        Public Sub New()
+            DoubleBuffered = True
         End Sub
 
     End Class

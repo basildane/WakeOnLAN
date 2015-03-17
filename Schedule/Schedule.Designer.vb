@@ -26,7 +26,7 @@
             Me.components = New System.ComponentModel.Container()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Schedule))
             Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-            Me.ListViewSchedule = New System.Windows.Forms.ListView()
+            Me.ListViewSchedule = New WakeOnLan.Schedule.ffListView()
             Me.NameColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
             Me.StatusColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
             Me.TriggerColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -247,7 +247,6 @@
             Me.ResumeLayout(False)
 
         End Sub
-        Friend WithEvents ListViewSchedule As System.Windows.Forms.ListView
         Friend WithEvents NameColumnHeader As System.Windows.Forms.ColumnHeader
         Friend WithEvents StatusColumnHeader As System.Windows.Forms.ColumnHeader
         Friend WithEvents NextColumnHeader As System.Windows.Forms.ColumnHeader
@@ -278,5 +277,6 @@
         Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
         Friend WithEvents TriggerColumnHeader As System.Windows.Forms.ColumnHeader
         Friend WithEvents CultureManager1 As Localization.CultureManager
+        Friend WithEvents ListViewSchedule As WakeOnLan.Schedule.ffListView
     End Class
 End Namespace

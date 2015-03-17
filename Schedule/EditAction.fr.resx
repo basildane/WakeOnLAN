@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,132 +59,141 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<data name="Cancel_Button.Text" xml:space="preserve">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Annuler</value>
   </data>
-	<data name="ComputerGroupBox.Text" xml:space="preserve">
-    <value>Sélectionner l'ordinateur</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 17</value>
   </data>
-	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-	<data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-		<value>56, 17</value>
-	</data>
-	<data name="forceCheckBox.Text" xml:space="preserve">
+  <data name="forceCheckBox.Text" xml:space="preserve">
     <value>Forcer</value>
   </data>
-	<data name="MessageGroupBox.Text" xml:space="preserve">
-    <value>Message popup</value>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
   </data>
-	<data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-		<value>53, 13</value>
-	</data>
-	<data name="Label3.Text" xml:space="preserve">
+  <data name="Label3.Text" xml:space="preserve">
     <value>Message:</value>
   </data>
-	<data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-		<value>31, 13</value>
-	</data>
-	<data name="Label2.Text" xml:space="preserve">
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
     <value>Titre:</value>
   </data>
-	<data name="EmailGroupBox.Text" xml:space="preserve">
-    <value>Message Email</value>
+  <data name="EmailToTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 51</value>
   </data>
-	<data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-		<value>63, 75</value>
-	</data>
-	<data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-		<value>35, 13</value>
-	</data>
-	<data name="Label7.Text" xml:space="preserve">
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 80</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
     <value>Objet:</value>
   </data>
-	<data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-		<value>80, 49</value>
-	</data>
-	<data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-		<value>17, 13</value>
-	</data>
-	<data name="Label6.Text" xml:space="preserve">
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 54</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
     <value>A:</value>
   </data>
-	<data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-		<value>45, 124</value>
-	</data>
-	<data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-		<value>74, 22</value>
-	</data>
-	<data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-		<value>24, 13</value>
-	</data>
-	<data name="Label5.Text" xml:space="preserve">
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 132</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 28</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 13</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
     <value>De:</value>
   </data>
-	<data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
-		<value>56, 17</value>
-	</data>
-	<data name="forceAll.Text" xml:space="preserve">
+  <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 13</value>
+  </data>
+  <data name="SelectLabel.Text" xml:space="preserve">
+    <value>Sélectionner l'ordinateur</value>
+  </data>
+  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="EmailLabel.Text" xml:space="preserve">
+    <value>Message Email</value>
+  </data>
+  <data name="PopupLabel.Text" xml:space="preserve">
+    <value>Message popup</value>
+  </data>
+  <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 17</value>
+  </data>
+  <data name="forceAll.Text" xml:space="preserve">
     <value>Forcer</value>
   </data>
-	<data name="$this.Text" xml:space="preserve">
+  <data name="$this.Text" xml:space="preserve">
     <value>Editer l'action</value>
   </data>
 </root>

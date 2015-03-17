@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -136,11 +136,11 @@
   <data name="forceCheckBox.Text" xml:space="preserve">
     <value>強制</value>
   </data>
-  <data name="ComputerGroupBox.Text" xml:space="preserve">
-    <value>選擇電腦</value>
+  <data name="MessageTitleTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 61</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 59</value>
+    <value>31, 89</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -149,7 +149,7 @@
     <value>訊息</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 23</value>
+    <value>31, 63</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -157,8 +157,11 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>標題</value>
   </data>
-  <data name="MessageGroupBox.Text" xml:space="preserve">
-    <value>彈跳訊息</value>
+  <data name="EmailToTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 52</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 106</value>
   </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -167,7 +170,7 @@
     <value>伺服器</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 75</value>
+    <value>35, 80</value>
   </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -176,7 +179,7 @@
     <value>主題</value>
   </data>
   <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 49</value>
+    <value>48, 55</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 13</value>
@@ -185,7 +188,7 @@
     <value>給</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 127</value>
+    <value>36, 129</value>
   </data>
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -194,7 +197,7 @@
     <value>訊息</value>
   </data>
   <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 23</value>
+    <value>48, 28</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 13</value>
@@ -202,16 +205,34 @@
   <data name="Label5.Text" xml:space="preserve">
     <value>從</value>
   </data>
-  <data name="EmailGroupBox.Text" xml:space="preserve">
+  <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="SelectLabel.Text" xml:space="preserve">
+    <value>選擇電腦</value>
+  </data>
+  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="EmailLabel.Text" xml:space="preserve">
     <value>信箱訊息</value>
+  </data>
+  <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="PopupLabel.Text" xml:space="preserve">
+    <value>彈跳訊息</value>
+  </data>
+  <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="AllLabel.Text" xml:space="preserve">
+    <value>選項</value>
   </data>
   <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
   <data name="forceAll.Text" xml:space="preserve">
     <value>強制</value>
-  </data>
-  <data name="AllGroupBox.Text" xml:space="preserve">
-    <value>選項</value>
   </data>
 </root>
