@@ -716,7 +716,7 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub ContextMenuStripTray_Opening(sender As System.Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStripTray.Opening
+    Private Sub ContextMenuStripTray_Opening(sender As System.Object, e As CancelEventArgs) Handles ContextMenuStripTray.Opening
         ' load all of the machines into the task tray menu
         '
         ToolStripMenuItemWakeUp.DropDownItems.Clear()

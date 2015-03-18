@@ -78,7 +78,9 @@ Public Class MachinesClass
 
         Catch ex As Exception
             Debug.WriteLine(ex.Message)
+#If DEBUG Then
             Debugger.Break()
+#End If
 
         End Try
 

@@ -43,13 +43,15 @@ Public Class Task
 
     Public Function Deserialize(ByVal data As String) As Task
         Dim serializer As New XmlSerializer(GetType(Task))
-        Dim mstream As New IO.MemoryStream
 
         Try
             mstream = New IO.MemoryStream(System.Text.UTF8Encoding.UTF8.GetBytes(Data))
             Return serializer.Deserialize(mstream)
 
         Catch ex As Exception
+#If DEBUG Then
+            Debugger.Break()
+#End If
             MessageBox.Show(ex.Message, My.Resources.Strings.lit_Error, MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return Nothing
 
@@ -128,7 +130,7 @@ Public Class Trigger
 
             Case TriggerModes.Monthly
                 Return ""
-                'TODO: finish
+                'TODO: handle monthly triggers
 
             Case Else
                 Return My.Resources.Strings.lit_Unknown

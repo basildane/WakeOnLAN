@@ -17,6 +17,8 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 Imports System.Linq
 Imports Machines
+Imports System.Windows.Forms.VisualStyles
+Imports WOL
 
 Public Class Shutdown
 
@@ -239,7 +241,7 @@ Public Class Shutdown
 
             Select Case machine.ShutdownMethod
                 Case machine.ShutdownMethods.WMI
-                    Shell(String.Format("msg * /server:{0} ""{1}""", machine.Netbios, message), AppWinStyle.Hide, False)
+                    Shell(String.Format("msg * /server:{0} ""{1}""", machine.Netbios, message))
 
                 Case machine.ShutdownMethods.Custom
 

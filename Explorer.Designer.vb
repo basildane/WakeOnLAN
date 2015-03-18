@@ -88,10 +88,10 @@ Partial Class Explorer
         Me.Note = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Group = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ContextMenuStrip_Machines = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.NewToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.WakeUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShutdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
+        Me.NewToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RDPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PropertiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClearIPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -342,12 +342,6 @@ Partial Class Explorer
         Me.ContextMenuStrip_Machines.Name = "ContextMenuStrip_Machines"
         resources.ApplyResources(Me.ContextMenuStrip_Machines, "ContextMenuStrip_Machines")
         '
-        'NewToolStripMenuItem1
-        '
-        Me.NewToolStripMenuItem1.Image = Global.WakeOnLan.My.Resources.Resources._new
-        Me.NewToolStripMenuItem1.Name = "NewToolStripMenuItem1"
-        resources.ApplyResources(Me.NewToolStripMenuItem1, "NewToolStripMenuItem1")
-        '
         'WakeUpToolStripMenuItem
         '
         resources.ApplyResources(Me.WakeUpToolStripMenuItem, "WakeUpToolStripMenuItem")
@@ -362,6 +356,12 @@ Partial Class Explorer
         '
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
         resources.ApplyResources(Me.ToolStripSeparator10, "ToolStripSeparator10")
+        '
+        'NewToolStripMenuItem1
+        '
+        Me.NewToolStripMenuItem1.Image = Global.WakeOnLan.My.Resources.Resources._new
+        Me.NewToolStripMenuItem1.Name = "NewToolStripMenuItem1"
+        resources.ApplyResources(Me.NewToolStripMenuItem1, "NewToolStripMenuItem1")
         '
         'RDPToolStripMenuItem
         '

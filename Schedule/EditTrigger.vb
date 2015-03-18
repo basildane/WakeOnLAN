@@ -53,7 +53,7 @@ Public Class EditTrigger
                     End If
 
                 Case Trigger.TriggerModes.Monthly
-                    'TODO:
+                    'TODO: handle monthly triggers
 
             End Select
 

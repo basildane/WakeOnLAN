@@ -49,7 +49,7 @@ Public Class ShutdownThread
         _delay = delay
         _force = force
         _reboot = reboot
-        _errMessage = ""
+        _errMessage = String.Empty
         _backgroundWorker.WorkerReportsProgress = True
         _backgroundWorker.RunWorkerAsync()
     End Sub
