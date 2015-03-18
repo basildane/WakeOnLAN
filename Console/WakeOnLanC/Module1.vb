@@ -33,6 +33,7 @@ Public Module Module1
         Sleep
         Hibernate
         Enumerate
+        Message
     End Enum
 
     Enum ErrorCodes
@@ -52,8 +53,8 @@ Public Module Module1
     Dim _group As String = String.Empty
     Dim _mode As ModeTypes = ModeTypes.None
     Dim _result As Integer = ErrorCodes.Ok
-    Dim _path As String = ""
-    Dim _interface As String = ""
+    Dim _path As String = String.Empty
+    Dim _interface As String = String.Empty
 
     Function Main() As Integer
         Console.ForegroundColor = ConsoleColor.Green
@@ -158,6 +159,9 @@ Public Module Module1
                 Case "-e"
                     _mode = ModeTypes.Enumerate
 
+                Case "-msg"
+                    _mode = ModeTypes.Message
+
                 Case "-h"
                     DisplayHelp()
                     Return ErrorCodes.Ok
@@ -190,6 +194,9 @@ Public Module Module1
             Case ModeTypes.Enumerate
                 Enumerate()
 
+            Case ModeTypes.Message
+                SendMessage()
+
             Case Else
                 BadCommand()
                 Return ErrorCodes.InvalidCommand
@@ -207,10 +214,13 @@ Public Module Module1
         Console.WriteLine("-a   (abort a shutdown) requires -m (depreciated)")
         Console.WriteLine("-r   (reboot)")
         Console.WriteLine("-w   (wakeup) requires -m, -g, -mac parameter, or -all")
+        Console.WriteLine("     Use -m with -w to send to a specific subnet.")
         Console.WriteLine("-l   (listen for WOL packets)")
         Console.WriteLine("-e   (enumerate machine list)")
         Console.WriteLine("-p   (path to machines.xml (optional))")
         Console.WriteLine("-if  (select Interface (example -if 192.168.0.20) (optional))")
+        Console.WriteLine("-msg (immediate message (example -msg -c ""Shutting down in 10 minutes"")")
+        Console.WriteLine("     Optional: Use -m to send message to a remote machine.")
         Console.WriteLine("-d   (debug) requires -m")
         Console.WriteLine("-h   (display this help message)")
         Console.WriteLine()
@@ -221,9 +231,8 @@ Public Module Module1
         Console.WriteLine("-mac xx    xx = mac address.")
         Console.WriteLine("-g xx      xx = group name.  To wakeup or shutdown a group of machines.")
         Console.WriteLine("-all       all machines.")
-        Console.WriteLine("-c ""xx""  xx = popup message.  Optional popup message.")
+        Console.WriteLine("-c ""xx""  xx = popup message.  Optional popup message on shutdown.")
         Console.WriteLine()
-        Console.WriteLine("note.  Use -m with -w to send to a specific subnet.")
     End Sub
 
     Private Sub BadCommand()
@@ -386,7 +395,6 @@ Public Module Module1
         Try
             Select Case machine.ShutdownMethod
                 Case machine.ShutdownMethods.WMI
-                    PopupMessage(machine.Netbios, _alertMessage)
                     AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
 
                 Case machine.ShutdownMethods.Custom
@@ -429,10 +437,26 @@ Public Module Module1
 
     End Sub
 
-    Private Sub PopupMessage(host As String, message As String)
-        If (Not String.IsNullOrEmpty(message)) Then
-            Shell(String.Format("msg * /server:{0} ""{1}""", host, message), AppWinStyle.Hide, False)
-        End If
+    Private Sub SendMessage()
+        Dim host As String = String.Empty
+
+        Try
+            If Not String.IsNullOrEmpty(_machine) Then
+                If Machines.Count = 0 Then Machines.Load(_path)
+                Dim machine As Machine = Machines(_machine)
+                host = machine.Netbios
+            End If
+
+            Shell(String.Format("msg * /server:{0} ""{1}""", host, _alertMessage))
+
+        Catch ex As Exception
+            Console.ForegroundColor = ConsoleColor.Red
+            Console.Write("...Error: ")
+            Console.WriteLine(ex.Message)
+            Console.ResetColor()
+
+        End Try
+
     End Sub
 
     Private Sub Listen()
