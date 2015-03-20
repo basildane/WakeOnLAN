@@ -23,7 +23,7 @@ DefaultDirName={pf}\{#MyAppPublisher}\{#MyAppName}
 DefaultGroupName={#MyAppPublisher}
 OutputDir=Release
 OutputBaseFilename={#MyAppName}_{#MyAppVersion}
-SetupIconFile=..\Resources\connected.ico
+SetupIconFile=..\..\Resources\connected.ico
 UninstallDisplayIcon={app}\{#MyAppExeName}
 Compression=lzma
 SolidCompression=yes
@@ -32,7 +32,7 @@ SolidCompression=yes
 DisableReadyPage=no
 DisableReadyMemo=no
 WizardImageFile=compiler:WizModernImage-IS.bmp
-WizardSmallImageFile=..\Resources\connected.bmp
+WizardSmallImageFile=..\..\Resources\connected.bmp
 AppCopyright=Copyright Aquila Technology
 
 [Languages]
@@ -52,9 +52,9 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 
 [Files]
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
-Source: "..\SetupHelpers\bin\Release\SetupHelpers.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\Release\SetupHelpers.exe"; DestDir: "{app}"; Flags: ignoreversion
 
-Source: "..\bin\Release\WakeOnLan.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Projects\WakeOnLan\bin\Release\WakeOnLan.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Projects\WakeOnLan\bin\Release\WakeOnLan.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Projects\WakeOnLan\Console\WakeOnLanC\bin\Release\WakeOnLanC.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Projects\WakeOnLan\Console\WakeOnLanC\bin\Release\WakeOnLanC.exe.config"; DestDir: "{app}"; Flags: ignoreversion
@@ -71,7 +71,7 @@ Source: "C:\Projects\WakeOnLan\bin\Release\Machines.XmlSerializers.dll"; DestDir
 Source: "C:\Projects\WakeOnLan\bin\Release\WakeOnLan.XmlSerializers.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Projects\WakeOnLan\Console\WakeOnLanC\bin\Release\WakeOnLanC.XmlSerializers.dll"; DestDir: "{app}"; Flags: ignoreversion
 
-Source: "..\Help\*"; DestDir: "{app}\Help"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Projects\WakeOnLan\Help\*"; DestDir: "{app}\Help"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 Source: "C:\Projects\WakeOnLan\bin\Release\de\*"; DestDir: "{app}\de"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Projects\WakeOnLan\bin\Release\fi\*"; DestDir: "{app}\fi"; Flags: ignoreversion recursesubdirs createallsubdirs
