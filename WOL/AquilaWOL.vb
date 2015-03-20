@@ -20,11 +20,10 @@ Imports System.Net.Sockets
 Imports System.Net
 Imports System.Management
 Imports System.Text
-Imports System.IO
+Imports System.Runtime.Serialization
 
 Public Class AquilaWolLibrary
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
-    Private Declare Function InitiateSystemShutdown Lib "advapi32.dll" Alias "InitiateSystemShutdownA" (ByVal lpMachineName As String, ByVal lpMessage As String, ByVal dwTimeout As Integer, ByVal bForceAppsClosed As Integer, ByVal bRebootAfterShutdown As Integer) As Integer
 
     Public Enum ShutdownFlags
         Logoff = 0
@@ -199,12 +198,12 @@ Public Class AquilaWolLibrary
             End If
 
         Catch ex As Exception
-            Throw
+            Throw New WOLException(ex.Message, ex)
 
         End Try
 
         If retval <> 0 Then
-            Throw New Exception(FormatMessage(retval))
+            Throw New WOLException(FormatMessage(retval))
         End If
 
     End Sub
@@ -351,5 +350,26 @@ Public Class AquilaWolLibrary
         Next
         Return m
     End Function
+
+End Class
+
+<Serializable()> Public Class WOLException
+    Inherits Exception
+
+    Public Sub New()
+        MyBase.New()
+    End Sub
+
+    Public Sub New(ByVal message As String)
+        MyBase.New(message)
+    End Sub
+
+    Public Sub New(ByVal message As String, ByVal innerException As Exception)
+        MyBase.New(message, innerException)
+    End Sub
+
+    Public Sub New(ByVal info As SerializationInfo, context As StreamingContext)
+        MyBase.New(info, context)
+    End Sub
 
 End Class
