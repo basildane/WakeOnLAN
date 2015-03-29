@@ -1,3 +1,25 @@
+# WakeOnLAN 2.11.0
+
+## Beta 22 - _Mar 27 2015_
+
+* Fix problem with threadpool not pinging every machine in the queue.
+
+
+## Beta 20 - _Mar 24 2015_
+
+* New installer based on Inno Setup.
+* Installer is multilingual.  Installation language carries over to the WOL program.
+* New scheduler option to send messages to machines.
+* New feature: managed thread pool.  The polling of machines is now managed so that it doesn't overload network.
+ You can select how many machines are pinged simultaneously (default is 10).
+
+
+## Beta 10 - _Mar 12 2015_
+
+* A lot of fixes to popup messaging system.
+* Added ability to schedule messages to multiple hosts.
+
+
 # WakeOnLAN 2.10.19
 
 ## Beta 21 - _Mar 5 2015_

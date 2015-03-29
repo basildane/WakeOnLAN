@@ -2,11 +2,12 @@
 Imports System.Net.NetworkInformation
 Imports System.Xml.Serialization
 Imports System.Net
+Imports System.Threading
+Imports System.Runtime.Remoting.Messaging
 
 <Serializable()> <CLSCompliant(True)> Public Class Machine
-    <NonSerialized> Private WithEvents backgroundWorker As New BackgroundWorker
+    <NonSerialized> Private WithEvents _backgroundWorker As New BackgroundWorker
     <NonSerialized> Private WithEvents ping As New Ping
-    Private _run As Boolean = False
 
     Private Declare Function SendARP Lib "iphlpapi.dll" (ByVal DestIP As Int32, ByVal SrcIP As Int32, ByVal pMacAddr As Byte(), ByRef PhyAddrLen As Integer) As Integer
 
@@ -40,13 +41,15 @@ Imports System.Net
     Public Property Password As String = String.Empty
     Public Property Domain As String = String.Empty
     Public Property ShutdownMethod As ShutdownMethods = ShutdownMethods.WMI
+
     <XmlIgnore()> Public Status As StatusCodes = StatusCodes.Unknown
     <NonSerialized> <XmlIgnore()> Public Reply As PingReply
+    <NonSerialized> <XmlIgnore()> Public Pool As Semaphore
 
     Public Event StatusChange(ByVal Name As String, ByVal status As StatusCodes, ByVal IpAddress As String)
 
     Public Sub New()
-        backgroundWorker.WorkerSupportsCancellation = True
+        _backgroundWorker.WorkerSupportsCancellation = True
     End Sub
 
     Public Overrides Function ToString() As String
@@ -54,51 +57,58 @@ Imports System.Net
     End Function
 
     Public Sub Run()
-        _run = True
-        If backgroundWorker.IsBusy Then Exit Sub
+        If _backgroundWorker.IsBusy Then Exit Sub
 
-        backgroundWorker.WorkerReportsProgress = True
-        If IP.Length Then
-            backgroundWorker.RunWorkerAsync(IP)
+        _backgroundWorker.WorkerReportsProgress = True
+        If String.IsNullOrEmpty(Netbios) Then
+            If String.IsNullOrEmpty(IP) Then Exit Sub
+            _backgroundWorker.RunWorkerAsync(IP)
         Else
-            backgroundWorker.RunWorkerAsync(Netbios)
+            _backgroundWorker.RunWorkerAsync(Netbios)
         End If
     End Sub
 
-    Public Function Busy() As Boolean
-        Return backgroundWorker.IsBusy
+    Public Function IsBusy() As Boolean
+        Return _backgroundWorker.IsBusy
     End Function
 
     Public Sub Cancel()
-        _run = False
-        backgroundWorker.CancelAsync()
+        _backgroundWorker.CancelAsync()
     End Sub
 
-    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles backgroundWorker.DoWork
+    Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
         Do
             Try
-                Threading.Thread.Sleep(2000)
+                Debug.Assert(Not IsNothing(Pool))
+                Debug.WriteLine("pool wait : " & Name)
+                Pool.WaitOne()
                 Reply = ping.Send(e.Argument, 1500)
+
                 If Reply.Status = IPStatus.Success Then
-                    backgroundWorker.ReportProgress(100)
+                    _backgroundWorker.ReportProgress(100)
                 Else
-                    backgroundWorker.ReportProgress(0)
+                    _backgroundWorker.ReportProgress(0)
                 End If
 
             Catch ex As Exception
-                backgroundWorker.ReportProgress(0)
+                _backgroundWorker.ReportProgress(0)
+
+            Finally
+                Pool.Release()
+                Debug.WriteLine("pool release : " & Name)
+                Thread.Sleep(2000)
 
             End Try
 
-        Loop Until backgroundWorker.CancellationPending = True
+        Loop Until _backgroundWorker.CancellationPending = True
     End Sub
 
-    Private Sub backgroundWorker_ProgressChanged(ByVal sender As Object, ByVal e As ProgressChangedEventArgs) Handles backgroundWorker.ProgressChanged
+    Private Sub backgroundWorker_ProgressChanged(ByVal sender As Object, ByVal e As ProgressChangedEventArgs) Handles _backgroundWorker.ProgressChanged
         Dim newStatus As StatusCodes
         Dim newIpAddress As String
 
         Try
-            If backgroundWorker.CancellationPending Then Exit Sub
+            If _backgroundWorker.CancellationPending Then Exit Sub
 
             Select Case e.ProgressPercentage
                 Case 100
@@ -168,13 +178,9 @@ Imports System.Net
 
     End Sub
 
-    Private Sub backgroundWorker_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles backgroundWorker.RunWorkerCompleted
+    Private Sub RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
         Try
-            Debug.WriteLine("(BackgroundWorker_Ping_RunWorkerCompleted) " & Name & " " & e.Result)
-            If _run Then
-                Run()
-                Exit Sub
-            End If
+            Debug.WriteLine("RunWorkerCompleted:: " & Name & " " & e.Result)
             Status = StatusCodes.Unknown
             RaiseEvent StatusChange(Name, Status, "")
 
@@ -187,19 +193,13 @@ Imports System.Net
 
     Private Function CompareMac(mac1 As String, mac2 As String) As Int32
 
-        Try
-            Dim _mac1 As String = Replace(mac1, ":", "")
-            _mac1 = Replace(_mac1, "-", "")
+        Dim _mac1 As String = Replace(mac1, ":", "")
+        _mac1 = Replace(_mac1, "-", "")
 
-            Dim _mac2 As String = Replace(mac2, ":", "")
-            _mac2 = Replace(_mac2, "-", "")
+        Dim _mac2 As String = Replace(mac2, ":", "")
+        _mac2 = Replace(_mac2, "-", "")
 
-            Return StrComp(_mac1, _mac2, CompareMethod.Text)
-
-        Catch ex As Exception
-            Throw ex
-
-        End Try
+        Return StrComp(_mac1, _mac2, CompareMethod.Text)
 
     End Function
 

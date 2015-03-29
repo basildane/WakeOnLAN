@@ -10,7 +10,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Aquila Technology")]
 [assembly: AssemblyProduct("AutoUpdater.NET")]
-[assembly: AssemblyCopyright("(c) 2013 - 2014, Aquila Technology, LLC.")]
+[assembly: AssemblyCopyright("(c) 2013 - 2015, Aquila Technology, LLC.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -20,6 +20,7 @@ Imports System.Xml.Serialization
 Imports System.Net
 Imports System.Linq
 Imports Machines
+Imports System.Threading
 
 Module MachinesModule
     Public Machines As New MachinesClass
@@ -28,7 +29,8 @@ End Module
 Public Class MachinesClass
     Inherits CollectionBase
 
-    Public dirty As Boolean = False
+    Public Dirty As Boolean = False
+    Private Shared _pool As Semaphore
 
     Default Public Property Item(ByVal Name As String) As Machine
         Get
@@ -48,14 +50,15 @@ Public Class MachinesClass
         End Get
     End Property
 
-    Public Sub Load()
+    Public Sub Load(pool As Semaphore)
+        _pool = pool
         Import(GetFile)
     End Sub
 
     Public Sub Save()
-        If Not dirty Then Exit Sub
+        If Not Dirty Then Exit Sub
         Export(GetFile)
-        dirty = False
+        Dirty = False
     End Sub
 
     Public Function GetFile() As String
@@ -67,10 +70,10 @@ Public Class MachinesClass
     End Function
 
     Public Sub Import(ByVal Filename As String)
-        Dim serializer As New XmlSerializer(GetType(MachinesClass))
-        Dim fs As IO.FileStream
-
         Try
+            Dim serializer As New XmlSerializer(GetType(MachinesClass))
+            Dim fs As IO.FileStream
+
             fs = New IO.FileStream(Filename, IO.FileMode.Open, IO.FileAccess.Read)
             Machines = CType(serializer.Deserialize(fs), MachinesClass)
             fs.Close()
@@ -88,20 +91,22 @@ Public Class MachinesClass
 
     Private Sub CheckUpgrade()
         For Each machine As Machine In Machines
+            machine.Pool = _pool
+
             If (machine.Broadcast = "") Then
-                dirty = True
+                Dirty = True
                 machine.Broadcast = IPAddress.Broadcast.ToString()
             End If
             If (machine.UDPPort = 0) Then
-                dirty = True
+                Dirty = True
                 machine.UDPPort = 9
             End If
             If (machine.TTL = 0) Then
-                dirty = True
+                Dirty = True
                 machine.TTL = 128
             End If
             If (machine.RDPPort = 0) Then
-                dirty = True
+                Dirty = True
                 machine.RDPPort = 3389
             End If
         Next
@@ -133,14 +138,15 @@ Public Class MachinesClass
         AddHandler machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
 
         If My.Forms.Explorer.PingToolStripButton.Checked Then
+            machine.Pool = _pool
             machine.Run()
         End If
-        dirty = True
+        Dirty = True
 
     End Sub
 
     Public Sub Update(ByVal machine As Machine)
-        dirty = True
+        Dirty = True
     End Sub
 
     Public Sub Remove(ByVal name As String)
@@ -150,14 +156,11 @@ Public Class MachinesClass
         machine.Cancel()
         RemoveHandler machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
         List.Remove(machine)
-        dirty = True
+        Dirty = True
     End Sub
 
     Public Sub Close()
-        Dim machine As Machine
-
-        For i As Integer = List.Count - 1 To 0 Step -1
-            machine = List(i)
+        For Each machine As Machine In List
             machine.Cancel()
             RemoveHandler machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
         Next

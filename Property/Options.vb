@@ -37,6 +37,7 @@ Public Class Options
             My.Settings.dbPath = .dbPath
             My.Settings.autocheckUpdates = .AutoCheck
             My.Settings.Language = .Language
+            My.Settings.Threads = .Threads
         End With
         My.Settings.Save()
         DialogResult = Windows.Forms.DialogResult.OK
@@ -81,6 +82,7 @@ Public Class Options
             .dbPath = My.Settings.dbPath
             .AutoCheck = My.Settings.autocheckUpdates
             .Language = My.Settings.Language
+            .Threads = My.Settings.Threads
         End With
 
         With PropertyGrid1
@@ -242,6 +244,16 @@ Public Class Options
             End Get
             Set(ByVal Value As String)
                 _language = Value
+            End Set
+        End Property
+
+        Private _threads As Integer
+        <GlobalizedCategory("cat_Application")> Public Property Threads() As Integer
+            Get
+                Return _threads
+            End Get
+            Set(ByVal Value As Integer)
+                _threads = Value
             End Set
         End Property
 
