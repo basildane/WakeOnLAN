@@ -15,7 +15,11 @@ Release:
 WakeOnLAN.2.11.0
 
 Beta:
-WakeOnLAN.2.10.19-21
+WakeOnLAN.2.11.0-10
+
+messaging.
+HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server
+Name : AllowRemoteRPC
 
 Command line test pattern: -m "Windows 10 Test" -s -p "C:\TEMP\test2\wol2.xml"
 

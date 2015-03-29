@@ -24,10 +24,12 @@ Imports System.Globalization
 Imports System.Linq
 Imports System.ComponentModel
 Imports System.Threading
+Imports Machines
 
 Public Class Explorer
     Private ReadOnly _lvwColumnSorter As New ListViewColumnSorter()
     Private WithEvents _historyBackgroundworker As New BackgroundWorker()
+    Public Shared Pool As Semaphore = New Semaphore(0, My.Settings.Threads)
 
     Public Sub New()
 
@@ -61,7 +63,7 @@ Public Class Explorer
         CultureManager_UICultureChanged(Application.CurrentCulture)
 
         SetView(ListView.View)
-        Machines.Load()
+        Machines.Load(Pool)
 
         Machines.dirty = False
         LoadTree()
@@ -81,6 +83,8 @@ Public Class Explorer
         End Try
 
         CheckUpdates()
+        Application.DoEvents()
+        Pool.Release(My.Settings.Threads)
     End Sub
 
     Private Sub CheckUpdates()
@@ -137,7 +141,7 @@ Public Class Explorer
     Public Sub StatusChange(ByVal hostName As String, ByVal Status As Machine.StatusCodes, IPAddress As String)
         Try
             ListView.Items(hostName).SubItems.Item(1).Text = ListView.Groups.Item(Status.GetHashCode).ToString
-
+            'Todo globalize strings
             Select Case Status
                 Case Machine.StatusCodes.Unknown
                     ListView.Items(hostName).ImageIndex = 0
@@ -245,7 +249,6 @@ Public Class Explorer
     End Sub
 
     Private Sub DoPing()
-
         For Each machine As Machine In Machines
             If PingToolStripButton.Checked Then
                 If TreeView.SelectedNode.Level = 0 Or TreeView.SelectedNode.Text = machine.Group Then
@@ -257,7 +260,6 @@ Public Class Explorer
                 machine.Cancel()
             End If
         Next
-
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
@@ -464,27 +466,26 @@ Public Class Explorer
         machine = Machines(ListView.SelectedItems(0).Name)
 
         Try
-            If machine.Reply Is Nothing Then
-                ToolStripStatusLabel1.Text = My.Resources.Strings.OffLine
-                ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.HostNotResponding, machine.Name)
-                ToolStripProgressBar1.Value = 0
-            Else
-                Select Case machine.Reply.Status
-                    Case Net.NetworkInformation.IPStatus.Success
-                        ToolStripStatusLabel1.Text = My.Resources.Strings.OnLine
-                        i = machine.Reply.RoundtripTime
-                        If i > 10 Then i = 10
-                        ToolStripProgressBar1.Visible = True
-                        ToolStripProgressBar1.Value = 10 - i
-                        ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.ResponseTime, machine.Name, machine.Reply.RoundtripTime)
+            Select Case machine.Status
+                Case machine.StatusCodes.Unknown
+                    ToolStripStatusLabel1.Text = My.Resources.Strings.OffLine
+                    ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.HostNotResponding, machine.Name)
+                    ToolStripProgressBar1.Value = 0
 
-                    Case Else
-                        ToolStripStatusLabel1.Text = My.Resources.Strings.OffLine
-                        ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.HostNotResponding, machine.Name)
-                        ToolStripProgressBar1.Value = 0
+                Case machine.StatusCodes.Offline
+                    ToolStripStatusLabel1.Text = My.Resources.Strings.OffLine
+                    ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.HostNotResponding, machine.Name)
+                    ToolStripProgressBar1.Value = 0
 
-                End Select
-            End If
+                Case machine.StatusCodes.Online
+                    ToolStripStatusLabel1.Text = My.Resources.Strings.OnLine
+                    i = machine.Reply.RoundtripTime
+                    If i > 10 Then i = 10
+                    ToolStripProgressBar1.Visible = True
+                    ToolStripProgressBar1.Value = 10 - i
+                    ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.ResponseTime, machine.Name, machine.Reply.RoundtripTime)
+
+            End Select
 
         Catch ex As Exception
             ResetMonitor()
@@ -715,7 +716,7 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub ContextMenuStripTray_Opening(sender As System.Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStripTray.Opening
+    Private Sub ContextMenuStripTray_Opening(sender As System.Object, e As CancelEventArgs) Handles ContextMenuStripTray.Opening
         ' load all of the machines into the task tray menu
         '
         ToolStripMenuItemWakeUp.DropDownItems.Clear()

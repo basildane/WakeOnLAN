@@ -28,16 +28,14 @@ Partial Class EditAction
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ActionComboBox = New System.Windows.Forms.ComboBox()
-        Me.ComputerGroupBox = New System.Windows.Forms.GroupBox()
         Me.RebootCheckBox = New System.Windows.Forms.CheckBox()
         Me.forceCheckBox = New System.Windows.Forms.CheckBox()
         Me.MachinesComboBox = New System.Windows.Forms.ComboBox()
-        Me.MessageGroupBox = New System.Windows.Forms.GroupBox()
+        Me.ComboBoxPopupMachine = New System.Windows.Forms.ComboBox()
         Me.MessageTextBox = New System.Windows.Forms.TextBox()
         Me.MessageTitleTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.EmailGroupBox = New System.Windows.Forms.GroupBox()
         Me.EmailServerTextBox = New System.Windows.Forms.TextBox()
         Me.EmailSubjectTextBox = New System.Windows.Forms.TextBox()
         Me.EmailToTextBox = New System.Windows.Forms.TextBox()
@@ -48,14 +46,23 @@ Partial Class EditAction
         Me.EmailFromTextBox = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.AllGroupBox = New System.Windows.Forms.GroupBox()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.SelectTabPage = New System.Windows.Forms.TabPage()
+        Me.SelectLabel = New System.Windows.Forms.Label()
+        Me.EmailTabPage = New System.Windows.Forms.TabPage()
+        Me.EmailLabel = New System.Windows.Forms.Label()
+        Me.PopupTabPage = New System.Windows.Forms.TabPage()
+        Me.PopupLabel = New System.Windows.Forms.Label()
+        Me.AllTabPage = New System.Windows.Forms.TabPage()
+        Me.AllLabel = New System.Windows.Forms.Label()
         Me.RebootAll = New System.Windows.Forms.CheckBox()
         Me.forceAll = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.ComputerGroupBox.SuspendLayout()
-        Me.MessageGroupBox.SuspendLayout()
-        Me.EmailGroupBox.SuspendLayout()
-        Me.AllGroupBox.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.SelectTabPage.SuspendLayout()
+        Me.EmailTabPage.SuspendLayout()
+        Me.PopupTabPage.SuspendLayout()
+        Me.AllTabPage.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -83,19 +90,10 @@ Partial Class EditAction
         '
         'ActionComboBox
         '
+        resources.ApplyResources(Me.ActionComboBox, "ActionComboBox")
         Me.ActionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ActionComboBox.FormattingEnabled = True
-        resources.ApplyResources(Me.ActionComboBox, "ActionComboBox")
         Me.ActionComboBox.Name = "ActionComboBox"
-        '
-        'ComputerGroupBox
-        '
-        Me.ComputerGroupBox.Controls.Add(Me.RebootCheckBox)
-        Me.ComputerGroupBox.Controls.Add(Me.forceCheckBox)
-        Me.ComputerGroupBox.Controls.Add(Me.MachinesComboBox)
-        resources.ApplyResources(Me.ComputerGroupBox, "ComputerGroupBox")
-        Me.ComputerGroupBox.Name = "ComputerGroupBox"
-        Me.ComputerGroupBox.TabStop = False
         '
         'RebootCheckBox
         '
@@ -111,20 +109,17 @@ Partial Class EditAction
         '
         'MachinesComboBox
         '
+        resources.ApplyResources(Me.MachinesComboBox, "MachinesComboBox")
         Me.MachinesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.MachinesComboBox.FormattingEnabled = True
-        resources.ApplyResources(Me.MachinesComboBox, "MachinesComboBox")
         Me.MachinesComboBox.Name = "MachinesComboBox"
         '
-        'MessageGroupBox
+        'ComboBoxPopupMachine
         '
-        Me.MessageGroupBox.Controls.Add(Me.MessageTextBox)
-        Me.MessageGroupBox.Controls.Add(Me.MessageTitleTextBox)
-        Me.MessageGroupBox.Controls.Add(Me.Label3)
-        Me.MessageGroupBox.Controls.Add(Me.Label2)
-        resources.ApplyResources(Me.MessageGroupBox, "MessageGroupBox")
-        Me.MessageGroupBox.Name = "MessageGroupBox"
-        Me.MessageGroupBox.TabStop = False
+        resources.ApplyResources(Me.ComboBoxPopupMachine, "ComboBoxPopupMachine")
+        Me.ComboBoxPopupMachine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxPopupMachine.FormattingEnabled = True
+        Me.ComboBoxPopupMachine.Name = "ComboBoxPopupMachine"
         '
         'MessageTextBox
         '
@@ -145,22 +140,6 @@ Partial Class EditAction
         '
         resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        '
-        'EmailGroupBox
-        '
-        Me.EmailGroupBox.Controls.Add(Me.EmailServerTextBox)
-        Me.EmailGroupBox.Controls.Add(Me.EmailSubjectTextBox)
-        Me.EmailGroupBox.Controls.Add(Me.EmailToTextBox)
-        Me.EmailGroupBox.Controls.Add(Me.Label8)
-        Me.EmailGroupBox.Controls.Add(Me.Label7)
-        Me.EmailGroupBox.Controls.Add(Me.Label6)
-        Me.EmailGroupBox.Controls.Add(Me.EmailMessageTextBox)
-        Me.EmailGroupBox.Controls.Add(Me.EmailFromTextBox)
-        Me.EmailGroupBox.Controls.Add(Me.Label4)
-        Me.EmailGroupBox.Controls.Add(Me.Label5)
-        resources.ApplyResources(Me.EmailGroupBox, "EmailGroupBox")
-        Me.EmailGroupBox.Name = "EmailGroupBox"
-        Me.EmailGroupBox.TabStop = False
         '
         'EmailServerTextBox
         '
@@ -212,13 +191,83 @@ Partial Class EditAction
         resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.Name = "Label5"
         '
-        'AllGroupBox
+        'TabControl1
         '
-        Me.AllGroupBox.Controls.Add(Me.RebootAll)
-        Me.AllGroupBox.Controls.Add(Me.forceAll)
-        resources.ApplyResources(Me.AllGroupBox, "AllGroupBox")
-        Me.AllGroupBox.Name = "AllGroupBox"
-        Me.AllGroupBox.TabStop = False
+        resources.ApplyResources(Me.TabControl1, "TabControl1")
+        Me.TabControl1.Controls.Add(Me.SelectTabPage)
+        Me.TabControl1.Controls.Add(Me.EmailTabPage)
+        Me.TabControl1.Controls.Add(Me.PopupTabPage)
+        Me.TabControl1.Controls.Add(Me.AllTabPage)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        '
+        'SelectTabPage
+        '
+        resources.ApplyResources(Me.SelectTabPage, "SelectTabPage")
+        Me.SelectTabPage.Controls.Add(Me.SelectLabel)
+        Me.SelectTabPage.Controls.Add(Me.RebootCheckBox)
+        Me.SelectTabPage.Controls.Add(Me.MachinesComboBox)
+        Me.SelectTabPage.Controls.Add(Me.forceCheckBox)
+        Me.SelectTabPage.Name = "SelectTabPage"
+        Me.SelectTabPage.UseVisualStyleBackColor = True
+        '
+        'SelectLabel
+        '
+        resources.ApplyResources(Me.SelectLabel, "SelectLabel")
+        Me.SelectLabel.Name = "SelectLabel"
+        '
+        'EmailTabPage
+        '
+        resources.ApplyResources(Me.EmailTabPage, "EmailTabPage")
+        Me.EmailTabPage.Controls.Add(Me.EmailLabel)
+        Me.EmailTabPage.Controls.Add(Me.EmailServerTextBox)
+        Me.EmailTabPage.Controls.Add(Me.EmailMessageTextBox)
+        Me.EmailTabPage.Controls.Add(Me.EmailSubjectTextBox)
+        Me.EmailTabPage.Controls.Add(Me.Label5)
+        Me.EmailTabPage.Controls.Add(Me.EmailToTextBox)
+        Me.EmailTabPage.Controls.Add(Me.Label4)
+        Me.EmailTabPage.Controls.Add(Me.Label8)
+        Me.EmailTabPage.Controls.Add(Me.EmailFromTextBox)
+        Me.EmailTabPage.Controls.Add(Me.Label7)
+        Me.EmailTabPage.Controls.Add(Me.Label6)
+        Me.EmailTabPage.Name = "EmailTabPage"
+        Me.EmailTabPage.UseVisualStyleBackColor = True
+        '
+        'EmailLabel
+        '
+        resources.ApplyResources(Me.EmailLabel, "EmailLabel")
+        Me.EmailLabel.Name = "EmailLabel"
+        '
+        'PopupTabPage
+        '
+        resources.ApplyResources(Me.PopupTabPage, "PopupTabPage")
+        Me.PopupTabPage.Controls.Add(Me.PopupLabel)
+        Me.PopupTabPage.Controls.Add(Me.ComboBoxPopupMachine)
+        Me.PopupTabPage.Controls.Add(Me.MessageTextBox)
+        Me.PopupTabPage.Controls.Add(Me.Label2)
+        Me.PopupTabPage.Controls.Add(Me.MessageTitleTextBox)
+        Me.PopupTabPage.Controls.Add(Me.Label3)
+        Me.PopupTabPage.Name = "PopupTabPage"
+        Me.PopupTabPage.UseVisualStyleBackColor = True
+        '
+        'PopupLabel
+        '
+        resources.ApplyResources(Me.PopupLabel, "PopupLabel")
+        Me.PopupLabel.Name = "PopupLabel"
+        '
+        'AllTabPage
+        '
+        resources.ApplyResources(Me.AllTabPage, "AllTabPage")
+        Me.AllTabPage.Controls.Add(Me.AllLabel)
+        Me.AllTabPage.Controls.Add(Me.RebootAll)
+        Me.AllTabPage.Controls.Add(Me.forceAll)
+        Me.AllTabPage.Name = "AllTabPage"
+        Me.AllTabPage.UseVisualStyleBackColor = True
+        '
+        'AllLabel
+        '
+        resources.ApplyResources(Me.AllLabel, "AllLabel")
+        Me.AllLabel.Name = "AllLabel"
         '
         'RebootAll
         '
@@ -238,27 +287,25 @@ Partial Class EditAction
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ActionComboBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.ComputerGroupBox)
-        Me.Controls.Add(Me.EmailGroupBox)
-        Me.Controls.Add(Me.MessageGroupBox)
-        Me.Controls.Add(Me.AllGroupBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "EditAction"
         Me.ShowInTaskbar = False
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.ComputerGroupBox.ResumeLayout(False)
-        Me.ComputerGroupBox.PerformLayout()
-        Me.MessageGroupBox.ResumeLayout(False)
-        Me.MessageGroupBox.PerformLayout()
-        Me.EmailGroupBox.ResumeLayout(False)
-        Me.EmailGroupBox.PerformLayout()
-        Me.AllGroupBox.ResumeLayout(False)
-        Me.AllGroupBox.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.SelectTabPage.ResumeLayout(False)
+        Me.SelectTabPage.PerformLayout()
+        Me.EmailTabPage.ResumeLayout(False)
+        Me.EmailTabPage.PerformLayout()
+        Me.PopupTabPage.ResumeLayout(False)
+        Me.PopupTabPage.PerformLayout()
+        Me.AllTabPage.ResumeLayout(False)
+        Me.AllTabPage.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -268,14 +315,11 @@ Partial Class EditAction
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ActionComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents ComputerGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents MachinesComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents MessageGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents MessageTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MessageTitleTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents EmailGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents EmailMessageTextBox As System.Windows.Forms.TextBox
     Friend WithEvents EmailFromTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -287,9 +331,18 @@ Partial Class EditAction
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents forceCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents AllGroupBox As System.Windows.Forms.GroupBox
-    Friend WithEvents forceAll As System.Windows.Forms.CheckBox
     Friend WithEvents RebootCheckBox As System.Windows.Forms.CheckBox
+    Friend WithEvents ComboBoxPopupMachine As System.Windows.Forms.ComboBox
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents SelectTabPage As System.Windows.Forms.TabPage
+    Friend WithEvents EmailTabPage As System.Windows.Forms.TabPage
+    Friend WithEvents PopupTabPage As System.Windows.Forms.TabPage
+    Friend WithEvents AllTabPage As System.Windows.Forms.TabPage
     Friend WithEvents RebootAll As System.Windows.Forms.CheckBox
+    Friend WithEvents forceAll As System.Windows.Forms.CheckBox
+    Friend WithEvents SelectLabel As System.Windows.Forms.Label
+    Friend WithEvents EmailLabel As System.Windows.Forms.Label
+    Friend WithEvents PopupLabel As System.Windows.Forms.Label
+    Friend WithEvents AllLabel As System.Windows.Forms.Label
 
 End Class

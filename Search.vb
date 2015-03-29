@@ -21,6 +21,7 @@ Imports System.Windows.Forms
 Imports System.Management
 Imports System.Linq
 Imports AlphaWindow
+Imports Machines
 Imports WakeOnLan.My
 
 Public Class Search

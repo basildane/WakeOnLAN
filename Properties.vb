@@ -18,6 +18,7 @@
 
 Imports System.Windows.Forms
 Imports System.Net.NetworkInformation
+Imports Machines
 
 Public Class Properties
     Private _previousHostName As String

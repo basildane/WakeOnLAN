@@ -17,6 +17,7 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.ComponentModel
+Imports Machines
 Imports WOL
 Imports WOL.AquilaWolLibrary
 
@@ -48,7 +49,7 @@ Public Class ShutdownThread
         _delay = delay
         _force = force
         _reboot = reboot
-        _errMessage = ""
+        _errMessage = String.Empty
         _backgroundWorker.WorkerReportsProgress = True
         _backgroundWorker.RunWorkerAsync()
     End Sub
@@ -69,7 +70,7 @@ Public Class ShutdownThread
             _backgroundWorker.ReportProgress(State.Running)
 
             Select Case machine.ShutdownMethod
-                Case MachinesClass.ShutdownMethods.WMI
+                Case machine.ShutdownMethods.WMI
                     Select Case _action
                         Case ShutdownAction.Shutdown
                             If (_force) Then
@@ -101,7 +102,7 @@ Public Class ShutdownThread
 
                     End Select
 
-                Case MachinesClass.ShutdownMethods.Custom
+                Case machine.ShutdownMethods.Custom
                     If (_action <> ShutdownAction.Abort) Then
                         Dim cmd As String
 
@@ -113,7 +114,7 @@ Public Class ShutdownThread
                         Return
                     End If
                     
-                Case MachinesClass.ShutdownMethods.Legacy
+                Case machine.ShutdownMethods.Legacy
                     Select Case _action
                         Case ShutdownAction.Shutdown
                             If (_force) Then

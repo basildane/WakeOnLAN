@@ -20,6 +20,7 @@ Imports System.Globalization
 Imports Localization
 Imports AlphaWindow
 Imports System.Runtime.InteropServices
+Imports Microsoft.Win32
 
 Namespace My
 
@@ -44,8 +45,6 @@ Namespace My
         ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
 
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
-            Dim version As String
-
             If (Control.ModifierKeys = Keys.Control) Then
                 SafeMode.ShowDialog()
             End If
@@ -56,13 +55,12 @@ Namespace My
             upgradeSettings()
             ConfigureCulture()
 
-            version = System.String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
+            Dim version As String = System.String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
 
             If (Application.Info.Version.Revision > 0) Then
                 version &= " BETA " & Application.Info.Version.Revision
             End If
-
-            CreateEventLog()
+            Application.DoEvents()
 
             Dim splash As Splash = New Splash(Resources.Splash, Resources.Strings.Title, version, Application.Info.Copyright, SplashPtr)
 
@@ -70,22 +68,6 @@ Namespace My
             'Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
 #End If
 
-        End Sub
-
-        Private Sub CreateEventLog()
-            Try
-                If Not EventLog.SourceExists(Application.Info.ProductName) Then
-                    EventLog.CreateEventSource(Application.Info.ProductName, "Application")
-                End If
-
-            Catch se As Security.SecurityException
-                Dim c As New Elevate()
-                c.ShowDialog()
-
-            Catch ex As Exception
-                Debug.WriteLine(ex.Message)
-
-            End Try
         End Sub
 
         Private Sub MyApplication_UnhandledException(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
@@ -101,10 +83,45 @@ Namespace My
         ''' </summary>
         ''' <remarks></remarks>
         Private Sub ConfigureCulture()
+            Dim regKey As Microsoft.Win32.RegistryKey
+            Dim language As String
+
+            regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadWriteSubTree)
+            language = regKey.GetValue("Language", String.Empty, Microsoft.Win32.RegistryValueOptions.None)
+
+            Select Case language
+                Case "en"
+                    language = "en-US"
+                Case "de"
+                    language = "de-DE"
+                Case "fi"
+                    language = "fi-FI"
+                Case "fr"
+                    language = "fr-FR"
+                Case "hu"
+                    language = "hu-HU"
+                Case "nl"
+                    language = "nl-NL"
+                Case "ru"
+                    language = "ru-RU"
+                Case "pt_BR"
+                    language = "pt-BR"
+                Case "zh_TW"
+                    language = "zh-TW"
+            End Select
+
+            If String.IsNullOrEmpty(language) Then
+                language = "en-US"
+            Else
+                Settings.Language = language
+                regKey.DeleteValue("Language")
+            End If
+            regKey.Close()
+
 #If DEBUG Then
             'My.Settings.Language = "nl-NL"
 #End If
-            If String.IsNullOrEmpty(Settings.Language) Then Settings.Language = "en-US"
+            If String.IsNullOrEmpty(Settings.Language) Then Settings.Language = language
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
             Debug.WriteLine(Settings.Language)
         End Sub
@@ -149,6 +166,7 @@ Namespace My
                 regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
                 database = regKey.GetValue("Database", IO.Directory.GetParent(Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, Microsoft.Win32.RegistryValueOptions.None)
                 regKey.Close()
+
                 filename = IO.Path.GetFileName(Settings.dbPath)
                 If (String.IsNullOrEmpty(filename)) Then
                     filename = "machines.xml"

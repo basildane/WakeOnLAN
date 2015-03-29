@@ -18,12 +18,20 @@
 
 Imports System.Windows.Forms
 Imports System.Linq
+Imports Machines
 
 Public Class EditAction
     Private _myAction As Action
 
     Public Overloads Function ShowDialog(ByVal owner As Form, ByRef Action As Action) As Windows.Forms.DialogResult
         _myAction = Action
+
+#If Not Debug Then
+        ' Hide the tab buttons in release mode
+        TabControl1.Appearance = TabAppearance.FlatButtons
+        TabControl1.ItemSize = New Size(0, 1)
+        TabControl1.SizeMode = TabSizeMode.Fixed
+#End If
 
         Return ShowDialog(owner)
     End Function
@@ -106,9 +114,9 @@ Public Class EditAction
             Select Case _myAction.Mode
 
                 Case Action.ActionItems.Start
+                    TabControl1.SelectTab("SelectTabPage")
                     forceCheckBox.Visible = False
                     RebootCheckBox.Visible = False
-                    ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
                     Dim names() As String =
@@ -118,17 +126,14 @@ Public Class EditAction
 
                     MachinesComboBox.Items.AddRange(names)
                     MachinesComboBox.SelectedIndex = MachinesComboBox.FindStringExact(_myAction.Name)
-                    AllGroupBox.Hide()
-                    MessageGroupBox.Hide()
-                    EmailGroupBox.Hide()
                     If String.IsNullOrEmpty(MachinesComboBox.SelectedItem) Then
                         MachinesComboBox.SelectedIndex = 0
                     End If
 
                 Case Action.ActionItems.StartGroup
+                    TabControl1.SelectTab("SelectTabPage")
                     forceCheckBox.Visible = False
                     RebootCheckBox.Visible = False
-                    ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
                     Dim groups() As String =
@@ -140,24 +145,18 @@ Public Class EditAction
 
                     MachinesComboBox.Items.AddRange(groups)
                     MachinesComboBox.SelectedIndex = MachinesComboBox.FindStringExact(_myAction.Name)
-                    AllGroupBox.Hide()
-                    MessageGroupBox.Hide()
-                    EmailGroupBox.Hide()
                     If String.IsNullOrEmpty(MachinesComboBox.SelectedItem) Then
                         MachinesComboBox.SelectedIndex = 0
                     End If
 
                 Case Action.ActionItems.StartAll
-                    AllGroupBox.Hide()
-                    ComputerGroupBox.Hide()
-                    MessageGroupBox.Hide()
-                    EmailGroupBox.Hide()
+                    TabControl1.SelectTab("AllTabPage")
 
                 Case Action.ActionItems.Shutdown, Action.ActionItems.Sleep, Action.ActionItems.Hibernate
+                    TabControl1.SelectTab("SelectTabPage")
                     forceCheckBox.Visible = True
                     forceCheckBox.Checked = _myAction.Force
                     RebootCheckBox.Checked = _myAction.Reboot
-                    ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
                     If _myAction.Mode = Action.ActionItems.Shutdown Then
@@ -174,19 +173,16 @@ Public Class EditAction
                     MachinesComboBox.Items.AddRange(names)
                     MachinesComboBox.SelectedIndex = MachinesComboBox.FindStringExact(_myAction.Name)
                     forceCheckBox.Checked = _myAction.Force
-                    AllGroupBox.Hide()
-                    MessageGroupBox.Hide()
-                    EmailGroupBox.Hide()
                     If String.IsNullOrEmpty(MachinesComboBox.SelectedItem) Then
                         MachinesComboBox.SelectedIndex = 0
                     End If
 
                 Case Action.ActionItems.ShutdownGroup
+                    TabControl1.SelectTab("SelectTabPage")
                     forceCheckBox.Visible = True
                     forceCheckBox.Checked = _myAction.Force
                     RebootCheckBox.Visible = True
                     RebootCheckBox.Checked = _myAction.Reboot
-                    ComputerGroupBox.Show()
                     MachinesComboBox.Items.Clear()
 
                     Dim groups() As String =
@@ -202,11 +198,8 @@ Public Class EditAction
                         MachinesComboBox.SelectedIndex = 0
                     End If
 
-                    AllGroupBox.Hide()
-                    MessageGroupBox.Hide()
-                    EmailGroupBox.Hide()
-
                 Case Action.ActionItems.ShutdownAll, Action.ActionItems.SleepAll, Action.ActionItems.HibernateAll
+                    TabControl1.SelectTab("AllTabPage")
                     forceAll.Checked = _myAction.Force
                     If (_myAction.Mode = Action.ActionItems.ShutdownAll) Then
                         RebootAll.Visible = True
@@ -214,24 +207,24 @@ Public Class EditAction
                         RebootAll.Visible = False
                     End If
                     RebootAll.Checked = _myAction.Reboot
-                    ComputerGroupBox.Hide()
-                    MessageGroupBox.Hide()
-                    EmailGroupBox.Hide()
-                    AllGroupBox.Show()
 
                 Case Action.ActionItems.SendMessage
-                    ComputerGroupBox.Hide()
+                    TabControl1.SelectTab("PopupTabPage")
+                    ComboBoxPopupMachine.Items.Clear()
+
+                    Dim names() As String =
+                        (From machine As Machine In Machines
+                        Order By machine.Name
+                        Select machine.Name).ToArray()
+
+                    ComboBoxPopupMachine.Items.AddRange(names)
+                    ComboBoxPopupMachine.SelectedIndex = ComboBoxPopupMachine.FindStringExact(_myAction.Name)
+
                     MessageTitleTextBox.Text = _myAction.MessageTitle
                     MessageTextBox.Text = _myAction.MessageText
-                    MessageGroupBox.Show()
-                    AllGroupBox.Hide()
-                    EmailGroupBox.Hide()
 
                 Case Action.ActionItems.SendEmail
-                    EmailGroupBox.Show()
-                    AllGroupBox.Hide()
-                    ComputerGroupBox.Hide()
-                    MessageGroupBox.Hide()
+                    TabControl1.SelectTab("EmailTabPage")
 
             End Select
 
@@ -245,4 +238,7 @@ Public Class EditAction
         _myAction.Name = MachinesComboBox.Items(MachinesComboBox.SelectedIndex).ToString
     End Sub
 
+    Private Sub ComboBoxPopupMachine_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxPopupMachine.SelectedIndexChanged
+        _myAction.Name = ComboBoxPopupMachine.Items(ComboBoxPopupMachine.SelectedIndex).ToString
+    End Sub
 End Class
