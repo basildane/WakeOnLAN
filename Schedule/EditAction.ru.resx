@@ -133,11 +133,89 @@
   <data name="ActionComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>94, 22</value>
   </data>
+  <data name="RebootCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 17</value>
+  </data>
+  <data name="RebootCheckBox.Text" xml:space="preserve">
+    <value>Перезагрузка после выключения</value>
+  </data>
   <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 17</value>
+    <value>138, 17</value>
   </data>
   <data name="forceCheckBox.Text" xml:space="preserve">
-    <value>Принудительно</value>
+    <value>Закрытие программы</value>
+  </data>
+  <data name="ComboBoxPopupMachine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 36</value>
+  </data>
+  <data name="MessageTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 86</value>
+  </data>
+  <data name="MessageTitleTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 60</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 89</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 63</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Наименование</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 106</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Сервер:</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 80</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Тема:</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 54</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>К:</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 132</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 30</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 13</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>От:</value>
   </data>
   <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 13</value>
@@ -145,23 +223,35 @@
   <data name="SelectLabel.Text" xml:space="preserve">
     <value>Выбрать компьютер</value>
   </data>
+  <data name="SelectTabPage.Text" xml:space="preserve">
+    <value>Выбрать компьютер</value>
+  </data>
   <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 13</value>
+    <value>92, 13</value>
   </data>
   <data name="EmailLabel.Text" xml:space="preserve">
-    <value>Текст сообщения</value>
+    <value>Email сообщение</value>
+  </data>
+  <data name="EmailTabPage.Text" xml:space="preserve">
+    <value>Email Сообщение</value>
   </data>
   <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 13</value>
+    <value>138, 13</value>
   </data>
   <data name="PopupLabel.Text" xml:space="preserve">
-    <value>Всплывающее сообщение</value>
+    <value>Всплывающая подсказка</value>
   </data>
   <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
   </data>
   <data name="AllLabel.Text" xml:space="preserve">
     <value>Настройки</value>
+  </data>
+  <data name="RebootAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 17</value>
+  </data>
+  <data name="RebootAll.Text" xml:space="preserve">
+    <value>Перезагрузка после выключения</value>
   </data>
   <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 17</value>
@@ -170,6 +260,6 @@
     <value>Принудительно</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Редактировать действие</value>
+    <value>Редактирование</value>
   </data>
 </root>

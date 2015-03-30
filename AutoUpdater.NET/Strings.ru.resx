@@ -112,15 +112,24 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Обновление программы</value>
+  <data name="sCheckingForUpdates" xml:space="preserve">
+    <value>Проверка обновления...</value>
   </data>
-  <data name="labelInformation.Text" xml:space="preserve">
-    <value>Обновление загружается...</value>
+  <data name="sLastCheck" xml:space="preserve">
+    <value>Последняя проверка {0}</value>
+  </data>
+  <data name="sLatestVersion" xml:space="preserve">
+    <value>У вас последняя версия.</value>
+  </data>
+  <data name="sSkipping" xml:space="preserve">
+    <value>Не устанавливать эту версию.</value>
+  </data>
+  <data name="sUpdateAvailable" xml:space="preserve">
+    <value>Обновление доступно.</value>
   </data>
 </root>

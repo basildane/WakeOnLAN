@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,67 +59,67 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-	<data name="LogoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-		<value>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LogoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAVPRJREFUeF7tnQd0
         VNfZtRU7XxI75kviJE7PF8dxnF5cUp2427jhbscGDO7YpvcuehNCqPfeOxJNdCEhJBAgiS5Q771L02f/
@@ -486,12 +486,12 @@
         icqh/Kg3qd88/OiEEU36+fYJbw8+8so35iwM+gP1FDWVWkJ5U+nU7g/QVsqHkv3nUi9Tfxn92IQf2A/9
         +fb59vn2+fb59vn22d2cnP4fTyyy3HhLfi8AAAAASUVORK5CYII=
 </value>
-	</data>
-	<data name="TextBoxDescription.Text" xml:space="preserve">
-    <value>Передает "Magic пакеты" для сетевой карты на "просыпаться" удаленных компьютеров. Завершение работы удаленных компьютеров.  Выполните "глобальных" закрытие всех компьютер в локальной сети в случае чрезвычайной ситуации.</value>
   </data>
-	<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-		<value>
+  <data name="TextBoxDescription.Text" xml:space="preserve">
+    <value>Передача "magic пакетов" на Ethernet-карту для пробуждения удаленных компьютеров. Выключение удаленных компьютеров. Срочное выключение всех компьютеров в локальной сети.</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA
         IACoJQAALh8AAEBAAAABACAAKEIAANZEAABISAAAAQAgAIhUAAD+hgAAYGAAAAEAIAColAAAhtsAAICA
         AAABACAAKAgBAC5wAQAAAAAAAQAgAMvEAABWeAIAKAAAABAAAAAgAAAAAQAgAAAAAAAAAAAAAAAAAAAA
@@ -4031,8 +4031,39 @@
         l9XWT3/mo+OZ1ffoHt2jz4e+9hu+B1/7Dd/zhR7GbdO7vvH78K5vPFl4zZ92OqLg1T26R/foHt2je3SP
         7tE9ukf36B7do3t0j+4y+v85+BbFDYqI4gAAAABJRU5ErkJggg==
 </value>
-	</data>
-	<data name="$this.Text" xml:space="preserve">
+  </data>
+  <data name="$this.Text" xml:space="preserve">
     <value>О программе</value>
+  </data>
+  <data name="GroupBoxUpdates.Text" xml:space="preserve">
+    <value>Обновление OnLine</value>
+  </data>
+  <data name="GroupBoxVersion.Text" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Веб-сайт The Aquila Technology</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Домашняя страница Aquila WOL</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Это свободнораспространяемая программа; вы можете распространять и/или модифицировать ее в соответствии с условиями GNU - General Public License, опубликованными в третьей редации, или иной по вашему выбору, - Free Software Foundation.
+
+Мы надеемся, что программа будет полезной, но БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; даже без подразумеваемых гарантий КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ КОНКРЕТНЫХ ЦЕЛЕЙ. См. GNU General Public License для более подробной информации.
+
+Копия GNU General Public License должна быть в этой программе; если нет, обратитесь по адресу: &lt;http://www.gnu.org/licenses&gt;.</value>
+  </data>
+  <data name="lAutomaticUpdate.Text" xml:space="preserve">
+    <value>Автоматическое обновление</value>
+  </data>
+  <data name="LinkLabel1.Text" xml:space="preserve">
+    <value>http://www.AquilaTech.com</value>
+  </data>
+  <data name="LinkLabel2.Text" xml:space="preserve">
+    <value>http://wol.aquilatech.com</value>
+  </data>
+  <data name="OKButton.Text" xml:space="preserve">
+    <value>&amp;OK</value>
   </data>
 </root>

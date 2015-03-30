@@ -112,15 +112,46 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Обновление программы</value>
+  <data name="bCalculate.Text" xml:space="preserve">
+    <value>Вычисление</value>
   </data>
-  <data name="labelInformation.Text" xml:space="preserve">
-    <value>Обновление загружается...</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 69</value>
+  </data>
+  <data name="lIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="lIP.Text" xml:space="preserve">
+    <value>IP-адрес</value>
+  </data>
+  <data name="lSubnet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 111</value>
+  </data>
+  <data name="lSubnet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="lSubnet.Text" xml:space="preserve">
+    <value>Маска подсети</value>
+  </data>
+  <data name="lRecommended.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 13</value>
+  </data>
+  <data name="lRecommended.Text" xml:space="preserve">
+    <value>Рекомендуемый широковещательный адрес:</value>
+  </data>
+  <data name="lHeader.Text" xml:space="preserve">
+    <value>Эта функция используется, чтобы помочь вам найти "широковещательный адрес", для использования по IP-адресу и маске подсети.</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Вычисление маски подсети</value>
+  </data>
+  <data name="bOK.Text" xml:space="preserve">
+    <value>OK</value>
   </data>
 </root>

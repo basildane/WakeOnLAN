@@ -112,15 +112,27 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="$this.Text" xml:space="preserve">
-    <value>Обновление программы</value>
+    <value>Неудача</value>
   </data>
-  <data name="labelInformation.Text" xml:space="preserve">
-    <value>Обновление загружается...</value>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Сообщение об ошибке</value>
+  </data>
+  <data name="GroupBox2.Text" xml:space="preserve">
+    <value>Трассировка стека</value>
+  </data>
+  <data name="lTitle.Text" xml:space="preserve">
+    <value>Произошла непредвиденная ситуация</value>
+  </data>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>OK</value>
   </data>
 </root>

@@ -112,15 +112,39 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Обновление программы</value>
+  <data name="btnErrors.Text" xml:space="preserve">
+    <value>0 Ошибка</value>
   </data>
-  <data name="labelInformation.Text" xml:space="preserve">
-    <value>Обновление загружается...</value>
+  <data name="btnErrors.ToolTipText" xml:space="preserve">
+    <value>0 Ошибка</value>
+  </data>
+  <data name="btnMessages.Text" xml:space="preserve">
+    <value>0 Сообщение</value>
+  </data>
+  <data name="btnMessages.ToolTipText" xml:space="preserve">
+    <value>0 Сообщение</value>
+  </data>
+  <data name="btnWarnings.Text" xml:space="preserve">
+    <value>0 Внимание</value>
+  </data>
+  <data name="btnWarnings.ToolTipText" xml:space="preserve">
+    <value>0 Внимание</value>
+  </data>
+  <data name="FindLabel.Text" xml:space="preserve">
+    <value>Найдено:</value>
+  </data>
+  <data name="NotFoundLabel.Text" xml:space="preserve">
+    <value>Не найдено</value>
+  </data>
+  <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
+    <value>Ничего нет соответствующего фильтру.</value>
+  </data>
+  <data name="SourceLabel.Text" xml:space="preserve">
+    <value>Начало:</value>
   </data>
 </root>

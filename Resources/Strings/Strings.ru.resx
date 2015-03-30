@@ -126,7 +126,7 @@
     <comment>Aborting shutdown command on {0}</comment>
   </data>
   <data name="ChangesLost" xml:space="preserve">
-    <value>Ваши изменения будут потеряны.</value>
+    <value>Ваши изменения будут утрачены.</value>
     <comment>Your changes will be lost.</comment>
   </data>
   <data name="ChangesNotSaved" xml:space="preserve">
@@ -222,7 +222,7 @@
     <comment>Delete {0} records?</comment>
   </data>
   <data name="isNew" xml:space="preserve">
-    <value>Новый</value>
+    <value>Новое</value>
     <comment>New</comment>
   </data>
   <data name="Properties" xml:space="preserve">
@@ -262,11 +262,11 @@
     <comment>Skipping...</comment>
   </data>
   <data name="Opt_BroadcastAddress" xml:space="preserve">
-    <value>Трансляция адресов</value>
+    <value>Передача адресов</value>
     <comment>Broadcast Address</comment>
   </data>
   <data name="Opt_BroadcastDesc" xml:space="preserve">
-    <value>Введите трансляции IP-адресов для WOL трансляции пакетов.</value>
+    <value>Введите IP-адреса для передачи пакетов.</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
   <data name="DefaultEmergency" xml:space="preserve">
@@ -278,18 +278,18 @@
     <comment>System is shutting down!</comment>
   </data>
   <data name="Done" xml:space="preserve">
-    <value>Done</value>
+    <value>Сделано</value>
     <comment>Done</comment>
   </data>
   <data name="Polling" xml:space="preserve">
-    <value>Polling {0}</value>
+    <value>Опрос {0}</value>
     <comment>Polling {0}</comment>
   </data>
   <data name="actions_email" xml:space="preserve">
     <value>Отправить на почту</value>
   </data>
   <data name="actions_popup" xml:space="preserve">
-    <value>Получение сообщения </value>
+    <value>Получение сообщения</value>
   </data>
   <data name="actions_shutdown" xml:space="preserve">
     <value>Выключить компьютер</value>
@@ -331,7 +331,7 @@
     <value>Пусто</value>
   </data>
   <data name="lit_noRights" xml:space="preserve">
-    <value>{0} does not appear to have read access rights to the WOL Scheduler database. Grant access?</value>
+    <value>{0}, нет прав для доступа к базе данных WOL Планировщик базы данных. Предоставить доступ?</value>
   </data>
   <data name="lit_notFound" xml:space="preserve">
     <value>Компьютер не существует</value>
@@ -349,9 +349,36 @@
     <value>Неизвестно</value>
   </data>
   <data name="lit_false" xml:space="preserve">
-    <value>ложный</value>
+    <value>Отключено</value>
   </data>
   <data name="lit_true" xml:space="preserve">
-    <value>правда</value>
+    <value>Включено</value>
+  </data>
+  <data name="errUserID" xml:space="preserve">
+    <value>Вы должны установить надлежащий идентификатор пользователя и пароль для запланированной задачи.</value>
+  </data>
+  <data name="errWeeks" xml:space="preserve">
+    <value>Должно быть больше, чем 1 и менее, чем 52.</value>
+  </data>
+  <data name="lit_Enabled" xml:space="preserve">
+    <value>Включено</value>
+  </data>
+  <data name="lit_RemoveIP" xml:space="preserve">
+    <value>Уделенный IP Address от {0} записей</value>
+  </data>
+  <data name="triggerDaily" xml:space="preserve">
+    <value>Ежедневно</value>
+  </data>
+  <data name="triggerMonthly" xml:space="preserve">
+    <value>Ежемесячно</value>
+  </data>
+  <data name="triggerOneTime" xml:space="preserve">
+    <value>Один раз</value>
+  </data>
+  <data name="triggerWeekly" xml:space="preserve">
+    <value>Еженедельно</value>
+  </data>
+  <data name="useDefault" xml:space="preserve">
+    <value>-- использовать по умолчанию --</value>
   </data>
 </root>

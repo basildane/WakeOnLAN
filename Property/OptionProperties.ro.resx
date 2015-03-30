@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,180 +59,172 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<data name="Broadcast_Address" xml:space="preserve">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Broadcast_Address" xml:space="preserve">
     <value>Adresa de difuzare</value>
     <comment>Broadcast Address</comment>
   </data>
-	<data name="Broadcast_AddressDescription" xml:space="preserve">
+  <data name="Broadcast_AddressDescription" xml:space="preserve">
     <value>Scrie adresa de difuzare IP pentru pachetele de difuzare WOL.</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
-	<data name="cat_Emergency" xml:space="preserve">
+  <data name="cat_Emergency" xml:space="preserve">
     <value>Configurari de urgenţă</value>
     <comment>Emergency settings</comment>
   </data>
-	<data name="cat_Shutdown" xml:space="preserve">
+  <data name="cat_Shutdown" xml:space="preserve">
     <value>Închide</value>
     <comment>Shutdown</comment>
   </data>
-	<data name="cat_WOL" xml:space="preserve">
+  <data name="cat_WOL" xml:space="preserve">
     <value>WOL</value>
     <comment>WOL</comment>
   </data>
-	<data name="Delay" xml:space="preserve">
+  <data name="Delay" xml:space="preserve">
     <value>Timp de întârziere</value>
     <comment>Time delay</comment>
   </data>
-	<data name="DelayDescription" xml:space="preserve">
+  <data name="DelayDescription" xml:space="preserve">
     <value>Timp implicit de întârziere pentru închidere.</value>
     <comment>The default time delay for shutdowns.</comment>
   </data>
-	<data name="EmergencyDelay" xml:space="preserve">
+  <data name="EmergencyDelay" xml:space="preserve">
     <value>Timp de întârziere</value>
     <comment>Time delay</comment>
   </data>
-	<data name="EmergencyDelayDescription" xml:space="preserve">
+  <data name="EmergencyDelayDescription" xml:space="preserve">
     <value>Timp de întârziere pentru închidere de urgenţă.</value>
     <comment>The time delay for emergency shutdowns.</comment>
   </data>
-	<data name="EmergencyShutdown" xml:space="preserve">
+  <data name="EmergencyShutdown" xml:space="preserve">
     <value>Mesaj implicit</value>
     <comment>Default Message</comment>
   </data>
-	<data name="EmergencyShutdownDescription" xml:space="preserve">
+  <data name="EmergencyShutdownDescription" xml:space="preserve">
     <value>Mesaj pentru închidere de urgenţă.</value>
     <comment>The emergency shutdown message.</comment>
   </data>
-	<data name="Enable_Sound" xml:space="preserve">
+  <data name="Enable_Sound" xml:space="preserve">
     <value>Activează sunetul</value>
     <comment>Enable sound</comment>
   </data>
-	<data name="Enable_SoundDescription" xml:space="preserve">
+  <data name="Enable_SoundDescription" xml:space="preserve">
     <value>Sună atunci când serverul monitorizat este online sau nu răspunde.</value>
     <comment>Play a sound when a monitored server comes online, or stops responding.</comment>
   </data>
-	<data name="Force" xml:space="preserve">
+  <data name="Force" xml:space="preserve">
     <value>Forţează închiderea</value>
     <comment>Force shutdown</comment>
   </data>
-	<data name="ForceDescription" xml:space="preserve">
+  <data name="ForceDescription" xml:space="preserve">
     <value>Forţează serverul remote pentru închidere. Fişierele nesalvate vor fi pierdute.</value>
     <comment>Force remote server to shutdown.  Unsaved files will be lost.</comment>
   </data>
-	<data name="Reboot" xml:space="preserve">
+  <data name="Reboot" xml:space="preserve">
     <value>Repornire</value>
     <comment>Reboot</comment>
   </data>
-	<data name="RebootDescription" xml:space="preserve">
+  <data name="RebootDescription" xml:space="preserve">
     <value>Dacă e adevărat, atunci reporneşte după închidere.</value>
     <comment>If true, then reboot after shutdown.</comment>
   </data>
-	<data name="Shutdown" xml:space="preserve">
+  <data name="Shutdown" xml:space="preserve">
     <value>Mesaj implicit</value>
     <comment>Default Message</comment>
   </data>
-	<data name="ShutdownDescription" xml:space="preserve">
+  <data name="ShutdownDescription" xml:space="preserve">
     <value>Mesajul implicit pentru închidere.</value>
     <comment>The default shutdown message.</comment>
   </data>
-	<data name="UDPPort" xml:space="preserve">
+  <data name="UDPPort" xml:space="preserve">
     <value>Port UDP</value>
     <comment>UDP Port</comment>
   </data>
-	<data name="UDPPortDescription" xml:space="preserve">
+  <data name="UDPPortDescription" xml:space="preserve">
     <value>Scrie portul UDP pentru mesajele de difuzare.</value>
     <comment>Enter the UDP Port number for the broadcast messages.</comment>
   </data>
-	<data name="AppVersion" xml:space="preserve">
+  <data name="AppVersion" xml:space="preserve">
     <value>Versiune</value>
     <comment>Version</comment>
   </data>
-	<data name="AppVersionDescription" xml:space="preserve">
+  <data name="AppVersionDescription" xml:space="preserve">
     <value>Versiune program</value>
     <comment>Application version</comment>
   </data>
-	<data name="cat_Application" xml:space="preserve">
+  <data name="cat_Application" xml:space="preserve">
     <value>Aplicaţie</value>
     <comment>Application</comment>
   </data>
-	<data name="VersionFull" xml:space="preserve">
-    <value>Licensed version</value>
-    <comment>Licensed version</comment>
-  </data>
-	<data name="VersionTrial" xml:space="preserve">
-    <value>Trial version</value>
-    <comment>Trial version</comment>
-  </data>
-	<data name="Culture" xml:space="preserve">
+  <data name="Culture" xml:space="preserve">
     <value>Cultură</value>
     <comment>Culture</comment>
   </data>
-	<data name="Language" xml:space="preserve">
+  <data name="Language" xml:space="preserve">
     <value>Limbă</value>
     <comment>Language</comment>
   </data>
-	<data name="AutoCheck" xml:space="preserve">
+  <data name="AutoCheck" xml:space="preserve">
     <value>Verifica automat modernizările programului</value>
   <comment></comment></data>
-	<data name="dbPath" xml:space="preserve">
+  <data name="dbPath" xml:space="preserve">
 		<value>Calea bazei de date</value>
 	</data>
 </root>

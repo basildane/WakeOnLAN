@@ -118,9 +118,6 @@ Namespace My
             End If
             regKey.Close()
 
-#If DEBUG Then
-            'My.Settings.Language = "nl-NL"
-#End If
             If String.IsNullOrEmpty(Settings.Language) Then Settings.Language = language
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
             Debug.WriteLine(Settings.Language)
