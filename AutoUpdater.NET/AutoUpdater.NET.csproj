@@ -155,6 +155,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateForm.fr.resx">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateForm.hu.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
