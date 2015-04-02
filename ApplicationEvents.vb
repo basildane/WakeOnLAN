@@ -60,13 +60,7 @@ Namespace My
             If (Application.Info.Version.Revision > 0) Then
                 version &= " BETA " & Application.Info.Version.Revision
             End If
-            Application.DoEvents()
-
-            Dim splash As Splash = New Splash(Resources.Splash, Resources.Strings.Title, version, Application.Info.Copyright, SplashPtr)
-
-#If DEBUG Then
-            'Settings.dbPath = "\\aquila\files\Administration\WakeOnLAN\machines.xml"
-#End If
+            Splash.ShowSplash(Resources.Splash, Resources.Strings.Title, version, Application.Info.Copyright)
 
         End Sub
 

@@ -43,6 +43,10 @@ Public Class Explorer
 
         AutoStartWithWindowsToolStripMenuItem.Checked = auto.AutoRun()
 
+        Location = My.Settings.MainWindow_Location
+        Size = My.Settings.MainWindow_Size
+        MenuStrip.Location = New Point(0, 0)
+
         ListView.View = My.Settings.ListView_View
         GetListViewState(ListView, My.Settings.ListView_Columns)
 
@@ -67,9 +71,6 @@ Public Class Explorer
 
         Machines.dirty = False
         LoadTree()
-        Location = My.Settings.MainWindow_Location
-        Size = My.Settings.MainWindow_Size
-        MenuStrip.Location = New Point(0, 0)
 
         Try
             If (My.Application.CommandLineArgs(0) = "/min") Then
@@ -82,12 +83,11 @@ Public Class Explorer
 
         End Try
 
-        CheckUpdates()
-        Application.DoEvents()
-        Pool.Release(My.Settings.Threads)
+        If My.Settings.autocheckUpdates Then TimerUpdate.Start()
     End Sub
 
-    Private Sub CheckUpdates()
+    Private Sub TimerUpdate_Tick(sender As Object, e As EventArgs) Handles TimerUpdate.Tick
+        TimerUpdate.Stop()
         AutoUpdater.CurrentCulture = Application.CurrentCulture
         AutoUpdater.AppCastURL = My.Settings.updateURL
         AutoUpdater.versionURL = My.Settings.updateVersions
@@ -245,6 +245,7 @@ Public Class Explorer
         ListView.Sort()
 
         ListView.ResumeLayout()
+        Application.DoEvents()
         DoPing()
     End Sub
 
@@ -748,7 +749,9 @@ Public Class Explorer
 
     ' Keep the SplashScreen in the foreground
     Private Sub Explorer_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        SetForegroundWindow(SplashPtr)
+        'SetForegroundWindow(SplashPtr)
+        'Application.DoEvents()
+        Pool.Release(My.Settings.Threads)
     End Sub
 
     ' TreeView context menu

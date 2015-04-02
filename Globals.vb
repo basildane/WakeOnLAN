@@ -31,7 +31,6 @@ Module Globals
 
     Public ShutdownMode As Boolean      'true if in shutdown mode, false if in abort mode
     Public CurrentItem As ListViewItem
-    Public SplashPtr As IntPtr
 
     Public Sub ShowHelp(parent As Control, url As String)
         Try
