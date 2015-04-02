@@ -191,20 +191,20 @@ Public Class Explorer
     Private Sub LoadTree()
         Dim tvRoot As TreeNode
         Dim tvNode As TreeNode
-        Dim found As Boolean
 
         TreeView.SuspendLayout()
         TreeView.Nodes.Clear()
         tvRoot = TreeView.Nodes.Add(My.Resources.Strings.AllMachines)
 
-        For Each machine As Machine In From m1 As Machine In Machines Where m1.Group.Length
-            found = tvRoot.Nodes.Cast(Of TreeNode)().Any(Function(n) n.Text = machine.Group)
+        Dim groups() As String = (From machine As Machine In Machines
+             Where machine.Group <> ""
+             Select machine.Group).Distinct().ToArray()
 
-            If Not found Then
-                tvNode = tvRoot.Nodes.Add(machine.Group)
-                If My.Settings.CurrentGroup = machine.Group Then TreeView.SelectedNode = tvNode
-            End If
+        For Each groupName As String In groups
+            tvNode = tvRoot.Nodes.Add(groupName)
+            If My.Settings.CurrentGroup = groupName Then TreeView.SelectedNode = tvNode
         Next
+
         If My.Settings.CurrentGroup = tvRoot.Text Then TreeView.SelectedNode = tvRoot
         TreeView.ResumeLayout()
     End Sub
@@ -390,7 +390,6 @@ Public Class Explorer
         RDPToolStripMenuItem.Visible = showThem
         ClearIPToolStripMenuItem.Visible = showThem
         DeleteToolStripMenuItem.Visible = showThem
-
     End Sub
 
     Private Sub ListView_ColumnClick(ByVal sender As Object, ByVal e As Windows.Forms.ColumnClickEventArgs) Handles ListView.ColumnClick
@@ -434,8 +433,8 @@ Public Class Explorer
 
     Private Sub ListView_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ListView.SelectedIndexChanged
 
-        ToolStripStatusLabel1.Text = ""
-        ToolStripStatusLabel2.Text = ""
+        ToolStripStatusLabel1.Text = String.Empty
+        ToolStripStatusLabel2.Text = String.Empty
         ToolStripProgressBar1.Value = 0
 
         If ListView.SelectedItems.Count = 1 Then
@@ -449,8 +448,8 @@ Public Class Explorer
     Private Sub ResetMonitor()
 
         TimerPing.Stop()
-        ToolStripStatusLabel1.Text = ""
-        ToolStripStatusLabel2.Text = ""
+        ToolStripStatusLabel1.Text = String.Empty
+        ToolStripStatusLabel2.Text = String.Empty
         ToolStripProgressBar1.Visible = False
 
     End Sub
@@ -607,7 +606,7 @@ Public Class Explorer
             .Filter = "All files (*.*)|*.*"
             .Title = My.Resources.Strings.SelectFile
             .ShowDialog(Me)
-            If .FileName = "" Then Exit Sub
+            If String.IsNullOrEmpty(.FileName) Then Exit Sub
             Machines.Import(.FileName)
         End With
 
@@ -624,7 +623,7 @@ Public Class Explorer
             .Title = My.Resources.Strings.WhereSave
             .Filter = "All files (*.*)|*.*"
             .ShowDialog(Me)
-            If .FileName = "" Then Exit Sub
+            If String.IsNullOrEmpty(.FileName) Then Exit Sub
             Machines.Export(.FileName)
         End With
 
@@ -747,10 +746,8 @@ Public Class Explorer
         My.Forms.Listener.Show()
     End Sub
 
-    ' Keep the SplashScreen in the foreground
+    ' The form is now shown, start release the old on the thread pool
     Private Sub Explorer_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        'SetForegroundWindow(SplashPtr)
-        'Application.DoEvents()
         Pool.Release(My.Settings.Threads)
     End Sub
 
