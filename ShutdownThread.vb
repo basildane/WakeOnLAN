@@ -104,12 +104,13 @@ Public Class ShutdownThread
 
                 Case machine.ShutdownMethods.Custom
                     If (_action <> ShutdownAction.Abort) Then
-                        Dim cmd As String
-
-                        cmd = machine.ShutdownCommand
+                        Dim cmd As String = machine.ShutdownCommand
+                        cmd = cmd.Replace("$PF", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles))
+                        cmd = cmd.Replace("$PFX86", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86))
                         cmd = cmd.Replace("$USER", machine.UserID)
                         cmd = cmd.Replace("$PASS", encryption.EnigmaDecrypt(machine.Password))
                         cmd = cmd.Replace("$HOST", machine.Netbios)
+                        Debug.WriteLine("Custom command: " & cmd)
                         Shell(cmd, AppWinStyle.Hide, False)
                         Return
                     End If
