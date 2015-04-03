@@ -235,22 +235,18 @@ Public Class Search
     End Sub
 
     Private Sub Search_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
-        Dim found As Boolean
-
         IpAddressControl_Start.Text = MySettings.Default.SearchStart
         IpAddressControl_End.Text = MySettings.Default.SearchEnd
 
         ComboBoxGroup.Items.Clear()
         ComboBoxGroup.Items.Add(_none)
-        For Each machine As Machine In
-            From el As Machine In Machines
-            Where el.Group.Length
 
-            found = ComboBoxGroup.Items.Cast(Of String)().Any(Function(item) item.ToString = machine.Group)
-            If Not found Then ComboBoxGroup.Items.Add(machine.Group)
-        Next
+        Dim groups() As String = (From machine As Machine In Machines
+                     Where machine.Group <> ""
+                     Select machine.Group).Distinct().ToArray()
+
+        ComboBoxGroup.Items.AddRange(groups)
         ComboBoxGroup.Text = _none
-
     End Sub
 
     Private Sub cancelSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles cancelSearch.Click

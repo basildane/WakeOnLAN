@@ -1,3 +1,10 @@
+# WakeOnLAN 2.11.1
+
+## Beta 10 - _Mar 30 2015_
+
+* Russian language updates.
+
+
 # WakeOnLAN 2.11.0
 
 ## Beta 22 - _Mar 27 2015_

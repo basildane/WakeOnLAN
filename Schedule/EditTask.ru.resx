@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,174 +59,183 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-	<data name="PasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-		<value>195, 66</value>
-	</data>
-	<data name="UserIDTextBox.Location" type="System.Drawing.Point, System.Drawing">
-		<value>195, 32</value>
-	</data>
-	<data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-		<value>144, 69</value>
-	</data>
-	<data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-		<value>45, 13</value>
-	</data>
-	<data name="Label4.Text" xml:space="preserve">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 35</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>(домен\ID user)</value>
+  </data>
+  <data name="PasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 66</value>
+  </data>
+  <data name="UserIDTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 32</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 69</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
     <value>Пароль</value>
   </data>
-	<data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-		<value>28, 32</value>
-	</data>
-	<data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-		<value>161, 13</value>
-	</data>
-	<data name="Label3.Text" xml:space="preserve">
-    <value>Идентификатор пользователя</value>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 35</value>
   </data>
-	<data name="GroupBox1.Text" xml:space="preserve">
-    <value>Настройки безопасности</value>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
   </data>
-	<data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-		<value>57, 13</value>
-	</data>
-	<data name="Label2.Text" xml:space="preserve">
+  <data name="Label3.Text" xml:space="preserve">
+    <value>ID пользователя</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Безопасность</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
     <value>Описание</value>
   </data>
-	<data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-		<value>29, 13</value>
-	</data>
-	<data name="Label1.Text" xml:space="preserve">
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
     <value>Имя</value>
   </data>
-	<data name="TabPage1.Text" xml:space="preserve">
-    <value>Главное</value>
+  <data name="TabPage1.Text" xml:space="preserve">
+    <value>Общее</value>
   </data>
-	<data name="ColumnHeader3.Text" xml:space="preserve">
+  <data name="ColumnHeader3.Text" xml:space="preserve">
     <value>Условие</value>
   </data>
-	<data name="ColumnHeader4.Text" xml:space="preserve">
+  <data name="ColumnHeader4.Text" xml:space="preserve">
     <value>Детали</value>
   </data>
-	<data name="TriggerDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
-		<value>201, 339</value>
-	</data>
-	<data name="TriggerDeleteButton.Text" xml:space="preserve">
+  <data name="TriggerDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 339</value>
+  </data>
+  <data name="TriggerDeleteButton.Text" xml:space="preserve">
     <value>Удалить</value>
   </data>
-	<data name="TriggerEditButton.Size" type="System.Drawing.Size, System.Drawing">
-		<value>111, 23</value>
-	</data>
-	<data name="TriggerEditButton.Text" xml:space="preserve">
-    <value>Редактировать…</value>
+  <data name="TriggerEditButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 23</value>
   </data>
-	<data name="TriggerNewButton.Text" xml:space="preserve">
-    <value>Новый…</value>
+  <data name="TriggerEditButton.Text" xml:space="preserve">
+    <value>Изменить…</value>
   </data>
-	<data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-		<value>298, 13</value>
-	</data>
-	<data name="Label5.Text" xml:space="preserve">
-    <value>Укажите условия, которые будут вызывать это событие.</value>
+  <data name="TriggerNewButton.Text" xml:space="preserve">
+    <value>Новое…</value>
   </data>
-	<data name="TabPage2.Text" xml:space="preserve">
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 13</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Укажите условия, вызывающее это событие.</value>
+  </data>
+  <data name="TabPage2.Text" xml:space="preserve">
     <value>Условия</value>
   </data>
-	<data name="ActionDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
-		<value>204, 332</value>
-	</data>
-	<data name="ActionDeleteButton.Text" xml:space="preserve">
-    <value>Удалить</value>
+  <data name="ActionDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 332</value>
   </data>
-	<data name="ActionEditButton.Size" type="System.Drawing.Size, System.Drawing">
-		<value>111, 23</value>
-	</data>
-	<data name="ActionEditButton.Text" xml:space="preserve">
-    <value>Редактировать…</value>
+  <data name="ActionDeleteButton.Text" xml:space="preserve">
+    <value>Удаление</value>
   </data>
-	<data name="ActionNewButton.Text" xml:space="preserve">
-    <value>Новый…</value>
+  <data name="ActionEditButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 23</value>
   </data>
-	<data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-		<value>200, 13</value>
-	</data>
-	<data name="Label6.Text" xml:space="preserve">
+  <data name="ActionEditButton.Text" xml:space="preserve">
+    <value>Изменить...</value>
+  </data>
+  <data name="ActionNewButton.Text" xml:space="preserve">
+    <value>Новое…</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 13</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
     <value>Укажите действие для этого события</value>
   </data>
-	<data name="ColumnHeader1.Text" xml:space="preserve">
+  <data name="ColumnHeader1.Text" xml:space="preserve">
     <value>Действие</value>
   </data>
-	<data name="ColumnHeader2.Text" xml:space="preserve">
+  <data name="ColumnHeader2.Text" xml:space="preserve">
     <value>Детали</value>
   </data>
-	<data name="TabPage3.Text" xml:space="preserve">
+  <data name="TabPage3.Text" xml:space="preserve">
     <value>Действия</value>
   </data>
-	<data name="ButtonCancel.Text" xml:space="preserve">
+  <data name="ButtonCancel.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
-	<data name="OKButton.Text" xml:space="preserve">
+  <data name="OKButton.Text" xml:space="preserve">
     <value>ОК</value>
   </data>
-	<data name="$this.Text" xml:space="preserve">
-    <value>Редактировать задачу…</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Изменить задачу…</value>
   </data>
 </root>

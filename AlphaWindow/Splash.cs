@@ -19,28 +19,67 @@
  */
 
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace AlphaWindow
 {
 	public class Splash : Form
-    {
-	    readonly Timer _timer = new Timer();
+	{
+        private static Splash ms_frmSplash = null;
+        private static Bitmap _bitmap;
+        private static String _title;
+        private static String _version;
+        private static String _copyright;
 
-		public Splash(Bitmap bitmap, String title, String version, String copyright, out IntPtr hwnd)
-		{
+        static public void ShowSplash(Bitmap bitmap, String title, String version, String copyright)
+	    {
+	        _bitmap = bitmap;
+	        _title = title;
+	        _version = version;
+	        _copyright = copyright;
+
+            // Make sure it's only launched once.
+            if (ms_frmSplash != null)
+                return;
+
+            Thread msOThread = new Thread(ShowForm) {IsBackground = true};
+            msOThread.SetApartmentState(ApartmentState.STA);
+            msOThread.Start();
+            while (ms_frmSplash == null || ms_frmSplash.IsHandleCreated == false)
+            {
+                Thread.Sleep(50);
+            }
+        }
+
+	    private static void ShowForm()
+	    {
+            ShowIt();
+            for (int i = 1; i <= 40; i++)
+            {
+                Thread.Sleep(100);
+            }
+        }
+
+        private static void ShowIt()
+        {
+	        ms_frmSplash = new Splash
+            {
+                ShowInTaskbar = false,
+                Size = _bitmap.Size,
+                StartPosition = FormStartPosition.CenterScreen,
+                TopMost = true
+            };
+
 			// Window settings
-			//this.TopMost = true;
-			ShowInTaskbar = false;
-			Size = bitmap.Size;
-			StartPosition = FormStartPosition.CenterScreen;
-			Show();				// Must be called before setting bitmap
+            ms_frmSplash.Show();				// Must be called before setting bitmap
 
-            Graphics g = Graphics.FromImage(bitmap);
+            Graphics g = Graphics.FromImage(_bitmap);
 
             StringFormat sf = new StringFormat
             {
@@ -51,28 +90,16 @@ namespace AlphaWindow
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
             g.PixelOffsetMode = PixelOffsetMode.HighQuality;
-            g.DrawString(title, new Font(FontFamily.GenericSansSerif, 30, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(280, 130), sf);
-            g.DrawString(version, new Font(FontFamily.GenericSansSerif, 18, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(80, 220));
-            g.DrawString(copyright, new Font(FontFamily.GenericSansSerif, 16, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(80, 250));
+            g.DrawString(_title, new Font(FontFamily.GenericSansSerif, 30, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(280, 130), sf);
+            g.DrawString(_version, new Font(FontFamily.GenericSansSerif, 18, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(80, 220));
+            g.DrawString(_copyright, new Font(FontFamily.GenericSansSerif, 16, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new Point(80, 250));
             g.Flush();
 
-            SelectBitmap(bitmap);
-
-            _timer.Tick += TimerEventProcessor;
-            _timer.Interval = 4000;
-            _timer.Start();
-
-            hwnd = Handle;
+            SelectBitmap(_bitmap);
 		}
 
-        private void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
-        {
-            _timer.Stop();
-            Close();
-        }
-
 		// Sets the current bitmap
-		public void SelectBitmap(Bitmap bitmap) 
+		private static void SelectBitmap(Bitmap bitmap) 
 		{
 			// Does this bitmap contain an alpha channel?
 			if (bitmap.PixelFormat != PixelFormat.Format32bppArgb)
@@ -95,7 +122,7 @@ namespace AlphaWindow
 				// Set parameters for layered window update
 				APIHelp.Size newSize = new APIHelp.Size(bitmap.Width, bitmap.Height);	// Size window to match bitmap
 				APIHelp.Point sourceLocation = new APIHelp.Point(0, 0);
-				APIHelp.Point newLocation = new APIHelp.Point(Left - 22, Top);		    // Same as this window, offset by 22 to compensate
+                APIHelp.Point newLocation = new APIHelp.Point(ms_frmSplash.Left - 22, ms_frmSplash.Top);		    // Same as this window, offset by 22 to compensate
                                                                                         // for transparent border
 				APIHelp.BLENDFUNCTION blend = new APIHelp.BLENDFUNCTION
 				{
@@ -106,7 +133,7 @@ namespace AlphaWindow
 				};
 
 			    // Update the window
-				APIHelp.UpdateLayeredWindow(Handle, screenDc, ref newLocation, ref newSize,
+                APIHelp.UpdateLayeredWindow(ms_frmSplash.Handle, screenDc, ref newLocation, ref newSize,
 					memDc, ref sourceLocation, 0, ref blend, APIHelp.ULW_ALPHA);
 			}
 			finally 
@@ -128,25 +155,27 @@ namespace AlphaWindow
 			{
 				// Add the layered extended style (WS_EX_LAYERED) to this window
 				CreateParams createParams = base.CreateParams;
-				createParams.ExStyle |= APIHelp.WS_EX_LAYERED;
+			    createParams.ExStyle |= APIHelp.WS_EX_LAYERED;
 				return createParams;
 			}
 		}
 
 		// Let Windows drag this window for us
-        protected override void WndProc(ref Message message)
+	    protected override void WndProc(ref Message message)
         {
+            Debug.WriteLine("message: " + message.Msg.ToString());
             switch (message.Msg)
             {
+                    //TODO: fix this
                 case APIHelp.WM_LBUTTONUP:
                     // let user close splashscreen by clicking
                     message.Msg = APIHelp.WM_CLOSE;
                     break;
 
-//                case APIHelp.WM_NCHITTEST:
-//                    // Tell Windows that the user is on the title bar (caption), this allows users to drag the window
-//                    message.Result = (IntPtr)APIHelp.HTCAPTION;
-//                    break;
+                //case APIHelp.WM_NCHITTEST:
+                //    // Tell Windows that the user is on the title bar (caption), this allows users to drag the window
+                //    message.Result = (IntPtr)APIHelp.HTCAPTION;
+                //    break;
             }
 
             base.WndProc(ref message);

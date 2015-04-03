@@ -112,15 +112,30 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Обновление программы</value>
+  <data name="col_Date" xml:space="preserve">
+    <value>Дата/Время</value>
   </data>
-  <data name="labelInformation.Text" xml:space="preserve">
-    <value>Обновление загружается...</value>
+  <data name="col_EventID" xml:space="preserve">
+    <value>ID События</value>
+  </data>
+  <data name="col_Message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="col_Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Errors" xml:space="preserve">
+    <value>{0} Ошибки</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>{0} Нормально</value>
+  </data>
+  <data name="Warnings" xml:space="preserve">
+    <value>{0} Внимание</value>
   </data>
 </root>

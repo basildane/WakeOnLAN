@@ -174,6 +174,7 @@ Partial Class Explorer
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
+        Me.TimerUpdate = New System.Windows.Forms.Timer(Me.components)
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -430,7 +431,6 @@ Partial Class Explorer
         '
         'NewToolStripMenuItem
         '
-        Me.NewToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources._new
         resources.ApplyResources(Me.NewToolStripMenuItem, "NewToolStripMenuItem")
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         '
@@ -816,6 +816,10 @@ Partial Class Explorer
         '
         Me.CultureManager.ManagedControl = Me
         '
+        'TimerUpdate
+        '
+        Me.TimerUpdate.Interval = 15000
+        '
         'Explorer
         '
         resources.ApplyResources(Me, "$this")
@@ -913,5 +917,6 @@ Partial Class Explorer
     Friend WithEvents EventLogToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents ClearIPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TimerUpdate As System.Windows.Forms.Timer
 
 End Class
