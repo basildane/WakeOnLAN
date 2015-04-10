@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -190,7 +190,7 @@
   </data>
   <data name="SourceCombo.Items" xml:space="preserve">
     <value> </value>
-  </data>
+  <comment>@Invariant</comment></data>
   <data name="SourceCombo.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
@@ -232,8 +232,8 @@
     <value>4</value>
   </data>
   <data name="ToolStrip1.Text" xml:space="preserve">
-    <value>ToolStrip1</value>
-  </data>
+    <value>[ToolStrip1]</value>
+  <comment>@Invariant</comment></data>
   <data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
     <value>ToolStrip1</value>
   </data>
@@ -254,7 +254,7 @@
   </metadata>
   <data name="EventImage.HeaderText" xml:space="preserve">
     <value />
-  </data>
+  <comment>@Invariant</comment></data>
   <data name="DataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>
   </data>
