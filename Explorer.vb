@@ -68,9 +68,7 @@ Public Class Explorer
 
         SetView(ListView.View)
         Machines.Load(Pool)
-
         Machines.dirty = False
-        LoadTree()
 
         Try
             If (My.Application.CommandLineArgs(0) = "/min") Then
@@ -83,6 +81,12 @@ Public Class Explorer
 
         End Try
 
+    End Sub
+
+    ' The form is now shown, release the hold on the thread pool
+    Private Sub Explorer_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        LoadTree()
+        Pool.Release(My.Settings.Threads)
         If My.Settings.autocheckUpdates Then TimerUpdate.Start()
     End Sub
 
@@ -101,6 +105,10 @@ Public Class Explorer
         If (InvokeRequired) Then
             BeginInvoke(New UpdateStatusHandler(AddressOf UpdateStatus), New Object() {sender, e})
             Return
+        End If
+
+        If (e.Status <> AutoUpdateEventArgs.StatusCodes.checking) Then
+            RemoveHandler AutoUpdater.UpdateStatus, AddressOf UpdateStatus
         End If
 
         ToolStripStatusLabel2.Text = e.Text
@@ -512,6 +520,7 @@ Public Class Explorer
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles AboutToolStripMenuItem.Click
+        TimerUpdate.Stop()
         AboutBox.ShowDialog(Me)
     End Sub
 
@@ -744,11 +753,6 @@ Public Class Explorer
 
     Private Sub ListenToolStripMenuItem_Click(sender As System.Object, e As EventArgs) Handles ListenToolStripMenuItem.Click, ListenerToolStripButton.Click
         My.Forms.Listener.Show()
-    End Sub
-
-    ' The form is now shown, start release the old on the thread pool
-    Private Sub Explorer_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Pool.Release(My.Settings.Threads)
     End Sub
 
     ' TreeView context menu

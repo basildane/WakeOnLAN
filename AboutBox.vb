@@ -56,22 +56,25 @@ Public NotInheritable Class AboutBox
             Return
         End If
 
-        Select Case (e.status)
-            Case AutoUpdateEventArgs.statusCodes.checking
+        Select Case (e.Status)
+            Case AutoUpdateEventArgs.StatusCodes.checking
                 pbUpdate.Image = My.Resources.system_software_update
 
-            Case AutoUpdateEventArgs.statusCodes.error
+            Case AutoUpdateEventArgs.StatusCodes.error
                 pbUpdate.Image = My.Resources.error2
+                RemoveHandler AutoUpdater.UpdateStatus, AddressOf UpdateStatus
 
-            Case AutoUpdateEventArgs.statusCodes.updateAvailable
+            Case AutoUpdateEventArgs.StatusCodes.updateAvailable
                 pbUpdate.Image = My.Resources.software_update_available
+                RemoveHandler AutoUpdater.UpdateStatus, AddressOf UpdateStatus
 
             Case Else
                 pbUpdate.Image = My.Resources.emblem_ok
+                RemoveHandler AutoUpdater.UpdateStatus, AddressOf UpdateStatus
 
         End Select
 
-        lAutomaticUpdate.Text = e.text
+        lAutomaticUpdate.Text = e.Text
     End Sub
 
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OKButton.Click
