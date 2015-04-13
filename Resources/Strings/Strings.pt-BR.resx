@@ -169,6 +169,10 @@
     <value>Excluir {0} registros?</value>
     <comment>Delete {0} records?</comment>
   </data>
+  <data name="Done" xml:space="preserve">
+    <value>Pronto</value>
+    <comment>Done</comment>
+  </data>
   <data name="EmergencyShutdown" xml:space="preserve">
     <value>Desligamento de emergência iniciado</value>
     <comment>Emergency shutdown started</comment>
@@ -220,6 +224,10 @@
   <data name="Pausing" xml:space="preserve">
     <value>Pausando...</value>
     <comment>Pausing...</comment>
+  </data>
+  <data name="Polling" xml:space="preserve">
+    <value>Localizando {0}</value>
+    <comment>Polling {0}</comment>
   </data>
   <data name="Properties" xml:space="preserve">
     <value>Propriedades - {0}</value>
@@ -276,13 +284,5 @@
   <data name="WhereSave" xml:space="preserve">
     <value>Onde você gostaria de salvar as configurações?</value>
     <comment>Where do you want to save the settings?</comment>
-  </data>
-  <data name="Done" xml:space="preserve">
-    <value>Pronto</value>
-    <comment>Done</comment>
-  </data>
-  <data name="Polling" xml:space="preserve">
-    <value>Localizando {0}</value>
-    <comment>Polling {0}</comment>
   </data>
 </root>

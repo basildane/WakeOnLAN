@@ -38,6 +38,7 @@ AppCopyright=Copyright Aquila Technology
 [Languages]
 Name: "en"; MessagesFile: "compiler:Default.isl"
 Name: "de"; MessagesFile: "compiler:Languages\German.isl"
+Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "fi"; MessagesFile: "compiler:Languages\Finnish.isl"
 Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
 Name: "hu"; MessagesFile: "compiler:Languages\Hungarian.isl"
@@ -74,6 +75,7 @@ Source: "C:\Projects\WakeOnLan\Console\WakeOnLanC\bin\Release\WakeOnLanC.XmlSeri
 Source: "C:\Projects\WakeOnLan\Help\*"; DestDir: "{app}\Help"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 Source: "C:\Projects\WakeOnLan\bin\Release\de\*"; DestDir: "{app}\de"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Projects\WakeOnLan\bin\Release\es\*"; DestDir: "{app}\es"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Projects\WakeOnLan\bin\Release\fi\*"; DestDir: "{app}\fi"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Projects\WakeOnLan\bin\Release\fr\*"; DestDir: "{app}\fr"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Projects\WakeOnLan\bin\Release\hu\*"; DestDir: "{app}\hu"; Flags: ignoreversion recursesubdirs createallsubdirs

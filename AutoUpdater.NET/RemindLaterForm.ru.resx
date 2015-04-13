@@ -112,16 +112,14 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Text" xml:space="preserve">
     <value>Напомнить об обновлении позднее</value>
-  </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>OK</value>
   </data>
   <data name="comboBoxRemindLater.Items" xml:space="preserve">
     <value>Через 30 минут</value>
@@ -144,14 +142,26 @@
   <data name="comboBoxRemindLater.Items6" xml:space="preserve">
     <value>Через 10 дней</value>
   </data>
+  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 45</value>
+  </data>
   <data name="labelDescription.Text" xml:space="preserve">
     <value>Рекомендуем загрузить обновление сейчас. Это займет всего несколько минут, в зависимости от скорости Интернета</value>
+  </data>
+  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 19</value>
   </data>
   <data name="labelTitle.Text" xml:space="preserve">
     <value>Отложить загрузку новой версии?</value>
   </data>
+  <data name="radioButtonNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 19</value>
+  </data>
   <data name="radioButtonNo.Text" xml:space="preserve">
     <value>Нет, загрузить обновление сейчас (рекоммендуется)</value>
+  </data>
+  <data name="radioButtonYes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 19</value>
   </data>
   <data name="radioButtonYes.Text" xml:space="preserve">
     <value>Да, напомнить позднее:</value>

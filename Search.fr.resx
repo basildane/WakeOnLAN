@@ -118,29 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="SearchBegin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 37</value>
-  </data>
-  <data name="SearchBegin.Text" xml:space="preserve">
-    <value>Commencer la recherche</value>
-  </data>
-  <data name="SearchBegin.ToolTip" xml:space="preserve">
-    <value>Commencer la recherche de machines</value>
-  </data>
-  <data name="ch_Name.Text" xml:space="preserve">
-    <value>Nom</value>
-  </data>
-  <data name="ch_OS.Text" xml:space="preserve">
-    <value>Système d'exploitation</value>
-  </data>
-  <data name="ch_Interface.Text" xml:space="preserve">
-    <value>Description du périphérique</value>
-  </data>
-  <data name="ch_IP.Text" xml:space="preserve">
-    <value>Adresse IP</value>
-  </data>
-  <data name="ch_MAC.Text" xml:space="preserve">
-    <value>Adresse MAC</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Chercher des périphériques</value>
   </data>
   <data name="cancelSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>153, 87</value>
@@ -154,11 +133,29 @@
   <data name="cancelSearch.ToolTip" xml:space="preserve">
     <value>Arrêter la recherche</value>
   </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 13</value>
+  <data name="ch_Interface.Text" xml:space="preserve">
+    <value>Description du périphérique</value>
   </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Fin de la plage d'adresse IP</value>
+  <data name="ch_IP.Text" xml:space="preserve">
+    <value>Adresse IP</value>
+  </data>
+  <data name="ch_MAC.Text" xml:space="preserve">
+    <value>Adresse MAC</value>
+  </data>
+  <data name="ch_Name.Text" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="ch_OS.Text" xml:space="preserve">
+    <value>Système d'exploitation</value>
+  </data>
+  <data name="CheckAllButton.Text" xml:space="preserve">
+    <value>Tout cocher</value>
+  </data>
+  <data name="closeButton.Text" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="gbSearch.Text" xml:space="preserve">
+    <value>Rechercher des périphériques</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 13</value>
@@ -166,8 +163,17 @@
   <data name="Label1.Text" xml:space="preserve">
     <value>Début de la plage d'adresse IP</value>
   </data>
-  <data name="gbSearch.Text" xml:space="preserve">
-    <value>Rechercher des périphériques</value>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Fin de la plage d'adresse IP</value>
+  </data>
+  <data name="LabelAddToGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 13</value>
+  </data>
+  <data name="LabelAddToGroup.Text" xml:space="preserve">
+    <value>Ajouter au groupe...</value>
   </data>
   <data name="LabelDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>680, 456</value>
@@ -178,22 +184,16 @@
   <data name="LabelDescription.Text" xml:space="preserve">
     <value>Sélectionner les périphériques souhaités avec les cases à cocher, puis cliquer OK pour les ajouter à la base de données.</value>
   </data>
-  <data name="CheckAllButton.Text" xml:space="preserve">
-    <value>Tout cocher</value>
+  <data name="SearchBegin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 37</value>
+  </data>
+  <data name="SearchBegin.Text" xml:space="preserve">
+    <value>Commencer la recherche</value>
+  </data>
+  <data name="SearchBegin.ToolTip" xml:space="preserve">
+    <value>Commencer la recherche de machines</value>
   </data>
   <data name="UnCheckAllButton.Text" xml:space="preserve">
     <value>Tout décocher</value>
-  </data>
-  <data name="closeButton.Text" xml:space="preserve">
-    <value>Annuler</value>
-  </data>
-  <data name="LabelAddToGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 13</value>
-  </data>
-  <data name="LabelAddToGroup.Text" xml:space="preserve">
-    <value>Ajouter au groupe...</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Chercher des périphériques</value>
   </data>
 </root>

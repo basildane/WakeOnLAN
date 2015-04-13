@@ -117,6 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Versiune</value>
+    <comment>Version</comment>
+  </data>
+  <data name="AppVersionDescription" xml:space="preserve">
+    <value>Versiune program</value>
+    <comment>Application version</comment>
+  </data>
+  <data name="AutoCheck" xml:space="preserve">
+    <value>Verifica automat modernizările programului</value>
+  <comment></comment></data>
   <data name="Broadcast_Address" xml:space="preserve">
     <value>Adresa de difuzare</value>
     <comment>Broadcast Address</comment>
@@ -124,6 +135,10 @@
   <data name="Broadcast_AddressDescription" xml:space="preserve">
     <value>Scrie adresa de difuzare IP pentru pachetele de difuzare WOL.</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
+  </data>
+  <data name="cat_Application" xml:space="preserve">
+    <value>Aplicaţie</value>
+    <comment>Application</comment>
   </data>
   <data name="cat_Emergency" xml:space="preserve">
     <value>Configurari de urgenţă</value>
@@ -137,6 +152,13 @@
     <value>WOL</value>
     <comment>WOL</comment>
   </data>
+  <data name="Culture" xml:space="preserve">
+    <value>Cultură</value>
+    <comment>Culture</comment>
+  </data>
+  <data name="dbPath" xml:space="preserve">
+		<value>Calea bazei de date</value>
+	</data>
   <data name="Delay" xml:space="preserve">
     <value>Timp de întârziere</value>
     <comment>Time delay</comment>
@@ -177,6 +199,10 @@
     <value>Forţează serverul remote pentru închidere. Fişierele nesalvate vor fi pierdute.</value>
     <comment>Force remote server to shutdown.  Unsaved files will be lost.</comment>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Limbă</value>
+    <comment>Language</comment>
+  </data>
   <data name="Reboot" xml:space="preserve">
     <value>Repornire</value>
     <comment>Reboot</comment>
@@ -201,30 +227,4 @@
     <value>Scrie portul UDP pentru mesajele de difuzare.</value>
     <comment>Enter the UDP Port number for the broadcast messages.</comment>
   </data>
-  <data name="AppVersion" xml:space="preserve">
-    <value>Versiune</value>
-    <comment>Version</comment>
-  </data>
-  <data name="AppVersionDescription" xml:space="preserve">
-    <value>Versiune program</value>
-    <comment>Application version</comment>
-  </data>
-  <data name="cat_Application" xml:space="preserve">
-    <value>Aplicaţie</value>
-    <comment>Application</comment>
-  </data>
-  <data name="Culture" xml:space="preserve">
-    <value>Cultură</value>
-    <comment>Culture</comment>
-  </data>
-  <data name="Language" xml:space="preserve">
-    <value>Limbă</value>
-    <comment>Language</comment>
-  </data>
-  <data name="AutoCheck" xml:space="preserve">
-    <value>Verifica automat modernizările programului</value>
-  <comment></comment></data>
-  <data name="dbPath" xml:space="preserve">
-		<value>Calea bazei de date</value>
-	</data>
 </root>

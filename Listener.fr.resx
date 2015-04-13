@@ -117,37 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColumnHeader_Time.Text" xml:space="preserve">
-    <value>Temps</value>
-  </data>
-  <data name="ColumnHeader_Name.Text" xml:space="preserve">
-    <value>Nom</value>
-  </data>
-  <data name="LabelHeader.Text" xml:space="preserve">
-    <value>Paquets WOL reçu...</value>
-  </data>
-  <data name="ButtonSet.Text" xml:space="preserve">
-    <value>Définir</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 20</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Port UDP:</value>
-  </data>
-  <data name="lUDPport.Text" xml:space="preserve">
-    <value>En écoute sur:</value>
-  </data>
-  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 102</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Paramètres réseau</value>
-  </data>
-  <data name="Button_clear.Text" xml:space="preserve">
-    <value>Effacer</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAABILAAASCwAAAAAAAAAA
@@ -313,6 +283,24 @@
         wAAAAwAA///AAAADAAD//8AAAAMAAP//wAAAAwAA///AAAADAAD//8AAAAMAAP///////wAA////////
         AAA=
 </value>
+  </data>
+  <data name="Button_clear.Text" xml:space="preserve">
+    <value>Effacer</value>
+  </data>
+  <data name="ButtonSet.Text" xml:space="preserve">
+    <value>Définir</value>
+  </data>
+  <data name="ColumnHeader_Name.Text" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="ColumnHeader_Time.Text" xml:space="preserve">
+    <value>Temps</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 102</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Paramètres réseau</value>
   </data>
   <data name="ImageList_Large.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -481,5 +469,17 @@
         BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH+BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH/BAABBxIAAf8BgAMA
         AQcSAAH/AfgDAAEHEgAC/wHwAgABHxIAA/8B8AEBAf8SAAb/EgAL
 </value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 20</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Port UDP:</value>
+  </data>
+  <data name="LabelHeader.Text" xml:space="preserve">
+    <value>Paquets WOL reçu...</value>
+  </data>
+  <data name="lUDPport.Text" xml:space="preserve">
+    <value>En écoute sur:</value>
   </data>
 </root>

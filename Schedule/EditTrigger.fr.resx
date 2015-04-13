@@ -117,15 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>581, 408</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Editer le déclencheur</value>
+  </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Annuler</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 367</value>
+  <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 17</value>
+  </data>
+  <data name="CheckBox1.Text" xml:space="preserve">
+    <value>Dimanche</value>
+  </data>
+  <data name="CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 17</value>
+  </data>
+  <data name="CheckBox2.Text" xml:space="preserve">
+    <value>Lundi</value>
+  </data>
+  <data name="CheckBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 17</value>
+  </data>
+  <data name="CheckBox3.Text" xml:space="preserve">
+    <value>Mardi</value>
+  </data>
+  <data name="CheckBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
+  </data>
+  <data name="CheckBox4.Text" xml:space="preserve">
+    <value>Mercredi</value>
+  </data>
+  <data name="CheckBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 17</value>
+  </data>
+  <data name="CheckBox5.Text" xml:space="preserve">
+    <value>Jeudi</value>
+  </data>
+  <data name="CheckBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 17</value>
+  </data>
+  <data name="CheckBox6.Text" xml:space="preserve">
+    <value>Vendredi</value>
+  </data>
+  <data name="CheckBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 17</value>
+  </data>
+  <data name="CheckBox7.Text" xml:space="preserve">
+    <value>samedi</value>
+  </data>
+  <data name="CheckBoxEnabled.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 17</value>
+  </data>
+  <data name="CheckBoxEnabled.Text" xml:space="preserve">
+    <value>Activé</value>
+  </data>
+  <data name="GroupBoxAdvanced.Text" xml:space="preserve">
+    <value>Avancé</value>
   </data>
   <data name="GroupBoxDaily.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 50</value>
+  </data>
+  <data name="GroupBoxSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>554, 196</value>
+  </data>
+  <data name="GroupBoxSettings.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="GroupBoxWeekly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 50</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Démarrer:</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Tout les</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 16</value>
@@ -136,109 +209,6 @@
   <data name="Label3.Text" xml:space="preserve">
     <value>jours</value>
   </data>
-  <data name="TextBoxRecurDays.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Tout les</value>
-  </data>
-  <data name="GroupBoxSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>554, 196</value>
-  </data>
-  <data name="GroupBoxSettings.Text" xml:space="preserve">
-    <value>Options</value>
-  </data>
-  <data name="RadioButtonMontly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 17</value>
-  </data>
-  <data name="RadioButtonMontly.Text" xml:space="preserve">
-    <value>Mensuellement</value>
-  </data>
-  <data name="RadioButtonWeekly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 17</value>
-  </data>
-  <data name="RadioButtonWeekly.Text" xml:space="preserve">
-    <value>Hebdomadairement</value>
-  </data>
-  <data name="RadioButtonDaily.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 17</value>
-  </data>
-  <data name="RadioButtonDaily.Text" xml:space="preserve">
-    <value>Quotidiennement</value>
-  </data>
-  <data name="RadioButtonOneTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 17</value>
-  </data>
-  <data name="RadioButtonOneTime.Text" xml:space="preserve">
-    <value>Une fois</value>
-  </data>
-  <data name="GroupBoxWeekly.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 50</value>
-  </data>
-  <data name="CheckBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 17</value>
-  </data>
-  <data name="CheckBox7.Text" xml:space="preserve">
-    <value>samedi</value>
-  </data>
-  <data name="CheckBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 17</value>
-  </data>
-  <data name="CheckBox6.Text" xml:space="preserve">
-    <value>Vendredi</value>
-  </data>
-  <data name="CheckBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 17</value>
-  </data>
-  <data name="CheckBox5.Text" xml:space="preserve">
-    <value>Jeudi</value>
-  </data>
-  <data name="CheckBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
-  </data>
-  <data name="CheckBox4.Text" xml:space="preserve">
-    <value>Mercredi</value>
-  </data>
-  <data name="CheckBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 17</value>
-  </data>
-  <data name="CheckBox3.Text" xml:space="preserve">
-    <value>Mardi</value>
-  </data>
-  <data name="CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 17</value>
-  </data>
-  <data name="CheckBox2.Text" xml:space="preserve">
-    <value>Lundi</value>
-  </data>
-  <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 17</value>
-  </data>
-  <data name="CheckBox1.Text" xml:space="preserve">
-    <value>Dimanche</value>
-  </data>
-  <data name="TextBoxWeeklyRecurs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 13</value>
-  </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Toutes les</value>
-  </data>
-  <data name="GroupBoxAdvanced.Text" xml:space="preserve">
-    <value>Avancé</value>
-  </data>
-  <data name="CheckBoxEnabled.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 17</value>
-  </data>
-  <data name="CheckBoxEnabled.Text" xml:space="preserve">
-    <value>Activé</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -251,16 +221,46 @@
   <data name="Label4.Text" xml:space="preserve">
     <value>semaine(s)</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>581, 408</value>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Editer le déclencheur</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Démarrer:</value>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Toutes les</value>
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>OK</value>
+  </data>
+  <data name="RadioButtonDaily.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 17</value>
+  </data>
+  <data name="RadioButtonDaily.Text" xml:space="preserve">
+    <value>Quotidiennement</value>
+  </data>
+  <data name="RadioButtonMontly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 17</value>
+  </data>
+  <data name="RadioButtonMontly.Text" xml:space="preserve">
+    <value>Mensuellement</value>
+  </data>
+  <data name="RadioButtonOneTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 17</value>
+  </data>
+  <data name="RadioButtonOneTime.Text" xml:space="preserve">
+    <value>Une fois</value>
+  </data>
+  <data name="RadioButtonWeekly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 17</value>
+  </data>
+  <data name="RadioButtonWeekly.Text" xml:space="preserve">
+    <value>Hebdomadairement</value>
+  </data>
+  <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 367</value>
+  </data>
+  <data name="TextBoxRecurDays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="TextBoxWeeklyRecurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 13</value>
   </data>
 </root>

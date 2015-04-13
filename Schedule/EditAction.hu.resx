@@ -117,18 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="OK_Button.Text" xml:space="preserve">
-    <value>Rendben</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Művelet szerkesztése</value>
+  </data>
+  <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="AllLabel.Text" xml:space="preserve">
+    <value>Beállítások</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Mégsem</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
+  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
   </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Művelet:</value>
+  <data name="EmailLabel.Text" xml:space="preserve">
+    <value>Email üzenet</value>
+  </data>
+  <data name="EmailServerTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 103</value>
+  </data>
+  <data name="EmailSubjectTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 77</value>
+  </data>
+  <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 17</value>
+  </data>
+  <data name="forceAll.Text" xml:space="preserve">
+    <value>Erőltetett</value>
   </data>
   <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 17</value>
@@ -136,14 +154,11 @@
   <data name="forceCheckBox.Text" xml:space="preserve">
     <value>Erőltetett</value>
   </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 89</value>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
   </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Kiszolgáló:</value>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Művelet:</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 63</value>
@@ -154,38 +169,14 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>Cím:</value>
   </data>
-  <data name="EmailServerTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 103</value>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 89</value>
   </data>
-  <data name="EmailSubjectTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 77</value>
-  </data>
-  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 106</value>
-  </data>
-  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 13</value>
   </data>
-  <data name="Label8.Text" xml:space="preserve">
+  <data name="Label3.Text" xml:space="preserve">
     <value>Kiszolgáló:</value>
-  </data>
-  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 80</value>
-  </data>
-  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Téma:</value>
-  </data>
-  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 54</value>
-  </data>
-  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 13</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Ide:</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 132</value>
@@ -205,17 +196,35 @@
   <data name="Label5.Text" xml:space="preserve">
     <value>Innen:</value>
   </data>
-  <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 13</value>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 54</value>
   </data>
-  <data name="SelectLabel.Text" xml:space="preserve">
-    <value>Számítógép kiválasztása</value>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 13</value>
   </data>
-  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Ide:</value>
   </data>
-  <data name="EmailLabel.Text" xml:space="preserve">
-    <value>Email üzenet</value>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 80</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Téma:</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 106</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Kiszolgáló:</value>
+  </data>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>Rendben</value>
   </data>
   <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 13</value>
@@ -223,19 +232,10 @@
   <data name="PopupLabel.Text" xml:space="preserve">
     <value>Előugró üzenet</value>
   </data>
-  <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 13</value>
+  <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 13</value>
   </data>
-  <data name="AllLabel.Text" xml:space="preserve">
-    <value>Beállítások</value>
-  </data>
-  <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 17</value>
-  </data>
-  <data name="forceAll.Text" xml:space="preserve">
-    <value>Erőltetett</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Művelet szerkesztése</value>
+  <data name="SelectLabel.Text" xml:space="preserve">
+    <value>Számítógép kiválasztása</value>
   </data>
 </root>

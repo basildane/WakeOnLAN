@@ -623,11 +623,20 @@
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
     <Compile Include="Wake.vb" />
+    <EmbeddedResource Include="AboutBox.es.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalcSubnet.es.resx">
+      <DependentUpon>CalcSubnet.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalcSubnet.ru.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\RegexTextBox.resx">
       <DependentUpon>RegexTextBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crash.es.resx">
+      <DependentUpon>Crash.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Crash.fr.resx">
       <DependentUpon>Crash.vb</DependentUpon>
@@ -641,6 +650,12 @@
     <EmbeddedResource Include="Crash.ru.resx">
       <DependentUpon>Crash.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.es.resx">
+      <DependentUpon>Explorer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.es.resx">
+      <DependentUpon>History.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="History.nl.resx">
       <DependentUpon>History.vb</DependentUpon>
     </EmbeddedResource>
@@ -650,11 +665,32 @@
     <EmbeddedResource Include="History.ru.resx">
       <DependentUpon>History.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="License.es.resx">
+      <DependentUpon>License.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="License.ru.resx">
       <DependentUpon>License.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Listener.es.resx">
+      <DependentUpon>Listener.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties.es.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\OptionProperties.es.resx" />
+    <EmbeddedResource Include="Property\Options.es.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportStrings.es.resx" />
+    <EmbeddedResource Include="Report\ReportViewer.es.resx">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportViewer.ru.resx">
       <DependentUpon>ReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings\Strings.es.resx" />
+    <EmbeddedResource Include="SafeMode.es.resx">
+      <DependentUpon>SafeMode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SafeMode.fr.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>
@@ -700,6 +736,7 @@
     <Content Include="Resources\flags\hungary_flag_16x16.png" />
     <Content Include="Resources\flags\netherlands_flag_16x16.png" />
     <Content Include="Resources\flags\romania_16x16.png" />
+    <None Include="Resources\flags\spain_16x16.png" />
     <Content Include="Resources\Folder_48x48.png" />
     <Content Include="Resources\flags\Germany_Flag_16x16.png" />
     <Content Include="Resources\gplv3-88x31.png" />
@@ -925,6 +962,9 @@
     <EmbeddedResource Include="SafeMode.ru.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditAction.es.resx">
+      <DependentUpon>EditAction.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditAction.fi.resx">
       <DependentUpon>EditAction.vb</DependentUpon>
     </EmbeddedResource>
@@ -939,6 +979,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditAction.zh-TW.resx">
       <DependentUpon>EditAction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTask.es.resx">
+      <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTask.fi.resx">
       <DependentUpon>EditTask.vb</DependentUpon>
@@ -955,6 +998,9 @@
     <EmbeddedResource Include="Schedule\EditTask.zh-TW.resx">
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTrigger.es.resx">
+      <DependentUpon>EditTrigger.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTrigger.fi.resx">
       <DependentUpon>EditTrigger.vb</DependentUpon>
     </EmbeddedResource>
@@ -969,6 +1015,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTrigger.zh-TW.resx">
       <DependentUpon>EditTrigger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\Schedule.es.resx">
+      <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\Schedule.fi.resx">
       <DependentUpon>Schedule.vb</DependentUpon>
@@ -985,6 +1034,9 @@
     <EmbeddedResource Include="Schedule\Schedule.zh-TW.resx">
       <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search.es.resx">
+      <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Search.fi.resx">
       <DependentUpon>Search.vb</DependentUpon>
     </EmbeddedResource>
@@ -999,6 +1051,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Search.zh-TW.resx">
       <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shutdown.es.resx">
+      <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.fi.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>

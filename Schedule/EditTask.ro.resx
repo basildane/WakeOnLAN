@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,147 +59,147 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-	<data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-		<value>136, 13</value>
-	</data>
-	<data name="Label7.Text" xml:space="preserve">
-    <value>domeniu\identitate utilizator</value>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Editează Taskul</value>
   </data>
-	<data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-		<value>40, 13</value>
-	</data>
-	<data name="Label4.Text" xml:space="preserve">
-    <value>Parolă:</value>
-  </data>
-	<data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-		<value>101, 13</value>
-	</data>
-	<data name="Label3.Text" xml:space="preserve">
-    <value>Încarca ID utilizator:</value>
-  </data>
-	<data name="GroupBox1.Text" xml:space="preserve">
-    <value>Opţiuni de securitate</value>
-  </data>
-	<data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-		<value>52, 13</value>
-	</data>
-	<data name="Label2.Text" xml:space="preserve">
-    <value>Descriere</value>
-  </data>
-	<data name="Label1.Text" xml:space="preserve">
-    <value>Nume</value>
-  </data>
-	<data name="ColumnHeader3.Text" xml:space="preserve">
-    <value>Declanşare</value>
-  </data>
-	<data name="ColumnHeader4.Text" xml:space="preserve">
-    <value>Detalii</value>
-  </data>
-	<data name="TriggerDeleteButton.Text" xml:space="preserve">
+  <data name="ActionDeleteButton.Text" xml:space="preserve">
     <value>Şterge</value>
   </data>
-	<data name="TriggerEditButton.Text" xml:space="preserve">
+  <data name="ActionEditButton.Text" xml:space="preserve">
     <value>Editează...</value>
   </data>
-	<data name="TriggerNewButton.Text" xml:space="preserve">
+  <data name="ActionNewButton.Text" xml:space="preserve">
     <value>Nou...</value>
   </data>
-	<data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-		<value>263, 13</value>
-	</data>
-	<data name="Label5.Text" xml:space="preserve">
-    <value>Specifică condiţiile care vor produce acest eveniment.</value>
-  </data>
-	<data name="TabPage2.Text" xml:space="preserve">
-    <value>Declanşări</value>
-  </data>
-	<data name="ActionDeleteButton.Text" xml:space="preserve">
-    <value>Şterge</value>
-  </data>
-	<data name="ActionEditButton.Text" xml:space="preserve">
-    <value>Editează...</value>
-  </data>
-	<data name="ActionNewButton.Text" xml:space="preserve">
-    <value>Nou...</value>
-  </data>
-	<data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-		<value>302, 13</value>
-	</data>
-	<data name="Label6.Text" xml:space="preserve">
-    <value>Specifică acţiunile generate de producerea acestui eveniment.</value>
-  </data>
-	<data name="ColumnHeader1.Text" xml:space="preserve">
-    <value>Acţiune</value>
-  </data>
-	<data name="ColumnHeader2.Text" xml:space="preserve">
-    <value>Detalii</value>
-  </data>
-	<data name="TabPage3.Text" xml:space="preserve">
-    <value>Acţiuni</value>
-  </data>
-	<data name="ButtonCancel.Text" xml:space="preserve">
+  <data name="ButtonCancel.Text" xml:space="preserve">
     <value>Renunţă</value>
   </data>
-	<data name="$this.Text" xml:space="preserve">
-    <value>Editează Taskul</value>
+  <data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>Acţiune</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Detalii</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>Declanşare</value>
+  </data>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>Detalii</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Opţiuni de securitate</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Nume</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Descriere</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 13</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Încarca ID utilizator:</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Parolă:</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 13</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Specifică condiţiile care vor produce acest eveniment.</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 13</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Specifică acţiunile generate de producerea acestui eveniment.</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 13</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>domeniu\identitate utilizator</value>
+  </data>
+  <data name="TabPage2.Text" xml:space="preserve">
+    <value>Declanşări</value>
+  </data>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>Acţiuni</value>
+  </data>
+  <data name="TriggerDeleteButton.Text" xml:space="preserve">
+    <value>Şterge</value>
+  </data>
+  <data name="TriggerEditButton.Text" xml:space="preserve">
+    <value>Editează...</value>
+  </data>
+  <data name="TriggerNewButton.Text" xml:space="preserve">
+    <value>Nou...</value>
   </data>
 </root>

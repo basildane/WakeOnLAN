@@ -137,6 +137,24 @@
     <value>Abbruch bei {0} war erfolgreich</value>
     <comment>Abort {machine} successful</comment>
   </data>
+  <data name="actions_email" xml:space="preserve">
+    <value>Email senden</value>
+  </data>
+  <data name="actions_popup" xml:space="preserve">
+    <value>Nachricht anzeigen</value>
+  </data>
+  <data name="actions_shutdown" xml:space="preserve">
+    <value>Rechner runterfahren</value>
+  </data>
+  <data name="actions_shutdownAll" xml:space="preserve">
+    <value>Alle Rechner runterfahren</value>
+  </data>
+  <data name="actions_start" xml:space="preserve">
+    <value>Rechner hochfahren</value>
+  </data>
+  <data name="actions_startAll" xml:space="preserve">
+    <value>Alle Rechner hochfahren</value>
+  </data>
   <data name="AllMachines" xml:space="preserve">
     <value>Alle Rechner</value>
     <comment>All machines</comment>
@@ -204,6 +222,54 @@
   <data name="isNew" xml:space="preserve">
     <value>Neu</value>
     <comment>New</comment>
+  </data>
+  <data name="lit_at" xml:space="preserve">
+    <value>{0} am {1}</value>
+  </data>
+  <data name="lit_atDays" xml:space="preserve">
+    <value>{0} jeden {1} Tag</value>
+  </data>
+  <data name="lit_atWeeks" xml:space="preserve">
+    <value>{0} jeden {1} im {3}-Wochenrythmus, beginnend {3}</value>
+  </data>
+  <data name="lit_Disabled" xml:space="preserve">
+    <value>Nicht aktiv</value>
+  </data>
+  <data name="lit_Enabled" xml:space="preserve">
+    <value>Aktivieren</value>
+  </data>
+  <data name="lit_Error" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="lit_Invalid" xml:space="preserve">
+    <value>Ungütlige Kommandozeile</value>
+  </data>
+  <data name="lit_multipleTriggers" xml:space="preserve">
+    <value>Mehrere Auslöser sind definiert</value>
+  </data>
+  <data name="lit_Never" xml:space="preserve">
+    <value>Niemals</value>
+  </data>
+  <data name="lit_None" xml:space="preserve">
+    <value>Nichts</value>
+  </data>
+  <data name="lit_noRights" xml:space="preserve">
+    <value>{0} scheint keine Leseberechtigung auf die WOL Zeittabellen - Datenbank zu haben. Zugriff erlauben?</value>
+  </data>
+  <data name="lit_notFound" xml:space="preserve">
+    <value>Rechner nicht gefunden</value>
+  </data>
+  <data name="lit_Queued" xml:space="preserve">
+    <value>Warteschlange</value>
+  </data>
+  <data name="lit_Ready" xml:space="preserve">
+    <value>Ferig</value>
+  </data>
+  <data name="lit_Running" xml:space="preserve">
+    <value>Läuft…</value>
+  </data>
+  <data name="lit_Unknown" xml:space="preserve">
+    <value>Unbekannt</value>
   </data>
   <data name="OffLine" xml:space="preserve">
     <value>Host ist OFFLINE</value>
@@ -284,71 +350,5 @@
   <data name="WhereSave" xml:space="preserve">
     <value>Wo möchten sie die Einstellungen speichern?</value>
     <comment>Where do you want to save the settings?</comment>
-  </data>
-  <data name="actions_email" xml:space="preserve">
-    <value>Email senden</value>
-  </data>
-  <data name="actions_popup" xml:space="preserve">
-    <value>Nachricht anzeigen</value>
-  </data>
-  <data name="actions_shutdown" xml:space="preserve">
-    <value>Rechner runterfahren</value>
-  </data>
-  <data name="actions_shutdownAll" xml:space="preserve">
-    <value>Alle Rechner runterfahren</value>
-  </data>
-  <data name="actions_start" xml:space="preserve">
-    <value>Rechner hochfahren</value>
-  </data>
-  <data name="actions_startAll" xml:space="preserve">
-    <value>Alle Rechner hochfahren</value>
-  </data>
-  <data name="lit_at" xml:space="preserve">
-    <value>{0} am {1}</value>
-  </data>
-  <data name="lit_atDays" xml:space="preserve">
-    <value>{0} jeden {1} Tag</value>
-  </data>
-  <data name="lit_atWeeks" xml:space="preserve">
-    <value>{0} jeden {1} im {3}-Wochenrythmus, beginnend {3}</value>
-  </data>
-  <data name="lit_Disabled" xml:space="preserve">
-    <value>Nicht aktiv</value>
-  </data>
-  <data name="lit_Enabled" xml:space="preserve">
-    <value>Aktivieren</value>
-  </data>
-  <data name="lit_Error" xml:space="preserve">
-    <value>Fehler</value>
-  </data>
-  <data name="lit_Invalid" xml:space="preserve">
-    <value>Ungütlige Kommandozeile</value>
-  </data>
-  <data name="lit_multipleTriggers" xml:space="preserve">
-    <value>Mehrere Auslöser sind definiert</value>
-  </data>
-  <data name="lit_Never" xml:space="preserve">
-    <value>Niemals</value>
-  </data>
-  <data name="lit_None" xml:space="preserve">
-    <value>Nichts</value>
-  </data>
-  <data name="lit_noRights" xml:space="preserve">
-    <value>{0} scheint keine Leseberechtigung auf die WOL Zeittabellen - Datenbank zu haben. Zugriff erlauben?</value>
-  </data>
-  <data name="lit_notFound" xml:space="preserve">
-    <value>Rechner nicht gefunden</value>
-  </data>
-  <data name="lit_Queued" xml:space="preserve">
-    <value>Warteschlange</value>
-  </data>
-  <data name="lit_Ready" xml:space="preserve">
-    <value>Ferig</value>
-  </data>
-  <data name="lit_Running" xml:space="preserve">
-    <value>Läuft…</value>
-  </data>
-  <data name="lit_Unknown" xml:space="preserve">
-    <value>Unbekannt</value>
   </data>
 </root>

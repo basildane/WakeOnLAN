@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Acerca de...</value>
+  </data>
+  <data name="AutoStartWithWindowsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Arranque automático con Windows</value>
+  </data>
+  <data name="Button_Emergency.Text" xml:space="preserve">
+    <value>Parada de emergencia</value>
+  </data>
+  <data name="Button_Emergency.ToolTip" xml:space="preserve">
+    <value>Inmediatamente apagado y apagar todos los equipos que están definidos</value>
+  </data>
+  <data name="Button_StartAll.Text" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="Button_StartAll.ToolTip" xml:space="preserve">
+    <value>Empieza a todos los equipos</value>
+  </data>
+  <data name="ClearIPToolStripMenuItem.Text" xml:space="preserve">
+    <value>IP claro</value>
+  </data>
+  <data name="ContentsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Índice</value>
+  </data>
+  <data name="ContextToolStripMenuItemExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="ContextToolStripMenuItemOpen.Text" xml:space="preserve">
+    <value>Programa</value>
+  </data>
+  <data name="CopyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="CutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cortar</value>
+  </data>
+  <data name="DeleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>borrar</value>
+  </data>
+  <data name="DetailsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="DetailsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="DonateToolStripMenuItem.Text" xml:space="preserve">
+    <value>Hacer una donación...</value>
+  </data>
+  <data name="EditToolStripMenuItem.Text" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="EventLogToolStripButton.Text" xml:space="preserve">
+    <value>Registro de sucesos</value>
+  </data>
+  <data name="EventLogToolStripMenuItem.Text" xml:space="preserve">
+    <value>Registro de sucesos</value>
+  </data>
+  <data name="ExitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sa&amp;lir</value>
+  </data>
+  <data name="ExportToolStripMenuItem.Text" xml:space="preserve">
+    <value>Configuración exportación</value>
+  </data>
+  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="FoldersToolStripButton.Text" xml:space="preserve">
+    <value>Carpetas</value>
+  </data>
+  <data name="FoldersToolStripButton.ToolTipText" xml:space="preserve">
+    <value>Alternar vista de carpetas</value>
+  </data>
+  <data name="FoldersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Carpetas</value>
+  </data>
+  <data name="Group.Text" xml:space="preserve">
+    <value>Grupos</value>
+  </data>
+  <data name="HelpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="HotToolStripButton.Text" xml:space="preserve">
+    <value>Botones Hot</value>
+  </data>
+  <data name="ImportToolStripMenuItem.Text" xml:space="preserve">
+    <value>Importar opciones</value>
+  </data>
+  <data name="IPAddress.Text" xml:space="preserve">
+    <value>Dirección IP</value>
+  </data>
+  <data name="LargeIconsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Iconos grandes</value>
+  </data>
+  <data name="LargeIconsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Iconos grandes</value>
+  </data>
+  <data name="LicenseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Licencia</value>
+  </data>
+  <data name="ListenerToolStripButton.Text" xml:space="preserve">
+    <value>oyente</value>
+  </data>
+  <data name="ListenToolStripMenuItem.Text" xml:space="preserve">
+    <value>oyente</value>
+  </data>
+  <data name="ListToolStripMenuItem.Text" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="ListToolStripMenuItem1.Text" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="ListViewToolStripButton.Text" xml:space="preserve">
+    <value>Visitas</value>
+  </data>
+  <data name="MachineName.Text" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="MinimizeToTaskTrayToolStripMenuItem.Text" xml:space="preserve">
+    <value>Minimizar a la bandeja de tareas</value>
+  </data>
+  <data name="Netbios.Text" xml:space="preserve">
+    <value>URI</value>
+  </data>
+  <data name="NewToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp; Nuevo Host</value>
+  </data>
+  <data name="NewToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Nuevo host</value>
+  </data>
+  <data name="Note.Text" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="NotifyIcon1.Text" xml:space="preserve">
+    <value>WakeOnLAN</value>
+  </data>
+  <data name="NotifyIconUpdate.Text" xml:space="preserve">
+    <value>WakeOnLAN actualización</value>
+  </data>
+  <data name="OptionsToolStripButton.Text" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="OptionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="PasteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="PingToolStripButton.Text" xml:space="preserve">
+    <value>tintineador</value>
+  </data>
+  <data name="PrintPreviewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Imprimir vista previa</value>
+  </data>
+  <data name="PrintToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Impresión</value>
+  </data>
+  <data name="PropertiesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Propiedades</value>
+  </data>
+  <data name="RDPToolStripMenuItem.Text" xml:space="preserve">
+    <value>Escritorio remoto</value>
+  </data>
+  <data name="RedoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rehacer</value>
+  </data>
+  <data name="ResetWindowLayoutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Restablecer la disposición de ventanas</value>
+  </data>
+  <data name="ResetWindowLayoutToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Restablecer la disposición de ventanas</value>
+  </data>
+  <data name="ScheduleToolStripButton.Text" xml:space="preserve">
+    <value>Calendario</value>
+  </data>
+  <data name="ScheduleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Calendario</value>
+  </data>
+  <data name="SearchForMachinesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Búsqueda para las máquinas</value>
+  </data>
+  <data name="SelectAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Seleccionar &amp;todo</value>
+  </data>
+  <data name="ShowGroupsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mostrar grupos</value>
+  </data>
+  <data name="ShowHotButtonsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mostrar botones Hot</value>
+  </data>
+  <data name="ShutdownToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="ShutDownToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="SmallIconsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Iconos pequeños</value>
+  </data>
+  <data name="SmallIconsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Iconos pequeños</value>
+  </data>
+  <data name="Status.Text" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="StatusBarToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Barra de estado</value>
+  </data>
+  <data name="TileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mosaico</value>
+  </data>
+  <data name="TileToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Mosaico</value>
+  </data>
+  <data name="ToolBarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Barra de herramientas</value>
+  </data>
+  <data name="ToolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Herramientas</value>
+  </data>
+  <data name="ToolStripMenuItemWakeUp.Text" xml:space="preserve">
+    <value>¡Despierta!</value>
+  </data>
+  <data name="UndoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="ViewToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Vista</value>
+  </data>
+  <data name="WakeUpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Despertarse</value>
+  </data>
+  <data name="WakeUpToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Despertarse</value>
+  </data>
+</root>

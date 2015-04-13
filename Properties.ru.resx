@@ -118,33 +118,75 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Свойства</value>
+  </data>
+  <data name="bCalcBroadcast.Text" xml:space="preserve">
+    <value>Вычисление</value>
+  </data>
+  <data name="Broadcast.ErrorMessage" xml:space="preserve">
+    <value>Неправильный IP адресс. Используйте ###.###.###.###</value>
+  </data>
   <data name="Cancel_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lNotes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 91</value>
+  <data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
-  <data name="lNotes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 13</value>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 17</value>
   </data>
-  <data name="lNotes.Text" xml:space="preserve">
-    <value>Заметки</value>
+  <data name="CheckBox_Emergency.Text" xml:space="preserve">
+    <value>Выключить немедленно?</value>
   </data>
-  <data name="TextBox_Notes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 88</value>
+  <data name="ComboBoxShutdownMethod.Items1" xml:space="preserve">
+    <value>Пользовательское</value>
   </data>
-  <data name="TextBox_Notes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 40</value>
+  <data name="ComboBoxShutdownMethod.Items2" xml:space="preserve">
+    <value>Легативное</value>
+  </data>
+  <data name="Delete_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Удалить</value>
   </data>
   <data name="Group.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
   <data name="Group.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 51</value>
+  </data>
+  <data name="Help_Button.Text" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="IP.ErrorMessage" xml:space="preserve">
+    <value>Неправильный IP адресс. Используйте ###.###.###.###</value>
+  </data>
+  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="LabelInterfaces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="LabelInterfaces.Text" xml:space="preserve">
+    <value>Интерфейс</value>
+  </data>
+  <data name="LabelShutdownMethod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 13</value>
+  </data>
+  <data name="LabelShutdownMethod.Text" xml:space="preserve">
+    <value>Способ выключения</value>
+  </data>
+  <data name="lbBroadcast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="lbBroadcast.Text" xml:space="preserve">
+    <value>Передача</value>
   </data>
   <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 54</value>
@@ -155,56 +197,20 @@
   <data name="lbGroup.Text" xml:space="preserve">
     <value>Название группы</value>
   </data>
-  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 28</value>
+  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 23</value>
   </data>
-  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
+  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
   </data>
-  <data name="lbName.Text" xml:space="preserve">
-    <value>Имя</value>
+  <data name="lbIP.Text" xml:space="preserve">
+    <value>IP-адрес</value>
   </data>
-  <data name="MachineName.ErrorMessage" xml:space="preserve">
-    <value>Неверное имя компьютера</value>
+  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 13</value>
   </data>
-  <data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="MachineName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 25</value>
-  </data>
-  <data name="MachineName.ToolTip" xml:space="preserve">
-    <value>Имя машины. Введите действительный наименование, содержащее буквы, цифры, тире или подчеркивания.</value>
-  </data>
-  <data name="TabProperties.Text" xml:space="preserve">
-    <value>Отобразить свойства</value>
-  </data>
-  <data name="tHostURI.ErrorMessage" xml:space="preserve">
-    <value>Неверное имя компьютера</value>
-  </data>
-  <data name="LabelInterfaces.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
-  </data>
-  <data name="LabelInterfaces.Text" xml:space="preserve">
-    <value>Интерфейс</value>
-  </data>
-  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 207</value>
-  </data>
-  <data name="lbUDP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
-  </data>
-  <data name="lbUDP.Text" xml:space="preserve">
-    <value>UDP порт</value>
-  </data>
-  <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 233</value>
-  </data>
-  <data name="lbTTL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 13</value>
-  </data>
-  <data name="lbTTL.Text" xml:space="preserve">
-    <value>TTL (время жизни пакета)</value>
+  <data name="lbLeaveBlank.Text" xml:space="preserve">
+    <value>* Присваивается DHCP</value>
   </data>
   <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 26</value>
@@ -215,11 +221,29 @@
   <data name="lbMAC.Text" xml:space="preserve">
     <value>MAC-адрес</value>
   </data>
-  <data name="bCalcBroadcast.Text" xml:space="preserve">
-    <value>Вычисление</value>
+  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 28</value>
+  </data>
+  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="lbName.Text" xml:space="preserve">
+    <value>Имя</value>
   </data>
   <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 109</value>
+  </data>
+  <data name="lbRDPPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="lbRDPPort.Text" xml:space="preserve">
+    <value>RDP порт</value>
+  </data>
+  <data name="lbRemoteDesktop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 13</value>
+  </data>
+  <data name="lbRemoteDesktop.Text" xml:space="preserve">
+    <value>*  порт удаленного стола</value>
   </data>
   <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 54</value>
@@ -230,101 +254,47 @@
   <data name="lbSendTo.Text" xml:space="preserve">
     <value>Отправить к</value>
   </data>
-  <data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 50</value>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 13</value>
   </data>
-  <data name="rbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 50</value>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>Завершение работы из командной строки:</value>
   </data>
-  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 17</value>
+  <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 233</value>
   </data>
-  <data name="rbIP.Text" xml:space="preserve">
-    <value>IP передачи</value>
+  <data name="lbTTL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 13</value>
   </data>
-  <data name="lbBroadcast.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbTTL.Text" xml:space="preserve">
+    <value>TTL (время жизни пакета)</value>
+  </data>
+  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 207</value>
+  </data>
+  <data name="lbUDP.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
   </data>
-  <data name="lbBroadcast.Text" xml:space="preserve">
-    <value>Передача</value>
+  <data name="lbUDP.Text" xml:space="preserve">
+    <value>UDP порт</value>
   </data>
-  <data name="TTL.ErrorMessage" xml:space="preserve">
-    <value>Невернывй TTL (время жизни пакетов)</value>
-  </data>
-  <data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 230</value>
-  </data>
-  <data name="UDPPort.ErrorMessage" xml:space="preserve">
-    <value>Неверный UDP</value>
-  </data>
-  <data name="UDPPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 204</value>
-  </data>
-  <data name="Broadcast.ErrorMessage" xml:space="preserve">
-    <value>Неправильный IP адресс. Используйте ###.###.###.###</value>
-  </data>
-  <data name="MAC.ErrorMessage" xml:space="preserve">
-    <value>Неправильный MAC-адрес. Используйте ##:##:##:##</value>
-  </data>
-  <data name="MAC.ToolTip" xml:space="preserve">
-    <value>Введите MAC-адрес машины, кторую надо пробудить. Допустимые MAC-адреса 6 пар шестнадцатеричных цифр, разделенных ':' или '-'. Например: 01:00:22:32:af:d0</value>
-  </data>
-  <data name="TabWakeUp.Text" xml:space="preserve">
-    <value>Пробуждение</value>
-  </data>
-  <data name="lbRemoteDesktop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 13</value>
-  </data>
-  <data name="lbRemoteDesktop.Text" xml:space="preserve">
-    <value>*  порт удаленного стола</value>
-  </data>
-  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 13</value>
-  </data>
-  <data name="lbLeaveBlank.Text" xml:space="preserve">
-    <value>* Присваивается DHCP</value>
-  </data>
-  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 23</value>
-  </data>
-  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="lbIP.Text" xml:space="preserve">
-    <value>IP-адрес</value>
-  </data>
-  <data name="lbRDPPort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
-  </data>
-  <data name="lbRDPPort.Text" xml:space="preserve">
-    <value>RDP порт</value>
-  </data>
-  <data name="IP.ErrorMessage" xml:space="preserve">
-    <value>Неправильный IP адресс. Используйте ###.###.###.###</value>
-  </data>
-  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
-    <value>Неверный RDP порт</value>
-  </data>
-  <data name="tRDPPort.ToolTip" xml:space="preserve">
-    <value>Порт удаленного рабочего стола</value>
-  </data>
-  <data name="TabStatus.Text" xml:space="preserve">
-    <value>Статус/Управление</value>
-  </data>
-  <data name="tUserId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 83</value>
-  </data>
-  <data name="tUserId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 20</value>
+  <data name="lDescription.Text" xml:space="preserve">
+    <value>Можете ввести ID пользователя, пароль и домен, который будет использоваться для операции отключения. Оставьте это поле пустым, чтобы использовать учетные данные по умолчанию.</value>
   </data>
   <data name="lDomain.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 13</value>
   </data>
   <data name="lDomain.Text" xml:space="preserve">
     <value>Домен</value>
+  </data>
+  <data name="lNotes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 91</value>
+  </data>
+  <data name="lNotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="lNotes.Text" xml:space="preserve">
+    <value>Заметки</value>
   </data>
   <data name="lPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 13</value>
@@ -341,58 +311,88 @@
   <data name="lUserId.Text" xml:space="preserve">
     <value>ID пользователя</value>
   </data>
-  <data name="lDescription.Text" xml:space="preserve">
-    <value>Можете ввести ID пользователя, пароль и домен, который будет использоваться для операции отключения. Оставьте это поле пустым, чтобы использовать учетные данные по умолчанию.</value>
+  <data name="MAC.ErrorMessage" xml:space="preserve">
+    <value>Неправильный MAC-адрес. Используйте ##:##:##:##</value>
   </data>
-  <data name="LabelShutdownMethod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 13</value>
+  <data name="MAC.ToolTip" xml:space="preserve">
+    <value>Введите MAC-адрес машины, кторую надо пробудить. Допустимые MAC-адреса 6 пар шестнадцатеричных цифр, разделенных ':' или '-'. Например: 01:00:22:32:af:d0</value>
   </data>
-  <data name="LabelShutdownMethod.Text" xml:space="preserve">
-    <value>Способ выключения</value>
+  <data name="MachineName.ErrorMessage" xml:space="preserve">
+    <value>Неверное имя компьютера</value>
   </data>
-  <data name="ComboBoxShutdownMethod.Items1" xml:space="preserve">
-    <value>Пользовательское</value>
-  </data>
-  <data name="ComboBoxShutdownMethod.Items2" xml:space="preserve">
-    <value>Легативное</value>
-  </data>
-  <data name="TextBox_Command.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 13</value>
+  <data name="MachineName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 25</value>
   </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Завершение работы из командной строки:</value>
-  </data>
-  <data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 17</value>
-  </data>
-  <data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>Выключить немедленно?</value>
-  </data>
-  <data name="TabShutdown.Text" xml:space="preserve">
-    <value>Выключение</value>
-  </data>
-  <data name="Help_Button.Text" xml:space="preserve">
-    <value>Справка</value>
-  </data>
-  <data name="Delete_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="Delete_Button.Text" xml:space="preserve">
-    <value>Удалить</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Свойства</value>
+  <data name="MachineName.ToolTip" xml:space="preserve">
+    <value>Имя машины. Введите действительный наименование, содержащее буквы, цифры, тире или подчеркивания.</value>
   </data>
   <data name="OK_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>ОК</value>
+  </data>
+  <data name="rbIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 50</value>
+  </data>
+  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 17</value>
+  </data>
+  <data name="rbIP.Text" xml:space="preserve">
+    <value>IP передачи</value>
+  </data>
+  <data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 50</value>
+  </data>
+  <data name="TabProperties.Text" xml:space="preserve">
+    <value>Отобразить свойства</value>
+  </data>
+  <data name="TabShutdown.Text" xml:space="preserve">
+    <value>Выключение</value>
+  </data>
+  <data name="TabStatus.Text" xml:space="preserve">
+    <value>Статус/Управление</value>
+  </data>
+  <data name="TabWakeUp.Text" xml:space="preserve">
+    <value>Пробуждение</value>
+  </data>
+  <data name="TextBox_Command.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="TextBox_Notes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 88</value>
+  </data>
+  <data name="TextBox_Notes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 40</value>
+  </data>
+  <data name="tHostURI.ErrorMessage" xml:space="preserve">
+    <value>Неверное имя компьютера</value>
+  </data>
+  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
+    <value>Неверный RDP порт</value>
+  </data>
+  <data name="tRDPPort.ToolTip" xml:space="preserve">
+    <value>Порт удаленного рабочего стола</value>
+  </data>
+  <data name="TTL.ErrorMessage" xml:space="preserve">
+    <value>Невернывй TTL (время жизни пакетов)</value>
+  </data>
+  <data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 230</value>
+  </data>
+  <data name="tUserId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 83</value>
+  </data>
+  <data name="tUserId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 20</value>
+  </data>
+  <data name="UDPPort.ErrorMessage" xml:space="preserve">
+    <value>Неверный UDP</value>
+  </data>
+  <data name="UDPPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 204</value>
   </data>
 </root>

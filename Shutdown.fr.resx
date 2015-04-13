@@ -117,18 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColumnHeader1.Text" xml:space="preserve">
-    <value>Nom du périphérique</value>
-  </data>
-  <data name="ColumnHeader2.Text" xml:space="preserve">
-    <value>Statut</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label_Operation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 24</value>
-  </data>
-  <data name="Label_Operation.Text" xml:space="preserve">
-    <value>Prêt à arrêter…</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Arrêter</value>
   </data>
   <data name="AbortButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -180,6 +173,93 @@
   <data name="AbortButton.Text" xml:space="preserve">
     <value>Annuler l'arrêt</value>
   </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>Nom du périphérique</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Statut</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Options d'arrêt</value>
+  </data>
+  <data name="Label_Message.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 26</value>
+  </data>
+  <data name="Label_Message.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 13</value>
+  </data>
+  <data name="Label_Message.Text" xml:space="preserve">
+    <value>Afficher le message</value>
+  </data>
+  <data name="Label_Operation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 24</value>
+  </data>
+  <data name="Label_Operation.Text" xml:space="preserve">
+    <value>Prêt à arrêter…</value>
+  </data>
+  <data name="Label_Timeout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_Timeout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_Timeout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 52</value>
+  </data>
+  <data name="Label_Timeout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="Label_Timeout.Text" xml:space="preserve">
+    <value>Durée (secondes)</value>
+  </data>
+  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 110</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>Redémarrer</value>
+  </data>
+  <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 80</value>
+  </data>
+  <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>Forcer</value>
+  </data>
+  <data name="rbHibernate.Text" xml:space="preserve">
+		<value>Veille prolongée</value>
+	</data>
+  <data name="rbLogoff.Text" xml:space="preserve">
+    <value>Déconnecter</value>
+  </data>
+  <data name="rbShutdown.Text" xml:space="preserve">
+		<value>Arrêter</value>
+	</data>
+  <data name="rbSleep.Text" xml:space="preserve">
+		<value>Veille</value>
+	</data>
+  <data name="shut_force.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 24</value>
+  </data>
+  <data name="shut_force.Text" xml:space="preserve">
+    <value>Forcer la fermeture des programmes</value>
+  </data>
+  <data name="shut_reboot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 24</value>
+  </data>
+  <data name="shut_reboot.Text" xml:space="preserve">
+    <value>Redémarrer après l'arrêt</value>
+  </data>
+  <data name="shut_timeout.Text" xml:space="preserve">
+		<value>30</value>
+	</data>
   <data name="ShutdownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -239,85 +319,5 @@
   </data>
   <data name="ShutdownButton.Text" xml:space="preserve">
     <value>Arrêter</value>
-  </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Annuler</value>
-  </data>
-  <data name="shut_reboot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 24</value>
-  </data>
-  <data name="shut_reboot.Text" xml:space="preserve">
-    <value>Redémarrer après l'arrêt</value>
-  </data>
-  <data name="shut_force.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 24</value>
-  </data>
-  <data name="shut_force.Text" xml:space="preserve">
-    <value>Forcer la fermeture des programmes</value>
-  </data>
-  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 110</value>
-  </data>
-  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
-  </data>
-  <data name="Label15.Text" xml:space="preserve">
-    <value>Redémarrer</value>
-  </data>
-  <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 80</value>
-  </data>
-  <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
-  </data>
-  <data name="Label16.Text" xml:space="preserve">
-    <value>Forcer</value>
-  </data>
-  <data name="Label_Message.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 26</value>
-  </data>
-  <data name="Label_Message.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 13</value>
-  </data>
-  <data name="Label_Message.Text" xml:space="preserve">
-    <value>Afficher le message</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Label_Timeout.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Label_Timeout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label_Timeout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 52</value>
-  </data>
-  <data name="Label_Timeout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 13</value>
-  </data>
-  <data name="Label_Timeout.Text" xml:space="preserve">
-    <value>Durée (secondes)</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Options d'arrêt</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Arrêter</value>
-  </data>
-  <data name="rbHibernate.Text" xml:space="preserve">
-		<value>Veille prolongée</value>
-	</data>
-  <data name="rbSleep.Text" xml:space="preserve">
-		<value>Veille</value>
-	</data>
-  <data name="rbShutdown.Text" xml:space="preserve">
-		<value>Arrêter</value>
-	</data>
-  <data name="shut_timeout.Text" xml:space="preserve">
-		<value>30</value>
-	</data>
-  <data name="rbLogoff.Text" xml:space="preserve">
-    <value>Déconnecter</value>
   </data>
 </root>

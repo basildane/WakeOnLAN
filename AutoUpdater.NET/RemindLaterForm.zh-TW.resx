@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,29 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 19</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>稍後提醒我要更新</value>
   </data>
-  <data name="labelTitle.Text" xml:space="preserve">
-    <value>您想稍後再更新嗎?</value>
-  </data>
-  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 30</value>
-  </data>
-  <data name="labelDescription.Text" xml:space="preserve">
-    <value>您現在可以下載更新，只需要幾分鐘的時間就可以完成更新，已確保WOL處於最新版本。</value>
-  </data>
-  <data name="radioButtonYes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 19</value>
-  </data>
-  <data name="radioButtonYes.Text" xml:space="preserve">
-    <value>稍後再提醒我。</value>
-  </data>
-  <data name="radioButtonNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 19</value>
-  </data>
-  <data name="radioButtonNo.Text" xml:space="preserve">
-    <value>現在下載更新 (建議)</value>
+  <data name="buttonOK.Text" xml:space="preserve">
+    <value>確定</value>
   </data>
   <data name="comboBoxRemindLater.Items" xml:space="preserve">
     <value>30分鐘後提醒我!</value>
@@ -163,10 +145,28 @@
   <data name="comboBoxRemindLater.Items6" xml:space="preserve">
     <value>10天後題型我!</value>
   </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>確定</value>
+  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 30</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>稍後提醒我要更新</value>
+  <data name="labelDescription.Text" xml:space="preserve">
+    <value>您現在可以下載更新，只需要幾分鐘的時間就可以完成更新，已確保WOL處於最新版本。</value>
+  </data>
+  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 19</value>
+  </data>
+  <data name="labelTitle.Text" xml:space="preserve">
+    <value>您想稍後再更新嗎?</value>
+  </data>
+  <data name="radioButtonNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 19</value>
+  </data>
+  <data name="radioButtonNo.Text" xml:space="preserve">
+    <value>現在下載更新 (建議)</value>
+  </data>
+  <data name="radioButtonYes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 19</value>
+  </data>
+  <data name="radioButtonYes.Text" xml:space="preserve">
+    <value>稍後再提醒我。</value>
   </data>
 </root>

@@ -121,6 +121,9 @@
     <value>Arrêt d'urgence?</value>
     <comment>Emergency shutdown?</comment>
   </data>
+  <data name="RepGroup" xml:space="preserve">
+    <value>Groupe</value>
+  </data>
   <data name="RepIP" xml:space="preserve">
     <value>Adresse IP</value>
     <comment>IP Address</comment>
@@ -140,8 +143,5 @@
   <data name="RepShutdown" xml:space="preserve">
     <value>Ligne de commande pour l'arrêt</value>
     <comment>Shutdown command line</comment>
-  </data>
-  <data name="RepGroup" xml:space="preserve">
-    <value>Groupe</value>
   </data>
 </root>

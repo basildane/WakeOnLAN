@@ -111,6 +111,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EventLogViewer.es.resx">
+      <DependentUpon>EventLogViewer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventLogViewer.fr.resx">
       <DependentUpon>EventLogViewer.vb</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +133,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Strings.es.resx" />
     <EmbeddedResource Include="Strings.fr.resx" />
     <EmbeddedResource Include="Strings.nl.resx">
       <Generator>ResXFileCodeGenerator</Generator>

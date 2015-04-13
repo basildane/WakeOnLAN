@@ -117,6 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Versão</value>
+    <comment>Version</comment>
+  </data>
+  <data name="AppVersionDescription" xml:space="preserve">
+    <value>Application version</value>
+    <comment>Application version</comment>
+  </data>
   <data name="Broadcast_Address" xml:space="preserve">
     <value>Endereço Broadcast</value>
     <comment>Broadcast Address</comment>
@@ -124,6 +132,10 @@
   <data name="Broadcast_AddressDescription" xml:space="preserve">
     <value>Insira o endereço IP de broadcast para os pacotes broadcast WOL.</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
+  </data>
+  <data name="cat_Application" xml:space="preserve">
+    <value>Aplicativo</value>
+    <comment>Application</comment>
   </data>
   <data name="cat_Emergency" xml:space="preserve">
     <value>Configurações de emergência</value>
@@ -136,6 +148,10 @@
   <data name="cat_WOL" xml:space="preserve">
     <value>WOL</value>
     <comment>WOL</comment>
+  </data>
+  <data name="Culture" xml:space="preserve">
+    <value>Cultura</value>
+    <comment>Culture</comment>
   </data>
   <data name="Delay" xml:space="preserve">
     <value>Tempo de atraso</value>
@@ -177,6 +193,10 @@
     <value>Força o desligamento remoto. Arquivos não salvos serão perdidos.</value>
     <comment>Force remote server to shutdown.  Unsaved files will be lost.</comment>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Idioma</value>
+    <comment>Language</comment>
+  </data>
   <data name="Reboot" xml:space="preserve">
     <value>Reboot</value>
     <comment>Reboot</comment>
@@ -200,25 +220,5 @@
   <data name="UDPPortDescription" xml:space="preserve">
     <value>Insira o número da Porta UDP para as mensagens broadcast.</value>
     <comment>Enter the UDP Port number for the broadcast messages.</comment>
-  </data>
-  <data name="AppVersion" xml:space="preserve">
-    <value>Versão</value>
-    <comment>Version</comment>
-  </data>
-  <data name="AppVersionDescription" xml:space="preserve">
-    <value>Application version</value>
-    <comment>Application version</comment>
-  </data>
-  <data name="cat_Application" xml:space="preserve">
-    <value>Aplicativo</value>
-    <comment>Application</comment>
-  </data>
-  <data name="Culture" xml:space="preserve">
-    <value>Cultura</value>
-    <comment>Culture</comment>
-  </data>
-  <data name="Language" xml:space="preserve">
-    <value>Idioma</value>
-    <comment>Language</comment>
   </data>
 </root>

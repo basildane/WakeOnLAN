@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,33 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 19</value>
-  </data>
-  <data name="labelUpdate.Text" xml:space="preserve">
-    <value>{0} 有新的版本可以使用！</value>
-  </data>
-  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>433, 15</value>
-  </data>
-  <data name="labelDescription.Text" xml:space="preserve">
-    <value>{0}{1}有新版本可以使用。您目前安裝的版本{2}。您想現在就下載安裝新版本嗎？</value>
-  </data>
-  <data name="labelReleaseNotes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
-  </data>
-  <data name="labelReleaseNotes.Text" xml:space="preserve">
-    <value>版本說明</value>
-  </data>
-  <data name="buttonUpdate.Text" xml:space="preserve">
-    <value>更新</value>
-  </data>
-  <data name="buttonRemindLater.Text" xml:space="preserve">
-    <value>稍後提醒我</value>
-  </data>
-  <data name="buttonSkip.Text" xml:space="preserve">
-    <value>跳過此版本</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAQAEBAAAAAAIABoBAAARgAAACAgAAAAACAAqBAAAK4EAAAwMAAAAAAgAKglAABWFQAAQEAAAAAA
@@ -685,5 +658,32 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>軟體更新</value>
+  </data>
+  <data name="buttonRemindLater.Text" xml:space="preserve">
+    <value>稍後提醒我</value>
+  </data>
+  <data name="buttonSkip.Text" xml:space="preserve">
+    <value>跳過此版本</value>
+  </data>
+  <data name="buttonUpdate.Text" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 15</value>
+  </data>
+  <data name="labelDescription.Text" xml:space="preserve">
+    <value>{0}{1}有新版本可以使用。您目前安裝的版本{2}。您想現在就下載安裝新版本嗎？</value>
+  </data>
+  <data name="labelReleaseNotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 17</value>
+  </data>
+  <data name="labelReleaseNotes.Text" xml:space="preserve">
+    <value>版本說明</value>
+  </data>
+  <data name="labelUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 19</value>
+  </data>
+  <data name="labelUpdate.Text" xml:space="preserve">
+    <value>{0} 有新的版本可以使用！</value>
   </data>
 </root>

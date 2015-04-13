@@ -117,13 +117,73 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AbortSuccess" xml:space="preserve">
-    <value>Abort {0} successful</value>
-    <comment>Abort {machine} successful</comment>
+  <data name="AbortFailed" xml:space="preserve">
+    <value>Abort {0} Error: {1}</value>
+    <comment>Abort {machine} Error: {error message}</comment>
+  </data>
+  <data name="Aborting" xml:space="preserve">
+    <value>Aborting...</value>
+    <comment>Aborting...</comment>
   </data>
   <data name="AbortingShutdown" xml:space="preserve">
     <value>Aborting shutdown command on {0}</value>
     <comment>Aborting shutdown command on {0}</comment>
+  </data>
+  <data name="AbortShutdown" xml:space="preserve">
+    <value>Abort Shutdown in progress...</value>
+    <comment>Abort Shutdown in progress...</comment>
+  </data>
+  <data name="AbortSuccess" xml:space="preserve">
+    <value>Abort {0} successful</value>
+    <comment>Abort {machine} successful</comment>
+  </data>
+  <data name="actions_email" xml:space="preserve">
+    <value>Send an email</value>
+  </data>
+  <data name="actions_hibernate" xml:space="preserve">
+    <value>Hibernate computer</value>
+  </data>
+  <data name="actions_hibernateAll" xml:space="preserve">
+    <value>Hibernate All Computers</value>
+  </data>
+  <data name="actions_popup" xml:space="preserve">
+    <value>Popup a message</value>
+  </data>
+  <data name="actions_shutdown" xml:space="preserve">
+    <value>Shutdown computer</value>
+  </data>
+  <data name="actions_shutdownAll" xml:space="preserve">
+    <value>Shutdown All Computers</value>
+  </data>
+  <data name="actions_shutdownGroup" xml:space="preserve">
+    <value>Shutdown Group</value>
+  </data>
+  <data name="actions_sleep" xml:space="preserve">
+    <value>Sleep computer</value>
+  </data>
+  <data name="actions_sleepAll" xml:space="preserve">
+    <value>Sleep All Computers</value>
+  </data>
+  <data name="actions_start" xml:space="preserve">
+    <value>Start computer</value>
+  </data>
+  <data name="actions_startAll" xml:space="preserve">
+    <value>Start All computers</value>
+  </data>
+  <data name="actions_startGroup" xml:space="preserve">
+    <value>Start Group</value>
+  </data>
+  <data name="AllMachines" xml:space="preserve">
+    <value>All machines</value>
+    <comment>All machines</comment>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Are you sure?</value>
+    <comment>Are you sure?</comment>
+  </data>
+  <data name="BeginShutdown" xml:space="preserve">
+    <value>Begin shutdown...</value>
+    <comment>Begin shutdown...</comment>
   </data>
   <data name="ChangesLost" xml:space="preserve">
     <value>Your changes will be lost.</value>
@@ -133,9 +193,38 @@
     <value>Changes have not been saved</value>
     <comment>Changes have not been saved</comment>
   </data>
+  <data name="DefaultEmergency" xml:space="preserve">
+    <value>Emergency shutdown!</value>
+    <comment>Emergency shutdown!</comment>
+  </data>
+  <data name="DefaultMessage" xml:space="preserve">
+    <value>System is shutting down!</value>
+    <comment>System is shutting down!</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete {0} records?</value>
+    <comment>Delete {0} records?</comment>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+    <comment>Done</comment>
+  </data>
   <data name="EmergencyShutdown" xml:space="preserve">
     <value>Emergency shutdown started</value>
     <comment>Emergency shutdown started</comment>
+  </data>
+  <data name="errGreaterThan1" xml:space="preserve">
+    <value>Must be greater than 1.</value>
+  </data>
+  <data name="ErrorMsg" xml:space="preserve">
+    <value>Error: {0}</value>
+    <comment>Error: {0}</comment>
+  </data>
+  <data name="errUserID" xml:space="preserve">
+    <value>You must set a proper UserID and Password for a scheduled task.</value>
+  </data>
+  <data name="errWeeks" xml:space="preserve">
+    <value>Must be greater than 1 and less than 52.</value>
   </data>
   <data name="ExportedTo" xml:space="preserve">
     <value>Settings were exported to [{0}]</value>
@@ -157,151 +246,12 @@
     <value>Settings were imported from [{0}]</value>
     <comment>Settings were imported from {0}</comment>
   </data>
-  <data name="OffLine" xml:space="preserve">
-    <value>Host is OFFLINE</value>
-    <comment>Host is OFFLINE</comment>
-  </data>
-  <data name="OnLine" xml:space="preserve">
-    <value>Host is ONLINE</value>
-    <comment>Host is ONLINE</comment>
-  </data>
-  <data name="ResponseTime" xml:space="preserve">
-    <value>{0} Response Time {1} ms</value>
-    <comment>{host} Response Time {count} ms</comment>
-  </data>
-  <data name="SelectFile" xml:space="preserve">
-    <value>Select a WakeOnLan settings file to import</value>
-    <comment>Select a WakeOnLan settings file to import</comment>
-  </data>
-  <data name="SendShutdown" xml:space="preserve">
-    <value>Sending shutdown command to {0}</value>
-    <comment>Sending shutdown command to {host}</comment>
-  </data>
-  <data name="SentTo" xml:space="preserve">
-    <value>Sent Wake Up packet to {0} at {1}...</value>
-    <comment>Sent Wake Up packet to {host} at {mac}...</comment>
-  </data>
-  <data name="ErrorMsg" xml:space="preserve">
-    <value>Error: {0}</value>
-    <comment>Error: {0}</comment>
-  </data>
-  <data name="ShutdownSuccessful" xml:space="preserve">
-    <value>Shutdown {0} successful</value>
-    <comment>Shutdown {host} successful</comment>
-  </data>
-  <data name="ShutdownFailed" xml:space="preserve">
-    <value>Shutdown failed for {0} {1}</value>
-    <comment>Shutdown failed for {host} {error}</comment>
-  </data>
-  <data name="Successful" xml:space="preserve">
-    <value>Successful</value>
-    <comment>Successful</comment>
-  </data>
-  <data name="Title" xml:space="preserve">
-    <value>Wake on LAN</value>
-    <comment>Wake on LAN</comment>
-  </data>
-  <data name="Version" xml:space="preserve">
-    <value>Version {0}.{1:00}.{2}</value>
-    <comment>Version {0}.{1:00}.{2}</comment>
-  </data>
-  <data name="WhereSave" xml:space="preserve">
-    <value>Where do you want to save the settings?</value>
-    <comment>Where do you want to save the settings?</comment>
-  </data>
-  <data name="AbortFailed" xml:space="preserve">
-    <value>Abort {0} Error: {1}</value>
-    <comment>Abort {machine} Error: {error message}</comment>
-  </data>
-  <data name="AreYouSure" xml:space="preserve">
-    <value>Are you sure?</value>
-    <comment>Are you sure?</comment>
-  </data>
-  <data name="Delete" xml:space="preserve">
-    <value>Delete {0} records?</value>
-    <comment>Delete {0} records?</comment>
+  <data name="interfaceInfo" xml:space="preserve">
+    <value>IPv4 interface information for {0}.{1}</value>
   </data>
   <data name="isNew" xml:space="preserve">
     <value>New</value>
     <comment>New</comment>
-  </data>
-  <data name="Properties" xml:space="preserve">
-    <value>Properties - {0}</value>
-    <comment>Properties - {0}</comment>
-  </data>
-  <data name="AllMachines" xml:space="preserve">
-    <value>All machines</value>
-    <comment>All machines</comment>
-  </data>
-  <data name="Aborting" xml:space="preserve">
-    <value>Aborting...</value>
-    <comment>Aborting...</comment>
-  </data>
-  <data name="AbortShutdown" xml:space="preserve">
-    <value>Abort Shutdown in progress...</value>
-    <comment>Abort Shutdown in progress...</comment>
-  </data>
-  <data name="BeginShutdown" xml:space="preserve">
-    <value>Begin shutdown...</value>
-    <comment>Begin shutdown...</comment>
-  </data>
-  <data name="Pausing" xml:space="preserve">
-    <value>Pausing...</value>
-    <comment>Pausing...</comment>
-  </data>
-  <data name="ShutDownSeconds" xml:space="preserve">
-    <value>Shutting down in {0} seconds...</value>
-    <comment>Shutting down in {0} seconds...</comment>
-  </data>
-  <data name="ShuttingDown" xml:space="preserve">
-    <value>Shutting down...</value>
-    <comment>Shutting down...</comment>
-  </data>
-  <data name="Skipping" xml:space="preserve">
-    <value>Skipping...</value>
-    <comment>Skipping...</comment>
-  </data>
-  <data name="Opt_BroadcastAddress" xml:space="preserve">
-    <value>Broadcast Address</value>
-    <comment>Broadcast Address</comment>
-  </data>
-  <data name="Opt_BroadcastDesc" xml:space="preserve">
-    <value>Enter the broadcast IP Address for the WOL broadcast packets.</value>
-    <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
-  </data>
-  <data name="DefaultEmergency" xml:space="preserve">
-    <value>Emergency shutdown!</value>
-    <comment>Emergency shutdown!</comment>
-  </data>
-  <data name="DefaultMessage" xml:space="preserve">
-    <value>System is shutting down!</value>
-    <comment>System is shutting down!</comment>
-  </data>
-  <data name="Done" xml:space="preserve">
-    <value>Done</value>
-    <comment>Done</comment>
-  </data>
-  <data name="Polling" xml:space="preserve">
-    <value>Polling {0}</value>
-    <comment>Polling {0}</comment>
-  </data>
-  <data name="actions_email" xml:space="preserve">
-    <value>Send an email</value>
-  </data>
-  <data name="actions_popup" xml:space="preserve">
-    <value>Popup a message</value>
-  </data>
-  <data name="actions_shutdown" xml:space="preserve">
-    <value>Shutdown computer</value>
-  </data>
-  <data name="actions_shutdownAll" xml:space="preserve">
-    <value>Shutdown All Computers</value>
-  </data>
-  <data name="actions_start" xml:space="preserve">
-    <value>Start computer</value>
-  </data>
-  <data name="actions_startAll" xml:space="preserve">
-    <value>Start All computers</value>
   </data>
   <data name="lit_at" xml:space="preserve">
     <value>At {0} on {1}</value>
@@ -312,6 +262,9 @@
   <data name="lit_atWeeks" xml:space="preserve">
     <value>At {0} every {1} every {2} weeks, starting {3}</value>
   </data>
+  <data name="lit_DeleteRecords" xml:space="preserve">
+    <value>Delete {0} record(s)</value>
+  </data>
   <data name="lit_Disabled" xml:space="preserve">
     <value>Disabled</value>
   </data>
@@ -320,6 +273,9 @@
   </data>
   <data name="lit_Error" xml:space="preserve">
     <value>Error</value>
+  </data>
+  <data name="lit_false" xml:space="preserve">
+    <value>False</value>
   </data>
   <data name="lit_Invalid" xml:space="preserve">
     <value>Invalid command line</value>
@@ -345,41 +301,89 @@
   <data name="lit_Ready" xml:space="preserve">
     <value>Ready</value>
   </data>
+  <data name="lit_RemoveIP" xml:space="preserve">
+    <value>Remove IP Address from {0} record(s)</value>
+  </data>
   <data name="lit_Running" xml:space="preserve">
     <value>Running</value>
-  </data>
-  <data name="lit_Unknown" xml:space="preserve">
-    <value>Unknown</value>
-  </data>
-  <data name="lit_false" xml:space="preserve">
-    <value>False</value>
   </data>
   <data name="lit_true" xml:space="preserve">
     <value>True</value>
   </data>
-  <data name="actions_hibernate" xml:space="preserve">
-    <value>Hibernate computer</value>
+  <data name="lit_Unknown" xml:space="preserve">
+    <value>Unknown</value>
   </data>
-  <data name="actions_hibernateAll" xml:space="preserve">
-    <value>Hibernate All Computers</value>
+  <data name="OffLine" xml:space="preserve">
+    <value>Host is OFFLINE</value>
+    <comment>Host is OFFLINE</comment>
   </data>
-  <data name="actions_sleep" xml:space="preserve">
-    <value>Sleep computer</value>
+  <data name="OnLine" xml:space="preserve">
+    <value>Host is ONLINE</value>
+    <comment>Host is ONLINE</comment>
   </data>
-  <data name="actions_sleepAll" xml:space="preserve">
-    <value>Sleep All Computers</value>
+  <data name="Opt_BroadcastAddress" xml:space="preserve">
+    <value>Broadcast Address</value>
+    <comment>Broadcast Address</comment>
   </data>
-  <data name="interfaceInfo" xml:space="preserve">
-    <value>IPv4 interface information for {0}.{1}</value>
+  <data name="Opt_BroadcastDesc" xml:space="preserve">
+    <value>Enter the broadcast IP Address for the WOL broadcast packets.</value>
+    <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
-  <data name="useDefault" xml:space="preserve">
-    <value>-- use default --</value>
+  <data name="Pausing" xml:space="preserve">
+    <value>Pausing...</value>
+    <comment>Pausing...</comment>
   </data>
-  <data name="errGreaterThan1" xml:space="preserve">
-    <value>Must be greater than 1.</value>
+  <data name="Polling" xml:space="preserve">
+    <value>Polling {0}</value>
+    <comment>Polling {0}</comment>
   </data>
-  <data name="errWeeks" xml:space="preserve">
-    <value>Must be greater than 1 and less than 52.</value>
+  <data name="Properties" xml:space="preserve">
+    <value>Properties - {0}</value>
+    <comment>Properties - {0}</comment>
+  </data>
+  <data name="ResponseTime" xml:space="preserve">
+    <value>{0} Response Time {1} ms</value>
+    <comment>{host} Response Time {count} ms</comment>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Select a WakeOnLan settings file to import</value>
+    <comment>Select a WakeOnLan settings file to import</comment>
+  </data>
+  <data name="SendShutdown" xml:space="preserve">
+    <value>Sending shutdown command to {0}</value>
+    <comment>Sending shutdown command to {host}</comment>
+  </data>
+  <data name="SentTo" xml:space="preserve">
+    <value>Sent Wake Up packet to {0} at {1}...</value>
+    <comment>Sent Wake Up packet to {host} at {mac}...</comment>
+  </data>
+  <data name="ShutdownFailed" xml:space="preserve">
+    <value>Shutdown failed for {0} {1}</value>
+    <comment>Shutdown failed for {host} {error}</comment>
+  </data>
+  <data name="ShutDownSeconds" xml:space="preserve">
+    <value>Shutting down in {0} seconds...</value>
+    <comment>Shutting down in {0} seconds...</comment>
+  </data>
+  <data name="ShutdownSuccessful" xml:space="preserve">
+    <value>Shutdown {0} successful</value>
+    <comment>Shutdown {host} successful</comment>
+  </data>
+  <data name="ShuttingDown" xml:space="preserve">
+    <value>Shutting down...</value>
+    <comment>Shutting down...</comment>
+  </data>
+  <data name="Skipping" xml:space="preserve">
+    <value>Skipping...</value>
+    <comment>Skipping...</comment>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>Successful</value>
+    <comment>Successful</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Wake on LAN</value>
+    <comment>Wake on LAN</comment>
   </data>
   <data name="triggerDaily" xml:space="preserve">
     <value>Daily</value>
@@ -393,19 +397,15 @@
   <data name="triggerWeekly" xml:space="preserve">
     <value>Weekly</value>
   </data>
-  <data name="errUserID" xml:space="preserve">
-    <value>You must set a proper UserID and Password for a scheduled task.</value>
+  <data name="useDefault" xml:space="preserve">
+    <value>-- use default --</value>
   </data>
-  <data name="actions_shutdownGroup" xml:space="preserve">
-    <value>Shutdown Group</value>
+  <data name="Version" xml:space="preserve">
+    <value>Version {0}.{1:00}.{2}</value>
+    <comment>Version {0}.{1:00}.{2}</comment>
   </data>
-  <data name="actions_startGroup" xml:space="preserve">
-    <value>Start Group</value>
-  </data>
-  <data name="lit_DeleteRecords" xml:space="preserve">
-    <value>Delete {0} record(s)</value>
-  </data>
-  <data name="lit_RemoveIP" xml:space="preserve">
-    <value>Remove IP Address from {0} record(s)</value>
+  <data name="WhereSave" xml:space="preserve">
+    <value>Where do you want to save the settings?</value>
+    <comment>Where do you want to save the settings?</comment>
   </data>
 </root>

@@ -117,96 +117,39 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>版權</value>
+  </data>
+  <data name="bCalcBroadcast.Text" xml:space="preserve">
+    <value>子網路計算</value>
+  </data>
+  <data name="Broadcast.ErrorMessage" xml:space="preserve">
+    <value>無效的IP位址。例：10.50.123.222</value>
+  </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>取消</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 54</value>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 17</value>
   </data>
-  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
+  <data name="CheckBox_Emergency.Text" xml:space="preserve">
+    <value>緊急關閉</value>
   </data>
-  <data name="lbGroup.Text" xml:space="preserve">
-    <value>群組</value>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>刪除</value>
   </data>
-  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 28</value>
+  <data name="Help_Button.Text" xml:space="preserve">
+    <value>求助</value>
   </data>
-  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="lbName.Text" xml:space="preserve">
-    <value>名稱</value>
-  </data>
-  <data name="MachineName.ToolTip" xml:space="preserve">
-    <value>這是電腦的名稱，輸入一個有效的名稱，包含字母，數字，破折號或下劃線。</value>
-  </data>
-  <data name="TabProperties.Text" xml:space="preserve">
-    <value>顯示屬性</value>
+  <data name="IP.ErrorMessage" xml:space="preserve">
+    <value>無效的IP位址。例：10.50.123.222</value>
   </data>
   <data name="LabelInterfaces.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
   <data name="LabelInterfaces.Text" xml:space="preserve">
     <value>介面</value>
-  </data>
-  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 207</value>
-  </data>
-  <data name="lbUDP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="lbUDP.Text" xml:space="preserve">
-    <value>UDP端口</value>
-  </data>
-  <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 233</value>
-  </data>
-  <data name="lbTTL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
-  </data>
-  <data name="lbTTL.Text" xml:space="preserve">
-    <value>存活時間 (TTL)</value>
-  </data>
-  <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 26</value>
-  </data>
-  <data name="lbMAC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="lbMAC.Text" xml:space="preserve">
-    <value>MAC 位址</value>
-  </data>
-  <data name="bCalcBroadcast.Text" xml:space="preserve">
-    <value>子網路計算</value>
-  </data>
-  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 109</value>
-  </data>
-  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="lbNetbios.Text" xml:space="preserve">
-    <value>電腦名稱</value>
-  </data>
-  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 13</value>
-  </data>
-  <data name="lbSendTo.Text" xml:space="preserve">
-    <value>傳送 WOL To</value>
-  </data>
-  <data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 17</value>
-  </data>
-  <data name="rbURI.Text" xml:space="preserve">
-    <value>網址 / IP</value>
-  </data>
-  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 17</value>
-  </data>
-  <data name="rbIP.Text" xml:space="preserve">
-    <value>廣播位址IP</value>
   </data>
   <data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 80</value>
@@ -217,23 +160,14 @@
   <data name="lbBroadcast.Text" xml:space="preserve">
     <value>子網路遮罩</value>
   </data>
-  <data name="MAC.ToolTip" xml:space="preserve">
-    <value>輸入電腦的MAC位址。MAC地址有6對十六進制數字，會用 : 或 - 分隔，例如：例如：01:00:22:32:AF:D0</value>
+  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 54</value>
   </data>
-  <data name="TabWakeUp.Text" xml:space="preserve">
-    <value>喚醒</value>
+  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
   </data>
-  <data name="lbRemoteDesktop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 13</value>
-  </data>
-  <data name="lbRemoteDesktop.Text" xml:space="preserve">
-    <value>遠端桌面 Port (通訊協定)</value>
-  </data>
-  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 13</value>
-  </data>
-  <data name="lbLeaveBlank.Text" xml:space="preserve">
-    <value>保留給DHCP</value>
+  <data name="lbGroup.Text" xml:space="preserve">
+    <value>群組</value>
   </data>
   <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 25</value>
@@ -244,6 +178,39 @@
   <data name="lbIP.Text" xml:space="preserve">
     <value>IP 位址</value>
   </data>
+  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="lbLeaveBlank.Text" xml:space="preserve">
+    <value>保留給DHCP</value>
+  </data>
+  <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 26</value>
+  </data>
+  <data name="lbMAC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="lbMAC.Text" xml:space="preserve">
+    <value>MAC 位址</value>
+  </data>
+  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 28</value>
+  </data>
+  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="lbName.Text" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 109</value>
+  </data>
+  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="lbNetbios.Text" xml:space="preserve">
+    <value>電腦名稱</value>
+  </data>
   <data name="lbRDPPort.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 52</value>
   </data>
@@ -253,6 +220,84 @@
   <data name="lbRDPPort.Text" xml:space="preserve">
     <value>遠端桌面 Port (通訊協定)</value>
   </data>
+  <data name="lbRemoteDesktop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
+  </data>
+  <data name="lbRemoteDesktop.Text" xml:space="preserve">
+    <value>遠端桌面 Port (通訊協定)</value>
+  </data>
+  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="lbSendTo.Text" xml:space="preserve">
+    <value>傳送 WOL To</value>
+  </data>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
+  </data>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>關機指令碼</value>
+  </data>
+  <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 233</value>
+  </data>
+  <data name="lbTTL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="lbTTL.Text" xml:space="preserve">
+    <value>存活時間 (TTL)</value>
+  </data>
+  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 207</value>
+  </data>
+  <data name="lbUDP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="lbUDP.Text" xml:space="preserve">
+    <value>UDP端口</value>
+  </data>
+  <data name="MAC.ErrorMessage" xml:space="preserve">
+    <value>無效的MAC位址。例：00:11:22:33:44:55</value>
+  </data>
+  <data name="MAC.ToolTip" xml:space="preserve">
+    <value>輸入電腦的MAC位址。MAC地址有6對十六進制數字，會用 : 或 - 分隔，例如：例如：01:00:22:32:AF:D0</value>
+  </data>
+  <data name="MachineName.ErrorMessage" xml:space="preserve">
+    <value>無效的電腦名稱。</value>
+  </data>
+  <data name="MachineName.ToolTip" xml:space="preserve">
+    <value>這是電腦的名稱，輸入一個有效的名稱，包含字母，數字，破折號或下劃線。</value>
+  </data>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 17</value>
+  </data>
+  <data name="rbIP.Text" xml:space="preserve">
+    <value>廣播位址IP</value>
+  </data>
+  <data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 17</value>
+  </data>
+  <data name="rbURI.Text" xml:space="preserve">
+    <value>網址 / IP</value>
+  </data>
+  <data name="TabProperties.Text" xml:space="preserve">
+    <value>顯示屬性</value>
+  </data>
+  <data name="TabShutdown.Text" xml:space="preserve">
+    <value>關機</value>
+  </data>
+  <data name="TabStatus.Text" xml:space="preserve">
+    <value>狀態 / 控制</value>
+  </data>
+  <data name="TabWakeUp.Text" xml:space="preserve">
+    <value>喚醒</value>
+  </data>
+  <data name="tHostURI.ErrorMessage" xml:space="preserve">
+    <value>無效的電腦名稱。</value>
+  </data>
   <data name="tRDPPort.Location" type="System.Drawing.Point, System.Drawing">
     <value>147, 49</value>
   </data>
@@ -261,50 +306,5 @@
   </data>
   <data name="tRDPPort.ToolTip" xml:space="preserve">
     <value>遠端桌面 Port (通訊協定)</value>
-  </data>
-  <data name="TabStatus.Text" xml:space="preserve">
-    <value>狀態 / 控制</value>
-  </data>
-  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
-  </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>關機指令碼</value>
-  </data>
-  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 17</value>
-  </data>
-  <data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>緊急關閉</value>
-  </data>
-  <data name="TabShutdown.Text" xml:space="preserve">
-    <value>關機</value>
-  </data>
-  <data name="Help_Button.Text" xml:space="preserve">
-    <value>求助</value>
-  </data>
-  <data name="Delete_Button.Text" xml:space="preserve">
-    <value>刪除</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>版權</value>
-  </data>
-  <data name="OK_Button.Text" xml:space="preserve">
-    <value>確定</value>
-  </data>
-  <data name="MachineName.ErrorMessage" xml:space="preserve">
-    <value>無效的電腦名稱。</value>
-  </data>
-  <data name="tHostURI.ErrorMessage" xml:space="preserve">
-    <value>無效的電腦名稱。</value>
-  </data>
-  <data name="MAC.ErrorMessage" xml:space="preserve">
-    <value>無效的MAC位址。例：00:11:22:33:44:55</value>
-  </data>
-  <data name="Broadcast.ErrorMessage" xml:space="preserve">
-    <value>無效的IP位址。例：10.50.123.222</value>
-  </data>
-  <data name="IP.ErrorMessage" xml:space="preserve">
-    <value>無效的IP位址。例：10.50.123.222</value>
   </data>
 </root>
