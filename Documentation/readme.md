@@ -1,3 +1,10 @@
+# WakeOnLAN 2.11.2
+
+## Beta 10 - _April 8 2015_
+
+* Fix problems with auto updater.
+
+
 # WakeOnLAN 2.11.1
 
 ## Beta 10 - _Mar 30 2015_
