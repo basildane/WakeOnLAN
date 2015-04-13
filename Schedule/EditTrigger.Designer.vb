@@ -78,10 +78,10 @@ Partial Class EditTrigger
         '
         'GroupBoxDaily
         '
+        resources.ApplyResources(Me.GroupBoxDaily, "GroupBoxDaily")
         Me.GroupBoxDaily.Controls.Add(Me.Label3)
         Me.GroupBoxDaily.Controls.Add(Me.TextBoxRecurDays)
         Me.GroupBoxDaily.Controls.Add(Me.Label2)
-        resources.ApplyResources(Me.GroupBoxDaily, "GroupBoxDaily")
         Me.GroupBoxDaily.Name = "GroupBoxDaily"
         Me.GroupBoxDaily.TabStop = False
         '
@@ -102,15 +102,15 @@ Partial Class EditTrigger
         '
         'DateTimePickerTime
         '
-        Me.DateTimePickerTime.Format = System.Windows.Forms.DateTimePickerFormat.Time
         resources.ApplyResources(Me.DateTimePickerTime, "DateTimePickerTime")
+        Me.DateTimePickerTime.Format = System.Windows.Forms.DateTimePickerFormat.Time
         Me.DateTimePickerTime.Name = "DateTimePickerTime"
         Me.DateTimePickerTime.ShowUpDown = True
         '
         'DateTimePickerDate
         '
-        Me.DateTimePickerDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         resources.ApplyResources(Me.DateTimePickerDate, "DateTimePickerDate")
+        Me.DateTimePickerDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePickerDate.Name = "DateTimePickerDate"
         '
         'Label1
@@ -120,6 +120,7 @@ Partial Class EditTrigger
         '
         'GroupBoxSettings
         '
+        resources.ApplyResources(Me.GroupBoxSettings, "GroupBoxSettings")
         Me.GroupBoxSettings.Controls.Add(Me.DateTimePickerTime)
         Me.GroupBoxSettings.Controls.Add(Me.DateTimePickerDate)
         Me.GroupBoxSettings.Controls.Add(Me.RadioButtonMontly)
@@ -129,7 +130,6 @@ Partial Class EditTrigger
         Me.GroupBoxSettings.Controls.Add(Me.RadioButtonOneTime)
         Me.GroupBoxSettings.Controls.Add(Me.GroupBoxWeekly)
         Me.GroupBoxSettings.Controls.Add(Me.GroupBoxDaily)
-        resources.ApplyResources(Me.GroupBoxSettings, "GroupBoxSettings")
         Me.GroupBoxSettings.Name = "GroupBoxSettings"
         Me.GroupBoxSettings.TabStop = False
         '
@@ -163,6 +163,7 @@ Partial Class EditTrigger
         '
         'GroupBoxWeekly
         '
+        resources.ApplyResources(Me.GroupBoxWeekly, "GroupBoxWeekly")
         Me.GroupBoxWeekly.Controls.Add(Me.CheckBox7)
         Me.GroupBoxWeekly.Controls.Add(Me.CheckBox6)
         Me.GroupBoxWeekly.Controls.Add(Me.CheckBox5)
@@ -173,7 +174,6 @@ Partial Class EditTrigger
         Me.GroupBoxWeekly.Controls.Add(Me.Label4)
         Me.GroupBoxWeekly.Controls.Add(Me.TextBoxWeeklyRecurs)
         Me.GroupBoxWeekly.Controls.Add(Me.Label5)
-        resources.ApplyResources(Me.GroupBoxWeekly, "GroupBoxWeekly")
         Me.GroupBoxWeekly.Name = "GroupBoxWeekly"
         Me.GroupBoxWeekly.TabStop = False
         '
@@ -243,8 +243,8 @@ Partial Class EditTrigger
         '
         'GroupBoxAdvanced
         '
-        Me.GroupBoxAdvanced.Controls.Add(Me.CheckBoxEnabled)
         resources.ApplyResources(Me.GroupBoxAdvanced, "GroupBoxAdvanced")
+        Me.GroupBoxAdvanced.Controls.Add(Me.CheckBoxEnabled)
         Me.GroupBoxAdvanced.Name = "GroupBoxAdvanced"
         Me.GroupBoxAdvanced.TabStop = False
         '

@@ -234,7 +234,7 @@
     <comment>All machines</comment>
   </data>
   <data name="Aborting" xml:space="preserve">
-    <value>Annulation</value>
+    <value>Annulation...</value>
     <comment>Aborting...</comment>
   </data>
   <data name="AbortShutdown" xml:space="preserve">
@@ -352,10 +352,10 @@
     <value>Inconnu</value>
   </data>
   <data name="lit_false" xml:space="preserve">
-    <value>FAUX</value>
+    <value>Faux</value>
   </data>
   <data name="lit_true" xml:space="preserve">
-    <value>VRAI</value>
+    <value>Vrai</value>
   </data>
   <data name="actions_hibernate" xml:space="preserve">
 		<value>Mettre l'ordinateur en veille prolongée</value>
@@ -369,4 +369,40 @@
   <data name="actions_sleepAll" xml:space="preserve">
 		<value>Mettre tout les ordinateurs en veille</value>
 	</data>
+  <data name="actions_shutdownGroup" xml:space="preserve">
+    <value>Arrêter le groupe</value>
+  </data>
+  <data name="actions_startGroup" xml:space="preserve">
+    <value>Démarrer le groupe</value>
+  </data>
+  <data name="errGreaterThan1" xml:space="preserve">
+    <value>Doit être plus grand que 1.</value>
+  </data>
+  <data name="errUserID" xml:space="preserve">
+    <value>Vous devez saisir un nom d'utilisateur et un mot de passe correct pour une tâche planifiée.</value>
+  </data>
+  <data name="errWeeks" xml:space="preserve">
+    <value>Doit être plus grand que 1 et plus petit que 52.</value>
+  </data>
+  <data name="interfaceInfo" xml:space="preserve">
+    <value>Information pour l'interface IPv4 {0}.{1}</value>
+  </data>
+  <data name="lit_DeleteRecords" xml:space="preserve">
+    <value>Supprimer {0} enregistrement(s)</value>
+  </data>
+  <data name="triggerDaily" xml:space="preserve">
+    <value>Quotidiennement</value>
+  </data>
+  <data name="triggerMonthly" xml:space="preserve">
+    <value>Mensuellement</value>
+  </data>
+  <data name="triggerOneTime" xml:space="preserve">
+    <value>Une seule fois</value>
+  </data>
+  <data name="triggerWeekly" xml:space="preserve">
+    <value>Hebdomadairement</value>
+  </data>
+  <data name="useDefault" xml:space="preserve">
+    <value>-- par défaut --</value>
+  </data>
 </root>

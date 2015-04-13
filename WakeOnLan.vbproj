@@ -629,6 +629,9 @@
     <EmbeddedResource Include="Controls\RegexTextBox.resx">
       <DependentUpon>RegexTextBox.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Crash.fr.resx">
+      <DependentUpon>Crash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Crash.nl.resx">
       <DependentUpon>Crash.vb</DependentUpon>
     </EmbeddedResource>
@@ -652,6 +655,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportViewer.ru.resx">
       <DependentUpon>ReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SafeMode.fr.resx">
+      <DependentUpon>SafeMode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SafeMode.nl.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>

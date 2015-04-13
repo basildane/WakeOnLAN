@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,67 +59,67 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-	<data name="LogoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-		<value>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LogoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAVPRJREFUeF7tnQd0
         VNfZtRU7XxI75kviJE7PF8dxnF5cUp2427jhbscGDO7YpvcuehNCqPfeOxJNdCEhJBAgiS5Q771L02f/
@@ -486,30 +486,72 @@
         icqh/Kg3qd88/OiEEU36+fYJbw8+8so35iwM+gP1FDWVWkJ5U+nU7g/QVsqHkv3nUi9Tfxn92IQf2A/9
         +fb59vn2+fb59vn22d2cnP4fTyyy3HhLfi8AAAAASUVORK5CYII=
 </value>
-	</data>
-	<data name="TextBoxDescription.Text" xml:space="preserve">
+  </data>
+  <data name="lAutomaticUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 16</value>
+  </data>
+  <data name="lAutomaticUpdate.Text" xml:space="preserve">
+    <value>Mises à jour automatiques</value>
+  </data>
+  <data name="GroupBoxUpdates.Text" xml:space="preserve">
+    <value>Mises à jour en ligne</value>
+  </data>
+  <data name="TextBoxDescription.Text" xml:space="preserve">
     <value>Envoie "des paquets magiques" aux cartes réseaux Ethernet pour "rêveiller" les ordinateurs distants. Eteindre les ordinateurs distants. Exécuter un "arrêt général" de tout les ordinateurs sur le réseau en cas d'urgence.</value>
   </data>
-	<data name="LinkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-		<value>154, 65</value>
-	</data>
-	<data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-		<value>142, 13</value>
-	</data>
-	<data name="Label2.Text" xml:space="preserve">
-    <value>Aquila WOL sur Sourceforge</value>
+  <data name="LinkLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 65</value>
   </data>
-	<data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-		<value>190, 13</value>
-	</data>
-	<data name="Label1.Text" xml:space="preserve">
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Site Web Aquila WOL</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 13</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
     <value>Le site Internet The Aquila Technology</value>
   </data>
-	<data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-		<value>202, 43</value>
-	</data>
-	<data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-		<value>
+  <data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 43</value>
+  </data>
+  <data name="bDonate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhXAAaAIcPAP/x2//9+P7mtP+vM/+sLf7kr/7gpf7hqv7fof7ShP+xOP+zPUBRVv61Qr65oM8L
+        AhA+a3+Ddb6qfEBedYBvR/63SGB0fL+OOxA+ahA6Yu7br56fkDBUc6+FOyBKcc6/lq6qlf/CZSBJbe+n
+        Ns7AnSBDYDBKW56hlDBRbFBZVH+KiL61lf66TXCBhv/HaiBJb/61Q56knmB0fv++Wo6VjP+pJp6fjf/c
+        qI6Uid+fOWBvcXBoTSBJbiBCXn+JhEBbbt7Qqu7euv/nw/+2R0BRWI6Md8+YPY6Th/+0Qc+UNCBHar+Q
+        QI92Q++jLEBgeyBCX//Uk2B1gH+Mi/+9Wu7Vof+tL//Eat+bMP+yO//js/7Oe/7NenCCi/+2Q/7OgP+6
+        T//is1Brfv7RhP/y3b60kv7cmv+5S/7ZlO7Und7LoWB2gRA7Yv+/V56WeXBnS87Fqv/Nf/7Zl66qkX+N
+        kP7HbP6zPb61mWBgT//gro95SXB/gv/Jb//cp//v1H+Ok//Pg86/md7Opv/owv/26EBedmBhUXB/gP7B
+        X+7Zqv7Mef7CYf7CYkBfd//z3/68Uv/Gb0BSWRA7Y1Blb/+qKf66Tv/qx+7Wps+VOP7gqHB5c4BwSVBp
+        eq6smK6unN7Knf7Pfa+IQ/+4Sv/hss7EpUBgev+uMZ+ARp99P//qw1Bqe6+GP/7DZFBrgJ9+QnB/hP7d
+        n7+MOP7NfY6Wj/7nuv7pwP/57v/lvf/Znv/25f/NgP/y2//v0v/BYf/syP+1Qv+qKAAzZswAAP+ZMwAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAPACwAAAAAXAAaAAAI/wAfCBw4UJjBgwgTKlzIsKHDhwwJ
+        Spz4QFgIPmMCaNzIsaPHjyBDihzJcZCoR8IoShRmpU+tlzBjypxJs6bNmzhvNoKTUqUwPLiCCh1KtKjR
+        o0iTKl0aVFDPlWB0SZ1KtarVq1izat3KlWqlpwKF/dlFtqzZs2jTql3Ltq1btFnAlkLVq67du3jz6t3L
+        t6/fv3q/FFxEq7Dhw4gPxwDGGJgHP0ESS55MmVaQGJUzI/bSk8CqWaBDix4tmotjJ04gAGNFurXr1288
+        zHlNu3UsAhWxOMIkoLfv38B9kwLmoDcQ1aN+O3CgIbgADQ6AAF/e3HcYYJ18Qy/uvPvvQ3UMwv9gQaeA
+        +fPo059njOh8C2CyzJ9QzbjFemBS6HOSTx/YCfP9qVFAfoy9EIh6CKInBgswGFTBg4kcIOGEFFZ4AAnA
+        vEChCsCocMAGwGCwAQgcALPBhYxxAEIUwDBygCUhgkBDiAek4QpjKpAwIwd2sJiKhUBOGAclDxrUwJEN
+        KPKKAUw26aSTOAAjg5N6AIODATwAswKTcgCziQE2AMMDFWBK+SQgjDG5AjCEMIkBMJ4YQEWaT9bZ5BZI
+        NmDQAnzy2cUeZyAg6KCECmoBMEcQKgIwH3wAjAiDkgHMBAgc6oOhiCKAhgWLMkYpAj4AYwgCjk46wQSM
+        FaoqAmVoEUqffBr/pMCstM5qhgufJKDrrruiAIwEuxYBjBIJSADMD8ECo0MCvgLL7K8J/ACMJBJEAEwm
+        uuoATBvFDhvBt9/yKm4CLrBRa60GVTHAuuy26267jK07Qh6MLTFADsCUMMIAI0QCjL3xrhtwwJAAY8q6
+        JQBjxL35rmsEKO9GHHEVBv1CwMUYZ6wxxhc05nErGBMBjAmaPAFMIQR0bMLFKl9scgopMHbBxYztoAoB
+        MROxwxrAXLLxzxtPkpIwvxRt9NFIG90BA0wzTcEVRzfhRgbA9EBB0UszgTUDWv8CSw8ZUEABA0kUTQHV
+        p/zSxB1Uk53022/3JEwNcNdt991456133TU8jyWML4AHLvjghBdu+OGIJ6644WAJgwQvkEcu+eSUV275
+        5ZhnrjnlSIBV0Qy5hC766KSXbvrpqKeu+uqjz+B5WCHcIvvstNdu++2456777rzLHsLrBQ1xgy3EF2/8
+        8cgnr/zyzDfP/A1DAL/SFFAIAcD12Gev/fbcd+/99+BnLwQUU0jvE0Top6/++gep9EBAADs=
+</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA
         IACoJQAALh8AAEBAAAABACAAKEIAANZEAABISAAAAQAgAIhUAAD+hgAAYGAAAAEAIAColAAAhtsAAICA
         AAABACAAKAgBAC5wAQAAAAAAAQAgAMvEAABWeAIAKAAAABAAAAAgAAAAAQAgAAAAAAAAAAAAAAAAAAAA
@@ -4049,8 +4091,8 @@
         l9XWT3/mo+OZ1ffoHt2jz4e+9hu+B1/7Dd/zhR7GbdO7vvH78K5vPFl4zZ92OqLg1T26R/foHt2je3SP
         7tE9ukf36B7do3t0j+4y+v85+BbFDYqI4gAAAABJRU5ErkJggg==
 </value>
-	</data>
-	<data name="$this.Text" xml:space="preserve">
+  </data>
+  <data name="$this.Text" xml:space="preserve">
     <value>A propos de Wake On LAN</value>
   </data>
 </root>

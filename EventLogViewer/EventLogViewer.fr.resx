@@ -117,13 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Вы удеживаете нажатой клавишу CTRL. Вы хотите включить работу WOL в безопасном режиме?</value>
+  <data name="btnErrors.Text" xml:space="preserve">
+    <value>0 Erreurs</value>
   </data>
-  <data name="ButtonYes.Text" xml:space="preserve">
-    <value>Да</value>
+  <data name="btnErrors.ToolTipText" xml:space="preserve">
+    <value>0 Erreurs</value>
   </data>
-  <data name="ButtonNo.Text" xml:space="preserve">
-    <value>Нет</value>
+  <data name="btnMessages.Text" xml:space="preserve">
+    <value>0 Messages</value>
+  </data>
+  <data name="btnMessages.ToolTipText" xml:space="preserve">
+    <value>0 Messages</value>
+  </data>
+  <data name="btnWarnings.Text" xml:space="preserve">
+    <value>0 Avertissements</value>
+  </data>
+  <data name="btnWarnings.ToolTipText" xml:space="preserve">
+    <value>0 Avertissements</value>
+  </data>
+  <data name="FindLabel.Text" xml:space="preserve">
+    <value>Trouver:</value>
+  </data>
+  <data name="NotFoundLabel.Text" xml:space="preserve">
+    <value>Aucuns événements trouvés</value>
+  </data>
+  <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
+    <value>Il n'y a aucuns événements correspondant au critère de recherche</value>
+  </data>
+  <data name="SourceLabel.Text" xml:space="preserve">
+    <value>Source:</value>
   </data>
 </root>

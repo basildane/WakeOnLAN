@@ -117,13 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Вы удеживаете нажатой клавишу CTRL. Вы хотите включить работу WOL в безопасном режиме?</value>
+  <data name="col_Date" xml:space="preserve">
+    <value>Date/Heure</value>
   </data>
-  <data name="ButtonYes.Text" xml:space="preserve">
-    <value>Да</value>
+  <data name="col_EventID" xml:space="preserve">
+    <value>ID de l'événement</value>
   </data>
-  <data name="ButtonNo.Text" xml:space="preserve">
-    <value>Нет</value>
+  <data name="col_Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="col_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Errors" xml:space="preserve">
+    <value>{0} Erreurs</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>{0} Messages</value>
+  </data>
+  <data name="Warnings" xml:space="preserve">
+    <value>{0} Avertissements</value>
   </data>
 </root>
