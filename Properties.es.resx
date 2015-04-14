@@ -117,23 +117,204 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Propiedades</value>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="lNotes.Text" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 54</value>
+  </data>
+  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="lbGroup.Text" xml:space="preserve">
+    <value>Grupos</value>
+  </data>
+  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 28</value>
+  </data>
+  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="lbName.Text" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="MachineName.ErrorMessage" xml:space="preserve">
+    <value>Nombre del equipo no válido</value>
+  </data>
+  <data name="MachineName.ToolTip" xml:space="preserve">
+    <value>Este es el nombre de la máquina.  Introduzca un nombre válido, que contiene letras, números, guión o guión bajo.</value>
+  </data>
+  <data name="TabProperties.Text" xml:space="preserve">
+    <value>Mostrar las propiedades.</value>
+  </data>
+  <data name="tHostURI.ErrorMessage" xml:space="preserve">
+    <value>Nombre del equipo no válido</value>
+  </data>
+  <data name="LabelInterfaces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="LabelInterfaces.Text" xml:space="preserve">
+    <value>Interfaz</value>
+  </data>
+  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 207</value>
+  </data>
+  <data name="lbUDP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="lbUDP.Text" xml:space="preserve">
+    <value>El puerto UDP</value>
+  </data>
+  <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 24</value>
+  </data>
+  <data name="lbMAC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="lbMAC.Text" xml:space="preserve">
+    <value>Dirección MAC</value>
   </data>
   <data name="bCalcBroadcast.Text" xml:space="preserve">
     <value>Calcular</value>
   </data>
+  <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 107</value>
+  </data>
+  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="lbNetbios.Text" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 52</value>
+  </data>
+  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="lbSendTo.Text" xml:space="preserve">
+    <value>Enviar a</value>
+  </data>
+  <data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 17</value>
+  </data>
+  <data name="rbURI.Text" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 17</value>
+  </data>
+  <data name="rbIP.Text" xml:space="preserve">
+    <value>Transmisión IP</value>
+  </data>
+  <data name="lbBroadcast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="lbBroadcast.Text" xml:space="preserve">
+    <value>transmisión</value>
+  </data>
+  <data name="TTL.ErrorMessage" xml:space="preserve">
+    <value>No válido</value>
+  </data>
+  <data name="UDPPort.ErrorMessage" xml:space="preserve">
+    <value>No válido</value>
+  </data>
   <data name="Broadcast.ErrorMessage" xml:space="preserve">
     <value>Dirección IP no válida.  Use ###.###.###.###</value>
   </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Cancelar</value>
+  <data name="MAC.ErrorMessage" xml:space="preserve">
+    <value>Dirección MAC no válido.  Use ##:##:##:##:##:##</value>
   </data>
-  <data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>¿Parada de emergencia?</value>
+  <data name="MAC.ToolTip" xml:space="preserve">
+    <value>Introduzca la dirección MAC de la máquina.  Esto se utiliza para los mensajes de solicitud de activación.  Las direcciones MAC válidas son 6 pares de dígitos hexadecimales, separados por ':' o '-'. Ejemplo: 01:00:22:32:af:d0.</value>
   </data>
-  <data name="ComboBoxShutdownMethod.Items" xml:space="preserve">
-    <value>WMI</value>
+  <data name="TabWakeUp.Text" xml:space="preserve">
+    <value>Despertarse</value>
+  </data>
+  <data name="lbRemoteDesktop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 13</value>
+  </data>
+  <data name="lbRemoteDesktop.Text" xml:space="preserve">
+    <value>Escritorio remoto</value>
+  </data>
+  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="lbLeaveBlank.Text" xml:space="preserve">
+    <value>* dejar en blanco para DHCP</value>
+  </data>
+  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="lbIP.Text" xml:space="preserve">
+    <value>Dirección IP local</value>
+  </data>
+  <data name="lbRDPPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 58</value>
+  </data>
+  <data name="lbRDPPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="lbRDPPort.Text" xml:space="preserve">
+    <value>Puerto</value>
+  </data>
+  <data name="IP.ErrorMessage" xml:space="preserve">
+    <value>Dirección IP no válida.  Use ###.###.###.###</value>
+  </data>
+  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
+    <value>Puerto RDP inválido!</value>
+  </data>
+  <data name="tRDPPort.ToolTip" xml:space="preserve">
+    <value>Escritorio remoto</value>
+  </data>
+  <data name="TabStatus.Text" xml:space="preserve">
+    <value>control de barra de estado</value>
+  </data>
+  <data name="tDomain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 145</value>
+  </data>
+  <data name="tPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 114</value>
+  </data>
+  <data name="tUserId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 83</value>
+  </data>
+  <data name="lDomain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 148</value>
+  </data>
+  <data name="lDomain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="lDomain.Text" xml:space="preserve">
+    <value>Dominio</value>
+  </data>
+  <data name="lPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 117</value>
+  </data>
+  <data name="lPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 13</value>
+  </data>
+  <data name="lPassword.Text" xml:space="preserve">
+    <value>Clave de acceso</value>
+  </data>
+  <data name="lUserId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="lUserId.Text" xml:space="preserve">
+    <value>ID de usuario</value>
+  </data>
+  <data name="lDescription.Text" xml:space="preserve">
+    <value>Opcionalmente puede ingresar una identificación de usuario, contraseña y dominio que se utilizarán para las operaciones de cierre.  Deje estos campos en blanco para utilizar las credenciales predeterminadas.</value>
+  </data>
+  <data name="LabelShutdownMethod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 13</value>
+  </data>
+  <data name="LabelShutdownMethod.Text" xml:space="preserve">
+    <value>Método de cierre</value>
   </data>
   <data name="ComboBoxShutdownMethod.Items1" xml:space="preserve">
     <value>Personalizado</value>
@@ -141,74 +322,26 @@
   <data name="ComboBoxShutdownMethod.Items2" xml:space="preserve">
     <value>Legado</value>
   </data>
-  <data name="Delete_Button.Text" xml:space="preserve">
-    <value>borrar</value>
-  </data>
-  <data name="Help_Button.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="IP.ErrorMessage" xml:space="preserve">
-    <value>Dirección IP no válida.  Use ###.###.###.###</value>
-  </data>
-  <data name="LabelInterfaces.Text" xml:space="preserve">
-    <value>Interfaz</value>
-  </data>
-  <data name="LabelShutdownMethod.Text" xml:space="preserve">
-    <value>Método de cierre</value>
-  </data>
-  <data name="lbBroadcast.Text" xml:space="preserve">
-    <value>transmisión</value>
-  </data>
-  <data name="lbGroup.Text" xml:space="preserve">
-    <value>Grupos</value>
-  </data>
-  <data name="lbIP.Text" xml:space="preserve">
-    <value>Dirección IP local</value>
-  </data>
-  <data name="lbLeaveBlank.Text" xml:space="preserve">
-    <value>* dejar en blanco para DHCP</value>
-  </data>
-  <data name="lbMAC.Text" xml:space="preserve">
-    <value>Dirección MAC</value>
-  </data>
-  <data name="lbName.Text" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <data name="lbNetbios.Text" xml:space="preserve">
-    <value>IP</value>
-  </data>
-  <data name="lbRDPPort.Text" xml:space="preserve">
-    <value>Puerto</value>
-  </data>
-  <data name="lbRemoteDesktop.Text" xml:space="preserve">
-    <value>Escritorio remoto</value>
-  </data>
-  <data name="lbSendTo.Text" xml:space="preserve">
-    <value>Enviar a</value>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 13</value>
   </data>
   <data name="lbShutdownCommand.Text" xml:space="preserve">
     <value>Línea de comandos de apagado: (opcional)</value>
   </data>
-  <data name="lbTTL.Text" xml:space="preserve">
-    <value>TTL</value>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 17</value>
   </data>
-  <data name="lbUDP.Text" xml:space="preserve">
-    <value>El puerto UDP</value>
+  <data name="CheckBox_Emergency.Text" xml:space="preserve">
+    <value>¿Parada de emergencia?</value>
   </data>
-  <data name="lDescription.Text" xml:space="preserve">
-    <value>Opcionalmente puede ingresar una identificación de usuario, contraseña y dominio que se utilizarán para las operaciones de cierre.  Deje estos campos en blanco para utilizar las credenciales predeterminadas.</value>
+  <data name="TabShutdown.Text" xml:space="preserve">
+    <value>Apagado</value>
   </data>
-  <data name="lDomain.Text" xml:space="preserve">
-    <value>Dominio</value>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>borrar</value>
   </data>
-  <data name="lNotes.Text" xml:space="preserve">
-    <value>Notas</value>
-  </data>
-  <data name="lPassword.Text" xml:space="preserve">
-    <value>Clave de acceso</value>
-  </data>
-  <data name="lUserId.Text" xml:space="preserve">
-    <value>ID de usuario</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Propiedades</value>
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>Ok</value>

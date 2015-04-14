@@ -117,8 +117,75 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Crear tarea</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 35</value>
+  </data>
+  <data name="PasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 66</value>
+  </data>
+  <data name="UserIDTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 35</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 69</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Clave de acceso:</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 38</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 13</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>ID de Sesión de Usuario:</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Opciones de seguridad</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 24</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>Disparador</value>
+  </data>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="TriggerDeleteButton.Text" xml:space="preserve">
+    <value>borrar</value>
+  </data>
+  <data name="TriggerEditButton.Text" xml:space="preserve">
+    <value>editar...</value>
+  </data>
+  <data name="TriggerNewButton.Text" xml:space="preserve">
+    <value>Nuevo...</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 13</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Especificar las condiciones que se activarán este evento.</value>
+  </data>
+  <data name="TabPage2.Text" xml:space="preserve">
+    <value>disparadores</value>
   </data>
   <data name="ActionDeleteButton.Text" xml:space="preserve">
     <value>borrar</value>
@@ -129,8 +196,11 @@
   <data name="ActionNewButton.Text" xml:space="preserve">
     <value>Nuevo...</value>
   </data>
-  <data name="ButtonCancel.Text" xml:space="preserve">
-    <value>Cancelar</value>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 13</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Especificar la acción que se producirá cuando se desencadena este evento.</value>
   </data>
   <data name="ColumnHeader1.Text" xml:space="preserve">
     <value>Acción</value>
@@ -138,55 +208,16 @@
   <data name="ColumnHeader2.Text" xml:space="preserve">
     <value>Detalles</value>
   </data>
-  <data name="ColumnHeader3.Text" xml:space="preserve">
-    <value>Disparador</value>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>Acciones</value>
   </data>
-  <data name="ColumnHeader4.Text" xml:space="preserve">
-    <value>Detalles</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Opciones de seguridad</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Descripción</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>ID de Sesión de Usuario:</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Clave de acceso:</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Especificar las condiciones que se activarán este evento.</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Especificar la acción que se producirá cuando se desencadena este evento.</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>(domain\userid)</value>
+  <data name="ButtonCancel.Text" xml:space="preserve">
+    <value>Cancelar</value>
   </data>
   <data name="OKButton.Text" xml:space="preserve">
     <value>Ok</value>
   </data>
-  <data name="TabPage1.Text" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="TabPage2.Text" xml:space="preserve">
-    <value>disparadores</value>
-  </data>
-  <data name="TabPage3.Text" xml:space="preserve">
-    <value>Acciones</value>
-  </data>
-  <data name="TriggerDeleteButton.Text" xml:space="preserve">
-    <value>borrar</value>
-  </data>
-  <data name="TriggerEditButton.Text" xml:space="preserve">
-    <value>editar...</value>
-  </data>
-  <data name="TriggerNewButton.Text" xml:space="preserve">
-    <value>Nuevo...</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Crear tarea</value>
   </data>
 </root>

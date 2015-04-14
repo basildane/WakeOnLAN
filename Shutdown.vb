@@ -17,8 +17,6 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 Imports System.Linq
 Imports Machines
-Imports System.Windows.Forms.VisualStyles
-Imports WOL
 
 Public Class Shutdown
 

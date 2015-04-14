@@ -159,10 +159,12 @@ Partial Class Explorer
         Me.EventLogToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OptionsToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.HotToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripMenuItemWakeUp = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrayMenuItemWakeUp = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ContextMenuStripTray = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ContextToolStripMenuItemOpen = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrayMenuItemRDP = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrayMenuItemShutdown = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetWindowLayoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextToolStripMenuItemExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerPing = New System.Windows.Forms.Timer(Me.components)
@@ -779,15 +781,15 @@ Partial Class Explorer
         Me.HotToolStripButton.CheckState = System.Windows.Forms.CheckState.Checked
         Me.HotToolStripButton.Name = "HotToolStripButton"
         '
-        'ToolStripMenuItemWakeUp
+        'TrayMenuItemWakeUp
         '
-        resources.ApplyResources(Me.ToolStripMenuItemWakeUp, "ToolStripMenuItemWakeUp")
-        Me.ToolStripMenuItemWakeUp.Name = "ToolStripMenuItemWakeUp"
+        resources.ApplyResources(Me.TrayMenuItemWakeUp, "TrayMenuItemWakeUp")
+        Me.TrayMenuItemWakeUp.Name = "TrayMenuItemWakeUp"
         '
         'ContextMenuStripTray
         '
         resources.ApplyResources(Me.ContextMenuStripTray, "ContextMenuStripTray")
-        Me.ContextMenuStripTray.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContextToolStripMenuItemOpen, Me.ToolStripMenuItemWakeUp, Me.ResetWindowLayoutToolStripMenuItem1, Me.ContextToolStripMenuItemExit})
+        Me.ContextMenuStripTray.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContextToolStripMenuItemOpen, Me.TrayMenuItemWakeUp, Me.TrayMenuItemRDP, Me.TrayMenuItemShutdown, Me.ResetWindowLayoutToolStripMenuItem1, Me.ContextToolStripMenuItemExit})
         Me.ContextMenuStripTray.Name = "ContextMenuStripTray"
         Me.ToolTip.SetToolTip(Me.ContextMenuStripTray, resources.GetString("ContextMenuStripTray.ToolTip"))
         '
@@ -795,6 +797,16 @@ Partial Class Explorer
         '
         resources.ApplyResources(Me.ContextToolStripMenuItemOpen, "ContextToolStripMenuItemOpen")
         Me.ContextToolStripMenuItemOpen.Name = "ContextToolStripMenuItemOpen"
+        '
+        'TrayMenuItemRDP
+        '
+        resources.ApplyResources(Me.TrayMenuItemRDP, "TrayMenuItemRDP")
+        Me.TrayMenuItemRDP.Name = "TrayMenuItemRDP"
+        '
+        'TrayMenuItemShutdown
+        '
+        resources.ApplyResources(Me.TrayMenuItemShutdown, "TrayMenuItemShutdown")
+        Me.TrayMenuItemShutdown.Name = "TrayMenuItemShutdown"
         '
         'ResetWindowLayoutToolStripMenuItem1
         '
@@ -936,7 +948,7 @@ Partial Class Explorer
     Friend WithEvents ContextToolStripMenuItemExit As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AutoStartWithWindowsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ToolStripMenuItemWakeUp As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TrayMenuItemWakeUp As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ListenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NotifyIconUpdate As System.Windows.Forms.NotifyIcon
     Friend WithEvents Group As System.Windows.Forms.ColumnHeader
@@ -954,5 +966,7 @@ Partial Class Explorer
     Friend WithEvents ClearIPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TimerUpdate As System.Windows.Forms.Timer
+    Friend WithEvents TrayMenuItemRDP As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TrayMenuItemShutdown As System.Windows.Forms.ToolStripMenuItem
 
 End Class
