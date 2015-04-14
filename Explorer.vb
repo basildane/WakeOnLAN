@@ -725,17 +725,20 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub ContextMenuStripTray_Opening(sender As System.Object, e As CancelEventArgs) Handles ContextMenuStripTray.Opening
+    Private Sub ToolStripMenuItemWakeUp_Opening(sender As System.Object, e As EventArgs) Handles TrayMenuItemWakeUp.DropDownOpening
         ' load all of the machines into the task tray menu
         '
-        ToolStripMenuItemWakeUp.DropDownItems.Clear()
+        TrayMenuItemWakeUp.DropDownItems.Clear()
 
-        For Each machine As Machine In Machines
+        For Each s As String In (From machine As Machine In Machines
+                        Order By machine.Name
+                        Select machine.Name).ToArray()
+
             Dim item As ToolStripMenuItem = New ToolStripMenuItem()
 
-            item.Name = machine.Name
-            item.Text = machine.Name
-            ToolStripMenuItemWakeUp.DropDownItems.Add(item)
+            item.Name = s
+            item.Text = s
+            TrayMenuItemWakeUp.DropDownItems.Add(item)
             AddHandler item.Click, AddressOf TaskTrayWake_Click
         Next
     End Sub
@@ -748,6 +751,65 @@ Public Class Explorer
             machine = Machines(item.Name)
             ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SentTo, machine.Name, machine.MAC)
             WakeUp(machine)
+        End If
+    End Sub
+
+    Private Sub ToolStripMenuItemRDP_Opening(sender As System.Object, e As EventArgs) Handles TrayMenuItemRDP.DropDownOpening
+        ' load all of the machines into the task tray menu
+        '
+        TrayMenuItemRDP.DropDownItems.Clear()
+
+        For Each s As String In (From machine As Machine In Machines
+                        Order By machine.Name
+                        Select machine.Name).ToArray()
+
+            Dim item As ToolStripMenuItem = New ToolStripMenuItem()
+
+            item.Name = s
+            item.Text = s
+            TrayMenuItemRDP.DropDownItems.Add(item)
+            AddHandler item.Click, AddressOf TaskTrayRDP_Click
+        Next
+    End Sub
+
+    Private Sub TaskTrayRDP_Click(sender As System.Object, e As EventArgs)
+        Dim item As ToolStripMenuItem = TryCast(sender, ToolStripMenuItem)
+        Dim machine As Machine
+
+        If item IsNot Nothing Then
+            machine = Machines(item.Name)
+            Shell(String.Format("mstsc.exe -v:{0}:{1}", machine.Netbios, machine.RDPPort), AppWinStyle.NormalFocus, False)
+        End If
+    End Sub
+
+    Private Sub ShutdownToolStripMenuItem_Opening(sender As System.Object, e As EventArgs) Handles TrayMenuItemShutdown.DropDownOpening
+        ' load all of the machines into the task tray menu
+        '
+        TrayMenuItemShutdown.DropDownItems.Clear()
+
+        For Each s As String In (From machine As Machine In Machines
+                        Order By machine.Name
+                        Select machine.Name).ToArray()
+
+            Dim item As ToolStripMenuItem = New ToolStripMenuItem()
+
+            item.Name = s
+            item.Text = s
+            TrayMenuItemShutdown.DropDownItems.Add(item)
+            AddHandler item.Click, AddressOf TaskTrayShutdown_Click
+        Next
+    End Sub
+
+    Private Sub TaskTrayShutdown_Click(sender As System.Object, e As EventArgs)
+        Dim item As ToolStripMenuItem = TryCast(sender, ToolStripMenuItem)
+        Dim items() As String
+        Dim machine As Machine
+
+        If item IsNot Nothing Then
+            machine = Machines(item.Name)
+            items = {item.Name}
+            Shutdown.PerformShutdown(Me, items)
+            Shutdown.Show()
         End If
     End Sub
 
@@ -796,4 +858,7 @@ Public Class Explorer
         History.ShowDialog()
     End Sub
 
+    Private Sub ToolStripMenuItemWakeUp_Click(sender As Object, e As EventArgs) Handles TrayMenuItemWakeUp.Click
+
+    End Sub
 End Class
