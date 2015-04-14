@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,194 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColumnHeader1.Text" xml:space="preserve">
-    <value>主機名稱</value>
-  </data>
-  <data name="ColumnHeader2.Text" xml:space="preserve">
-    <value>狀態</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label_Operation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 24</value>
-  </data>
-  <data name="Label_Operation.Text" xml:space="preserve">
-    <value>準備停止關機</value>
-  </data>
-  <data name="AbortButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
-  <data name="AbortButton.Text" xml:space="preserve">
-    <value>停止關機</value>
-  </data>
-  <data name="ShutdownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        gg==
-</value>
-  </data>
-  <data name="ShutdownButton.Text" xml:space="preserve">
-    <value>關機</value>
-  </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>取消</value>
-  </data>
-  <data name="rbHibernate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="rbHibernate.Text" xml:space="preserve">
-    <value>休眠</value>
-  </data>
-  <data name="rbSleep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="rbSleep.Text" xml:space="preserve">
-    <value>睡眠</value>
-  </data>
-  <data name="rbShutdown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="rbShutdown.Text" xml:space="preserve">
-    <value>關機</value>
-  </data>
-  <data name="shut_reboot.Text" xml:space="preserve">
-    <value>重新啟動後關機</value>
-  </data>
-  <data name="shut_force.Text" xml:space="preserve">
-    <value>強制關閉應用程式</value>
-  </data>
-  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 110</value>
-  </data>
-  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="Label15.Text" xml:space="preserve">
-    <value>重新啟動</value>
-  </data>
-  <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 80</value>
-  </data>
-  <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="Label16.Text" xml:space="preserve">
-    <value>強制</value>
-  </data>
-  <data name="Label_Message.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 26</value>
-  </data>
-  <data name="Label_Message.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="Label_Message.Text" xml:space="preserve">
-    <value>顯示訊息</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Label_Timeout.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label_Timeout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 52</value>
-  </data>
-  <data name="Label_Timeout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
-  </data>
-  <data name="Label_Timeout.Text" xml:space="preserve">
-    <value>等候逾時 (秒)</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>中止選項</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAMDAAAAAAIACoJQAAJgAAABAQAAAAABgAaAMAAM4lAAAoAAAAMAAAAGAAAAABACAAAAAAAAAk
@@ -486,6 +300,192 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
+    <value>關機</value>
+  </data>
+  <data name="AbortButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="AbortButton.Text" xml:space="preserve">
+    <value>停止關機</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>主機名稱</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>中止選項</value>
+  </data>
+  <data name="Label_Message.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 26</value>
+  </data>
+  <data name="Label_Message.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="Label_Message.Text" xml:space="preserve">
+    <value>顯示訊息</value>
+  </data>
+  <data name="Label_Operation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 24</value>
+  </data>
+  <data name="Label_Operation.Text" xml:space="preserve">
+    <value>準備停止關機</value>
+  </data>
+  <data name="Label_Timeout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_Timeout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 52</value>
+  </data>
+  <data name="Label_Timeout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="Label_Timeout.Text" xml:space="preserve">
+    <value>等候逾時 (秒)</value>
+  </data>
+  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 110</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>重新啟動</value>
+  </data>
+  <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 80</value>
+  </data>
+  <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>強制</value>
+  </data>
+  <data name="rbHibernate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="rbHibernate.Text" xml:space="preserve">
+    <value>休眠</value>
+  </data>
+  <data name="rbShutdown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="rbShutdown.Text" xml:space="preserve">
+    <value>關機</value>
+  </data>
+  <data name="rbSleep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="rbSleep.Text" xml:space="preserve">
+    <value>睡眠</value>
+  </data>
+  <data name="shut_force.Text" xml:space="preserve">
+    <value>強制關閉應用程式</value>
+  </data>
+  <data name="shut_reboot.Text" xml:space="preserve">
+    <value>重新啟動後關機</value>
+  </data>
+  <data name="ShutdownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAACoNJREFUWEell3lU
+        VFcSxpk4x6gguCUeE5NRdBQQREAEEVQwahIVY2RGonEJEYIZFDSA4i4ICCgIyL5DQBbZF0FBkB1ktQG7
+        gaZZ25a12WSJ+E31S5+ZPxgZM1Pn3NPQp9/91a36qm49if/VvIOezPUMyF7s7vtIjdbBewGPrXyCc2KC
+        Ip4KwqIKhN6B2SwX99TzjncS5cSP/DELiSr+c9CvRfMDwgtX+YU+1fYPyzcMiig4HxxZ6BMRW5yZkFbJ
+        ycxmDRaUNE5W1rSB3fgKHZ2D6O0bRx+tLv4IKqs7kJhWNeThm5ngcDvhuL3zg/ni7f+zhceUfRv54Nmd
+        6MSKB0kZNaWPchteFpQ0jT6rap1iNfDBbekDXzCMAeEEBgd/w9DQG7weBcbGgNevQd+9QW/POASCUbS1
+        DuAFPVNa2oT4+CK4uifC3uVBohg13SJiy69W0En6+kcwPDJJm/+G4eE3GBl5ywDGx39fItDw8BSE5ERf
+        3xja2vrAYrWjpISNrKxKxMU9RXBwJvz80uDtnQxPjwR4eibAh/52dIkTiHHTLTqhYnBicgpTb8DY5ORb
+        WgQde0uwcXR09KGhoZ1O9IJAFQTKQ2ioCJQKb69keDCgRPj4pCDAPx1BgQ8REJD+r+9Fztg7xbSJcdMt
+        Kr58cHR0EgMDk5iYmGKc4HK78PBhOcLDsxiQFwNKpM8U+j8dgYGZBMpkoO7ucXByjoDNJS+cOu2Ao0ZX
+        sXWnMY4Y2yI5uQT3yAm7W/ff7UBkXKlQFPqenjFy4C2FVsDA3NwewNc3jSCpuHs3Fk5OYbhg4wbTU1dw
+        +HsL7NE3go6eITZqHYSCqj4UNhpAcdMRrNf6Ecvk/4bDpxxQWsahveJh6xD1bgfCY4qFw8MTePlylAn9
+        s2dsuLrGMac0M7uGzVq7oaH5JZSUdaG8YSdU1fWhpmEATe2j0Nlhgu27T0Pv63PQ22ONrV9bQ+erC1ip
+        +iOMrb1QTPrw9k7BjZuRM0QgtoQcEOV6iMT2FpWVjRTWeERE5GHX7oNYvVoD+/efgz6tfQd+wdf7zmL3
+        XnPs+Oo0wc2gvfMf2LzDDJv0TkNN1xyquuewTOlHmNgEoqysEf6ki+s3f323A7/GFAmHhsbB4w2Q6qdQ
+        U9PM5DoqqgD79I9irfw27NU3xxe7TaFLudXZcRJbdE9Cc/tJqG8zhupWYyhr/wTFLaegsMUMctoWWLTO
+        BCYXwymaXIQEZ+G63QwOhN8vEA4OjqG5uQ+jo29QW8tlSik2thj7v/kBK1drQm/nSWhvOw7Nrcegrn0M
+        qlpHoax1DIqbj0Ne8wes0TiJ1RqmWKH+Mz5TP4N5cqYwuRyDiooWRITnzJyC0Mh8oVA4Bg6nm+p8Es+f
+        tyIoKBMJCWU4cNAYy1eoQ2vrUahpGWKDpiGUNhlCQf07yG08jNVq30NW7QSWbziBJeuOQ0beCNLrTPGn
+        VadgcjUBVZU8imQubtjP4EBwRK5wYOA16usF1NEmUFfXjrCwbKSkVMLg0M/46FMVKG8ygLzqAazd8C1W
+        KR/EyvUG+Hz9IXyqdBgfKRyB1OrvMG/NCUgpmGK+0ll8IGcFk+sZqKlup0gWwM5xhjIMDM0R9vaOUOi7
+        0N8/To50IjIyDw8zanDosDlklipjjdJerFDYg8/k9+ITuf1YuvYAlqw1wMI1hgQ/DEk5I0gpnoa0shVk
+        VK9ilqIdfrJ7gue1HUiIL5m5DP1DsoUCwRCpvx29va+p6/ERE1OIx49Y+O6YJeYsVsSna3Zh6apdWCz7
+        FRbI7sF8WX1IyhpA8q9HCG5Mpz4D6Q02kNloiwWaLpit5g6Tm8WoY3VRMyqnFMzggE/gIyGfP0glw8Or
+        VyNgs1/SJVKK3CcvcMToIj6QUcTCz7dDarke5n62G3P/sg9zGfhRSMmbQErJAtIqFyGjbo8Fm92wUMcH
+        szVDcNqlGg11fKSnV8HWfoYUePlnCru6hCgu5lIzGkYjXa9JSeXIf9qIY8bXISGpiDnLtuLD5Tsxh+Dz
+        Vv0dkmuOMfD5YvgCgi/UuktwfyzWjcBs7Thc8OKA0/ASmZm1sJ1JA55+GcKOzgEUFDSis3MITU09SEur
+        RnEhFydM7SEhrYY5y3dh7gp9gh+C5Np/i01a5TIWbHIguDsWbQvEYr0oLNmVhDm6WbDxbUUzR4Ds7Drc
+        vBX9bgfcvdOEbW0DyM19gfZ2IeNAVhYL5aWtMDJzgcQiHcxd+Q0kSelSJLb568wgvd4SMmpXIKNxCwu3
+        eBI8GIt3xGLRrjQs/PIJJLaX4py3ALzmHuTlcWB/a4bb0NUzRcjj9TGetrT0kwN9eEL5r6rogLGFByQ+
+        /pIRm5S8WGwqF0hsN7BAwxkyWl6Q1ArG7C0xkNrxEMu+KYLiDyx8e70TSYXU3Bp7UEiRtHeKZYtx0+2O
+        e5KQy+1lciVygMsdQH5+E57X8GFq6QeJTw7+LjZFC0gp22Ceii1mqzhhlooHPv4iCtt/egJz13oEpgiQ
+        XzWMJt4YOjtGwKO9qqq6SNxtcHCOqxfjppuLW7ywqakXGVT3IjiXK0RRUQvqWa9gah0MiaWGkJA1xSw5
+        SyzScID8vgDon0nDpXsVKK7uo9L9DQN9k+h+SRXU8Aq1NV0E7qQu2AXW827qLwLRRMQX46abk2v8MJvd
+        TfVayYSfxxtivGY39ODs9Vgo7LxOfT0OXpFleFrWCV77CPj81+gWvAaPHK4jR2trX1ELf0VNrIeBVlXx
+        mdAnp1YhKDRn6sLlkAdi3HS7Zh/ZzWb3IJV+zOH0khBpqiXvq6v5qG/oBp9O1tszQcAxtDQL8eJFLxrq
+        aTWIRrU+5oQlJNiMh7WIjC6Ej38WqT4WVpeCCiysfM+YnfPSOWvt96EYN93oR4fu3kvtv08Pczg0/fLH
+        mRPV1fVQU+pHI2eAvheCw6bT0neVlNdc6hEJSc8QGJKD23eTqNXG0I0XjRt2Mbh9OwWBwTmwtAn4WYz4
+        72Zu6bvB+lIwO446YGen6GoeEgN7UVTMQxJFJzQ8D26eqbjpGANbgtnejIGDYzxcCOjqmkazXybd/Xko
+        LGhGfmEjzlr7nxVv/37m6ZcV7e2XgTvuyQgJz4WHdzqdLBq3XGg2DMiE8+1EON5KgLMLAe+kMVBn52Q4
+        OyXT1JPDNK+mpn60tg4hiqJJYbcUb/1+5uaVfruklIv0jCrExBWgtJyN56w2SkcHiZKLR3Q5xcaW0KyY
+        Q4NmBo1tGTS2FVID41CkBEwFVVd3Mk3MwysNlFpD8dbvZ/T2stYnIKuHxeKjmaqB/UJAfUEkygFKi5DW
+        IM2Ng3TCAbovRCLsJm30kPr51MabGBEnJJQjNCwX5y8Fl1IEpMRbv79dvXlfz+VuIi+NolBc3ExvPVxq
+        So3UTtnMErXr7Ox6PH7MoveGWirdCro5y2mVMTOkG6XP+lJQkYWVn6x4yz9u56+Efk4ldJfeZvj+gVn0
+        JlSCVMqvKMepKVV0UxKUxrW4uFJEEtQ/8BGc78RPXbgSUkxiNqKTS4q3+v/M3NJnyZlffPaeO+/veP5y
+        cMpV24hq0b1u53C/45pdZMula2HlVheDYgl4kX67hT5niR99D5OQ+CftriGNaFQfdwAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="ShutdownButton.Text" xml:space="preserve">
     <value>關機</value>
   </data>
 </root>

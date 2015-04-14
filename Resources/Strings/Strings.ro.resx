@@ -117,13 +117,67 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AbortSuccess" xml:space="preserve">
-    <value>Renunţare  {0} cu succes</value>
-    <comment>Abort {machine} successful</comment>
+  <data name="AbortFailed" xml:space="preserve">
+    <value>Renunţă {0} Eroare: {1}</value>
+    <comment>Abort {machine} Error: {error message}</comment>
+  </data>
+  <data name="Aborting" xml:space="preserve">
+    <value>Renunţând...</value>
+    <comment>Aborting...</comment>
   </data>
   <data name="AbortingShutdown" xml:space="preserve">
     <value>Renunţă la comanda închidere pe {0}</value>
     <comment>Aborting shutdown command on {0}</comment>
+  </data>
+  <data name="AbortShutdown" xml:space="preserve">
+    <value>Renunţă la închiderea in desfăşurare...</value>
+    <comment>Abort Shutdown in progress...</comment>
+  </data>
+  <data name="AbortSuccess" xml:space="preserve">
+    <value>Renunţare  {0} cu succes</value>
+    <comment>Abort {machine} successful</comment>
+  </data>
+  <data name="actions_email" xml:space="preserve">
+    <value>Trimite un email</value>
+  </data>
+  <data name="actions_hibernate" xml:space="preserve">
+    <value>Hibernează computerul</value>
+  </data>
+  <data name="actions_hibernateAll" xml:space="preserve">
+    <value>Hibernează toate computerele</value>
+  </data>
+  <data name="actions_popup" xml:space="preserve">
+		<value>Vizualizează un mesaj</value>
+	</data>
+  <data name="actions_shutdown" xml:space="preserve">
+		<value>Închide computerul</value>
+	</data>
+  <data name="actions_shutdownAll" xml:space="preserve">
+		<value>Închide toate computerele</value>
+	</data>
+  <data name="actions_sleep" xml:space="preserve">
+    <value>Adoarme computerul</value>
+  </data>
+  <data name="actions_sleepAll" xml:space="preserve">
+    <value>Adoarme toate computerele</value>
+  </data>
+  <data name="actions_start" xml:space="preserve">
+    <value>Porneşte computerul</value>
+  </data>
+  <data name="actions_startAll" xml:space="preserve">
+    <value>Porneşte toate computerele</value>
+  </data>
+  <data name="AllMachines" xml:space="preserve">
+    <value>Toate maşinile</value>
+    <comment>All machines</comment>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Eşti sigur?</value>
+    <comment>Are you sure?</comment>
+  </data>
+  <data name="BeginShutdown" xml:space="preserve">
+    <value>Începe închiderea...</value>
+    <comment>Begin shutdown...</comment>
   </data>
   <data name="ChangesLost" xml:space="preserve">
     <value>Modificările tale vor fi pierdute.</value>
@@ -133,9 +187,35 @@
     <value>Modificările nu au fost salvate</value>
     <comment>Changes have not been saved</comment>
   </data>
+  <data name="DefaultEmergency" xml:space="preserve">
+    <value>Închidere de urgenţă!</value>
+    <comment>Emergency shutdown!</comment>
+  </data>
+  <data name="DefaultMessage" xml:space="preserve">
+    <value>Sistemul este in curs de închidere!</value>
+    <comment>System is shutting down!</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Şterge {0} înregistrările?</value>
+    <comment>Delete {0} records?</comment>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Realizat</value>
+    <comment>Done</comment>
+  </data>
   <data name="EmergencyShutdown" xml:space="preserve">
     <value>Pornit închidere de urgenţă</value>
     <comment>Emergency shutdown started</comment>
+  </data>
+  <data name="errGreaterThan1" xml:space="preserve">
+    <value>Trebuie să fie mai mare decât 1.</value>
+  </data>
+  <data name="ErrorMsg" xml:space="preserve">
+    <value>Eroare: {0}</value>
+    <comment>Error: {0}</comment>
+  </data>
+  <data name="errWeeks" xml:space="preserve">
+    <value>Trebuie să fie mai mare decât 1 şi mai mic decât 52.</value>
   </data>
   <data name="ExportedTo" xml:space="preserve">
     <value>Configurările au fost exportate la [{0}]</value>
@@ -157,130 +237,12 @@
     <value>Configurările au fost importate de la {0}</value>
     <comment>Settings were imported from {0}</comment>
   </data>
-  <data name="OffLine" xml:space="preserve">
-    <value>Gazda este OFFLINE</value>
-    <comment>Host is OFFLINE</comment>
-  </data>
-  <data name="OnLine" xml:space="preserve">
-    <value>Gazda este ONLINE</value>
-    <comment>Host is ONLINE</comment>
-  </data>
-  <data name="ResponseTime" xml:space="preserve">
-    <value>{0} Timp de Răspuns {1} ms</value>
-    <comment>{host} Response Time {count} ms</comment>
-  </data>
-  <data name="SelectFile" xml:space="preserve">
-    <value>Selectează un fişier configurat WakeOnLine pentru import</value>
-    <comment>Select a WakeOnLan settings file to import</comment>
-  </data>
-  <data name="SendShutdown" xml:space="preserve">
-    <value>Trimite comanda închidere la {0}</value>
-    <comment>Sending shutdown command to {host}</comment>
-  </data>
-  <data name="SentTo" xml:space="preserve">
-    <value>Trimite pachetul Wake Up la {0} {1}...</value>
-    <comment>Sent Wake Up packet to {host} at {mac}...</comment>
-  </data>
-  <data name="ErrorMsg" xml:space="preserve">
-    <value>Eroare: {0}</value>
-    <comment>Error: {0}</comment>
-  </data>
-  <data name="ShutdownSuccessful" xml:space="preserve">
-    <value>Shutdown {0} realizat</value>
-    <comment>Shutdown {host} successful</comment>
-  </data>
-  <data name="ShutdownFailed" xml:space="preserve">
-    <value>Închidere eşuată pentru {0} {1}</value>
-    <comment>Shutdown failed for {host} {error}</comment>
-  </data>
-  <data name="Successful" xml:space="preserve">
-    <value>cu succes</value>
-    <comment>Successful</comment>
-  </data>
-  <data name="Version" xml:space="preserve">
-    <value>Versiune {0}.{1:00}.{2}</value>
-    <comment>Version {0}.{1:00}.{2}.{3}</comment>
-  </data>
-  <data name="WhereSave" xml:space="preserve">
-    <value>Unde doreşti să salvezi configurările?</value>
-    <comment>Where do you want to save the settings?</comment>
-  </data>
-  <data name="AbortFailed" xml:space="preserve">
-    <value>Renunţă {0} Eroare: {1}</value>
-    <comment>Abort {machine} Error: {error message}</comment>
-  </data>
-  <data name="AreYouSure" xml:space="preserve">
-    <value>Eşti sigur?</value>
-    <comment>Are you sure?</comment>
-  </data>
-  <data name="Delete" xml:space="preserve">
-    <value>Şterge {0} înregistrările?</value>
-    <comment>Delete {0} records?</comment>
+  <data name="interfaceInfo" xml:space="preserve">
+    <value>Informaţii ale interfeţei IPv4 pentru {0}.{1}</value>
   </data>
   <data name="isNew" xml:space="preserve">
     <value>Nou</value>
     <comment>New</comment>
-  </data>
-  <data name="Properties" xml:space="preserve">
-    <value>Proprietăţi - {0}</value>
-    <comment>Properties - {0}</comment>
-  </data>
-  <data name="AllMachines" xml:space="preserve">
-    <value>Toate maşinile</value>
-    <comment>All machines</comment>
-  </data>
-  <data name="Aborting" xml:space="preserve">
-    <value>Renunţând...</value>
-    <comment>Aborting...</comment>
-  </data>
-  <data name="AbortShutdown" xml:space="preserve">
-    <value>Renunţă la închiderea in desfăşurare...</value>
-    <comment>Abort Shutdown in progress...</comment>
-  </data>
-  <data name="BeginShutdown" xml:space="preserve">
-    <value>Începe închiderea...</value>
-    <comment>Begin shutdown...</comment>
-  </data>
-  <data name="Pausing" xml:space="preserve">
-    <value>Pauză...</value>
-    <comment>Pausing...</comment>
-  </data>
-  <data name="ShutDownSeconds" xml:space="preserve">
-    <value>Închide în {0} seconds...</value>
-    <comment>Shutting down in {0} seconds...</comment>
-  </data>
-  <data name="Skipping" xml:space="preserve">
-    <value>Trecând peste...</value>
-    <comment>Skipping...</comment>
-  </data>
-  <data name="Opt_BroadcastAddress" xml:space="preserve">
-    <value>Adresa de difuzare</value>
-    <comment>Broadcast Address</comment>
-  </data>
-  <data name="Opt_BroadcastDesc" xml:space="preserve">
-    <value>Înscrie adresa de difuzare IP pentru pachetele de difuzare WOL.</value>
-    <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
-  </data>
-  <data name="DefaultEmergency" xml:space="preserve">
-    <value>Închidere de urgenţă!</value>
-    <comment>Emergency shutdown!</comment>
-  </data>
-  <data name="DefaultMessage" xml:space="preserve">
-    <value>Sistemul este in curs de închidere!</value>
-    <comment>System is shutting down!</comment>
-  </data>
-  <data name="Done" xml:space="preserve">
-    <value>Realizat</value>
-    <comment>Done</comment>
-  </data>
-  <data name="actions_email" xml:space="preserve">
-    <value>Trimite un email</value>
-  </data>
-  <data name="actions_start" xml:space="preserve">
-    <value>Porneşte computerul</value>
-  </data>
-  <data name="actions_startAll" xml:space="preserve">
-    <value>Porneşte toate computerele</value>
   </data>
   <data name="lit_at" xml:space="preserve">
     <value>La {0} pe {1}</value>
@@ -300,6 +262,9 @@
   <data name="lit_Error" xml:space="preserve">
     <value>Eroare</value>
   </data>
+  <data name="lit_false" xml:space="preserve">
+    <value>FALS</value>
+  </data>
   <data name="lit_Invalid" xml:space="preserve">
     <value>Linie de comanda invalidă</value>
   </data>
@@ -312,6 +277,9 @@
   <data name="lit_None" xml:space="preserve">
     <value>Niciun</value>
   </data>
+  <data name="lit_noRights" xml:space="preserve">
+		<value>{0} nu pare să aibe drepturi de citire in baza de date a Programatorului WOL. Aprobăm accesul?</value>
+	</data>
   <data name="lit_notFound" xml:space="preserve">
     <value>Maşină negăsită</value>
   </data>
@@ -324,35 +292,71 @@
   <data name="lit_Running" xml:space="preserve">
     <value>Rulează</value>
   </data>
-  <data name="lit_Unknown" xml:space="preserve">
-    <value>Necunoscut</value>
-  </data>
-  <data name="lit_false" xml:space="preserve">
-    <value>FALS</value>
-  </data>
   <data name="lit_true" xml:space="preserve">
     <value>ADEVĂRAT</value>
   </data>
-  <data name="actions_hibernate" xml:space="preserve">
-    <value>Hibernează computerul</value>
+  <data name="lit_Unknown" xml:space="preserve">
+    <value>Necunoscut</value>
   </data>
-  <data name="actions_hibernateAll" xml:space="preserve">
-    <value>Hibernează toate computerele</value>
+  <data name="OffLine" xml:space="preserve">
+    <value>Gazda este OFFLINE</value>
+    <comment>Host is OFFLINE</comment>
   </data>
-  <data name="actions_sleep" xml:space="preserve">
-    <value>Adoarme computerul</value>
+  <data name="OnLine" xml:space="preserve">
+    <value>Gazda este ONLINE</value>
+    <comment>Host is ONLINE</comment>
   </data>
-  <data name="actions_sleepAll" xml:space="preserve">
-    <value>Adoarme toate computerele</value>
+  <data name="Opt_BroadcastAddress" xml:space="preserve">
+    <value>Adresa de difuzare</value>
+    <comment>Broadcast Address</comment>
   </data>
-  <data name="interfaceInfo" xml:space="preserve">
-    <value>Informaţii ale interfeţei IPv4 pentru {0}.{1}</value>
+  <data name="Opt_BroadcastDesc" xml:space="preserve">
+    <value>Înscrie adresa de difuzare IP pentru pachetele de difuzare WOL.</value>
+    <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
-  <data name="errGreaterThan1" xml:space="preserve">
-    <value>Trebuie să fie mai mare decât 1.</value>
+  <data name="Pausing" xml:space="preserve">
+    <value>Pauză...</value>
+    <comment>Pausing...</comment>
   </data>
-  <data name="errWeeks" xml:space="preserve">
-    <value>Trebuie să fie mai mare decât 1 şi mai mic decât 52.</value>
+  <data name="Properties" xml:space="preserve">
+    <value>Proprietăţi - {0}</value>
+    <comment>Properties - {0}</comment>
+  </data>
+  <data name="ResponseTime" xml:space="preserve">
+    <value>{0} Timp de Răspuns {1} ms</value>
+    <comment>{host} Response Time {count} ms</comment>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Selectează un fişier configurat WakeOnLine pentru import</value>
+    <comment>Select a WakeOnLan settings file to import</comment>
+  </data>
+  <data name="SendShutdown" xml:space="preserve">
+    <value>Trimite comanda închidere la {0}</value>
+    <comment>Sending shutdown command to {host}</comment>
+  </data>
+  <data name="SentTo" xml:space="preserve">
+    <value>Trimite pachetul Wake Up la {0} {1}...</value>
+    <comment>Sent Wake Up packet to {host} at {mac}...</comment>
+  </data>
+  <data name="ShutdownFailed" xml:space="preserve">
+    <value>Închidere eşuată pentru {0} {1}</value>
+    <comment>Shutdown failed for {host} {error}</comment>
+  </data>
+  <data name="ShutDownSeconds" xml:space="preserve">
+    <value>Închide în {0} seconds...</value>
+    <comment>Shutting down in {0} seconds...</comment>
+  </data>
+  <data name="ShutdownSuccessful" xml:space="preserve">
+    <value>Shutdown {0} realizat</value>
+    <comment>Shutdown {host} successful</comment>
+  </data>
+  <data name="Skipping" xml:space="preserve">
+    <value>Trecând peste...</value>
+    <comment>Skipping...</comment>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>cu succes</value>
+    <comment>Successful</comment>
   </data>
   <data name="triggerDaily" xml:space="preserve">
     <value>Zilnic</value>
@@ -366,19 +370,15 @@
   <data name="triggerWeekly" xml:space="preserve">
     <value>Săptămânal</value>
   </data>
-  <data name="actions_popup" xml:space="preserve">
-		<value>Vizualizează un mesaj</value>
-	</data>
-  <data name="actions_shutdown" xml:space="preserve">
-		<value>Închide computerul</value>
-	</data>
-  <data name="actions_shutdownAll" xml:space="preserve">
-		<value>Închide toate computerele</value>
-	</data>
-  <data name="lit_noRights" xml:space="preserve">
-		<value>{0} nu pare să aibe drepturi de citire in baza de date a Programatorului WOL. Aprobăm accesul?</value>
-	</data>
   <data name="useDefault" xml:space="preserve">
 		<value>-- foloseşte implicit --</value>
 	</data>
+  <data name="Version" xml:space="preserve">
+    <value>Versiune {0}.{1:00}.{2}</value>
+    <comment>Version {0}.{1:00}.{2}.{3}</comment>
+  </data>
+  <data name="WhereSave" xml:space="preserve">
+    <value>Unde doreşti să salvezi configurările?</value>
+    <comment>Where do you want to save the settings?</comment>
+  </data>
 </root>

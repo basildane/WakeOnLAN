@@ -46,8 +46,8 @@
             // 
             // pictureBoxIcon
             // 
-            this.pictureBoxIcon.Image = global::AutoUpdaterDotNET.Properties.Resources.clock_go_32;
             resources.ApplyResources(this.pictureBoxIcon, "pictureBoxIcon");
+            this.pictureBoxIcon.Image = global::AutoUpdaterDotNET.Properties.Resources.clock_go_32;
             this.pictureBoxIcon.Name = "pictureBoxIcon";
             this.pictureBoxIcon.TabStop = false;
             // 
@@ -73,6 +73,7 @@
             // 
             // comboBoxRemindLater
             // 
+            resources.ApplyResources(this.comboBoxRemindLater, "comboBoxRemindLater");
             this.comboBoxRemindLater.FormattingEnabled = true;
             this.comboBoxRemindLater.Items.AddRange(new object[] {
             resources.GetString("comboBoxRemindLater.Items"),
@@ -82,14 +83,13 @@
             resources.GetString("comboBoxRemindLater.Items4"),
             resources.GetString("comboBoxRemindLater.Items5"),
             resources.GetString("comboBoxRemindLater.Items6")});
-            resources.ApplyResources(this.comboBoxRemindLater, "comboBoxRemindLater");
             this.comboBoxRemindLater.Name = "comboBoxRemindLater";
             // 
             // buttonOK
             // 
+            resources.ApplyResources(this.buttonOK, "buttonOK");
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOK.Image = global::AutoUpdaterDotNET.Properties.Resources.clock_play;
-            resources.ApplyResources(this.buttonOK, "buttonOK");
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.ButtonOkClick);

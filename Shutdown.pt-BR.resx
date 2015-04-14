@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,76 +59,70 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<data name="ColumnHeader1.Text" xml:space="preserve">
-    <value>Nome do computador</value>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Desligar</value>
   </data>
-	<assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-	<data name="Label_Operation.Size" type="System.Drawing.Size, System.Drawing">
-		<value>193, 24</value>
-	</data>
-	<data name="Label_Operation.Text" xml:space="preserve">
-    <value>Pronto para desligar...</value>
-  </data>
-	<data name="AbortButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-		<value>
+  <data name="AbortButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAACYBJREFUWEfVV2lU
         FGcWrare6aahGxDZ90VQEETZlE0cVBQE1IiyGFFwd1RA3BAX3CDRaERccBcVFJcMGUZNUFRU6B1odlDh
@@ -173,12 +167,63 @@
         ysEB6nGwNPv4wIOgUaAO8H2+f4jzjRA9QRoCO+B+u9b7Ef0PPkJ/POD8FokJwt2LRcWF67AyonS5G6KE
         OuvDBNxURxYzBhPsglINcPcv14j2b/XDfjx6YvS2AAAAAElFTkSuQmCC
 </value>
-	</data>
-	<data name="AbortButton.Text" xml:space="preserve">
+  </data>
+  <data name="AbortButton.Text" xml:space="preserve">
     <value>Abortar Desligamento</value>
   </data>
-	<data name="ShutdownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-		<value>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>Nome do computador</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Opções de desligamento</value>
+  </data>
+  <data name="Label_Message.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 26</value>
+  </data>
+  <data name="Label_Message.Text" xml:space="preserve">
+    <value>Exibir mensagem</value>
+  </data>
+  <data name="Label_Operation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 24</value>
+  </data>
+  <data name="Label_Operation.Text" xml:space="preserve">
+    <value>Pronto para desligar...</value>
+  </data>
+  <data name="Label_Timeout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 28</value>
+  </data>
+  <data name="Label_Timeout.Text" xml:space="preserve">
+    <value>Tempo (seg)</value>
+  </data>
+  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 110</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>Reiniciar</value>
+  </data>
+  <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 80</value>
+  </data>
+  <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>Forçar</value>
+  </data>
+  <data name="shut_force.Text" xml:space="preserve">
+    <value>Forçar fechamento dos aplicativos</value>
+  </data>
+  <data name="shut_reboot.Text" xml:space="preserve">
+    <value>Reiniciar após desligar</value>
+  </data>
+  <data name="ShutdownButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAACnVJREFUWEedV2dU
         VOcWJZJnVBBsicsXk6foU0AQARFEUMGoSVSMkfckGkuIEMxDQYMoYkGaAkoNIB1BkCK9CAYE6SBV2gww
@@ -227,53 +272,8 @@
         TkmgNK5FRxchjEB9/V/A8WHMzPVbQQUkZn3audifBv//B03MvFdd+sn78JVrvveu3QxMvG0dWiHs6zb2
         T9vv2IQ1W955XHL1RkAUAd6ge3fRt+i7AP8bSQIdfHcShKMAAAAASUVORK5CYII=
 </value>
-	</data>
-	<data name="ShutdownButton.Text" xml:space="preserve">
-    <value>Desligar</value>
   </data>
-	<data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
-	<data name="shut_reboot.Text" xml:space="preserve">
-    <value>Reiniciar após desligar</value>
-  </data>
-	<data name="shut_force.Text" xml:space="preserve">
-    <value>Forçar fechamento dos aplicativos</value>
-  </data>
-	<data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
-		<value>39, 110</value>
-	</data>
-	<data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
-		<value>48, 13</value>
-	</data>
-	<data name="Label15.Text" xml:space="preserve">
-    <value>Reiniciar</value>
-  </data>
-	<data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
-		<value>50, 80</value>
-	</data>
-	<data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
-		<value>37, 13</value>
-	</data>
-	<data name="Label16.Text" xml:space="preserve">
-    <value>Forçar</value>
-  </data>
-	<data name="Label_Message.Location" type="System.Drawing.Point, System.Drawing">
-		<value>17, 26</value>
-	</data>
-	<data name="Label_Message.Text" xml:space="preserve">
-    <value>Exibir mensagem</value>
-  </data>
-	<data name="Label_Timeout.Size" type="System.Drawing.Size, System.Drawing">
-		<value>75, 28</value>
-	</data>
-	<data name="Label_Timeout.Text" xml:space="preserve">
-    <value>Tempo (seg)</value>
-  </data>
-	<data name="GroupBox1.Text" xml:space="preserve">
-    <value>Opções de desligamento</value>
-  </data>
-	<data name="$this.Text" xml:space="preserve">
+  <data name="ShutdownButton.Text" xml:space="preserve">
     <value>Desligar</value>
   </data>
 </root>

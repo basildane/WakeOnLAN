@@ -117,6 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Версия</value>
+    <comment>Version</comment>
+  </data>
+  <data name="AppVersionDescription" xml:space="preserve">
+    <value>Версия программы</value>
+    <comment>Application version</comment>
+  </data>
+  <data name="AutoCheck" xml:space="preserve">
+    <value>Автоматическое обновление</value>
+  </data>
   <data name="Broadcast_Address" xml:space="preserve">
     <value>Диапазон адресов</value>
     <comment>Broadcast Address</comment>
@@ -124,6 +135,10 @@
   <data name="Broadcast_AddressDescription" xml:space="preserve">
     <value>Введите IP-адреса для передачи пакетов</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
+  </data>
+  <data name="cat_Application" xml:space="preserve">
+    <value>Программа</value>
+    <comment>Application</comment>
   </data>
   <data name="cat_Emergency" xml:space="preserve">
     <value>Настройки аварийных ситуаций</value>
@@ -136,6 +151,12 @@
   <data name="cat_WOL" xml:space="preserve">
     <value>WOL</value>
     <comment>WOL</comment>
+  </data>
+  <data name="Culture" xml:space="preserve">
+    <value>Культура</value>
+  </data>
+  <data name="dbPath" xml:space="preserve">
+    <value>Путь к базе данных</value>
   </data>
   <data name="Delay" xml:space="preserve">
     <value>Время задержки</value>
@@ -177,6 +198,9 @@
     <value>Принудительное выключение удаленного сервера. Несохраненные файлы будут потеряны.</value>
     <comment>Force remote server to shutdown.  Unsaved files will be lost.</comment>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Язык</value>
+  </data>
   <data name="Reboot" xml:space="preserve">
     <value>Перезагрузка</value>
     <comment>Reboot</comment>
@@ -193,6 +217,9 @@
     <value>Сообщение о выключении по умолчанию.</value>
     <comment>The default shutdown message.</comment>
   </data>
+  <data name="Threads" xml:space="preserve">
+    <value>Номер потока</value>
+  </data>
   <data name="UDPPort" xml:space="preserve">
     <value>UDP порт</value>
     <comment>UDP Port</comment>
@@ -200,32 +227,5 @@
   <data name="UDPPortDescription" xml:space="preserve">
     <value>Введите номер UDP порта для передачи сообщений.</value>
     <comment>Enter the UDP Port number for the broadcast messages.</comment>
-  </data>
-  <data name="AppVersion" xml:space="preserve">
-    <value>Версия</value>
-    <comment>Version</comment>
-  </data>
-  <data name="AppVersionDescription" xml:space="preserve">
-    <value>Версия программы</value>
-    <comment>Application version</comment>
-  </data>
-  <data name="cat_Application" xml:space="preserve">
-    <value>Программа</value>
-    <comment>Application</comment>
-  </data>
-  <data name="Culture" xml:space="preserve">
-    <value>Культура</value>
-  </data>
-  <data name="Language" xml:space="preserve">
-    <value>Язык</value>
-  </data>
-  <data name="AutoCheck" xml:space="preserve">
-    <value>Автоматическое обновление</value>
-  </data>
-  <data name="dbPath" xml:space="preserve">
-    <value>Путь к базе данных</value>
-  </data>
-  <data name="Threads" xml:space="preserve">
-    <value>Номер потока</value>
   </data>
 </root>

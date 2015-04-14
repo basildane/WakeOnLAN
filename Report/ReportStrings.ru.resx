@@ -117,9 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RepBroadcast" xml:space="preserve">
+    <value>Передача</value>
+  </data>
   <data name="RepEmergency" xml:space="preserve">
     <value>Выключить аварийно?</value>
     <comment>Emergency shutdown?</comment>
+  </data>
+  <data name="RepGroup" xml:space="preserve">
+    <value>Группа</value>
   </data>
   <data name="RepIP" xml:space="preserve">
     <value>IP-адрес</value>
@@ -140,11 +146,5 @@
   <data name="RepShutdown" xml:space="preserve">
     <value>Выключение из командной строки</value>
     <comment>Shutdown command line</comment>
-  </data>
-  <data name="RepBroadcast" xml:space="preserve">
-    <value>Передача</value>
-  </data>
-  <data name="RepGroup" xml:space="preserve">
-    <value>Группа</value>
   </data>
 </root>

@@ -117,16 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ColumnHeader_Time.Text" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="ColumnHeader_Name.Text" xml:space="preserve">
+    <value>Имя</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LabelHeader.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="LabelHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
+    <value>118, 13</value>
   </data>
   <data name="LabelHeader.Text" xml:space="preserve">
     <value>Полученные пакеты...</value>
+  </data>
+  <data name="ButtonSet.Text" xml:space="preserve">
+    <value>Установить</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>UDP порт:</value>
   </data>
   <data name="lUDPport.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
@@ -317,7 +329,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACi
-        JQAAAk1TRnQBSQFMAwEBAAGIAQABiAEAATABAAEwAQAE/wEZAQAI/wFCAU0BNgcAATYDAAEoAwABwAMA
+        JQAAAk1TRnQBSQFMAwEBAAGYAQABmAEAATABAAEwAQAE/wEZAQAI/wFCAU0BNgcAATYDAAEoAwABwAMA
         ATADAAEBAQABGAYAAWz/AP8AbwAD/wH0Ae8B7AHqAdcBzAHnAdABwwHnAdABwgHrAdkB0AH4AfUB8wYA
         AfMC8QHZAdABzwHJAbsBuAG+AasBqAG3AaABnQGwAZcBlAGtAZIBjgGtAZIBjgGuAZMBjwGzAZsBlwG6
         AaUBogHDAbIBrwHSAcYBxAHlAeAB3wH6Avn/APYAAfMB7QHpAd4BrAGNAdoBiQFbAd8BkwFrAeABmQFz
@@ -479,20 +491,5 @@
         BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH+BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH/BAABBxIAAf8BgAMA
         AQcSAAH/AfgDAAEHEgAC/wHwAgABHxIAA/8B8AEBAf8SAAb/EgAL
 </value>
-  </data>
-  <data name="ButtonSet.Text" xml:space="preserve">
-    <value>Установить</value>
-  </data>
-  <data name="ColumnHeader_Name.Text" xml:space="preserve">
-    <value>Имя</value>
-  </data>
-  <data name="ColumnHeader_Time.Text" xml:space="preserve">
-    <value>Время</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>UDP порт:</value>
-  </data>
-  <data name="ColumnHeader_IP.Text" xml:space="preserve">
-    <value>IP</value>
   </data>
 </root>

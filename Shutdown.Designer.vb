@@ -61,16 +61,21 @@ Partial Class Shutdown
         '
         'SplitContainer1.Panel1
         '
+        resources.ApplyResources(Me.SplitContainer1.Panel1, "SplitContainer1.Panel1")
         Me.SplitContainer1.Panel1.Controls.Add(Me.ListView1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ProgressBar1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label_Operation)
         Me.SplitContainer1.Panel1.Controls.Add(Me.AbortButton)
+        Me.toolTip.SetToolTip(Me.SplitContainer1.Panel1, resources.GetString("SplitContainer1.Panel1.ToolTip"))
         '
         'SplitContainer1.Panel2
         '
+        resources.ApplyResources(Me.SplitContainer1.Panel2, "SplitContainer1.Panel2")
         Me.SplitContainer1.Panel2.Controls.Add(Me.ShutdownButton)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Cancel_Button)
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox1)
+        Me.toolTip.SetToolTip(Me.SplitContainer1.Panel2, resources.GetString("SplitContainer1.Panel2.ToolTip"))
+        Me.toolTip.SetToolTip(Me.SplitContainer1, resources.GetString("SplitContainer1.ToolTip"))
         '
         'ListView1
         '
@@ -82,6 +87,7 @@ Partial Class Shutdown
         Me.ListView1.Name = "ListView1"
         Me.ListView1.ShowGroups = False
         Me.ListView1.ShowItemToolTips = True
+        Me.toolTip.SetToolTip(Me.ListView1, resources.GetString("ListView1.ToolTip"))
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
@@ -98,32 +104,38 @@ Partial Class Shutdown
         resources.ApplyResources(Me.ProgressBar1, "ProgressBar1")
         Me.ProgressBar1.Maximum = 0
         Me.ProgressBar1.Name = "ProgressBar1"
+        Me.toolTip.SetToolTip(Me.ProgressBar1, resources.GetString("ProgressBar1.ToolTip"))
         '
         'Label_Operation
         '
         resources.ApplyResources(Me.Label_Operation, "Label_Operation")
         Me.Label_Operation.Name = "Label_Operation"
+        Me.toolTip.SetToolTip(Me.Label_Operation, resources.GetString("Label_Operation.ToolTip"))
         '
         'AbortButton
         '
         resources.ApplyResources(Me.AbortButton, "AbortButton")
         Me.AbortButton.Name = "AbortButton"
+        Me.toolTip.SetToolTip(Me.AbortButton, resources.GetString("AbortButton.ToolTip"))
         Me.AbortButton.UseVisualStyleBackColor = True
         '
         'ShutdownButton
         '
         resources.ApplyResources(Me.ShutdownButton, "ShutdownButton")
         Me.ShutdownButton.Name = "ShutdownButton"
+        Me.toolTip.SetToolTip(Me.ShutdownButton, resources.GetString("ShutdownButton.ToolTip"))
         Me.ShutdownButton.UseVisualStyleBackColor = True
         '
         'Cancel_Button
         '
         resources.ApplyResources(Me.Cancel_Button, "Cancel_Button")
         Me.Cancel_Button.Name = "Cancel_Button"
+        Me.toolTip.SetToolTip(Me.Cancel_Button, resources.GetString("Cancel_Button.ToolTip"))
         Me.Cancel_Button.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Controls.Add(Me.rbLogoff)
         Me.GroupBox1.Controls.Add(Me.rbHibernate)
         Me.GroupBox1.Controls.Add(Me.rbSleep)
@@ -136,15 +148,16 @@ Partial Class Shutdown
         Me.GroupBox1.Controls.Add(Me.shut_message)
         Me.GroupBox1.Controls.Add(Me.shut_timeout)
         Me.GroupBox1.Controls.Add(Me.Label_Timeout)
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
+        Me.toolTip.SetToolTip(Me.GroupBox1, resources.GetString("GroupBox1.ToolTip"))
         '
         'rbLogoff
         '
         resources.ApplyResources(Me.rbLogoff, "rbLogoff")
         Me.rbLogoff.Name = "rbLogoff"
         Me.rbLogoff.TabStop = True
+        Me.toolTip.SetToolTip(Me.rbLogoff, resources.GetString("rbLogoff.ToolTip"))
         Me.rbLogoff.UseVisualStyleBackColor = True
         '
         'rbHibernate
@@ -152,6 +165,7 @@ Partial Class Shutdown
         resources.ApplyResources(Me.rbHibernate, "rbHibernate")
         Me.rbHibernate.Name = "rbHibernate"
         Me.rbHibernate.TabStop = True
+        Me.toolTip.SetToolTip(Me.rbHibernate, resources.GetString("rbHibernate.ToolTip"))
         Me.rbHibernate.UseVisualStyleBackColor = True
         '
         'rbSleep
@@ -159,6 +173,7 @@ Partial Class Shutdown
         resources.ApplyResources(Me.rbSleep, "rbSleep")
         Me.rbSleep.Name = "rbSleep"
         Me.rbSleep.TabStop = True
+        Me.toolTip.SetToolTip(Me.rbSleep, resources.GetString("rbSleep.ToolTip"))
         Me.rbSleep.UseVisualStyleBackColor = True
         '
         'rbShutdown
@@ -166,49 +181,58 @@ Partial Class Shutdown
         resources.ApplyResources(Me.rbShutdown, "rbShutdown")
         Me.rbShutdown.Name = "rbShutdown"
         Me.rbShutdown.TabStop = True
+        Me.toolTip.SetToolTip(Me.rbShutdown, resources.GetString("rbShutdown.ToolTip"))
         Me.rbShutdown.UseVisualStyleBackColor = True
         '
         'shut_reboot
         '
+        resources.ApplyResources(Me.shut_reboot, "shut_reboot")
         Me.shut_reboot.Checked = True
         Me.shut_reboot.CheckState = System.Windows.Forms.CheckState.Checked
-        resources.ApplyResources(Me.shut_reboot, "shut_reboot")
         Me.shut_reboot.Name = "shut_reboot"
+        Me.toolTip.SetToolTip(Me.shut_reboot, resources.GetString("shut_reboot.ToolTip"))
         '
         'shut_force
         '
         resources.ApplyResources(Me.shut_force, "shut_force")
         Me.shut_force.Name = "shut_force"
+        Me.toolTip.SetToolTip(Me.shut_force, resources.GetString("shut_force.ToolTip"))
         '
         'Label15
         '
         resources.ApplyResources(Me.Label15, "Label15")
         Me.Label15.Name = "Label15"
+        Me.toolTip.SetToolTip(Me.Label15, resources.GetString("Label15.ToolTip"))
         '
         'Label16
         '
         resources.ApplyResources(Me.Label16, "Label16")
         Me.Label16.Name = "Label16"
+        Me.toolTip.SetToolTip(Me.Label16, resources.GetString("Label16.ToolTip"))
         '
         'Label_Message
         '
         resources.ApplyResources(Me.Label_Message, "Label_Message")
         Me.Label_Message.Name = "Label_Message"
+        Me.toolTip.SetToolTip(Me.Label_Message, resources.GetString("Label_Message.ToolTip"))
         '
         'shut_message
         '
         resources.ApplyResources(Me.shut_message, "shut_message")
         Me.shut_message.Name = "shut_message"
+        Me.toolTip.SetToolTip(Me.shut_message, resources.GetString("shut_message.ToolTip"))
         '
         'shut_timeout
         '
         resources.ApplyResources(Me.shut_timeout, "shut_timeout")
         Me.shut_timeout.Name = "shut_timeout"
+        Me.toolTip.SetToolTip(Me.shut_timeout, resources.GetString("shut_timeout.ToolTip"))
         '
         'Label_Timeout
         '
         resources.ApplyResources(Me.Label_Timeout, "Label_Timeout")
         Me.Label_Timeout.Name = "Label_Timeout"
+        Me.toolTip.SetToolTip(Me.Label_Timeout, resources.GetString("Label_Timeout.ToolTip"))
         '
         'timer
         '
@@ -228,6 +252,7 @@ Partial Class Shutdown
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Shutdown"
+        Me.toolTip.SetToolTip(Me, resources.GetString("$this.ToolTip"))
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)

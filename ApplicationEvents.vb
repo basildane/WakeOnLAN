@@ -88,6 +88,8 @@ Namespace My
                     language = "en-US"
                 Case "de"
                     language = "de-DE"
+                Case "es"
+                    language = "es-ES"
                 Case "fi"
                     language = "fi-FI"
                 Case "fr"

@@ -30,6 +30,7 @@ Public Class Countries : Inherits System.ComponentModel.StringConverter
         {
             "pt-BR",
             "de-DE",
+            "es-ES",
             "fr-FR",
             "hu-HU",
             "nl-NL",
@@ -40,7 +41,7 @@ Public Class Countries : Inherits System.ComponentModel.StringConverter
             "zh-TW"
         }
 
-    ReadOnly _countryNames(9) As String
+    ReadOnly _countryNames(10) As String
 
     Public Sub New()
         Dim cultureInfo As CultureInfo
@@ -111,6 +112,8 @@ Public Class LanguageEditor : Inherits UITypeEditor
                 newImage = My.Resources.Flags.Brazil
             Case "de-DE"
                 newImage = My.Resources.Flags.Germany
+            Case "es-ES"
+                newImage = My.Resources.Flags.Spain
             Case "fr-FR"
                 newImage = My.Resources.Flags.France
             Case "hu-HU"

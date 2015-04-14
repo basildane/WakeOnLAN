@@ -192,9 +192,18 @@
   <data name="EmergencyShutdown" xml:space="preserve">
     <value>Noodafsluiting is gestart</value>
   </data>
+  <data name="errGreaterThan1" xml:space="preserve">
+		<value>Moet groter/gelijk 1 zijn.</value>
+	</data>
   <data name="ErrorMsg" xml:space="preserve">
     <value>Fout: {0}</value>
   </data>
+  <data name="errUserID" xml:space="preserve">
+		<value>Geef een geldige gebruikersnaam en wachtwoord op voor de geplande taak.</value>
+	</data>
+  <data name="errWeeks" xml:space="preserve">
+		<value>Moet groter/gelijk aan 1 zijn en kleiner/gelijk aan 52.</value>
+	</data>
   <data name="ExportedTo" xml:space="preserve">
     <value>Instellingen opgeslagen in [{0}]</value>
   </data>
@@ -225,6 +234,9 @@
   <data name="lit_atWeeks" xml:space="preserve">
     <value>Op {0} elke {1} weken, vanaf {3}</value>
   </data>
+  <data name="lit_DeleteRecords" xml:space="preserve">
+		<value>Verwijder {0} records(s)</value>
+	</data>
   <data name="lit_Disabled" xml:space="preserve">
     <value>Inactief</value>
   </data>
@@ -261,6 +273,9 @@
   <data name="lit_Ready" xml:space="preserve">
     <value>Gereed</value>
   </data>
+  <data name="lit_RemoveIP" xml:space="preserve">
+		<value>Verwijder het IP-adres van {0} record(s)</value>
+	</data>
   <data name="lit_Running" xml:space="preserve">
     <value>Draait</value>
   </data>
@@ -324,21 +339,6 @@
   <data name="Title" xml:space="preserve">
     <value>Wake on LAN</value>
   </data>
-  <data name="useDefault" xml:space="preserve">
-    <value>-- gebruik standaard --</value>
-  </data>
-  <data name="Version" xml:space="preserve">
-    <value>Versie {0}.{1:00}.{2}</value>
-  </data>
-  <data name="WhereSave" xml:space="preserve">
-    <value>Waar wil je de instellingen opslaan?</value>
-  </data>
-  <data name="errGreaterThan1" xml:space="preserve">
-		<value>Moet groter/gelijk 1 zijn.</value>
-	</data>
-  <data name="errWeeks" xml:space="preserve">
-		<value>Moet groter/gelijk aan 1 zijn en kleiner/gelijk aan 52.</value>
-	</data>
   <data name="triggerDaily" xml:space="preserve">
 		<value>dagelijks</value>
 	</data>
@@ -348,13 +348,13 @@
   <data name="triggerWeekly" xml:space="preserve">
 		<value>wekelijks</value>
 	</data>
-  <data name="errUserID" xml:space="preserve">
-		<value>Geef een geldige gebruikersnaam en wachtwoord op voor de geplande taak.</value>
-	</data>
-  <data name="lit_DeleteRecords" xml:space="preserve">
-		<value>Verwijder {0} records(s)</value>
-	</data>
-  <data name="lit_RemoveIP" xml:space="preserve">
-		<value>Verwijder het IP-adres van {0} record(s)</value>
-	</data>
+  <data name="useDefault" xml:space="preserve">
+    <value>-- gebruik standaard --</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versie {0}.{1:00}.{2}</value>
+  </data>
+  <data name="WhereSave" xml:space="preserve">
+    <value>Waar wil je de instellingen opslaan?</value>
+  </data>
 </root>
