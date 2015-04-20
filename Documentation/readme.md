@@ -1,5 +1,11 @@
 # WakeOnLAN 2.11.2
 
+## Beta 25 - _April 14 2015_
+
+* French updates
+* Added Spanish translation
+* Added task tray options for RDP and Shutdown of hosts
+
 ## Beta 10 - _April 8 2015_
 
 * Fix problems with auto updater.
