@@ -16,6 +16,7 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
+Imports System.IO
 Imports System.Xml.Serialization
 Imports System.Net
 Imports System.Linq
@@ -69,14 +70,13 @@ Public Class MachinesClass
         Return My.Settings.dbPath
     End Function
 
-    Public Sub Import(ByVal Filename As String)
+    Public Sub Import(filename As String)
         Try
             Dim serializer As New XmlSerializer(GetType(MachinesClass))
-            Dim fs As IO.FileStream
 
-            fs = New IO.FileStream(Filename, IO.FileMode.Open, IO.FileAccess.Read)
-            Machines = CType(serializer.Deserialize(fs), MachinesClass)
-            fs.Close()
+            Dim fileStream As FileStream = New FileStream(filename, FileMode.Open, FileAccess.Read)
+            Machines = CType(serializer.Deserialize(fileStream), MachinesClass)
+            fileStream.Close()
             CheckUpgrade()
 
         Catch ex As Exception

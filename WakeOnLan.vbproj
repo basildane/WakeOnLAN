@@ -296,7 +296,26 @@
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.DataVisualization\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.ProcessingObjectModel\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types">
+      <HintPath>..\..\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Types\11.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -309,6 +328,7 @@
       <Name>System.Drawing</Name>
     </Reference>
     <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms">
       <Name>System.Windows.Forms</Name>
     </Reference>
@@ -673,6 +693,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="License.ru.resx">
       <DependentUpon>License.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Listener.es.resx">
       <DependentUpon>Listener.vb</DependentUpon>
@@ -691,7 +712,9 @@
     <EmbeddedResource Include="Report\ReportViewer.ru.resx">
       <DependentUpon>ReportViewer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Strings\Strings.es.resx" />
+    <EmbeddedResource Include="Resources\Strings\Strings.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="SafeMode.es.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>
     </EmbeddedResource>
@@ -711,6 +734,7 @@
     <None Include="Documentation\readme.md" />
     <None Include="Documentation\software_update_available.png" />
     <None Include="Documentation\Splash.xcf" />
+    <None Include="LICENSE" />
     <None Include="Resources\flags\finland_16x16.png" />
     <None Include="Resources\down.wav" />
     <None Include="Resources\connected.ico" />
@@ -856,9 +880,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="License.ro.resx">
       <DependentUpon>License.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="License.zh-TW.resx">
       <DependentUpon>License.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Listener.fi.resx">
       <DependentUpon>Listener.vb</DependentUpon>
@@ -1082,11 +1108,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.nl.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings\Strings.hu.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.hu.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings\Strings.fi.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1103,6 +1131,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="License.fr.resx">
       <DependentUpon>License.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Listener.resx">
       <DependentUpon>Listener.vb</DependentUpon>
