@@ -156,6 +156,13 @@ Namespace My
             End If
 
             Try
+                For i As Int16 = 0 To CommandLineArgs.Count
+                    If (CommandLineArgs(i) = "-p") Then
+                        Settings.dbPath = CommandLineArgs(i + 1)
+                        Return
+                    End If
+                Next
+
                 regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
                 database = regKey.GetValue("Database", IO.Directory.GetParent(Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, Microsoft.Win32.RegistryValueOptions.None)
                 regKey.Close()
