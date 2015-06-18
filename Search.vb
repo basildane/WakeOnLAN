@@ -74,12 +74,12 @@ Public Class Search
         Close()
     End Sub
 
-    Private Sub closeButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles closeButton.Click
+    Private Sub closeButton_Click(sender As System.Object, e As EventArgs) Handles closeButton.Click
         DialogResult = Windows.Forms.DialogResult.Cancel
         Close()
     End Sub
 
-    Private Sub Poll(ByVal ip As String, ByVal progress As Integer)
+    Private Sub Poll(ip As String, progress As Integer)
         Dim profile As Profile
 
         Try
@@ -224,7 +224,7 @@ Public Class Search
 
     End Function
 
-    Private Sub searchButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SearchBegin.Click
+    Private Sub searchButton_Click(sender As System.Object, e As EventArgs) Handles SearchBegin.Click
         Cursor = Cursors.WaitCursor
         SearchBegin.Enabled = False
         cancelSearch.Enabled = True
@@ -234,7 +234,7 @@ Public Class Search
         backgroundWorker.RunWorkerAsync()
     End Sub
 
-    Private Sub Search_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+    Private Sub Search_Load(sender As System.Object, e As EventArgs) Handles MyBase.Load
         IpAddressControl_Start.Text = MySettings.Default.SearchStart
         IpAddressControl_End.Text = MySettings.Default.SearchEnd
 
@@ -249,11 +249,11 @@ Public Class Search
         ComboBoxGroup.Text = _none
     End Sub
 
-    Private Sub cancelSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles cancelSearch.Click
+    Private Sub cancelSearch_Click(sender As System.Object, e As EventArgs) Handles cancelSearch.Click
         backgroundWorker.CancelAsync()
     End Sub
 
-    Private Sub backgroundWorker_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles backgroundWorker.DoWork
+    Private Sub backgroundWorker_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles backgroundWorker.DoWork
         Dim i, startIp, stopIp As UInt32
         Dim ip As String
         Dim progress As Integer
@@ -282,27 +282,35 @@ Public Class Search
 
     End Sub
 
-    Private Sub backgroundWorker_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles backgroundWorker.ProgressChanged
+    Private Sub backgroundWorker_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles backgroundWorker.ProgressChanged
         Dim i As ListViewItem
         Dim p As Profile
 
-        If Not (e.UserState Is Nothing) Then
-            p = e.UserState
+        Try
+
+            If Not (e.UserState Is Nothing) Then
+                p = e.UserState
 #If DISPLAY Then
             p.MacAddress = p.MacAddress.Substring(0, 9) & "00:00:00"
 #End If
-            i = listView.Items.Add(p.Name)
-            i.SubItems.Add(p.OsName)
-            i.SubItems.Add(p.NetInterface)
-            i.SubItems.Add(p.IpAddress)
-            i.SubItems.Add(p.MacAddress)
-            i.SubItems.Add(p.WakeEnabled)
-        End If
+                i = listView.Items.Add(p.Name)
+                i.SubItems.Add(p.OsName)
+                i.SubItems.Add(p.NetInterface)
+                i.SubItems.Add(p.IpAddress)
+                i.SubItems.Add(p.MacAddress)
+                i.SubItems.Add(p.WakeEnabled)
+            End If
 
-        ToolStripProgressBar1.Value = e.ProgressPercentage
+            ToolStripProgressBar1.Value = e.ProgressPercentage
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error in [backgroundWorker_ProgressChanged]", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
     End Sub
 
-    Private Sub backgroundWorker_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles backgroundWorker.RunWorkerCompleted
+    Private Sub backgroundWorker_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles backgroundWorker.RunWorkerCompleted
         SearchBegin.Enabled = True
         cancelSearch.Enabled = False
         Cursor = Cursors.Default
@@ -311,19 +319,19 @@ Public Class Search
         listView.ListViewItemSorter = _lvwColumnSorter
     End Sub
 
-    Private Sub CheckAllButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CheckAllButton.Click
+    Private Sub CheckAllButton_Click(sender As System.Object, e As EventArgs) Handles CheckAllButton.Click
         For Each l As ListViewItem In listView.Items
             l.Checked = True
         Next
     End Sub
 
-    Private Sub UnCheckAllButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles UnCheckAllButton.Click
+    Private Sub UnCheckAllButton_Click(sender As System.Object, e As EventArgs) Handles UnCheckAllButton.Click
         For Each l As ListViewItem In listView.Items
             l.Checked = False
         Next
     End Sub
 
-    Private Sub ShowDetails(ByVal l As ListViewItem)
+    Private Sub ShowDetails(l As ListViewItem)
         Dim profile As Profile
         Dim s As String
 
@@ -350,7 +358,7 @@ Public Class Search
 
     End Sub
 
-    Private Sub listView_DoubleClick(ByVal sender As Object, ByVal e As EventArgs) Handles listView.DoubleClick
+    Private Sub listView_DoubleClick(sender As Object, e As EventArgs) Handles listView.DoubleClick
         listView.Cursor = Cursors.WaitCursor
         ShowDetails(listView.SelectedItems(0))
         listView.Cursor = Cursors.Default
