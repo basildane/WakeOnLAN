@@ -85,6 +85,13 @@ Source: "C:\Projects\WakeOnLan\bin\Release\ru\*"; DestDir: "{app}\ru"; Flags: ig
 Source: "C:\Projects\WakeOnLan\bin\Release\pt-BR\*"; DestDir: "{app}\pt-BR"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Projects\WakeOnLan\bin\Release\zh-TW\*"; DestDir: "{app}\zh-TW"; Flags: ignoreversion recursesubdirs createallsubdirs
 
+; these files are required by the ReportViewer control
+Source: "C:\Projects\WakeOnLan\bin\Release\Microsoft.ReportViewer.Common.dll"; DestDir: "{app}"
+Source: "C:\Projects\WakeOnLan\bin\Release\Microsoft.ReportViewer.WinForms.dll"; DestDir: "{app}"
+Source: "C:\Projects\WakeOnLan\bin\Release\Microsoft.ReportViewer.DataVisualization.DLL"; DestDir: "{app}"
+Source: "C:\Projects\WakeOnLan\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL"; DestDir: "{app}"
+Source: "C:\Projects\WakeOnLan\bin\Release\Microsoft.SqlServer.Types.dll"; DestDir: "{app}"
+
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
@@ -113,6 +120,8 @@ Name: "{commonappdata}\{#MyAppPublisher}\{#MyAppName}"; Flags: uninsneveruninsta
 Filename: "{app}\SetupHelpers.exe"; StatusMsg: "Removing event source"; Parameters: "/uninstall"; Flags: runhidden
 
 [Code]
+// main initializtion functions
+//
 function InitializeSetup(): boolean;
 begin
 	//init windows version
@@ -120,3 +129,4 @@ begin
 	dotnetfx40full();
 	Result := true;
 end;
+
