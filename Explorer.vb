@@ -206,6 +206,7 @@ Public Class Explorer
 
         Dim groups() As String = (From machine As Machine In Machines
              Where machine.Group <> ""
+             Order By machine.Group
              Select machine.Group).Distinct().ToArray()
 
         For Each groupName As String In groups
