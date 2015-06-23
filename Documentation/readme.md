@@ -1,3 +1,16 @@
+# WakeOnLAN 2.11.3
+
+## Beta 20 - _June 5 2015_
+
+* Fixed a missing dependency that caused the "print" function to crash.
+
+## Beta 10 - _May 26 2015_
+
+* Groups are now sorted alphabetically
+* added command-line option to gui program to load an alternate machines database file.
+  You can create a shortcut, and in the target, force it to load another database.
+  Example: WakeOnLan.exe -p "\\\\aquila\\files\\Users\\phil\\My Documents\\machines.xml"
+
 # WakeOnLAN 2.11.2
 
 ## Beta 25 - _April 14 2015_
