@@ -1,3 +1,9 @@
+# WakeOnLAN 2.11.4
+## Beta 10 - _November 1 2015_
+
+* Fix "Object reference not set" error on certain users.
+
+
 # WakeOnLAN 2.11.3
 
 ## Beta 20 - _June 5 2015_

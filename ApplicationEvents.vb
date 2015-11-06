@@ -77,42 +77,47 @@ Namespace My
         ''' </summary>
         ''' <remarks></remarks>
         Private Sub ConfigureCulture()
-            Dim regKey As Microsoft.Win32.RegistryKey
+            Dim regKey As RegistryKey
             Dim language As String
 
-            regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadWriteSubTree)
-            language = regKey.GetValue("Language", String.Empty, Microsoft.Win32.RegistryValueOptions.None)
+            Try
+                regKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadWriteSubTree)
+                language = regKey.GetValue("Language", String.Empty, RegistryValueOptions.None)
 
-            Select Case language
-                Case "en"
-                    language = "en-US"
-                Case "de"
-                    language = "de-DE"
-                Case "es"
-                    language = "es-ES"
-                Case "fi"
-                    language = "fi-FI"
-                Case "fr"
-                    language = "fr-FR"
-                Case "hu"
-                    language = "hu-HU"
-                Case "nl"
-                    language = "nl-NL"
-                Case "ru"
-                    language = "ru-RU"
-                Case "pt_BR"
-                    language = "pt-BR"
-                Case "zh_TW"
-                    language = "zh-TW"
-            End Select
+                Select Case language
+                    Case "en"
+                        language = "en-US"
+                    Case "de"
+                        language = "de-DE"
+                    Case "es"
+                        language = "es-ES"
+                    Case "fi"
+                        language = "fi-FI"
+                    Case "fr"
+                        language = "fr-FR"
+                    Case "hu"
+                        language = "hu-HU"
+                    Case "nl"
+                        language = "nl-NL"
+                    Case "ru"
+                        language = "ru-RU"
+                    Case "pt_BR"
+                        language = "pt-BR"
+                    Case "zh_TW"
+                        language = "zh-TW"
+                End Select
+
+                Settings.Language = language
+                regKey.DeleteValue("Language")
+                regKey.Close()
+
+            Catch ex As Exception
+
+            End Try
 
             If String.IsNullOrEmpty(language) Then
                 language = "en-US"
-            Else
-                Settings.Language = language
-                regKey.DeleteValue("Language")
             End If
-            regKey.Close()
 
             If String.IsNullOrEmpty(Settings.Language) Then Settings.Language = language
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
