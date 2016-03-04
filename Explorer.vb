@@ -1,5 +1,5 @@
 ﻿'    WakeOnLAN - Wake On LAN
-'    Copyright (C) 2004-2015 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'    Copyright (C) 2004-2016 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
 '
@@ -16,8 +16,6 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
-Imports System.Diagnostics
-Imports System.Windows.Forms
 Imports AlphaWindow
 Imports AutoUpdaterDotNET
 Imports System.Globalization
@@ -51,6 +49,13 @@ Public Class Explorer
         GetListViewState(ListView, My.Settings.ListView_Columns)
 
         ShowGroupsToolStripMenuItem.Checked = My.Settings.ShowGroups
+
+        ToolBarToolStripMenuItem.Checked = My.Settings.ShowToolBar
+        ToolStrip.Visible = ToolBarToolStripMenuItem.Checked
+
+        StatusBarToolStripMenuItem.Checked = My.Settings.ShowStatusBar
+        StatusStrip.Visible = StatusBarToolStripMenuItem.Checked
+
         SetMinimizeToTray()
 
         If Not My.Settings.ShowHotButtons Then ChangeHotButtonsPanel()
@@ -118,7 +123,7 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub NotifyIconUpdate_BalloonTipClicked(sender As System.Object, e As EventArgs) Handles NotifyIconUpdate.BalloonTipClicked, NotifyIconUpdate.Click
+    Private Sub NotifyIconUpdate_BalloonTipClicked(sender As Object, e As EventArgs) Handles NotifyIconUpdate.BalloonTipClicked, NotifyIconUpdate.Click
         NotifyIconUpdate.Visible = False
         AboutBox.ShowDialog(Me)
     End Sub
@@ -129,7 +134,7 @@ Public Class Explorer
         NotifyIcon1.Visible = My.Settings.MinimizeToTray
     End Sub
 
-    Private Sub Explorer_FormClosing(ByVal sender As Object, ByVal e As Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub Explorer_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
         My.Settings.ListView_View = ListView.View
         My.Settings.ListView_Columns = SaveListViewState(ListView)
 
@@ -138,6 +143,8 @@ Public Class Explorer
             My.Settings.MainWindow_Size = Size
         End If
 
+        My.Settings.ShowToolBar = ToolBarToolStripMenuItem.Checked
+        My.Settings.ShowStatusBar = StatusBarToolStripMenuItem.Checked
         My.Settings.ShowGroups = ShowGroupsToolStripMenuItem.Checked
         My.Settings.ShowHotButtons = ShowHotButtonsToolStripMenuItem.Checked
         My.Settings.ShowFolders = FoldersToolStripMenuItem.Checked
@@ -218,7 +225,7 @@ Public Class Explorer
         TreeView.ResumeLayout()
     End Sub
 
-    Private Sub TreeView_AfterSelect(ByVal sender As Object, ByVal e As Windows.Forms.TreeViewEventArgs) Handles TreeView.AfterSelect
+    Private Sub TreeView_AfterSelect(ByVal sender As Object, ByVal e As TreeViewEventArgs) Handles TreeView.AfterSelect
         My.Settings.CurrentGroup = e.Node.Text
         LoadList()
     End Sub
@@ -272,17 +279,17 @@ Public Class Explorer
         Next
     End Sub
 
-    Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
+    Private Sub ExitToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
         Close()
     End Sub
 
-    Private Sub ToolBarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolBarToolStripMenuItem.Click
+    Private Sub ToolBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ToolBarToolStripMenuItem.Click
         'Toggle the visibility of the toolstrip and also the checked state of the associated menu item
         ToolBarToolStripMenuItem.Checked = Not ToolBarToolStripMenuItem.Checked
         ToolStrip.Visible = ToolBarToolStripMenuItem.Checked
     End Sub
 
-    Private Sub StatusBarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles StatusBarToolStripMenuItem.Click
+    Private Sub StatusBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles StatusBarToolStripMenuItem.Click
         'Toggle the visibility of the statusstrip and also the checked state of the associated menu item
         StatusBarToolStripMenuItem.Checked = Not StatusBarToolStripMenuItem.Checked
         StatusStrip.Visible = StatusBarToolStripMenuItem.Checked
@@ -300,32 +307,32 @@ Public Class Explorer
         SplitContainer.Panel1Collapsed = Not FoldersToolStripMenuItem.Checked
     End Sub
 
-    Private Sub FoldersToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FoldersToolStripMenuItem.Click, FoldersToolStripButton.Click
+    Private Sub FoldersToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles FoldersToolStripMenuItem.Click, FoldersToolStripButton.Click
         ToggleFoldersVisible()
     End Sub
 
-    Private Sub SetView(ByVal view As System.Windows.Forms.View)
+    Private Sub SetView(ByVal view As View)
         'Figure out which menu item should be checked
         Dim menuItemToCheck As ToolStripMenuItem = Nothing
         Select Case view
-            Case view.Details
+            Case View.Details
                 menuItemToCheck = DetailsToolStripMenuItem1
 
-            Case view.LargeIcon
+            Case View.LargeIcon
                 menuItemToCheck = LargeIconsToolStripMenuItem1
 
-            Case view.List
+            Case View.List
                 menuItemToCheck = ListToolStripMenuItem1
 
-            Case view.SmallIcon
+            Case View.SmallIcon
                 menuItemToCheck = SmallIconsToolStripMenuItem1
 
-            Case view.Tile
+            Case View.Tile
                 menuItemToCheck = TileToolStripMenuItem1
 
             Case Else
                 Debug.Fail("Unexpected View")
-                view = view.Details
+                view = View.Details
                 menuItemToCheck = DetailsToolStripMenuItem1
 
         End Select
@@ -345,27 +352,27 @@ Public Class Explorer
         'ListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
     End Sub
 
-    Private Sub ListToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ListToolStripMenuItem1.Click
+    Private Sub ListToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ListToolStripMenuItem1.Click
         SetView(View.List)
     End Sub
 
-    Private Sub DetailsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DetailsToolStripMenuItem1.Click
+    Private Sub DetailsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles DetailsToolStripMenuItem1.Click
         SetView(View.Details)
     End Sub
 
-    Private Sub LargeIconsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LargeIconsToolStripMenuItem1.Click
+    Private Sub LargeIconsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles LargeIconsToolStripMenuItem1.Click
         SetView(View.LargeIcon)
     End Sub
 
-    Private Sub SmallIconsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SmallIconsToolStripMenuItem1.Click
+    Private Sub SmallIconsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SmallIconsToolStripMenuItem1.Click
         SetView(View.SmallIcon)
     End Sub
 
-    Private Sub TileToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles TileToolStripMenuItem1.Click
+    Private Sub TileToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles TileToolStripMenuItem1.Click
         SetView(View.Tile)
     End Sub
 
-    Private Sub ResetWindowLayoutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ResetWindowLayoutToolStripMenuItem.Click, ResetWindowLayoutToolStripMenuItem1.Click
+    Private Sub ResetWindowLayoutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ResetWindowLayoutToolStripMenuItem.Click, ResetWindowLayoutToolStripMenuItem1.Click
         My.Settings.MinimizeToTray = False
 
         Size = New Size(650, 490)
@@ -379,15 +386,15 @@ Public Class Explorer
         Activate()
     End Sub
 
-    Private Sub PingToolStripButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PingToolStripButton.Click
+    Private Sub PingToolStripButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles PingToolStripButton.Click
         DoPing()
     End Sub
 
-    Private Sub ShowGroupsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ShowGroupsToolStripMenuItem.Click
+    Private Sub ShowGroupsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ShowGroupsToolStripMenuItem.Click
         ListView.ShowGroups = ShowGroupsToolStripMenuItem.Checked
     End Sub
 
-    Private Sub ContextMenuStrip_Machines_Opening(ByVal sender As System.Object, ByVal e As CancelEventArgs) Handles ContextMenuStrip_Machines.Opening
+    Private Sub ContextMenuStrip_Machines_Opening(ByVal sender As Object, ByVal e As CancelEventArgs) Handles ContextMenuStrip_Machines.Opening
         Dim showThem As Boolean
 
         PropertiesToolStripMenuItem.Visible = (ListView.SelectedItems.Count = 1)
@@ -401,7 +408,7 @@ Public Class Explorer
         DeleteToolStripMenuItem.Visible = showThem
     End Sub
 
-    Private Sub ListView_ColumnClick(ByVal sender As Object, ByVal e As Windows.Forms.ColumnClickEventArgs) Handles ListView.ColumnClick
+    Private Sub ListView_ColumnClick(ByVal sender As Object, ByVal e As ColumnClickEventArgs) Handles ListView.ColumnClick
         ' Determine if the clicked column is already the column that is 
         ' being sorted.
         If (e.Column = _lvwColumnSorter.SortColumn) Then
@@ -433,14 +440,14 @@ Public Class Explorer
     Private Sub ListView_DoubleClick(ByVal sender As Object, ByVal e As EventArgs) Handles ListView.DoubleClick
 
         Properties.Edit(ListView.SelectedItems(0).Name)
-        If Properties.DialogResult = Windows.Forms.DialogResult.OK Then
+        If Properties.DialogResult = DialogResult.OK Then
             LoadTree()
         End If
         Properties.Dispose()
 
     End Sub
 
-    Private Sub ListView_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ListView.SelectedIndexChanged
+    Private Sub ListView_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ListView.SelectedIndexChanged
 
         ToolStripStatusLabel1.Text = String.Empty
         ToolStripStatusLabel2.Text = String.Empty
@@ -463,7 +470,7 @@ Public Class Explorer
 
     End Sub
 
-    Private Sub TimerPing_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles TimerPing.Tick
+    Private Sub TimerPing_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles TimerPing.Tick
         Dim machine As Machine
         Dim i As Integer
 
@@ -476,17 +483,17 @@ Public Class Explorer
 
         Try
             Select Case machine.Status
-                Case machine.StatusCodes.Unknown
+                Case Machine.StatusCodes.Unknown
                     ToolStripStatusLabel1.Text = My.Resources.Strings.OffLine
                     ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.HostNotResponding, machine.Name)
                     ToolStripProgressBar1.Value = 0
 
-                Case machine.StatusCodes.Offline
+                Case Machine.StatusCodes.Offline
                     ToolStripStatusLabel1.Text = My.Resources.Strings.OffLine
                     ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.HostNotResponding, machine.Name)
                     ToolStripProgressBar1.Value = 0
 
-                Case machine.StatusCodes.Online
+                Case Machine.StatusCodes.Online
                     ToolStripStatusLabel1.Text = My.Resources.Strings.OnLine
                     i = machine.Reply.RoundtripTime
                     If i > 10 Then i = 10
@@ -504,41 +511,41 @@ Public Class Explorer
 
     End Sub
 
-    Private Sub Button_StartAll_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button_StartAll.Click
+    Private Sub Button_StartAll_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button_StartAll.Click
         ResetMonitor()
         For Each machine As Machine In Machines
             ToolStripStatusLabel1.Text = String.Format(My.Resources.Strings.SentTo, machine.Name, machine.MAC)
             WakeUp(machine)
             Application.DoEvents()
-            Threading.Thread.Sleep(750)
+            Thread.Sleep(750)
         Next
     End Sub
 
-    Private Sub Button_Emergency_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button_Emergency.Click
+    Private Sub Button_Emergency_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button_Emergency.Click
         ResetMonitor()
         ToolStripStatusLabel1.Text = My.Resources.Strings.EmergencyShutdown
         Shutdown.PerformEmergencyShutdown(Me)
     End Sub
 
-    Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles AboutToolStripMenuItem.Click
+    Private Sub AboutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles AboutToolStripMenuItem.Click
         TimerUpdate.Stop()
         AboutBox.ShowDialog(Me)
     End Sub
 
-    Private Sub ContentsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ContentsToolStripMenuItem.Click
+    Private Sub ContentsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ContentsToolStripMenuItem.Click
         ShowHelp(Me, "default.html")
     End Sub
 
-    Private Sub SearchForMachinesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SearchForMachinesToolStripMenuItem.Click
+    Private Sub SearchForMachinesToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SearchForMachinesToolStripMenuItem.Click
         ResetMonitor()
         Search.ShowDialog(Me)
-        If Search.DialogResult = Windows.Forms.DialogResult.OK Then
+        If Search.DialogResult = DialogResult.OK Then
             LoadTree()
         End If
         Search.Dispose()
     End Sub
 
-    Private Sub WakeUpToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles WakeUpToolStripMenuItem.Click
+    Private Sub WakeUpToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles WakeUpToolStripMenuItem.Click
         Dim machine As Machine
 
         For Each listViewItem As ListViewItem In ListView.SelectedItems
@@ -548,7 +555,7 @@ Public Class Explorer
         Next
     End Sub
 
-    Private Sub OptionsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OptionsToolStripMenuItem.Click, OptionsToolStripButton.Click
+    Private Sub OptionsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OptionsToolStripMenuItem.Click, OptionsToolStripButton.Click
         Dim splitter, splitter1 As Integer
 
         Options.ShowDialog(Me)
@@ -578,14 +585,14 @@ Public Class Explorer
         ToolStripStatusLabel2.Text = String.Empty
     End Sub
 
-    Private Sub RDPToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles RDPToolStripMenuItem.Click
+    Private Sub RDPToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RDPToolStripMenuItem.Click
         Dim machine As Machine
 
         machine = Machines(ListView.SelectedItems(0).Name)
         Shell(String.Format("mstsc.exe -v:{0}:{1}", machine.Netbios, machine.RDPPort), AppWinStyle.NormalFocus, False)
     End Sub
 
-    Private Sub ShutdownToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ShutdownToolStripMenuItem.Click
+    Private Sub ShutdownToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ShutdownToolStripMenuItem.Click
         Dim items As String()
 
         ResetMonitor()
@@ -593,23 +600,23 @@ Public Class Explorer
         Shutdown.PerformShutdown(Me, items)
     End Sub
 
-    Private Sub PropertiesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PropertiesToolStripMenuItem.Click
+    Private Sub PropertiesToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles PropertiesToolStripMenuItem.Click
         Properties.Edit(ListView.SelectedItems(0).Name)
-        If Properties.DialogResult = Windows.Forms.DialogResult.OK Then
+        If Properties.DialogResult = DialogResult.OK Then
             LoadTree()
         End If
         Properties.Dispose()
     End Sub
 
-    Private Sub NewToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripMenuItem1.Click
+    Private Sub NewToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripMenuItem1.Click
         Properties.Create()
-        If Properties.DialogResult = Windows.Forms.DialogResult.OK Then
+        If Properties.DialogResult = DialogResult.OK Then
             LoadTree()
         End If
         Properties.Dispose()
     End Sub
 
-    Private Sub ImportToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ImportToolStripMenuItem.Click
+    Private Sub ImportToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ImportToolStripMenuItem.Click
         Dim fileBrowser As New OpenFileDialog
 
         With fileBrowser
@@ -625,7 +632,7 @@ Public Class Explorer
 
     End Sub
 
-    Private Sub ExportToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ExportToolStripMenuItem.Click
+    Private Sub ExportToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExportToolStripMenuItem.Click
         Dim fileBrowser As New SaveFileDialog
 
         With fileBrowser
@@ -654,7 +661,7 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DeleteToolStripMenuItem.Click
+    Private Sub DeleteToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles DeleteToolStripMenuItem.Click
         If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format(My.Resources.Strings.lit_DeleteRecords, ListView.SelectedItems.Count), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
             For Each l As ListViewItem In ListView.SelectedItems
                 Machines.Remove(l.Name)
@@ -664,7 +671,7 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub ShowHotButtonsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ShowHotButtonsToolStripMenuItem.Click, HotToolStripButton.Click
+    Private Sub ShowHotButtonsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ShowHotButtonsToolStripMenuItem.Click, HotToolStripButton.Click
         ChangeHotButtonsPanel()
     End Sub
 
@@ -680,11 +687,11 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub PrintToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PrintToolStripMenuItem.Click
+    Private Sub PrintToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles PrintToolStripMenuItem.Click
         ReportViewer.Show(Me)
     End Sub
 
-    Private Sub ScheduleToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ScheduleToolStripMenuItem.Click, ScheduleToolStripButton.Click
+    Private Sub ScheduleToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ScheduleToolStripMenuItem.Click, ScheduleToolStripButton.Click
         Try
             Schedule.Schedule.Show(Me)
 
@@ -693,47 +700,47 @@ Public Class Explorer
         End Try
     End Sub
 
-    Private Sub LicenseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LicenseToolStripMenuItem.Click
+    Private Sub LicenseToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles LicenseToolStripMenuItem.Click
         License.ShowDialog(Me)
     End Sub
 
-    Private Sub ContextToolStripMenuItemOpen_Click(sender As System.Object, e As EventArgs) Handles ContextToolStripMenuItemOpen.Click, NotifyIcon1.DoubleClick
+    Private Sub ContextToolStripMenuItemOpen_Click(sender As Object, e As EventArgs) Handles ContextToolStripMenuItemOpen.Click, NotifyIcon1.DoubleClick
         Show()
         WindowState = FormWindowState.Normal
         BringToFront()
         Activate()
     End Sub
 
-    Private Sub ContextToolStripMenuItemExit_Click(sender As System.Object, e As EventArgs) Handles ContextToolStripMenuItemExit.Click
+    Private Sub ContextToolStripMenuItemExit_Click(sender As Object, e As EventArgs) Handles ContextToolStripMenuItemExit.Click
         Close()
     End Sub
 
-    Private Sub MinimizeToTaskTrayToolStripMenuItem_Click(sender As System.Object, e As EventArgs) Handles MinimizeToTaskTrayToolStripMenuItem.Click
+    Private Sub MinimizeToTaskTrayToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimizeToTaskTrayToolStripMenuItem.Click
         My.Settings.MinimizeToTray = Not My.Settings.MinimizeToTray
         SetMinimizeToTray()
     End Sub
 
-    Private Sub AutoStartWithWindowsToolStripMenuItem_Click(sender As System.Object, e As EventArgs) Handles AutoStartWithWindowsToolStripMenuItem.Click
+    Private Sub AutoStartWithWindowsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AutoStartWithWindowsToolStripMenuItem.Click
         Dim auto As New Autorun
 
         AutoStartWithWindowsToolStripMenuItem.Checked = Not AutoStartWithWindowsToolStripMenuItem.Checked
         auto.AutoRun = AutoStartWithWindowsToolStripMenuItem.Checked
     End Sub
 
-    Private Sub Explorer_Resize(sender As System.Object, e As EventArgs) Handles MyBase.Resize
+    Private Sub Explorer_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
         If (WindowState = FormWindowState.Minimized And My.Settings.MinimizeToTray = True) Then
             Hide()
         End If
     End Sub
 
-    Private Sub ToolStripMenuItemWakeUp_Opening(sender As System.Object, e As EventArgs) Handles TrayMenuItemWakeUp.DropDownOpening
+    Private Sub ToolStripMenuItemWakeUp_Opening(sender As Object, e As EventArgs) Handles TrayMenuItemWakeUp.DropDownOpening
         ' load all of the machines into the task tray menu
         '
         TrayMenuItemWakeUp.DropDownItems.Clear()
 
         For Each s As String In (From machine As Machine In Machines
-                        Order By machine.Name
-                        Select machine.Name).ToArray()
+                                 Order By machine.Name
+                                 Select machine.Name).ToArray()
 
             Dim item As ToolStripMenuItem = New ToolStripMenuItem()
 
@@ -744,7 +751,7 @@ Public Class Explorer
         Next
     End Sub
 
-    Private Sub TaskTrayWake_Click(sender As System.Object, e As EventArgs)
+    Private Sub TaskTrayWake_Click(sender As Object, e As EventArgs)
         Dim item As ToolStripMenuItem = TryCast(sender, ToolStripMenuItem)
         Dim machine As Machine
 
@@ -755,14 +762,14 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub ToolStripMenuItemRDP_Opening(sender As System.Object, e As EventArgs) Handles TrayMenuItemRDP.DropDownOpening
+    Private Sub ToolStripMenuItemRDP_Opening(sender As Object, e As EventArgs) Handles TrayMenuItemRDP.DropDownOpening
         ' load all of the machines into the task tray menu
         '
         TrayMenuItemRDP.DropDownItems.Clear()
 
         For Each s As String In (From machine As Machine In Machines
-                        Order By machine.Name
-                        Select machine.Name).ToArray()
+                                 Order By machine.Name
+                                 Select machine.Name).ToArray()
 
             Dim item As ToolStripMenuItem = New ToolStripMenuItem()
 
@@ -773,7 +780,7 @@ Public Class Explorer
         Next
     End Sub
 
-    Private Sub TaskTrayRDP_Click(sender As System.Object, e As EventArgs)
+    Private Sub TaskTrayRDP_Click(sender As Object, e As EventArgs)
         Dim item As ToolStripMenuItem = TryCast(sender, ToolStripMenuItem)
         Dim machine As Machine
 
@@ -783,14 +790,14 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub ShutdownToolStripMenuItem_Opening(sender As System.Object, e As EventArgs) Handles TrayMenuItemShutdown.DropDownOpening
+    Private Sub ShutdownToolStripMenuItem_Opening(sender As Object, e As EventArgs) Handles TrayMenuItemShutdown.DropDownOpening
         ' load all of the machines into the task tray menu
         '
         TrayMenuItemShutdown.DropDownItems.Clear()
 
         For Each s As String In (From machine As Machine In Machines
-                        Order By machine.Name
-                        Select machine.Name).ToArray()
+                                 Order By machine.Name
+                                 Select machine.Name).ToArray()
 
             Dim item As ToolStripMenuItem = New ToolStripMenuItem()
 
@@ -801,7 +808,7 @@ Public Class Explorer
         Next
     End Sub
 
-    Private Sub TaskTrayShutdown_Click(sender As System.Object, e As EventArgs)
+    Private Sub TaskTrayShutdown_Click(sender As Object, e As EventArgs)
         Dim item As ToolStripMenuItem = TryCast(sender, ToolStripMenuItem)
         Dim items() As String
         Dim machine As Machine
@@ -814,7 +821,7 @@ Public Class Explorer
         End If
     End Sub
 
-    Private Sub ListenToolStripMenuItem_Click(sender As System.Object, e As EventArgs) Handles ListenToolStripMenuItem.Click, ListenerToolStripButton.Click
+    Private Sub ListenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListenToolStripMenuItem.Click, ListenerToolStripButton.Click
         My.Forms.Listener.Show()
     End Sub
 
