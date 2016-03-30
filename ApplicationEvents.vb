@@ -78,7 +78,7 @@ Namespace My
         ''' <remarks></remarks>
         Private Sub ConfigureCulture()
             Dim regKey As RegistryKey
-            Dim language As String
+            Dim language As String = vbNull
 
             Try
                 regKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadWriteSubTree)
