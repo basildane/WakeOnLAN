@@ -27,7 +27,7 @@ Namespace Schedule
         Dim _scheduler As TaskScheduler.TaskScheduler
         Dim _taskFolder As ITaskFolder
 
-        Private Sub Schedule_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+        Private Sub Schedule_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
             If (My.Settings.schedulerWindowLocation.X > 0 And My.Settings.schedulerWindowLocation.Y > 0 And My.Settings.schedulerWindowLocation.X < My.Computer.Screen.WorkingArea.Right And My.Settings.schedulerWindowLocation.Y < My.Computer.Screen.WorkingArea.Height) Then
                 Location = My.Settings.schedulerWindowLocation
                 Size = My.Settings.schedulerWindowSize
@@ -113,7 +113,7 @@ Namespace Schedule
             End Select
         End Function
 
-        Private Sub RunToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles RunToolStripMenuItem.Click, ToolStripButtonRun.Click
+        Private Sub RunToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RunToolStripMenuItem.Click, ToolStripButtonRun.Click
             Dim task As IRegisteredTask
 
             For Each li As ListViewItem In ListViewSchedule.SelectedItems
@@ -122,7 +122,7 @@ Namespace Schedule
             Next
         End Sub
 
-        Private Sub EndToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EndToolStripMenuItem.Click, ToolStripButtonStop.Click
+        Private Sub EndToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles EndToolStripMenuItem.Click, ToolStripButtonStop.Click
             Dim task As IRegisteredTask
 
             For Each li As ListViewItem In ListViewSchedule.SelectedItems
@@ -131,14 +131,14 @@ Namespace Schedule
             Next
         End Sub
 
-        Private Sub DeleteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DeleteToolStripMenuItem.Click, ToolStripButtonDelete.Click
+        Private Sub DeleteToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles DeleteToolStripMenuItem.Click, ToolStripButtonDelete.Click
             For Each li As ListViewItem In ListViewSchedule.SelectedItems
                 _taskFolder.DeleteTask(li.Text, 0)
             Next
             RefreshList()
         End Sub
 
-        Private Sub NewToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, ToolStripButtonCreate.Click
+        Private Sub NewToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, ToolStripButtonCreate.Click
             Dim myTask As New Task
 
             Edit(myTask)
@@ -168,7 +168,7 @@ Namespace Schedule
 
             timer.Stop()
 
-            If EditTask.ShowDialog(Me, myTask) = Windows.Forms.DialogResult.OK Then
+            If EditTask.ShowDialog(Me, myTask) = DialogResult.OK Then
                 Dim iTask As ITaskDefinition
                 Dim executable As String
 
@@ -470,7 +470,7 @@ Namespace Schedule
     End Sub
 #End If
 
-        Private Sub DisableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DisableToolStripMenuItem.Click, ToolStripButtonDisable.Click
+        Private Sub DisableToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles DisableToolStripMenuItem.Click, ToolStripButtonDisable.Click
             Dim task As IRegisteredTask
 
             For Each li As ListViewItem In ListViewSchedule.SelectedItems
@@ -479,7 +479,7 @@ Namespace Schedule
             Next
         End Sub
 
-        Private Sub EnableToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EnableToolStripMenuItem.Click, ToolStripButtonEnable.Click
+        Private Sub EnableToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles EnableToolStripMenuItem.Click, ToolStripButtonEnable.Click
             Dim task As IRegisteredTask
 
             For Each li As ListViewItem In ListViewSchedule.SelectedItems
@@ -488,7 +488,7 @@ Namespace Schedule
             Next
         End Sub
 
-        Private Sub timer_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles timer.Tick
+        Private Sub timer_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles timer.Tick
             UpdateTaskDisplay()
         End Sub
 

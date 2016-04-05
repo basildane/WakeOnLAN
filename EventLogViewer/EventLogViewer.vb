@@ -415,21 +415,21 @@ Public Class EventLogViewer
         End If
     End Sub
 
-    Private Sub btnErrors_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnErrors.Click
+    Private Sub btnErrors_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnErrors.Click
         ' Set the filter for the binding source
         bs.Filter = GenerateEventFilter()
         ' Refresh the display
         refreshFilterDisplay()
     End Sub
 
-    Private Sub btnWarnings_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnWarnings.Click
+    Private Sub btnWarnings_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnWarnings.Click
         ' Set the filter for the binding source
         bs.Filter = GenerateEventFilter()
         ' Refresh the display
         refreshFilterDisplay()
     End Sub
 
-    Private Sub btnMessages_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnMessages.Click
+    Private Sub btnMessages_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnMessages.Click
         ' Set the filter for the binding source
         bs.Filter = GenerateEventFilter()
         ' Refresh the display

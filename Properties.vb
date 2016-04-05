@@ -24,7 +24,7 @@ Public Class Properties
     Private _previousHostName As String
     Private ReadOnly _encryption As New Encryption(My.Application.Info.ProductName)
 
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
+    Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OK_Button.Click
         Dim m As New Machine
 
         Try
@@ -59,7 +59,7 @@ Public Class Properties
             Machines.Add(m)
             
             Machines.Save()
-            DialogResult = Windows.Forms.DialogResult.OK
+            DialogResult = DialogResult.OK
             Close()
 
         Catch ex As Exception
@@ -69,8 +69,8 @@ Public Class Properties
 
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
-        DialogResult = Windows.Forms.DialogResult.Cancel
+    Private Sub Cancel_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+        DialogResult = DialogResult.Cancel
         Close()
     End Sub
 
@@ -161,13 +161,13 @@ Public Class Properties
 
     End Sub
 
-    Private Sub Delete_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Delete_Button.Click
-        If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format(My.Resources.Strings.Delete, 1), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
+    Private Sub Delete_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Delete_Button.Click
+        If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format(My.Resources.Strings.Delete, 1), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             Machines.Remove(_previousHostName)
             Machines.Save()
-            DialogResult = Windows.Forms.DialogResult.OK
+            DialogResult = DialogResult.OK
         Else
-            DialogResult = Windows.Forms.DialogResult.Cancel
+            DialogResult = DialogResult.Cancel
         End If
 
         Close()
@@ -203,11 +203,11 @@ Public Class Properties
         OK_Button.Enabled = True
     End Sub
 
-    Private Sub bCalcBroadcast_Click(sender As System.Object, e As EventArgs) Handles bCalcBroadcast.Click
+    Private Sub bCalcBroadcast_Click(sender As Object, e As EventArgs) Handles bCalcBroadcast.Click
         CalcSubnet.ShowDialog(Me)
     End Sub
 
-    Private Sub Help_Button_Click(sender As System.Object, e As EventArgs) Handles Help_Button.Click
+    Private Sub Help_Button_Click(sender As Object, e As EventArgs) Handles Help_Button.Click
         ShowHelp(Me, "properties\default.html")
     End Sub
 

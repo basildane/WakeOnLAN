@@ -22,9 +22,9 @@ Imports AutoUpdaterDotNET
 
 Public NotInheritable Class AboutBox
 
-    Private Sub AboutBox1_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+    Private Sub AboutBox1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         LabelProductName.Text = My.Resources.Strings.Title
-        LabelVersion.Text = System.String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
+        LabelVersion.Text = String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
         LabelCopyright.Text = My.Application.Info.Copyright
         LabelCulture.Text = Globalization.CultureInfo.CurrentUICulture.NativeName.ToString()
 
@@ -57,7 +57,7 @@ Public NotInheritable Class AboutBox
 
     Private Sub UpdateStatus(sender As Object, e As AutoUpdateEventArgs)
         If (InvokeRequired) Then
-            BeginInvoke(New UpdateStatusHandler(AddressOf updateStatus), New Object() {sender, e})
+            BeginInvoke(New UpdateStatusHandler(AddressOf UpdateStatus), New Object() {sender, e})
             Return
         End If
 
@@ -82,15 +82,15 @@ Public NotInheritable Class AboutBox
         lAutomaticUpdate.Text = e.Text
     End Sub
 
-    Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OKButton.Click
+    Private Sub OKButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OKButton.Click
         Dispose()
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As Object, ByVal e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Process.Start(LinkLabel1.Text)
     End Sub
 
-    Private Sub LinkLabel2_LinkClicked(sender As System.Object, e As Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         Process.Start(LinkLabel2.Text)
     End Sub
 

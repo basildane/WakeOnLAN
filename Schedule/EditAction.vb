@@ -36,7 +36,7 @@ Public Class EditAction
         Return ShowDialog(owner)
     End Function
 
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
+    Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OK_Button.Click
         With _myAction
             Select Case .Mode
                 Case Action.ActionItems.ShutdownAll, Action.ActionItems.SleepAll, Action.ActionItems.HibernateAll
@@ -66,16 +66,16 @@ Public Class EditAction
             .MessageText = MessageTextBox.Text
         End With
 
-        DialogResult = Windows.Forms.DialogResult.OK
+        DialogResult = DialogResult.OK
         Close()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
-        DialogResult = Windows.Forms.DialogResult.Cancel
+    Private Sub Cancel_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+        DialogResult = DialogResult.Cancel
         Close()
     End Sub
 
-    Private Sub EditAction_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+    Private Sub EditAction_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         ActionComboBox.Items.Clear()
         For Each method As String In _myAction.ActionStrings
             ActionComboBox.Items.Add(method)
@@ -103,7 +103,7 @@ Public Class EditAction
         End With
     End Sub
 
-    Private Sub ActionComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ActionComboBox.SelectedIndexChanged
+    Private Sub ActionComboBox_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ActionComboBox.SelectedIndexChanged
         RefreshDisplay()
     End Sub
 
@@ -234,7 +234,7 @@ Public Class EditAction
 
     End Sub
 
-    Private Sub MachinesComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles MachinesComboBox.SelectedIndexChanged
+    Private Sub MachinesComboBox_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles MachinesComboBox.SelectedIndexChanged
         _myAction.Name = MachinesComboBox.Items(MachinesComboBox.SelectedIndex).ToString
     End Sub
 

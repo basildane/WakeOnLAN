@@ -651,7 +651,7 @@ Public Class Explorer
     Private Sub ClearIPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearIPToolStripMenuItem.Click
         Dim m As Machine
 
-        If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format(My.Resources.Strings.lit_RemoveIP, ListView.SelectedItems.Count), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format(My.Resources.Strings.lit_RemoveIP, ListView.SelectedItems.Count), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             For Each l As ListViewItem In ListView.SelectedItems
                 m = Machines(l.Name)
                 m.IP = String.Empty
@@ -662,7 +662,7 @@ Public Class Explorer
     End Sub
 
     Private Sub DeleteToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles DeleteToolStripMenuItem.Click
-        If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format(My.Resources.Strings.lit_DeleteRecords, ListView.SelectedItems.Count), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show(String.Format(My.Resources.Strings.AreYouSure), String.Format(My.Resources.Strings.lit_DeleteRecords, ListView.SelectedItems.Count), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             For Each l As ListViewItem In ListView.SelectedItems
                 Machines.Remove(l.Name)
                 l.Remove()

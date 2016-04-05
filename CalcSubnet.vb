@@ -21,7 +21,7 @@ Imports System.Net
 Public Class CalcSubnet
     Dim _properties As Properties
 
-    Private Sub CalcSubnet_Load(sender As System.Object, e As EventArgs) Handles MyBase.Load
+    Private Sub CalcSubnet_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _properties = Owner
 
         IpIP.Text = _properties.IP.Text
@@ -46,7 +46,7 @@ Public Class CalcSubnet
     End Function
 
 
-    Private Sub bCalculate_Click(sender As System.Object, e As EventArgs) Handles bCalculate.Click
+    Private Sub bCalculate_Click(sender As Object, e As EventArgs) Handles bCalculate.Click
         Try
             If (IpSubnet.Text = IPAddress.Broadcast.ToString()) Then
                 IpBroadcast.Text = IPAddress.Broadcast.ToString()
@@ -60,7 +60,7 @@ Public Class CalcSubnet
         End Try
     End Sub
 
-    Private Sub bOK_Click(sender As System.Object, e As EventArgs) Handles bOK.Click
+    Private Sub bOK_Click(sender As Object, e As EventArgs) Handles bOK.Click
         _properties.Broadcast.Text = IpBroadcast.Text
         Close()
     End Sub

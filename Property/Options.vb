@@ -23,8 +23,8 @@ Public Class Options
     ReadOnly p As New OptionProperties
     Dim _savedDbPath As String
 
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
-        Dim regKey As Microsoft.Win32.RegistryKey
+    Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OK_Button.Click
+        Dim regKey As RegistryKey
 
         With p
             My.Settings.DefaultTimeout = .Delay
@@ -40,7 +40,7 @@ Public Class Options
             My.Settings.Threads = .Threads
         End With
         My.Settings.Save()
-        DialogResult = Windows.Forms.DialogResult.OK
+        DialogResult = DialogResult.OK
 
         If _savedDbPath <> My.Settings.dbPath Then
             Try
@@ -59,12 +59,12 @@ Public Class Options
         Dispose()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
-        DialogResult = Windows.Forms.DialogResult.Cancel
+    Private Sub Cancel_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+        DialogResult = DialogResult.Cancel
         Dispose()
     End Sub
 
-    Private Sub Options_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+    Private Sub Options_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         _savedDbPath = My.Settings.dbPath
         LoadOptions()
     End Sub
@@ -96,7 +96,7 @@ Public Class Options
         OK_Button.Enabled = True
     End Sub
 
-    Private Sub Button_Default_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button_Default.Click
+    Private Sub Button_Default_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button_Default.Click
         If MsgBox(My.Resources.Strings.AreYouSure, MsgBoxStyle.Question + MsgBoxStyle.YesNo) = MsgBoxResult.No Then
             Exit Sub
         End If

@@ -109,8 +109,8 @@ Namespace Controls
         End Sub
 
         Private Sub InitializeComponent()
-            Me.SuspendLayout()
-            Me.ResumeLayout(False)
+            SuspendLayout()
+            ResumeLayout(False)
 
         End Sub
     End Class

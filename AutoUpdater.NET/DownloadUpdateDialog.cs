@@ -118,13 +118,6 @@ namespace AutoUpdaterDotNET
                 var uri = new Uri(url);
 
                 fileName = Path.GetFileName(uri.LocalPath);
-                //
-                // for sourceforge, change "download" to actual executable filename
-                //
-                if (fileName == "download")
-                {
-                    fileName = Path.GetFileName(url.Substring(0, url.LastIndexOf('/')));
-                }
             }
             return fileName;
         }

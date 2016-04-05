@@ -133,7 +133,7 @@ Public Class Shutdown
 
     End Sub
 
-    Private Sub AbortButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles AbortButton.Click
+    Private Sub AbortButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles AbortButton.Click
         Label_Operation.Text = My.Resources.Strings.AbortShutdown
         ShutdownMode = False
         pre_timer.Stop()
@@ -157,7 +157,7 @@ Public Class Shutdown
         If ShutdownMode Then timer.Start()
     End Sub
 
-    Private Sub timer_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles timer.Tick
+    Private Sub timer_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles timer.Tick
         If Not ShutdownMode Then
             timer.Stop()
             Exit Sub
@@ -205,7 +205,7 @@ Public Class Shutdown
         End With
     End Sub
 
-    Private Sub ShutdownButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ShutdownButton.Click
+    Private Sub ShutdownButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ShutdownButton.Click
         Dim action As ShutdownThread.ShutdownAction
 
         If (rbShutdown.Checked) Then action = ShutdownThread.ShutdownAction.Shutdown
@@ -252,7 +252,7 @@ Public Class Shutdown
         End Try
     End Sub
 
-    Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+    Private Sub CancelButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Cancel_Button.Click
         Close()
     End Sub
 

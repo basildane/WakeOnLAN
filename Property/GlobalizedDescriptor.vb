@@ -67,7 +67,7 @@ Public Class GlobalizedPropertyDescriptor
             ' If yes, then try to get resource table name and display name id from that attribute.
             Dim tableName As String = ""
             Dim _displayName As String = ""
-            For Each oAttrib As Attribute In Me.basePropertyDescriptor.Attributes
+            For Each oAttrib As Attribute In basePropertyDescriptor.Attributes
                 If oAttrib.[GetType]().Equals(GetType(GlobalizedPropertyAttribute)) Then
                     _displayName = DirectCast(oAttrib, GlobalizedPropertyAttribute).Name
                     tableName = DirectCast(oAttrib, GlobalizedPropertyAttribute).Table
@@ -88,7 +88,7 @@ Public Class GlobalizedPropertyDescriptor
 
             ' If no display name id is specified by attribute, then construct it by using default display name (usually the property name) 
             If _displayName.Length = 0 Then
-                _displayName = Me.basePropertyDescriptor.DisplayName
+                _displayName = basePropertyDescriptor.DisplayName
             End If
 
             ' Now use table name and display name id to access the resources.  
@@ -97,9 +97,9 @@ Public Class GlobalizedPropertyDescriptor
             ' Get the string from the resources. 
             ' If this fails, then use default display name (usually the property name) 
             Dim s As String = rm.GetString(_displayName)
-            Me.localizedName = If((s IsNot Nothing), s, Me.basePropertyDescriptor.DisplayName)
+            localizedName = If((s IsNot Nothing), s, basePropertyDescriptor.DisplayName)
 
-            Return Me.localizedName
+            Return localizedName
         End Get
     End Property
 
@@ -110,7 +110,7 @@ Public Class GlobalizedPropertyDescriptor
             ' If yes, try to get resource table name and display name id from that attribute.
             Dim tableName As String = ""
             Dim displayName As String = ""
-            For Each oAttrib As Attribute In Me.basePropertyDescriptor.Attributes
+            For Each oAttrib As Attribute In basePropertyDescriptor.Attributes
                 If oAttrib.[GetType]().Equals(GetType(GlobalizedPropertyAttribute)) Then
                     displayName = DirectCast(oAttrib, GlobalizedPropertyAttribute).Description
                     tableName = DirectCast(oAttrib, GlobalizedPropertyAttribute).Table
@@ -133,7 +133,7 @@ Public Class GlobalizedPropertyDescriptor
 
             ' If no display name id is specified by attribute, then construct it by using default display name (usually the property name) 
             If displayName.Length = 0 Then
-                displayName = Me.basePropertyDescriptor.DisplayName & "Description"
+                displayName = basePropertyDescriptor.DisplayName & "Description"
             End If
 
             ' Now use table name and display name id to access the resources.  
@@ -142,44 +142,44 @@ Public Class GlobalizedPropertyDescriptor
             ' Get the string from the resources. 
             ' If this fails, then use default empty string indictating 'no description' 
             Dim s As String = rm.GetString(displayName)
-            Me.localizedDescription = If((s IsNot Nothing), s, "")
+            localizedDescription = If((s IsNot Nothing), s, "")
 
-            Return Me.localizedDescription
+            Return localizedDescription
         End Get
     End Property
 
     Public Overloads Overrides Function GetValue(ByVal component As Object) As Object
-        Return Me.basePropertyDescriptor.GetValue(component)
+        Return basePropertyDescriptor.GetValue(component)
     End Function
 
     Public Overloads Overrides ReadOnly Property IsReadOnly() As Boolean
         Get
-            Return Me.basePropertyDescriptor.IsReadOnly
+            Return basePropertyDescriptor.IsReadOnly
         End Get
     End Property
 
     Public Overloads Overrides ReadOnly Property Name() As String
         Get
-            Return Me.basePropertyDescriptor.Name
+            Return basePropertyDescriptor.Name
         End Get
     End Property
 
     Public Overloads Overrides ReadOnly Property PropertyType() As Type
         Get
-            Return Me.basePropertyDescriptor.PropertyType
+            Return basePropertyDescriptor.PropertyType
         End Get
     End Property
 
     Public Overloads Overrides Sub ResetValue(ByVal component As Object)
-        Me.basePropertyDescriptor.ResetValue(component)
+        basePropertyDescriptor.ResetValue(component)
     End Sub
 
     Public Overloads Overrides Function ShouldSerializeValue(ByVal component As Object) As Boolean
-        Return Me.basePropertyDescriptor.ShouldSerializeValue(component)
+        Return basePropertyDescriptor.ShouldSerializeValue(component)
     End Function
 
     Public Overloads Overrides Sub SetValue(ByVal component As Object, ByVal value As Object)
-        Me.basePropertyDescriptor.SetValue(component, value)
+        basePropertyDescriptor.SetValue(component, value)
     End Sub
 End Class
 #End Region

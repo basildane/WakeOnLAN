@@ -48,14 +48,14 @@ Public Class EditTask
         Return MyBase.ShowDialog(owner)
     End Function
 
-    Private Sub CancelClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonCancel.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Close()
+    Private Sub CancelClick(ByVal sender As Object, ByVal e As EventArgs) Handles ButtonCancel.Click
+        DialogResult = DialogResult.Cancel
+        Close()
     End Sub
 
-    Private Sub OKClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
+    Private Sub OKClick(ByVal sender As Object, ByVal e As EventArgs) Handles OKButton.Click
         If (String.IsNullOrEmpty(UserIDTextBox.Text) Or String.IsNullOrEmpty(PasswordTextBox.Text)) Then
-            MessageBox.Show(My.Resources.Strings.errUserID, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Hand)
+            MessageBox.Show(My.Resources.Strings.errUserID, Text, MessageBoxButtons.OK, MessageBoxIcon.Hand)
             TabControlTasks.SelectedIndex = 0
             Return
         End If
@@ -68,24 +68,24 @@ Public Class EditTask
         My.Settings.TaskUserID = UserIDTextBox.Text
         My.Settings.TaskPassword = Encrypt.EnigmaEncrypt(PasswordTextBox.Text)
 
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Close()
+        DialogResult = DialogResult.OK
+        Close()
     End Sub
 
-    Private Sub ActionNewButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ActionNewButton.Click
+    Private Sub ActionNewButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ActionNewButton.Click
         Dim MyAction As New Action
         Dim li As ListViewItem
 
         MyAction.Mode = Action.ActionItems.Start
         MyAction.Tag = Guid.NewGuid.ToString
-        If EditAction.ShowDialog(Me, MyAction) <> Windows.Forms.DialogResult.OK Then Exit Sub
+        If EditAction.ShowDialog(Me, MyAction) <> DialogResult.OK Then Exit Sub
 
         li = ListViewActions.Items.Add(key:=MyAction.Tag, text:=MyAction.ActionStrings(MyAction.Mode), imageIndex:=0)
         li.SubItems.Add(MyAction.Name)
         MyTask.Actions.Add(MyAction)
     End Sub
 
-    Private Sub ActionEditButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ActionEditButton.Click, ListViewActions.DoubleClick
+    Private Sub ActionEditButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ActionEditButton.Click, ListViewActions.DoubleClick
         Dim MyAction As Action = Nothing
         Dim li As ListViewItem
 
@@ -101,12 +101,12 @@ Public Class EditTask
 
         If MyAction Is Nothing Then Exit Sub
 
-        If EditAction.ShowDialog(Me, MyAction) <> Windows.Forms.DialogResult.OK Then Exit Sub
+        If EditAction.ShowDialog(Me, MyAction) <> DialogResult.OK Then Exit Sub
         li.SubItems(0).Text = MyAction.ActionStrings(MyAction.Mode)
         li.SubItems(1).Text = MyAction.Name
     End Sub
 
-    Private Sub ActionDeleteButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ActionDeleteButton.Click
+    Private Sub ActionDeleteButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ActionDeleteButton.Click
         Dim li As ListViewItem
 
         If ListViewActions.SelectedItems.Count <> 1 Then Exit Sub
@@ -121,7 +121,7 @@ Public Class EditTask
         Next
     End Sub
 
-    Private Sub TriggerNewButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TriggerNewButton.Click
+    Private Sub TriggerNewButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles TriggerNewButton.Click
         Dim Mytrigger As New Trigger
         Dim li As ListViewItem
 
@@ -131,14 +131,14 @@ Public Class EditTask
             .Tag = Guid.NewGuid.ToString
         End With
 
-        If EditTrigger.ShowDialog(Me, Mytrigger) <> Windows.Forms.DialogResult.OK Then Exit Sub
+        If EditTrigger.ShowDialog(Me, Mytrigger) <> DialogResult.OK Then Exit Sub
 
         li = ListViewTriggers.Items.Add(key:=Mytrigger.Tag, text:=Mytrigger.ModeString, imageIndex:=0)
         li.SubItems.Add(Mytrigger.ToString)
         MyTask.Triggers.Add(Mytrigger)
     End Sub
 
-    Private Sub TriggerEditButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TriggerEditButton.Click, ListViewTriggers.DoubleClick
+    Private Sub TriggerEditButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles TriggerEditButton.Click, ListViewTriggers.DoubleClick
         Dim MyTrigger As Trigger = Nothing
         Dim li As ListViewItem
 
@@ -154,12 +154,12 @@ Public Class EditTask
 
         If MyTrigger Is Nothing Then Exit Sub
 
-        If EditTrigger.ShowDialog(Me, MyTrigger) <> Windows.Forms.DialogResult.OK Then Exit Sub
+        If EditTrigger.ShowDialog(Me, MyTrigger) <> DialogResult.OK Then Exit Sub
         li.SubItems(0).Text = MyTrigger.ModeString
         li.SubItems(1).Text = MyTrigger.ToString
     End Sub
 
-    Private Sub TriggerDeleteButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TriggerDeleteButton.Click
+    Private Sub TriggerDeleteButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles TriggerDeleteButton.Click
         Dim li As ListViewItem
 
         If ListViewTriggers.SelectedItems.Count <> 1 Then Exit Sub

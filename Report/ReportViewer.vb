@@ -20,7 +20,7 @@ Imports Microsoft.Reporting.WinForms
 
 Public Class ReportViewer
 
-    Private Sub ReportViewr_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub ReportViewr_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         Dim p(8) As ReportParameter
 
         p(0) = New ReportParameter("ReportParameterName", My.Resources.ReportStrings.RepName.ToString, True)
@@ -33,13 +33,13 @@ Public Class ReportViewer
         p(7) = New ReportParameter("ReportParameterShutdown", My.Resources.ReportStrings.RepShutdown.ToString, True)
         p(8) = New ReportParameter("ReportParameterBroadcast", My.Resources.ReportStrings.RepBroadcast.ToString, True)
 
-        With Me.ReportViewer1.LocalReport
+        With ReportViewer1.LocalReport
             .DataSources.Clear()
             .DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource("MachinesDS", Machines))
             .ReportEmbeddedResource = "WakeOnLan.Report1.rdlc"
             .SetParameters(p)
         End With
 
-        Me.ReportViewer1.RefreshReport()
+        ReportViewer1.RefreshReport()
     End Sub
 End Class

@@ -105,10 +105,10 @@ Namespace Controls
 
         End Sub
 
-        Private Sub txtIP_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtIP1.TextChanged, txtIP2.TextChanged, txtIP3.TextChanged, txtIP4.TextChanged
+        Private Sub txtIP_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles txtIP1.TextChanged, txtIP2.TextChanged, txtIP3.TextChanged, txtIP4.TextChanged
             Dim txtBox As TextBox = DirectCast(sender, TextBox)
 
-            'IF WE TYPED IN 3 DIGITS, SELECT THE NEXT CONTROL
+            'if user typed 3 digits, move to the next control
             If txtBox.SelectionStart = 3 Then
                 SelectNextControl(txtBox, True, True, False, False)
             End If

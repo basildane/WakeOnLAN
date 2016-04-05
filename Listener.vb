@@ -27,7 +27,7 @@ Public Class Listener
     Private Delegate Sub HitDelegate(ByVal so As StateObject, ByVal bytesRead As Integer, packetInfo As IPPacketInformation)
     Private ReadOnly _showHit As New HitDelegate(AddressOf Hit)
 
-    Private Sub Listener_Load(sender As System.Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Listener_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListView1.Items.Clear()
         TextBoxDetails.Clear()
         TextBoxDetails.Font = New Font(FontFamily.GenericMonospace, TextBoxDetails.Font.Size)
@@ -37,7 +37,7 @@ Public Class Listener
         ReceiveMessages()
     End Sub
 
-    Private Sub Listener_FormClosing(sender As System.Object, e As Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub Listener_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         _gso.Socket.Close()
     End Sub
 
@@ -207,7 +207,7 @@ Public Class Listener
         End Try
     End Function
 
-    Private Sub Button_clear_Click(sender As System.Object, e As EventArgs) Handles Button_clear.Click
+    Private Sub Button_clear_Click(sender As Object, e As EventArgs) Handles Button_clear.Click
         ListView1.Items.Clear()
         TextBoxDetails.Clear()
     End Sub

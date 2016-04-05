@@ -144,7 +144,7 @@ Namespace My
         ''' </summary>
         ''' <remarks></remarks>
         Private Sub upgradeSettings()
-            Dim regKey As Microsoft.Win32.RegistryKey
+            Dim regKey As RegistryKey
             Dim database As String
             Dim newPath As String
             Dim filename As String
@@ -163,7 +163,7 @@ Namespace My
                     End If
                 Next
 
-                regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
+                regKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
                 database = regKey.GetValue("Database", IO.Directory.GetParent(Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, Microsoft.Win32.RegistryValueOptions.None)
                 regKey.Close()
 

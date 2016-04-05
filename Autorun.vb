@@ -19,7 +19,7 @@
 Imports Microsoft.Win32
 
 Public Class Autorun
-    ReadOnly _currentUser As Microsoft.Win32.RegistryKey = Registry.CurrentUser.CreateSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run")
+    ReadOnly _currentUser As RegistryKey = Registry.CurrentUser.CreateSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run")
 
     Property AutoRun As Boolean
         Get
