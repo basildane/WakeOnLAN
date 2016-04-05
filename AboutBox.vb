@@ -48,6 +48,11 @@ Public NotInheritable Class AboutBox
         AutoUpdater.Start(0)
     End Sub
 
+    Private Sub pbUpdate_Click(sender As Object, e As EventArgs) Handles pbUpdate.Click
+        AutoUpdater.force = True
+        AutoUpdater.Start(0)
+    End Sub
+
     Private Delegate Sub UpdateStatusHandler(sender As Object, e As AutoUpdateEventArgs)
 
     Private Sub UpdateStatus(sender As Object, e As AutoUpdateEventArgs)

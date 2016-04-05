@@ -64,34 +64,34 @@ namespace AutoUpdaterDotNET
             // 
             // buttonUpdate
             // 
+            resources.ApplyResources(this.buttonUpdate, "buttonUpdate");
             this.buttonUpdate.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonUpdate.Image = global::AutoUpdaterDotNET.Properties.Resources.download;
-            resources.ApplyResources(this.buttonUpdate, "buttonUpdate");
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.UseVisualStyleBackColor = true;
             this.buttonUpdate.Click += new System.EventHandler(this.ButtonUpdateClick);
             // 
             // buttonRemindLater
             // 
+            resources.ApplyResources(this.buttonRemindLater, "buttonRemindLater");
             this.buttonRemindLater.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonRemindLater.Image = global::AutoUpdaterDotNET.Properties.Resources.clock_go;
-            resources.ApplyResources(this.buttonRemindLater, "buttonRemindLater");
             this.buttonRemindLater.Name = "buttonRemindLater";
             this.buttonRemindLater.UseVisualStyleBackColor = true;
             this.buttonRemindLater.Click += new System.EventHandler(this.ButtonRemindLaterClick);
             // 
             // pictureBoxIcon
             // 
-            this.pictureBoxIcon.Image = global::AutoUpdaterDotNET.Properties.Resources.update;
             resources.ApplyResources(this.pictureBoxIcon, "pictureBoxIcon");
+            this.pictureBoxIcon.Image = global::AutoUpdaterDotNET.Properties.Resources.update;
             this.pictureBoxIcon.Name = "pictureBoxIcon";
             this.pictureBoxIcon.TabStop = false;
             // 
             // buttonSkip
             // 
+            resources.ApplyResources(this.buttonSkip, "buttonSkip");
             this.buttonSkip.DialogResult = System.Windows.Forms.DialogResult.Abort;
             this.buttonSkip.Image = global::AutoUpdaterDotNET.Properties.Resources.hand_point;
-            resources.ApplyResources(this.buttonSkip, "buttonSkip");
             this.buttonSkip.Name = "buttonSkip";
             this.buttonSkip.UseVisualStyleBackColor = true;
             this.buttonSkip.Click += new System.EventHandler(this.ButtonSkipClick);

@@ -111,6 +111,8 @@ namespace AutoUpdaterDotNET
         public static String versionURL;
         public static String versionResult;
 
+        public static Boolean force = false;
+
         public enum RemindLaterFormat
         {
             Minutes,
@@ -285,7 +287,7 @@ namespace AutoUpdaterDotNET
             RunBrowserThread(versionURL);
 
 #if DEBUG
-            if (days == -1)
+            if (force)
             {
                 args.Status = AutoUpdateEventArgs.StatusCodes.updateAvailable;
                 args.Text = Strings.sUpdateAvailable;
@@ -295,6 +297,7 @@ namespace AutoUpdaterDotNET
                 thread.CurrentCulture = thread.CurrentUICulture = CurrentCulture ?? Application.CurrentCulture;
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
+                return;
             }
 #endif
 
@@ -307,6 +310,7 @@ namespace AutoUpdaterDotNET
             }
 
             if (CurrentVersion <= InstalledVersion) return;
+
             args.Status = AutoUpdateEventArgs.StatusCodes.updateAvailable;
             args.Text = Strings.sUpdateAvailable;
             OnUpdateStatus(args);
