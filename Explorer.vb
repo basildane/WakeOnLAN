@@ -222,6 +222,7 @@ Public Class Explorer
         Next
 
         If My.Settings.CurrentGroup = tvRoot.Text Then TreeView.SelectedNode = tvRoot
+        If TreeView.SelectedNode Is Nothing Then TreeView.SelectedNode = tvRoot
         TreeView.ResumeLayout()
     End Sub
 
