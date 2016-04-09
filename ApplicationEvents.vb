@@ -44,7 +44,7 @@ Namespace My
         ' Defines:
         ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
 
-        Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
+        Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As ApplicationServices.StartupEventArgs) Handles Me.Startup
             If (Control.ModifierKeys = Keys.Control) Then
                 SafeMode.ShowDialog()
             End If
@@ -60,7 +60,7 @@ Namespace My
             If (Application.Info.Version.Revision > 0) Then
                 version &= " BETA " & Application.Info.Version.Revision
             End If
-            Splash.ShowSplash(Resources.Splash, Resources.Strings.Title, version, Application.Info.Copyright)
+            Splash.ShowSplash(Resources.Splash, Resources.Strings.Title, version, Resources.Strings.Copyright)
 
         End Sub
 
@@ -77,17 +77,16 @@ Namespace My
         ''' </summary>
         ''' <remarks></remarks>
         Private Sub ConfigureCulture()
-            Dim regKey As RegistryKey
-            Dim language As String
-
-            regKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadWriteSubTree)
-            language = regKey.GetValue("Language", String.Empty, RegistryValueOptions.None)
+            Dim regKey As RegistryKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadWriteSubTree)
+            Dim language As String = regKey.GetValue("Language", String.Empty, RegistryValueOptions.None)
 
             Select Case language
-                Case "en"
-                    language = "en-US"
+                Case "ar_JO"
+                    language = "ar-JO"
                 Case "de"
                     language = "de-DE"
+                Case "en"
+                    language = "en-US"
                 Case "es"
                     language = "es-ES"
                 Case "fi"
@@ -98,10 +97,10 @@ Namespace My
                     language = "hu-HU"
                 Case "nl"
                     language = "nl-NL"
-                Case "ru"
-                    language = "ru-RU"
                 Case "pt_BR"
                     language = "pt-BR"
+                Case "ru"
+                    language = "ru-RU"
                 Case "zh_TW"
                     language = "zh-TW"
             End Select
@@ -113,6 +112,9 @@ Namespace My
                 regKey.DeleteValue("Language")
             End If
             regKey.Close()
+
+            'TODO
+            Settings.Language = "ar-JO"
 
             If String.IsNullOrEmpty(Settings.Language) Then Settings.Language = language
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)

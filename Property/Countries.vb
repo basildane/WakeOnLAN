@@ -20,7 +20,7 @@ Imports System.ComponentModel
 Imports System.Drawing.Design
 Imports System.Globalization
 
-Public Class Countries : Inherits System.ComponentModel.StringConverter
+Public Class Countries : Inherits StringConverter
 
     Declare Function IsValidLocale Lib "kernel32" (ByVal locale As Integer, ByVal dwFlags As Integer) As Integer
 
@@ -28,6 +28,7 @@ Public Class Countries : Inherits System.ComponentModel.StringConverter
 
     ReadOnly _countryCodes As String() = New String() _
         {
+            "ar-JO",
             "pt-BR",
             "de-DE",
             "es-ES",
@@ -41,7 +42,7 @@ Public Class Countries : Inherits System.ComponentModel.StringConverter
             "zh-TW"
         }
 
-    ReadOnly _countryNames(10) As String
+    ReadOnly _countryNames(11) As String
 
     Public Sub New()
         Dim cultureInfo As CultureInfo
@@ -58,15 +59,15 @@ Public Class Countries : Inherits System.ComponentModel.StringConverter
         Next
     End Sub
 
-    Public Overloads Overrides Function GetStandardValues(ByVal context As System.ComponentModel.ITypeDescriptorContext) As System.ComponentModel.TypeConverter.StandardValuesCollection
+    Public Overloads Overrides Function GetStandardValues(ByVal context As ITypeDescriptorContext) As System.ComponentModel.TypeConverter.StandardValuesCollection
         Return New StandardValuesCollection(_countryCodes)
     End Function
 
-    Public Overloads Overrides Function GetStandardValuesSupported(ByVal context As System.ComponentModel.ITypeDescriptorContext) As Boolean
+    Public Overloads Overrides Function GetStandardValuesSupported(ByVal context As ITypeDescriptorContext) As Boolean
         Return True
     End Function
 
-    Public Overloads Overrides Function GetStandardValuesExclusive(ByVal context As System.ComponentModel.ITypeDescriptorContext) As Boolean
+    Public Overloads Overrides Function GetStandardValuesExclusive(ByVal context As ITypeDescriptorContext) As Boolean
         Return True
     End Function
 
@@ -108,6 +109,8 @@ Public Class LanguageEditor : Inherits UITypeEditor
         If IsNothing(e.Value) Then Return
 
         Select Case (e.Value.ToString())
+            Case "ar-JO"
+                newImage = My.Resources.Flags.Jordan
             Case "pt-BR"
                 newImage = My.Resources.Flags.Brazil
             Case "de-DE"

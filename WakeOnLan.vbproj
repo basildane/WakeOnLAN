@@ -447,6 +447,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Resources\Strings\Strings.ar-JO.Designer.vb">
+      <DependentUpon>Strings.ar-JO.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Resources\Strings\Strings.ro.Designer.vb">
       <DependentUpon>Strings.ro.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -655,6 +660,9 @@
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
     <Compile Include="Wake.vb" />
+    <EmbeddedResource Include="AboutBox.ar-JO.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutBox.es.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
@@ -681,6 +689,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Crash.ru.resx">
       <DependentUpon>Crash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.ar-JO.resx">
+      <DependentUpon>Explorer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Explorer.es.resx">
       <DependentUpon>Explorer.vb</DependentUpon>
@@ -723,6 +734,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportViewer.ru.resx">
       <DependentUpon>ReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings\Strings.ar-JO.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.ar-JO.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings\Strings.es.resx">
       <SubType>Designer</SubType>
@@ -773,6 +789,7 @@
     <Content Include="Resources\disconnected_48x48.png" />
     <Content Include="Resources\flags\france_16x16.png" />
     <Content Include="Resources\flags\hungary_flag_16x16.png" />
+    <Content Include="Resources\flags\jordan-flag.png" />
     <Content Include="Resources\flags\netherlands_flag_16x16.png" />
     <Content Include="Resources\flags\romania_16x16.png" />
     <None Include="Resources\flags\spain_16x16.png" />
