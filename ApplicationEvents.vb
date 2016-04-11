@@ -114,7 +114,7 @@ Namespace My
             regKey.Close()
 
             'TODO
-            Settings.Language = "ar-JO"
+            'Settings.Language = "ar-JO"
 
             If String.IsNullOrEmpty(Settings.Language) Then Settings.Language = language
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)

@@ -487,8 +487,57 @@
         3Zyc/h9PLLLceEt+LwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="LogoPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="LogoPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 81</value>
+  </data>
+  <data name="OKButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>733, 536</value>
+  </data>
+  <data name="OKButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
+  </data>
   <data name="OKButton.Text" xml:space="preserve">
     <value>موافق</value>
+  </data>
+  <data name="LabelProductName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 13</value>
+  </data>
+  <data name="LabelCopyright.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 40</value>
+  </data>
+  <data name="LabelCulture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 74</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>789, 108</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 379</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 144</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ListBox1.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="ListBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 14</value>
+  </data>
+  <data name="ListBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 88</value>
+  </data>
+  <data name="pbUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 25</value>
+  </data>
+  <data name="pbUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 34</value>
+  </data>
+  <data name="lAutomaticUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 33</value>
   </data>
   <data name="lAutomaticUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 16</value>
@@ -496,23 +545,62 @@
   <data name="lAutomaticUpdate.Text" xml:space="preserve">
     <value>تحديثات تلقائية</value>
   </data>
+  <data name="GroupBoxUpdates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 235</value>
+  </data>
+  <data name="GroupBoxUpdates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 116</value>
+  </data>
   <data name="GroupBoxUpdates.Text" xml:space="preserve">
     <value>تحديثات عبر الإنترنت</value>
+  </data>
+  <data name="LabelVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 17</value>
+  </data>
+  <data name="TextBoxDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 246</value>
+  </data>
+  <data name="TextBoxDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 92</value>
   </data>
   <data name="TextBoxDescription.Text" xml:space="preserve">
     <value>يرسل "الحزم سحرية" لبطاقات إيثرنت "استنهاظ"الحواسيب عن بعد. إيقاف تشغيل الحواسيب عن بعد. تنفيذ إيقاف تشغيل "عالمية" لكل حاسوب على شبكة الاتصال المحلية في حالات طوارئ.</value>
   </data>
+  <data name="LinkLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 70</value>
+  </data>
+  <data name="LinkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 14</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 70</value>
+  </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 13</value>
+    <value>125, 14</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>Aquila WOL الصفحة الرئيسية</value>
   </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 46</value>
+  </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 13</value>
+    <value>92, 14</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>موقع التكنولوجيا أكويلا:</value>
+  </data>
+  <data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 46</value>
+  </data>
+  <data name="LinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 14</value>
+  </data>
+  <data name="GroupBoxVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 121</value>
+  </data>
+  <data name="GroupBoxVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>771, 108</value>
   </data>
   <data name="GroupBoxVersion.Text" xml:space="preserve">
     <value>الاصدار</value>
@@ -549,6 +637,21 @@
         5ZhnrjnlSIBV0Qy5hC766KSXbvrpqKeu+uqjz+B5WCHcIvvstNdu++2456777rzLHsLrBQ1xgy3EF2/8
         8cgnr/zyzDfP/A1DAL/SFFAIAcD12Gev/fbcd+/99+BnLwQUU0jvE0Top6/++gep9EBAADs=
 </value>
+  </data>
+  <data name="bDonate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>616, 531</value>
+  </data>
+  <data name="bDonate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 34</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 14</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>820, 569</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8.25pt</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4093,10 +4196,12 @@
 </value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>9, 10, 9, 10</value>
+  </data>
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
