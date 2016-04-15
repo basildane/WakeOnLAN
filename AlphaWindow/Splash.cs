@@ -163,7 +163,6 @@ namespace AlphaWindow
 		// Let Windows drag this window for us
 	    protected override void WndProc(ref Message message)
         {
-            Debug.WriteLine("message: " + message.Msg.ToString());
             switch (message.Msg)
             {
                     //TODO: fix this

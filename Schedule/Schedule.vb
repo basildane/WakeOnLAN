@@ -16,10 +16,8 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
-Imports System
 Imports Machines
 Imports TaskScheduler
-Imports WOL
 
 Namespace Schedule
 

@@ -113,7 +113,7 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChang
 #include "scripts\products\dotnetfx40full.iss"
 
 [Registry]
-Root: "HKCU"; Subkey: "Software\Aquila Technology\WakeOnLAN"; ValueType: string; ValueName: "Language"; ValueData: "{language}"
+Root: HKLM; Subkey: "Software\{#MyAppPublisher}\{#MyAppName}"; ValueType: string; ValueName: "Language"; ValueData: "{language}"
 
 [Dirs]
 Name: "{commonappdata}\{#MyAppPublisher}\{#MyAppName}"; Flags: uninsneveruninstall; Permissions: authusers-full
@@ -131,4 +131,3 @@ begin
 	dotnetfx40full();
 	Result := true;
 end;
-
