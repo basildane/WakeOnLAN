@@ -91,8 +91,6 @@ Namespace My
                     Select Case language
                         Case "en"
                             language = "en-US"
-                        Case "ar_JO"
-                            language = "ar-JO"
                         Case "de"
                             language = "de-DE"
                         Case "es"
