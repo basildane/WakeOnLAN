@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,97 +118,96 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
+  <data name="bCalculate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 254</value>
   </data>
-  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 13</value>
+  <data name="bCalculate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
   </data>
-  <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 17</value>
+  <data name="bCalculate.Text" xml:space="preserve">
+    <value>حساب</value>
   </data>
-  <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 17</value>
+  <data name="bOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 254</value>
   </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 63</value>
+  <data name="bOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
   </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
+  <data name="bOK.Text" xml:space="preserve">
+    <value>وافق</value>
   </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 89</value>
+  <data name="IpBroadcast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 194</value>
   </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
+  <data name="IpBroadcast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 26</value>
   </data>
-  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 132</value>
+  <data name="IpSubnet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 114</value>
   </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
+  <data name="IpSubnet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 26</value>
   </data>
-  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 28</value>
+  <data name="IpIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 69</value>
   </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
+  <data name="IpIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 26</value>
   </data>
-  <data name="SelectLabel.Text" xml:space="preserve">
-    <value>Rechner auswählen</value>
+  <data name="lIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 74</value>
   </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Abbrechen</value>
+  <data name="lIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 14</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Nachricht:</value>
+  <data name="lIP.Text" xml:space="preserve">
+    <value>عنوان IP</value>
   </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Von:</value>
+  <data name="lSubnet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 119</value>
+  </data>
+  <data name="lSubnet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 14</value>
+  </data>
+  <data name="lSubnet.Text" xml:space="preserve">
+    <value>الشبكة الفرعية</value>
+  </data>
+  <data name="lRecommended.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 200</value>
+  </data>
+  <data name="lRecommended.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 14</value>
+  </data>
+  <data name="lRecommended.Text" xml:space="preserve">
+    <value>عنوان البث الموصى به:</value>
+  </data>
+  <data name="lHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 10</value>
+  </data>
+  <data name="lHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 56</value>
+  </data>
+  <data name="lHeader.Text" xml:space="preserve">
+    <value>يتم استخدام هذه الدالة للمساعدة في البحث عن "عنوان بث" لاستخدام، استناداً إلى عنوان IP والشبكة الفرعية.</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 14</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>284, 298</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Aktion bearbeiten</value>
-  </data>
-  <data name="forceAll.Text" xml:space="preserve">
-    <value>Erzwingen</value>
-  </data>
-  <data name="PopupLabel.Text" xml:space="preserve">
-    <value>Popup Nachricht</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Betreff:</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Titel:</value>
-  </data>
-  <data name="forceCheckBox.Text" xml:space="preserve">
-    <value>Erzwingen</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Nachricht:</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>An:</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Aktion:</value>
-  </data>
-  <data name="AllLabel.Text" xml:space="preserve">
-    <value>Optionen</value>
-  </data>
-  <data name="EmailLabel.Text" xml:space="preserve">
-    <value>Email Nachricht</value>
-  </data>
-  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 80</value>
-  </data>
-  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 13</value>
-  </data>
-  <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 13</value>
-  </data>
-  <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 13</value>
+    <value>حساب الشبكة الفرعية</value>
   </data>
 </root>

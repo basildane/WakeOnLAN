@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Text" xml:space="preserve">
-    <value>Művelet szerkesztése</value>
-  </data>
   <data name="ActionDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>179, 332</value>
   </data>
@@ -130,32 +127,20 @@
   <data name="ActionEditButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 23</value>
   </data>
-  <data name="ActionEditButton.Text" xml:space="preserve">
-    <value>Szerkesztés...</value>
-  </data>
   <data name="ActionNewButton.Text" xml:space="preserve">
     <value>Új...</value>
   </data>
-  <data name="ButtonCancel.Text" xml:space="preserve">
-    <value>Mégsem</value>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Védelmi beállítások</value>
+  </data>
+  <data name="TriggerNewButton.Text" xml:space="preserve">
+    <value>Új...</value>
   </data>
   <data name="ColumnHeader1.Text" xml:space="preserve">
     <value>Művelet</value>
   </data>
-  <data name="ColumnHeader2.Text" xml:space="preserve">
-    <value>Részletek</value>
-  </data>
-  <data name="ColumnHeader3.Text" xml:space="preserve">
-    <value>Feltétel</value>
-  </data>
-  <data name="ColumnHeader4.Text" xml:space="preserve">
-    <value>Részletek</value>
-  </data>
   <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 178</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Védelmi beállítások</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>55, 24</value>
@@ -181,9 +166,6 @@
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 13</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Felhasználónév:</value>
-  </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>59, 69</value>
   </data>
@@ -199,6 +181,33 @@
   <data name="Label5.Text" xml:space="preserve">
     <value>A feltételek, amik kiváltják az eseményt.</value>
   </data>
+  <data name="ButtonCancel.Text" xml:space="preserve">
+    <value>Mégsem</value>
+  </data>
+  <data name="TriggerDeleteButton.Text" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>DOMAIN\felhasználónév</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Részletek</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>Feltétel</value>
+  </data>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>Részletek</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Művelet szerkesztése</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Felhasználónév:</value>
+  </data>
+  <data name="ActionEditButton.Text" xml:space="preserve">
+    <value>Szerkesztés...</value>
+  </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>317, 13</value>
   </data>
@@ -207,9 +216,6 @@
   </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 13</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>DOMAIN\felhasználónév</value>
   </data>
   <data name="OKButton.Text" xml:space="preserve">
     <value>Rendben</value>
@@ -223,13 +229,7 @@
   <data name="TabPage3.Text" xml:space="preserve">
     <value>Műveletek</value>
   </data>
-  <data name="TriggerDeleteButton.Text" xml:space="preserve">
-    <value>Törlés</value>
-  </data>
   <data name="TriggerEditButton.Text" xml:space="preserve">
     <value>Szerkesztés...</value>
-  </data>
-  <data name="TriggerNewButton.Text" xml:space="preserve">
-    <value>Új...</value>
   </data>
 </root>

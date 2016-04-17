@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -3958,7 +3958,7 @@
   </data>
   <data name="LabelCulture.Text" xml:space="preserve">
     <value>[Culture]</value>
-  </data>
+  <comment>@Invariant</comment></data>
   <data name="&gt;&gt;bDonate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -4048,7 +4048,7 @@
   </data>
   <data name="LabelProductName.Text" xml:space="preserve">
     <value>[Product Name]</value>
-  </data>
+  <comment>@Invariant</comment></data>
   <data name="TextBoxDescription.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
@@ -4159,7 +4159,7 @@
   </data>
   <data name="LabelCopyright.Text" xml:space="preserve">
     <value>[Copyright]</value>
-  </data>
+  <comment>@Invariant</comment></data>
   <data name="LinkLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
   </data>
@@ -4649,7 +4649,7 @@ You should have received a copy of the GNU General Public License along with thi
   </data>
   <data name="LabelVersion.Text" xml:space="preserve">
     <value>[Version]</value>
-  </data>
+  <comment>@Invariant</comment></data>
   <data name="&gt;&gt;LabelProductName.Parent" xml:space="preserve">
     <value>Panel1</value>
   </data>
