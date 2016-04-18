@@ -121,134 +121,266 @@
   <data name="OK_Button.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 3</value>
   </data>
-  <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="RebootCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 17</value>
-  </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 89</value>
-  </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 13</value>
-  </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>357, 39</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
-  </data>
-  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 106</value>
-  </data>
-  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
-  </data>
-  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 80</value>
-  </data>
-  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 54</value>
-  </data>
-  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 13</value>
-  </data>
-  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 132</value>
-  </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 28</value>
-  </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 13</value>
-  </data>
-  <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
-  </data>
-  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 13</value>
-  </data>
-  <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 13</value>
-  </data>
-  <data name="RebootAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 17</value>
-  </data>
-  <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 17</value>
-  </data>
-  <data name="AllTabPage.Text" xml:space="preserve">
-    <value>الكل</value>
-  </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>إلغاء</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>رسالة</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>من:</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>تحرير العمل</value>
-  </data>
-  <data name="forceAll.Text" xml:space="preserve">
-    <value>فرض</value>
-  </data>
-  <data name="PopupLabel.Text" xml:space="preserve">
-    <value>الرسالة المنبثقة</value>
+  <data name="OK_Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 25</value>
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>موافق</value>
   </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>الى:</value>
+  <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>رسالة:</value>
+  <data name="Cancel_Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 25</value>
   </data>
-  <data name="RebootCheckBox.Text" xml:space="preserve">
-    <value>إعادة الاقلاع بعد إيقاف التشغيل</value>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 317</value>
+  </data>
+  <data name="TableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 31</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 27</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 14</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>العمل:</value>
   </data>
+  <data name="ActionComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 24</value>
+  </data>
+  <data name="ActionComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="RebootCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 121</value>
+  </data>
+  <data name="RebootCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 18</value>
+  </data>
+  <data name="RebootCheckBox.Text" xml:space="preserve">
+    <value>إعادة الاقلاع بعد إيقاف التشغيل</value>
+  </data>
+  <data name="forceCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 97</value>
+  </data>
+  <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 18</value>
+  </data>
+  <data name="forceCheckBox.Text" xml:space="preserve">
+    <value>اجبار التطبيقات المغلقة</value>
+  </data>
+  <data name="MachinesComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 44</value>
+  </data>
+  <data name="MachinesComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 22</value>
+  </data>
+  <data name="ComboBoxPopupMachine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 33</value>
+  </data>
+  <data name="ComboBoxPopupMachine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 22</value>
+  </data>
+  <data name="MessageTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 93</value>
+  </data>
+  <data name="MessageTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 118</value>
+  </data>
+  <data name="MessageTitleTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 65</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 96</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 14</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>رسالة</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 37</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 14</value>
+  </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>العنوان</value>
+  </data>
+  <data name="EmailServerTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 111</value>
+  </data>
+  <data name="EmailSubjectTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 83</value>
+  </data>
+  <data name="EmailToTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 55</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 114</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 14</value>
   </data>
   <data name="Label8.Text" xml:space="preserve">
     <value>الخادم:</value>
   </data>
-  <data name="EmailTabPage.Text" xml:space="preserve">
-    <value>رسالة البريد الإلكتروني</value>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 86</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 14</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
     <value>الموضوع:</value>
   </data>
-  <data name="PopupTabPage.Text" xml:space="preserve">
-    <value>منبثقة</value>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 58</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 14</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>الى:</value>
+  </data>
+  <data name="EmailMessageTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 139</value>
+  </data>
+  <data name="EmailMessageTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 63</value>
+  </data>
+  <data name="EmailFromTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 27</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 142</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 14</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>رسالة:</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 30</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 14</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>من:</value>
+  </data>
+  <data name="SelectLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 27</value>
+  </data>
+  <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 14</value>
   </data>
   <data name="SelectLabel.Text" xml:space="preserve">
     <value>حدد الحاسوب</value>
   </data>
-  <data name="RebootAll.Text" xml:space="preserve">
-    <value>إعادة الاقلاع بعد إيقاف التشغيل</value>
+  <data name="SelectTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="SelectTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 215</value>
+  </data>
+  <data name="SelectTabPage.Text" xml:space="preserve">
+    <value>حدد الحاسوب</value>
+  </data>
+  <data name="EmailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 3</value>
+  </data>
+  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 14</value>
   </data>
   <data name="EmailLabel.Text" xml:space="preserve">
     <value>رسالة البريد الإلكتروني</value>
   </data>
-  <data name="SelectTabPage.Text" xml:space="preserve">
-    <value>حدد الحاسوب</value>
+  <data name="EmailTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="EmailTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 215</value>
+  </data>
+  <data name="EmailTabPage.Text" xml:space="preserve">
+    <value>رسالة البريد الإلكتروني</value>
+  </data>
+  <data name="PopupLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 5</value>
+  </data>
+  <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 14</value>
+  </data>
+  <data name="PopupLabel.Text" xml:space="preserve">
+    <value>الرسالة المنبثقة</value>
+  </data>
+  <data name="PopupTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="PopupTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 215</value>
+  </data>
+  <data name="PopupTabPage.Text" xml:space="preserve">
+    <value>منبثقة</value>
+  </data>
+  <data name="AllLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>384, 5</value>
+  </data>
+  <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 14</value>
+  </data>
+  <data name="AllLabel.Text" xml:space="preserve">
+    <value>الخيارات</value>
+  </data>
+  <data name="RebootAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 70</value>
+  </data>
+  <data name="RebootAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 18</value>
+  </data>
+  <data name="RebootAll.Text" xml:space="preserve">
+    <value>إعادة الاقلاع بعد إيقاف التشغيل</value>
+  </data>
+  <data name="forceAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 46</value>
+  </data>
+  <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 18</value>
+  </data>
+  <data name="forceAll.Text" xml:space="preserve">
+    <value>فرض</value>
+  </data>
+  <data name="AllTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="AllTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 215</value>
+  </data>
+  <data name="AllTabPage.Text" xml:space="preserve">
+    <value>الكل</value>
+  </data>
+  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 58</value>
+  </data>
+  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 242</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 14</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>459, 361</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8.25pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
@@ -257,5 +389,8 @@
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>تحرير العمل</value>
   </data>
 </root>
