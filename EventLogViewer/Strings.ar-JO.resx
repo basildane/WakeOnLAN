@@ -117,31 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnErrors.Text" xml:space="preserve">
-    <value>0 errores</value>
+  <data name="col_Date" xml:space="preserve">
+    <value>التاريخ/الوقت</value>
   </data>
-  <data name="btnErrors.ToolTipText" xml:space="preserve">
-    <value>0 errores</value>
+  <data name="col_EventID" xml:space="preserve">
+    <value>معرف الحدث</value>
   </data>
-  <data name="btnMessages.Text" xml:space="preserve">
-    <value>0 mensajes</value>
+  <data name="col_Message" xml:space="preserve">
+    <value>رسالة</value>
   </data>
-  <data name="btnWarnings.Text" xml:space="preserve">
-    <value>0 Advertencias</value>
+  <data name="col_Type" xml:space="preserve">
+    <value>نوع</value>
   </data>
-  <data name="btnWarnings.ToolTipText" xml:space="preserve">
-    <value>0 Advertencias</value>
+  <data name="Errors" xml:space="preserve">
+    <value>اخطاء {0}</value>
   </data>
-  <data name="FindLabel.Text" xml:space="preserve">
-    <value>Buscar:</value>
+  <data name="Messages" xml:space="preserve">
+    <value>رسائل {0}</value>
   </data>
-  <data name="NotFoundLabel.Text" xml:space="preserve">
-    <value>No se encontraron clases</value>
-  </data>
-  <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
-    <value>No hay eventos que coincidan con el filtro definido.</value>
-  </data>
-  <data name="SourceLabel.Text" xml:space="preserve">
-    <value>Fuente:</value>
+  <data name="Warnings" xml:space="preserve">
+    <value>تحذيرات {0}</value>
   </data>
 </root>

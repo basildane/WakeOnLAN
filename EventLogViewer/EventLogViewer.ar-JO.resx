@@ -117,31 +117,60 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnErrors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
+  </data>
   <data name="btnErrors.Text" xml:space="preserve">
-    <value>0 errores</value>
+    <value>اخطاء 0</value>
   </data>
   <data name="btnErrors.ToolTipText" xml:space="preserve">
-    <value>0 errores</value>
+    <value>اخطاء 0</value>
   </data>
-  <data name="btnMessages.Text" xml:space="preserve">
-    <value>0 mensajes</value>
+  <data name="btnWarnings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
   </data>
   <data name="btnWarnings.Text" xml:space="preserve">
-    <value>0 Advertencias</value>
+    <value>تحذيرات 0</value>
   </data>
   <data name="btnWarnings.ToolTipText" xml:space="preserve">
-    <value>0 Advertencias</value>
+    <value>تحذيرات 0</value>
   </data>
-  <data name="FindLabel.Text" xml:space="preserve">
-    <value>Buscar:</value>
+  <data name="btnMessages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
   </data>
-  <data name="NotFoundLabel.Text" xml:space="preserve">
-    <value>No se encontraron clases</value>
+  <data name="btnMessages.Text" xml:space="preserve">
+    <value>رسائل 0</value>
   </data>
-  <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
-    <value>No hay eventos que coincidan con el filtro definido.</value>
+  <data name="btnMessages.ToolTipText" xml:space="preserve">
+    <value>رسائل 0</value>
+  </data>
+  <data name="SourceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
   </data>
   <data name="SourceLabel.Text" xml:space="preserve">
-    <value>Fuente:</value>
+    <value>المصدر:</value>
+  </data>
+  <data name="FindLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 20</value>
+  </data>
+  <data name="FindLabel.Text" xml:space="preserve">
+    <value>بحث:</value>
+  </data>
+  <data name="FindText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 23</value>
+  </data>
+  <data name="NotFoundLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 20</value>
+  </data>
+  <data name="NotFoundLabel.Text" xml:space="preserve">
+    <value>لا توجد احداث</value>
+  </data>
+  <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
+    <value>لا توجد اية احداث تطابق التصفية المحددة.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
   </data>
 </root>

@@ -117,31 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnErrors.Text" xml:space="preserve">
-    <value>0 errores</value>
+  <data name="sCheckingForUpdates" xml:space="preserve">
+    <value>بحث عن تحديثات...</value>
   </data>
-  <data name="btnErrors.ToolTipText" xml:space="preserve">
-    <value>0 errores</value>
+  <data name="sLastCheck" xml:space="preserve">
+    <value>الاختيار الاخير {0}</value>
   </data>
-  <data name="btnMessages.Text" xml:space="preserve">
-    <value>0 mensajes</value>
+  <data name="sLatestVersion" xml:space="preserve">
+    <value>لديك احدث اصدار.</value>
   </data>
-  <data name="btnWarnings.Text" xml:space="preserve">
-    <value>0 Advertencias</value>
+  <data name="sSkipping" xml:space="preserve">
+    <value>تخطي هذا الاصدار.</value>
   </data>
-  <data name="btnWarnings.ToolTipText" xml:space="preserve">
-    <value>0 Advertencias</value>
-  </data>
-  <data name="FindLabel.Text" xml:space="preserve">
-    <value>Buscar:</value>
-  </data>
-  <data name="NotFoundLabel.Text" xml:space="preserve">
-    <value>No se encontraron clases</value>
-  </data>
-  <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
-    <value>No hay eventos que coincidan con el filtro definido.</value>
-  </data>
-  <data name="SourceLabel.Text" xml:space="preserve">
-    <value>Fuente:</value>
+  <data name="sUpdateAvailable" xml:space="preserve">
+    <value>يتوفر تحديث.</value>
   </data>
 </root>
