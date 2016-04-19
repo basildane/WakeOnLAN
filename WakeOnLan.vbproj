@@ -1078,6 +1078,9 @@
     <EmbeddedResource Include="Schedule\EditTask.zh-TW.resx">
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTrigger.ar-JO.resx">
+      <DependentUpon>EditTrigger.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTrigger.es.resx">
       <DependentUpon>EditTrigger.vb</DependentUpon>
     </EmbeddedResource>
@@ -1137,6 +1140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Search.zh-TW.resx">
       <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shutdown.ar-JO.resx">
+      <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.es.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
