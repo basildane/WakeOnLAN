@@ -127,6 +127,12 @@
   <data name="TabPage3.Text" xml:space="preserve">
     <value>Actions</value>
   </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Specify the action that will occur when this event is triggered.</value>
+  </data>
+  <data name="TriggerNewButton.Text" xml:space="preserve">
+    <value>New...</value>
+  </data>
   <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
@@ -135,9 +141,6 @@
   </data>
   <data name="&gt;&gt;TriggerDeleteButton.Parent" xml:space="preserve">
     <value>TabPage2</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Specify the action that will occur when this event is triggered.</value>
   </data>
   <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -773,9 +776,6 @@
   </data>
   <data name="&gt;&gt;DescriptionTextBox.Name" xml:space="preserve">
     <value>DescriptionTextBox</value>
-  </data>
-  <data name="TriggerNewButton.Text" xml:space="preserve">
-    <value>New...</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

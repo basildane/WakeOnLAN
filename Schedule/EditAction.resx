@@ -146,6 +146,69 @@
   <data name="Label6.Text" xml:space="preserve">
     <value>To:</value>
   </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Server:</value>
+  </data>
+  <data name="SelectTabPage.Text" xml:space="preserve">
+    <value>Select Computer</value>
+  </data>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Message:</value>
+  </data>
+  <data name="RebootCheckBox.Text" xml:space="preserve">
+    <value>Reboot after shutdown</value>
+  </data>
+  <data name="forceCheckBox.Text" xml:space="preserve">
+    <value>Force apps closed</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Action:</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="EmailTabPage.Text" xml:space="preserve">
+    <value>Email Message</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="PopupTabPage.Text" xml:space="preserve">
+    <value>Popup</value>
+  </data>
+  <data name="SelectLabel.Text" xml:space="preserve">
+    <value>Select computer</value>
+  </data>
+  <data name="RebootAll.Text" xml:space="preserve">
+    <value>Reboot after shutdown</value>
+  </data>
+  <data name="PopupLabel.Text" xml:space="preserve">
+    <value>Popup message</value>
+  </data>
+  <data name="EmailLabel.Text" xml:space="preserve">
+    <value>Email message</value>
+  </data>
+  <data name="AllLabel.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="forceAll.Text" xml:space="preserve">
+    <value>Force</value>
+  </data>
+  <data name="AllTabPage.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Edit Action</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>From:</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="EmailLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -222,9 +285,6 @@
   <data name="&gt;&gt;EmailToTextBox.Parent" xml:space="preserve">
     <value>EmailTabPage</value>
   </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>From:</value>
-  </data>
   <data name="EmailLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 3</value>
   </data>
@@ -245,9 +305,6 @@
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>28, 25</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Edit Action</value>
   </data>
   <data name="forceAll.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -309,9 +366,6 @@
   <data name="EmailServerTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 20</value>
   </data>
-  <data name="Label8.Text" xml:space="preserve">
-    <value>Server:</value>
-  </data>
   <data name="SelectTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
@@ -335,9 +389,6 @@
   </data>
   <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
-  </data>
-  <data name="AllTabPage.Text" xml:space="preserve">
-    <value>All</value>
   </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
@@ -374,9 +425,6 @@
   </data>
   <data name="&gt;&gt;RebootAll.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="forceAll.Text" xml:space="preserve">
-    <value>Force</value>
   </data>
   <data name="&gt;&gt;EmailSubjectTextBox.Name" xml:space="preserve">
     <value>EmailSubjectTextBox</value>
@@ -432,17 +480,8 @@
   <data name="EmailToTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
     <value>9</value>
-  </data>
-  <data name="SelectTabPage.Text" xml:space="preserve">
-    <value>Select Computer</value>
-  </data>
-  <data name="AllLabel.Text" xml:space="preserve">
-    <value>Options</value>
   </data>
   <data name="RebootAll.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -450,17 +489,11 @@
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 13</value>
   </data>
-  <data name="EmailLabel.Text" xml:space="preserve">
-    <value>Email message</value>
-  </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="&gt;&gt;SelectLabel.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="PopupLabel.Text" xml:space="preserve">
-    <value>Popup message</value>
   </data>
   <data name="&gt;&gt;Label6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -513,12 +546,6 @@
   <data name="ActionComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>84, 22</value>
   </data>
-  <data name="RebootAll.Text" xml:space="preserve">
-    <value>Reboot after shutdown</value>
-  </data>
-  <data name="SelectLabel.Text" xml:space="preserve">
-    <value>Select computer</value>
-  </data>
   <data name="&gt;&gt;EmailMessageTextBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -530,9 +557,6 @@
   </data>
   <data name="forceAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="PopupTabPage.Text" xml:space="preserve">
-    <value>Popup</value>
   </data>
   <data name="&gt;&gt;EmailServerTextBox.Parent" xml:space="preserve">
     <value>EmailTabPage</value>
@@ -576,9 +600,6 @@
   <data name="AllTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Subject:</value>
-  </data>
   <data name="&gt;&gt;PopupTabPage.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -587,9 +608,6 @@
   </data>
   <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
     <value>EmailTabPage</value>
-  </data>
-  <data name="EmailTabPage.Text" xml:space="preserve">
-    <value>Email Message</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -666,9 +684,6 @@
   <data name="MessageTextBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Title</value>
-  </data>
   <data name="&gt;&gt;OK_Button.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -743,9 +758,6 @@
   </data>
   <data name="&gt;&gt;Label8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Action:</value>
   </data>
   <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -825,9 +837,6 @@
   <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>301, 294</value>
   </data>
-  <data name="forceCheckBox.Text" xml:space="preserve">
-    <value>Force apps closed</value>
-  </data>
   <data name="&gt;&gt;forceAll.Parent" xml:space="preserve">
     <value>AllTabPage</value>
   </data>
@@ -888,9 +897,6 @@
   <data name="OK_Button.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 23</value>
   </data>
-  <data name="RebootCheckBox.Text" xml:space="preserve">
-    <value>Reboot after shutdown</value>
-  </data>
   <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
     <value>EmailTabPage</value>
   </data>
@@ -905,9 +911,6 @@
   </data>
   <data name="&gt;&gt;EmailServerTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Message:</value>
   </data>
   <data name="MessageTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1001,9 +1004,6 @@
   </data>
   <data name="EmailServerTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="OK_Button.Text" xml:space="preserve">
-    <value>OK</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

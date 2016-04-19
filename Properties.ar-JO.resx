@@ -139,9 +139,6 @@
   <data name="lNotes.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 14</value>
   </data>
-  <data name="lNotes.Text" xml:space="preserve">
-    <value>الملاحظات</value>
-  </data>
   <data name="TextBox_Notes.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 95</value>
   </data>
@@ -157,38 +154,20 @@
   <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 14</value>
   </data>
-  <data name="lbGroup.Text" xml:space="preserve">
-    <value>مجموعة</value>
-  </data>
   <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
     <value>435, 30</value>
   </data>
   <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 14</value>
   </data>
-  <data name="lbName.Text" xml:space="preserve">
-    <value>الاسم</value>
-  </data>
-  <data name="MachineName.ErrorMessage" xml:space="preserve">
-    <value>اسم الحاسوب غير صالح</value>
-  </data>
   <data name="MachineName.Location" type="System.Drawing.Point, System.Drawing">
     <value>204, 27</value>
-  </data>
-  <data name="MachineName.ToolTip" xml:space="preserve">
-    <value>هذا هو اسم الجهاز. ادخل اسماً صالحاً، التي تحتوي على احرف وارقام وداش او تسطير اسفل السطر.</value>
   </data>
   <data name="TabProperties.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
   </data>
   <data name="TabProperties.Size" type="System.Drawing.Size, System.Drawing">
     <value>492, 297</value>
-  </data>
-  <data name="TabProperties.Text" xml:space="preserve">
-    <value>خصائص العرض</value>
-  </data>
-  <data name="tHostURI.ErrorMessage" xml:space="preserve">
-    <value>اسم الحاسوب غير صالح</value>
   </data>
   <data name="tHostURI.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 112</value>
@@ -204,9 +183,6 @@
   </data>
   <data name="LabelInterfaces.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 14</value>
-  </data>
-  <data name="LabelInterfaces.Text" xml:space="preserve">
-    <value>واجهة</value>
   </data>
   <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
     <value>232, 223</value>
@@ -238,9 +214,6 @@
   <data name="bCalcBroadcast.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 25</value>
   </data>
-  <data name="bCalcBroadcast.Text" xml:space="preserve">
-    <value>حساب</value>
-  </data>
   <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
     <value>233, 115</value>
   </data>
@@ -252,9 +225,6 @@
   </data>
   <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 14</value>
-  </data>
-  <data name="lbSendTo.Text" xml:space="preserve">
-    <value>ارسال WOL الى</value>
   </data>
   <data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
     <value>204, 54</value>
@@ -268,32 +238,20 @@
   <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 18</value>
   </data>
-  <data name="rbIP.Text" xml:space="preserve">
-    <value>بث الملكية الفكرية</value>
-  </data>
   <data name="lbBroadcast.Location" type="System.Drawing.Point, System.Drawing">
     <value>232, 84</value>
   </data>
   <data name="lbBroadcast.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 14</value>
   </data>
-  <data name="lbBroadcast.Text" xml:space="preserve">
-    <value>بث</value>
-  </data>
-  <data name="TTL.ErrorMessage" xml:space="preserve">
-    <value>TTL غير صالحة</value>
+  <data name="lDescription.Text" xml:space="preserve">
+    <value>يمكنك بشكل اختياري ادخال معرف المستخدم وكلمة السر، والمجال الذي سيتم استخدامه لعمليات ايقاف التشغيل. اترك هذه الحقول فارغة لاستخدام بيانات الاعتماد الافتراضية.</value>
   </data>
   <data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 248</value>
   </data>
-  <data name="UDPPort.ErrorMessage" xml:space="preserve">
-    <value>UDP غير صالح</value>
-  </data>
   <data name="UDPPort.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 220</value>
-  </data>
-  <data name="Broadcast.ErrorMessage" xml:space="preserve">
-    <value>عنوان IP غير صالح. استخدام ###.###.###.###</value>
   </data>
   <data name="Broadcast.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 80</value>
@@ -301,23 +259,14 @@
   <data name="Broadcast.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 21</value>
   </data>
-  <data name="MAC.ErrorMessage" xml:space="preserve">
-    <value>عنوان MAC غير صالح. استخدام ##:##:##:##:##:##</value>
-  </data>
   <data name="MAC.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 23</value>
-  </data>
-  <data name="MAC.ToolTip" xml:space="preserve">
-    <value>ادخل عنوان ماك الماكنة. هذه مستعملة لرسائل الاستنهاض. عناوين الماك الصحيحة 6 من ازواج ارقام الهيكس، مفصولة بواسطة ': 'او' - '. مثال: 01:00:22:32 :af:d 0</value>
   </data>
   <data name="TabWakeUp.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
   </data>
   <data name="TabWakeUp.Size" type="System.Drawing.Size, System.Drawing">
     <value>492, 297</value>
-  </data>
-  <data name="TabWakeUp.Text" xml:space="preserve">
-    <value>استنهاض</value>
   </data>
   <data name="lbRemoteDesktop.Location" type="System.Drawing.Point, System.Drawing">
     <value>146, 62</value>
@@ -334,17 +283,11 @@
   <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 14</value>
   </data>
-  <data name="lbLeaveBlank.Text" xml:space="preserve">
-    <value>* تركة فارغا ل DHCP</value>
-  </data>
   <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
     <value>356, 31</value>
   </data>
   <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 14</value>
-  </data>
-  <data name="lbIP.Text" xml:space="preserve">
-    <value>عنوان IP المحلي</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>249, 62</value>
@@ -358,9 +301,6 @@
   <data name="lbRDPPort.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 14</value>
   </data>
-  <data name="lbRDPPort.Text" xml:space="preserve">
-    <value>RDP منفذ </value>
-  </data>
   <data name="IP.ErrorMessage" xml:space="preserve">
     <value>عنوان IP غير صالح. استخدام ###.###.###.###</value>
   </data>
@@ -370,23 +310,14 @@
   <data name="IP.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 21</value>
   </data>
-  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
-    <value>منفذ RDP غير صالح</value>
-  </data>
   <data name="tRDPPort.Location" type="System.Drawing.Point, System.Drawing">
     <value>250, 59</value>
-  </data>
-  <data name="tRDPPort.ToolTip" xml:space="preserve">
-    <value>منفذ سطح المكتب عن بعد</value>
   </data>
   <data name="TabStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
   </data>
   <data name="TabStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>492, 297</value>
-  </data>
-  <data name="TabStatus.Text" xml:space="preserve">
-    <value>الحالة/التحكم</value>
   </data>
   <data name="tDomain.Location" type="System.Drawing.Point, System.Drawing">
     <value>50, 153</value>
@@ -403,8 +334,83 @@
   <data name="lDomain.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 14</value>
   </data>
+  <data name="TTL.ErrorMessage" xml:space="preserve">
+    <value>TTL غير صالحة</value>
+  </data>
   <data name="lDomain.Text" xml:space="preserve">
     <value>المجال</value>
+  </data>
+  <data name="LabelInterfaces.Text" xml:space="preserve">
+    <value>واجهة</value>
+  </data>
+  <data name="Help_Button.Text" xml:space="preserve">
+    <value>التعليمات</value>
+  </data>
+  <data name="TabShutdown.Text" xml:space="preserve">
+    <value>ايقاف التشغيل</value>
+  </data>
+  <data name="lbLeaveBlank.Text" xml:space="preserve">
+    <value>* تركة فارغا ل DHCP</value>
+  </data>
+  <data name="lbSendTo.Text" xml:space="preserve">
+    <value>ارسال WOL الى</value>
+  </data>
+  <data name="rbIP.Text" xml:space="preserve">
+    <value>بث الملكية الفكرية</value>
+  </data>
+  <data name="tRDPPort.ToolTip" xml:space="preserve">
+    <value>منفذ سطح المكتب عن بعد</value>
+  </data>
+  <data name="MAC.ToolTip" xml:space="preserve">
+    <value>ادخل عنوان ماك الماكنة. هذه مستعملة لرسائل الاستنهاض. عناوين الماك الصحيحة 6 من ازواج ارقام الهيكس، مفصولة بواسطة ': 'او' - '. مثال: 01:00:22:32 :af:d 0</value>
+  </data>
+  <data name="ComboBoxShutdownMethod.Items2" xml:space="preserve">
+    <value>ارث</value>
+  </data>
+  <data name="tHostURI.ErrorMessage" xml:space="preserve">
+    <value>اسم الحاسوب غير صالح</value>
+  </data>
+  <data name="ComboBoxShutdownMethod.Items1" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="LabelShutdownMethod.Text" xml:space="preserve">
+    <value>طريقة ايقاف التشغيل</value>
+  </data>
+  <data name="bCalcBroadcast.Text" xml:space="preserve">
+    <value>حساب</value>
+  </data>
+  <data name="lbRDPPort.Text" xml:space="preserve">
+    <value>RDP منفذ </value>
+  </data>
+  <data name="MachineName.ErrorMessage" xml:space="preserve">
+    <value>اسم الحاسوب غير صالح</value>
+  </data>
+  <data name="MAC.ErrorMessage" xml:space="preserve">
+    <value>عنوان MAC غير صالح. استخدام ##:##:##:##:##:##</value>
+  </data>
+  <data name="TabWakeUp.Text" xml:space="preserve">
+    <value>استنهاض</value>
+  </data>
+  <data name="TabStatus.Text" xml:space="preserve">
+    <value>الحالة/التحكم</value>
+  </data>
+  <data name="Broadcast.ErrorMessage" xml:space="preserve">
+    <value>عنوان IP غير صالح. استخدام ###.###.###.###</value>
+  </data>
+  <data name="lbBroadcast.Text" xml:space="preserve">
+    <value>بث</value>
+  </data>
+  <data name="MachineName.ToolTip" xml:space="preserve">
+    <value>هذا هو اسم الجهاز. ادخل اسماً صالحاً، التي تحتوي على احرف وارقام وداش او تسطير اسفل السطر.</value>
+  </data>
+  <data name="lUserId.Text" xml:space="preserve">
+    <value>معرف المستخدم</value>
+  </data>
+  <data name="TabProperties.Text" xml:space="preserve">
+    <value>خصائص العرض</value>
+  </data>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>سطر اوامر الاغلاق: (اختياري)</value>
   </data>
   <data name="lPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>244, 123</value>
@@ -415,14 +421,17 @@
   <data name="lPassword.Text" xml:space="preserve">
     <value>كلمة السر</value>
   </data>
+  <data name="lbName.Text" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="lbGroup.Text" xml:space="preserve">
+    <value>مجموعة</value>
+  </data>
   <data name="lUserId.Location" type="System.Drawing.Point, System.Drawing">
     <value>244, 89</value>
   </data>
   <data name="lUserId.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 14</value>
-  </data>
-  <data name="lUserId.Text" xml:space="preserve">
-    <value>معرف المستخدم</value>
   </data>
   <data name="lDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>50, 10</value>
@@ -430,23 +439,11 @@
   <data name="lDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>404, 43</value>
   </data>
-  <data name="lDescription.Text" xml:space="preserve">
-    <value>يمكنك بشكل اختياري ادخال معرف المستخدم وكلمة السر، والمجال الذي سيتم استخدامه لعمليات ايقاف التشغيل. اترك هذه الحقول فارغة لاستخدام بيانات الاعتماد الافتراضية.</value>
-  </data>
   <data name="LabelShutdownMethod.Location" type="System.Drawing.Point, System.Drawing">
     <value>368, 72</value>
   </data>
   <data name="LabelShutdownMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 14</value>
-  </data>
-  <data name="LabelShutdownMethod.Text" xml:space="preserve">
-    <value>طريقة ايقاف التشغيل</value>
-  </data>
-  <data name="ComboBoxShutdownMethod.Items1" xml:space="preserve">
-    <value>مخصص</value>
-  </data>
-  <data name="ComboBoxShutdownMethod.Items2" xml:space="preserve">
-    <value>ارث</value>
   </data>
   <data name="ComboBoxShutdownMethod.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 89</value>
@@ -466,9 +463,6 @@
   <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 14</value>
   </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>سطر اوامر الاغلاق: (اختياري)</value>
-  </data>
   <data name="CheckBox_Emergency.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 126</value>
   </data>
@@ -483,9 +477,6 @@
   </data>
   <data name="TabShutdown.Size" type="System.Drawing.Size, System.Drawing">
     <value>492, 297</value>
-  </data>
-  <data name="TabShutdown.Text" xml:space="preserve">
-    <value>ايقاف التشغيل</value>
   </data>
   <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 13</value>
@@ -503,9 +494,6 @@
   <data name="Help_Button.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 25</value>
   </data>
-  <data name="Help_Button.Text" xml:space="preserve">
-    <value>التعليمات</value>
-  </data>
   <data name="Delete_Button.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 356</value>
   </data>
@@ -514,6 +502,21 @@
   </data>
   <data name="Delete_Button.Text" xml:space="preserve">
     <value>حذف</value>
+  </data>
+  <data name="lbIP.Text" xml:space="preserve">
+    <value>عنوان IP المحلي</value>
+  </data>
+  <data name="lNotes.Text" xml:space="preserve">
+    <value>الملاحظات</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>الخصائص</value>
+  </data>
+  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
+    <value>منفذ RDP غير صالح</value>
+  </data>
+  <data name="UDPPort.ErrorMessage" xml:space="preserve">
+    <value>UDP غير صالح</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 8.25pt</value>
@@ -524,9 +527,6 @@
   </data>
   <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>الخصائص</value>
   </data>
   <data name="OK_Button.Location" type="System.Drawing.Point, System.Drawing">
     <value>365, 356</value>
