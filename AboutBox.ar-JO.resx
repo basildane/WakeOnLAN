@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -508,17 +508,24 @@
   <data name="LabelCopyright.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 40</value>
   </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>789, 108</value>
-  </data>
   <data name="LabelCulture.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 74</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>789, 108</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 379</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>716, 144</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>"هذا البرنامج هو برمجيات مجانية، ويمكنك اعادة توزيعه و / او تعديله تحت شروط رخصة جنو العمومية والتي نشرتها منظمة مؤسسة البرمجيات الحرة؛ اما الاصدار 3 من الرخصة، او (باختيارك) اي اصدار لاحق.
+
+يتم توزيع هذا البرنامج على امل ان يكون مفيدا، ولكن دون اي ضمان؛ حتى دون ضمان ضمني التسويق او الملاءمة لغرض معين. راجع رخصة جنو العمومية لمزيد من التفاصيل.
+
+يجب ان تكون قد استلمت نسخة من رخصة جنو العامة مع هذا البرنامج؛ اذا لم يكن كذلك، نرى &lt;http://www.gnu.org/licenses&gt; ."</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ListBox1.ItemHeight" type="System.Int32, mscorlib">
@@ -552,7 +559,7 @@
     <value>344, 116</value>
   </data>
   <data name="GroupBoxUpdates.Text" xml:space="preserve">
-    <value>تحديثات عبر الإنترنت</value>
+    <value>تحديثات عبر الانترنت</value>
   </data>
   <data name="LabelVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 17</value>
@@ -564,7 +571,37 @@
     <value>347, 92</value>
   </data>
   <data name="TextBoxDescription.Text" xml:space="preserve">
-    <value>يرسل "الحزم سحرية" لبطاقات إيثرنت "استنهاظ"الحواسيب عن بعد. إيقاف تشغيل الحواسيب عن بعد. تنفيذ إيقاف تشغيل "عالمية" لكل حاسوب على شبكة الاتصال المحلية في حالات طوارئ.</value>
+    <value>يرسل "الحزم السحرية" لبطاقات ايثرنت "استنهاظ" الحواسيب عن بعد. ايقاف تشغيل الحواسيب عن بعد. تنفيذ ايقاف تشغيل "العالمية" لكل حاسوب على شبكة الاتصال المحلية في حالات طوارئ.</value>
+  </data>
+  <data name="LinkLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 70</value>
+  </data>
+  <data name="LinkLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 14</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 70</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 14</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Aquila الصفحة الرئيسية استنهاظ الشبكة المحلية </value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 46</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 14</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>موقع التكنولوجيا اكويلا:</value>
+  </data>
+  <data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 46</value>
+  </data>
+  <data name="LinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 14</value>
   </data>
   <data name="GroupBoxVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 121</value>
@@ -574,36 +611,6 @@
   </data>
   <data name="GroupBoxVersion.Text" xml:space="preserve">
     <value>الاصدار</value>
-  </data>
-  <data name="LinkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 70</value>
-  </data>
-  <data name="LinkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 14</value>
-  </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 70</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 14</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Aquila WOL الصفحة الرئيسية</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 46</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 14</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>موقع التكنولوجيا أكويلا:</value>
-  </data>
-  <data name="LinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 46</value>
-  </data>
-  <data name="LinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 14</value>
   </data>
   <data name="bDonate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4206,6 +4213,6 @@
     <value>True</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>حول Wake On LAN</value>
+    <value>حول استنهاظ الشبكة المحلية</value>
   </data>
 </root>

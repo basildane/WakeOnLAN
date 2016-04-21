@@ -132,9 +132,6 @@
   <data name="LabelCopyright.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LabelVersion.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
   <data name="&gt;&gt;LabelVersion.Name" xml:space="preserve">
     <value>LabelVersion</value>
   </data>
@@ -153,9 +150,6 @@
   <data name="GroupBoxVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 112</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;lAutomaticUpdate.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
@@ -171,8 +165,14 @@
   <data name="LabelCopyright.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 0, 3, 0</value>
   </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;GroupBoxVersion.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="LabelCopyright.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -183,14 +183,14 @@
   <data name="LinkLabel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>158, 65</value>
   </data>
+  <data name="LabelVersion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="&gt;&gt;LabelCulture.Name" xml:space="preserve">
     <value>LabelCulture</value>
   </data>
   <data name="&gt;&gt;bDonate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pbUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 23</value>
   </data>
   <data name="&gt;&gt;TextBoxDescription.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -221,6 +221,9 @@
   </data>
   <data name="OKButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
+  </data>
+  <data name="OKButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;GroupBoxUpdates.Parent" xml:space="preserve">
     <value>$this</value>
@@ -3779,6 +3782,9 @@
   <data name="&gt;&gt;ListBox1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="pbUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
   <data name="&gt;&gt;GroupBoxUpdates.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -3815,17 +3821,11 @@
   <data name="bDonate.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 32</value>
   </data>
-  <data name="OKButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>733, 498</value>
-  </data>
   <data name="LinkLabel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="&gt;&gt;LabelCopyright.Parent" xml:space="preserve">
     <value>Panel1</value>
-  </data>
-  <data name="LabelCulture.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 18</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
@@ -3851,6 +3851,16 @@
   <data name="LabelCulture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="LinkLabel2.Text" xml:space="preserve">
+    <value>http://wol.aquilatech.com</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, see &lt;http://www.gnu.org/licenses&gt;.</value>
+  </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 352</value>
   </data>
@@ -3863,14 +3873,14 @@
   <data name="LabelCulture.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 69</value>
   </data>
-  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;OKButton.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>820, 528</value>
   </data>
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3878,17 +3888,17 @@
   <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
     <value>GroupBoxVersion</value>
   </data>
-  <data name="ListBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>338, 82</value>
-  </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
   <data name="&gt;&gt;LabelProductName.Name" xml:space="preserve">
     <value>LabelProductName</value>
   </data>
-  <data name="bDonate.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
+  <data name="LabelVersion.Text" xml:space="preserve">
+    <value>[Version]</value>
+  </data>
+  <data name="LabelCulture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 18</value>
   </data>
   <data name="LinkLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -3898,9 +3908,6 @@
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>789, 100</value>
@@ -3929,6 +3936,9 @@
   <data name="GroupBoxUpdates.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
   </data>
+  <data name="bDonate.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
   <data name="LinkLabel1.Text" xml:space="preserve">
     <value>http://www.AquilaTech.com</value>
   </data>
@@ -3950,15 +3960,12 @@
   <data name="LabelCulture.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="lAutomaticUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 16</value>
-  </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
   </data>
-  <data name="LabelCulture.Text" xml:space="preserve">
-    <value>[Culture]</value>
-  <comment>@Invariant</comment></data>
+  <data name="ListBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
   <data name="&gt;&gt;bDonate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -3974,11 +3981,14 @@
   <data name="LinkLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 13</value>
   </data>
-  <data name="&gt;&gt;TextBoxDescription.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="LogoPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 75</value>
   </data>
   <data name="LinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 13</value>
+  </data>
+  <data name="&gt;&gt;LabelVersion.Parent" xml:space="preserve">
+    <value>GroupBoxVersion</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -4004,9 +4014,6 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>Aquila WOL Home Page</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>716, 134</value>
-  </data>
   <data name="TextBoxDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>347, 85</value>
   </data>
@@ -4028,9 +4035,6 @@
   <data name="LabelProductName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 0, 3, 0</value>
   </data>
-  <data name="lAutomaticUpdate.Text" xml:space="preserve">
-    <value>Automatic Updates</value>
-  </data>
   <data name="LogoPictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -4048,7 +4052,7 @@
   </data>
   <data name="LabelProductName.Text" xml:space="preserve">
     <value>[Product Name]</value>
-  <comment>@Invariant</comment></data>
+  </data>
   <data name="TextBoxDescription.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
@@ -4070,6 +4074,9 @@
   <data name="LabelCopyright.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Black, 9.75pt, style=Bold</value>
   </data>
+  <data name="&gt;&gt;GroupBoxVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="lAutomaticUpdate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
@@ -4088,8 +4095,8 @@
   <data name="LabelProductName.Location" type="System.Drawing.Point, System.Drawing">
     <value>107, 12</value>
   </data>
-  <data name="LinkLabel2.Text" xml:space="preserve">
-    <value>http://wol.aquilatech.com</value>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -4145,9 +4152,6 @@
   <data name="LabelProductName.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 20</value>
   </data>
-  <data name="GroupBoxUpdates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 218</value>
-  </data>
   <data name="&gt;&gt;LinkLabel2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -4157,9 +4161,6 @@
   <data name="&gt;&gt;LogoPictureBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="LabelCopyright.Text" xml:space="preserve">
-    <value>[Copyright]</value>
-  <comment>@Invariant</comment></data>
   <data name="LinkLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
   </data>
@@ -4169,8 +4170,8 @@
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 13</value>
   </data>
-  <data name="LogoPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 75</value>
+  <data name="LabelCulture.Text" xml:space="preserve">
+    <value>[Culture]</value>
   </data>
   <data name="LabelVersion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
@@ -4178,8 +4179,11 @@
   <data name="&gt;&gt;lAutomaticUpdate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="OKButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="ListBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 82</value>
+  </data>
+  <data name="TextBoxDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 228</value>
   </data>
   <data name="TextBoxDescription.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4187,8 +4191,8 @@
   <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>820, 528</value>
+  <data name="lAutomaticUpdate.Text" xml:space="preserve">
+    <value>Automatic Updates</value>
   </data>
   <data name="&gt;&gt;LinkLabel2.Parent" xml:space="preserve">
     <value>GroupBoxVersion</value>
@@ -4196,8 +4200,8 @@
   <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pbUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
+  <data name="LabelVersion.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
   </data>
   <data name="&gt;&gt;bDonate.Name" xml:space="preserve">
     <value>bDonate</value>
@@ -4214,8 +4218,8 @@
   <data name="pbUpdate.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
-  <data name="&gt;&gt;LabelVersion.Parent" xml:space="preserve">
-    <value>GroupBoxVersion</value>
+  <data name="LabelCopyright.Text" xml:space="preserve">
+    <value>[Copyright]</value>
   </data>
   <data name="bDonate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4232,23 +4236,23 @@
   <data name="&gt;&gt;GroupBoxUpdates.Name" xml:space="preserve">
     <value>GroupBoxUpdates</value>
   </data>
-  <data name="LabelVersion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="pbUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 23</value>
   </data>
   <data name="GroupBoxVersion.Text" xml:space="preserve">
     <value>Version</value>
   </data>
-  <data name="TextBoxDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 228</value>
+  <data name="GroupBoxUpdates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 218</value>
   </data>
   <data name="bDonate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="LabelCopyright.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 134</value>
   </data>
   <data name="&gt;&gt;pbUpdate.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4259,11 +4263,11 @@
   <data name="&gt;&gt;LogoPictureBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;GroupBoxVersion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="ListBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
+  <data name="OKButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>733, 498</value>
   </data>
   <data name="&gt;&gt;LabelCopyright.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4640,16 +4644,12 @@
   <data name="TextBoxDescription.Text" xml:space="preserve">
     <value>Sends "magic packets" to Ethernet cards to "wake up" remote computers.  Shutdown remote computers.  Perform a "global" shutdown of all computer on the lan in an emergency.</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program; if not, see &lt;http://www.gnu.org/licenses&gt;.</value>
+  <data name="&gt;&gt;TextBoxDescription.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="LabelVersion.Text" xml:space="preserve">
-    <value>[Version]</value>
-  <comment>@Invariant</comment></data>
+  <data name="lAutomaticUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 16</value>
+  </data>
   <data name="&gt;&gt;LabelProductName.Parent" xml:space="preserve">
     <value>Panel1</value>
   </data>

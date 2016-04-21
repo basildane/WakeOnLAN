@@ -679,6 +679,9 @@
     <EmbeddedResource Include="Controls\RegexTextBox.resx">
       <DependentUpon>RegexTextBox.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Crash.ar-JO.resx">
+      <DependentUpon>Crash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Crash.es.resx">
       <DependentUpon>Crash.vb</DependentUpon>
     </EmbeddedResource>
@@ -740,6 +743,7 @@
     <EmbeddedResource Include="Properties.es.resx">
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Property\OptionProperties.ar-JO.resx" />
     <EmbeddedResource Include="Property\OptionProperties.es.resx" />
     <EmbeddedResource Include="Property\Options.ar-JO.resx">
       <DependentUpon>Options.vb</DependentUpon>
@@ -747,6 +751,7 @@
     <EmbeddedResource Include="Property\Options.es.resx">
       <DependentUpon>Options.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportStrings.ar-JO.resx" />
     <EmbeddedResource Include="Report\ReportStrings.es.resx" />
     <EmbeddedResource Include="Report\ReportViewer.es.resx">
       <DependentUpon>ReportViewer.vb</DependentUpon>
@@ -761,6 +766,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Strings\Strings.es.resx">
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SafeMode.ar-JO.resx">
+      <DependentUpon>SafeMode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SafeMode.es.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>

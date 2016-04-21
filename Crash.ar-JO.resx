@@ -117,91 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AppVersion" xml:space="preserve">
-    <value>الاصدار</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="OK_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 3</value>
   </data>
-  <data name="AppVersionDescription" xml:space="preserve">
-    <value>اصدار التطبيق</value>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>موافق</value>
   </data>
-  <data name="AutoCheck" xml:space="preserve">
-    <value>التحقق تلقائيا من وجود تحديثات</value>
+  <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="Broadcast_Address" xml:space="preserve">
-    <value>عنوان البث</value>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>الغاء الامر</value>
   </data>
-  <data name="Broadcast_AddressDescription" xml:space="preserve">
-    <value>ادخال بث الملكية الفكرية العنوان لـ WOL بث الحزم</value>
+  <data name="lTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 20</value>
   </data>
-  <data name="cat_Application" xml:space="preserve">
-    <value>التطبيق</value>
+  <data name="lTitle.Text" xml:space="preserve">
+    <value>حدث استثناء غير متوقع.</value>
   </data>
-  <data name="cat_Emergency" xml:space="preserve">
-    <value>اعدادات حالات الطوارئ</value>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>رسالة اعلام بالخطا</value>
   </data>
-  <data name="cat_WOL" xml:space="preserve">
-    <value>WOL</value>
+  <data name="GroupBox2.Text" xml:space="preserve">
+    <value>تتبع المكدس</value>
   </data>
-  <data name="dbPath" xml:space="preserve">
-    <value>مسار قاعدة البيانات</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
   </data>
-  <data name="Culture" xml:space="preserve">
-    <value>الثقافة</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="Delay" xml:space="preserve">
-    <value>تاخير الوقت</value>
-  </data>
-  <data name="DelayDescription" xml:space="preserve">
-    <value>التاخير الزمني الافتراضي لايقاف التشغيل.</value>
-  </data>
-  <data name="EmergencyDelay" xml:space="preserve">
-    <value>تاخير الوقت</value>
-  </data>
-  <data name="EmergencyDelayDescription" xml:space="preserve">
-    <value>التاخير الزمني لايقاف التشغيل في حالات الطوارئ.</value>
-  </data>
-  <data name="EmergencyShutdown" xml:space="preserve">
-    <value>الرسالة الافتراضية</value>
-  </data>
-  <data name="EmergencyShutdownDescription" xml:space="preserve">
-    <value>رسالة ايقاف التشغيل في حالات الطوارئ.</value>
-  </data>
-  <data name="Enable_Sound" xml:space="preserve">
-    <value>تمكين الصوت</value>
-  </data>
-  <data name="Enable_SoundDescription" xml:space="preserve">
-    <value>تشغيل صوت عند خادم المراقبة ياتي عبر الانترنت، او توقف عن الاستجابة.</value>
-  </data>
-  <data name="Force" xml:space="preserve">
-    <value>فرض ايقاف التشغيل</value>
-  </data>
-  <data name="ForceDescription" xml:space="preserve">
-    <value>فرض الخادم عن بعد لايقاف التشغيل. سيتم فقدان الملفات التي لم يتم حفظها.</value>
-  </data>
-  <data name="Language" xml:space="preserve">
-    <value>اللغة</value>
-  </data>
-  <data name="Reboot" xml:space="preserve">
-    <value>اعادة الاقلاع</value>
-  </data>
-  <data name="RebootDescription" xml:space="preserve">
-    <value>اذا كان هذا صحيحا، ثم اعادة الاقلاع بعد ايقاف التشغيل.</value>
-  </data>
-  <data name="Shutdown" xml:space="preserve">
-    <value>الرسالة الافتراضية</value>
-  </data>
-  <data name="ShutdownDescription" xml:space="preserve">
-    <value>رسالة ايقاف التشغيل الافتراضية.</value>
-  </data>
-  <data name="Threads" xml:space="preserve">
-    <value>عدد مؤشرات الترابط</value>
-  </data>
-  <data name="UDPPortDescription" xml:space="preserve">
-    <value>ادخل رقم منفذ UDP لرسائل البث.</value>
-  </data>
-  <data name="UDPPort" xml:space="preserve">
-    <value>منفذ UDP</value>
-  </data>
-  <data name="cat_Shutdown" xml:space="preserve">
-    <value>ايقاف التشغيل</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>تحطم</value>
   </data>
 </root>
