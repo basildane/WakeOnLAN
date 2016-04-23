@@ -2,7 +2,7 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <ResolveComReferenceSilent>True</ResolveComReferenceSilent>
-	<ProjectType>Local</ProjectType>
+    <ProjectType>Local</ProjectType>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0062DCB9-BD1C-4E87-9267-E373B23FFF37}</ProjectGuid>
@@ -790,6 +790,7 @@
     <None Include="Documentation\software_update_available.png" />
     <None Include="Documentation\Splash.xcf" />
     <None Include="LICENSE" />
+    <None Include="README.md" />
     <None Include="Resources\flags\finland_16x16.png" />
     <None Include="Resources\down.wav" />
     <None Include="Resources\connected.ico" />

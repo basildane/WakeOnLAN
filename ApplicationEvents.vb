@@ -86,7 +86,6 @@ Namespace My
                     Settings.Language = "en-US"
                 Else
                     Dim language As String = regKey.GetValue("Language", "en-US", RegistryValueOptions.None)
-                    Dim language As String = regKey.GetValue("Language", "en-US", RegistryValueOptions.None)
 
                     Select Case language
                         Case "ar_JO"
