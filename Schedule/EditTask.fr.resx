@@ -121,9 +121,6 @@
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
   </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>domain\userid</value>
-  </data>
   <data name="PasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 66</value>
   </data>
@@ -145,12 +142,6 @@
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 13</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Login de l'utilisateur:</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Options de sécurité</value>
-  </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>53, 24</value>
   </data>
@@ -163,20 +154,8 @@
   <data name="TabPage1.Text" xml:space="preserve">
     <value>Général</value>
   </data>
-  <data name="ColumnHeader3.Text" xml:space="preserve">
-    <value>Déclencheur</value>
-  </data>
-  <data name="ColumnHeader4.Text" xml:space="preserve">
-    <value>Détails</value>
-  </data>
-  <data name="TriggerDeleteButton.Text" xml:space="preserve">
-    <value>Supprimer</value>
-  </data>
   <data name="TriggerEditButton.Text" xml:space="preserve">
     <value>Editer…</value>
-  </data>
-  <data name="TriggerNewButton.Text" xml:space="preserve">
-    <value>Nouveau…</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 13</value>
@@ -184,17 +163,44 @@
   <data name="Label5.Text" xml:space="preserve">
     <value>Spécifier les conditions qui déclencheront cet événement</value>
   </data>
+  <data name="ButtonCancel.Text" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="TriggerDeleteButton.Text" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>domain\userid</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Détails</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>Déclencheur</value>
+  </data>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>Détails</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Editer la tâche</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Login de l'utilisateur:</value>
+  </data>
+  <data name="ActionEditButton.Text" xml:space="preserve">
+    <value>Editer...</value>
+  </data>
   <data name="TabPage2.Text" xml:space="preserve">
     <value>Déclencheurs</value>
   </data>
   <data name="ActionDeleteButton.Text" xml:space="preserve">
     <value>Supprimer</value>
   </data>
-  <data name="ActionEditButton.Text" xml:space="preserve">
-    <value>Editer...</value>
-  </data>
   <data name="ActionNewButton.Text" xml:space="preserve">
     <value>Nouveau…</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Options de sécurité</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>348, 13</value>
@@ -202,13 +208,7 @@
   <data name="Label6.Text" xml:space="preserve">
     <value>Spécifier l'action qui sera exécutée quand cet événement est déclenché</value>
   </data>
-  <data name="ColumnHeader2.Text" xml:space="preserve">
-    <value>Détails</value>
-  </data>
-  <data name="ButtonCancel.Text" xml:space="preserve">
-    <value>Annuler</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Editer la tâche</value>
+  <data name="TriggerNewButton.Text" xml:space="preserve">
+    <value>Nouveau…</value>
   </data>
 </root>

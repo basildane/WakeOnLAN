@@ -16,7 +16,6 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 Imports System.ComponentModel
-Imports System.Windows.Forms
 Imports Microsoft.Win32
 
 Public Class Options
@@ -44,7 +43,7 @@ Public Class Options
 
         If _savedDbPath <> My.Settings.dbPath Then
             Try
-                regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", True)
+                regKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", True)
                 regKey.SetValue("Database", IO.Path.GetDirectoryName(My.Settings.dbPath), RegistryValueKind.String)
                 regKey.Close()
 

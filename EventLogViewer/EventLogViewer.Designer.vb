@@ -41,65 +41,65 @@ Partial Class EventLogViewer
         '
         'ToolStrip1
         '
+        resources.ApplyResources(Me.ToolStrip1, "ToolStrip1")
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnErrors, Me.ButtonSeparator1, Me.btnWarnings, Me.ButtonSeparator2, Me.btnMessages, Me.SourceSeparator, Me.SourceLabel, Me.SourceCombo, Me.FindSeparator, Me.FindLabel, Me.FindText, Me.NotFoundLabel})
-        resources.ApplyResources(Me.ToolStrip1, "ToolStrip1")
         Me.ToolStrip1.Name = "ToolStrip1"
         '
         'btnErrors
         '
+        resources.ApplyResources(Me.btnErrors, "btnErrors")
         Me.btnErrors.Checked = True
         Me.btnErrors.CheckOnClick = True
         Me.btnErrors.CheckState = System.Windows.Forms.CheckState.Checked
         Me.btnErrors.Image = Global.autoFocus.Components.My.Resources.Resources.ErrorGif
-        resources.ApplyResources(Me.btnErrors, "btnErrors")
         Me.btnErrors.Name = "btnErrors"
         '
         'ButtonSeparator1
         '
+        resources.ApplyResources(Me.ButtonSeparator1, "ButtonSeparator1")
         Me.ButtonSeparator1.Margin = New System.Windows.Forms.Padding(-1, 0, 1, 0)
         Me.ButtonSeparator1.Name = "ButtonSeparator1"
-        resources.ApplyResources(Me.ButtonSeparator1, "ButtonSeparator1")
         '
         'btnWarnings
         '
+        resources.ApplyResources(Me.btnWarnings, "btnWarnings")
         Me.btnWarnings.Checked = True
         Me.btnWarnings.CheckOnClick = True
         Me.btnWarnings.CheckState = System.Windows.Forms.CheckState.Checked
         Me.btnWarnings.Image = Global.autoFocus.Components.My.Resources.Resources.WarningGif
-        resources.ApplyResources(Me.btnWarnings, "btnWarnings")
         Me.btnWarnings.Name = "btnWarnings"
         '
         'ButtonSeparator2
         '
+        resources.ApplyResources(Me.ButtonSeparator2, "ButtonSeparator2")
         Me.ButtonSeparator2.Margin = New System.Windows.Forms.Padding(-1, 0, 1, 0)
         Me.ButtonSeparator2.Name = "ButtonSeparator2"
-        resources.ApplyResources(Me.ButtonSeparator2, "ButtonSeparator2")
         '
         'btnMessages
         '
+        resources.ApplyResources(Me.btnMessages, "btnMessages")
         Me.btnMessages.Checked = True
         Me.btnMessages.CheckOnClick = True
         Me.btnMessages.CheckState = System.Windows.Forms.CheckState.Checked
         Me.btnMessages.Image = Global.autoFocus.Components.My.Resources.Resources.MessageGif
-        resources.ApplyResources(Me.btnMessages, "btnMessages")
         Me.btnMessages.Name = "btnMessages"
         '
         'SourceSeparator
         '
+        resources.ApplyResources(Me.SourceSeparator, "SourceSeparator")
         Me.SourceSeparator.Margin = New System.Windows.Forms.Padding(-1, 0, 1, 0)
         Me.SourceSeparator.Name = "SourceSeparator"
-        resources.ApplyResources(Me.SourceSeparator, "SourceSeparator")
         '
         'SourceLabel
         '
-        Me.SourceLabel.Name = "SourceLabel"
         resources.ApplyResources(Me.SourceLabel, "SourceLabel")
+        Me.SourceLabel.Name = "SourceLabel"
         '
         'SourceCombo
         '
-        Me.SourceCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         resources.ApplyResources(Me.SourceCombo, "SourceCombo")
+        Me.SourceCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.SourceCombo.Items.AddRange(New Object() {resources.GetString("SourceCombo.Items")})
         Me.SourceCombo.Margin = New System.Windows.Forms.Padding(1, 0, 2, 0)
         Me.SourceCombo.Name = "SourceCombo"
@@ -107,37 +107,37 @@ Partial Class EventLogViewer
         '
         'FindSeparator
         '
+        resources.ApplyResources(Me.FindSeparator, "FindSeparator")
         Me.FindSeparator.Margin = New System.Windows.Forms.Padding(0, 0, 1, 0)
         Me.FindSeparator.Name = "FindSeparator"
-        resources.ApplyResources(Me.FindSeparator, "FindSeparator")
         '
         'FindLabel
         '
-        Me.FindLabel.Name = "FindLabel"
         resources.ApplyResources(Me.FindLabel, "FindLabel")
+        Me.FindLabel.Name = "FindLabel"
         '
         'FindText
         '
+        resources.ApplyResources(Me.FindText, "FindText")
         Me.FindText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.FindText.ForeColor = System.Drawing.SystemColors.WindowText
         Me.FindText.Name = "FindText"
         Me.FindText.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        resources.ApplyResources(Me.FindText, "FindText")
         '
         'NotFoundLabel
         '
+        resources.ApplyResources(Me.NotFoundLabel, "NotFoundLabel")
         Me.NotFoundLabel.Image = Global.autoFocus.Components.My.Resources.Resources.NotFoundGif
         Me.NotFoundLabel.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
         Me.NotFoundLabel.Name = "NotFoundLabel"
-        resources.ApplyResources(Me.NotFoundLabel, "NotFoundLabel")
         '
         'DataGridView1
         '
+        resources.ApplyResources(Me.DataGridView1, "DataGridView1")
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
-        resources.ApplyResources(Me.DataGridView1, "DataGridView1")
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize

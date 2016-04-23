@@ -82,17 +82,19 @@ Namespace My
                 If regKey Is Nothing Then
                     regKey = Registry.LocalMachine.OpenSubKey("Software\WOW6432Node\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadSubTree)
                 End If
-
                 If regKey Is Nothing Then
                     Settings.Language = "en-US"
                 Else
                     Dim language As String = regKey.GetValue("Language", "en-US", RegistryValueOptions.None)
+                    Dim language As String = regKey.GetValue("Language", "en-US", RegistryValueOptions.None)
 
                     Select Case language
-                        Case "en"
-                            language = "en-US"
+                        Case "ar_JO"
+                            language = "ar-JO"
                         Case "de"
                             language = "de-DE"
+                        Case "en"
+                            language = "en-US"
                         Case "es"
                             language = "es-ES"
                         Case "fi"

@@ -118,14 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Text" xml:space="preserve">
-    <value>Muokkaa toimintoa</value>
-  </data>
   <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Muokkaa toimintoa</value>
+  </data>
+  <data name="forceAll.Text" xml:space="preserve">
+    <value>Pakota</value>
+  </data>
   <data name="AllLabel.Text" xml:space="preserve">
     <value>Vaihtoehdot</value>
+  </data>
+  <data name="EmailLabel.Text" xml:space="preserve">
+    <value>Sähköpostiviesti</value>
+  </data>
+  <data name="forceCheckBox.Text" xml:space="preserve">
+    <value>Pakota</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Toiminto:</value>
+  </data>
+  <data name="SelectLabel.Text" xml:space="preserve">
+    <value>Valitse tietokone</value>
+  </data>
+  <data name="PopupLabel.Text" xml:space="preserve">
+    <value>Ponnahdusviesti</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Peruuta</value>
@@ -133,37 +151,19 @@
   <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 13</value>
   </data>
-  <data name="EmailLabel.Text" xml:space="preserve">
-    <value>Sähköpostiviesti</value>
-  </data>
   <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 17</value>
-  </data>
-  <data name="forceAll.Text" xml:space="preserve">
-    <value>Pakota</value>
   </data>
   <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 17</value>
   </data>
-  <data name="forceCheckBox.Text" xml:space="preserve">
-    <value>Pakota</value>
-  </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Toiminto:</value>
   </data>
   <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 13</value>
   </data>
-  <data name="PopupLabel.Text" xml:space="preserve">
-    <value>Ponnahdusviesti</value>
-  </data>
   <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 13</value>
-  </data>
-  <data name="SelectLabel.Text" xml:space="preserve">
-    <value>Valitse tietokone</value>
   </data>
 </root>

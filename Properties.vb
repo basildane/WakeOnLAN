@@ -16,7 +16,6 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
-Imports System.Windows.Forms
 Imports System.Net.NetworkInformation
 Imports Machines
 

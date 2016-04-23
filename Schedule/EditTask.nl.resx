@@ -118,29 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Text" xml:space="preserve">
-    <value>Wijzig taak</value>
-  </data>
   <data name="ActionDeleteButton.Text" xml:space="preserve">
     <value>Wis</value>
-  </data>
-  <data name="ActionEditButton.Text" xml:space="preserve">
-    <value>Wijzig...</value>
   </data>
   <data name="ActionNewButton.Text" xml:space="preserve">
     <value>Nieuw...</value>
   </data>
-  <data name="ButtonCancel.Text" xml:space="preserve">
-    <value>Annuleer</value>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Beveiligingsopties</value>
   </data>
   <data name="ColumnHeader1.Text" xml:space="preserve">
     <value>Actie</value>
-  </data>
-  <data name="ColumnHeader3.Text" xml:space="preserve">
-    <value>Schema</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Beveiligingsopties</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Naam</value>
@@ -160,9 +148,6 @@
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 13</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Gebruikersnaam:</value>
-  </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 65</value>
   </data>
@@ -178,17 +163,32 @@
   <data name="Label5.Text" xml:space="preserve">
     <value>Specificeer de condities voor dit schema.</value>
   </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Specificeer de actie welke wordt uitgevoerd door dit schema.</value>
+  <data name="ButtonCancel.Text" xml:space="preserve">
+    <value>Annuleer</value>
+  </data>
+  <data name="TriggerDeleteButton.Text" xml:space="preserve">
+    <value>Verwijder</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>domein\gebruikersid</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>Schema</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Wijzig taak</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Gebruikersnaam:</value>
+  </data>
+  <data name="ActionEditButton.Text" xml:space="preserve">
+    <value>Wijzig...</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 35</value>
   </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 13</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>domein\gebruikersid</value>
   </data>
   <data name="PasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>122, 62</value>
@@ -202,14 +202,14 @@
   <data name="TabPage3.Text" xml:space="preserve">
     <value>Acties</value>
   </data>
-  <data name="TriggerDeleteButton.Text" xml:space="preserve">
-    <value>Verwijder</value>
-  </data>
-  <data name="TriggerEditButton.Text" xml:space="preserve">
-    <value>Wijzig...</value>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Specificeer de actie welke wordt uitgevoerd door dit schema.</value>
   </data>
   <data name="TriggerNewButton.Text" xml:space="preserve">
     <value>Nieuw...</value>
+  </data>
+  <data name="TriggerEditButton.Text" xml:space="preserve">
+    <value>Wijzig...</value>
   </data>
   <data name="UserIDTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>122, 32</value>

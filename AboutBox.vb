@@ -25,7 +25,7 @@ Public NotInheritable Class AboutBox
     Private Sub AboutBox1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         LabelProductName.Text = My.Resources.Strings.Title
         LabelVersion.Text = String.Format(My.Resources.Strings.Version, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
-        LabelCopyright.Text = My.Application.Info.Copyright
+        LabelCopyright.Text = My.Resources.Strings.Copyright
         LabelCulture.Text = Globalization.CultureInfo.CurrentUICulture.NativeName.ToString()
 
         If My.Application.Info.Version.Revision > 0 Then

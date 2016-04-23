@@ -117,17 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnErrors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
   <data name="btnErrors.Text" xml:space="preserve">
     <value>0 Ошибка</value>
   </data>
   <data name="btnErrors.ToolTipText" xml:space="preserve">
     <value>0 Ошибка</value>
   </data>
-  <data name="btnMessages.Text" xml:space="preserve">
-    <value>0 Нормально</value>
-  </data>
-  <data name="btnMessages.ToolTipText" xml:space="preserve">
-    <value>0 Нормально</value>
+  <data name="btnWarnings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
   </data>
   <data name="btnWarnings.Text" xml:space="preserve">
     <value>0 Внимание</value>
@@ -135,16 +136,34 @@
   <data name="btnWarnings.ToolTipText" xml:space="preserve">
     <value>0 Внимание</value>
   </data>
+  <data name="btnMessages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="btnMessages.Text" xml:space="preserve">
+    <value>0 Нормально</value>
+  </data>
+  <data name="SourceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="SourceLabel.Text" xml:space="preserve">
+    <value>Начало:</value>
+  </data>
+  <data name="FindLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 20</value>
+  </data>
   <data name="FindLabel.Text" xml:space="preserve">
     <value>Найдено:</value>
+  </data>
+  <data name="FindText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 23</value>
+  </data>
+  <data name="NotFoundLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
   </data>
   <data name="NotFoundLabel.Text" xml:space="preserve">
     <value>Не найдено</value>
   </data>
   <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
     <value>Ничего нет соответствующего фильтру.</value>
-  </data>
-  <data name="SourceLabel.Text" xml:space="preserve">
-    <value>Начало:</value>
   </data>
 </root>

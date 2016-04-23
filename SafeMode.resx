@@ -124,11 +124,12 @@
   <data name="ButtonNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;ButtonYes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
   </data>
   <data name="&gt;&gt;ButtonNo.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -155,12 +156,6 @@
   <data name="&gt;&gt;ButtonYes.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ButtonNo.Name" xml:space="preserve">
-    <value>ButtonNo</value>
-  </data>
-  <data name="ButtonYes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 13</value>
-  </data>
   <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 64</value>
   </data>
@@ -176,9 +171,8 @@
   <data name="ButtonNo.Text" xml:space="preserve">
     <value>&amp;No</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
+  <data name="ButtonYes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 13</value>
   </data>
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -192,11 +186,9 @@
   <data name="PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>AutoSize</value>
   </data>
-  <data name="&gt;&gt;ButtonYes.Parent" xml:space="preserve">
-    <value>Panel1</value>
+  <data name="ButtonYes.Text" xml:space="preserve">
+    <value>&amp;Yes</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SafeMode</value>
   </data>
   <data name="&gt;&gt;Label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -219,8 +211,8 @@
   <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 113</value>
   </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="ButtonNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>399, 13</value>
@@ -249,11 +241,11 @@
   <data name="&gt;&gt;ButtonNo.Parent" xml:space="preserve">
     <value>Panel1</value>
   </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AquilaWOL</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SafeMode</value>
   </data>
   <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -261,4 +253,5 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+    <value>ar-JO</value>
 </root>

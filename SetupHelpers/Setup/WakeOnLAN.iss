@@ -37,6 +37,7 @@ AppCopyright=Copyright Aquila Technology
 
 [Languages]
 Name: "en";    MessagesFile: "compiler:Default.isl"
+Name: "ar_JO"; MessagesFile: "compiler:Languages\Arabic.isl"
 Name: "de";    MessagesFile: "compiler:Languages\German.isl"
 Name: "es";    MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "fi";    MessagesFile: "compiler:Languages\Finnish.isl"
@@ -82,6 +83,7 @@ Source: "{#rootFolder}\bin\Release\hu\*"; DestDir: "{app}\hu"; Flags: ignorevers
 Source: "{#rootFolder}\bin\Release\nl\*"; DestDir: "{app}\nl"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#rootFolder}\bin\Release\ro\*"; DestDir: "{app}\ro"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#rootFolder}\bin\Release\ru\*"; DestDir: "{app}\ru"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#rootFolder}\bin\Release\ar-JO\*"; DestDir: "{app}\ar-JO"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#rootFolder}\bin\Release\pt-BR\*"; DestDir: "{app}\pt-BR"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#rootFolder}\bin\Release\zh-TW\*"; DestDir: "{app}\zh-TW"; Flags: ignoreversion recursesubdirs createallsubdirs
 

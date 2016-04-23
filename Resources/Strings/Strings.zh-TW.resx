@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,334 +59,334 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="AbortFailed" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="AbortFailed" xml:space="preserve">
     <value>中止 {0} 錯誤訊息: {1}</value>
     <comment>Abort {machine} Error: {error message}</comment>
   </data>
-  <data name="Aborting" xml:space="preserve">
+	<data name="Aborting" xml:space="preserve">
     <value>中止</value>
     <comment>Aborting...</comment>
   </data>
-  <data name="AbortingShutdown" xml:space="preserve">
+	<data name="AbortingShutdown" xml:space="preserve">
     <value>取消 {0} 關機</value>
     <comment>Aborting shutdown command on {0}</comment>
   </data>
-  <data name="AbortShutdown" xml:space="preserve">
+	<data name="AbortShutdown" xml:space="preserve">
     <value>停止系統關機</value>
     <comment>Abort Shutdown in progress...</comment>
   </data>
-  <data name="AbortSuccess" xml:space="preserve">
+	<data name="AbortSuccess" xml:space="preserve">
     <value>成功停止主機關機： {0}</value>
     <comment>Abort {machine} successful</comment>
   </data>
-  <data name="actions_email" xml:space="preserve">
+	<data name="actions_email" xml:space="preserve">
 		<value>寄一封電子郵件</value>
 	</data>
-  <data name="actions_hibernate" xml:space="preserve">
+	<data name="actions_hibernate" xml:space="preserve">
 		<value>主機休眠</value>
 	</data>
-  <data name="actions_hibernateAll" xml:space="preserve">
+	<data name="actions_hibernateAll" xml:space="preserve">
 		<value>所有主機休眠</value>
 	</data>
-  <data name="actions_popup" xml:space="preserve">
+	<data name="actions_popup" xml:space="preserve">
 		<value>彈跳訊息</value>
 	</data>
-  <data name="actions_shutdown" xml:space="preserve">
+	<data name="actions_shutdown" xml:space="preserve">
 		<value>電腦關機</value>
 	</data>
-  <data name="actions_shutdownAll" xml:space="preserve">
+	<data name="actions_shutdownAll" xml:space="preserve">
 		<value>全部電腦關機</value>
 	</data>
-  <data name="actions_sleep" xml:space="preserve">
+	<data name="actions_sleep" xml:space="preserve">
 		<value>主機睡眠</value>
 	</data>
-  <data name="actions_sleepAll" xml:space="preserve">
+	<data name="actions_sleepAll" xml:space="preserve">
 		<value>所有主機睡眠</value>
 	</data>
-  <data name="actions_start" xml:space="preserve">
+	<data name="actions_start" xml:space="preserve">
 		<value>啟動電腦</value>
 	</data>
-  <data name="actions_startAll" xml:space="preserve">
+	<data name="actions_startAll" xml:space="preserve">
 		<value>啟動全部電腦</value>
 	</data>
-  <data name="AllMachines" xml:space="preserve">
+	<data name="AllMachines" xml:space="preserve">
     <value>電腦群組</value>
     <comment>All machines</comment>
   </data>
-  <data name="AreYouSure" xml:space="preserve">
+	<data name="AreYouSure" xml:space="preserve">
     <value>您確定要刪除主機嗎?</value>
     <comment>Are you sure?</comment>
   </data>
-  <data name="BeginShutdown" xml:space="preserve">
+	<data name="BeginShutdown" xml:space="preserve">
     <value>開始停止</value>
     <comment>Begin shutdown...</comment>
   </data>
-  <data name="ChangesLost" xml:space="preserve">
+	<data name="ChangesLost" xml:space="preserve">
     <value>您的變更會遺失</value>
     <comment>Your changes will be lost.</comment>
   </data>
-  <data name="ChangesNotSaved" xml:space="preserve">
+	<data name="ChangesNotSaved" xml:space="preserve">
     <value>沒有存檔</value>
     <comment>Changes have not been saved</comment>
   </data>
-  <data name="DefaultEmergency" xml:space="preserve">
+	<data name="DefaultEmergency" xml:space="preserve">
     <value>立即關機!</value>
     <comment>Emergency shutdown!</comment>
   </data>
-  <data name="DefaultMessage" xml:space="preserve">
+	<data name="DefaultMessage" xml:space="preserve">
     <value>正在停止主機關機!</value>
     <comment>System is shutting down!</comment>
   </data>
-  <data name="Delete" xml:space="preserve">
+	<data name="Delete" xml:space="preserve">
     <value>刪除 {0} 記錄?</value>
     <comment>Delete {0} records?</comment>
   </data>
-  <data name="Done" xml:space="preserve">
+	<data name="Done" xml:space="preserve">
     <value>完成</value>
     <comment>Done</comment>
   </data>
-  <data name="EmergencyShutdown" xml:space="preserve">
+	<data name="EmergencyShutdown" xml:space="preserve">
     <value>開始立即關機</value>
     <comment>Emergency shutdown started</comment>
   </data>
-  <data name="ErrorMsg" xml:space="preserve">
+	<data name="ErrorMsg" xml:space="preserve">
     <value>錯誤 {0}</value>
     <comment>Error: {0}</comment>
   </data>
-  <data name="errUserID" xml:space="preserve">
+	<data name="errUserID" xml:space="preserve">
 		<value>您必須設定一組帳號密碼來執行排程</value>
 	</data>
-  <data name="ExportedTo" xml:space="preserve">
+	<data name="ExportedTo" xml:space="preserve">
     <value>設定Port [{0}]</value>
     <comment>Settings were exported to {0}</comment>
   </data>
-  <data name="HostNotResponding" xml:space="preserve">
+	<data name="HostNotResponding" xml:space="preserve">
     <value>主機 {0} 沒有回應</value>
     <comment>Host not responding</comment>
   </data>
-  <data name="ImmediateReboot" xml:space="preserve">
+	<data name="ImmediateReboot" xml:space="preserve">
     <value>你確定立即重新啟動這台電腦?</value>
     <comment>This will IMMEDIATELY reboot THIS machine.  Are you sure?</comment>
   </data>
-  <data name="ImmediateShutdown" xml:space="preserve">
+	<data name="ImmediateShutdown" xml:space="preserve">
     <value>你確定立即將這台電腦關機嗎?</value>
     <comment>This will IMMEDIATELY shutdown THIS machine.  Are you sure?</comment>
   </data>
-  <data name="ImportedFrom" xml:space="preserve">
+	<data name="ImportedFrom" xml:space="preserve">
     <value>設定Port從 {0}</value>
     <comment>Settings were imported from {0}</comment>
   </data>
-  <data name="interfaceInfo" xml:space="preserve">
+	<data name="interfaceInfo" xml:space="preserve">
 		<value>關於IPV4的訊息 {0}.{1}</value>
 	</data>
-  <data name="isNew" xml:space="preserve">
+	<data name="isNew" xml:space="preserve">
     <value>新的</value>
     <comment>New</comment>
   </data>
-  <data name="lit_at" xml:space="preserve">
+	<data name="lit_at" xml:space="preserve">
 		<value>在 {0} 開啟 {1}</value>
 	</data>
-  <data name="lit_atDays" xml:space="preserve">
+	<data name="lit_atDays" xml:space="preserve">
 		<value>在 {0} 每 {1} 天</value>
 	</data>
-  <data name="lit_atWeeks" xml:space="preserve">
+	<data name="lit_atWeeks" xml:space="preserve">
 		<value>在 {0} 每 {1} 每 {2} 周，啟動 {3}</value>
 	</data>
-  <data name="lit_Disabled" xml:space="preserve">
+	<data name="lit_Disabled" xml:space="preserve">
 		<value>關閉</value>
 	</data>
-  <data name="lit_Enabled" xml:space="preserve">
+	<data name="lit_Enabled" xml:space="preserve">
 		<value>開啟</value>
 	</data>
-  <data name="lit_Error" xml:space="preserve">
+	<data name="lit_Error" xml:space="preserve">
 		<value>錯誤</value>
 	</data>
-  <data name="lit_false" xml:space="preserve">
+	<data name="lit_false" xml:space="preserve">
 		<value>False</value>
 	</data>
-  <data name="lit_Invalid" xml:space="preserve">
+	<data name="lit_Invalid" xml:space="preserve">
 		<value>無效的指令</value>
 	</data>
-  <data name="lit_multipleTriggers" xml:space="preserve">
+	<data name="lit_multipleTriggers" xml:space="preserve">
 		<value>定義多個觸發程序</value>
 	</data>
-  <data name="lit_Never" xml:space="preserve">
+	<data name="lit_Never" xml:space="preserve">
 		<value>從來沒有</value>
 	</data>
-  <data name="lit_None" xml:space="preserve">
+	<data name="lit_None" xml:space="preserve">
 		<value>沒有</value>
 	</data>
-  <data name="lit_noRights" xml:space="preserve">
+	<data name="lit_noRights" xml:space="preserve">
 		<value>{0} 不會出現已經閱讀訪問權限的WOL調度數據庫。授予訪問權限？</value>
 	</data>
-  <data name="lit_notFound" xml:space="preserve">
+	<data name="lit_notFound" xml:space="preserve">
 		<value>未發現機器</value>
 	</data>
-  <data name="lit_Queued" xml:space="preserve">
+	<data name="lit_Queued" xml:space="preserve">
 		<value>排隊</value>
 	</data>
-  <data name="lit_Ready" xml:space="preserve">
+	<data name="lit_Ready" xml:space="preserve">
 		<value>準備</value>
 	</data>
-  <data name="lit_Running" xml:space="preserve">
+	<data name="lit_Running" xml:space="preserve">
 		<value>正在運作</value>
 	</data>
-  <data name="lit_true" xml:space="preserve">
+	<data name="lit_true" xml:space="preserve">
 		<value>True</value>
 	</data>
-  <data name="lit_Unknown" xml:space="preserve">
+	<data name="lit_Unknown" xml:space="preserve">
 		<value>未知!</value>
 	</data>
-  <data name="OffLine" xml:space="preserve">
+	<data name="OffLine" xml:space="preserve">
     <value>離線</value>
     <comment>Host is OFFLINE</comment>
   </data>
-  <data name="OnLine" xml:space="preserve">
+	<data name="OnLine" xml:space="preserve">
     <value>上線</value>
     <comment>Host is ONLINE</comment>
   </data>
-  <data name="Opt_BroadcastAddress" xml:space="preserve">
+	<data name="Opt_BroadcastAddress" xml:space="preserve">
     <value>子網路遮罩</value>
     <comment>Broadcast Address</comment>
   </data>
-  <data name="Opt_BroadcastDesc" xml:space="preserve">
+	<data name="Opt_BroadcastDesc" xml:space="preserve">
     <value>輸入廣播IP位址 喚醒廣播封包</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
-  <data name="Pausing" xml:space="preserve">
+	<data name="Pausing" xml:space="preserve">
     <value>暫停</value>
     <comment>Pausing...</comment>
   </data>
-  <data name="Polling" xml:space="preserve">
+	<data name="Polling" xml:space="preserve">
     <value>輪迴 {0}</value>
     <comment>Polling {0}</comment>
   </data>
-  <data name="Properties" xml:space="preserve">
+	<data name="Properties" xml:space="preserve">
     <value>屬性 - {0}</value>
     <comment>Properties - {0}</comment>
   </data>
-  <data name="ResponseTime" xml:space="preserve">
+	<data name="ResponseTime" xml:space="preserve">
     <value>{0} 回應時間 {1} 毫秒</value>
     <comment>{host} Response Time {count} ms</comment>
   </data>
-  <data name="SelectFile" xml:space="preserve">
+	<data name="SelectFile" xml:space="preserve">
     <value>選擇一個網路開機設定檔 導入</value>
     <comment>Select a WakeOnLan settings file to import</comment>
   </data>
-  <data name="SendShutdown" xml:space="preserve">
+	<data name="SendShutdown" xml:space="preserve">
     <value>發送 Shutdows 命令 {0}</value>
     <comment>Sending shutdown command to {host}</comment>
   </data>
-  <data name="SentTo" xml:space="preserve">
+	<data name="SentTo" xml:space="preserve">
     <value>發送喚醒包 {0} {1} ...</value>
     <comment>Sent Wake Up packet to {host} at {mac}...</comment>
   </data>
-  <data name="ShutdownFailed" xml:space="preserve">
+	<data name="ShutdownFailed" xml:space="preserve">
     <value>關機失敗 {0} {1} …</value>
     <comment>Shutdown failed for {host} {error}</comment>
   </data>
-  <data name="ShutDownSeconds" xml:space="preserve">
+	<data name="ShutDownSeconds" xml:space="preserve">
     <value>電腦將於 {0} 秒後關機 </value>
     <comment>Shutting down in {0} seconds...</comment>
   </data>
-  <data name="ShutdownSuccessful" xml:space="preserve">
+	<data name="ShutdownSuccessful" xml:space="preserve">
     <value>成功關機 {0} </value>
     <comment>Shutdown {host} successful</comment>
   </data>
-  <data name="ShuttingDown" xml:space="preserve">
+	<data name="ShuttingDown" xml:space="preserve">
     <value>關閉</value>
     <comment>Shutting down...</comment>
   </data>
-  <data name="Skipping" xml:space="preserve">
+	<data name="Skipping" xml:space="preserve">
     <value>跳至</value>
     <comment>Skipping...</comment>
   </data>
-  <data name="Successful" xml:space="preserve">
+	<data name="Successful" xml:space="preserve">
     <value>成功的</value>
     <comment>Successful</comment>
   </data>
-  <data name="Title" xml:space="preserve">
+	<data name="Title" xml:space="preserve">
     <value>網路喚醒</value>
     <comment>Wake on LAN</comment>
   </data>
-  <data name="triggerDaily" xml:space="preserve">
+	<data name="triggerDaily" xml:space="preserve">
 		<value>每日</value>
 	</data>
-  <data name="triggerMonthly" xml:space="preserve">
+	<data name="triggerMonthly" xml:space="preserve">
 		<value>每月</value>
 	</data>
-  <data name="triggerOneTime" xml:space="preserve">
+	<data name="triggerOneTime" xml:space="preserve">
 		<value>一次性</value>
 	</data>
-  <data name="triggerWeekly" xml:space="preserve">
+	<data name="triggerWeekly" xml:space="preserve">
 		<value>每周</value>
 	</data>
-  <data name="useDefault" xml:space="preserve">
+	<data name="useDefault" xml:space="preserve">
 		<value>使用預設</value>
 	</data>
-  <data name="Version" xml:space="preserve">
+	<data name="Version" xml:space="preserve">
     <value>版本： {0}.{1:00}.{2}</value>
     <comment>Version</comment>
   </data>
-  <data name="WhereSave" xml:space="preserve">
+	<data name="WhereSave" xml:space="preserve">
     <value>你欲儲存位置的位置</value>
     <comment>Where do you want to save the settings?</comment>
   </data>

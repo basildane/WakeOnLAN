@@ -118,58 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Text" xml:space="preserve">
-    <value>Eigenschaften</value>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Abbrechen</value>
   </data>
   <data name="Broadcast.ErrorMessage" xml:space="preserve">
     <value>Ungültige IP Adresse. Muster   ###.###.###.###</value>
     <comment>Invalid IP Address.  Use ###.###.###.###</comment>
-  </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
-  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 17</value>
-  </data>
-  <data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>Notfallabschaltung für diesen Rechner einschalten?</value>
-  </data>
-  <data name="Delete_Button.Text" xml:space="preserve">
-    <value>Löschen</value>
-  </data>
-  <data name="IP.ErrorMessage" xml:space="preserve">
-    <value>Ungültige IP Adresse. Muster   ###.###.###.###</value>
-    <comment>Invalid IP Address.  Use ###.###.###.###</comment>
-  </data>
-  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 54</value>
-  </data>
-  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 13</value>
-  </data>
-  <data name="lbGroup.Text" xml:space="preserve">
-    <value>Gruppe</value>
-  </data>
-  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 29</value>
-  </data>
-  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="lbIP.Text" xml:space="preserve">
-    <value>IP Adresse</value>
-  </data>
-  <data name="lbMAC.Text" xml:space="preserve">
-    <value>MAC Adresse</value>
-  </data>
-  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 13</value>
-  </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Kommandozeile zum Runterfahren:</value>
-  </data>
-  <data name="lNotes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 88</value>
   </data>
   <data name="MAC.ErrorMessage" xml:space="preserve">
     <value>Ungültige MAC Adresse. Muster   ##:##:##:##:##:##</value>
@@ -179,8 +133,54 @@
     <value>Ungültiger Rechnername</value>
     <comment>Invalid computer name</comment>
   </data>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 17</value>
+  </data>
+  <data name="CheckBox_Emergency.Text" xml:space="preserve">
+    <value>Notfallabschaltung für diesen Rechner einschalten?</value>
+  </data>
+  <data name="lbGroup.Text" xml:space="preserve">
+    <value>Gruppe</value>
+  </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="lbIP.Text" xml:space="preserve">
+    <value>IP Adresse</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Eigenschaften</value>
+  </data>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>Kommandozeile zum Runterfahren:</value>
+  </data>
+  <data name="IP.ErrorMessage" xml:space="preserve">
+    <value>Ungültige IP Adresse. Muster   ###.###.###.###</value>
+    <comment>Invalid IP Address.  Use ###.###.###.###</comment>
+  </data>
   <data name="tHostURI.ErrorMessage" xml:space="preserve">
     <value>Ungültiger Rechnername</value>
     <comment>Invalid computer name</comment>
+  </data>
+  <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 54</value>
+  </data>
+  <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 29</value>
+  </data>
+  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="lbMAC.Text" xml:space="preserve">
+    <value>MAC Adresse</value>
+  </data>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 13</value>
+  </data>
+  <data name="lNotes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 88</value>
   </data>
 </root>
