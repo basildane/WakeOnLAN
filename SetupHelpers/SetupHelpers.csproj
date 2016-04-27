@@ -48,71 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Setup\scripts\Example setup.iss" />
-    <Content Include="Setup\scripts\isxdl\isxdl.dll" />
-    <Content Include="Setup\scripts\isxdl\isxdl.iss" />
-    <Content Include="Setup\scripts\products.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx11.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx11lp.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx11sp1.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx20.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx20lp.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx20sp1.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx20sp1lp.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx20sp2.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx20sp2lp.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx35.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx35lp.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx35sp1.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx35sp1lp.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx40client.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx40full.iss" />
-    <Content Include="Setup\scripts\products\dotnetfx45.iss" />
-    <Content Include="Setup\scripts\products\dotnetfxversion.iss" />
-    <Content Include="Setup\scripts\products\fileversion.iss" />
-    <Content Include="Setup\scripts\products\ie6.iss" />
-    <Content Include="Setup\scripts\products\iis.iss" />
-    <Content Include="Setup\scripts\products\jet4sp8.iss" />
-    <Content Include="Setup\scripts\products\kb835732.iss" />
-    <Content Include="Setup\scripts\products\mdac28.iss" />
-    <Content Include="Setup\scripts\products\msi20.iss" />
-    <Content Include="Setup\scripts\products\msi31.iss" />
-    <Content Include="Setup\scripts\products\msi45.iss" />
-    <Content Include="Setup\scripts\products\msiproduct.iss" />
-    <Content Include="Setup\scripts\products\sql2005express.iss" />
-    <Content Include="Setup\scripts\products\sql2008express.iss" />
-    <Content Include="Setup\scripts\products\sqlcompact35sp2.iss" />
-    <Content Include="Setup\scripts\products\stringversion.iss" />
-    <Content Include="Setup\scripts\products\vcredist2005.iss" />
-    <Content Include="Setup\scripts\products\vcredist2008.iss" />
-    <Content Include="Setup\scripts\products\vcredist2010.iss" />
-    <Content Include="Setup\scripts\products\vcredist2012.iss" />
-    <Content Include="Setup\scripts\products\vcredist2013.iss" />
-    <Content Include="Setup\scripts\products\wic.iss" />
-    <Content Include="Setup\scripts\products\winversion.iss" />
-    <Content Include="Setup\WakeOnLAN.iss" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
-    <None Include="Setup\scripts\isxdl\czech.ini" />
-    <None Include="Setup\scripts\isxdl\english.ini" />
-    <None Include="Setup\scripts\isxdl\french.ini" />
-    <None Include="Setup\scripts\isxdl\french2.ini" />
-    <None Include="Setup\scripts\isxdl\french3.ini" />
-    <None Include="Setup\scripts\isxdl\german.ini" />
-    <None Include="Setup\scripts\isxdl\german2.ini" />
-    <None Include="Setup\scripts\isxdl\german3.ini" />
-    <None Include="Setup\scripts\isxdl\norwegian.ini" />
-    <None Include="Setup\scripts\isxdl\polish.ini" />
-    <None Include="Setup\scripts\isxdl\portugues.ini" />
-    <None Include="Setup\scripts\isxdl\portuguese.ini" />
-    <None Include="Setup\scripts\isxdl\russian.ini" />
-    <None Include="Setup\scripts\isxdl\spanish.ini" />
-    <None Include="Setup\scripts\isxdl\swedish.ini" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Setup\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
