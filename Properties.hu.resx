@@ -118,38 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Mégsem</value>
-  </data>
-  <data name="Broadcast.ErrorMessage" xml:space="preserve">
-    <value>Érvénytelen IP cím.  Használja így: ###.###.###.###</value>
-  </data>
-  <data name="MAC.ErrorMessage" xml:space="preserve">
-    <value>Érvénytelen MAC cím.  használja így: ##:##:##:##:##:##</value>
-  </data>
-  <data name="Help_Button.Text" xml:space="preserve">
-    <value>Súgó</value>
-  </data>
-  <data name="lbLeaveBlank.Text" xml:space="preserve">
-    <value>*hagyja üresen DHCP -nél</value>
-  </data>
-  <data name="lbSendTo.Text" xml:space="preserve">
-    <value>WOL küldése ide:</value>
-  </data>
-  <data name="rbIP.Text" xml:space="preserve">
-    <value>Üzenetszórási IP cím</value>
-  </data>
-  <data name="MAC.ToolTip" xml:space="preserve">
-    <value>Adja meg a számítógép MAC (fizikai) címét.  Ezt használja feléébresztési üzenet.  Érvényes MAC címek 6 pár hexadecimális számból állnak, ':' -tal vagy '-' -lel elválasztva. Például 01:00:22:32:af:d0</value>
-  </data>
-  <data name="tHostURI.ErrorMessage" xml:space="preserve">
-    <value>Érvénytelen gépnév</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Tulajdonságok</value>
   </data>
   <data name="bCalcBroadcast.Text" xml:space="preserve">
     <value>Számolás</value>
   </data>
-  <data name="MachineName.ErrorMessage" xml:space="preserve">
-    <value>Érvénytelen gépnév</value>
+  <data name="Broadcast.ErrorMessage" xml:space="preserve">
+    <value>Érvénytelen IP cím.  Használja így: ###.###.###.###</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Mégsem</value>
   </data>
   <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 17</value>
@@ -157,17 +136,11 @@
   <data name="CheckBox_Emergency.Text" xml:space="preserve">
     <value>Vészleállítás?</value>
   </data>
-  <data name="lbName.Text" xml:space="preserve">
-    <value>Név</value>
-  </data>
-  <data name="lbGroup.Text" xml:space="preserve">
-    <value>Csoport</value>
-  </data>
   <data name="Delete_Button.Text" xml:space="preserve">
     <value>Törlés</value>
   </data>
-  <data name="lbIP.Text" xml:space="preserve">
-    <value>IP cím</value>
+  <data name="Help_Button.Text" xml:space="preserve">
+    <value>Súgó</value>
   </data>
   <data name="IP.ErrorMessage" xml:space="preserve">
     <value>Érvénytelen IP cím.  Használja így: ###.###.###.###</value>
@@ -178,11 +151,17 @@
   <data name="lbBroadcast.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 13</value>
   </data>
+  <data name="lbBroadcast.Text" xml:space="preserve">
+    <value>Üzenetszórás</value>
+  </data>
   <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 54</value>
   </data>
   <data name="lbGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
+  </data>
+  <data name="lbGroup.Text" xml:space="preserve">
+    <value>Csoport</value>
   </data>
   <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
     <value>63, 29</value>
@@ -190,8 +169,14 @@
   <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 13</value>
   </data>
+  <data name="lbIP.Text" xml:space="preserve">
+    <value>IP cím</value>
+  </data>
   <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
+  </data>
+  <data name="lbLeaveBlank.Text" xml:space="preserve">
+    <value>*hagyja üresen DHCP -nél</value>
   </data>
   <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
     <value>44, 26</value>
@@ -208,6 +193,9 @@
   <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 13</value>
   </data>
+  <data name="lbName.Text" xml:space="preserve">
+    <value>Név</value>
+  </data>
   <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 109</value>
   </data>
@@ -217,26 +205,32 @@
   <data name="lbNetbios.Text" xml:space="preserve">
     <value>Gép URI</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Tulajdonságok</value>
-  </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Kikapcsolási parancs:</value>
-  </data>
-  <data name="MachineName.ToolTip" xml:space="preserve">
-    <value>Ez a számítógép neve. Adjon meg érvényes nevet, tartalmazhat betűt, számot, kötőjelet, alsóvonást.</value>
-  </data>
-  <data name="lbBroadcast.Text" xml:space="preserve">
-    <value>Üzenetszórás</value>
-  </data>
   <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 52</value>
   </data>
   <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 13</value>
   </data>
+  <data name="lbSendTo.Text" xml:space="preserve">
+    <value>WOL küldése ide:</value>
+  </data>
   <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 13</value>
+  </data>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>Kikapcsolási parancs:</value>
+  </data>
+  <data name="MAC.ErrorMessage" xml:space="preserve">
+    <value>Érvénytelen MAC cím.  használja így: ##:##:##:##:##:##</value>
+  </data>
+  <data name="MAC.ToolTip" xml:space="preserve">
+    <value>Adja meg a számítógép MAC (fizikai) címét.  Ezt használja feléébresztési üzenet.  Érvényes MAC címek 6 pár hexadecimális számból állnak, ':' -tal vagy '-' -lel elválasztva. Például 01:00:22:32:af:d0</value>
+  </data>
+  <data name="MachineName.ErrorMessage" xml:space="preserve">
+    <value>Érvénytelen gépnév</value>
+  </data>
+  <data name="MachineName.ToolTip" xml:space="preserve">
+    <value>Ez a számítógép neve. Adjon meg érvényes nevet, tartalmazhat betűt, számot, kötőjelet, alsóvonást.</value>
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>Rendben</value>
@@ -244,7 +238,13 @@
   <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 17</value>
   </data>
+  <data name="rbIP.Text" xml:space="preserve">
+    <value>Üzenetszórási IP cím</value>
+  </data>
   <data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 52</value>
+  </data>
+  <data name="tHostURI.ErrorMessage" xml:space="preserve">
+    <value>Érvénytelen gépnév</value>
   </data>
 </root>

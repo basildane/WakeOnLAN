@@ -59,6 +59,7 @@ Imports System.Runtime.Remoting.Messaging
     Public Property Password As String = String.Empty
     Public Property Domain As String = String.Empty
     Public Property ShutdownMethod As ShutdownMethods = ShutdownMethods.WMI
+    Public Property RepeatWOL As Boolean = False
 
     <XmlIgnore()> Public Status As StatusCodes = StatusCodes.Unknown
     <NonSerialized> <XmlIgnore()> Public Reply As PingReply
