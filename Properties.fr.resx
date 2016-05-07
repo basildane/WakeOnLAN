@@ -118,58 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Text" xml:space="preserve">
-    <value>Propriétés</value>
-  </data>
-  <data name="bCalcBroadcast.Text" xml:space="preserve">
-    <value>Calculer</value>
-  </data>
-  <data name="Broadcast.ErrorMessage" xml:space="preserve">
-    <value>Adresse IP invalide. Utiliser ###.###.###.###</value>
-  </data>
   <data name="Cancel_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Annuler</value>
   </data>
-  <data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 17</value>
-  </data>
-  <data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>Arrêt d'urgence ?</value>
-  </data>
-  <data name="ComboBoxShutdownMethod.Items1" xml:space="preserve">
-    <value>Personnaliser</value>
-  </data>
-  <data name="Delete_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="Delete_Button.Text" xml:space="preserve">
-    <value>Supprimer</value>
-  </data>
   <data name="Group.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="Help_Button.Text" xml:space="preserve">
-    <value>Aide</value>
-  </data>
-  <data name="IP.ErrorMessage" xml:space="preserve">
-    <value>Adresse IP invalide. Utiliser ###.###.###.###</value>
-  </data>
-  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="LabelShutdownMethod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 13</value>
-  </data>
-  <data name="LabelShutdownMethod.Text" xml:space="preserve">
-    <value>Méthode d'arrêt</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 54</value>
   </data>
@@ -178,24 +136,6 @@
   </data>
   <data name="lbGroup.Text" xml:space="preserve">
     <value>Groupe</value>
-  </data>
-  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 29</value>
-  </data>
-  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="lbIP.Text" xml:space="preserve">
-    <value>Adresse IP</value>
-  </data>
-  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 13</value>
-  </data>
-  <data name="lbLeaveBlank.Text" xml:space="preserve">
-    <value>* laisser vide pour le DHCP</value>
-  </data>
-  <data name="lbMAC.Text" xml:space="preserve">
-    <value>Adresse MAC</value>
   </data>
   <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 28</value>
@@ -206,6 +146,36 @@
   <data name="lbName.Text" xml:space="preserve">
     <value>Nom</value>
   </data>
+  <data name="MachineName.ErrorMessage" xml:space="preserve">
+    <value>Nom d'ordinateur invalide</value>
+  </data>
+  <data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="MachineName.ToolTip" xml:space="preserve">
+    <value>Ceci est le nom de la machine. Entrer un nom valide contenant des lettres, nombres, points ou des tirets bas.</value>
+  </data>
+  <data name="TabProperties.Text" xml:space="preserve">
+    <value>Afficher les propriétés</value>
+  </data>
+  <data name="tHostURI.ErrorMessage" xml:space="preserve">
+    <value>Nom d'ordinateur invalide</value>
+  </data>
+  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 207</value>
+  </data>
+  <data name="lbUDP.Text" xml:space="preserve">
+    <value>Port UDP</value>
+  </data>
+  <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 230</value>
+  </data>
+  <data name="lbMAC.Text" xml:space="preserve">
+    <value>Adresse MAC</value>
+  </data>
+  <data name="bCalcBroadcast.Text" xml:space="preserve">
+    <value>Calculer</value>
+  </data>
   <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 109</value>
   </data>
@@ -214,9 +184,6 @@
   </data>
   <data name="lbNetbios.Text" xml:space="preserve">
     <value>Adresse de l'hôte</value>
-  </data>
-  <data name="lbRDPPort.Text" xml:space="preserve">
-    <value>Port RDP</value>
   </data>
   <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 54</value>
@@ -227,23 +194,89 @@
   <data name="lbSendTo.Text" xml:space="preserve">
     <value>Envoyer WOL à</value>
   </data>
-  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 13</value>
+  <data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 52</value>
   </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Ligne de commande pour l'arrêt (optionnel) :</value>
+  <data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 17</value>
   </data>
-  <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 230</value>
+  <data name="rbURI.Text" xml:space="preserve">
+    <value>URl</value>
   </data>
-  <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 207</value>
+  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 17</value>
   </data>
-  <data name="lbUDP.Text" xml:space="preserve">
-    <value>Port UDP</value>
+  <data name="rbIP.Text" xml:space="preserve">
+    <value>Adresse IP de diffusion</value>
   </data>
-  <data name="lDescription.Text" xml:space="preserve">
-    <value>Vous pouvez saisir un nom d'utilisateur, un mot de passe et un domaine qui seront utiliser pour les opérations d'arrêt. Laissez ces champs vides pour utiliser les paramètres par défaut.</value>
+  <data name="TTL.ErrorMessage" xml:space="preserve">
+    <value>TTL invalide</value>
+  </data>
+  <data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 230</value>
+  </data>
+  <data name="UDPPort.ErrorMessage" xml:space="preserve">
+    <value>UDP invalide</value>
+  </data>
+  <data name="Broadcast.ErrorMessage" xml:space="preserve">
+    <value>Adresse IP invalide. Utiliser ###.###.###.###</value>
+  </data>
+  <data name="MAC.ErrorMessage" xml:space="preserve">
+    <value>Adresse MAC invalide. Utiliser ##:##:##:##:##:##</value>
+  </data>
+  <data name="MAC.ToolTip" xml:space="preserve">
+    <value>Entrer l'adresse MAC de la machine. Elle sera utilisée pour les messages de Réveil. Les adresses MAC valides sont 6 paires de chiffres hexadécimal, séparé par ':' ou '-'. Exemple: 01:00:22:32:af:d0</value>
+  </data>
+  <data name="TabWakeUp.Text" xml:space="preserve">
+    <value>Réveiller</value>
+  </data>
+  <data name="lbLeaveBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
+  </data>
+  <data name="lbLeaveBlank.Text" xml:space="preserve">
+    <value>* laisser vide pour le DHCP</value>
+  </data>
+  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 29</value>
+  </data>
+  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="lbIP.Text" xml:space="preserve">
+    <value>Adresse IP</value>
+  </data>
+  <data name="lbRDPPort.Text" xml:space="preserve">
+    <value>Port RDP</value>
+  </data>
+  <data name="IP.ErrorMessage" xml:space="preserve">
+    <value>Adresse IP invalide. Utiliser ###.###.###.###</value>
+  </data>
+  <data name="IP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
+    <value>Port RDP invalide</value>
+  </data>
+  <data name="TabStatus.Text" xml:space="preserve">
+    <value>Status / Contrôle</value>
+  </data>
+  <data name="tDomain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 145</value>
+  </data>
+  <data name="tDomain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 20</value>
+  </data>
+  <data name="tPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 114</value>
+  </data>
+  <data name="tPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 20</value>
+  </data>
+  <data name="tUserId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 83</value>
+  </data>
+  <data name="tUserId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 20</value>
   </data>
   <data name="lDomain.Location" type="System.Drawing.Point, System.Drawing">
     <value>42, 148</value>
@@ -272,85 +305,52 @@
   <data name="lUserId.Text" xml:space="preserve">
     <value>Nom d'utilisateur</value>
   </data>
-  <data name="MAC.ErrorMessage" xml:space="preserve">
-    <value>Adresse MAC invalide. Utiliser ##:##:##:##:##:##</value>
+  <data name="lDescription.Text" xml:space="preserve">
+    <value>Vous pouvez saisir un nom d'utilisateur, un mot de passe et un domaine qui seront utiliser pour les opérations d'arrêt. Laissez ces champs vides pour utiliser les paramètres par défaut.</value>
   </data>
-  <data name="MAC.ToolTip" xml:space="preserve">
-    <value>Entrer l'adresse MAC de la machine. Elle sera utilisée pour les messages de Réveil. Les adresses MAC valides sont 6 paires de chiffres hexadécimal, séparé par ':' ou '-'. Exemple: 01:00:22:32:af:d0</value>
+  <data name="LabelShutdownMethod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
   </data>
-  <data name="MachineName.ErrorMessage" xml:space="preserve">
-    <value>Nom d'ordinateur invalide</value>
+  <data name="LabelShutdownMethod.Text" xml:space="preserve">
+    <value>Méthode d'arrêt</value>
   </data>
-  <data name="MachineName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="MachineName.ToolTip" xml:space="preserve">
-    <value>Ceci est le nom de la machine. Entrer un nom valide contenant des lettres, nombres, points ou des tirets bas.</value>
-  </data>
-  <data name="OK_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="rbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 17</value>
-  </data>
-  <data name="rbIP.Text" xml:space="preserve">
-    <value>Adresse IP de diffusion</value>
-  </data>
-  <data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 52</value>
-  </data>
-  <data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 17</value>
-  </data>
-  <data name="rbURI.Text" xml:space="preserve">
-    <value>URl</value>
-  </data>
-  <data name="TabProperties.Text" xml:space="preserve">
-    <value>Afficher les propriétés</value>
-  </data>
-  <data name="TabShutdown.Text" xml:space="preserve">
-    <value>Eteindre</value>
-  </data>
-  <data name="TabStatus.Text" xml:space="preserve">
-    <value>Status / Contrôle</value>
-  </data>
-  <data name="TabWakeUp.Text" xml:space="preserve">
-    <value>Réveiller</value>
-  </data>
-  <data name="tDomain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 145</value>
-  </data>
-  <data name="tDomain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 20</value>
+  <data name="ComboBoxShutdownMethod.Items1" xml:space="preserve">
+    <value>Personnaliser</value>
   </data>
   <data name="TextBox_Command.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="tHostURI.ErrorMessage" xml:space="preserve">
-    <value>Nom d'ordinateur invalide</value>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 13</value>
   </data>
-  <data name="tPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 114</value>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>Ligne de commande pour l'arrêt (optionnel) :</value>
   </data>
-  <data name="tPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 20</value>
+  <data name="CheckBox_Emergency.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
-  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
-    <value>Port RDP invalide</value>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 17</value>
   </data>
-  <data name="TTL.ErrorMessage" xml:space="preserve">
-    <value>TTL invalide</value>
+  <data name="CheckBox_Emergency.Text" xml:space="preserve">
+    <value>Arrêt d'urgence ?</value>
   </data>
-  <data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 230</value>
+  <data name="TabShutdown.Text" xml:space="preserve">
+    <value>Eteindre</value>
   </data>
-  <data name="tUserId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 83</value>
+  <data name="Help_Button.Text" xml:space="preserve">
+    <value>Aide</value>
   </data>
-  <data name="tUserId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 20</value>
+  <data name="Delete_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
-  <data name="UDPPort.ErrorMessage" xml:space="preserve">
-    <value>UDP invalide</value>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Propriétés</value>
+  </data>
+  <data name="OK_Button.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
 </root>

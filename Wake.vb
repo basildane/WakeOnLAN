@@ -15,11 +15,12 @@
 '
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
+Imports System.Collections.Generic
 Imports Machines
 
 Module Wake
     Dim repeatTimer As Timer = New Timer()
-    Dim repeatMachine As Machine
+    Dim repeatMachine As New List(Of Machine)
 
     Public Sub WakeUp(ByVal machine As Machine)
         Dim host As String
@@ -36,10 +37,12 @@ Module Wake
                 host = machine.Netbios
             End If
 
-            If (machine.RepeatWOL) Then
-                repeatMachine = machine
+            If (machine.KeepAlive) Then
+                If Not repeatMachine.Contains(machine) Then
+                    repeatMachine.Add(machine)
+                End If
                 If repeatTimer.Enabled = False Then
-                    repeatTimer.Interval = 30000
+                    repeatTimer.Interval = My.Settings.keepAliveInterval
                     repeatTimer.Enabled = True
                     AddHandler repeatTimer.Tick, AddressOf OnTimerEvent
                 End If
@@ -56,14 +59,15 @@ Module Wake
 
     End Sub
     Private Sub OnTimerEvent(ByVal sender As Object, ByVal e As EventArgs)
-        Debug.WriteLine("repeat {0} {1} {2}", DateTime.Now.ToLongTimeString(), DateTime.Now.ToLongDateString(), repeatMachine.Name)
-        If (repeatMachine.Method = 0) Then
-            host = repeatMachine.Broadcast
-        Else
-            host = repeatMachine.Netbios
-        End If
+        For Each machine As Machine In repeatMachine
+            If (machine.Method = 0) Then
+                host = machine.Broadcast
+            Else
+                host = machine.Netbios
+            End If
 
-        WOL.AquilaWolLibrary.WakeUp(repeatMachine.MAC, host, repeatMachine.UDPPort, repeatMachine.TTL, repeatMachine.Adapter)
+            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, machine.Adapter)
+        Next
     End Sub
 
 End Module

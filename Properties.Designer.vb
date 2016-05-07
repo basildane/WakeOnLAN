@@ -52,6 +52,7 @@ Partial Class Properties
         Me.TabProperties = New System.Windows.Forms.TabPage()
         Me.TextBox_Notes = New System.Windows.Forms.TextBox()
         Me.TabWakeUp = New System.Windows.Forms.TabPage()
+        Me.cbKeepAlive = New System.Windows.Forms.CheckBox()
         Me.tHostURI = New WakeOnLan.Controls.RegExTextBox()
         Me.ComboBoxAdapters = New System.Windows.Forms.ComboBox()
         Me.LabelInterfaces = New System.Windows.Forms.Label()
@@ -78,7 +79,6 @@ Partial Class Properties
         Me.ComboBoxShutdownMethod = New System.Windows.Forms.ComboBox()
         Me.Help_Button = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.cbRepeat = New System.Windows.Forms.CheckBox()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabProperties.SuspendLayout()
@@ -260,7 +260,7 @@ Partial Class Properties
         '
         'TabWakeUp
         '
-        Me.TabWakeUp.Controls.Add(Me.cbRepeat)
+        Me.TabWakeUp.Controls.Add(Me.cbKeepAlive)
         Me.TabWakeUp.Controls.Add(Me.tHostURI)
         Me.TabWakeUp.Controls.Add(Me.ComboBoxAdapters)
         Me.TabWakeUp.Controls.Add(Me.LabelInterfaces)
@@ -280,6 +280,12 @@ Partial Class Properties
         resources.ApplyResources(Me.TabWakeUp, "TabWakeUp")
         Me.TabWakeUp.Name = "TabWakeUp"
         Me.TabWakeUp.UseVisualStyleBackColor = True
+        '
+        'cbKeepAlive
+        '
+        resources.ApplyResources(Me.cbKeepAlive, "cbKeepAlive")
+        Me.cbKeepAlive.Name = "cbKeepAlive"
+        Me.cbKeepAlive.UseVisualStyleBackColor = True
         '
         'tHostURI
         '
@@ -457,12 +463,6 @@ Partial Class Properties
         Me.Help_Button.Name = "Help_Button"
         Me.Help_Button.UseVisualStyleBackColor = True
         '
-        'cbRepeat
-        '
-        resources.ApplyResources(Me.cbRepeat, "cbRepeat")
-        Me.cbRepeat.Name = "cbRepeat"
-        Me.cbRepeat.UseVisualStyleBackColor = True
-        '
         'Properties
         '
         Me.AcceptButton = Me.OK_Button
@@ -544,5 +544,5 @@ Partial Class Properties
     Friend WithEvents lPassword As System.Windows.Forms.Label
     Friend WithEvents lUserId As System.Windows.Forms.Label
     Friend WithEvents lDescription As System.Windows.Forms.Label
-    Friend WithEvents cbRepeat As CheckBox
+    Friend WithEvents cbKeepAlive As CheckBox
 End Class

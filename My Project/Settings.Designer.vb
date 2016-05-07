@@ -522,6 +522,15 @@ Namespace My
                 Me("ShowStatusBar") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("30000")>  _
+        Public ReadOnly Property keepAliveInterval() As Integer
+            Get
+                Return CType(Me("keepAliveInterval"),Integer)
+            End Get
+        End Property
     End Class
 End Namespace
 
