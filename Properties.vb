@@ -41,6 +41,7 @@ Public Class Properties
 
             m.Broadcast = Broadcast.Text
             m.Netbios = tHostURI.Text
+            m.KeepAlive = cbKeepAlive.Checked
             m.Emergency = CheckBox_Emergency.Checked
             m.ShutdownCommand = TextBox_Command.Text
             m.Group = Group.Text
@@ -56,7 +57,7 @@ Public Class Properties
             m.Domain = tDomain.Text
             m.ShutdownMethod = ComboBoxShutdownMethod.SelectedIndex
             Machines.Add(m)
-            
+
             Machines.Save()
             DialogResult = DialogResult.OK
             Close()
@@ -77,6 +78,7 @@ Public Class Properties
         _previousHostName = String.Empty
         Text = String.Format(My.Resources.Strings.Properties, My.Resources.Strings.isNew)
         Delete_Button.Visible = False
+        cbKeepAlive.Checked = False
         IP.Text = String.Empty
         Broadcast.Text = Net.IPAddress.Broadcast.ToString()
         rbIP.Checked = True
@@ -101,6 +103,7 @@ Public Class Properties
         IP.Text = m.IP
         Broadcast.Text = m.Broadcast
         tHostURI.Text = m.Netbios
+        cbKeepAlive.Checked = m.KeepAlive
         CheckBox_Emergency.Checked = m.Emergency
         TextBox_Command.Text = m.ShutdownCommand
         Group.Text = m.Group
