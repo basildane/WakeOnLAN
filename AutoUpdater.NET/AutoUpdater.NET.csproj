@@ -100,6 +100,9 @@
     <EmbeddedResource Include="DownloadUpdateDialog.ar-JO.resx">
       <DependentUpon>DownloadUpdateDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DownloadUpdateDialog.de.resx">
+      <DependentUpon>DownloadUpdateDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DownloadUpdateDialog.es.resx">
       <DependentUpon>DownloadUpdateDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +130,9 @@
     <EmbeddedResource Include="RemindLaterForm.ar-JO.resx">
       <DependentUpon>RemindLaterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RemindLaterForm.de.resx">
+      <DependentUpon>RemindLaterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RemindLaterForm.es.resx">
       <DependentUpon>RemindLaterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +158,7 @@
       <DependentUpon>RemindLaterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Strings.ar-JO.resx" />
+    <EmbeddedResource Include="Strings.de.resx" />
     <EmbeddedResource Include="Strings.es.resx" />
     <EmbeddedResource Include="Strings.ru.resx" />
     <EmbeddedResource Include="Strings.zh-TW.resx">
@@ -173,6 +180,9 @@
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateForm.ar-JO.resx">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateForm.de.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateForm.es.resx">
