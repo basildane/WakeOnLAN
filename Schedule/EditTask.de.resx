@@ -118,11 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Aufgabe erstellen</value>
+  </data>
+  <data name="ActionDeleteButton.Text" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="ActionEditButton.Text" xml:space="preserve">
+    <value>Bearbeiten...</value>
+  </data>
+  <data name="ActionNewButton.Text" xml:space="preserve">
+    <value>Neu...</value>
+  </data>
+  <data name="ButtonCancel.Text" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
   <data name="ColumnHeader1.Text" xml:space="preserve">
     <value>Aktion</value>
   </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>Auslöser</value>
+  </data>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
   <data name="GroupBox1.Text" xml:space="preserve">
     <value>Sicherheitsoptionen</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 57</value>
@@ -133,26 +160,29 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>Beschreibung</value>
   </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Login Benutzer-ID</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Passwort:</value>
+  </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>272, 13</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
-    <value>Geben Sie die Bedingungen, die dieses Event auslösen.</value>
-  </data>
-  <data name="ButtonCancel.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
-  <data name="TriggerDeleteButton.Text" xml:space="preserve">
-    <value>Löschen</value>
-  </data>
-  <data name="ColumnHeader3.Text" xml:space="preserve">
-    <value>Auslöser</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Aufgabe erstellen</value>
+    <value>Geben Sie die Bedingungen, die dieses Ereignis auslösen.</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>337, 13</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Geben Sie die Aktionen an, die durch dieses Ereignis ausgelöst werden.</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>(Domäne\Benutzer-ID)</value>
+  </data>
+  <data name="OKButton.Text" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="TabPage1.Text" xml:space="preserve">
     <value>Allgemein</value>
@@ -163,13 +193,13 @@
   <data name="TabPage3.Text" xml:space="preserve">
     <value>Aktionen</value>
   </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Geben Sie die Aktionen an, die druch dieses Event ausgelöst werden.</value>
-  </data>
-  <data name="TriggerNewButton.Text" xml:space="preserve">
-    <value>Neu...</value>
+  <data name="TriggerDeleteButton.Text" xml:space="preserve">
+    <value>Löschen</value>
   </data>
   <data name="TriggerEditButton.Text" xml:space="preserve">
     <value>Bearbeiten…</value>
+  </data>
+  <data name="TriggerNewButton.Text" xml:space="preserve">
+    <value>Neu...</value>
   </data>
 </root>

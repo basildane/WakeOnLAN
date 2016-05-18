@@ -116,6 +116,9 @@
     <EmbeddedResource Include="EventLogViewer.ar-JO.resx">
       <DependentUpon>EventLogViewer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventLogViewer.de.resx">
+      <DependentUpon>EventLogViewer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventLogViewer.es.resx">
       <DependentUpon>EventLogViewer.vb</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +142,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Strings.ar-JO.resx" />
+    <EmbeddedResource Include="Strings.de.resx" />
     <EmbeddedResource Include="Strings.es.resx" />
     <EmbeddedResource Include="Strings.fr.resx" />
     <EmbeddedResource Include="Strings.nl.resx">

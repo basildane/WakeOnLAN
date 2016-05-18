@@ -134,7 +134,7 @@
     <value>174, 35</value>
   </data>
   <data name="&gt;&gt;IpAddressControl_Start.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.6.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.8.11, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="ch_OS.Text" xml:space="preserve">
     <value>Operating System</value>
@@ -177,6 +177,9 @@
   <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;UnCheckAllButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
@@ -195,9 +198,6 @@
   <data name="&gt;&gt;cancelSearch.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;UnCheckAllButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -215,9 +215,6 @@
   </data>
   <data name="&gt;&gt;LabelDescription.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SearchBegin.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -255,9 +252,6 @@
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="SearchBegin.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="StatusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>898, 22</value>
   </data>
@@ -291,8 +285,8 @@
   <data name="Label2.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="ch_Name.Width" type="System.Int32, mscorlib">
-    <value>112</value>
+  <data name="closeButton.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="SearchBegin.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 87</value>
@@ -315,8 +309,8 @@
   <data name="ch_Interface.Text" xml:space="preserve">
     <value>Interface ID</value>
   </data>
-  <data name="cancelSearch.Text" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="&gt;&gt;SearchBegin.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="LabelDescription.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -330,8 +324,8 @@
   <data name="listView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="LabelAddToGroup.Text" xml:space="preserve">
-    <value>Add to group...</value>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 13</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -381,8 +375,8 @@
   <data name="CheckAllButton.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
-    <value>Label2</value>
+  <data name="cancelSearch.Text" xml:space="preserve">
+    <value>Cancel</value>
   </data>
   <data name="UnCheckAllButton.ToolTip" xml:space="preserve">
     <value />
@@ -435,8 +429,8 @@
   <data name="&gt;&gt;LabelAddToGroup.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="LabelAddToGroup.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;StatusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;closeButton.Name" xml:space="preserve">
     <value>closeButton</value>
@@ -453,8 +447,8 @@
   <data name="&gt;&gt;ToolStripStatusLabel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;StatusStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
   </data>
   <data name="IpAddressControl_Start.ErrorMessage" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -462,8 +456,8 @@
   <data name="&gt;&gt;closeButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="closeButton.ToolTip" xml:space="preserve">
-    <value />
+  <data name="LabelAddToGroup.Text" xml:space="preserve">
+    <value>Add to group...</value>
   </data>
   <data name="&gt;&gt;StatusStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -540,8 +534,8 @@
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 13</value>
   </data>
-  <data name="CheckAllButton.Text" xml:space="preserve">
-    <value>Check All</value>
+  <data name="SearchBegin.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="IpAddressControl_Start.ToolTip" xml:space="preserve">
     <value>Enter the starting IP address to search from</value>
@@ -564,11 +558,14 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="closeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="&gt;&gt;LabelDescription.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="ToolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
+  <data name="LabelAddToGroup.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="LabelAddToGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 13</value>
@@ -618,20 +615,20 @@
   <data name="$this.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="ch_Name.Width" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
   <data name="&gt;&gt;OKButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="ch_OS.Width" type="System.Int32, mscorlib">
     <value>270</value>
   </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 13</value>
-  </data>
   <data name="&gt;&gt;CheckAllButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;IpAddressControl_End.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.6.15, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.8.11, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;gbSearch.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -641,6 +638,9 @@
   </data>
   <data name="OKButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="ToolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
   </data>
   <data name="Label1.ToolTip" xml:space="preserve">
     <value />
@@ -678,8 +678,8 @@
   <data name="cancelSearch.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="closeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="CheckAllButton.Text" xml:space="preserve">
+    <value>Check All</value>
   </data>
   <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -714,8 +714,8 @@
   <data name="cancelSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;listView.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -730,7 +730,7 @@
     <value>False</value>
   </data>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ar-JO</value>
+    <value>de</value>
   </metadata>
   <metadata name="StatusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 581</value>

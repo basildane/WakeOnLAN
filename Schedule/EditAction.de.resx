@@ -118,17 +118,44 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Aktion bearbeiten</value>
+  </data>
   <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
+  </data>
+  <data name="AllLabel.Text" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="AllTabPage.Text" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Abbrechen</value>
   </data>
   <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 13</value>
   </data>
+  <data name="EmailLabel.Text" xml:space="preserve">
+    <value>E-Mail-Nachricht</value>
+  </data>
+  <data name="EmailTabPage.Text" xml:space="preserve">
+    <value>E-Mail-Nachricht</value>
+  </data>
   <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
   </data>
+  <data name="forceAll.Text" xml:space="preserve">
+    <value>Erzwingen</value>
+  </data>
   <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
+  </data>
+  <data name="forceCheckBox.Text" xml:space="preserve">
+    <value>Erzwinge Programmende</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Aktion:</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 63</value>
@@ -136,11 +163,17 @@
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 13</value>
   </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Titel:</value>
+  </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 89</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Nachricht:</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 132</value>
@@ -148,56 +181,20 @@
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
   </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Nachricht:</value>
+  </data>
   <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>38, 28</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 13</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Nachricht:</value>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Von:</value>
   </data>
   <data name="Label6.Text" xml:space="preserve">
     <value>An:</value>
-  </data>
-  <data name="AllLabel.Text" xml:space="preserve">
-    <value>Optionen</value>
-  </data>
-  <data name="EmailLabel.Text" xml:space="preserve">
-    <value>Email Nachricht</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Nachricht:</value>
-  </data>
-  <data name="forceCheckBox.Text" xml:space="preserve">
-    <value>Erzwingen</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Aktion:</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Titel:</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Betreff:</value>
-  </data>
-  <data name="SelectLabel.Text" xml:space="preserve">
-    <value>Rechner auswählen</value>
-  </data>
-  <data name="PopupLabel.Text" xml:space="preserve">
-    <value>Popup Nachricht</value>
-  </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
-  <data name="forceAll.Text" xml:space="preserve">
-    <value>Erzwingen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Aktion bearbeiten</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Von:</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 80</value>
@@ -205,10 +202,37 @@
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 13</value>
   </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Betreff:</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Server:</value>
+  </data>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 13</value>
   </data>
+  <data name="PopupLabel.Text" xml:space="preserve">
+    <value>Popup-Nachricht</value>
+  </data>
+  <data name="PopupTabPage.Text" xml:space="preserve">
+    <value>Popup</value>
+  </data>
+  <data name="RebootAll.Text" xml:space="preserve">
+    <value>Neustart nach herunterfahren</value>
+  </data>
+  <data name="RebootCheckBox.Text" xml:space="preserve">
+    <value>Neustart nach herunterfahren</value>
+  </data>
   <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 13</value>
+  </data>
+  <data name="SelectLabel.Text" xml:space="preserve">
+    <value>Rechner auswählen</value>
+  </data>
+  <data name="SelectTabPage.Text" xml:space="preserve">
+    <value>Wähle Computer</value>
   </data>
 </root>

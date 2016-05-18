@@ -670,6 +670,9 @@
     <EmbeddedResource Include="CalcSubnet.ar-JO.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalcSubnet.de.resx">
+      <DependentUpon>CalcSubnet.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalcSubnet.es.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
@@ -680,6 +683,9 @@
       <DependentUpon>RegexTextBox.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Crash.ar-JO.resx">
+      <DependentUpon>Crash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crash.de.resx">
       <DependentUpon>Crash.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Crash.es.resx">
@@ -704,6 +710,9 @@
       <DependentUpon>Explorer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="History.ar-JO.resx">
+      <DependentUpon>History.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.de.resx">
       <DependentUpon>History.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="History.es.resx">
@@ -734,6 +743,9 @@
     <EmbeddedResource Include="Listener.ar-JO.resx">
       <DependentUpon>Listener.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Listener.de.resx">
+      <DependentUpon>Listener.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Listener.es.resx">
       <DependentUpon>Listener.vb</DependentUpon>
     </EmbeddedResource>
@@ -752,7 +764,14 @@
       <DependentUpon>Options.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportStrings.ar-JO.resx" />
+    <EmbeddedResource Include="Report\ReportStrings.de.resx" />
     <EmbeddedResource Include="Report\ReportStrings.es.resx" />
+    <EmbeddedResource Include="Report\ReportViewer.ar-JO.resx">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportViewer.de.resx">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportViewer.es.resx">
       <DependentUpon>ReportViewer.vb</DependentUpon>
     </EmbeddedResource>
@@ -768,6 +787,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SafeMode.ar-JO.resx">
+      <DependentUpon>SafeMode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SafeMode.de.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SafeMode.es.resx">

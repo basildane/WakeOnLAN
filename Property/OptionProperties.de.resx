@@ -125,12 +125,15 @@
     <value>Programmversion</value>
     <comment>Application version</comment>
   </data>
+  <data name="AutoCheck" xml:space="preserve">
+    <value>Automatische Suche nach Aktualisierungen</value>
+  </data>
   <data name="Broadcast_Address" xml:space="preserve">
     <value>Broadcast Adresse</value>
     <comment>Broadcast Address</comment>
   </data>
   <data name="Broadcast_AddressDescription" xml:space="preserve">
-    <value>Tragen sie die Broadcast IP Adresse für WOL Pakete ein.</value>
+    <value>Tragen Sie die Broadcast IP-Adresse für WOL Pakete ein.</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
   <data name="cat_Application" xml:space="preserve">
@@ -138,11 +141,11 @@
     <comment>Application</comment>
   </data>
   <data name="cat_Emergency" xml:space="preserve">
-    <value>Notfall - Einstellungen</value>
+    <value>Notfalleinstellungen</value>
     <comment>Emergency settings</comment>
   </data>
   <data name="cat_Shutdown" xml:space="preserve">
-    <value>Runterfahren</value>
+    <value>Herunterfahren</value>
     <comment>Shutdown</comment>
   </data>
   <data name="cat_WOL" xml:space="preserve">
@@ -150,11 +153,11 @@
     <comment>WOL</comment>
   </data>
   <data name="Culture" xml:space="preserve">
-    <value>Kultur</value>
+    <value>Lokalisierung</value>
     <comment>Culture</comment>
   </data>
   <data name="dbPath" xml:space="preserve">
-    <value>Datenpfad</value>
+    <value>Pfad zu Daten</value>
     <comment>Machine database path</comment>
   </data>
   <data name="Delay" xml:space="preserve">
@@ -162,7 +165,7 @@
     <comment>Time delay</comment>
   </data>
   <data name="DelayDescription" xml:space="preserve">
-    <value>Standardverzögerung vor dem Runterfahren.</value>
+    <value>Standardverzögerung vor dem Herunterfahren.</value>
     <comment>The default time delay for shutdowns.</comment>
   </data>
   <data name="EmergencyDelay" xml:space="preserve">
@@ -170,15 +173,15 @@
     <comment>Time delay</comment>
   </data>
   <data name="EmergencyDelayDescription" xml:space="preserve">
-    <value>Standardverzögerung vor dem Notfallabschalten.</value>
+    <value>Standardverzögerung vor dem Notfallabschaltung</value>
     <comment>The time delay for emergency shutdowns.</comment>
   </data>
   <data name="EmergencyShutdown" xml:space="preserve">
-    <value>Standard Nachricht</value>
+    <value>Standardmeldung</value>
     <comment>Default Message</comment>
   </data>
   <data name="EmergencyShutdownDescription" xml:space="preserve">
-    <value>Die Notfallabschalt - Nachricht</value>
+    <value>Notfallabschaltmeldung</value>
     <comment>The emergency shutdown message.</comment>
   </data>
   <data name="Enable_Sound" xml:space="preserve">
@@ -190,11 +193,11 @@
     <comment>Play a sound when a monitored server comes online, or stops responding.</comment>
   </data>
   <data name="Force" xml:space="preserve">
-    <value>Erzwinge Runterfahren</value>
+    <value>Erzwinge Herunterfahren</value>
     <comment>Force shutdown</comment>
   </data>
   <data name="ForceDescription" xml:space="preserve">
-    <value>Erzwingt das Runterfahren eines Remote Servers.  Ungesicherte Dateien gehen verloren.</value>
+    <value>Erzwingt das Herunterfahren eines Remote-Servers.  Ungesicherte Dateien gehen dabei verloren.</value>
     <comment>Force remote server to shutdown.  Unsaved files will be lost.</comment>
   </data>
   <data name="Language" xml:space="preserve">
@@ -202,11 +205,11 @@
     <comment>Language</comment>
   </data>
   <data name="Reboot" xml:space="preserve">
-    <value>Neustarten</value>
+    <value>Neustart</value>
     <comment>Reboot</comment>
   </data>
   <data name="RebootDescription" xml:space="preserve">
-    <value>Falls wahr, dann Neustarten nach dem Runterfahren.</value>
+    <value>Neustart nach Herunterfahren, falls wahr.</value>
     <comment>If true, then reboot after shutdown.</comment>
   </data>
   <data name="Shutdown" xml:space="preserve">
@@ -214,15 +217,18 @@
     <comment>Default Message</comment>
   </data>
   <data name="ShutdownDescription" xml:space="preserve">
-    <value>Standard Nachricht beim Runterfahren.</value>
+    <value>Standardnachricht beim Herunterfahren.</value>
     <comment>The default shutdown message.</comment>
+  </data>
+  <data name="Threads" xml:space="preserve">
+    <value>Anzahl der Threads</value>
   </data>
   <data name="UDPPort" xml:space="preserve">
     <value>UDP Port</value>
     <comment>UDP Port</comment>
   </data>
   <data name="UDPPortDescription" xml:space="preserve">
-    <value>Tragen sie den UDP Port für Broadcast Nachrichten ein.</value>
+    <value>Tragen sie den UDP-Port für Broadcast Nachrichten ein.</value>
     <comment>Enter the UDP Port number for the broadcast messages.</comment>
   </data>
 </root>

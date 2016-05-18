@@ -706,14 +706,11 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
   </data>
-  <data name="labelInformation.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14px</value>
+  <data name="&gt;&gt;progressBar.Name" xml:space="preserve">
+    <value>progressBar</value>
   </data>
   <data name="labelInformation.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 19</value>
-  </data>
-  <data name="&gt;&gt;labelInformation.Name" xml:space="preserve">
-    <value>labelInformation</value>
   </data>
   <data name="pictureBoxIcon.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 12</value>
@@ -733,14 +730,17 @@
   <data name="&gt;&gt;progressBar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
   <data name="labelInformation.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;progressBar.Name" xml:space="preserve">
-    <value>progressBar</value>
+  <data name="&gt;&gt;labelInformation.Name" xml:space="preserve">
+    <value>labelInformation</value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="labelInformation.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14px</value>
   </data>
   <data name="&gt;&gt;labelInformation.Parent" xml:space="preserve">
     <value>$this</value>
@@ -761,6 +761,6 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ar-JO</value>
+    <value>de</value>
   </metadata>
 </root>
