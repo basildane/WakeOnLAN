@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Aquila Technology")]
 [assembly: AssemblyProduct("SetupHelpers")]
-[assembly: AssemblyCopyright("(c)  2015, Aquila Technology, LLC.")]
+[assembly: AssemblyCopyright("Copyright (c) 2004 - 2016, Aquila Technology")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.11.1.0")]
-[assembly: AssemblyFileVersion("2.11.1.0")]
+[assembly: AssemblyVersion("2.11.10.0")]
+[assembly: AssemblyFileVersion("2.11.10.0")]
