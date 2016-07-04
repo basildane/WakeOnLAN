@@ -398,7 +398,14 @@ Public Module Module1
                     AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
 
                 Case machine.ShutdownMethods.Custom
-                    Shell(machine.ShutdownCommand, AppWinStyle.Hide, False)
+                    Dim cmd As String = machine.ShutdownCommand
+                    cmd = cmd.Replace("$PF", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles))
+                    cmd = cmd.Replace("$PFX86", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86))
+                    cmd = cmd.Replace("$USER", machine.UserID)
+                    cmd = cmd.Replace("$PASS", encryption.EnigmaDecrypt(machine.Password))
+                    cmd = cmd.Replace("$HOST", machine.Netbios)
+                    Debug.WriteLine("Custom command: " & cmd)
+                    Shell(cmd, AppWinStyle.Hide, False)
 
                 Case machine.ShutdownMethods.Legacy
                     Select Case flags
