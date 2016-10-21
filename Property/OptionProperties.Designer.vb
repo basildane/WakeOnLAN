@@ -272,6 +272,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Show Splash Screen.
+        '''</summary>
+        Friend Shared ReadOnly Property ShowSplash() As String
+            Get
+                Return ResourceManager.GetString("ShowSplash", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Default Message.
         '''</summary>
         Friend Shared ReadOnly Property Shutdown() As String

@@ -33,6 +33,7 @@ Public Class Options
             My.Settings.Sound = .EnableSound
             My.Settings.Force = .Force
             My.Settings.Reboot = .Reboot
+            My.Settings.ShowSplash = .ShowSplash
             My.Settings.dbPath = .dbPath
             My.Settings.autocheckUpdates = .AutoCheck
             My.Settings.Language = .Language
@@ -78,6 +79,7 @@ Public Class Options
             .EnableSound = My.Settings.Sound
             .Force = My.Settings.Force
             .Reboot = My.Settings.Reboot
+            .ShowSplash = My.Settings.ShowSplash
             .dbPath = My.Settings.dbPath
             .AutoCheck = My.Settings.autocheckUpdates
             .Language = My.Settings.Language
@@ -232,6 +234,17 @@ Public Class Options
                 _dbPath = Value
             End Set
         End Property
+
+        <TypeConverter(GetType(TrueFalseConverter))>
+        <GlobalizedCategory("cat_Application")> Public Property ShowSplash() As Boolean
+            Get
+                Return _showSplash
+            End Get
+            Set(value As Boolean)
+                _showSplash = value
+            End Set
+        End Property
+        Private _showSplash As Boolean
 
         Private _language As String
         <GlobalizedCategory("cat_Application"), _
