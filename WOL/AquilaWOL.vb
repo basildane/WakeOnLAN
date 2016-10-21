@@ -21,6 +21,7 @@ Imports System.Net
 Imports System.Management
 Imports System.Text
 Imports System.Runtime.Serialization
+Imports System.Net.NetworkInformation
 
 Public Class AquilaWolLibrary
     Private Declare Function FormatMessageA Lib "kernel32" (ByVal flags As Integer, ByRef source As Object, ByVal messageID As Integer, ByVal languageID As Integer, ByVal buffer As String, ByVal size As Integer, ByRef arguments As Integer) As Integer
@@ -58,9 +59,10 @@ Public Class AquilaWolLibrary
     ''' <param name="udpPort">WOL UDP Port</param>
     ''' <param name="ttl">WOL Time To Live</param>
     ''' <remarks></remarks>
-    Public Shared Sub WakeUp(mac As String, Optional network As String = "255.255.255.255", Optional udpPort As Integer = 9, Optional ttl As Integer = 128, Optional adapter As String = "")
+    Public Shared Sub WakeUp(mac As String, Optional network As String = "255.255.255.255", Optional udpPort As Integer = 9, Optional ttl As Integer = 128)
         Dim client As UdpClient
         Dim localEndPoint As IPEndPoint
+        Dim nics As NetworkInterface() = NetworkInterface.GetAllNetworkInterfaces()
 
         Dim packet(17 * 6 - 1) As Byte
         Dim i, j As Integer
@@ -68,22 +70,6 @@ Public Class AquilaWolLibrary
 
         Try
             macBytes = GetMac(mac)
-
-            If (String.IsNullOrEmpty(adapter)) Then
-                localEndPoint = New IPEndPoint(IPAddress.Any, udpPort)
-            Else
-                localEndPoint = New IPEndPoint(IPAddress.Parse(adapter), udpPort)
-            End If
-
-            client = New UdpClient()
-            client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, True)
-            client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.Broadcast, True)
-            client.ExclusiveAddressUse = False
-            client.Client.Bind(localEndPoint)
-            client.Connect(network, udpPort)
-            client.EnableBroadcast = True
-            client.Ttl = ttl
-
             ' WOL packet contains a 6-bytes header and 16 times a 6-bytes sequence containing the MAC address.
             ' packet =  byte(17 * 6)
             ' Header of 0xFF 6 times.
@@ -100,7 +86,38 @@ Public Class AquilaWolLibrary
                 Next
             Next
 
-            client.Send(packet, packet.Length)
+            For Each adapter As NetworkInterface In nics
+                ' Only display informatin for interfaces that support IPv4. 
+                If adapter.Supports(NetworkInterfaceComponent.IPv4) = False Then
+                    Continue For
+                End If
+
+                Dim addresses As UnicastIPAddressInformationCollection = adapter.GetIPProperties.UnicastAddresses
+
+                For Each address As UnicastIPAddressInformation In addresses
+                    If address.Address.AddressFamily = Net.Sockets.AddressFamily.InterNetwork Then
+                        localEndPoint = New IPEndPoint(IPAddress.Parse(address.Address.ToString()), udpPort)
+                        Debug.WriteLine("Interface: " & localEndPoint.ToString())
+
+                        Try
+                            client = New UdpClient()
+                            client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, True)
+                            client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.Broadcast, True)
+                            client.ExclusiveAddressUse = False
+                            client.Client.Bind(localEndPoint)
+                            client.Connect(network, udpPort)
+                            client.EnableBroadcast = True
+                            client.Ttl = ttl
+
+                            client.Send(packet, packet.Length)
+
+                        Catch
+
+                        End Try
+
+                    End If
+                Next
+            Next adapter
 
         Catch ex As Exception
             Throw

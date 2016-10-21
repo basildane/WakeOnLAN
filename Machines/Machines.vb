@@ -21,7 +21,6 @@ Imports System.Net.NetworkInformation
 Imports System.Xml.Serialization
 Imports System.Net
 Imports System.Threading
-Imports System.Runtime.Remoting.Messaging
 
 <Serializable()> <CLSCompliant(True)> Public Class Machine
     <NonSerialized> Private WithEvents _backgroundWorker As New BackgroundWorker
@@ -52,7 +51,6 @@ Imports System.Runtime.Remoting.Messaging
     Public Property Group As String = String.Empty
     Public Property UDPPort As Integer = 9
     Public Property TTL As Integer = 128
-    Public Property Adapter As String = String.Empty
     Public Property RDPPort As Integer = 3389
     Public Property Note As String = String.Empty
     Public Property UserID As String = String.Empty
@@ -148,11 +146,9 @@ Imports System.Runtime.Remoting.Messaging
                                 Dim len As Integer = 6
 
                                 Try
-                                    If String.IsNullOrEmpty(Adapter) Then
-                                        sendInterface = 0
-                                    Else
-                                        sendInterface = ipAddress.Parse(Adapter).GetHashCode()
-                                    End If
+                                    sendInterface = 0
+                                    ' sendInterface = ipAddress.Parse(Adapter).GetHashCode()
+                                    ' TODO: check all interfaces
 
                                     remoteIp = ipAddress.GetHashCode()
                                     If remoteIp <> 0 Then

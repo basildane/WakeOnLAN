@@ -18,7 +18,7 @@
 Imports Machines
 
 Module Wake
-    Public Sub WakeUp(ByVal machine As Machine, ByVal adapter As String)
+    Public Sub WakeUp(ByVal machine As Machine)
         Dim host As String
 
         Try
@@ -27,11 +27,8 @@ Module Wake
             Else
                 host = machine.Netbios
             End If
-            If String.IsNullOrEmpty(Adapter) Then
-                Adapter = machine.Adapter
-            End If
 
-            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, adapter)
+            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
             WOL.AquilaWolLibrary.WriteLog(String.Format("WakeUp sent to ""{0}""", machine.Name), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.WakeUp)
 
         Catch ex As Exception
@@ -42,8 +39,8 @@ Module Wake
 
     End Sub
 
-    Public Sub WakeUp(ByVal mac As String, ByVal adapter As String)
-        WOL.AquilaWolLibrary.WakeUp(MAC, adapter:=adapter)
+    Public Sub WakeUp(ByVal mac As String)
+        WOL.AquilaWolLibrary.WakeUp(mac)
     End Sub
 
 End Module

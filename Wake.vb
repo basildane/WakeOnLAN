@@ -48,7 +48,7 @@ Module Wake
                 End If
             End If
 
-            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, machine.Adapter)
+            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
             WOL.AquilaWolLibrary.WriteLog(String.Format("WakeUp sent to ""{0}""", machine.Name), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.WakeUp)
 
         Catch ex As Exception
@@ -66,7 +66,7 @@ Module Wake
                 host = machine.Netbios
             End If
 
-            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL, machine.Adapter)
+            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
         Next
     End Sub
 
