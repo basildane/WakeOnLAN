@@ -30,14 +30,11 @@ $subject = "Open Source Developer, Phillip Tull"
 Try
 {
 	# generate XML serializer
-	& $sgen "$target" /t:WakeOnLan.Task /force
+	# & $sgen "$target" /force
 
-	# sign the EXE
+	# sign the DLL
 	& $signtool sign /a /n "$subject" /fd sha1 /t http://timestamp.comodoca.com/authenticode /d "$project" "$target"
 	& $signtool sign /a /n "$subject" /as /fd sha256 /td sha256 /tr http://timestamp.comodoca.com/rfc3161 /d "$project" "$target"
-
-	# build the installer
-	& "${Env:ProgramFiles(x86)}\Inno Setup 5\iscc" /Q "$source\installer\WakeOnLAN.iss"
 }
 Catch [system.exception]
 {

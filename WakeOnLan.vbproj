@@ -1573,7 +1573,6 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools\x64\sgen.exe" "$(TargetDir)$(TargetFileName)" /t:WakeOnLan.Task /force
-Powershell -File  "$(ProjectDir)build.ps1" -config "$(ConfigurationName)" -source "$(SolutionDir)"</PostBuildEvent>
+    <PostBuildEvent>Powershell -File "$(ProjectDir)build.ps1" -config $(ConfigurationName) -source $(SolutionDir) -project $(ProjectName) -target $(TargetPath)</PostBuildEvent>
   </PropertyGroup>
 </Project>
