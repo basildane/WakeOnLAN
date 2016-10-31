@@ -54,8 +54,6 @@ Partial Class Properties
         Me.TabWakeUp = New System.Windows.Forms.TabPage()
         Me.cbKeepAlive = New System.Windows.Forms.CheckBox()
         Me.tHostURI = New WakeOnLan.Controls.RegExTextBox()
-        Me.ComboBoxAdapters = New System.Windows.Forms.ComboBox()
-        Me.LabelInterfaces = New System.Windows.Forms.Label()
         Me.bCalcBroadcast = New System.Windows.Forms.Button()
         Me.rbURI = New System.Windows.Forms.RadioButton()
         Me.rbIP = New System.Windows.Forms.RadioButton()
@@ -337,8 +335,6 @@ Partial Class Properties
         resources.ApplyResources(Me.TabWakeUp, "TabWakeUp")
         Me.TabWakeUp.Controls.Add(Me.cbKeepAlive)
         Me.TabWakeUp.Controls.Add(Me.tHostURI)
-        Me.TabWakeUp.Controls.Add(Me.ComboBoxAdapters)
-        Me.TabWakeUp.Controls.Add(Me.LabelInterfaces)
         Me.TabWakeUp.Controls.Add(Me.lbUDP)
         Me.TabWakeUp.Controls.Add(Me.lbTTL)
         Me.TabWakeUp.Controls.Add(Me.lbMAC)
@@ -379,26 +375,6 @@ Partial Class Properties
         Me.tHostURI.Name = "tHostURI"
         Me.ToolTip1.SetToolTip(Me.tHostURI, resources.GetString("tHostURI.ToolTip"))
         Me.tHostURI.ValidationExpression = "^(?!\s*$).+"
-        '
-        'ComboBoxAdapters
-        '
-        resources.ApplyResources(Me.ComboBoxAdapters, "ComboBoxAdapters")
-        Me.ComboBoxAdapters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ErrorProvider1.SetError(Me.ComboBoxAdapters, resources.GetString("ComboBoxAdapters.Error"))
-        Me.ComboBoxAdapters.FormattingEnabled = True
-        Me.ErrorProvider1.SetIconAlignment(Me.ComboBoxAdapters, CType(resources.GetObject("ComboBoxAdapters.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.ComboBoxAdapters, CType(resources.GetObject("ComboBoxAdapters.IconPadding"), Integer))
-        Me.ComboBoxAdapters.Name = "ComboBoxAdapters"
-        Me.ToolTip1.SetToolTip(Me.ComboBoxAdapters, resources.GetString("ComboBoxAdapters.ToolTip"))
-        '
-        'LabelInterfaces
-        '
-        resources.ApplyResources(Me.LabelInterfaces, "LabelInterfaces")
-        Me.ErrorProvider1.SetError(Me.LabelInterfaces, resources.GetString("LabelInterfaces.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.LabelInterfaces, CType(resources.GetObject("LabelInterfaces.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.LabelInterfaces, CType(resources.GetObject("LabelInterfaces.IconPadding"), Integer))
-        Me.LabelInterfaces.Name = "LabelInterfaces"
-        Me.ToolTip1.SetToolTip(Me.LabelInterfaces, resources.GetString("LabelInterfaces.ToolTip"))
         '
         'bCalcBroadcast
         '
@@ -701,8 +677,6 @@ Partial Class Properties
     Friend WithEvents lbSendTo As System.Windows.Forms.Label
     Friend WithEvents rbURI As System.Windows.Forms.RadioButton
     Friend WithEvents rbIP As System.Windows.Forms.RadioButton
-    Friend WithEvents ComboBoxAdapters As System.Windows.Forms.ComboBox
-    Friend WithEvents LabelInterfaces As System.Windows.Forms.Label
     Friend WithEvents tHostURI As RegExTextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents tRDPPort As RegExTextBox

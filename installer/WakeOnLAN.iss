@@ -35,6 +35,7 @@ ArchitecturesInstallIn64BitMode=x64 ia64
 ;Downloading and installing dependencies will only work if the memo/ready page is enabled (default behaviour)
 DisableReadyPage=no
 DisableReadyMemo=no
+AlwaysShowDirOnReadyPage=yes
 WizardImageFile=compiler:WizModernImage-IS.bmp
 WizardSmallImageFile={#rootFolder}\Resources\connected.bmp
 AppCopyright=Copyright Aquila Technology

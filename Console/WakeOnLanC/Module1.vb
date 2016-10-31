@@ -54,7 +54,6 @@ Public Module Module1
     Dim _mode As ModeTypes = ModeTypes.None
     Dim _result As Integer = ErrorCodes.Ok
     Dim _path As String = String.Empty
-    Dim _interface As String = String.Empty
 
     Function Main() As Integer
         Console.ForegroundColor = ConsoleColor.Green
@@ -110,14 +109,6 @@ Public Module Module1
                     End If
                     i += 1
                     _group = My.Application.CommandLineArgs.Item(i)
-
-                Case "-if"
-                    If i = My.Application.CommandLineArgs.Count - 1 Then
-                        BadCommand()
-                        Return ErrorCodes.InvalidCommand
-                    End If
-                    i += 1
-                    _interface = My.Application.CommandLineArgs.Item(i)
 
                 Case "-all"
                     _all = True
@@ -218,7 +209,6 @@ Public Module Module1
         Console.WriteLine("-l   (listen for WOL packets)")
         Console.WriteLine("-e   (enumerate machine list)")
         Console.WriteLine("-p   (path to machines.xml (optional))")
-        Console.WriteLine("-if  (select Interface (example -if 192.168.0.20) (optional))")
         Console.WriteLine("-msg (immediate message (example -msg -c ""Shutting down in 10 minutes"")")
         Console.WriteLine("     Optional: Use -m to send message to a remote machine.")
         Console.WriteLine("-d   (debug) requires -m")
@@ -262,7 +252,7 @@ Public Module Module1
                     Console.WriteLine("Cannot find MAC address for " & machine.Name)
                 Else
                     Console.WriteLine("waking up mac: " & machine.MAC)
-                    WakeUp(machine, _interface)
+                    WakeUp(machine)
                 End If
             Next
             Return _result
@@ -292,12 +282,12 @@ Public Module Module1
             Else
                 Console.WriteLine(machine.Netbios)
             End If
-            WakeUp(machine, _interface)
+            WakeUp(machine)
             Return ErrorCodes.Ok
 
         ElseIf _mac.Length Then
             Console.WriteLine("waking up mac: " & _mac)
-            WakeUp(_mac, _interface)
+            WakeUp(_mac)
             Return ErrorCodes.Ok
 
         ElseIf _group.Length Then
@@ -313,7 +303,7 @@ Public Module Module1
             Console.WriteLine("waking up group: " & _group)
             For Each machine In From machine1 As Machine In Machines Where machine1.Group = _group
                 Console.WriteLine("  > " & machine.Name)
-                WakeUp(machine, _interface)
+                WakeUp(machine)
                 Thread.Sleep(500)
             Next
             Console.WriteLine("Done.")

@@ -188,7 +188,7 @@
     <value>خصائص العرض</value>
   </data>
   <data name="cbKeepAlive.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 222</value>
+    <value>308, 140</value>
   </data>
   <data name="cbKeepAlive.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 18</value>
@@ -199,27 +199,8 @@
   <data name="tHostURI.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 112</value>
   </data>
-  <data name="ComboBoxAdapters.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 166</value>
-  </data>
-  <data name="ComboBoxAdapters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 22</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LabelInterfaces.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="LabelInterfaces.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 149</value>
-  </data>
-  <data name="LabelInterfaces.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 14</value>
-  </data>
-  <data name="LabelInterfaces.Text" xml:space="preserve">
-    <value>واجهة</value>
-  </data>
   <data name="lbUDP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 223</value>
+    <value>233, 141</value>
   </data>
   <data name="lbUDP.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 14</value>
@@ -228,7 +209,7 @@
     <value>منفذ UDP</value>
   </data>
   <data name="lbTTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 251</value>
+    <value>234, 169</value>
   </data>
   <data name="lbTTL.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 14</value>
@@ -294,13 +275,13 @@
     <value>TTL غير صالحة</value>
   </data>
   <data name="TTL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 248</value>
+    <value>98, 166</value>
   </data>
   <data name="UDPPort.ErrorMessage" xml:space="preserve">
     <value>UDP غير صالح</value>
   </data>
   <data name="UDPPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 220</value>
+    <value>97, 138</value>
   </data>
   <data name="Broadcast.ErrorMessage" xml:space="preserve">
     <value>عنوان IP غير صالح. استخدام ###.###.###.###</value>
@@ -500,6 +481,7 @@
   <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 13</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TabControl1.RightToLeftLayout" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>

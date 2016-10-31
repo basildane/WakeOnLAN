@@ -801,6 +801,7 @@
     <EmbeddedResource Include="SafeMode.nl.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>
     </EmbeddedResource>
+    <None Include="build.ps1" />
     <None Include="Documentation\Human-02\network_transmit.png" />
     <None Include="Documentation\Human-02\emblem_ok.png" />
     <None Include="Documentation\error2.png" />
@@ -1572,6 +1573,6 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools\x64\sgen.exe" "$(TargetDir)$(TargetFileName)" /t:WakeOnLan.Task /force</PostBuildEvent>
+    <PostBuildEvent>Powershell -File "$(ProjectDir)build.ps1" -config $(ConfigurationName) -source $(SolutionDir) -project $(ProjectName) -target $(TargetPath)</PostBuildEvent>
   </PropertyGroup>
 </Project>

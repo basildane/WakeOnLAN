@@ -60,7 +60,10 @@ Namespace My
             If (Application.Info.Version.Revision > 0) Then
                 version &= " BETA " & Application.Info.Version.Revision
             End If
-            Splash.ShowSplash(Resources.Splash, Resources.Strings.Title, version, Resources.Strings.Copyright)
+
+            If (Settings.ShowSplash) Then
+                Splash.ShowSplash(Resources.Splash, Resources.Strings.Title, version, Resources.Strings.Copyright)
+            End If
 
         End Sub
 

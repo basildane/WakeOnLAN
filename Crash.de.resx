@@ -117,22 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Absturz</value>
-  </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Fehlermeldung</value>
-  </data>
-  <data name="GroupBox2.Text" xml:space="preserve">
-    <value>Stack Trace</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 20</value>
   </data>
   <data name="lTitle.Text" xml:space="preserve">
     <value>Ein unerwarteter Fehler ist aufgetreten.</value>
   </data>
-  <data name="OK_Button.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Fehlermeldung</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Absturz</value>
   </data>
 </root>

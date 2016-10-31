@@ -21,7 +21,6 @@ Imports System.Net.NetworkInformation
 Imports System.Xml.Serialization
 Imports System.Net
 Imports System.Threading
-Imports System.Runtime.Remoting.Messaging
 
 <Serializable()> <CLSCompliant(True)> Public Class Machine
     <NonSerialized> Private WithEvents _backgroundWorker As New BackgroundWorker
@@ -52,7 +51,6 @@ Imports System.Runtime.Remoting.Messaging
     Public Property Group As String = String.Empty
     Public Property UDPPort As Integer = 9
     Public Property TTL As Integer = 128
-    Public Property Adapter As String = String.Empty
     Public Property RDPPort As Integer = 3389
     Public Property Note As String = String.Empty
     Public Property UserID As String = String.Empty
@@ -142,27 +140,19 @@ Imports System.Runtime.Remoting.Messaging
 
                             For Each ipAddress As IPAddress In From IPA1 In Dns.GetHostAddresses(Netbios) Where IPA1.AddressFamily.ToString() = "InterNetwork"
                                 Dim remoteIp As Integer
-                                Dim remoteMac() As Byte = New Byte(6) {}
+                                Dim remoteMac() As Byte = New Byte(5) {}
                                 Dim dWord As Integer
-                                Dim sendInterface As Integer
-                                Dim len As Integer = 6
 
                                 Try
-                                    If String.IsNullOrEmpty(Adapter) Then
-                                        sendInterface = 0
-                                    Else
-                                        sendInterface = ipAddress.Parse(Adapter).GetHashCode()
-                                    End If
-
                                     remoteIp = ipAddress.GetHashCode()
                                     If remoteIp <> 0 Then
-                                        dWord = SendARP(remoteIp, sendInterface, remoteMac, len)
+                                        dWord = SendARP(remoteIp, 0, remoteMac, remoteMac.Length)
                                         If dWord = 0 Or dWord = 67 Then
                                             '
                                             ' we found a matching MAC, the host is officially ONLINE
                                             ' 67 = ERROR_BAD_NET_NAME: if host on another subnet, just ignore the error
                                             '
-                                            If CompareMac(BitConverter.ToString(remoteMac, 0, len), MAC) = 0 Or dWord = 67 Then
+                                            If CompareMac(BitConverter.ToString(remoteMac, 0, remoteMac.Length), MAC) = 0 Or dWord = 67 Then
                                                 newStatus = StatusCodes.Online
                                                 newIpAddress = ipAddress.ToString()
                                                 Exit For
