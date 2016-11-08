@@ -26,6 +26,7 @@ Imports Machines
 
 Public Class Explorer
     Private ReadOnly _lvwColumnSorter As New ListViewColumnSorter()
+    Private allowClose As Boolean = False
     Private WithEvents _historyBackgroundworker As New BackgroundWorker()
     Public Shared Pool As Semaphore = New Semaphore(0, My.Settings.Threads)
 
@@ -135,6 +136,22 @@ Public Class Explorer
     End Sub
 
     Private Sub Explorer_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
+        If (My.Settings.MinimizeToTray) Then
+            If (e.CloseReason = CloseReason.UserClosing And allowClose = False) Then
+                e.Cancel = True
+                If (Not My.Settings.ackMinimize) Then
+                    MessageBox.Show(My.Resources.Strings.ackMinimized, My.Resources.Strings.Title, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    My.Settings.ackMinimize = True
+                End If
+                WindowState = FormWindowState.Minimized
+                Exit Sub
+            End If
+        End If
+
+        SaveChanges()
+    End Sub
+
+    Private Sub SaveChanges()
         My.Settings.ListView_View = ListView.View
         My.Settings.ListView_Columns = SaveListViewState(ListView)
 
@@ -713,6 +730,7 @@ Public Class Explorer
     End Sub
 
     Private Sub ContextToolStripMenuItemExit_Click(sender As Object, e As EventArgs) Handles ContextToolStripMenuItemExit.Click
+        allowClose = True
         Close()
     End Sub
 

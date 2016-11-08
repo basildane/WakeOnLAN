@@ -100,22 +100,6 @@ Partial Class Explorer
         Me.ListViewSmallImageList = New System.Windows.Forms.ImageList(Me.components)
         Me.Button_Emergency = New System.Windows.Forms.Button()
         Me.Button_StartAll = New System.Windows.Forms.Button()
-        Me.ToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.FoldersToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ListViewToolStripButton = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.ContextMenuStripViews = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ListToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DetailsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LargeIconsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SmallIconsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TileToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PingToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ScheduleToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ListenerToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.EventLogToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.OptionsToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.HotToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -159,6 +143,22 @@ Partial Class Explorer
         Me.DonateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LicenseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.FoldersToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ListViewToolStripButton = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.ContextMenuStripViews = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ListToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DetailsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LargeIconsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SmallIconsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TileToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PingToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ScheduleToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ListenerToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.EventLogToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.OptionsToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.HotToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.TrayMenuItemWakeUp = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ContextMenuStripTray = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -192,9 +192,9 @@ Partial Class Explorer
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.ContextMenuStrip_Machines.SuspendLayout()
+        Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.ContextMenuStripViews.SuspendLayout()
-        Me.MenuStrip.SuspendLayout()
         Me.ContextMenuStripTray.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -419,102 +419,6 @@ Partial Class Explorer
         Me.Button_StartAll.Name = "Button_StartAll"
         Me.ToolTip.SetToolTip(Me.Button_StartAll, resources.GetString("Button_StartAll.ToolTip"))
         Me.Button_StartAll.UseVisualStyleBackColor = True
-        '
-        'ToolStrip
-        '
-        resources.ApplyResources(Me.ToolStrip, "ToolStrip")
-        Me.ToolStrip.ImageScalingSize = New System.Drawing.Size(30, 30)
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FoldersToolStripButton, Me.ToolStripSeparator8, Me.ListViewToolStripButton, Me.PingToolStripButton, Me.ScheduleToolStripButton, Me.ListenerToolStripButton, Me.EventLogToolStripButton, Me.OptionsToolStripButton, Me.HotToolStripButton})
-        Me.ToolStrip.Name = "ToolStrip"
-        '
-        'FoldersToolStripButton
-        '
-        Me.FoldersToolStripButton.Checked = True
-        Me.FoldersToolStripButton.CheckState = System.Windows.Forms.CheckState.Checked
-        resources.ApplyResources(Me.FoldersToolStripButton, "FoldersToolStripButton")
-        Me.FoldersToolStripButton.Name = "FoldersToolStripButton"
-        '
-        'ToolStripSeparator8
-        '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        resources.ApplyResources(Me.ToolStripSeparator8, "ToolStripSeparator8")
-        '
-        'ListViewToolStripButton
-        '
-        Me.ListViewToolStripButton.DropDown = Me.ContextMenuStripViews
-        resources.ApplyResources(Me.ListViewToolStripButton, "ListViewToolStripButton")
-        Me.ListViewToolStripButton.Name = "ListViewToolStripButton"
-        '
-        'ContextMenuStripViews
-        '
-        Me.ContextMenuStripViews.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListToolStripMenuItem1, Me.DetailsToolStripMenuItem1, Me.LargeIconsToolStripMenuItem1, Me.SmallIconsToolStripMenuItem1, Me.TileToolStripMenuItem1})
-        Me.ContextMenuStripViews.Name = "ContextMenuStripViews"
-        Me.ContextMenuStripViews.OwnerItem = Me.ListViewToolStripButton
-        Me.ContextMenuStripViews.ShowCheckMargin = True
-        Me.ContextMenuStripViews.ShowImageMargin = False
-        resources.ApplyResources(Me.ContextMenuStripViews, "ContextMenuStripViews")
-        '
-        'ListToolStripMenuItem1
-        '
-        Me.ListToolStripMenuItem1.Name = "ListToolStripMenuItem1"
-        resources.ApplyResources(Me.ListToolStripMenuItem1, "ListToolStripMenuItem1")
-        '
-        'DetailsToolStripMenuItem1
-        '
-        Me.DetailsToolStripMenuItem1.Name = "DetailsToolStripMenuItem1"
-        resources.ApplyResources(Me.DetailsToolStripMenuItem1, "DetailsToolStripMenuItem1")
-        '
-        'LargeIconsToolStripMenuItem1
-        '
-        Me.LargeIconsToolStripMenuItem1.Name = "LargeIconsToolStripMenuItem1"
-        resources.ApplyResources(Me.LargeIconsToolStripMenuItem1, "LargeIconsToolStripMenuItem1")
-        '
-        'SmallIconsToolStripMenuItem1
-        '
-        Me.SmallIconsToolStripMenuItem1.Name = "SmallIconsToolStripMenuItem1"
-        resources.ApplyResources(Me.SmallIconsToolStripMenuItem1, "SmallIconsToolStripMenuItem1")
-        '
-        'TileToolStripMenuItem1
-        '
-        Me.TileToolStripMenuItem1.Name = "TileToolStripMenuItem1"
-        resources.ApplyResources(Me.TileToolStripMenuItem1, "TileToolStripMenuItem1")
-        '
-        'PingToolStripButton
-        '
-        Me.PingToolStripButton.Checked = True
-        Me.PingToolStripButton.CheckOnClick = True
-        Me.PingToolStripButton.CheckState = System.Windows.Forms.CheckState.Checked
-        resources.ApplyResources(Me.PingToolStripButton, "PingToolStripButton")
-        Me.PingToolStripButton.Name = "PingToolStripButton"
-        '
-        'ScheduleToolStripButton
-        '
-        resources.ApplyResources(Me.ScheduleToolStripButton, "ScheduleToolStripButton")
-        Me.ScheduleToolStripButton.Name = "ScheduleToolStripButton"
-        '
-        'ListenerToolStripButton
-        '
-        Me.ListenerToolStripButton.Image = Global.WakeOnLan.My.Resources.Resources.network_transmit
-        resources.ApplyResources(Me.ListenerToolStripButton, "ListenerToolStripButton")
-        Me.ListenerToolStripButton.Name = "ListenerToolStripButton"
-        '
-        'EventLogToolStripButton
-        '
-        resources.ApplyResources(Me.EventLogToolStripButton, "EventLogToolStripButton")
-        Me.EventLogToolStripButton.Name = "EventLogToolStripButton"
-        '
-        'OptionsToolStripButton
-        '
-        resources.ApplyResources(Me.OptionsToolStripButton, "OptionsToolStripButton")
-        Me.OptionsToolStripButton.Name = "OptionsToolStripButton"
-        '
-        'HotToolStripButton
-        '
-        Me.HotToolStripButton.Checked = True
-        Me.HotToolStripButton.CheckOnClick = True
-        Me.HotToolStripButton.CheckState = System.Windows.Forms.CheckState.Checked
-        resources.ApplyResources(Me.HotToolStripButton, "HotToolStripButton")
-        Me.HotToolStripButton.Name = "HotToolStripButton"
         '
         'MenuStrip
         '
@@ -749,6 +653,102 @@ Partial Class Explorer
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         resources.ApplyResources(Me.AboutToolStripMenuItem, "AboutToolStripMenuItem")
         '
+        'ToolStrip
+        '
+        resources.ApplyResources(Me.ToolStrip, "ToolStrip")
+        Me.ToolStrip.ImageScalingSize = New System.Drawing.Size(30, 30)
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FoldersToolStripButton, Me.ToolStripSeparator8, Me.ListViewToolStripButton, Me.PingToolStripButton, Me.ScheduleToolStripButton, Me.ListenerToolStripButton, Me.EventLogToolStripButton, Me.OptionsToolStripButton, Me.HotToolStripButton})
+        Me.ToolStrip.Name = "ToolStrip"
+        '
+        'FoldersToolStripButton
+        '
+        Me.FoldersToolStripButton.Checked = True
+        Me.FoldersToolStripButton.CheckState = System.Windows.Forms.CheckState.Checked
+        resources.ApplyResources(Me.FoldersToolStripButton, "FoldersToolStripButton")
+        Me.FoldersToolStripButton.Name = "FoldersToolStripButton"
+        '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        resources.ApplyResources(Me.ToolStripSeparator8, "ToolStripSeparator8")
+        '
+        'ListViewToolStripButton
+        '
+        Me.ListViewToolStripButton.DropDown = Me.ContextMenuStripViews
+        resources.ApplyResources(Me.ListViewToolStripButton, "ListViewToolStripButton")
+        Me.ListViewToolStripButton.Name = "ListViewToolStripButton"
+        '
+        'ContextMenuStripViews
+        '
+        Me.ContextMenuStripViews.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListToolStripMenuItem1, Me.DetailsToolStripMenuItem1, Me.LargeIconsToolStripMenuItem1, Me.SmallIconsToolStripMenuItem1, Me.TileToolStripMenuItem1})
+        Me.ContextMenuStripViews.Name = "ContextMenuStripViews"
+        Me.ContextMenuStripViews.OwnerItem = Me.ListViewToolStripButton
+        Me.ContextMenuStripViews.ShowCheckMargin = True
+        Me.ContextMenuStripViews.ShowImageMargin = False
+        resources.ApplyResources(Me.ContextMenuStripViews, "ContextMenuStripViews")
+        '
+        'ListToolStripMenuItem1
+        '
+        Me.ListToolStripMenuItem1.Name = "ListToolStripMenuItem1"
+        resources.ApplyResources(Me.ListToolStripMenuItem1, "ListToolStripMenuItem1")
+        '
+        'DetailsToolStripMenuItem1
+        '
+        Me.DetailsToolStripMenuItem1.Name = "DetailsToolStripMenuItem1"
+        resources.ApplyResources(Me.DetailsToolStripMenuItem1, "DetailsToolStripMenuItem1")
+        '
+        'LargeIconsToolStripMenuItem1
+        '
+        Me.LargeIconsToolStripMenuItem1.Name = "LargeIconsToolStripMenuItem1"
+        resources.ApplyResources(Me.LargeIconsToolStripMenuItem1, "LargeIconsToolStripMenuItem1")
+        '
+        'SmallIconsToolStripMenuItem1
+        '
+        Me.SmallIconsToolStripMenuItem1.Name = "SmallIconsToolStripMenuItem1"
+        resources.ApplyResources(Me.SmallIconsToolStripMenuItem1, "SmallIconsToolStripMenuItem1")
+        '
+        'TileToolStripMenuItem1
+        '
+        Me.TileToolStripMenuItem1.Name = "TileToolStripMenuItem1"
+        resources.ApplyResources(Me.TileToolStripMenuItem1, "TileToolStripMenuItem1")
+        '
+        'PingToolStripButton
+        '
+        Me.PingToolStripButton.Checked = True
+        Me.PingToolStripButton.CheckOnClick = True
+        Me.PingToolStripButton.CheckState = System.Windows.Forms.CheckState.Checked
+        resources.ApplyResources(Me.PingToolStripButton, "PingToolStripButton")
+        Me.PingToolStripButton.Name = "PingToolStripButton"
+        '
+        'ScheduleToolStripButton
+        '
+        resources.ApplyResources(Me.ScheduleToolStripButton, "ScheduleToolStripButton")
+        Me.ScheduleToolStripButton.Name = "ScheduleToolStripButton"
+        '
+        'ListenerToolStripButton
+        '
+        Me.ListenerToolStripButton.Image = Global.WakeOnLan.My.Resources.Resources.network_transmit
+        resources.ApplyResources(Me.ListenerToolStripButton, "ListenerToolStripButton")
+        Me.ListenerToolStripButton.Name = "ListenerToolStripButton"
+        '
+        'EventLogToolStripButton
+        '
+        resources.ApplyResources(Me.EventLogToolStripButton, "EventLogToolStripButton")
+        Me.EventLogToolStripButton.Name = "EventLogToolStripButton"
+        '
+        'OptionsToolStripButton
+        '
+        resources.ApplyResources(Me.OptionsToolStripButton, "OptionsToolStripButton")
+        Me.OptionsToolStripButton.Name = "OptionsToolStripButton"
+        '
+        'HotToolStripButton
+        '
+        Me.HotToolStripButton.Checked = True
+        Me.HotToolStripButton.CheckOnClick = True
+        Me.HotToolStripButton.CheckState = System.Windows.Forms.CheckState.Checked
+        resources.ApplyResources(Me.HotToolStripButton, "HotToolStripButton")
+        Me.HotToolStripButton.Name = "HotToolStripButton"
+        '
         'TrayMenuItemWakeUp
         '
         Me.TrayMenuItemWakeUp.Name = "TrayMenuItemWakeUp"
@@ -859,11 +859,11 @@ Partial Class Explorer
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.ContextMenuStrip_Machines.ResumeLayout(False)
+        Me.MenuStrip.ResumeLayout(False)
+        Me.MenuStrip.PerformLayout()
         Me.ToolStrip.ResumeLayout(False)
         Me.ToolStrip.PerformLayout()
         Me.ContextMenuStripViews.ResumeLayout(False)
-        Me.MenuStrip.ResumeLayout(False)
-        Me.MenuStrip.PerformLayout()
         Me.ContextMenuStripTray.ResumeLayout(False)
         Me.ResumeLayout(False)
 

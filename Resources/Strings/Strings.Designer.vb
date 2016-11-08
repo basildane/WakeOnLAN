@@ -110,6 +110,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to WakeOnLAN is still running in the task tray..
+        '''</summary>
+        Friend Shared ReadOnly Property ackMinimized() As String
+            Get
+                Return ResourceManager.GetString("ackMinimized", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Send an email.
         '''</summary>
         Friend Shared ReadOnly Property actions_email() As String
