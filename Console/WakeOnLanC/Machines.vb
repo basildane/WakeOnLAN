@@ -18,6 +18,7 @@
 
 Imports System.Xml.Serialization
 Imports Machines
+Imports Microsoft.Win32
 
 Module MachinesModule
     Public Machines As New MachinesClass
@@ -46,7 +47,10 @@ Public Class MachinesClass
 
     Public Sub Load(Path As String)
         If String.IsNullOrEmpty(Path) Then
-            Path = IO.Path.Combine(IO.Directory.GetParent(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, "machines.xml")
+            Dim regKey As RegistryKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", False)
+            Path = regKey.GetValue("Database", IO.Directory.GetParent(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, RegistryValueOptions.None)
+            Path = IO.Path.Combine(Path, "machines.xml")
+            regKey.Close()
         End If
 
         Import(Path)
@@ -57,6 +61,7 @@ Public Class MachinesClass
         Dim fs As IO.FileStream
 
         Try
+            Console.WriteLine("Loading database: " & Filename)
             fs = New IO.FileStream(Filename, IO.FileMode.Open, IO.FileAccess.Read)
             Machines = CType(serializer.Deserialize(fs), MachinesClass)
 
