@@ -105,6 +105,8 @@ Namespace My
                             language = "fr-FR"
                         Case "hu"
                             language = "hu-HU"
+                        Case "it"
+                            language = "it-IT"
                         Case "nl"
                             language = "nl-NL"
                         Case "pt_BR"
@@ -119,6 +121,8 @@ Namespace My
                     Settings.Language = language
                 End If
             End If
+            ' TODO:
+            Settings.Language = "it-IT"
 
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
             Debug.WriteLine("Language: " & Settings.Language)

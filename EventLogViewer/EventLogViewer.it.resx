@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,53 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>366, 19</value>
+  <data name="NotFoundLabel.Text" xml:space="preserve">
+    <value>Nessun evento trovato</value>
   </data>
-  <data name="labelTitle.Text" xml:space="preserve">
-    <value>Möchten Sie die Aktualisierung später herunterladen?</value>
+  <data name="btnWarnings.Text" xml:space="preserve">
+    <value>0 Avvisi</value>
   </data>
-  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 30</value>
+  <data name="btnErrors.ToolTipText" xml:space="preserve">
+    <value>0 Errori</value>
   </data>
-  <data name="labelDescription.Text" xml:space="preserve">
-    <value>Sie sollten jetzt aktualisieren. Dies dauert nicht lange und Sie besitzen dann die aktuellste Version.</value>
+  <data name="btnErrors.Text" xml:space="preserve">
+    <value>0 Errori</value>
   </data>
-  <data name="radioButtonYes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 19</value>
+  <data name="btnMessages.ToolTipText" xml:space="preserve">
+    <value>0 Messaggi</value>
   </data>
-  <data name="radioButtonYes.Text" xml:space="preserve">
-    <value>Ja, erinnern Sie mich später daran:</value>
+  <data name="btnMessages.Text" xml:space="preserve">
+    <value>0 Messaggi</value>
   </data>
-  <data name="radioButtonNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 19</value>
+  <data name="SourceLabel.Text" xml:space="preserve">
+    <value>Sorgente:</value>
   </data>
-  <data name="radioButtonNo.Text" xml:space="preserve">
-    <value>Nein, lade die Version sofort herunter(empfohlen)</value>
+  <data name="btnWarnings.ToolTipText" xml:space="preserve">
+    <value>0 Avvisi</value>
   </data>
-  <data name="comboBoxRemindLater.Items" xml:space="preserve">
-    <value>Nach 30 Minuten</value>
+  <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
+    <value>Non ci sono eventi che incontrano la definizione dei filtri</value>
   </data>
-  <data name="comboBoxRemindLater.Items1" xml:space="preserve">
-    <value>Nach 12 Stunden</value>
-  </data>
-  <data name="comboBoxRemindLater.Items2" xml:space="preserve">
-    <value>Nach 1 Tag</value>
-  </data>
-  <data name="comboBoxRemindLater.Items3" xml:space="preserve">
-    <value>Nach 2 Tagen</value>
-  </data>
-  <data name="comboBoxRemindLater.Items4" xml:space="preserve">
-    <value>Nach 4 Tagen</value>
-  </data>
-  <data name="comboBoxRemindLater.Items5" xml:space="preserve">
-    <value>Nach 8 Tagen</value>
-  </data>
-  <data name="comboBoxRemindLater.Items6" xml:space="preserve">
-    <value>Nach 10 Tagen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Erinnern Sie mich später an die Aktualisierung</value>
+  <data name="FindLabel.Text" xml:space="preserve">
+    <value>Trova:</value>
   </data>
 </root>

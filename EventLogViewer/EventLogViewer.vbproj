@@ -49,6 +49,7 @@
     <NoWarn>42353,42354,42355</NoWarn>
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
     <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -125,6 +126,9 @@
     <EmbeddedResource Include="EventLogViewer.fr.resx">
       <DependentUpon>EventLogViewer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventLogViewer.it.resx">
+      <DependentUpon>EventLogViewer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventLogViewer.nl.resx">
       <DependentUpon>EventLogViewer.vb</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +149,7 @@
     <EmbeddedResource Include="Strings.de.resx" />
     <EmbeddedResource Include="Strings.es.resx" />
     <EmbeddedResource Include="Strings.fr.resx" />
+    <EmbeddedResource Include="Strings.it.resx" />
     <EmbeddedResource Include="Strings.nl.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.nl.Designer.vb</LastGenOutput>
