@@ -23,6 +23,7 @@ Imports System.Net
 Imports System.Threading
 
 <Serializable()> <CLSCompliant(True)> Public Class Machine
+
     <NonSerialized> Private WithEvents _backgroundWorker As New BackgroundWorker
     <NonSerialized> Private WithEvents ping As New Ping
 
