@@ -47,6 +47,7 @@ Public Class Properties
             m.UDPPort = CInt(UDPPort.Text)
             m.TTL = CInt(TTL.Text)
             m.RDPPort = tRDPPort.Text
+            m.RDPFile = tRDPFilename.Text.Trim
             m.Note = TextBox_Notes.Text
             m.UserID = tUserId.Text
             m.Password = _encryption.EnigmaEncrypt(tPassword.Text)
@@ -81,6 +82,7 @@ Public Class Properties
         UDPPort.Text = "9"
         TTL.Text = "128"
         tRDPPort.Text = "3389"
+        tRDPFilename.Text = String.Empty
         ComboBoxShutdownMethod.SelectedIndex = 0
         TextBox_Notes.Text = String.Empty
         ShowDialog(My.Forms.Explorer)
@@ -107,6 +109,7 @@ Public Class Properties
         rbIP.Checked = (m.Method = 0)
         rbURI.Checked = (m.Method = 1)
         tRDPPort.Text = m.RDPPort
+        tRDPFilename.Text = m.RDPFile
         TextBox_Notes.Text = m.Note
         tUserId.Text = m.UserID
         tPassword.Text = _encryption.EnigmaDecrypt(m.Password)
@@ -129,7 +132,7 @@ Public Class Properties
         Close()
     End Sub
 
-    Private Sub Controls_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MachineName.Validating, tHostURI.Validating, MAC.Validating, Broadcast.Validating, IP.Validating, UDPPort.Validating, TTL.Validating
+    Private Sub Controls_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MachineName.Validating, tHostURI.Validating, MAC.Validating, Broadcast.Validating, IP.Validating, UDPPort.Validating, TTL.Validating, tRDPFilename.Validating
         If sender.IsValid() Then
             ErrorProvider1.SetError(sender, String.Empty)
         Else
@@ -149,6 +152,7 @@ Public Class Properties
             Next
         Next
 
+        EditRDPButton.Enabled = Not String.IsNullOrWhiteSpace(tRDPFilename.Text)
         ErrorProvider1.SetError(TabControl1, String.Empty)
 
         If String.IsNullOrEmpty(MachineName.Text) Then Return
@@ -169,6 +173,29 @@ Public Class Properties
 
     Private Sub MachineName_TextChanged(sender As Object, e As EventArgs) Handles MachineName.TextChanged
         Text = String.Format(My.Resources.Strings.Properties, MachineName.Text)
+    End Sub
+
+    Private Sub File_Button_Click(sender As Object, e As EventArgs) Handles File_Button.Click
+        Dim openFileDialog As New OpenFileDialog
+
+        With openFileDialog
+            .Title = My.Resources.Strings.rdp_title
+            .CheckFileExists = True
+            .CheckPathExists = True
+            .DefaultExt = "rdp"
+            .Filter = My.Resources.Strings.rdp_filter
+            .FilterIndex = 1
+            .RestoreDirectory = True
+
+            Dim dialogResult As DialogResult = .ShowDialog()
+            If (dialogResult = DialogResult.OK) Then
+                tRDPFilename.Text = .FileName
+            End If
+        End With
+    End Sub
+
+    Private Sub EditRDPButton_Click(sender As Object, e As EventArgs) Handles EditRDPButton.Click
+        Shell(String.Format("mstsc.exe /edit ""{0}""", tRDPFilename.Text), AppWinStyle.NormalFocus, False)
     End Sub
 
 End Class

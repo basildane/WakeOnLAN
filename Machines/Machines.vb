@@ -53,6 +53,7 @@ Imports System.Threading
     Public Property UDPPort As Integer = 9
     Public Property TTL As Integer = 128
     Public Property RDPPort As Integer = 3389
+    Public Property RDPFile As String = String.Empty
     Public Property Note As String = String.Empty
     Public Property UserID As String = String.Empty
     Public Property Password As String = String.Empty

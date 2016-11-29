@@ -668,6 +668,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to RDP files (*.rdp)|*.rdp|All files (*.*)|*.*.
+        '''</summary>
+        Friend Shared ReadOnly Property rdp_filter() As String
+            Get
+                Return ResourceManager.GetString("rdp_filter", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Browse RDP Files.
+        '''</summary>
+        Friend Shared ReadOnly Property rdp_title() As String
+            Get
+                Return ResourceManager.GetString("rdp_title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to {0} Response Time {1} ms.
         '''</summary>
         Friend Shared ReadOnly Property ResponseTime() As String
