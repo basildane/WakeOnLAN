@@ -34,6 +34,7 @@ Public Class Countries : Inherits StringConverter
             "es-ES",
             "fr-FR",
             "hu-HU",
+            "it-IT",
             "nl-NL",
             "en-US",
             "ru-RU",
@@ -42,7 +43,7 @@ Public Class Countries : Inherits StringConverter
             "zh-TW"
         }
 
-    ReadOnly _countryNames(11) As String
+    ReadOnly _countryNames(_countryCodes.Length) As String
 
     Public Sub New()
         Dim cultureInfo As CultureInfo
@@ -121,6 +122,8 @@ Public Class LanguageEditor : Inherits UITypeEditor
                 newImage = My.Resources.Flags.France
             Case "hu-HU"
                 newImage = My.Resources.Flags.Hungary
+            Case "it-IT"
+                newImage = My.Resources.Flags.Italy
             Case "nl-NL"
                 newImage = My.Resources.Flags.Netherlands
             Case "en-US"
