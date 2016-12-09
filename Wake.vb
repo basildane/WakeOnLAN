@@ -59,9 +59,8 @@ Module Wake
                     newMachine = New repeatingMachine(machine)
                     newMachine.remainingCount = machine.RepeatCount - 1
                     repeatMachine.Add(newMachine)
-
+                    repeatTimer.Interval = My.Settings.repeatInterval
                     If repeatTimer.Enabled = False Then
-                        repeatTimer.Interval = My.Settings.repeatInterval
                         repeatTimer.Enabled = True
                         AddHandler repeatTimer.Tick, AddressOf RepeatTimerEvent
                     End If
