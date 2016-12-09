@@ -38,9 +38,20 @@ Public Class Options
             My.Settings.autocheckUpdates = .AutoCheck
             My.Settings.Language = .Language
             My.Settings.Threads = .Threads
+            My.Settings.repeatInterval = .RepeatInterval
         End With
         My.Settings.Save()
         DialogResult = DialogResult.OK
+
+        Try
+            regKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", True)
+            regKey.SetValue("RepeatInterval", My.Settings.repeatInterval, RegistryValueKind.DWord)
+            regKey.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(Me, ex.Message, "Save RepeatInterval to registry.")
+
+        End Try
 
         If _savedDbPath <> My.Settings.dbPath Then
             Try
@@ -49,7 +60,7 @@ Public Class Options
                 regKey.Close()
 
             Catch ex As Exception
-                MessageBox.Show(Me, ex.Message, "Save database path")
+                MessageBox.Show(Me, ex.Message, "Save database path.")
 
             End Try
 
@@ -84,6 +95,7 @@ Public Class Options
             .AutoCheck = My.Settings.autocheckUpdates
             .Language = My.Settings.Language
             .Threads = My.Settings.Threads
+            .RepeatInterval = My.Settings.repeatInterval
         End With
 
         With PropertyGrid1
@@ -159,6 +171,17 @@ Public Class Options
             End Set
         End Property
         Private _autocheck As Boolean
+
+        Private _RepeatInterval As Integer
+
+        <GlobalizedCategory("cat_WOL")> Public Property RepeatInterval() As Integer
+            Get
+                Return _RepeatInterval
+            End Get
+            Set(ByVal Value As Integer)
+                _RepeatInterval = Value
+            End Set
+        End Property
 
         Private _Shutdown As String
 

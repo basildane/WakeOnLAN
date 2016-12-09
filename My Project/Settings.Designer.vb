@@ -555,6 +555,18 @@ Namespace My
                 Me("ackMinimize") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("750")>  _
+        Public Property repeatInterval() As Integer
+            Get
+                Return CType(Me("repeatInterval"),Integer)
+            End Get
+            Set
+                Me("repeatInterval") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
