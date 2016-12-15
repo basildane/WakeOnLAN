@@ -346,7 +346,7 @@
     <value>MachineName</value>
   </data>
   <data name="&gt;&gt;MachineName.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;MachineName.Parent" xml:space="preserve">
     <value>TabProperties</value>
@@ -381,6 +381,66 @@
   <data name="&gt;&gt;TabProperties.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="Repeat.ErrorMessage" xml:space="preserve">
+    <value>Invalid repeat count</value>
+  </data>
+  <data name="Repeat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 182</value>
+  </data>
+  <data name="Repeat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 20</value>
+  </data>
+  <data name="Repeat.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;Repeat.Name" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="&gt;&gt;Repeat.Type" xml:space="preserve">
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Repeat.Parent" xml:space="preserve">
+    <value>TabWakeUp</value>
+  </data>
+  <data name="&gt;&gt;Repeat.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbRepeat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbRepeat.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>TopLeft</value>
+  </data>
+  <data name="lbRepeat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbRepeat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 185</value>
+  </data>
+  <data name="lbRepeat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="lbRepeat.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="lbRepeat.Text" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="lbRepeat.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbRepeat.Name" xml:space="preserve">
+    <value>lbRepeat</value>
+  </data>
+  <data name="&gt;&gt;lbRepeat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbRepeat.Parent" xml:space="preserve">
+    <value>TabWakeUp</value>
+  </data>
+  <data name="&gt;&gt;lbRepeat.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="cbKeepAlive.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -406,7 +466,7 @@
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;cbKeepAlive.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="tHostURI.ErrorMessage" xml:space="preserve">
     <value>Invalid computer name</value>
@@ -424,13 +484,13 @@
     <value>tHostURI</value>
   </data>
   <data name="&gt;&gt;tHostURI.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tHostURI.Parent" xml:space="preserve">
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;tHostURI.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="lbUDP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -466,7 +526,7 @@
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;lbUDP.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="lbTTL.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -502,7 +562,7 @@
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;lbTTL.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="lbMAC.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -538,7 +598,7 @@
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;lbMAC.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="bCalcBroadcast.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -565,7 +625,7 @@
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;bCalcBroadcast.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="lbNetbios.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -601,7 +661,7 @@
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;lbNetbios.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="lbSendTo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -637,7 +697,7 @@
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;lbSendTo.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="rbURI.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -667,7 +727,7 @@
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;rbURI.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="rbIP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -697,7 +757,7 @@
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;rbIP.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="lbBroadcast.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -733,7 +793,7 @@
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;lbBroadcast.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="TTL.ErrorMessage" xml:space="preserve">
     <value>Invalid TTL</value>
@@ -751,13 +811,13 @@
     <value>TTL</value>
   </data>
   <data name="&gt;&gt;TTL.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TTL.Parent" xml:space="preserve">
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;TTL.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="UDPPort.ErrorMessage" xml:space="preserve">
     <value>Invalid UDP</value>
@@ -775,13 +835,13 @@
     <value>UDPPort</value>
   </data>
   <data name="&gt;&gt;UDPPort.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;UDPPort.Parent" xml:space="preserve">
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;UDPPort.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="Broadcast.ErrorMessage" xml:space="preserve">
     <value>Invalid IP Address.  Use ###.###.###.###</value>
@@ -802,13 +862,13 @@
     <value>Broadcast</value>
   </data>
   <data name="&gt;&gt;Broadcast.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Broadcast.Parent" xml:space="preserve">
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;Broadcast.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="MAC.ErrorMessage" xml:space="preserve">
     <value>Invalid MAC Address.  Use ##:##:##:##:##:##</value>
@@ -829,13 +889,13 @@
     <value>MAC</value>
   </data>
   <data name="&gt;&gt;MAC.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;MAC.Parent" xml:space="preserve">
     <value>TabWakeUp</value>
   </data>
   <data name="&gt;&gt;MAC.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="TabWakeUp.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -883,7 +943,7 @@
     <value>tRDPFilename</value>
   </data>
   <data name="&gt;&gt;tRDPFilename.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tRDPFilename.Parent" xml:space="preserve">
     <value>TabStatus</value>
@@ -1120,7 +1180,7 @@
     <value>IP</value>
   </data>
   <data name="&gt;&gt;IP.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;IP.Parent" xml:space="preserve">
     <value>TabStatus</value>
@@ -1147,7 +1207,7 @@
     <value>tRDPPort</value>
   </data>
   <data name="&gt;&gt;tRDPPort.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tRDPPort.Parent" xml:space="preserve">
     <value>TabStatus</value>
@@ -1198,7 +1258,7 @@
     <value>tDomain</value>
   </data>
   <data name="&gt;&gt;tDomain.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tDomain.Parent" xml:space="preserve">
     <value>TabShutdown</value>
@@ -1222,7 +1282,7 @@
     <value>tPassword</value>
   </data>
   <data name="&gt;&gt;tPassword.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tPassword.Parent" xml:space="preserve">
     <value>TabShutdown</value>
@@ -1246,7 +1306,7 @@
     <value>tUserId</value>
   </data>
   <data name="&gt;&gt;tUserId.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.12.20, Culture=neutral, PublicKeyToken=null</value>
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tUserId.Parent" xml:space="preserve">
     <value>TabShutdown</value>

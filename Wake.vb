@@ -20,10 +20,13 @@ Imports Machines
 
 Module Wake
     Dim repeatTimer As Timer = New Timer()
-    Dim repeatMachine As New List(Of Machine)
+    Dim keepAliveTimer As Timer = New Timer()
+    Dim repeatMachine As New List(Of repeatingMachine)
+    Dim thisLock As New Object
 
     Public Sub WakeUp(ByVal machine As Machine)
         Dim host As String
+        Dim newMachine As repeatingMachine
 
         Try
             If (String.IsNullOrEmpty(machine.MAC)) Then
@@ -31,24 +34,43 @@ Module Wake
                 Return
             End If
 
-            If (machine.Method = 0) Then
-                host = machine.Broadcast
-            Else
-                host = machine.Netbios
-            End If
-
-            If (machine.KeepAlive) Then
-                If Not repeatMachine.Contains(machine) Then
-                    repeatMachine.Add(machine)
+            SyncLock thisLock
+                If (machine.Method = 0) Then
+                    host = machine.Broadcast
+                Else
+                    host = machine.Netbios
                 End If
-                If repeatTimer.Enabled = False Then
-                    repeatTimer.Interval = My.Settings.keepAliveInterval
-                    repeatTimer.Enabled = True
-                    AddHandler repeatTimer.Tick, AddressOf OnTimerEvent
-                End If
-            End If
 
-            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
+                If (machine.KeepAlive) Then
+
+                    newMachine = New repeatingMachine(machine)
+                    If Not repeatMachine.Contains(newMachine) Then
+                        newMachine.remainingCount = -1
+                        repeatMachine.Add(newMachine)
+                    End If
+                    If keepAliveTimer.Enabled = False Then
+                        keepAliveTimer.Interval = My.Settings.keepAliveInterval
+                        keepAliveTimer.Enabled = True
+                        AddHandler keepAliveTimer.Tick, AddressOf KeepAliveTimerEvent
+                    End If
+
+                ElseIf (machine.RepeatCount > 1) Then
+
+                    newMachine = New repeatingMachine(machine)
+                    newMachine.remainingCount = machine.RepeatCount - 1
+                    repeatMachine.Add(newMachine)
+                    repeatTimer.Interval = My.Settings.repeatInterval
+                    If repeatTimer.Enabled = False Then
+                        repeatTimer.Enabled = True
+                        AddHandler repeatTimer.Tick, AddressOf RepeatTimerEvent
+                    End If
+
+                End If
+
+                WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
+
+            End SyncLock
+
             WOL.AquilaWolLibrary.WriteLog(String.Format("WakeUp sent to ""{0}""", machine.Name), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.WakeUp)
 
         Catch ex As Exception
@@ -58,16 +80,73 @@ Module Wake
         End Try
 
     End Sub
-    Private Sub OnTimerEvent(ByVal sender As Object, ByVal e As EventArgs)
-        For Each machine As Machine In repeatMachine
-            If (machine.Method = 0) Then
-                host = machine.Broadcast
-            Else
-                host = machine.Netbios
-            End If
+    Private Sub RepeatTimerEvent(ByVal sender As Object, ByVal e As EventArgs)
+        SyncLock thisLock
+            For i As Integer = repeatMachine.Count - 1 To 0 Step -1
+                Dim machine As repeatingMachine = repeatMachine(i)
+                If (machine.Method = 0) Then
+                    host = machine.Broadcast
+                Else
+                    host = machine.Netbios
+                End If
 
-            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
-        Next
+                Select Case machine.remainingCount
+                    Case > 0
+                        machine.remainingCount -= 1
+                        WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
+
+                    Case 0
+                        Debug.WriteLine("remove: " & machine.Name)
+                        repeatMachine.RemoveAt(i)
+
+                End Select
+
+            Next
+        End SyncLock
     End Sub
+
+    Private Sub KeepAliveTimerEvent(ByVal sender As Object, ByVal e As EventArgs)
+        SyncLock thisLock
+            For Each machine As repeatingMachine In repeatMachine
+                If (machine.Method = 0) Then
+                    host = machine.Broadcast
+                Else
+                    host = machine.Netbios
+                End If
+
+                WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
+            Next
+        End SyncLock
+    End Sub
+
+    Class repeatingMachine
+        Inherits Machine
+
+        Public Property remainingCount As Integer
+
+        Public Sub New(machine As Machine)
+            Name = machine.Name
+            MAC = machine.MAC
+            IP = machine.IP
+            Broadcast = machine.Broadcast
+            Netbios = machine.Netbios
+            Method = machine.Method
+            Emergency = machine.Emergency
+            ShutdownCommand = machine.ShutdownCommand
+            Group = machine.Group
+            UDPPort = machine.UDPPort
+            TTL = machine.TTL
+            RDPPort = machine.RDPPort
+            RDPFile = machine.RDPFile
+            Note = machine.Note
+            UserID = machine.UserID
+            Password = machine.Password
+            Domain = machine.Domain
+            ShutdownMethod = machine.ShutdownMethod
+            KeepAlive = machine.KeepAlive
+            RepeatCount = machine.RepeatCount
+        End Sub
+
+    End Class
 
 End Module

@@ -51,6 +51,8 @@ Partial Class Properties
         Me.TabProperties = New System.Windows.Forms.TabPage()
         Me.TextBox_Notes = New System.Windows.Forms.TextBox()
         Me.TabWakeUp = New System.Windows.Forms.TabPage()
+        Me.Repeat = New WakeOnLan.Controls.RegExTextBox()
+        Me.lbRepeat = New System.Windows.Forms.Label()
         Me.cbKeepAlive = New System.Windows.Forms.CheckBox()
         Me.tHostURI = New WakeOnLan.Controls.RegExTextBox()
         Me.bCalcBroadcast = New System.Windows.Forms.Button()
@@ -255,6 +257,8 @@ Partial Class Properties
         '
         'TabWakeUp
         '
+        Me.TabWakeUp.Controls.Add(Me.Repeat)
+        Me.TabWakeUp.Controls.Add(Me.lbRepeat)
         Me.TabWakeUp.Controls.Add(Me.cbKeepAlive)
         Me.TabWakeUp.Controls.Add(Me.tHostURI)
         Me.TabWakeUp.Controls.Add(Me.lbUDP)
@@ -273,6 +277,19 @@ Partial Class Properties
         resources.ApplyResources(Me.TabWakeUp, "TabWakeUp")
         Me.TabWakeUp.Name = "TabWakeUp"
         Me.TabWakeUp.UseVisualStyleBackColor = True
+        '
+        'Repeat
+        '
+        Me.Repeat.ErrorColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Repeat, "Repeat")
+        Me.Repeat.Name = "Repeat"
+        Me.Repeat.ValidationExpression = "^[1-9][0-9]*$"
+        '
+        'lbRepeat
+        '
+        resources.ApplyResources(Me.lbRepeat, "lbRepeat")
+        Me.ErrorProvider1.SetIconAlignment(Me.lbRepeat, CType(resources.GetObject("lbRepeat.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.lbRepeat.Name = "lbRepeat"
         '
         'cbKeepAlive
         '
@@ -555,4 +572,6 @@ Partial Class Properties
     Friend WithEvents lbRDPFile As Label
     Friend WithEvents EditRDPButton As Button
     Friend WithEvents tRDPFilename As RegExTextBox
+    Friend WithEvents Repeat As RegExTextBox
+    Friend WithEvents lbRepeat As Label
 End Class

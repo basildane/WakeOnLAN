@@ -18,7 +18,7 @@
 Imports Machines
 
 Module Wake
-    Public Sub WakeUp(ByVal machine As Machine)
+    Public Sub WakeUp(ByVal machine As Machine, Optional repeatInterval As Integer = 0)
         Dim host As String
 
         Try
@@ -28,7 +28,14 @@ Module Wake
                 host = machine.Netbios
             End If
 
-            WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
+            If (machine.RepeatCount > 1) Then
+                For i As Integer = 1 To machine.RepeatCount
+                    WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
+                    Threading.Thread.Sleep(repeatInterval)
+                Next
+            Else
+                WOL.AquilaWolLibrary.WakeUp(machine.MAC, host, machine.UDPPort, machine.TTL)
+            End If
             WOL.AquilaWolLibrary.WriteLog(String.Format("WakeUp sent to ""{0}""", machine.Name), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.WakeUp)
 
         Catch ex As Exception

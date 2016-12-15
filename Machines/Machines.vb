@@ -60,6 +60,7 @@ Imports System.Threading
     Public Property Domain As String = String.Empty
     Public Property ShutdownMethod As ShutdownMethods = ShutdownMethods.WMI
     Public Property KeepAlive As Boolean = False
+    Public Property RepeatCount As Integer = 1
 
     <XmlIgnore()> Public Status As StatusCodes = StatusCodes.Unknown
     <NonSerialized> <XmlIgnore()> Public Reply As PingReply

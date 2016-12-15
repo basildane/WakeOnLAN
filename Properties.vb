@@ -53,6 +53,7 @@ Public Class Properties
             m.Password = _encryption.EnigmaEncrypt(tPassword.Text)
             m.Domain = tDomain.Text
             m.ShutdownMethod = ComboBoxShutdownMethod.SelectedIndex
+            m.RepeatCount = Repeat.Text
             Machines.Add(m)
 
             Machines.Save()
@@ -85,6 +86,7 @@ Public Class Properties
         tRDPFilename.Text = String.Empty
         ComboBoxShutdownMethod.SelectedIndex = 0
         TextBox_Notes.Text = String.Empty
+        Repeat.Text = "1"
         ShowDialog(My.Forms.Explorer)
     End Sub
 
@@ -115,6 +117,7 @@ Public Class Properties
         tPassword.Text = _encryption.EnigmaDecrypt(m.Password)
         tDomain.Text = m.Domain
         ComboBoxShutdownMethod.SelectedIndex = m.ShutdownMethod
+        Repeat.Text = m.RepeatCount
 
         ValidateChildren()
         ShowDialog(My.Forms.Explorer)
@@ -132,7 +135,7 @@ Public Class Properties
         Close()
     End Sub
 
-    Private Sub Controls_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MachineName.Validating, tHostURI.Validating, MAC.Validating, Broadcast.Validating, IP.Validating, UDPPort.Validating, TTL.Validating, tRDPFilename.Validating
+    Private Sub Controls_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MachineName.Validating, tHostURI.Validating, MAC.Validating, Broadcast.Validating, IP.Validating, UDPPort.Validating, TTL.Validating, tRDPFilename.Validating, Repeat.Validating
         If sender.IsValid() Then
             ErrorProvider1.SetError(sender, String.Empty)
         Else
