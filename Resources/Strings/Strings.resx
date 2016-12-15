@@ -421,4 +421,10 @@
   <data name="rdp_title" xml:space="preserve">
     <value>Browse RDP Files</value>
   </data>
+  <data name="errUserConfigCorrupt" xml:space="preserve">
+    <value>Wake on LAN has detected that your user settings file has become corrupted. This may be due to a crash or improper exiting of the program. Wake on LAN must reset your user settings in order to continue.\n\nClick Yes to reset your user settings and continue.\n\nClick No if you wish to attempt manual repair or to rescue information before proceeding.</value>
+  </data>
+  <data name="errUserConfigTitle" xml:space="preserve">
+    <value>Corrupt user settings</value>
+  </data>
 </root>
