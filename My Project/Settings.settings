@@ -72,7 +72,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="updateURL" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://wol.aquilatech.com/updates/AppCast.xml</Value>
+      <Value Profile="(Default)">https://wol.aquilatech.com/updates/AppCast.xml</Value>
     </Setting>
     <Setting Name="updateIntervalDays" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">7</Value>
@@ -99,7 +99,7 @@
       <Value Profile="(Default)">0, 0</Value>
     </Setting>
     <Setting Name="updateVersions" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://wol.aquilatech.com/updates/version.html</Value>
+      <Value Profile="(Default)">https://wol.aquilatech.com/updates/version.html</Value>
     </Setting>
     <Setting Name="needUpgrade" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
