@@ -134,5 +134,14 @@
     <Setting Name="repeatInterval" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">750</Value>
     </Setting>
+    <Setting Name="SearchColumns" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SearchWindowSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="SearchWindowLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

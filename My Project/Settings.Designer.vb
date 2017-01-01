@@ -567,6 +567,42 @@ Namespace My
                 Me("repeatInterval") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SearchColumns() As String
+            Get
+                Return CType(Me("SearchColumns"),String)
+            End Get
+            Set
+                Me("SearchColumns") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0, 0")>  _
+        Public Property SearchWindowSize() As Global.System.Drawing.Size
+            Get
+                Return CType(Me("SearchWindowSize"),Global.System.Drawing.Size)
+            End Get
+            Set
+                Me("SearchWindowSize") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0, 0")>  _
+        Public Property SearchWindowLocation() As Global.System.Drawing.Point
+            Get
+                Return CType(Me("SearchWindowLocation"),Global.System.Drawing.Point)
+            End Get
+            Set
+                Me("SearchWindowLocation") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

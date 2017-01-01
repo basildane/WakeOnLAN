@@ -44,6 +44,10 @@ Public Class Explorer
 
         Location = My.Settings.MainWindow_Location
         Size = My.Settings.MainWindow_Size
+        If Not IsOnScreen(Me) Then
+            Location = New Point(0, 0)
+        End If
+
         MenuStrip.Location = New Point(0, 0)
 
         ListView.View = My.Settings.ListView_View

@@ -63,6 +63,19 @@ Module Globals
         Next
     End Sub
 
+    ''' <summary>
+    ''' Returns TRUE if form is on screen.
+    ''' </summary>
+    ''' <param name="form"></param>
+    ''' <returns>Boolean</returns>
+    Public Function IsOnScreen(form As Form) As Boolean
+        Const margin As Integer = 100
+        If form.Left < 0 Or form.Top < 0 Then Return False
+        Dim formRectangle As New Rectangle(form.Left + margin, form.Top + margin, form.Width, form.Height)
+
+        Return Screen.AllScreens.Any(Function(s) s.WorkingArea.IntersectsWith(formRectangle))
+    End Function
+
     Public Function FormatMessage(ByVal [error] As Integer) As String
         Const FORMAT_MESSAGE_FROM_SYSTEM As UInteger = &H1000
         Const LANG_NEUTRAL As Integer = &H0
