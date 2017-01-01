@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Aquila Technology")]
 [assembly: AssemblyProduct("SetupHelpers")]
-[assembly: AssemblyCopyright("Copyright (c) 2004 - 2016, Aquila Technology")]
+[assembly: AssemblyCopyright("Copyright (c) 2004 - 2017, Aquila Technology")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
