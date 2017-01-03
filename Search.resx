@@ -117,631 +117,928 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;ch_OS.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SearchBegin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="UnCheckAllButton.Text" xml:space="preserve">
-    <value>UnCheck All</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="SearchBegin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 87</value>
+  </data>
+  <data name="SearchBegin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SearchBegin.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="SearchBegin.Text" xml:space="preserve">
+    <value>Begin Search</value>
+  </data>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>166, 18</value>
+  </metadata>
+  <data name="SearchBegin.ToolTip" xml:space="preserve">
+    <value>Begin searching for machines</value>
+  </data>
+  <data name="&gt;&gt;SearchBegin.Name" xml:space="preserve">
+    <value>SearchBegin</value>
   </data>
   <data name="&gt;&gt;SearchBegin.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LabelDescription.Name" xml:space="preserve">
-    <value>LabelDescription</value>
+  <data name="&gt;&gt;SearchBegin.Parent" xml:space="preserve">
+    <value>gbSearch</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="IpAddressControl_End.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 35</value>
+  <data name="&gt;&gt;SearchBegin.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;IpAddressControl_Start.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.8.11, Culture=neutral, PublicKeyToken=null</value>
+  <data name="listView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="ch_Name.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ch_Name.Width" type="System.Int32, mscorlib">
+    <value>112</value>
   </data>
   <data name="ch_OS.Text" xml:space="preserve">
     <value>Operating System</value>
   </data>
-  <data name="&gt;&gt;IpAddressControl_End.Name" xml:space="preserve">
-    <value>IpAddressControl_End</value>
+  <data name="ch_OS.Width" type="System.Int32, mscorlib">
+    <value>270</value>
   </data>
-  <data name="gbSearch.ToolTip" xml:space="preserve">
-    <value />
+  <data name="ch_Interface.Text" xml:space="preserve">
+    <value>Interface ID</value>
   </data>
-  <data name="SearchBegin.ToolTip" xml:space="preserve">
-    <value>Begin searching for machines</value>
+  <data name="ch_Interface.Width" type="System.Int32, mscorlib">
+    <value>203</value>
   </data>
-  <data name="&gt;&gt;ch_OS.Name" xml:space="preserve">
-    <value>ch_OS</value>
+  <data name="ch_IP.Text" xml:space="preserve">
+    <value>IP Address</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="UnCheckAllButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="ch_IP.Width" type="System.Int32, mscorlib">
+    <value>101</value>
   </data>
-  <data name="CheckAllButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="ch_MAC.Text" xml:space="preserve">
+    <value>Mac Address</value>
+  </data>
+  <data name="ch_MAC.Width" type="System.Int32, mscorlib">
+    <value>122</value>
+  </data>
+  <data name="chEnabled.Text" xml:space="preserve">
+    <value>WOL</value>
+  </data>
+  <data name="listView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="listView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>874, 399</value>
   </data>
   <data name="listView.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;listView.Name" xml:space="preserve">
+    <value>listView</value>
+  </data>
+  <data name="&gt;&gt;listView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listView.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="gbSearch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="IpAddressControl_End.ErrorMessage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="IpAddressControl_End.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 35</value>
+  </data>
+  <data name="IpAddressControl_End.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
+  </data>
+  <data name="IpAddressControl_End.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="IpAddressControl_End.ToolTip" xml:space="preserve">
+    <value>Enter the ending IP address to search to</value>
+  </data>
+  <data name="&gt;&gt;IpAddressControl_End.Name" xml:space="preserve">
+    <value>IpAddressControl_End</value>
+  </data>
+  <data name="&gt;&gt;IpAddressControl_End.Type" xml:space="preserve">
+    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;IpAddressControl_End.Parent" xml:space="preserve">
+    <value>gbSearch</value>
+  </data>
+  <data name="&gt;&gt;IpAddressControl_End.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="IpAddressControl_Start.ErrorMessage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="IpAddressControl_Start.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 35</value>
+  </data>
+  <data name="IpAddressControl_Start.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
+  </data>
+  <data name="IpAddressControl_Start.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="IpAddressControl_Start.ToolTip" xml:space="preserve">
+    <value>Enter the starting IP address to search from</value>
+  </data>
+  <data name="&gt;&gt;IpAddressControl_Start.Name" xml:space="preserve">
+    <value>IpAddressControl_Start</value>
+  </data>
+  <data name="&gt;&gt;IpAddressControl_Start.Type" xml:space="preserve">
+    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.13.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;IpAddressControl_Start.Parent" xml:space="preserve">
+    <value>gbSearch</value>
+  </data>
+  <data name="&gt;&gt;IpAddressControl_Start.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="cancelSearch.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="OKButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="LabelAddToGroup.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;backgroundWorker.Name" xml:space="preserve">
-    <value>backgroundWorker</value>
-  </data>
-  <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;UnCheckAllButton.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="LabelDescription.Text" xml:space="preserve">
-    <value>Select desired machines with the checkboxes, then click OK to add them to the database.</value>
-  </data>
-  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="cancelSearch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;ch_MAC.Name" xml:space="preserve">
-    <value>ch_MAC</value>
+  <data name="cancelSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 87</value>
   </data>
-  <data name="&gt;&gt;cancelSearch.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="cancelSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;UnCheckAllButton.Type" xml:space="preserve">
+  <data name="cancelSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="cancelSearch.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="cancelSearch.ToolTip" xml:space="preserve">
+    <value>Stop searching</value>
+  </data>
+  <data name="&gt;&gt;cancelSearch.Name" xml:space="preserve">
+    <value>cancelSearch</value>
+  </data>
+  <data name="&gt;&gt;cancelSearch.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cancelSearch.Parent" xml:space="preserve">
     <value>gbSearch</value>
   </data>
-  <data name="ComboBoxGroup.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Search for machines</value>
-  </data>
-  <data name="&gt;&gt;LabelDescription.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ch_Name.Name" xml:space="preserve">
-    <value>ch_Name</value>
-  </data>
-  <data name="IpAddressControl_Start.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;LabelDescription.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="ch_Interface.Width" type="System.Int32, mscorlib">
-    <value>203</value>
-  </data>
-  <data name="&gt;&gt;StatusStrip1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="StatusStrip1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;StatusStrip1.Name" xml:space="preserve">
-    <value>StatusStrip1</value>
-  </data>
-  <data name="&gt;&gt;CheckAllButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="CheckAllButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 527</value>
+  <data name="&gt;&gt;cancelSearch.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="StatusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>898, 22</value>
-  </data>
-  <data name="&gt;&gt;ch_Interface.Name" xml:space="preserve">
-    <value>ch_Interface</value>
-  </data>
-  <data name="IpAddressControl_End.ErrorMessage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="LabelDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 61</value>
-  </data>
-  <data name="&gt;&gt;chEnabled.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CheckAllButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="ComboBoxGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 476</value>
-  </data>
-  <data name="&gt;&gt;OKButton.Name" xml:space="preserve">
-    <value>OKButton</value>
-  </data>
-  <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 23</value>
-  </data>
-  <data name="StatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 581</value>
-  </data>
-  <data name="Label2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="closeButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SearchBegin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 87</value>
-  </data>
-  <data name="IpAddressControl_End.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="SearchBegin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 23</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel_spacer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="ch_MAC.Width" type="System.Int32, mscorlib">
-    <value>122</value>
-  </data>
-  <data name="ch_Interface.Text" xml:space="preserve">
-    <value>Interface ID</value>
-  </data>
-  <data name="&gt;&gt;SearchBegin.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="LabelDescription.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="gbSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ch_Name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="listView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 13</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="UnCheckAllButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="StatusStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;listView.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="ch_IP.Text" xml:space="preserve">
-    <value>IP Address</value>
-  </data>
-  <data name="ComboBoxGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="OKButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ch_IP.Name" xml:space="preserve">
-    <value>ch_IP</value>
-  </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>gbSearch</value>
-  </data>
-  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="closeButton.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="cancelSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 87</value>
-  </data>
-  <data name="ch_IP.Width" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="CheckAllButton.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="cancelSearch.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="UnCheckAllButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chEnabled.Text" xml:space="preserve">
-    <value>WOL</value>
-  </data>
-  <data name="gbSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 440</value>
-  </data>
-  <data name="LabelDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>680, 475</value>
-  </data>
-  <data name="LabelAddToGroup.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;UnCheckAllButton.Name" xml:space="preserve">
-    <value>UnCheckAllButton</value>
-  </data>
-  <data name="&gt;&gt;CheckAllButton.Name" xml:space="preserve">
-    <value>CheckAllButton</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel1.Name" xml:space="preserve">
-    <value>ToolStripStatusLabel1</value>
-  </data>
-  <data name="&gt;&gt;OKButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;UnCheckAllButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LabelAddToGroup.Name" xml:space="preserve">
-    <value>LabelAddToGroup</value>
-  </data>
-  <data name="SearchBegin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;ch_Interface.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IpAddressControl_Start.Parent" xml:space="preserve">
-    <value>gbSearch</value>
-  </data>
-  <data name="&gt;&gt;ToolStripProgressBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="&gt;&gt;LabelAddToGroup.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;StatusStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;closeButton.Name" xml:space="preserve">
-    <value>closeButton</value>
-  </data>
-  <data name="&gt;&gt;backgroundWorker.Type" xml:space="preserve">
-    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView.Name" xml:space="preserve">
-    <value>listView</value>
-  </data>
-  <data name="&gt;&gt;OKButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
-    <value>Label2</value>
-  </data>
-  <data name="IpAddressControl_Start.ErrorMessage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;closeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelAddToGroup.Text" xml:space="preserve">
-    <value>Add to group...</value>
-  </data>
-  <data name="&gt;&gt;StatusStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cancelSearch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;ch_MAC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IpAddressControl_End.Parent" xml:space="preserve">
-    <value>gbSearch</value>
-  </data>
-  <data name="gbSearch.Text" xml:space="preserve">
-    <value>Search for machines</value>
-  </data>
-  <data name="ToolStripStatusLabel_spacer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 17</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxGroup.Name" xml:space="preserve">
-    <value>ComboBoxGroup</value>
-  </data>
-  <data name="ch_MAC.Text" xml:space="preserve">
-    <value>Mac Address</value>
-  </data>
-  <data name="StatusStrip1.Text" xml:space="preserve">
-    <value>[StatusStrip1]</value>
-  </data>
-  <data name="IpAddressControl_Start.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 35</value>
-  </data>
-  <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripProgressBar1.Name" xml:space="preserve">
-    <value>ToolStripProgressBar1</value>
-  </data>
-  <data name="LabelAddToGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>357, 460</value>
-  </data>
-  <data name="OKButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="listView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>874, 410</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>gbSearch</value>
-  </data>
-  <data name="&gt;&gt;SearchBegin.Name" xml:space="preserve">
-    <value>SearchBegin</value>
-  </data>
-  <data name="UnCheckAllButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;cancelSearch.Name" xml:space="preserve">
-    <value>cancelSearch</value>
-  </data>
-  <data name="SearchBegin.Text" xml:space="preserve">
-    <value>Begin Search</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>171, 16</value>
   </data>
-  <data name="OKButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 23</value>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 13</value>
   </data>
-  <data name="&gt;&gt;gbSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 13</value>
-  </data>
-  <data name="SearchBegin.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="IpAddressControl_Start.ToolTip" xml:space="preserve">
-    <value>Enter the starting IP address to search from</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;IpAddressControl_End.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Starting IP address</value>
-  </data>
-  <data name="closeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;listView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="closeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;LabelDescription.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="LabelAddToGroup.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LabelAddToGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
-  </data>
-  <data name="&gt;&gt;LabelAddToGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;IpAddressControl_Start.Name" xml:space="preserve">
-    <value>IpAddressControl_Start</value>
-  </data>
-  <data name="LabelDescription.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
-    <value>ToolTip1</value>
-  </data>
-  <data name="listView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="gbSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>323, 130</value>
-  </data>
-  <data name="ToolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 17</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel_spacer.Name" xml:space="preserve">
-    <value>ToolStripStatusLabel_spacer</value>
-  </data>
-  <data name="UnCheckAllButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 527</value>
-  </data>
-  <data name="&gt;&gt;IpAddressControl_Start.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cancelSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelAddToGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OKButton.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ch_Name.Width" type="System.Int32, mscorlib">
-    <value>112</value>
-  </data>
-  <data name="&gt;&gt;OKButton.ZOrder" xml:space="preserve">
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="ch_OS.Width" type="System.Int32, mscorlib">
-    <value>270</value>
-  </data>
-  <data name="&gt;&gt;CheckAllButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IpAddressControl_End.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.IpAddressControl, WakeOnLan, Version=2.11.8.11, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;gbSearch.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="IpAddressControl_End.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 24</value>
-  </data>
-  <data name="OKButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ToolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
-  </data>
-  <data name="Label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ch_Name.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="LabelDescription.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="IpAddressControl_End.ToolTip" xml:space="preserve">
-    <value>Enter the ending IP address to search to</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>898, 603</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>Ending IP Address</value>
   </data>
-  <data name="LabelAddToGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="cancelSearch.ToolTip" xml:space="preserve">
-    <value>Stop searching</value>
-  </data>
-  <data name="&gt;&gt;SearchBegin.Parent" xml:space="preserve">
-    <value>gbSearch</value>
-  </data>
-  <data name="&gt;&gt;gbSearch.Name" xml:space="preserve">
-    <value>gbSearch</value>
-  </data>
-  <data name="&gt;&gt;chEnabled.Name" xml:space="preserve">
-    <value>chEnabled</value>
-  </data>
-  <data name="cancelSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="CheckAllButton.Text" xml:space="preserve">
-    <value>Check All</value>
-  </data>
-  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ComboBoxGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 21</value>
-  </data>
-  <data name="CheckAllButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="listView.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="IpAddressControl_Start.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 24</value>
-  </data>
-  <data name="&gt;&gt;gbSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxGroup.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;CheckAllButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;ch_IP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>789, 547</value>
-  </data>
-  <data name="cancelSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
   </data>
   <data name="&gt;&gt;Label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;listView.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>gbSearch</value>
   </data>
-  <data name="OKButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>716, 547</value>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 13</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Starting IP address</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>gbSearch</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="gbSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 427</value>
+  </data>
+  <data name="gbSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>323, 120</value>
+  </data>
+  <data name="gbSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gbSearch.Text" xml:space="preserve">
+    <value>Search for machines</value>
+  </data>
+  <data name="&gt;&gt;gbSearch.Name" xml:space="preserve">
+    <value>gbSearch</value>
+  </data>
+  <data name="&gt;&gt;gbSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbSearch.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="backgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="StatusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>265, 18</value>
+  </metadata>
+  <data name="ToolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 17</value>
+  </data>
+  <data name="ToolStripStatusLabel_spacer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 17</value>
+  </data>
+  <data name="ToolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
   </data>
   <data name="ToolStripProgressBar1.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
-  </metadata>
-  <metadata name="StatusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 581</value>
-  </metadata>
+  <data name="StatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 554</value>
+  </data>
+  <data name="StatusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>898, 22</value>
+  </data>
+  <data name="StatusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="StatusStrip1.Text" xml:space="preserve">
+    <value>[StatusStrip1]</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip1.Name" xml:space="preserve">
+    <value>StatusStrip1</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="LabelDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="LabelDescription.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LabelDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>746, 427</value>
+  </data>
+  <data name="LabelDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 84</value>
+  </data>
+  <data name="LabelDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="LabelDescription.Text" xml:space="preserve">
+    <value>Select desired machines with the checkboxes, then click OK to add them to the database.</value>
+  </data>
+  <data name="&gt;&gt;LabelDescription.Name" xml:space="preserve">
+    <value>LabelDescription</value>
+  </data>
+  <data name="&gt;&gt;LabelDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelDescription.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LabelDescription.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CheckAllButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CheckAllButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 87</value>
+  </data>
+  <data name="CheckAllButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="CheckAllButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="CheckAllButton.Text" xml:space="preserve">
+    <value>Check All</value>
+  </data>
+  <data name="&gt;&gt;CheckAllButton.Name" xml:space="preserve">
+    <value>CheckAllButton</value>
+  </data>
+  <data name="&gt;&gt;CheckAllButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckAllButton.Parent" xml:space="preserve">
+    <value>gbAddToGroup</value>
+  </data>
+  <data name="&gt;&gt;CheckAllButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="UnCheckAllButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="UnCheckAllButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 87</value>
+  </data>
+  <data name="UnCheckAllButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="UnCheckAllButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="UnCheckAllButton.Text" xml:space="preserve">
+    <value>UnCheck All</value>
+  </data>
+  <data name="&gt;&gt;UnCheckAllButton.Name" xml:space="preserve">
+    <value>UnCheckAllButton</value>
+  </data>
+  <data name="&gt;&gt;UnCheckAllButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UnCheckAllButton.Parent" xml:space="preserve">
+    <value>gbAddToGroup</value>
+  </data>
+  <data name="&gt;&gt;UnCheckAllButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="closeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="closeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>819, 514</value>
+  </data>
+  <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 23</value>
+  </data>
+  <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="closeButton.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;closeButton.Name" xml:space="preserve">
+    <value>closeButton</value>
+  </data>
+  <data name="&gt;&gt;closeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="OKButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="OKButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OKButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>746, 514</value>
+  </data>
+  <data name="OKButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 23</value>
+  </data>
+  <data name="OKButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="OKButton.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;OKButton.Name" xml:space="preserve">
+    <value>OKButton</value>
+  </data>
+  <data name="&gt;&gt;OKButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OKButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;OKButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ComboBoxGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 35</value>
+  </data>
+  <data name="ComboBoxGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 21</value>
+  </data>
+  <data name="ComboBoxGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxGroup.Name" xml:space="preserve">
+    <value>ComboBoxGroup</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxGroup.Parent" xml:space="preserve">
+    <value>gbAddToGroup</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbAddToGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="gbAddToGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 427</value>
+  </data>
+  <data name="gbAddToGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 120</value>
+  </data>
+  <data name="gbAddToGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="gbAddToGroup.Text" xml:space="preserve">
+    <value>Add to group...</value>
+  </data>
+  <data name="&gt;&gt;gbAddToGroup.Name" xml:space="preserve">
+    <value>gbAddToGroup</value>
+  </data>
+  <data name="&gt;&gt;gbAddToGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbAddToGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbAddToGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>281, 17</value>
-  </metadata>
-  <metadata name="backgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>898, 576</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAgIAAAAEACAAoTAAAFgAAACgAAACAAAAAAAEAAAEACAAAAAAAAEAAABILAAASCwAAAAEAAAAB
+        AAAAAAAAAQEBAAICAgADAwMABAQEAAUFBQAGBgYABwcHAAgICAAJCQkACgoKAAsLCwAMDAwADQ0NAA4O
+        DgAPDw8AEBAQABEREQASEhIAExMTABQUFAAVFRUAFhYWABcXFwAYGBgAGRkZABoaGgAbGxsAHBwcAB0d
+        HQAeHh4AHx8fACAgIAAhISEAIiIiACMjIwAkJCQAJSUlACYmJgAnJycAKCgoACkpKQAqKioAKysrACws
+        LAAtLS0ALi4uAC8vLwAwMDAAMTExADIyMgAzMzMANDQ0ADU1NQA2NjYANzc3ADg4OAA5OTkAOjo6ADs7
+        OwA8PDwAPT09AD4+PgA/Pz8AQEBAAEFBQQBCQkIAQ0NDAERERABFRUUARkZGAEdHRwBISEgASUlJAEpK
+        SgBLS0sATExMAE1NTQBOTk4AT09PAFBQUABRUVEAUlJSAFNTUwBUVFQAVVVVAFZWVgBXV1cAWFhYAFlZ
+        WQBaWloAW1tbAFxcXABdXV0AXl5eAF9fXwBgYGAAYWFhAGJiYgBjY2MAZGRkAGVlZQBmZmYAZ2dnAGho
+        aABpaWkAampqAGtrawBsbGwAbW1tAG5ubgBvb28AcHBwAHFxcQBycnIAc3NzAHR0dAB1dXUAdnZ2AHd3
+        dwB4eHgAeXl5AHp6egB7e3sAfHx8AH19fQB+fn4Af39/AICAgACBgYEAgoKCAIODgwCEhIQAhYWFAIaG
+        hgCHh4cAiIiIAImJiQCKiooAi4uLAIyMjACNjY0Ajo6OAI+PjwCQkJAAkZGRAJKSkgCTk5MAlJSUAJWV
+        lQCWlpYAl5eXAJiYmACZmZkAmpqaAJubmwCcnJwAnZ2dAJ6engCfn58AoKCgAKGhoQCioqIAo6OjAKSk
+        pAClpaUApqamAKenpwCoqKgAqampAKqqqgCrq6sArKysAK2trQCurq4Ar6+vALCwsACxsbEAsrKyALOz
+        swC0tLQAtbW1ALa2tgC3t7cAuLi4ALm5uQC6uroAu7u7ALy8vAC9vb0Avr6+AL+/vwDAwMAAwcHBAMLC
+        wgDDw8MAxMTEAMXFxQDGxsYAx8fHAMjIyADJyckAysrKAMvLywDMzMwAzc3NAM7OzgDPz88A0NDQANHR
+        0QDS0tIA09PTANTU1ADV1dUA1tbWANfX1wDY2NgA2dnZANra2gDb29sA3NzcAN3d3QDe3t4A39/fAODg
+        4ADh4eEA4uLiAOPj4wDk5OQA5eXlAObm5gDn5+cA6OjoAOnp6QDq6uoA6+vrAOzs7ADt7e0A7u7uAO/v
+        7wDw8PAA8fHxAPLy8gDz8/MA9PT0APX19QD29vYA9/f3APj4+AD5+fkA+vr6APv7+wD8/PwA/f39AP7+
+        /gD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECAQAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAcAAAAAAAAAAAAA
+        AAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABxUGAAAA
+        AAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAATBwAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAADxUAAAAplYlhka6umlkGAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAwSAAAAI8HOwrCUi4iSs7ctAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJGAAAAAiwz8OzpJJ8faGsuL0qAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUHAAAAi9DFtaSShHyRn6u4xbQAAAAAAQAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARBgAAAHXQyLimk4N3iKKlrbvJz0oA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADhQAAAAyy8u9qpeFdn2d
+        pLG7ws7YewAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsRAAAAJMXO
+        wK+ciXl1mKCrucjT1t6iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI
+        FgcAAACp0cSzoI18cZCdqLXD0t7m5I4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAABIGAAAAh9HHt6SRf3KInKSxv87b5ezuYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAOFAAAAFLQyruplYN1gJuirrzK2OPr8PSlAAAAAgAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAChEAAAApyM6/rpqHeHiZn6u5x9Xg6e/z4TcAAAAGAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcWBwAAArXQw7KejHtykp6ntcTS3ufu8ux6AAAABggA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQYAAACI0ca2o5B/coycpbHAz9vl7fLy
+        kQAAAAASBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4UAAAATc/JuqiUgnSDm6Ku
+        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
+        4N/f397d3Nzb2trZ2djX1tXU09PS0dDPz87Ny8rIx8XEw8C/vry6uLOpxeDPOgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWCQAAlJSTpMja3Nrc3uDg4OHg4eHh
+        4eLi4uHh4eHg4N/f397d3Nzb29rZ2djX1tXV1NPS0tHQz87Ny8rIx8bDwsG/vry6ta+t3t+BAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AADibl5qv0NrZ2t3f
+        4ODg4ODg4OHh4eLi4uHh4eHh4N/f397d3Nzc29rZ2djX1tbV1NPT09LQz83My8rIxsXDwsHAvr24tKjP
+        3sAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAZZ2a
+        n7vU2dfb3d7f3t/f4ODg4ODh4eLi4eDh4eHh4N/f397d3dzc29ra2dnY19fW1dTT09HQzs7MysnIx8XE
+        wsHAvru2rbvc1UoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ABMUAACcoJ6jw9bX19rd3t7e3t/f3+Dg4ODh4eLh4eDh4eHh4ODf397e3dzc29ra2tjY19fW1dTT0tHQ
+        z83LysnIx8bEw8HAvrmzq9rciQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAGgAAKaSjoqfJ1dTX2tzd3d3e39/f4ODh4OHh4eLh4eHh4eLh4ODf397e3dzc3Nva2tnZ
+        2NjX1dTT0tHPzs3MysnIx8bEw8LAvLeqztq7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAhAABOqKairszU1Njb3Nzc3d7f39/f4ODh4eHi4uDg4OHi4uLh4ODf39/e
+        3t3c3Nzb2trZ2NfW1dTT0tDPzs3My8nIx8bEw8K9uq/A2ck0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAHOsqaCzzdLU2Nrb29ze39/f3+Dg4ODh4eHi4eDg4eLi
+        4uLh4eDf39/f3t3d3dzb2trY19fW1dPT0tDQz83My8rJx8bFw8C8srbW01AAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAn6+sn7jM0NTY2drc3d/f39/f3+Dg4eHh
+        4uLi39/g4eLi4uLh4eDg4N/f3t7e3dzb2tnZ2NbV1dPT0tDQz83My8rJyMbFwr64rtTWdwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAACssq2cuczQ1NfZ2t3f39/f
+        4ODh4OHi4eLi4+Lg39/g4uLi4uLh4uHg4ODf39/e3dzb2trY19bV1NTT0tHQz83My8rJyMfFwbyrz9Sk
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFxsAGbG1r5m7y87U
+        1tjb3uDf39/g4eLi4uPj4+Tk5OHf3+Dh4uLi4uLi4eHh4eDf397d3Nzb2tnY2NbV1dTT0tHQz87Ny8rJ
+        yMbDwbDI0rcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbHQA/
+        tbiul7vKztLW2Nzf4ODg4eHi4uPj5OTk5OXl4uDe3+Di4uLi4uLi4uHh4eDg397d3Nva2tnZ2NfW1dTT
+        0tHQz87NzMrJyMbEs8LPvgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAB8AAEu5u62XusjM0dXZ3+Hh4OHh4uPj5OTl5ebm5ufl4d/f4OLi4uPi4+Pi4uLh4N/g397c3Nzb
+        2trZ2NfW1dTT09LQz87NzMvJyMa1v8zAGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAIwAAUb2+q5a4xszS1tvh4uHh4uPj5OXl5+fm5+jo6Ofj4ODh4uLi4uPk5OPj4uLg
+        4ODf3t7c3Nzb2tnZ2NfW1dTT09LQ0M/NzMvKybe8ysAtAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAmAABTwMGrlLbFy9HX3uLj4+Pk5OXm5ufo6enp6erq6ebi4OHh4eLj
+        4+Tk5OPi4uLh4N/f3t3d3Nzb2trZ2NfW1dTU09LR0M/Nzc3Mt7rHwDQAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAFTDxKuStMPK0djg5OXk5eXm5+fp6enq6urq6urp
+        5uLh4eHh4uPk5OTj4uPi4uHh4N/f3t7d3Nzb2trZ2NfW1dTU09LR0M/Nz8+5ucS+NgAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJiMAU8THr46wwsrR2uLk5ubn5+fn5+jn
+        6Ojn5+fm5uXk4uHg4eHi4uPj4+Lj4+Li4uHg4N/f3t7d3Nzb2trZ2djX1tXU09PR0M/R0bm5wb0wAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkIwBQxcq0iazAyNHb4+Tl
+        5OTk4+Tj4+Pi4+Pj4+Pj4+Lh4eHh4eHh4uLi4+Pj4uLi4uHh4N/f397d3Nzb29rZ2djX1tXU1NPS0dTR
+        ubi+uyEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjAEbGzbqE
+        qb7H0Nne39/e3t7e3t/g4ODh4uPi4uLj4uHh4eHh4OHh4eLi4uLi4uLi4uHh4N/f397d3Nzc29rZ2djX
+        1tbV1NPS19K4t7u5BgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ACEAJsXPwoGju8bO1dja2tzb3N3e3t/g4OHi4+Pj4+Li4eDg4ODg4ODh4uLi4uLi4uLi4uHh4N/f397d
+        3Nzc29ra2djY19fV1NTZ0be2uLYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAMwAAw9LIiZy3w8zS1tja29zd3d7f4OHh4uPi4+Pi4eHg4N/f3+Df4ODg4eHi4uLi4uLi
+        4uHh4N/f397d3dzc29va2tnY19bU1tvQtrO1qgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAABCAAC51M6Pk7PAydDV2Nrb3d7e3+Dh4eLi4uPi4uHh4N/f393e3t/g4OHh
+        4eHi4uLi4uLi4uLh4ODf397e3dzc3Nva2tnY19XZ3cu1r7KHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADoAAJPW1JqKrL7Hz9XZ2tzd3t/f4OHi4uLi4eHh4N/f3t3e
+        3d3e3+Dg4OHh4eHi4uLi4uLi4uLh4ODf39/e3d3d3Nvb2tnY193dw7Ssr10AAAABAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMhQAW9TXtH6jusXN1Nja3N3f3+Dh4uLi4uLh
+        4ODf3t3c3Nzc3t7g4OHh4eHh4eHi4uLi4uLi4uLh4eDf39/f3t3d3dzb2tja4Ny8samwRQAAAAIAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJQBAz9nKeJq1wcvS2Nvc3uDg
+        4eHh4uLh4eDg393c29vb3N3e4ODh4uLi4eHh4eHi4uLi4uLi4uLh4eHg3+Df3t7e3dza2d3i1rmpprIK
+        AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0AADG29SJi629
+        yNHY29zf4OHh4eLh4eDg397c29ra2tzc3d/g4uPj4+Pi4eHh4eHh4uLi4uLi4uLh4eHg4ODf39/e3dvb
+        4uPMt6GjmwAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8A
+        AI/c26l8objEz9bb3d7g4OHi4uDh39/d3NvZ2drb3N7e4OHj5eXk5OPj4uHh4eHh4uLi4uLi4uLi4uHh
+        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
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEJO
+        QTAAAAAAAAAAJ09aYWZlX1pJHAAAAAAAAAAADxsxJx4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAARlFcLxkAAAAAAAAAAAAAAAAAAAAAAAAiHTgtJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAASlNaRS4vMDAYAAAWKyonJDRANy0AAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABERUdIRUE9NwAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP///////////////AAD//////////////////gAAf/////////////////wAAD/////
+        ////////////8AAA/////////////////+AAAH/////////////////AAAB/////////////////gAAA
+        P////////////////4AAAD////////////////8AAAA////////////////+AAAAP///////////////
+        /AAAAD////////////////gAAAA////////////////4AAAAP///////////////8AAAAD//////////
+        /////+AAAAA////////////////AAAAAf///////////////wAAAAH///////////////4AAAAD/////
+        //////////8AAAAB///////////////+AAAAAf///////////////gAAAAP///////////////wAAAAH
+        ///////////////4AAAAD///////////////+AAAAB////////////////AAAAAf///////////////g
+        AAAAP///////////////wAAAAH///////////////8AAAAD///////////////+AAAAB////////////
+        ////AAAAA////////////////wAAAAf///////////////4AAAAH///////////////8AAAAD///////
+        ////////+AAAAB////////////////gAAAA////////////////wAAAAf///////////////4AAAAP//
+        /////////////+AAAAH////////////////AAAAD////////////////gAAAA////////////////4AA
+        AAf////////////h//8AAAAP///////////gAAP+AAAAH//////////+AAAAHAAAAD//////////8AAA
+        AAAAAAB//////////8AAAAAAAAAA//////////8AAAAAAAAAAf/////////8AAAAAAAAAAP/////////
+        +AAAAAAAAAAH/////////+AAAAAAAAAAD//////////AAAAAAAAAAB//////////gAAAAAAAAAA/////
+        /////wAAAAAAAAAAf/////////4AAAAAAAAAAP/////////8AAAAAAAAAAD/////////+AAAAAAAAAAA
+        //////////AAAAAAAAAAAf/////////gAAAAAAAAAAH/////////wAAAAAAAAAAA/////////8AAAAAA
+        AAAAAP////////+AAAAAAAAAAAB/////////AAAAAAAAAAAAf////////wAAAAAAAAAAAD////////4A
+        AAAAAAAAAAAf///////+AAAAAAAAAAAAH////////AAAAAAAAAAAAA////////wAAAAAAAAAAAAP////
+        ///4AAAAAAAAAAAAD///////+AAAAAAAAAAAAAf///////gAAAAAAAAAAAAH///////wAAAAAAAAAAAA
+        A///////8AAAAAAAAAAAAAP///////AAAAAAAAAAAAAD///////wAAAAAAAAAAAAA///////4AAAAAAA
+        AAAAAAH//////+AAAAAAAAAAAAAB///////gAAAAAAAAAAAAAf//////4AAAAAAAAAAAAAH//////+AA
+        AAAAAAAAAAAB///////gAAAAAAAAAAAAAf//////wAAAAAAAAAAAAAH//////8AAAAAAAAAAAAAB////
+        ///AAAAAAAAAAAAAAP//////wAAAAAAAAAAAAAD//////8AAAAAAAAAAAAAA///////AAAAAAAAAAAAA
+        AP//////wAAAAAAAAAAAAAH//////8AAAAAAAAAAAAAB///////gAAAAAAAAAAAAAf//////4AAAAAAA
+        AAAAAAH//////+AAAAAAAAAAAAAB///////gAAAAAAAAAAAAAf//////4AAAAAAAAAAAAAH//////+AA
+        AAAAAAAAAAAB///////wAAAAAAAAAAAAA///////8AAAAAAAAAAAAAP///////AAAAAAAAAAAAAD////
+        ///wAAAAAAAAAAAAA///////+AAAAAAAAAAAAAf///////gAAAAAAAAAAAAH///////4AAAAAAAAAAAA
+        B////////AAAAAAAAAAAAA////////wAAAAAAAAAAAAP///////+AAAAAAAAAAAAH////////gAAAAAA
+        AAAAAB////////8AAAAAAAAAAAA/////////AAAAAAAAAAAAP////////4AAAAAAAAAAAH/////////A
+        AAAAAAAAAAD/////////wAAAAAAAAAAA/////////+AAAAAAAAAAAf/////////wAAAAAAAAAAP/////
+        ////+AAAAAAAAAAH//////////wAAAAAAAAAD//////////+AAAAAAAAAB///////////wAAAAAAAAA/
+        //////////+AAAAAAAAAf///////////wAAAAAAAAP///////////+AAAAAAAAH////////////4AAAA
+        AAAH/////////////AAAAAAAD/////////////8AAAAAAD//////////////wAAAAAD/////////////
+        //AAAAAD///////////////+AAAAH////////////////+AAAf//////////////////gH//////////
+        ////////////////////////
+</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>730, 550</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Search for machines</value>
+  </data>
+  <data name="&gt;&gt;ch_Name.Name" xml:space="preserve">
+    <value>ch_Name</value>
+  </data>
+  <data name="&gt;&gt;ch_Name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ch_OS.Name" xml:space="preserve">
+    <value>ch_OS</value>
+  </data>
+  <data name="&gt;&gt;ch_OS.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ch_Interface.Name" xml:space="preserve">
+    <value>ch_Interface</value>
+  </data>
+  <data name="&gt;&gt;ch_Interface.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ch_IP.Name" xml:space="preserve">
+    <value>ch_IP</value>
+  </data>
+  <data name="&gt;&gt;ch_IP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ch_MAC.Name" xml:space="preserve">
+    <value>ch_MAC</value>
+  </data>
+  <data name="&gt;&gt;ch_MAC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chEnabled.Name" xml:space="preserve">
+    <value>chEnabled</value>
+  </data>
+  <data name="&gt;&gt;chEnabled.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker.Name" xml:space="preserve">
+    <value>backgroundWorker</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel1.Name" xml:space="preserve">
+    <value>ToolStripStatusLabel1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel_spacer.Name" xml:space="preserve">
+    <value>ToolStripStatusLabel_spacer</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel_spacer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripProgressBar1.Name" xml:space="preserve">
+    <value>ToolStripProgressBar1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripProgressBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
+    <value>ToolTip1</value>
+  </data>
+  <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

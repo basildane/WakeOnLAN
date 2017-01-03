@@ -1,5 +1,5 @@
 ﻿'    WakeOnLAN - Wake On LAN
-'    Copyright (C) 2004-2016 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'    Copyright (C) 2004-2017 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
 '
@@ -23,6 +23,7 @@ Imports System.Net
 Imports System.Threading
 
 <Serializable()> <CLSCompliant(True)> Public Class Machine
+
     <NonSerialized> Private WithEvents _backgroundWorker As New BackgroundWorker
     <NonSerialized> Private WithEvents ping As New Ping
 
@@ -52,12 +53,14 @@ Imports System.Threading
     Public Property UDPPort As Integer = 9
     Public Property TTL As Integer = 128
     Public Property RDPPort As Integer = 3389
+    Public Property RDPFile As String = String.Empty
     Public Property Note As String = String.Empty
     Public Property UserID As String = String.Empty
     Public Property Password As String = String.Empty
     Public Property Domain As String = String.Empty
     Public Property ShutdownMethod As ShutdownMethods = ShutdownMethods.WMI
     Public Property KeepAlive As Boolean = False
+    Public Property RepeatCount As Integer = 1
 
     <XmlIgnore()> Public Status As StatusCodes = StatusCodes.Unknown
     <NonSerialized> <XmlIgnore()> Public Reply As PingReply

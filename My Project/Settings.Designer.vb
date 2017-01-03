@@ -332,7 +332,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://wol.aquilatech.com/updates/AppCast.xml")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://wol.aquilatech.com/updates/AppCast.xml")>  _
         Public ReadOnly Property updateURL() As String
             Get
                 Return CType(Me("updateURL"),String)
@@ -434,7 +434,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://wol.aquilatech.com/updates/version.html")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://wol.aquilatech.com/updates/version.html")>  _
         Public ReadOnly Property updateVersions() As String
             Get
                 Return CType(Me("updateVersions"),String)
@@ -553,6 +553,54 @@ Namespace My
             End Get
             Set
                 Me("ackMinimize") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("750")>  _
+        Public Property repeatInterval() As Integer
+            Get
+                Return CType(Me("repeatInterval"),Integer)
+            End Get
+            Set
+                Me("repeatInterval") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SearchColumns() As String
+            Get
+                Return CType(Me("SearchColumns"),String)
+            End Get
+            Set
+                Me("SearchColumns") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0, 0")>  _
+        Public Property SearchWindowSize() As Global.System.Drawing.Size
+            Get
+                Return CType(Me("SearchWindowSize"),Global.System.Drawing.Size)
+            End Get
+            Set
+                Me("SearchWindowSize") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0, 0")>  _
+        Public Property SearchWindowLocation() As Global.System.Drawing.Point
+            Get
+                Return CType(Me("SearchWindowLocation"),Global.System.Drawing.Point)
+            End Get
+            Set
+                Me("SearchWindowLocation") = value
             End Set
         End Property
     End Class

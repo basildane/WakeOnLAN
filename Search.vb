@@ -1,5 +1,5 @@
 '    WakeOnLAN - Wake On LAN
-'    Copyright (C) 2004-2016 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'    Copyright (C) 2004-2017 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
 '
@@ -17,7 +17,6 @@
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
 Imports System.Net
-Imports System.Windows.Forms
 Imports System.Management
 Imports System.Linq
 Imports AlphaWindow
@@ -39,8 +38,39 @@ Public Class Search
     End Structure
 
     Private ReadOnly _lvwColumnSorter As ListViewColumnSorter
-
     Private ReadOnly _none As String = "--" & Resources.Strings.lit_None & "--"
+
+    Private Sub Search_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Settings.SearchWindowSize.Width <> 0 Then
+            Location = Settings.SearchWindowLocation
+            Size = Settings.SearchWindowSize
+        End If
+
+        If Not IsOnScreen(Me) Then
+            Location = New Point(0, 0)
+        End If
+
+        GetListViewState(listView, Settings.SearchColumns)
+
+        IpAddressControl_Start.Text = MySettings.Default.SearchStart
+        IpAddressControl_End.Text = MySettings.Default.SearchEnd
+
+        ComboBoxGroup.Items.Clear()
+        ComboBoxGroup.Items.Add(_none)
+
+        Dim groups() As String = (From machine As Machine In Machines
+                                  Where machine.Group <> ""
+                                  Select machine.Group).Distinct().ToArray()
+
+        ComboBoxGroup.Items.AddRange(groups)
+        ComboBoxGroup.Text = _none
+    End Sub
+
+    Private Sub Search_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Settings.SearchColumns = SaveListViewState(listView)
+        Settings.SearchWindowLocation = Location
+        Settings.SearchWindowSize = Size
+    End Sub
 
     Private Sub OKButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OKButton.Click
         Dim machine As Machine
@@ -234,21 +264,6 @@ Public Class Search
         backgroundWorker.RunWorkerAsync()
     End Sub
 
-    Private Sub Search_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        IpAddressControl_Start.Text = MySettings.Default.SearchStart
-        IpAddressControl_End.Text = MySettings.Default.SearchEnd
-
-        ComboBoxGroup.Items.Clear()
-        ComboBoxGroup.Items.Add(_none)
-
-        Dim groups() As String = (From machine As Machine In Machines
-                     Where machine.Group <> ""
-                     Select machine.Group).Distinct().ToArray()
-
-        ComboBoxGroup.Items.AddRange(groups)
-        ComboBoxGroup.Text = _none
-    End Sub
-
     Private Sub cancelSearch_Click(sender As Object, e As EventArgs) Handles cancelSearch.Click
         backgroundWorker.CancelAsync()
     End Sub
@@ -406,4 +421,37 @@ Public Class Search
         _lvwColumnSorter.Order = Settings.SearchSortDirection
         listView.SetSortIcon(_lvwColumnSorter.SortColumn, _lvwColumnSorter.Order)
     End Sub
+
+    Private Sub Search_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        Debug.WriteLine("resize: " & Me.Size.ToString())
+    End Sub
+
+    Private Sub listView_Resize(sender As Object, e As EventArgs) Handles listView.Resize
+        If listView.Columns.Count = 0 Then Return
+
+        Dim resizeColumn As Integer = 1
+        Dim w As Integer = 0
+        For column As Integer = 0 To listView.Columns.Count - 1
+            If column <> resizeColumn Then w += listView.Columns(column).Width
+        Next
+        w = listView.ClientSize.Width - w - 1 - SystemInformation.VerticalScrollBarWidth
+        If w > 0 Then listView.Columns(resizeColumn).Width = w
+    End Sub
+
+    Public Function SaveListViewState(ByVal listview As ListView) As String
+        Return listview.Columns.Cast(Of ColumnHeader)().Aggregate("", Function(current, c) current & (c.Width & " "))
+    End Function
+
+    Public Sub GetListViewState(ByVal listview As ListView, ByVal state As String)
+        Dim s() As String
+        Dim i As Int16
+
+        s = Split(state)
+        If (UBound(s) <> listview.Columns.Count) Then Exit Sub
+
+        For i = 0 To UBound(s) - 1
+            listview.Columns(i).Width = Int(s(i))
+        Next
+    End Sub
+
 End Class

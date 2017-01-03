@@ -1,5 +1,5 @@
 ﻿'    WakeOnLAN - Wake On LAN
-'    Copyright (C) 2004-2016 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'    Copyright (C) 2004-2017 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
 '
@@ -16,11 +16,13 @@
 '    You should have received a copy of the GNU General Public License
 '    along with WakeOnLAN.  If not, see <http://www.gnu.org/licenses/>.
 
+Imports System.Configuration
 Imports System.Globalization
 Imports Localization
 Imports AlphaWindow
 Imports System.Runtime.InteropServices
 Imports Microsoft.Win32
+Imports System.Windows.Forms
 
 Namespace My
 
@@ -33,11 +35,11 @@ Namespace My
     ' NetworkAvailabilityChanged: Raised when the network connection is connected or disconnected.
 
     Partial Friend Class MyApplication
-        <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)> _
+        <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)>
         Private Shared Function FindWindow(ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
         End Function
 
-        <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)> _
+        <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)>
         Private Shared Function ShowWindow(ByVal hwnd As IntPtr, ByVal nCmdShow As Int32) As Boolean
         End Function
 
@@ -54,6 +56,8 @@ Namespace My
             singleInstance()
             upgradeSettings()
             ConfigureCulture()
+
+            'Throw New Exception("This is a test unhandled exception.")
 
             Dim version As String = String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
 
@@ -158,11 +162,24 @@ Namespace My
             Dim newPath As String
             Dim filename As String
 
-            If Settings.needUpgrade Then
-                Settings.Upgrade()
-                Settings.needUpgrade = False
-                Settings.Save()
-            End If
+            Try
+                If Settings.needUpgrade Then
+                    Settings.Upgrade()
+                    Settings.needUpgrade = False
+                    Settings.Save()
+                End If
+
+            Catch ex As ConfigurationErrorsException
+                filename = DirectCast(ex.InnerException, ConfigurationErrorsException).Filename
+
+                If MessageBox.Show(Text.RegularExpressions.Regex.Unescape(Resources.Strings.errUserConfigCorrupt), Resources.Strings.errUserConfigTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
+                    IO.File.Delete(filename)
+                    Windows.Forms.Application.Restart()
+                    Process.GetCurrentProcess().Kill()
+                Else
+                    Process.GetCurrentProcess().Kill()
+                End If
+            End Try
 
             Try
                 For i As Int16 = 0 To CommandLineArgs.Count

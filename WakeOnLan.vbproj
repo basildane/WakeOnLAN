@@ -333,6 +333,7 @@
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -861,6 +862,7 @@
     <Content Include="Resources\flags\RussiaFlag16x16.png" />
     <None Include="Resources\new.png" />
     <Content Include="Resources\question.png" />
+    <Content Include="Resources\search.ico" />
     <Content Include="Resources\Search_16x16.png" />
     <Content Include="Resources\SetDatabasePath.vbs" />
     <Content Include="Resources\Settings_16x16.png" />

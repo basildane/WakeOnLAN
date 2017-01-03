@@ -1,5 +1,5 @@
 '    WakeOnLAN - Wake On LAN
-'    Copyright (C) 2004-2016 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'    Copyright (C) 2004-2017 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
 '

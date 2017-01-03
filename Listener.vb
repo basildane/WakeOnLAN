@@ -1,5 +1,5 @@
 ﻿'    WakeOnLAN - Wake On LAN
-'    Copyright (C) 2004-2016 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'    Copyright (C) 2004-2017 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
 '
@@ -45,11 +45,9 @@ Public Class Listener
         Try
             _gso.EndPoint = New IPEndPoint(IPAddress.Any, RegExTextBoxPort.Text)
             _gso.Socket = New Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp)
-            '_gso.Socket = New Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.IP)
             _gso.Socket.EnableBroadcast = True
 
             _gso.Socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, True)
-            '_gso.Socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.HeaderIncluded, True)
             _gso.Socket.ExclusiveAddressUse = False
 
             _gso.Socket.Bind(_gso.EndPoint)
@@ -109,6 +107,7 @@ Public Class Listener
                 ListView1.Invoke(_showHit, so, bytesRead, packetInfo)
             Else
                 Dim li As New ListViewItem
+                ListView1.BeginUpdate()
 
                 mac = Parse(so.Buffer, bytesRead)
                 li.Text = mac
@@ -140,7 +139,6 @@ Public Class Listener
                 TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Length: ", bytesRead, Environment.NewLine))
                 TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Protocol: ", so.Socket.ProtocolType.ToString(), Environment.NewLine))
                 TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Port: ", RegExTextBoxPort.Text, Environment.NewLine))
-                'TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "TTL: ", so.Socket.Ttl.ToString(), Environment.NewLine))
                 TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}", "Hostname: ", hostName, Environment.NewLine))
 
                 TextBoxDetails.AppendText(String.Format("{0,-20}{1}{2}{2}", "MAC Address:", mac, Environment.NewLine))
@@ -158,6 +156,7 @@ Public Class Listener
                 Next
 
                 TextBoxDetails.AppendText(String.Format("{0}{0}", Environment.NewLine))
+                ListView1.EndUpdate()
 
                 If My.Settings.Sound Then
                     My.Computer.Audio.Play(My.Resources.blip, AudioPlayMode.Background)

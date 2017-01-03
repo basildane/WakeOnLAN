@@ -344,6 +344,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Wake on LAN has detected that your user settings file has become corrupted. This may be due to a crash or improper exiting of the program. Wake on LAN must reset your user settings in order to continue.\n\nClick Yes to reset your user settings and continue.\n\nClick No if you wish to attempt manual repair or to rescue information before proceeding..
+        '''</summary>
+        Friend Shared ReadOnly Property errUserConfigCorrupt() As String
+            Get
+                Return ResourceManager.GetString("errUserConfigCorrupt", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Corrupt user settings.
+        '''</summary>
+        Friend Shared ReadOnly Property errUserConfigTitle() As String
+            Get
+                Return ResourceManager.GetString("errUserConfigTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to You must set a proper UserID and Password for a scheduled task..
         '''</summary>
         Friend Shared ReadOnly Property errUserID() As String
@@ -664,6 +682,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property Properties() As String
             Get
                 Return ResourceManager.GetString("Properties", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to RDP files (*.rdp)|*.rdp|All files (*.*)|*.*.
+        '''</summary>
+        Friend Shared ReadOnly Property rdp_filter() As String
+            Get
+                Return ResourceManager.GetString("rdp_filter", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Browse RDP Files.
+        '''</summary>
+        Friend Shared ReadOnly Property rdp_title() As String
+            Get
+                Return ResourceManager.GetString("rdp_title", resourceCulture)
             End Get
         End Property
         

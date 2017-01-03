@@ -1,5 +1,5 @@
 '    WakeOnLAN - Wake On LAN
-'    Copyright (C) 2004-2016 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'    Copyright (C) 2004-2017 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
 '
@@ -22,6 +22,7 @@ Imports System.Threading
 Imports Machines
 Imports WOL
 Imports WOL.AquilaWolLibrary
+Imports Microsoft.Win32
 
 Public Module Module1
     Enum ModeTypes
@@ -54,6 +55,7 @@ Public Module Module1
     Dim _mode As ModeTypes = ModeTypes.None
     Dim _result As Integer = ErrorCodes.Ok
     Dim _path As String = String.Empty
+    Dim _repeatInterval As Integer = 750
 
     Function Main() As Integer
         Console.ForegroundColor = ConsoleColor.Green
@@ -235,6 +237,10 @@ Public Module Module1
     Private Function DoWakeup() As Integer
         Dim machine As Machine
 
+        Dim regKey As RegistryKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", False)
+        _repeatInterval = regKey.GetValue("RepeatInterval", 750, RegistryValueOptions.None)
+        regKey.Close()
+
         If _all Then
             Try
                 Machines.Load(_path)
@@ -282,7 +288,7 @@ Public Module Module1
             Else
                 Console.WriteLine(machine.Netbios)
             End If
-            WakeUp(machine)
+            WakeUp(machine, _repeatInterval)
             Return ErrorCodes.Ok
 
         ElseIf _mac.Length Then
@@ -303,7 +309,7 @@ Public Module Module1
             Console.WriteLine("waking up group: " & _group)
             For Each machine In From machine1 As Machine In Machines Where machine1.Group = _group
                 Console.WriteLine("  > " & machine.Name)
-                WakeUp(machine)
+                WakeUp(machine, _repeatInterval)
                 Thread.Sleep(500)
             Next
             Console.WriteLine("Done.")
@@ -384,10 +390,10 @@ Public Module Module1
 
         Try
             Select Case machine.ShutdownMethod
-                Case machine.ShutdownMethods.WMI
+                Case Machine.ShutdownMethods.WMI
                     AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
 
-                Case machine.ShutdownMethods.Custom
+                Case Machine.ShutdownMethods.Custom
                     Dim cmd As String = machine.ShutdownCommand
                     cmd = cmd.Replace("$PF", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles))
                     cmd = cmd.Replace("$PFX86", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86))
@@ -397,7 +403,7 @@ Public Module Module1
                     Debug.WriteLine("Custom command: " & cmd)
                     Shell(cmd, AppWinStyle.Hide, False)
 
-                Case machine.ShutdownMethods.Legacy
+                Case Machine.ShutdownMethods.Legacy
                     Select Case flags
                         Case ShutdownFlags.Shutdown
                             flags = ShutdownFlags.LegacyShutdown
