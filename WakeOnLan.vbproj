@@ -681,6 +681,9 @@
     <EmbeddedResource Include="CalcSubnet.es.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalcSubnet.it.resx">
+      <DependentUpon>CalcSubnet.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalcSubnet.ru.resx">
       <DependentUpon>CalcSubnet.vb</DependentUpon>
     </EmbeddedResource>
@@ -699,6 +702,9 @@
     <EmbeddedResource Include="Crash.fr.resx">
       <DependentUpon>Crash.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Crash.it.resx">
+      <DependentUpon>Crash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Crash.nl.resx">
       <DependentUpon>Crash.vb</DependentUpon>
     </EmbeddedResource>
@@ -714,6 +720,9 @@
     <EmbeddedResource Include="Explorer.es.resx">
       <DependentUpon>Explorer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.it.resx">
+      <DependentUpon>Explorer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="History.ar-JO.resx">
       <DependentUpon>History.vb</DependentUpon>
     </EmbeddedResource>
@@ -724,6 +733,9 @@
       <DependentUpon>History.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="History.fr.resx">
+      <DependentUpon>History.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.it.resx">
       <DependentUpon>History.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="History.nl.resx">
@@ -754,23 +766,34 @@
     <EmbeddedResource Include="Listener.es.resx">
       <DependentUpon>Listener.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Listener.it.resx">
+      <DependentUpon>Listener.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties.ar-JO.resx">
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties.es.resx">
       <DependentUpon>Properties.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties.it.resx">
+      <DependentUpon>Properties.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Property\OptionProperties.ar-JO.resx" />
     <EmbeddedResource Include="Property\OptionProperties.es.resx" />
+    <EmbeddedResource Include="Property\OptionProperties.it.resx" />
     <EmbeddedResource Include="Property\Options.ar-JO.resx">
       <DependentUpon>Options.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\Options.es.resx">
       <DependentUpon>Options.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Property\Options.it.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportStrings.ar-JO.resx" />
     <EmbeddedResource Include="Report\ReportStrings.de.resx" />
     <EmbeddedResource Include="Report\ReportStrings.es.resx" />
+    <EmbeddedResource Include="Report\ReportStrings.it.resx" />
     <EmbeddedResource Include="Report\ReportViewer.ar-JO.resx">
       <DependentUpon>ReportViewer.vb</DependentUpon>
     </EmbeddedResource>
@@ -778,6 +801,9 @@
       <DependentUpon>ReportViewer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportViewer.es.resx">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportViewer.it.resx">
       <DependentUpon>ReportViewer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportViewer.ru.resx">
@@ -791,6 +817,7 @@
     <EmbeddedResource Include="Resources\Strings\Strings.es.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings\Strings.it.resx" />
     <EmbeddedResource Include="SafeMode.ar-JO.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>
     </EmbeddedResource>
@@ -801,6 +828,9 @@
       <DependentUpon>SafeMode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SafeMode.fr.resx">
+      <DependentUpon>SafeMode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SafeMode.it.resx">
       <DependentUpon>SafeMode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SafeMode.nl.resx">
@@ -1089,6 +1119,9 @@
     <EmbeddedResource Include="Schedule\EditAction.hu.resx">
       <DependentUpon>EditAction.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditAction.it.resx">
+      <DependentUpon>EditAction.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditAction.nl.resx">
       <DependentUpon>EditAction.vb</DependentUpon>
     </EmbeddedResource>
@@ -1108,6 +1141,9 @@
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTask.hu.resx">
+      <DependentUpon>EditTask.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTask.it.resx">
       <DependentUpon>EditTask.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTask.nl.resx">
@@ -1131,6 +1167,9 @@
     <EmbeddedResource Include="Schedule\EditTrigger.hu.resx">
       <DependentUpon>EditTrigger.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\EditTrigger.it.resx">
+      <DependentUpon>EditTrigger.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule\EditTrigger.nl.resx">
       <DependentUpon>EditTrigger.vb</DependentUpon>
     </EmbeddedResource>
@@ -1150,6 +1189,9 @@
       <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\Schedule.hu.resx">
+      <DependentUpon>Schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\Schedule.it.resx">
       <DependentUpon>Schedule.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schedule\Schedule.nl.resx">
@@ -1173,6 +1215,9 @@
     <EmbeddedResource Include="Search.hu.resx">
       <DependentUpon>Search.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search.it.resx">
+      <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Search.nl.resx">
       <DependentUpon>Search.vb</DependentUpon>
     </EmbeddedResource>
@@ -1192,6 +1237,9 @@
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.hu.resx">
+      <DependentUpon>Shutdown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shutdown.it.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.nl.resx">

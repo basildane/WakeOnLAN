@@ -52,6 +52,7 @@ Name: "es";    MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "fi";    MessagesFile: "compiler:Languages\Finnish.isl"
 Name: "fr";    MessagesFile: "compiler:Languages\French.isl"
 Name: "hu";    MessagesFile: "compiler:Languages\Hungarian.isl"
+Name: "it";    MessagesFile: "compiler:Languages\Italian.isl"
 Name: "nl";    MessagesFile: "compiler:Languages\Dutch.isl"
 Name: "ru";    MessagesFile: "compiler:Languages\Russian.isl"
 Name: "pt_BR"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
@@ -89,6 +90,7 @@ Source: "{#rootFolder}\bin\Release\es\*"; DestDir: "{app}\es"; Flags: ignorevers
 Source: "{#rootFolder}\bin\Release\fi\*"; DestDir: "{app}\fi"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#rootFolder}\bin\Release\fr\*"; DestDir: "{app}\fr"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#rootFolder}\bin\Release\hu\*"; DestDir: "{app}\hu"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#rootFolder}\bin\Release\it\*"; DestDir: "{app}\it"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#rootFolder}\bin\Release\nl\*"; DestDir: "{app}\nl"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#rootFolder}\bin\Release\ro\*"; DestDir: "{app}\ro"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#rootFolder}\bin\Release\ru\*"; DestDir: "{app}\ru"; Flags: ignoreversion recursesubdirs createallsubdirs

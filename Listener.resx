@@ -136,8 +136,8 @@
   <data name="TextBoxDetails.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="ListView1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;ColumnHeader_IP.Name" xml:space="preserve">
+    <value>ColumnHeader_IP</value>
   </data>
   <data name="&gt;&gt;ListView1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -148,6 +148,9 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Button_clear.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="&gt;&gt;ButtonSet.Name" xml:space="preserve">
@@ -162,14 +165,11 @@
   <data name="TextBoxDetails.Location" type="System.Drawing.Point, System.Drawing">
     <value>542, 28</value>
   </data>
-  <data name="&gt;&gt;TextBoxDetails.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1035, 583</value>
   </data>
-  <data name="lUDPport.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;RegExTextBoxPort.Type" xml:space="preserve">
-    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.8.11, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Listener</value>
@@ -182,6 +182,9 @@
   </data>
   <data name="ListView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>149, 28</value>
+  </data>
+  <data name="&gt;&gt;ImageList_Large.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lUDPport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -201,11 +204,17 @@
   <data name="&gt;&gt;RegExTextBoxPort.Name" xml:space="preserve">
     <value>RegExTextBoxPort</value>
   </data>
+  <data name="Button_clear.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;Button_clear.Name" xml:space="preserve">
     <value>Button_clear</value>
   </data>
   <data name="ButtonSet.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="RegExTextBoxPort.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -225,8 +234,8 @@
   <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
-  <data name="ColumnHeader_Time.Text" xml:space="preserve">
-    <value>Time</value>
+  <data name="&gt;&gt;Button_clear.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
@@ -236,9 +245,6 @@
   </data>
   <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ErrorProvider1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="PictureBox1.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -275,9 +281,6 @@
   </data>
   <data name="&gt;&gt;lUDPport.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 128</value>
   </data>
   <data name="LabelHeader.Error" xml:space="preserve">
     <value />
@@ -330,13 +333,10 @@
   <data name="&gt;&gt;CultureManager1.Name" xml:space="preserve">
     <value>CultureManager1</value>
   </data>
-  <data name="&gt;&gt;ImageList_Large.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 128</value>
   </data>
   <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TextBoxDetails.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ColumnHeader_Time.Type" xml:space="preserve">
@@ -347,7 +347,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACi
-        JQAAAk1TRnQBSQFMAwEBAAHYAQEB/AEBATABAAEwAQAE/wEZARAI/wFCAU0BNgcAATYDAAEoAwABwAMA
+        JQAAAk1TRnQBSQFMAwEBAAHYAQEBAAECATABAAEwAQAE/wEZARAI/wFCAU0BNgcAATYDAAEoAwABwAMA
         ATADAAEBAQABGAYAAWz/AP8AbwAD/wH0Ae8B7AHqAdcBzAHnAdABwwHnAdABwgHrAdkB0AH4AfUB8wYA
         AfMC8QHZAdABzwHJAbsBuAG+AasBqAG3AaABnQGwAZcBlAGtAZIBjgGtAZIBjgGuAZMBjwGzAZsBlwG6
         AaUBogHDAbIBrwHSAcYBxAHlAeAB3wH6Avn/APYAAfMB7QHpAd4BrAGNAdoBiQFbAd8BkwFrAeABmQFz
@@ -516,14 +516,20 @@
   <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 95</value>
+  </data>
   <data name="TextBoxDetails.Error" xml:space="preserve">
     <value />
   </data>
   <data name="TextBoxDetails.Size" type="System.Drawing.Size, System.Drawing">
     <value>481, 537</value>
   </data>
-  <data name="TextBoxDetails.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
+    <value>PictureBox1</value>
+  </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 147</value>
   </data>
   <data name="lUDPport.Text" xml:space="preserve">
     <value>Listening on:</value>
@@ -543,8 +549,8 @@
   <data name="GroupBox1.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 95</value>
+  <data name="lUDPport.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="ColumnHeader_IP.Text" xml:space="preserve">
     <value>IP</value>
@@ -579,14 +585,17 @@
   <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;CultureManager1.Type" xml:space="preserve">
+    <value>Localization.CultureManager, Localization, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="TextBoxDetails.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
   <data name="TextBoxDetails.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="Button_clear.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="ColumnHeader_Time.Text" xml:space="preserve">
+    <value>Time</value>
   </data>
   <data name="&gt;&gt;ButtonSet.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -603,11 +612,8 @@
   <data name="PictureBox1.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="RegExTextBoxPort.Text" xml:space="preserve">
-    <value>9</value>
+  <data name="TextBoxDetails.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;ButtonSet.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -615,11 +621,11 @@
   <data name="&gt;&gt;ColumnHeader_Name.Name" xml:space="preserve">
     <value>ColumnHeader_Name</value>
   </data>
-  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
-    <value>PictureBox1</value>
+  <data name="&gt;&gt;TextBoxDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 147</value>
+  <data name="ListView1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="RegExTextBoxPort.ErrorMessage" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -639,26 +645,20 @@
   <data name="GroupBox1.Text" xml:space="preserve">
     <value>Network Settings</value>
   </data>
-  <data name="&gt;&gt;CultureManager1.Type" xml:space="preserve">
-    <value>Localization.CultureManager, Localization, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ErrorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Button_clear.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;TextBoxDetails.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Listener</value>
   </data>
-  <data name="&gt;&gt;Button_clear.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="TextBoxDetails.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="&gt;&gt;RegExTextBoxPort.Type" xml:space="preserve">
+    <value>WakeOnLan.Controls.RegExTextBox, WakeOnLan, Version=2.11.14.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="lUDPport.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;RegExTextBoxPort.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 42</value>
@@ -666,14 +666,14 @@
   <data name="Label1.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1035, 583</value>
+  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="RegExTextBoxPort.Location" type="System.Drawing.Point, System.Drawing">
     <value>64, 39</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Button_clear.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="ListView1.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -850,20 +850,20 @@
   <data name="&gt;&gt;lUDPport.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
-  <data name="Button_clear.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ButtonSet.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="TextBoxDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;ListView1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;ColumnHeader_IP.Name" xml:space="preserve">
-    <value>ColumnHeader_IP</value>
+  <data name="RegExTextBoxPort.Text" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="RegExTextBoxPort.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="ButtonSet.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;RegExTextBoxPort.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="CultureManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>286, 17</value>
@@ -872,7 +872,7 @@
     <value>156, 17</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
+    <value>it</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

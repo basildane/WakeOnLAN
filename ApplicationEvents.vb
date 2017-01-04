@@ -125,8 +125,6 @@ Namespace My
                     Settings.Language = language
                 End If
             End If
-            ' TODO:
-            Settings.Language = "it-IT"
 
             CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
             Debug.WriteLine("Language: " & Settings.Language)
