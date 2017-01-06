@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,25 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lIP.Text" xml:space="preserve">
-    <value>Indirizzo IP</value>
-  </data>
-  <data name="lSubnet.Text" xml:space="preserve">
-    <value>Subnet</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Calcola Subnet</value>
   </data>
   <data name="bCalculate.Text" xml:space="preserve">
     <value>Calcola</value>
   </data>
+  <data name="bOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="lHeader.Text" xml:space="preserve">
     <value>Questa funzione è utile per aiutarti a trovare l'indirizzo di Broadcast in uso, in base all'indirizzo IP e alla subnet</value>
+  </data>
+  <data name="lIP.Text" xml:space="preserve">
+    <value>Indirizzo IP</value>
   </data>
   <data name="lRecommended.Text" xml:space="preserve">
     <value>Indirizzo Broadcast raccomandato:</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Calcola Subnet</value>
-  </data>
-  <data name="bOK.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="lSubnet.Text" xml:space="preserve">
+    <value>Subnet</value>
   </data>
 </root>

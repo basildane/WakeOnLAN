@@ -117,14 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SearchBegin.Text" xml:space="preserve">
-    <value>Rechner suchen</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Nach Rechnern suchen</value>
   </data>
-  <data name="SearchBegin.ToolTip" xml:space="preserve">
-    <value>Starte die Suche nach Rechnern</value>
+  <data name="cancelSearch.Text" xml:space="preserve">
+    <value>Abbrechen</value>
   </data>
-  <data name="ch_OS.Text" xml:space="preserve">
-    <value>Betriebssystem</value>
+  <data name="cancelSearch.ToolTip" xml:space="preserve">
+    <value>Beende die Suche nach Rechnern</value>
   </data>
   <data name="ch_Interface.Text" xml:space="preserve">
     <value>Interface-ID</value>
@@ -135,24 +136,26 @@
   <data name="ch_MAC.Text" xml:space="preserve">
     <value>MAC-Adresse</value>
   </data>
+  <data name="ch_OS.Text" xml:space="preserve">
+    <value>Betriebssystem</value>
+  </data>
+  <data name="CheckAllButton.Text" xml:space="preserve">
+    <value>Alle wählen</value>
+  </data>
+  <data name="closeButton.Text" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="gbAddToGroup.Text" xml:space="preserve">
+    <value>Der Gruppe hinzufügen..</value>
+  </data>
+  <data name="gbSearch.Text" xml:space="preserve">
+    <value>Suche nach Rechnern</value>
+  </data>
   <data name="IpAddressControl_End.ToolTip" xml:space="preserve">
     <value>Geben Sie die End-IP-Adresse ein.</value>
   </data>
   <data name="IpAddressControl_Start.ToolTip" xml:space="preserve">
     <value>Geben Sie die Start-IP-Adresse ein</value>
-  </data>
-  <data name="cancelSearch.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
-  <data name="cancelSearch.ToolTip" xml:space="preserve">
-    <value>Beende die Suche nach Rechnern</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 13</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>End-IP-Adresse</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 13</value>
@@ -160,8 +163,14 @@
   <data name="Label1.Text" xml:space="preserve">
     <value>Start-IP-Adresse</value>
   </data>
-  <data name="gbSearch.Text" xml:space="preserve">
-    <value>Suche nach Rechnern</value>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>End-IP-Adresse</value>
+  </data>
+  <data name="LabelAddToGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 13</value>
   </data>
   <data name="LabelDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>680, 440</value>
@@ -172,22 +181,13 @@
   <data name="LabelDescription.Text" xml:space="preserve">
     <value>Wählen Sie die gewünschten Rechner durch Anklicken der Auswahlbox aus und bestätigen Sie mit OK um diese in die Datenbank aufzunehmen.</value>
   </data>
-  <data name="CheckAllButton.Text" xml:space="preserve">
-    <value>Alle wählen</value>
+  <data name="SearchBegin.Text" xml:space="preserve">
+    <value>Rechner suchen</value>
+  </data>
+  <data name="SearchBegin.ToolTip" xml:space="preserve">
+    <value>Starte die Suche nach Rechnern</value>
   </data>
   <data name="UnCheckAllButton.Text" xml:space="preserve">
     <value>Alle abwählen</value>
-  </data>
-  <data name="closeButton.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
-  <data name="LabelAddToGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 13</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Nach Rechnern suchen</value>
-  </data>
-  <data name="gbAddToGroup.Text" xml:space="preserve">
-    <value>Der Gruppe hinzufügen..</value>
   </data>
 </root>

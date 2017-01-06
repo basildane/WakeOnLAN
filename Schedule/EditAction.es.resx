@@ -118,71 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RebootCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 17</value>
-  </data>
-  <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 17</value>
-  </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 89</value>
-  </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 13</value>
-  </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 63</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 13</value>
-  </data>
-  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 13</value>
-  </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
-  </data>
-  <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 13</value>
-  </data>
-  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
-  </data>
-  <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 13</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Editar acción</value>
   </data>
   <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 13</value>
   </data>
-  <data name="RebootAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 17</value>
+  <data name="AllLabel.Text" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="AllTabPage.Text" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="EmailLabel.Text" xml:space="preserve">
+    <value>Mensaje de Email</value>
+  </data>
+  <data name="EmailTabPage.Text" xml:space="preserve">
+    <value>Mensaje de Email</value>
   </data>
   <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 17</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Mensaje</value>
+  <data name="forceAll.Text" xml:space="preserve">
+    <value>Fuerza</value>
   </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Para:</value>
-  </data>
-  <data name="SelectTabPage.Text" xml:space="preserve">
-    <value>Selecciona tu computadora</value>
-  </data>
-  <data name="OK_Button.Text" xml:space="preserve">
-    <value>Ok</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Mensaje:</value>
-  </data>
-  <data name="RebootCheckBox.Text" xml:space="preserve">
-    <value>Reiniciar después de apagado</value>
+  <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 17</value>
   </data>
   <data name="forceCheckBox.Text" xml:space="preserve">
     <value>Aplicaciones de fuerza cerraron</value>
@@ -190,43 +157,76 @@
   <data name="Label1.Text" xml:space="preserve">
     <value>Acción</value>
   </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 63</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>Título</value>
   </data>
-  <data name="EmailTabPage.Text" xml:space="preserve">
-    <value>Mensaje de Email</value>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 89</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Mensaje</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Mensaje:</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 13</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>De:</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Para:</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
     <value>Asunto:</value>
   </data>
-  <data name="SelectLabel.Text" xml:space="preserve">
-    <value>Selecciona tu computadora</value>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>Ok</value>
   </data>
-  <data name="RebootAll.Text" xml:space="preserve">
-    <value>Reiniciar después de apagado</value>
+  <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
   </data>
   <data name="PopupLabel.Text" xml:space="preserve">
     <value>Mensaje popup</value>
   </data>
-  <data name="EmailLabel.Text" xml:space="preserve">
-    <value>Mensaje de Email</value>
+  <data name="RebootAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 17</value>
   </data>
-  <data name="AllLabel.Text" xml:space="preserve">
-    <value>Opciones</value>
+  <data name="RebootAll.Text" xml:space="preserve">
+    <value>Reiniciar después de apagado</value>
   </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Cancelar</value>
+  <data name="RebootCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 17</value>
   </data>
-  <data name="forceAll.Text" xml:space="preserve">
-    <value>Fuerza</value>
+  <data name="RebootCheckBox.Text" xml:space="preserve">
+    <value>Reiniciar después de apagado</value>
   </data>
-  <data name="AllTabPage.Text" xml:space="preserve">
-    <value>Todos</value>
+  <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 13</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Editar acción</value>
+  <data name="SelectLabel.Text" xml:space="preserve">
+    <value>Selecciona tu computadora</value>
   </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>De:</value>
+  <data name="SelectTabPage.Text" xml:space="preserve">
+    <value>Selecciona tu computadora</value>
   </data>
 </root>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,34 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LabelHeader.Text" xml:space="preserve">
-    <value>WakeOnLAN Pacchetti ricevuti... </value>
-  </data>
-  <data name="ColumnHeader_Time.Text" xml:space="preserve">
-    <value>Ora</value>
-  </data>
-  <data name="ColumnHeader_Name.Text" xml:space="preserve">
-    <value>Nome</value>
-  </data>
-  <data name="ButtonSet.Text" xml:space="preserve">
-    <value>Imposta</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Porta UDP:</value>
-  </data>
-  <data name="lUDPport.Text" xml:space="preserve">
-    <value>Ascolta su:</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Ascoltatore</value>
   </data>
   <data name="Button_clear.Text" xml:space="preserve">
     <value>Pulisci</value>
   </data>
+  <data name="ButtonSet.Text" xml:space="preserve">
+    <value>Imposta</value>
+  </data>
   <data name="ColumnHeader_IP.Text" xml:space="preserve">
     <value>IP</value>
+  </data>
+  <data name="ColumnHeader_Name.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="ColumnHeader_Time.Text" xml:space="preserve">
+    <value>Ora</value>
   </data>
   <data name="GroupBox1.Text" xml:space="preserve">
     <value>Impostazioni di rete</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Ascoltatore</value>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Porta UDP:</value>
+  </data>
+  <data name="LabelHeader.Text" xml:space="preserve">
+    <value>WakeOnLAN Pacchetti ricevuti... </value>
+  </data>
+  <data name="lUDPport.Text" xml:space="preserve">
+    <value>Ascolta su:</value>
   </data>
 </root>

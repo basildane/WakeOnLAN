@@ -117,18 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Berechne Subnetz</value>
+  </data>
   <data name="bCalculate.Text" xml:space="preserve">
     <value>Berechne</value>
   </data>
+  <data name="lHeader.Text" xml:space="preserve">
+    <value>Die Funktion dient der Ermittlung der Broadcast-Adresse welche verwendet werden soll, basierend auf IP-Adresse und Subnetz.</value>
+  </data>
   <data name="lIP.Text" xml:space="preserve">
     <value>IP-Adresse</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lSubnet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
-  </data>
-  <data name="lSubnet.Text" xml:space="preserve">
-    <value>Subnetz</value>
   </data>
   <data name="lRecommended.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 13</value>
@@ -136,10 +136,10 @@
   <data name="lRecommended.Text" xml:space="preserve">
     <value>Empfohlene Broadcast-Adresse:</value>
   </data>
-  <data name="lHeader.Text" xml:space="preserve">
-    <value>Die Funktion dient der Ermittlung der Broadcast-Adresse welche verwendet werden soll, basierend auf IP-Adresse und Subnetz.</value>
+  <data name="lSubnet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Berechne Subnetz</value>
+  <data name="lSubnet.Text" xml:space="preserve">
+    <value>Subnetz</value>
   </data>
 </root>

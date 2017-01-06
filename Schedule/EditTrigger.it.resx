@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,8 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Modifica trigger</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="CheckBox1.Text" xml:space="preserve">
+    <value>Domenica</value>
+  </data>
+  <data name="CheckBox2.Text" xml:space="preserve">
+    <value>Lunedì</value>
+  </data>
+  <data name="CheckBox3.Text" xml:space="preserve">
+    <value>Martedì</value>
+  </data>
+  <data name="CheckBox4.Text" xml:space="preserve">
+    <value>Mercoledì</value>
+  </data>
   <data name="CheckBox5.Text" xml:space="preserve">
     <value>Giovedì</value>
+  </data>
+  <data name="CheckBox6.Text" xml:space="preserve">
+    <value>Venerdì</value>
+  </data>
+  <data name="CheckBox7.Text" xml:space="preserve">
+    <value>Sabato</value>
   </data>
   <data name="CheckBoxEnabled.Text" xml:space="preserve">
     <value>Abilitato</value>
@@ -126,23 +150,23 @@
   <data name="GroupBoxAdvanced.Text" xml:space="preserve">
     <value>Avanzate</value>
   </data>
-  <data name="CheckBox2.Text" xml:space="preserve">
-    <value>Lunedì</value>
+  <data name="GroupBoxSettings.Text" xml:space="preserve">
+    <value>Impostazioni</value>
   </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Ricorre ogni:</value>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Inizio:</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Occorre ogni:</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
     <value>giorni</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Modifica trigger</value>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>settimante su:</value>
   </data>
-  <data name="GroupBoxSettings.Text" xml:space="preserve">
-    <value>Impostazioni</value>
-  </data>
-  <data name="RadioButtonWeekly.Text" xml:space="preserve">
-    <value>Settimanale</value>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Ricorre ogni:</value>
   </data>
   <data name="OK_Button.Text" xml:space="preserve">
     <value>OK</value>
@@ -153,34 +177,10 @@
   <data name="RadioButtonMontly.Text" xml:space="preserve">
     <value>Mensile</value>
   </data>
-  <data name="CheckBox3.Text" xml:space="preserve">
-    <value>Martedì</value>
-  </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Annulla</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Occorre ogni:</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Inizio:</value>
-  </data>
-  <data name="CheckBox1.Text" xml:space="preserve">
-    <value>Domenica</value>
-  </data>
   <data name="RadioButtonOneTime.Text" xml:space="preserve">
     <value>Una volta</value>
   </data>
-  <data name="CheckBox7.Text" xml:space="preserve">
-    <value>Sabato</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>settimante su:</value>
-  </data>
-  <data name="CheckBox6.Text" xml:space="preserve">
-    <value>Venerdì</value>
-  </data>
-  <data name="CheckBox4.Text" xml:space="preserve">
-    <value>Mercoledì</value>
+  <data name="RadioButtonWeekly.Text" xml:space="preserve">
+    <value>Settimanale</value>
   </data>
 </root>

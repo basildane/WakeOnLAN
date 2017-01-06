@@ -118,33 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 19</value>
-  </data>
-  <data name="labelUpdate.Text" xml:space="preserve">
-    <value>Новая версия доступна {0}!</value>
-  </data>
-  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>507, 30</value>
-  </data>
-  <data name="labelDescription.Text" xml:space="preserve">
-    <value>{0} {1}Доступна версия программы. Вы используете установленную версию {2}. Загрузить обновление сейчас?</value>
-  </data>
-  <data name="labelReleaseNotes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 17</value>
-  </data>
-  <data name="labelReleaseNotes.Text" xml:space="preserve">
-    <value>Информация о выпуске:</value>
-  </data>
-  <data name="buttonUpdate.Text" xml:space="preserve">
-    <value>Установить</value>
-  </data>
-  <data name="buttonRemindLater.Text" xml:space="preserve">
-    <value>Напомнить позднее</value>
-  </data>
-  <data name="buttonSkip.Text" xml:space="preserve">
-    <value>Не устанавливать</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAQAEBAAAAAAIABoBAAARgAAACAgAAAAACAAqBAAAK4EAAAwMAAAAAAgAKglAABWFQAAQEAAAAAA
@@ -685,5 +658,32 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Обновление программы</value>
+  </data>
+  <data name="buttonRemindLater.Text" xml:space="preserve">
+    <value>Напомнить позднее</value>
+  </data>
+  <data name="buttonSkip.Text" xml:space="preserve">
+    <value>Не устанавливать</value>
+  </data>
+  <data name="buttonUpdate.Text" xml:space="preserve">
+    <value>Установить</value>
+  </data>
+  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>507, 30</value>
+  </data>
+  <data name="labelDescription.Text" xml:space="preserve">
+    <value>{0} {1}Доступна версия программы. Вы используете установленную версию {2}. Загрузить обновление сейчас?</value>
+  </data>
+  <data name="labelReleaseNotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="labelReleaseNotes.Text" xml:space="preserve">
+    <value>Информация о выпуске:</value>
+  </data>
+  <data name="labelUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 19</value>
+  </data>
+  <data name="labelUpdate.Text" xml:space="preserve">
+    <value>Новая версия доступна {0}!</value>
   </data>
 </root>

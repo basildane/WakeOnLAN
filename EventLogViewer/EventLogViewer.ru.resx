@@ -127,6 +127,12 @@
   <data name="btnErrors.ToolTipText" xml:space="preserve">
     <value>0 Ошибка</value>
   </data>
+  <data name="btnMessages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="btnMessages.Text" xml:space="preserve">
+    <value>0 Нормально</value>
+  </data>
   <data name="btnWarnings.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 20</value>
   </data>
@@ -135,18 +141,6 @@
   </data>
   <data name="btnWarnings.ToolTipText" xml:space="preserve">
     <value>0 Внимание</value>
-  </data>
-  <data name="btnMessages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="btnMessages.Text" xml:space="preserve">
-    <value>0 Нормально</value>
-  </data>
-  <data name="SourceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
-  </data>
-  <data name="SourceLabel.Text" xml:space="preserve">
-    <value>Начало:</value>
   </data>
   <data name="FindLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 20</value>
@@ -165,5 +159,11 @@
   </data>
   <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
     <value>Ничего нет соответствующего фильтру.</value>
+  </data>
+  <data name="SourceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="SourceLabel.Text" xml:space="preserve">
+    <value>Начало:</value>
   </data>
 </root>

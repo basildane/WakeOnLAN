@@ -138,14 +138,17 @@
   <data name="cat_Emergency" xml:space="preserve">
     <value>اعدادات حالات الطوارئ</value>
   </data>
+  <data name="cat_Shutdown" xml:space="preserve">
+    <value>ايقاف التشغيل</value>
+  </data>
   <data name="cat_WOL" xml:space="preserve">
     <value>WOL</value>
   </data>
-  <data name="dbPath" xml:space="preserve">
-    <value>مسار قاعدة البيانات</value>
-  </data>
   <data name="Culture" xml:space="preserve">
     <value>الثقافة</value>
+  </data>
+  <data name="dbPath" xml:space="preserve">
+    <value>مسار قاعدة البيانات</value>
   </data>
   <data name="Delay" xml:space="preserve">
     <value>تاخير الوقت</value>
@@ -195,13 +198,10 @@
   <data name="Threads" xml:space="preserve">
     <value>عدد مؤشرات الترابط</value>
   </data>
-  <data name="UDPPortDescription" xml:space="preserve">
-    <value>ادخل رقم منفذ UDP لرسائل البث.</value>
-  </data>
   <data name="UDPPort" xml:space="preserve">
     <value>منفذ UDP</value>
   </data>
-  <data name="cat_Shutdown" xml:space="preserve">
-    <value>ايقاف التشغيل</value>
+  <data name="UDPPortDescription" xml:space="preserve">
+    <value>ادخل رقم منفذ UDP لرسائل البث.</value>
   </data>
 </root>

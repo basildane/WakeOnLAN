@@ -117,34 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColumnHeader_Time.Text" xml:space="preserve">
-    <value>Hora</value>
-  </data>
-  <data name="ColumnHeader_Name.Text" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <data name="LabelHeader.Text" xml:space="preserve">
-    <value>WakeOnLAN paquetes recibidos...</value>
-  </data>
-  <data name="ButtonSet.Text" xml:space="preserve">
-    <value>Configurar</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RegExTextBoxPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 39</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Puerto UDP:</value>
-  </data>
-  <data name="lUDPport.Text" xml:space="preserve">
-    <value>Escuchar</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Ajustes de red</value>
-  </data>
-  <data name="Button_clear.Text" xml:space="preserve">
-    <value>Limpiar</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAABILAAASCwAAAAAAAAAA
@@ -314,6 +287,21 @@
   <data name="$this.Text" xml:space="preserve">
     <value>oyente</value>
   </data>
+  <data name="Button_clear.Text" xml:space="preserve">
+    <value>Limpiar</value>
+  </data>
+  <data name="ButtonSet.Text" xml:space="preserve">
+    <value>Configurar</value>
+  </data>
+  <data name="ColumnHeader_Name.Text" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="ColumnHeader_Time.Text" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Ajustes de red</value>
+  </data>
   <data name="ImageList_Large.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
@@ -481,5 +469,17 @@
         BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH+BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH/BAABBxIAAf8BgAMA
         AQcSAAH/AfgDAAEHEgAC/wHwAgABHxIAA/8B8AEBAf8SAAb/EgAL
 </value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Puerto UDP:</value>
+  </data>
+  <data name="LabelHeader.Text" xml:space="preserve">
+    <value>WakeOnLAN paquetes recibidos...</value>
+  </data>
+  <data name="lUDPport.Text" xml:space="preserve">
+    <value>Escuchar</value>
+  </data>
+  <data name="RegExTextBoxPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 39</value>
   </data>
 </root>

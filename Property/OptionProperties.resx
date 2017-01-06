@@ -212,6 +212,10 @@
     <value>If true, then reboot after shutdown.</value>
     <comment>If true, then reboot after shutdown.</comment>
   </data>
+  <data name="ShowSplash" xml:space="preserve">
+    <value>Show Splash Screen</value>
+    <comment>Show Splash Screen</comment>
+  </data>
   <data name="Shutdown" xml:space="preserve">
     <value>Default Message</value>
     <comment>Default Message</comment>
@@ -231,9 +235,5 @@
   <data name="UDPPortDescription" xml:space="preserve">
     <value>Enter the UDP Port number for the broadcast messages.</value>
     <comment>Enter the UDP Port number for the broadcast messages.</comment>
-  </data>
-  <data name="ShowSplash" xml:space="preserve">
-    <value>Show Splash Screen</value>
-    <comment>Show Splash Screen</comment>
   </data>
 </root>

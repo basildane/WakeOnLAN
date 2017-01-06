@@ -118,62 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Acţiune de editare</value>
+  </data>
   <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
-  </data>
-  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
-  </data>
-  <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
-  </data>
-  <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
-  </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 89</value>
-  </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 129</value>
-  </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
-  </data>
-  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 28</value>
-  </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 54</value>
-  </data>
-  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 13</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Mesaj</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>La:</value>
   </data>
   <data name="AllLabel.Text" xml:space="preserve">
     <value>Opţiuni</value>
   </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Renunţă</value>
+  </data>
+  <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
   <data name="EmailLabel.Text" xml:space="preserve">
     <value>Mesaj email</value>
   </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Mesaj:</value>
+  <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
+  </data>
+  <data name="forceAll.Text" xml:space="preserve">
+    <value>Forţează</value>
+  </data>
+  <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
   </data>
   <data name="forceCheckBox.Text" xml:space="preserve">
     <value>Forţează</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Acţiune:</value>
@@ -181,28 +157,52 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>Titlu</value>
   </data>
-  <data name="SelectLabel.Text" xml:space="preserve">
-    <value>Selectează computerul</value>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 89</value>
   </data>
-  <data name="PopupLabel.Text" xml:space="preserve">
-    <value>Vizualizare mesaj</value>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
   </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Renunţă</value>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Mesaj</value>
   </data>
-  <data name="forceAll.Text" xml:space="preserve">
-    <value>Forţează</value>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 129</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Acţiune de editare</value>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Mesaj:</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 28</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
     <value>De la:</value>
   </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 54</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 13</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>La:</value>
+  </data>
   <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 13</value>
   </data>
+  <data name="PopupLabel.Text" xml:space="preserve">
+    <value>Vizualizare mesaj</value>
+  </data>
   <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 13</value>
+  </data>
+  <data name="SelectLabel.Text" xml:space="preserve">
+    <value>Selectează computerul</value>
   </data>
 </root>

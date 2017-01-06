@@ -127,15 +127,6 @@
   <data name="btnErrors.ToolTipText" xml:space="preserve">
     <value>0 Feher</value>
   </data>
-  <data name="btnWarnings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 20</value>
-  </data>
-  <data name="btnWarnings.Text" xml:space="preserve">
-    <value>0 Warnungen</value>
-  </data>
-  <data name="btnWarnings.ToolTipText" xml:space="preserve">
-    <value>0 Warnungen</value>
-  </data>
   <data name="btnMessages.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 20</value>
   </data>
@@ -145,11 +136,14 @@
   <data name="btnMessages.ToolTipText" xml:space="preserve">
     <value>0 Meldungen</value>
   </data>
-  <data name="SourceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+  <data name="btnWarnings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
   </data>
-  <data name="SourceLabel.Text" xml:space="preserve">
-    <value>Quelle:</value>
+  <data name="btnWarnings.Text" xml:space="preserve">
+    <value>0 Warnungen</value>
+  </data>
+  <data name="btnWarnings.ToolTipText" xml:space="preserve">
+    <value>0 Warnungen</value>
   </data>
   <data name="FindLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 20</value>
@@ -168,5 +162,11 @@
   </data>
   <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
     <value>Es gibt keine Ereignisse, die zu diesem Filter passen.</value>
+  </data>
+  <data name="SourceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="SourceLabel.Text" xml:space="preserve">
+    <value>Quelle:</value>
   </data>
 </root>

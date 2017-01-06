@@ -118,29 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>366, 19</value>
-  </data>
-  <data name="labelTitle.Text" xml:space="preserve">
-    <value>Möchten Sie die Aktualisierung später herunterladen?</value>
-  </data>
-  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 30</value>
-  </data>
-  <data name="labelDescription.Text" xml:space="preserve">
-    <value>Sie sollten jetzt aktualisieren. Dies dauert nicht lange und Sie besitzen dann die aktuellste Version.</value>
-  </data>
-  <data name="radioButtonYes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 19</value>
-  </data>
-  <data name="radioButtonYes.Text" xml:space="preserve">
-    <value>Ja, erinnern Sie mich später daran:</value>
-  </data>
-  <data name="radioButtonNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 19</value>
-  </data>
-  <data name="radioButtonNo.Text" xml:space="preserve">
-    <value>Nein, lade die Version sofort herunter(empfohlen)</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Erinnern Sie mich später an die Aktualisierung</value>
   </data>
   <data name="comboBoxRemindLater.Items" xml:space="preserve">
     <value>Nach 30 Minuten</value>
@@ -163,7 +142,28 @@
   <data name="comboBoxRemindLater.Items6" xml:space="preserve">
     <value>Nach 10 Tagen</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Erinnern Sie mich später an die Aktualisierung</value>
+  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 30</value>
+  </data>
+  <data name="labelDescription.Text" xml:space="preserve">
+    <value>Sie sollten jetzt aktualisieren. Dies dauert nicht lange und Sie besitzen dann die aktuellste Version.</value>
+  </data>
+  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 19</value>
+  </data>
+  <data name="labelTitle.Text" xml:space="preserve">
+    <value>Möchten Sie die Aktualisierung später herunterladen?</value>
+  </data>
+  <data name="radioButtonNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 19</value>
+  </data>
+  <data name="radioButtonNo.Text" xml:space="preserve">
+    <value>Nein, lade die Version sofort herunter(empfohlen)</value>
+  </data>
+  <data name="radioButtonYes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 19</value>
+  </data>
+  <data name="radioButtonYes.Text" xml:space="preserve">
+    <value>Ja, erinnern Sie mich später daran:</value>
   </data>
 </root>

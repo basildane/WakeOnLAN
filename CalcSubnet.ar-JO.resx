@@ -118,6 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 14</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>284, 298</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8.25pt</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>حساب الشبكة الفرعية</value>
+  </data>
   <data name="bCalculate.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 254</value>
   </data>
@@ -142,44 +162,17 @@
   <data name="IpBroadcast.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 26</value>
   </data>
-  <data name="IpSubnet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 114</value>
-  </data>
-  <data name="IpSubnet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 26</value>
-  </data>
   <data name="IpIP.Location" type="System.Drawing.Point, System.Drawing">
     <value>143, 69</value>
   </data>
   <data name="IpIP.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 26</value>
   </data>
-  <data name="lIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 74</value>
+  <data name="IpSubnet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 114</value>
   </data>
-  <data name="lIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 14</value>
-  </data>
-  <data name="lIP.Text" xml:space="preserve">
-    <value>عنوان IP</value>
-  </data>
-  <data name="lSubnet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 119</value>
-  </data>
-  <data name="lSubnet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 14</value>
-  </data>
-  <data name="lSubnet.Text" xml:space="preserve">
-    <value>الشبكة الفرعية</value>
-  </data>
-  <data name="lRecommended.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 200</value>
-  </data>
-  <data name="lRecommended.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 14</value>
-  </data>
-  <data name="lRecommended.Text" xml:space="preserve">
-    <value>عنوان البث الموصى به:</value>
+  <data name="IpSubnet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 26</value>
   </data>
   <data name="lHeader.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 10</value>
@@ -190,24 +183,31 @@
   <data name="lHeader.Text" xml:space="preserve">
     <value>يتم استخدام هذه الدالة للمساعدة في البحث عن "عنوان بث" لاستخدام، استنادا الى عنوان IP والشبكة الفرعية.</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 14</value>
+  <data name="lIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 74</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>284, 298</value>
+  <data name="lIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 14</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 8.25pt</value>
+  <data name="lIP.Text" xml:space="preserve">
+    <value>عنوان IP</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+  <data name="lRecommended.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 200</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lRecommended.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 14</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>حساب الشبكة الفرعية</value>
+  <data name="lRecommended.Text" xml:space="preserve">
+    <value>عنوان البث الموصى به:</value>
+  </data>
+  <data name="lSubnet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 119</value>
+  </data>
+  <data name="lSubnet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 14</value>
+  </data>
+  <data name="lSubnet.Text" xml:space="preserve">
+    <value>الشبكة الفرعية</value>
   </data>
 </root>

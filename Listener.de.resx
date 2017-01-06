@@ -117,27 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColumnHeader_Time.Text" xml:space="preserve">
-    <value>Zeit</value>
-  </data>
-  <data name="LabelHeader.Text" xml:space="preserve">
-    <value>WakeOnLAN Pakete erhalten...</value>
-  </data>
-  <data name="ButtonSet.Text" xml:space="preserve">
-    <value>Einstellen</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>UDP-Port</value>
-  </data>
-  <data name="lUDPport.Text" xml:space="preserve">
-    <value>Hört auf:</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Netzwerkeinstellungen</value>
-  </data>
-  <data name="Button_clear.Text" xml:space="preserve">
-    <value>Leeren</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -308,6 +287,18 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Hörer</value>
   </data>
+  <data name="Button_clear.Text" xml:space="preserve">
+    <value>Leeren</value>
+  </data>
+  <data name="ButtonSet.Text" xml:space="preserve">
+    <value>Einstellen</value>
+  </data>
+  <data name="ColumnHeader_Time.Text" xml:space="preserve">
+    <value>Zeit</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Netzwerkeinstellungen</value>
+  </data>
   <data name="ImageList_Large.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
@@ -475,5 +466,14 @@
         BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH+BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH/BAABBxIAAf8BgAMA
         AQcSAAH/AfgDAAEHEgAC/wHwAgABHxIAA/8B8AEBAf8SAAb/EgAL
 </value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>UDP-Port</value>
+  </data>
+  <data name="LabelHeader.Text" xml:space="preserve">
+    <value>WakeOnLAN Pakete erhalten...</value>
+  </data>
+  <data name="lUDPport.Text" xml:space="preserve">
+    <value>Hört auf:</value>
   </data>
 </root>

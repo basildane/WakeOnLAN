@@ -118,6 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
   <data name="btnErrors.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 20</value>
   </data>
@@ -126,15 +130,6 @@
   </data>
   <data name="btnErrors.ToolTipText" xml:space="preserve">
     <value>اخطاء 0</value>
-  </data>
-  <data name="btnWarnings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
-  </data>
-  <data name="btnWarnings.Text" xml:space="preserve">
-    <value>تحذيرات 0</value>
-  </data>
-  <data name="btnWarnings.ToolTipText" xml:space="preserve">
-    <value>تحذيرات 0</value>
   </data>
   <data name="btnMessages.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -145,11 +140,14 @@
   <data name="btnMessages.ToolTipText" xml:space="preserve">
     <value>رسائل 0</value>
   </data>
-  <data name="SourceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 20</value>
+  <data name="btnWarnings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
   </data>
-  <data name="SourceLabel.Text" xml:space="preserve">
-    <value>المصدر:</value>
+  <data name="btnWarnings.Text" xml:space="preserve">
+    <value>تحذيرات 0</value>
+  </data>
+  <data name="btnWarnings.ToolTipText" xml:space="preserve">
+    <value>تحذيرات 0</value>
   </data>
   <data name="FindLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 20</value>
@@ -169,8 +167,10 @@
   <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
     <value>لا توجد اية احداث تطابق التصفية المحددة.</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+  <data name="SourceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="SourceLabel.Text" xml:space="preserve">
+    <value>المصدر:</value>
   </data>
 </root>

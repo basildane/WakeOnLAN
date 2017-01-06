@@ -119,17 +119,35 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Wijzig actie</value>
+  </data>
   <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 13</value>
+  </data>
+  <data name="AllLabel.Text" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>Annuleer</value>
   </data>
   <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 13</value>
   </data>
+  <data name="EmailLabel.Text" xml:space="preserve">
+    <value>E-mailbericht</value>
+  </data>
   <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 17</value>
   </data>
+  <data name="forceAll.Text" xml:space="preserve">
+    <value>Forceer</value>
+  </data>
   <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 17</value>
+  </data>
+  <data name="forceCheckBox.Text" xml:space="preserve">
+    <value>Forceer</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>44, 25</value>
@@ -137,11 +155,17 @@
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
   </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Actie:</value>
+  </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 63</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Titel:</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 89</value>
@@ -149,11 +173,17 @@
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
   </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Bericht</value>
+  </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 129</value>
   </data>
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Bericht</value>
   </data>
   <data name="Label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
@@ -164,6 +194,9 @@
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 13</value>
   </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Van:</value>
+  </data>
   <data name="Label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
   </data>
@@ -173,50 +206,8 @@
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 13</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Bericht</value>
-  </data>
   <data name="Label6.Text" xml:space="preserve">
     <value>Aan:</value>
-  </data>
-  <data name="AllLabel.Text" xml:space="preserve">
-    <value>Opties</value>
-  </data>
-  <data name="EmailLabel.Text" xml:space="preserve">
-    <value>E-mailbericht</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Bericht</value>
-  </data>
-  <data name="forceCheckBox.Text" xml:space="preserve">
-    <value>Forceer</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Actie:</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Titel:</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Onderwerp:</value>
-  </data>
-  <data name="SelectLabel.Text" xml:space="preserve">
-    <value>Selecter computer</value>
-  </data>
-  <data name="PopupLabel.Text" xml:space="preserve">
-    <value>Popupbericht</value>
-  </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>Annuleer</value>
-  </data>
-  <data name="forceAll.Text" xml:space="preserve">
-    <value>Forceer</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Wijzig actie</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Van:</value>
   </data>
   <data name="Label6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
@@ -226,6 +217,9 @@
   </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Onderwerp:</value>
   </data>
   <data name="Label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopRight</value>
@@ -242,7 +236,13 @@
   <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 13</value>
   </data>
+  <data name="PopupLabel.Text" xml:space="preserve">
+    <value>Popupbericht</value>
+  </data>
   <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 13</value>
+  </data>
+  <data name="SelectLabel.Text" xml:space="preserve">
+    <value>Selecter computer</value>
   </data>
 </root>

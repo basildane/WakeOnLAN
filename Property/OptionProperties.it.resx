@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -189,6 +189,9 @@
   <data name="RebootDescription" xml:space="preserve">
     <value>Se vero, riavvia dopo lo spegnimento</value>
   </data>
+  <data name="ShowSplash" xml:space="preserve">
+    <value>Mostra lo Splash Screen</value>
+  </data>
   <data name="Shutdown" xml:space="preserve">
     <value>Messaggio di default</value>
   </data>
@@ -203,8 +206,5 @@
   </data>
   <data name="UDPPortDescription" xml:space="preserve">
     <value>Inserire il numero della porta UDP per i messaggi di broadcast.</value>
-  </data>
-  <data name="ShowSplash" xml:space="preserve">
-    <value>Mostra lo Splash Screen</value>
   </data>
 </root>
