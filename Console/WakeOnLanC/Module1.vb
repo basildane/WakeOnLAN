@@ -238,8 +238,12 @@ Public Module Module1
         Dim machine As Machine
 
         Dim regKey As RegistryKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", False)
-        _repeatInterval = regKey.GetValue("RepeatInterval", 750, RegistryValueOptions.None)
-        regKey.Close()
+        If (IsNothing(regKey)) Then
+            _repeatInterval = 750
+        Else
+            _repeatInterval = regKey.GetValue("RepeatInterval", 750, RegistryValueOptions.None)
+            regKey.Close()
+        End If
 
         If _all Then
             Try
