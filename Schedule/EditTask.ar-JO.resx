@@ -118,137 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 38</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 14</value>
   </data>
-  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 14</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>595, 476</value>
   </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>(المجال \ اسم المستخدم)</value>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 8.25pt</value>
   </data>
-  <data name="PasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 71</value>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
   </data>
-  <data name="UserIDTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 34</value>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>405, 74</value>
-  </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 14</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>كلمة السر:</value>
-  </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>405, 38</value>
-  </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 14</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>معرف تسجيل دخول المستخدم:</value>
-  </data>
-  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 181</value>
-  </data>
-  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 130</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>خيارات الامان</value>
-  </data>
-  <data name="DescriptionTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 51</value>
-  </data>
-  <data name="DescriptionTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 116</value>
-  </data>
-  <data name="NameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 23</value>
-  </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>482, 54</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 14</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>الوصف</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>482, 26</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 14</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>اسم</value>
-  </data>
-  <data name="TabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 23</value>
-  </data>
-  <data name="TabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>564, 397</value>
-  </data>
-  <data name="TabPage1.Text" xml:space="preserve">
-    <value>عام</value>
-  </data>
-  <data name="ColumnHeader3.Text" xml:space="preserve">
-    <value>المحفزات</value>
-  </data>
-  <data name="ColumnHeader4.Text" xml:space="preserve">
-    <value>التفاصيل</value>
-  </data>
-  <data name="ListViewTriggers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 30</value>
-  </data>
-  <data name="ListViewTriggers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>558, 309</value>
-  </data>
-  <data name="TriggerDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 365</value>
-  </data>
-  <data name="TriggerDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
-  </data>
-  <data name="TriggerDeleteButton.Text" xml:space="preserve">
-    <value>حذف</value>
-  </data>
-  <data name="TriggerEditButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 365</value>
-  </data>
-  <data name="TriggerEditButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
-  </data>
-  <data name="TriggerEditButton.Text" xml:space="preserve">
-    <value>تحرير...</value>
-  </data>
-  <data name="TriggerNewButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 365</value>
-  </data>
-  <data name="TriggerNewButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
-  </data>
-  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 11</value>
-  </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 14</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>حدد الشروط التي سيتم تشغيل هذا الحدث.</value>
-  </data>
-  <data name="TabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 23</value>
-  </data>
-  <data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>564, 397</value>
-  </data>
-  <data name="TabPage2.Text" xml:space="preserve">
-    <value>المحفزات</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>انشاء مهمة</value>
   </data>
   <data name="ActionDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 358</value>
@@ -277,45 +165,6 @@
   <data name="ActionNewButton.Text" xml:space="preserve">
     <value>جديد...</value>
   </data>
-  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 11</value>
-  </data>
-  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 14</value>
-  </data>
-  <data name="ColumnHeader1.Text" xml:space="preserve">
-    <value>العمل</value>
-  </data>
-  <data name="ColumnHeader2.Text" xml:space="preserve">
-    <value>التفاصيل</value>
-  </data>
-  <data name="ListViewActions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 30</value>
-  </data>
-  <data name="ListViewActions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>558, 309</value>
-  </data>
-  <data name="TabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 23</value>
-  </data>
-  <data name="TabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>564, 397</value>
-  </data>
-  <data name="TabPage3.Text" xml:space="preserve">
-    <value>الاعمال</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>تحديد الاجراءات التي تحدث عندما يتم تشغيل هذا الحدث.</value>
-  </data>
-  <data name="TriggerNewButton.Text" xml:space="preserve">
-    <value>جديد...</value>
-  </data>
-  <data name="TabControlTasks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 13</value>
-  </data>
-  <data name="TabControlTasks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>572, 424</value>
-  </data>
   <data name="ButtonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>505, 444</value>
   </data>
@@ -324,6 +173,111 @@
   </data>
   <data name="ButtonCancel.Text" xml:space="preserve">
     <value>الغاء</value>
+  </data>
+  <data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>العمل</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>المحفزات</value>
+  </data>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="DescriptionTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 51</value>
+  </data>
+  <data name="DescriptionTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 116</value>
+  </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 181</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>552, 130</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>خيارات الامان</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 26</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 14</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>اسم</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 54</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 14</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>405, 38</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 14</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>معرف تسجيل دخول المستخدم:</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>405, 74</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 14</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>كلمة السر:</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 11</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 14</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>حدد الشروط التي سيتم تشغيل هذا الحدث.</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 11</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 14</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>تحديد الاجراءات التي تحدث عندما يتم تشغيل هذا الحدث.</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 38</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 14</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>(المجال \ اسم المستخدم)</value>
+  </data>
+  <data name="ListViewActions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 30</value>
+  </data>
+  <data name="ListViewActions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>558, 309</value>
+  </data>
+  <data name="ListViewTriggers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 30</value>
+  </data>
+  <data name="ListViewTriggers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>558, 309</value>
+  </data>
+  <data name="NameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 23</value>
   </data>
   <data name="OKButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>424, 444</value>
@@ -334,24 +288,70 @@
   <data name="OKButton.Text" xml:space="preserve">
     <value>موافق</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 14</value>
+  <data name="PasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 71</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>595, 476</value>
+  <data name="TabControlTasks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 13</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 8.25pt</value>
+  <data name="TabControlTasks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>572, 424</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+  <data name="TabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="TabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 397</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>انشاء مهمة</value>
+  <data name="TabPage1.Text" xml:space="preserve">
+    <value>عام</value>
+  </data>
+  <data name="TabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="TabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 397</value>
+  </data>
+  <data name="TabPage2.Text" xml:space="preserve">
+    <value>المحفزات</value>
+  </data>
+  <data name="TabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="TabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 397</value>
+  </data>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>الاعمال</value>
+  </data>
+  <data name="TriggerDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 365</value>
+  </data>
+  <data name="TriggerDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
+  </data>
+  <data name="TriggerDeleteButton.Text" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="TriggerEditButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 365</value>
+  </data>
+  <data name="TriggerEditButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
+  </data>
+  <data name="TriggerEditButton.Text" xml:space="preserve">
+    <value>تحرير...</value>
+  </data>
+  <data name="TriggerNewButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 365</value>
+  </data>
+  <data name="TriggerNewButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
+  </data>
+  <data name="TriggerNewButton.Text" xml:space="preserve">
+    <value>جديد...</value>
+  </data>
+  <data name="UserIDTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 34</value>
   </data>
 </root>

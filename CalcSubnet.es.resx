@@ -117,21 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Calcular subred.</value>
+  </data>
   <data name="bCalculate.Text" xml:space="preserve">
     <value>Calcular</value>
   </data>
   <data name="bOK.Text" xml:space="preserve">
     <value>Ok</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lHeader.Text" xml:space="preserve">
+    <value>Esta función se utiliza para ayudar a encontrará la "dirección de difusión" a utilizar, basado en la dirección IP y subred.!</value>
+  </data>
   <data name="lIP.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 13</value>
   </data>
   <data name="lIP.Text" xml:space="preserve">
     <value>Dirección IP</value>
-  </data>
-  <data name="lSubnet.Text" xml:space="preserve">
-    <value>Subred</value>
   </data>
   <data name="lRecommended.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 13</value>
@@ -139,10 +142,7 @@
   <data name="lRecommended.Text" xml:space="preserve">
     <value>Dirección de difusión se recomienda:</value>
   </data>
-  <data name="lHeader.Text" xml:space="preserve">
-    <value>Esta función se utiliza para ayudar a encontrará la "dirección de difusión" a utilizar, basado en la dirección IP y subred.!</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Calcular subred.</value>
+  <data name="lSubnet.Text" xml:space="preserve">
+    <value>Subred</value>
   </data>
 </root>

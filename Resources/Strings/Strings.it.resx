@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AbortFailed" xml:space="preserve">
+    <value>Annullo {0} Errori: {1}</value>
+  </data>
+  <data name="Aborting" xml:space="preserve">
+    <value>Annullamento...</value>
+  </data>
+  <data name="AbortingShutdown" xml:space="preserve">
+    <value>Comando di annullamento spegnimento {0}</value>
+  </data>
+  <data name="AbortShutdown" xml:space="preserve">
+    <value>Annullamento spegnimento in esecuzione</value>
+  </data>
+  <data name="AbortSuccess" xml:space="preserve">
+    <value>Annullamento {0} avvenuto con successo</value>
+  </data>
+  <data name="ackMinimized" xml:space="preserve">
+    <value>WakeOnLAN sta ancora funzionando sulla barra del system task</value>
+  </data>
+  <data name="actions_email" xml:space="preserve">
+    <value>Invia email</value>
+  </data>
+  <data name="actions_hibernate" xml:space="preserve">
+    <value>Iberna il computer</value>
+  </data>
+  <data name="actions_hibernateAll" xml:space="preserve">
+    <value>Iberna tutti i computer</value>
+  </data>
+  <data name="actions_popup" xml:space="preserve">
+    <value>Mostra un messaggio</value>
+  </data>
+  <data name="actions_shutdown" xml:space="preserve">
+    <value>Spegni il computer</value>
+  </data>
+  <data name="actions_shutdownAll" xml:space="preserve">
+    <value>Spegni tutti i computer</value>
+  </data>
+  <data name="actions_shutdownGroup" xml:space="preserve">
+    <value>Spegni il gruppo</value>
+  </data>
+  <data name="actions_sleep" xml:space="preserve">
+    <value>Iberna il computer</value>
+  </data>
+  <data name="actions_sleepAll" xml:space="preserve">
+    <value>Iberna tutti i computer</value>
+  </data>
+  <data name="actions_start" xml:space="preserve">
+    <value>Avvia il computer</value>
+  </data>
+  <data name="actions_startAll" xml:space="preserve">
+    <value>Avvia tutti i computer</value>
+  </data>
+  <data name="actions_startGroup" xml:space="preserve">
+    <value>Avvia il gruppo </value>
+  </data>
+  <data name="AllMachines" xml:space="preserve">
+    <value>Tutte le macchine</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Sei sicuro?</value>
+  </data>
+  <data name="BeginShutdown" xml:space="preserve">
+    <value>Inizia lo spegnimento</value>
+  </data>
+  <data name="ChangesLost" xml:space="preserve">
+    <value>Le tue modifiche andranno perse.</value>
+  </data>
+  <data name="ChangesNotSaved" xml:space="preserve">
+    <value>Le modifiche non sono state salvate</value>
+  </data>
+  <data name="DefaultEmergency" xml:space="preserve">
+    <value>Spegnimento di emergenza!</value>
+  </data>
+  <data name="DefaultMessage" xml:space="preserve">
+    <value>Il sistema si sta spegnendo!</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eliminare {0} elementi?</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Fatto</value>
+  </data>
+  <data name="EmergencyShutdown" xml:space="preserve">
+    <value>Spegnimento di emergenza iniziato!</value>
+  </data>
+  <data name="errGreaterThan1" xml:space="preserve">
+    <value>Deve essere maggiore di 1.</value>
+  </data>
+  <data name="ErrorMsg" xml:space="preserve">
+    <value>Errore: {0}</value>
+  </data>
+  <data name="errUserID" xml:space="preserve">
+    <value>Devi impostare un UserID e una passoword corretta per schedulare il processo</value>
+  </data>
+  <data name="errWeeks" xml:space="preserve">
+    <value>Deve essere maggiore di 1 e  minore di 52.</value>
+  </data>
+  <data name="ExportedTo" xml:space="preserve">
+    <value>Impostazioni saranno esportate in [{0}]</value>
+  </data>
+  <data name="HostNotResponding" xml:space="preserve">
+    <value>Host {0} non risponde</value>
+  </data>
+  <data name="ImmediateReboot" xml:space="preserve">
+    <value>Questo riavvierà immediatamente questa macchina. Sei sicuro?</value>
+  </data>
+  <data name="ImmediateShutdown" xml:space="preserve">
+    <value>Questo spegnerà immediatamente questa macchina. Sei sicuro?</value>
+  </data>
+  <data name="ImportedFrom" xml:space="preserve">
+    <value>Impostazioni saranno importate da [{0}]</value>
+  </data>
+  <data name="interfaceInfo" xml:space="preserve">
+    <value>Informazioni interfaccia IPv4 di {0}.{1}</value>
+  </data>
+  <data name="isNew" xml:space="preserve">
+    <value>Nuovo</value>
+  </data>
+  <data name="lit_DeleteRecords" xml:space="preserve">
+    <value>Cancellati {0} elementi</value>
+  </data>
+  <data name="lit_Disabled" xml:space="preserve">
+    <value>Disabilitato</value>
+  </data>
+  <data name="lit_Enabled" xml:space="preserve">
+    <value>Abilitato</value>
+  </data>
+  <data name="lit_Error" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="lit_false" xml:space="preserve">
+    <value>Falso</value>
+  </data>
+  <data name="lit_Invalid" xml:space="preserve">
+    <value>Linea di comando invalida</value>
+  </data>
+  <data name="lit_multipleTriggers" xml:space="preserve">
+    <value>Triggers multipli definiti</value>
+  </data>
+  <data name="lit_Never" xml:space="preserve">
+    <value>Mai</value>
+  </data>
+  <data name="lit_None" xml:space="preserve">
+    <value>Nessuno</value>
+  </data>
+  <data name="lit_noRights" xml:space="preserve">
+    <value>{0} sembra non avere i diritti di accesso al  database di schedulazione di WOL. Fornisco i diritti?</value>
+  </data>
+  <data name="lit_notFound" xml:space="preserve">
+    <value>Macchina non trovata</value>
+  </data>
+  <data name="lit_Queued" xml:space="preserve">
+    <value>Accodato</value>
+  </data>
+  <data name="lit_Ready" xml:space="preserve">
+    <value>Pronto</value>
+  </data>
+  <data name="lit_RemoveIP" xml:space="preserve">
+    <value>Rimuovi l'indirizzo IP da {0} indirizzi</value>
+  </data>
+  <data name="lit_Running" xml:space="preserve">
+    <value>In esecuzione</value>
+  </data>
+  <data name="lit_true" xml:space="preserve">
+    <value>Vero</value>
+  </data>
+  <data name="lit_Unknown" xml:space="preserve">
+    <value>Sconosciuto</value>
+  </data>
+  <data name="OffLine" xml:space="preserve">
+    <value>L'Host è Fuori Linea</value>
+  </data>
+  <data name="OnLine" xml:space="preserve">
+    <value>L'Host è In Linea</value>
+  </data>
+  <data name="Opt_BroadcastAddress" xml:space="preserve">
+    <value>Indirizzo di Broadcast</value>
+  </data>
+  <data name="Opt_BroadcastDesc" xml:space="preserve">
+    <value>Inserisci l'indirizzo IP di Broadcast per i pacchetti di broadcast di WOL</value>
+  </data>
+  <data name="Pausing" xml:space="preserve">
+    <value>In Pausa...</value>
+  </data>
+  <data name="Polling" xml:space="preserve">
+    <value>Interrogo {0}</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Proprietà - {0}</value>
+  </data>
+  <data name="ResponseTime" xml:space="preserve">
+    <value>{1}ms di tempo di risposta su {0}</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Selezionare un file di impostazioni di WakeOnLine da importare</value>
+  </data>
+  <data name="SendShutdown" xml:space="preserve">
+    <value>Invia comando di spegnimento a {0}</value>
+  </data>
+  <data name="SentTo" xml:space="preserve">
+    <value>Invia pacchetti di accensione da {0} a {1}...</value>
+  </data>
+  <data name="ShutdownFailed" xml:space="preserve">
+    <value>Spegnimento fallito per {0} {1}</value>
+  </data>
+  <data name="ShutDownSeconds" xml:space="preserve">
+    <value>Spegniemento in {0} secondi...</value>
+  </data>
+  <data name="ShutdownSuccessful" xml:space="preserve">
+    <value>Spegnimento di {0} riuscito</value>
+  </data>
+  <data name="ShuttingDown" xml:space="preserve">
+    <value>Spegnimento...</value>
+  </data>
+  <data name="Skipping" xml:space="preserve">
+    <value>Scarto...</value>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>Successo </value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Wake on LAN</value>
+  </data>
+  <data name="triggerDaily" xml:space="preserve">
+    <value>Giornaliero</value>
+  </data>
+  <data name="triggerMonthly" xml:space="preserve">
+    <value>Mensile</value>
+  </data>
+  <data name="triggerOneTime" xml:space="preserve">
+    <value>Una volta</value>
+  </data>
+  <data name="triggerWeekly" xml:space="preserve">
+    <value>Settimanale</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versione  {0}.{1:00}.{2}</value>
+  </data>
+  <data name="WhereSave" xml:space="preserve">
+    <value>Dove vuoi salvare le impostazioni?</value>
+  </data>
+</root>

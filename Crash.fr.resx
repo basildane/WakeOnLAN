@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Annuler</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Message d'erreur</value>
+  </data>
   <data name="lTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>305, 20</value>
   </data>
   <data name="lTitle.Text" xml:space="preserve">
     <value>Une erreur inattendue s'est produite.</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Message d'erreur</value>
   </data>
 </root>

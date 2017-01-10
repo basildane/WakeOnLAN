@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,301 +59,301 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<data name="AbortFailed" xml:space="preserve">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AbortFailed" xml:space="preserve">
     <value>{0}:n peruuttamisessa tapahtui virhe: {1}</value>
     <comment>Abort {machine} Error: {error message}</comment>
   </data>
-	<data name="Aborting" xml:space="preserve">
+  <data name="Aborting" xml:space="preserve">
     <value>Peruutetaan...</value>
     <comment>Aborting...</comment>
   </data>
-	<data name="AbortingShutdown" xml:space="preserve">
+  <data name="AbortingShutdown" xml:space="preserve">
     <value>Peruuta käynnissä oleva sammutus</value>
     <comment>Aborting shutdown command on {0}</comment>
   </data>
-	<data name="AbortShutdown" xml:space="preserve">
+  <data name="AbortShutdown" xml:space="preserve">
     <value>Peruuttaminen käynnissä...</value>
     <comment>Abort Shutdown in progress...</comment>
   </data>
-	<data name="AbortSuccess" xml:space="preserve">
+  <data name="AbortSuccess" xml:space="preserve">
     <value>{0}:n peruuttaminen onnistui</value>
     <comment>Abort {machine} successful</comment>
   </data>
-	<data name="actions_email" xml:space="preserve">
+  <data name="actions_email" xml:space="preserve">
     <value>Lähetä sähköposti</value>
   </data>
-	<data name="actions_popup" xml:space="preserve">
+  <data name="actions_popup" xml:space="preserve">
     <value>Lähetä ponnahdusviesti</value>
   </data>
-	<data name="actions_shutdown" xml:space="preserve">
+  <data name="actions_shutdown" xml:space="preserve">
     <value>Sammuta tietokone</value>
   </data>
-	<data name="actions_shutdownAll" xml:space="preserve">
+  <data name="actions_shutdownAll" xml:space="preserve">
     <value>Sammuta kaikki tietokoneet</value>
   </data>
-	<data name="actions_start" xml:space="preserve">
+  <data name="actions_start" xml:space="preserve">
     <value>Käynnistä tietokone</value>
   </data>
-	<data name="actions_startAll" xml:space="preserve">
+  <data name="actions_startAll" xml:space="preserve">
     <value>Käynnistä kaikki tietokoneet</value>
   </data>
-	<data name="AllMachines" xml:space="preserve">
+  <data name="AllMachines" xml:space="preserve">
     <value>Kaikki tietokoneet</value>
     <comment>All machines</comment>
   </data>
-	<data name="AreYouSure" xml:space="preserve">
+  <data name="AreYouSure" xml:space="preserve">
     <value>Oletko varma?</value>
     <comment>Are you sure?</comment>
   </data>
-	<data name="BeginShutdown" xml:space="preserve">
+  <data name="BeginShutdown" xml:space="preserve">
     <value>Aloita sammutus</value>
     <comment>Begin shutdown...</comment>
   </data>
-	<data name="ChangesLost" xml:space="preserve">
+  <data name="ChangesLost" xml:space="preserve">
     <value>Tehdyt muutokset katoavat.</value>
     <comment>Your changes will be lost.</comment>
   </data>
-	<data name="ChangesNotSaved" xml:space="preserve">
+  <data name="ChangesNotSaved" xml:space="preserve">
     <value>Tehtyjä muutoksia ei ole tallennettu</value>
     <comment>Changes have not been saved</comment>
   </data>
-	<data name="DefaultEmergency" xml:space="preserve">
+  <data name="DefaultEmergency" xml:space="preserve">
     <value>Hätäsammutus!</value>
     <comment>Emergency shutdown!</comment>
   </data>
-	<data name="DefaultMessage" xml:space="preserve">
+  <data name="DefaultMessage" xml:space="preserve">
     <value>Järjestelmää sammutetaan!</value>
     <comment>System is shutting down!</comment>
   </data>
-	<data name="Delete" xml:space="preserve">
+  <data name="Delete" xml:space="preserve">
     <value>Poista {0} tietuetta</value>
     <comment>Delete {0} records?</comment>
   </data>
-	<data name="Done" xml:space="preserve">
+  <data name="Done" xml:space="preserve">
     <value>Tehty</value>
     <comment>Done</comment>
   </data>
-	<data name="EmergencyShutdown" xml:space="preserve">
+  <data name="EmergencyShutdown" xml:space="preserve">
     <value>Hätäsammutus aloitettu</value>
     <comment>Emergency shutdown started</comment>
   </data>
-	<data name="ErrorMsg" xml:space="preserve">
+  <data name="ErrorMsg" xml:space="preserve">
     <value>Virhe: {0}</value>
     <comment>Error: {0}</comment>
   </data>
-	<data name="ExportedTo" xml:space="preserve">
+  <data name="ExportedTo" xml:space="preserve">
     <value>Asetukset viety [{0}]</value>
     <comment>Settings were exported to {0}</comment>
   </data>
-	<data name="HostNotResponding" xml:space="preserve">
+  <data name="HostNotResponding" xml:space="preserve">
     <value>Isäntä {0} ei vastaa</value>
     <comment>Host not responding</comment>
   </data>
-	<data name="ImmediateReboot" xml:space="preserve">
+  <data name="ImmediateReboot" xml:space="preserve">
     <value>Tämä uudelleenkäynnistää VÄLITTÖMÄSTI TÄMÄN  koneen. Oletko varma?</value>
     <comment>This will IMMEDIATELY reboot THIS machine.  Are you sure?</comment>
   </data>
-	<data name="ImmediateShutdown" xml:space="preserve">
+  <data name="ImmediateShutdown" xml:space="preserve">
     <value>Tämä sammuttaa VÄLITTÖMÄSTI TÄMÄN koneen. Oletko varma?</value>
     <comment>This will IMMEDIATELY shutdown THIS machine.  Are you sure?</comment>
   </data>
-	<data name="ImportedFrom" xml:space="preserve">
+  <data name="ImportedFrom" xml:space="preserve">
     <value>Asetukset on tuotu {0}:sta</value>
     <comment>Settings were imported from {0}</comment>
   </data>
-	<data name="isNew" xml:space="preserve">
+  <data name="isNew" xml:space="preserve">
     <value>Uusi</value>
     <comment>New</comment>
   </data>
-	<data name="lit_at" xml:space="preserve">
+  <data name="lit_at" xml:space="preserve">
     <value>At {0} on {1}</value>
   </data>
-	<data name="lit_atDays" xml:space="preserve">
+  <data name="lit_atDays" xml:space="preserve">
     <value>At {0} every {1} day(s)</value>
   </data>
-	<data name="lit_atWeeks" xml:space="preserve">
+  <data name="lit_atWeeks" xml:space="preserve">
     <value>At {0} every {1} every {2} weeks, starting {3}</value>
   </data>
-	<data name="lit_Disabled" xml:space="preserve">
+  <data name="lit_Disabled" xml:space="preserve">
     <value>Estetty</value>
   </data>
-	<data name="lit_Enabled" xml:space="preserve">
+  <data name="lit_Enabled" xml:space="preserve">
     <value>Sallittu</value>
   </data>
-	<data name="lit_Error" xml:space="preserve">
+  <data name="lit_Error" xml:space="preserve">
     <value>Virhe</value>
   </data>
-	<data name="lit_false" xml:space="preserve">
+  <data name="lit_false" xml:space="preserve">
     <value>Väärä</value>
   </data>
-	<data name="lit_Invalid" xml:space="preserve">
+  <data name="lit_Invalid" xml:space="preserve">
     <value>Virheellinen komentokehoite</value>
   </data>
-	<data name="lit_multipleTriggers" xml:space="preserve">
+  <data name="lit_multipleTriggers" xml:space="preserve">
     <value>Useita laukaisimia määritelty</value>
   </data>
-	<data name="lit_Never" xml:space="preserve">
+  <data name="lit_Never" xml:space="preserve">
     <value>Ei koskaan</value>
   </data>
-	<data name="lit_None" xml:space="preserve">
+  <data name="lit_None" xml:space="preserve">
     <value>Ei mitään</value>
   </data>
-	<data name="lit_noRights" xml:space="preserve">
+  <data name="lit_noRights" xml:space="preserve">
     <value>{0} does not appear to have read access rights to the WOL Scheduler database. Grant access?</value>
   </data>
-	<data name="lit_notFound" xml:space="preserve">
+  <data name="lit_notFound" xml:space="preserve">
     <value>Tietokonetta ei löydy</value>
   </data>
-	<data name="lit_Queued" xml:space="preserve">
+  <data name="lit_Queued" xml:space="preserve">
     <value>Asetettu jonoon</value>
   </data>
-	<data name="lit_Ready" xml:space="preserve">
+  <data name="lit_Ready" xml:space="preserve">
     <value>Valmis</value>
   </data>
-	<data name="lit_Running" xml:space="preserve">
+  <data name="lit_Running" xml:space="preserve">
     <value>Suoritetaan</value>
   </data>
-	<data name="lit_true" xml:space="preserve">
+  <data name="lit_true" xml:space="preserve">
     <value>True</value>
   </data>
-	<data name="lit_Unknown" xml:space="preserve">
+  <data name="lit_Unknown" xml:space="preserve">
     <value>Tuntematon</value>
   </data>
-	<data name="OffLine" xml:space="preserve">
+  <data name="OffLine" xml:space="preserve">
     <value>Isäntä ei ole verkossa</value>
     <comment>Host is OFFLINE</comment>
   </data>
-	<data name="OnLine" xml:space="preserve">
+  <data name="OnLine" xml:space="preserve">
     <value>Isäntä on verkossa</value>
     <comment>Host is ONLINE</comment>
   </data>
-	<data name="Opt_BroadcastAddress" xml:space="preserve">
+  <data name="Opt_BroadcastAddress" xml:space="preserve">
     <value>Broadcast-osoite</value>
     <comment>Broadcast Address</comment>
   </data>
-	<data name="Opt_BroadcastDesc" xml:space="preserve">
+  <data name="Opt_BroadcastDesc" xml:space="preserve">
     <value>Anna Broadcast IP-osoite WOL-broadcast paketeille.</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
-	<data name="Pausing" xml:space="preserve">
+  <data name="Pausing" xml:space="preserve">
     <value>Keskeytetään...</value>
     <comment>Pausing...</comment>
   </data>
-	<data name="Polling" xml:space="preserve">
+  <data name="Polling" xml:space="preserve">
     <value>Kysellään {0}</value>
     <comment>Polling {0}</comment>
   </data>
-	<data name="Properties" xml:space="preserve">
+  <data name="Properties" xml:space="preserve">
     <value>Ominaisuudet – {0}</value>
     <comment>Properties - {0}</comment>
   </data>
-	<data name="ResponseTime" xml:space="preserve">
+  <data name="ResponseTime" xml:space="preserve">
     <value>{0} Vastausaika {1} ms</value>
     <comment>{host} Response Time {count} ms</comment>
   </data>
-	<data name="SelectFile" xml:space="preserve">
+  <data name="SelectFile" xml:space="preserve">
     <value>Valitse tiedosto WakeOnLan asetusten tuomiseksi</value>
     <comment>Select a WakeOnLan settings file to import</comment>
   </data>
-	<data name="SendShutdown" xml:space="preserve">
+  <data name="SendShutdown" xml:space="preserve">
     <value>Lähetetään sammutuskomento isännälle {0}</value>
     <comment>Sending shutdown command to {host}</comment>
   </data>
-	<data name="SentTo" xml:space="preserve">
+  <data name="SentTo" xml:space="preserve">
     <value>Lähetä herätyskomento isännälle (IP: {0} / MAC: {1})</value>
     <comment>Sent Wake Up packet to {host} at {mac}...</comment>
   </data>
-	<data name="ShutdownFailed" xml:space="preserve">
+  <data name="ShutdownFailed" xml:space="preserve">
     <value>Isännän (IP: {0} / MAC: {1}) sammutus epäonnistui</value>
     <comment>Shutdown failed for {host} {error}</comment>
   </data>
-	<data name="ShutDownSeconds" xml:space="preserve">
+  <data name="ShutDownSeconds" xml:space="preserve">
     <value>Sammutetaan {0} sekunnin kuluttua...</value>
     <comment>Shutting down in {0} seconds...</comment>
   </data>
-	<data name="ShutdownSuccessful" xml:space="preserve">
+  <data name="ShutdownSuccessful" xml:space="preserve">
     <value>Isännän {0} sammutus onnistui</value>
     <comment>Shutdown {host} successful</comment>
   </data>
-	<data name="ShuttingDown" xml:space="preserve">
+  <data name="ShuttingDown" xml:space="preserve">
     <value>Sammutetaan...</value>
     <comment>Shutting down...</comment>
   </data>
-	<data name="Skipping" xml:space="preserve">
+  <data name="Skipping" xml:space="preserve">
     <value>Ohitetaan...</value>
     <comment>Skipping...</comment>
   </data>
-	<data name="Successful" xml:space="preserve">
+  <data name="Successful" xml:space="preserve">
     <value>Onnistui</value>
     <comment>Successful</comment>
   </data>
-	<data name="Title" xml:space="preserve">
+  <data name="Title" xml:space="preserve">
     <value>Wake on LAN</value>
     <comment>Wake on LAN</comment>
   </data>
-	<data name="Version" xml:space="preserve">
+  <data name="Version" xml:space="preserve">
     <value>Versio {0}.{1:00}.{2}</value>
     <comment>Version {0}.{1:00}.{2}.{3}</comment>
   </data>
-	<data name="WhereSave" xml:space="preserve">
+  <data name="WhereSave" xml:space="preserve">
     <value>Mihin haluat tallentaa nämä asetukset?</value>
     <comment>Where do you want to save the settings?</comment>
   </data>

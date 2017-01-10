@@ -117,11 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnErrors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 20</value>
+  </data>
   <data name="btnErrors.Text" xml:space="preserve">
     <value>0 Feher</value>
   </data>
   <data name="btnErrors.ToolTipText" xml:space="preserve">
     <value>0 Feher</value>
+  </data>
+  <data name="btnMessages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
   </data>
   <data name="btnMessages.Text" xml:space="preserve">
     <value>0 Meldungen</value>
@@ -129,20 +136,35 @@
   <data name="btnMessages.ToolTipText" xml:space="preserve">
     <value>0 Meldungen</value>
   </data>
+  <data name="btnWarnings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
+  </data>
   <data name="btnWarnings.Text" xml:space="preserve">
     <value>0 Warnungen</value>
   </data>
   <data name="btnWarnings.ToolTipText" xml:space="preserve">
     <value>0 Warnungen</value>
   </data>
+  <data name="FindLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 20</value>
+  </data>
   <data name="FindLabel.Text" xml:space="preserve">
     <value>Suche:</value>
+  </data>
+  <data name="FindText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 23</value>
+  </data>
+  <data name="NotFoundLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 20</value>
   </data>
   <data name="NotFoundLabel.Text" xml:space="preserve">
     <value>Keine Ereignisse gefunden</value>
   </data>
   <data name="NotFoundLabel.ToolTipText" xml:space="preserve">
     <value>Es gibt keine Ereignisse, die zu diesem Filter passen.</value>
+  </data>
+  <data name="SourceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
   </data>
   <data name="SourceLabel.Text" xml:space="preserve">
     <value>Quelle:</value>

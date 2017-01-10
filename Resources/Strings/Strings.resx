@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -137,6 +137,10 @@
     <value>Abort {0} successful</value>
     <comment>Abort {machine} successful</comment>
   </data>
+  <data name="ackMinimized" xml:space="preserve">
+    <value>WakeOnLAN is still running in the task tray.</value>
+    <comment>WakeOnLAN is still running in the task tray.</comment>
+  </data>
   <data name="actions_email" xml:space="preserve">
     <value>Send an email</value>
   </data>
@@ -193,6 +197,9 @@
     <value>Changes have not been saved</value>
     <comment>Changes have not been saved</comment>
   </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Copyright (c) 2004 - 2017, Aquila Technology</value>
+  </data>
   <data name="DefaultEmergency" xml:space="preserve">
     <value>Emergency shutdown!</value>
     <comment>Emergency shutdown!</comment>
@@ -219,6 +226,12 @@
   <data name="ErrorMsg" xml:space="preserve">
     <value>Error: {0}</value>
     <comment>Error: {0}</comment>
+  </data>
+  <data name="errUserConfigCorrupt" xml:space="preserve">
+    <value>Wake on LAN has detected that your user settings file has become corrupted. This may be due to a crash or improper exiting of the program. Wake on LAN must reset your user settings in order to continue.\n\nClick Yes to reset your user settings and continue.\n\nClick No if you wish to attempt manual repair or to rescue information before proceeding.</value>
+  </data>
+  <data name="errUserConfigTitle" xml:space="preserve">
+    <value>Corrupt user settings</value>
   </data>
   <data name="errUserID" xml:space="preserve">
     <value>You must set a proper UserID and Password for a scheduled task.</value>
@@ -300,7 +313,7 @@
   </data>
   <data name="lit_Ready" xml:space="preserve">
     <value>Ready</value>
-  </data>
+  <comment>Ready</comment></data>
   <data name="lit_RemoveIP" xml:space="preserve">
     <value>Remove IP Address from {0} record(s)</value>
   </data>
@@ -340,6 +353,12 @@
   <data name="Properties" xml:space="preserve">
     <value>Properties - {0}</value>
     <comment>Properties - {0}</comment>
+  </data>
+  <data name="rdp_filter" xml:space="preserve">
+    <value>RDP files (*.rdp)|*.rdp|All files (*.*)|*.*</value>
+  </data>
+  <data name="rdp_title" xml:space="preserve">
+    <value>Browse RDP Files</value>
   </data>
   <data name="ResponseTime" xml:space="preserve">
     <value>{0} Response Time {1} ms</value>
@@ -407,24 +426,5 @@
   <data name="WhereSave" xml:space="preserve">
     <value>Where do you want to save the settings?</value>
     <comment>Where do you want to save the settings?</comment>
-  </data>
-  <data name="Copyright" xml:space="preserve">
-    <value>Copyright (c) 2004 - 2016, Aquila Technology</value>
-  </data>
-  <data name="ackMinimized" xml:space="preserve">
-    <value>WakeOnLAN is still running in the task tray.</value>
-    <comment>WakeOnLAN is still running in the task tray.</comment>
-  </data>
-  <data name="rdp_filter" xml:space="preserve">
-    <value>RDP files (*.rdp)|*.rdp|All files (*.*)|*.*</value>
-  </data>
-  <data name="rdp_title" xml:space="preserve">
-    <value>Browse RDP Files</value>
-  </data>
-  <data name="errUserConfigCorrupt" xml:space="preserve">
-    <value>Wake on LAN has detected that your user settings file has become corrupted. This may be due to a crash or improper exiting of the program. Wake on LAN must reset your user settings in order to continue.\n\nClick Yes to reset your user settings and continue.\n\nClick No if you wish to attempt manual repair or to rescue information before proceeding.</value>
-  </data>
-  <data name="errUserConfigTitle" xml:space="preserve">
-    <value>Corrupt user settings</value>
   </data>
 </root>

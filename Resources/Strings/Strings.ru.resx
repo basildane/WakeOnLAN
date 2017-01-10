@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,325 +59,325 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="metadata">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" />
-							</xsd:sequence>
-							<xsd:attribute name="name" use="required" type="xsd:string" />
-							<xsd:attribute name="type" type="xsd:string" />
-							<xsd:attribute name="mimetype" type="xsd:string" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="assembly">
-						<xsd:complexType>
-							<xsd:attribute name="alias" type="xsd:string" />
-							<xsd:attribute name="name" type="xsd:string" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-							<xsd:attribute ref="xml:space" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<data name="AbortFailed" xml:space="preserve">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AbortFailed" xml:space="preserve">
     <value>Отменено: {0} Ошибка: {1}</value>
     <comment>Abort {machine} Error: {error message}</comment>
   </data>
-	<data name="Aborting" xml:space="preserve">
+  <data name="Aborting" xml:space="preserve">
     <value>Отмена...</value>
     <comment>Aborting...</comment>
   </data>
-	<data name="AbortingShutdown" xml:space="preserve">
+  <data name="AbortingShutdown" xml:space="preserve">
     <value>Прерывание команды по {0}</value>
     <comment>Aborting shutdown command on {0}</comment>
   </data>
-	<data name="AbortShutdown" xml:space="preserve">
+  <data name="AbortShutdown" xml:space="preserve">
     <value>Отмена выключения ...</value>
     <comment>Abort Shutdown in progress...</comment>
   </data>
-	<data name="AbortSuccess" xml:space="preserve">
+  <data name="AbortSuccess" xml:space="preserve">
     <value>Успешно отменено {0}</value>
     <comment>Abort {machine} successful</comment>
   </data>
-	<data name="actions_email" xml:space="preserve">
+  <data name="actions_email" xml:space="preserve">
     <value>Отправить на почту</value>
   </data>
-	<data name="actions_popup" xml:space="preserve">
+  <data name="actions_popup" xml:space="preserve">
     <value>Получение сообщения</value>
   </data>
-	<data name="actions_shutdown" xml:space="preserve">
+  <data name="actions_shutdown" xml:space="preserve">
     <value>Выключить компьютер</value>
   </data>
-	<data name="actions_shutdownAll" xml:space="preserve">
+  <data name="actions_shutdownAll" xml:space="preserve">
     <value>Выключить все компьютеры</value>
   </data>
-	<data name="actions_start" xml:space="preserve">
+  <data name="actions_start" xml:space="preserve">
     <value>Запустить компьютер</value>
   </data>
-	<data name="actions_startAll" xml:space="preserve">
+  <data name="actions_startAll" xml:space="preserve">
     <value>Запустить все компьютеры</value>
   </data>
-	<data name="AllMachines" xml:space="preserve">
+  <data name="AllMachines" xml:space="preserve">
     <value>Все компьютеры</value>
     <comment>All machines</comment>
   </data>
-	<data name="AreYouSure" xml:space="preserve">
+  <data name="AreYouSure" xml:space="preserve">
     <value>Вы уверены?</value>
     <comment>Are you sure?</comment>
   </data>
-	<data name="BeginShutdown" xml:space="preserve">
+  <data name="BeginShutdown" xml:space="preserve">
     <value>Начало остановки ...</value>
     <comment>Begin shutdown...</comment>
   </data>
-	<data name="ChangesLost" xml:space="preserve">
+  <data name="ChangesLost" xml:space="preserve">
     <value>Ваши изменения будут утрачены.</value>
     <comment>Your changes will be lost.</comment>
   </data>
-	<data name="ChangesNotSaved" xml:space="preserve">
+  <data name="ChangesNotSaved" xml:space="preserve">
     <value>Изменения не были сохранены</value>
     <comment>Changes have not been saved</comment>
   </data>
-	<data name="DefaultEmergency" xml:space="preserve">
+  <data name="DefaultEmergency" xml:space="preserve">
     <value>Аварийное завершение!</value>
     <comment>Emergency shutdown!</comment>
   </data>
-	<data name="DefaultMessage" xml:space="preserve">
+  <data name="DefaultMessage" xml:space="preserve">
     <value>Система завершает работу!</value>
     <comment>System is shutting down!</comment>
   </data>
-	<data name="Delete" xml:space="preserve">
+  <data name="Delete" xml:space="preserve">
     <value>Удалить {0} записей?</value>
     <comment>Delete {0} records?</comment>
   </data>
-	<data name="Done" xml:space="preserve">
+  <data name="Done" xml:space="preserve">
     <value>Сделано</value>
     <comment>Done</comment>
   </data>
-	<data name="EmergencyShutdown" xml:space="preserve">
+  <data name="EmergencyShutdown" xml:space="preserve">
     <value>Аварийная остановка начата</value>
     <comment>Emergency shutdown started</comment>
   </data>
-	<data name="ErrorMsg" xml:space="preserve">
+  <data name="ErrorMsg" xml:space="preserve">
     <value>Ошибка: {0}</value>
     <comment>Error: {0}</comment>
   </data>
-	<data name="errUserID" xml:space="preserve">
+  <data name="errUserID" xml:space="preserve">
     <value>Вы должны установить надлежащий идентификатор пользователя и пароль для запланированной задачи.</value>
   </data>
-	<data name="errWeeks" xml:space="preserve">
+  <data name="errWeeks" xml:space="preserve">
     <value>Должно быть больше, чем 1 и менее, чем 52.</value>
   </data>
-	<data name="ExportedTo" xml:space="preserve">
+  <data name="ExportedTo" xml:space="preserve">
     <value>Настройки были экспортированы в [{0}]</value>
     <comment>Settings were exported to [{0}]</comment>
   </data>
-	<data name="HostNotResponding" xml:space="preserve">
+  <data name="HostNotResponding" xml:space="preserve">
     <value>Принимающая {0} не реагирует</value>
     <comment>Host not responding</comment>
   </data>
-	<data name="ImmediateReboot" xml:space="preserve">
+  <data name="ImmediateReboot" xml:space="preserve">
     <value>Компьютер будет немедленно перезагружен. Вы уверены?</value>
     <comment>This will IMMEDIATELY reboot THIS machine.  Are you sure?</comment>
   </data>
-	<data name="ImmediateShutdown" xml:space="preserve">
+  <data name="ImmediateShutdown" xml:space="preserve">
     <value>Компьютер будет немедленно выключен. Вы уверены?</value>
     <comment>This will IMMEDIATELY shutdown THIS machine.  Are you sure?</comment>
   </data>
-	<data name="ImportedFrom" xml:space="preserve">
+  <data name="ImportedFrom" xml:space="preserve">
     <value>Настройки были импортированы из [{0}]</value>
     <comment>Settings were imported from {0}</comment>
   </data>
-	<data name="isNew" xml:space="preserve">
+  <data name="isNew" xml:space="preserve">
     <value>Новое</value>
     <comment>New</comment>
   </data>
-	<data name="lit_at" xml:space="preserve">
+  <data name="lit_at" xml:space="preserve">
     <value>At {0} on {1}</value>
   </data>
-	<data name="lit_atDays" xml:space="preserve">
+  <data name="lit_atDays" xml:space="preserve">
     <value>At {0} every {1} day(s)</value>
   </data>
-	<data name="lit_atWeeks" xml:space="preserve">
+  <data name="lit_atWeeks" xml:space="preserve">
     <value>At {0} every {1} every {2} weeks, starting {3}</value>
   </data>
-	<data name="lit_Disabled" xml:space="preserve">
+  <data name="lit_Disabled" xml:space="preserve">
     <value>Отлючен</value>
   </data>
-	<data name="lit_Enabled" xml:space="preserve">
+  <data name="lit_Enabled" xml:space="preserve">
     <value>Включено</value>
   </data>
-	<data name="lit_Error" xml:space="preserve">
+  <data name="lit_Error" xml:space="preserve">
     <value>Ошибка</value>
   </data>
-	<data name="lit_false" xml:space="preserve">
+  <data name="lit_false" xml:space="preserve">
     <value>Отключено</value>
   </data>
-	<data name="lit_Invalid" xml:space="preserve">
+  <data name="lit_Invalid" xml:space="preserve">
     <value>Неправильная командная строка</value>
   </data>
-	<data name="lit_multipleTriggers" xml:space="preserve">
+  <data name="lit_multipleTriggers" xml:space="preserve">
     <value>Несколько задач</value>
   </data>
-	<data name="lit_Never" xml:space="preserve">
+  <data name="lit_Never" xml:space="preserve">
     <value>Никогда</value>
   </data>
-	<data name="lit_None" xml:space="preserve">
+  <data name="lit_None" xml:space="preserve">
     <value>Пусто</value>
   </data>
-	<data name="lit_noRights" xml:space="preserve">
+  <data name="lit_noRights" xml:space="preserve">
     <value>{0}, нет прав для доступа к базе данных WOL Планировщик базы данных. Предоставить доступ?</value>
   </data>
-	<data name="lit_notFound" xml:space="preserve">
+  <data name="lit_notFound" xml:space="preserve">
     <value>Компьютер не существует</value>
   </data>
-	<data name="lit_Queued" xml:space="preserve">
+  <data name="lit_Queued" xml:space="preserve">
     <value>В очереди</value>
   </data>
-	<data name="lit_Ready" xml:space="preserve">
+  <data name="lit_Ready" xml:space="preserve">
     <value>Готов</value>
   </data>
-	<data name="lit_RemoveIP" xml:space="preserve">
+  <data name="lit_RemoveIP" xml:space="preserve">
     <value>Уделенный IP Address от {0} записей</value>
   </data>
-	<data name="lit_Running" xml:space="preserve">
+  <data name="lit_Running" xml:space="preserve">
     <value>Работает</value>
   </data>
-	<data name="lit_true" xml:space="preserve">
+  <data name="lit_true" xml:space="preserve">
     <value>Включено</value>
   </data>
-	<data name="lit_Unknown" xml:space="preserve">
+  <data name="lit_Unknown" xml:space="preserve">
     <value>Неизвестно</value>
   </data>
-	<data name="OffLine" xml:space="preserve">
+  <data name="OffLine" xml:space="preserve">
     <value>Компьютер не в сети</value>
     <comment>Host is OFFLINE</comment>
   </data>
-	<data name="OnLine" xml:space="preserve">
+  <data name="OnLine" xml:space="preserve">
     <value>Компьютер в сети</value>
     <comment>Host is ONLINE</comment>
   </data>
-	<data name="Opt_BroadcastAddress" xml:space="preserve">
+  <data name="Opt_BroadcastAddress" xml:space="preserve">
     <value>Передача адресов</value>
     <comment>Broadcast Address</comment>
   </data>
-	<data name="Opt_BroadcastDesc" xml:space="preserve">
+  <data name="Opt_BroadcastDesc" xml:space="preserve">
     <value>Введите IP-адреса для передачи пакетов.</value>
     <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
-	<data name="Pausing" xml:space="preserve">
+  <data name="Pausing" xml:space="preserve">
     <value>Приостановка ...</value>
     <comment>Pausing...</comment>
   </data>
-	<data name="Polling" xml:space="preserve">
+  <data name="Polling" xml:space="preserve">
     <value>Опрос {0}</value>
     <comment>Polling {0}</comment>
   </data>
-	<data name="Properties" xml:space="preserve">
+  <data name="Properties" xml:space="preserve">
     <value>Свойства - {0}</value>
     <comment>Properties - {0}</comment>
   </data>
-	<data name="ResponseTime" xml:space="preserve">
+  <data name="ResponseTime" xml:space="preserve">
     <value>{0} Время реакции {1} ms</value>
     <comment>{host} Response Time {count} ms</comment>
   </data>
-	<data name="SelectFile" xml:space="preserve">
+  <data name="SelectFile" xml:space="preserve">
     <value>Выбор параметров файла для импорта</value>
     <comment>Select a WakeOnLan settings file to import</comment>
   </data>
-	<data name="SendShutdown" xml:space="preserve">
+  <data name="SendShutdown" xml:space="preserve">
     <value>Передача команд на {0}</value>
     <comment>Sending shutdown command to {host}</comment>
   </data>
-	<data name="SentTo" xml:space="preserve">
+  <data name="SentTo" xml:space="preserve">
     <value>Отправлено пакетов {0} {1}...</value>
     <comment>Sent Wake Up packet to {host} {mac}...</comment>
   </data>
-	<data name="ShutdownFailed" xml:space="preserve">
+  <data name="ShutdownFailed" xml:space="preserve">
     <value>Завершение не удалось {0} {1}</value>
     <comment>Shutdown failed for {host} {error}</comment>
   </data>
-	<data name="ShutDownSeconds" xml:space="preserve">
+  <data name="ShutDownSeconds" xml:space="preserve">
     <value>Выключение через {0} секунд ...</value>
     <comment>Shutting down in {0} seconds...</comment>
   </data>
-	<data name="ShutdownSuccessful" xml:space="preserve">
+  <data name="ShutdownSuccessful" xml:space="preserve">
     <value>Успешное завершение работы {0}</value>
     <comment>Shutdown {host} successful</comment>
   </data>
-	<data name="ShuttingDown" xml:space="preserve">
+  <data name="ShuttingDown" xml:space="preserve">
     <value>Выключение ...</value>
     <comment>Shutting down...</comment>
   </data>
-	<data name="Skipping" xml:space="preserve">
+  <data name="Skipping" xml:space="preserve">
     <value>Пропуск...</value>
     <comment>Skipping...</comment>
   </data>
-	<data name="Successful" xml:space="preserve">
+  <data name="Successful" xml:space="preserve">
     <value>Успешно</value>
     <comment>Successful</comment>
   </data>
-	<data name="Title" xml:space="preserve">
+  <data name="Title" xml:space="preserve">
     <value>Разбудить компьютер</value>
     <comment>Wake on LAN</comment>
   </data>
-	<data name="triggerDaily" xml:space="preserve">
+  <data name="triggerDaily" xml:space="preserve">
     <value>Ежедневно</value>
   </data>
-	<data name="triggerMonthly" xml:space="preserve">
+  <data name="triggerMonthly" xml:space="preserve">
     <value>Ежемесячно</value>
   </data>
-	<data name="triggerOneTime" xml:space="preserve">
+  <data name="triggerOneTime" xml:space="preserve">
     <value>Один раз</value>
   </data>
-	<data name="triggerWeekly" xml:space="preserve">
+  <data name="triggerWeekly" xml:space="preserve">
     <value>Еженедельно</value>
   </data>
-	<data name="useDefault" xml:space="preserve">
+  <data name="useDefault" xml:space="preserve">
     <value>-- использовать по умолчанию --</value>
   </data>
-	<data name="Version" xml:space="preserve">
+  <data name="Version" xml:space="preserve">
     <value>Версии {0}.{1:00}.{2}</value>
     <comment>Version</comment>
   </data>
-	<data name="WhereSave" xml:space="preserve">
+  <data name="WhereSave" xml:space="preserve">
     <value>Вы хотите сохранить настройки?</value>
     <comment>Where do you want to save the settings?</comment>
   </data>

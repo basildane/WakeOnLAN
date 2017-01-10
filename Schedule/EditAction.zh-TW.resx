@@ -121,8 +121,17 @@
   <data name="AllLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
+  <data name="AllLabel.Text" xml:space="preserve">
+    <value>選項</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>取消</value>
+  </data>
   <data name="EmailLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
+  </data>
+  <data name="EmailLabel.Text" xml:space="preserve">
+    <value>信箱訊息</value>
   </data>
   <data name="EmailToTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>73, 52</value>
@@ -130,11 +139,20 @@
   <data name="forceAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
+  <data name="forceAll.Text" xml:space="preserve">
+    <value>強制</value>
+  </data>
   <data name="forceCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
+  <data name="forceCheckBox.Text" xml:space="preserve">
+    <value>強制</value>
+  </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>動作</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 63</value>
@@ -142,11 +160,17 @@
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>標題</value>
+  </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 89</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>訊息</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>36, 129</value>
@@ -154,11 +178,17 @@
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>訊息</value>
+  </data>
   <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 28</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 13</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>從</value>
   </data>
   <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 55</value>
@@ -166,53 +196,8 @@
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 13</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>訊息</value>
-  </data>
   <data name="Label6.Text" xml:space="preserve">
     <value>給</value>
-  </data>
-  <data name="Label8.Text" xml:space="preserve">
-    <value>伺服器</value>
-  </data>
-  <data name="AllLabel.Text" xml:space="preserve">
-    <value>選項</value>
-  </data>
-  <data name="EmailLabel.Text" xml:space="preserve">
-    <value>信箱訊息</value>
-  </data>
-  <data name="OK_Button.Text" xml:space="preserve">
-    <value>確定</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>訊息</value>
-  </data>
-  <data name="forceCheckBox.Text" xml:space="preserve">
-    <value>強制</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>動作</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>標題</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>主題</value>
-  </data>
-  <data name="SelectLabel.Text" xml:space="preserve">
-    <value>選擇電腦</value>
-  </data>
-  <data name="PopupLabel.Text" xml:space="preserve">
-    <value>彈跳訊息</value>
-  </data>
-  <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>取消</value>
-  </data>
-  <data name="forceAll.Text" xml:space="preserve">
-    <value>強制</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>從</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>35, 80</value>
@@ -220,19 +205,34 @@
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>主題</value>
+  </data>
   <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 106</value>
   </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
   </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>伺服器</value>
+  </data>
   <data name="MessageTitleTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>68, 61</value>
+  </data>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>確定</value>
   </data>
   <data name="PopupLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
+  <data name="PopupLabel.Text" xml:space="preserve">
+    <value>彈跳訊息</value>
+  </data>
   <data name="SelectLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
+  </data>
+  <data name="SelectLabel.Text" xml:space="preserve">
+    <value>選擇電腦</value>
   </data>
 </root>

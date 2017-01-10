@@ -117,47 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColumnHeader_IP.Text" xml:space="preserve">
-    <value>الملكية الفكرية</value>
-  </data>
-  <data name="ColumnHeader_Time.Text" xml:space="preserve">
-    <value>الوقت</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ColumnHeader_Time.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="ColumnHeader_Name.Text" xml:space="preserve">
-    <value>الاسم</value>
-  </data>
-  <data name="ColumnHeader_Name.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="LabelHeader.Text" xml:space="preserve">
-    <value>استنهاظ الشبكة المحلية الحزم المتلقاة...</value>
-  </data>
-  <data name="ButtonSet.Text" xml:space="preserve">
-    <value>تعيين</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RegExTextBoxPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 39</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 42</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>UDP منفذ:</value>
-  </data>
-  <data name="lUDPport.Text" xml:space="preserve">
-    <value>الاستماع على:</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>اعدادات شبكة الاتصال</value>
-  </data>
-  <data name="Button_clear.Text" xml:space="preserve">
-    <value>تنظيف</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAABILAAASCwAAAAAAAAAA
@@ -327,12 +289,35 @@
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>المستمع</value>
+  </data>
+  <data name="Button_clear.Text" xml:space="preserve">
+    <value>تنظيف</value>
+  </data>
+  <data name="ButtonSet.Text" xml:space="preserve">
+    <value>تعيين</value>
+  </data>
+  <data name="ColumnHeader_IP.Text" xml:space="preserve">
+    <value>الملكية الفكرية</value>
+  </data>
+  <data name="ColumnHeader_Name.Text" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="ColumnHeader_Name.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="ColumnHeader_Time.Text" xml:space="preserve">
+    <value>الوقت</value>
+  </data>
+  <data name="ColumnHeader_Time.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>اعدادات شبكة الاتصال</value>
   </data>
   <data name="ImageList_Large.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -501,5 +486,20 @@
         BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH+BAABBxIAAf4EAAEHEgAB/gQAAQcSAAH/BAABBxIAAf8BgAMA
         AQcSAAH/AfgDAAEHEgAC/wHwAgABHxIAA/8B8AEBAf8SAAb/EgAL
 </value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 42</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>UDP منفذ:</value>
+  </data>
+  <data name="LabelHeader.Text" xml:space="preserve">
+    <value>استنهاظ الشبكة المحلية الحزم المتلقاة...</value>
+  </data>
+  <data name="lUDPport.Text" xml:space="preserve">
+    <value>الاستماع على:</value>
+  </data>
+  <data name="RegExTextBoxPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 39</value>
   </data>
 </root>

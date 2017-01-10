@@ -66,15 +66,15 @@ Partial Class Crash
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.lError)
         resources.ApplyResources(Me.GroupBox1, "GroupBox1")
+        Me.GroupBox1.Controls.Add(Me.lError)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.tStack)
         resources.ApplyResources(Me.GroupBox2, "GroupBox2")
+        Me.GroupBox2.Controls.Add(Me.tStack)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.TabStop = False
         '

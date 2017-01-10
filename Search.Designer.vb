@@ -32,6 +32,8 @@ Partial Class Search
         Me.ch_MAC = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chEnabled = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.gbSearch = New System.Windows.Forms.GroupBox()
+        Me.IpAddressControl_End = New WakeOnLan.Controls.IpAddressControl()
+        Me.IpAddressControl_Start = New WakeOnLan.Controls.IpAddressControl()
         Me.cancelSearch = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -48,8 +50,6 @@ Partial Class Search
         Me.OKButton = New System.Windows.Forms.Button()
         Me.ComboBoxGroup = New System.Windows.Forms.ComboBox()
         Me.gbAddToGroup = New System.Windows.Forms.GroupBox()
-        Me.IpAddressControl_End = New WakeOnLan.Controls.IpAddressControl()
-        Me.IpAddressControl_Start = New WakeOnLan.Controls.IpAddressControl()
         Me.gbSearch.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.gbAddToGroup.SuspendLayout()
@@ -109,6 +109,22 @@ Partial Class Search
         Me.gbSearch.Controls.Add(Me.SearchBegin)
         Me.gbSearch.Name = "gbSearch"
         Me.gbSearch.TabStop = False
+        '
+        'IpAddressControl_End
+        '
+        Me.IpAddressControl_End.BackColor = System.Drawing.SystemColors.Window
+        Me.IpAddressControl_End.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.IpAddressControl_End, "IpAddressControl_End")
+        Me.IpAddressControl_End.Name = "IpAddressControl_End"
+        Me.ToolTip1.SetToolTip(Me.IpAddressControl_End, resources.GetString("IpAddressControl_End.ToolTip"))
+        '
+        'IpAddressControl_Start
+        '
+        Me.IpAddressControl_Start.BackColor = System.Drawing.SystemColors.Window
+        Me.IpAddressControl_Start.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.IpAddressControl_Start, "IpAddressControl_Start")
+        Me.IpAddressControl_Start.Name = "IpAddressControl_Start"
+        Me.ToolTip1.SetToolTip(Me.IpAddressControl_Start, resources.GetString("IpAddressControl_Start.ToolTip"))
         '
         'cancelSearch
         '
@@ -197,22 +213,6 @@ Partial Class Search
         Me.gbAddToGroup.Controls.Add(Me.CheckAllButton)
         Me.gbAddToGroup.Name = "gbAddToGroup"
         Me.gbAddToGroup.TabStop = False
-        '
-        'IpAddressControl_End
-        '
-        Me.IpAddressControl_End.BackColor = System.Drawing.SystemColors.Window
-        Me.IpAddressControl_End.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.IpAddressControl_End, "IpAddressControl_End")
-        Me.IpAddressControl_End.Name = "IpAddressControl_End"
-        Me.ToolTip1.SetToolTip(Me.IpAddressControl_End, resources.GetString("IpAddressControl_End.ToolTip"))
-        '
-        'IpAddressControl_Start
-        '
-        Me.IpAddressControl_Start.BackColor = System.Drawing.SystemColors.Window
-        Me.IpAddressControl_Start.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.IpAddressControl_Start, "IpAddressControl_Start")
-        Me.IpAddressControl_Start.Name = "IpAddressControl_Start"
-        Me.ToolTip1.SetToolTip(Me.IpAddressControl_Start, resources.GetString("IpAddressControl_Start.ToolTip"))
         '
         'Search
         '

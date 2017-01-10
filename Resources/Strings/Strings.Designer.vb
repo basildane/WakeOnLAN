@@ -272,7 +272,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Copyright (c) 2004 - 2016, Aquila Technology.
+        '''  Looks up a localized string similar to Copyright (c) 2004 - 2017, Aquila Technology.
         '''</summary>
         Friend Shared ReadOnly Property Copyright() As String
             Get

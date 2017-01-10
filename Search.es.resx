@@ -117,17 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SearchBegin.Text" xml:space="preserve">
-    <value>Comenzar la búsqueda</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Para las máquinas de búsqueda.</value>
   </data>
-  <data name="SearchBegin.ToolTip" xml:space="preserve">
-    <value>Comenzar su búsqueda para máquinas</value>
+  <data name="cancelSearch.Text" xml:space="preserve">
+    <value>Cancelar</value>
   </data>
-  <data name="ch_Name.Text" xml:space="preserve">
-    <value>Nome</value>
-  </data>
-  <data name="ch_OS.Text" xml:space="preserve">
-    <value>Sistema operativo</value>
+  <data name="cancelSearch.ToolTip" xml:space="preserve">
+    <value>Detener la búsqueda</value>
   </data>
   <data name="ch_Interface.Text" xml:space="preserve">
     <value>Interfaz</value>
@@ -138,6 +136,21 @@
   <data name="ch_MAC.Text" xml:space="preserve">
     <value>Dirección MAC</value>
   </data>
+  <data name="ch_Name.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="ch_OS.Text" xml:space="preserve">
+    <value>Sistema operativo</value>
+  </data>
+  <data name="CheckAllButton.Text" xml:space="preserve">
+    <value>Comprobar todos</value>
+  </data>
+  <data name="closeButton.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="gbAddToGroup.Text" xml:space="preserve">
+    <value>Añadir grupo...</value>
+  </data>
   <data name="gbSearch.Text" xml:space="preserve">
     <value>Para las máquinas de búsqueda</value>
   </data>
@@ -147,47 +160,34 @@
   <data name="IpAddressControl_Start.ToolTip" xml:space="preserve">
     <value>Introduzca la dirección IP inicial a la búsqueda de</value>
   </data>
-  <data name="cancelSearch.Text" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
-  <data name="cancelSearch.ToolTip" xml:space="preserve">
-    <value>Detener la búsqueda</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 13</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Final dirección IP</value>
-  </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 13</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Dirección IP inicial</value>
   </data>
-  <data name="LabelDescription.Text" xml:space="preserve">
-    <value>Seleccionar máquinas deseadas con las casillas de verificación, a continuación, haga clic en Aceptar para añadir a la base de datos.</value>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
   </data>
-  <data name="CheckAllButton.Text" xml:space="preserve">
-    <value>Comprobar todos</value>
-  </data>
-  <data name="UnCheckAllButton.Text" xml:space="preserve">
-    <value>Deseleccionar todos</value>
-  </data>
-  <data name="closeButton.Text" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
-  <data name="OKButton.Text" xml:space="preserve">
-    <value>Ok</value>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Final dirección IP</value>
   </data>
   <data name="LabelAddToGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Para las máquinas de búsqueda.</value>
+  <data name="LabelDescription.Text" xml:space="preserve">
+    <value>Seleccionar máquinas deseadas con las casillas de verificación, a continuación, haga clic en Aceptar para añadir a la base de datos.</value>
   </data>
-  <data name="gbAddToGroup.Text" xml:space="preserve">
-    <value>Añadir grupo...</value>
+  <data name="OKButton.Text" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="SearchBegin.Text" xml:space="preserve">
+    <value>Comenzar la búsqueda</value>
+  </data>
+  <data name="SearchBegin.ToolTip" xml:space="preserve">
+    <value>Comenzar su búsqueda para máquinas</value>
+  </data>
+  <data name="UnCheckAllButton.Text" xml:space="preserve">
+    <value>Deseleccionar todos</value>
   </data>
 </root>

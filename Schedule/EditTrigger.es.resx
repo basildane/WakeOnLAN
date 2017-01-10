@@ -117,84 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="OK_Button.Text" xml:space="preserve">
-    <value>Ok</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Disparador</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Cancelar</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Días</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Repetir cada</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Inicio</value>
-  </data>
-  <data name="RadioButtonMontly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 17</value>
-  </data>
-  <data name="RadioButtonMontly.Text" xml:space="preserve">
-    <value>mensual</value>
-  </data>
-  <data name="RadioButtonWeekly.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 17</value>
-  </data>
-  <data name="RadioButtonWeekly.Text" xml:space="preserve">
-    <value>semanalmente</value>
-  </data>
-  <data name="RadioButtonDaily.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 17</value>
-  </data>
-  <data name="RadioButtonDaily.Text" xml:space="preserve">
-    <value>diariamente</value>
-  </data>
-  <data name="RadioButtonOneTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 17</value>
-  </data>
-  <data name="RadioButtonOneTime.Text" xml:space="preserve">
-    <value>Una vez</value>
-  </data>
-  <data name="CheckBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 17</value>
-  </data>
-  <data name="CheckBox7.Text" xml:space="preserve">
-    <value>Sábado</value>
-  </data>
-  <data name="CheckBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 17</value>
-  </data>
-  <data name="CheckBox6.Text" xml:space="preserve">
-    <value>Viernes</value>
-  </data>
-  <data name="CheckBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 17</value>
-  </data>
-  <data name="CheckBox5.Text" xml:space="preserve">
-    <value>Jueves</value>
-  </data>
-  <data name="CheckBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 17</value>
-  </data>
-  <data name="CheckBox4.Text" xml:space="preserve">
-    <value>Miércoles</value>
-  </data>
-  <data name="CheckBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 17</value>
-  </data>
-  <data name="CheckBox3.Text" xml:space="preserve">
-    <value>Martes</value>
-  </data>
-  <data name="CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 17</value>
-  </data>
-  <data name="CheckBox2.Text" xml:space="preserve">
-    <value>Lunes</value>
   </data>
   <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 17</value>
@@ -202,17 +130,41 @@
   <data name="CheckBox1.Text" xml:space="preserve">
     <value>Domingo</value>
   </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
+  <data name="CheckBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 17</value>
   </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>semanas</value>
+  <data name="CheckBox2.Text" xml:space="preserve">
+    <value>Lunes</value>
   </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Repetir cada</value>
+  <data name="CheckBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 17</value>
   </data>
-  <data name="GroupBoxSettings.Text" xml:space="preserve">
-    <value>Ajustes</value>
+  <data name="CheckBox3.Text" xml:space="preserve">
+    <value>Martes</value>
+  </data>
+  <data name="CheckBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="CheckBox4.Text" xml:space="preserve">
+    <value>Miércoles</value>
+  </data>
+  <data name="CheckBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
+  </data>
+  <data name="CheckBox5.Text" xml:space="preserve">
+    <value>Jueves</value>
+  </data>
+  <data name="CheckBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="CheckBox6.Text" xml:space="preserve">
+    <value>Viernes</value>
+  </data>
+  <data name="CheckBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 17</value>
+  </data>
+  <data name="CheckBox7.Text" xml:space="preserve">
+    <value>Sábado</value>
   </data>
   <data name="CheckBoxEnabled.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 17</value>
@@ -223,7 +175,55 @@
   <data name="GroupBoxAdvanced.Text" xml:space="preserve">
     <value>Avanzado</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Disparador</value>
+  <data name="GroupBoxSettings.Text" xml:space="preserve">
+    <value>Ajustes</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Repetir cada</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 13</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Días</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>semanas</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Repetir cada</value>
+  </data>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="RadioButtonDaily.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 17</value>
+  </data>
+  <data name="RadioButtonDaily.Text" xml:space="preserve">
+    <value>diariamente</value>
+  </data>
+  <data name="RadioButtonMontly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 17</value>
+  </data>
+  <data name="RadioButtonMontly.Text" xml:space="preserve">
+    <value>mensual</value>
+  </data>
+  <data name="RadioButtonOneTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 17</value>
+  </data>
+  <data name="RadioButtonOneTime.Text" xml:space="preserve">
+    <value>Una vez</value>
+  </data>
+  <data name="RadioButtonWeekly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 17</value>
+  </data>
+  <data name="RadioButtonWeekly.Text" xml:space="preserve">
+    <value>semanalmente</value>
   </data>
 </root>

@@ -109,6 +109,8 @@ Namespace My
                             language = "fr-FR"
                         Case "hu"
                             language = "hu-HU"
+                        Case "it"
+                            language = "it-IT"
                         Case "nl"
                             language = "nl-NL"
                         Case "pt_BR"
