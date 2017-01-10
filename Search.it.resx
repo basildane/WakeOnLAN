@@ -117,7 +117,70 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="SearchBegin.Text" xml:space="preserve">
+    <value>Inizio ricerca</value>
+  </data>
+  <data name="SearchBegin.ToolTip" xml:space="preserve">
+    <value>Inizio ricerca delle macchine</value>
+  </data>
+  <data name="ch_Name.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="ch_OS.Text" xml:space="preserve">
+    <value>Sistema operativo</value>
+  </data>
+  <data name="ch_Interface.Text" xml:space="preserve">
+    <value>ID interfaccia</value>
+  </data>
+  <data name="ch_IP.Text" xml:space="preserve">
+    <value>Indirizzo IP</value>
+  </data>
+  <data name="ch_MAC.Text" xml:space="preserve">
+    <value>Indirizzo Mac</value>
+  </data>
+  <data name="IpAddressControl_End.ToolTip" xml:space="preserve">
+    <value>Inserire l'indirizzo di fine per la ricerca</value>
+  </data>
+  <data name="IpAddressControl_Start.ToolTip" xml:space="preserve">
+    <value>Inserire l'indirizzo IP di partenza per la ricerca</value>
+  </data>
+  <data name="cancelSearch.Text" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="cancelSearch.ToolTip" xml:space="preserve">
+    <value>Ferma la ricerca</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Indirizzo IP di fine</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 13</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Indirizzo di partenza</value>
+  </data>
+  <data name="gbSearch.Text" xml:space="preserve">
+    <value>Ricerca delle macchine</value>
+  </data>
+  <data name="LabelDescription.Text" xml:space="preserve">
+    <value>Seleziona le macchine desiderate con il checkboxes, poi fai click su OK per aggiungerle al database</value>
+  </data>
+  <data name="CheckAllButton.Text" xml:space="preserve">
+    <value>Seleziona tutto</value>
+  </data>
+  <data name="UnCheckAllButton.Text" xml:space="preserve">
+    <value>Deseleziona tutti</value>
+  </data>
+  <data name="closeButton.Text" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="gbAddToGroup.Text" xml:space="preserve">
+    <value>Aggiungi al gruppo...</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEACAAoTAAAFgAAACgAAACAAAAAAAEAAAEACAAAAAAAAEAAABILAAASCwAAAAEAAAAB
@@ -450,107 +513,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Ricerca delle macchine </value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cancelSearch.Text" xml:space="preserve">
-    <value>Annulla</value>
-  </data>
-  <data name="cancelSearch.ToolTip" xml:space="preserve">
-    <value>Ferma la ricerca</value>
-  </data>
-  <data name="ch_Interface.Text" xml:space="preserve">
-    <value>ID interfaccia</value>
-  </data>
-  <data name="ch_IP.Text" xml:space="preserve">
-    <value>Indirizzo IP</value>
-  </data>
-  <data name="ch_MAC.Text" xml:space="preserve">
-    <value>Indirizzo Mac</value>
-  </data>
-  <data name="ch_Name.Text" xml:space="preserve">
-    <value>Nome</value>
-  </data>
-  <data name="ch_OS.Text" xml:space="preserve">
-    <value>Sistema operativo</value>
-  </data>
-  <data name="CheckAllButton.Text" xml:space="preserve">
-    <value>Seleziona tutto</value>
-  </data>
-  <data name="CheckAllButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="closeButton.Text" xml:space="preserve">
-    <value>Annulla</value>
-  </data>
-  <data name="closeButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ComboBoxGroup.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gbAddToGroup.Text" xml:space="preserve">
-    <value>Aggiungi al gruppo...</value>
-  </data>
-  <data name="gbAddToGroup.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gbSearch.Text" xml:space="preserve">
-    <value>Ricerca delle macchine</value>
-  </data>
-  <data name="gbSearch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="IpAddressControl_End.ToolTip" xml:space="preserve">
-    <value>Inserire l'indirizzo di fine per la ricerca</value>
-  </data>
-  <data name="IpAddressControl_Start.ToolTip" xml:space="preserve">
-    <value>Inserire l'indirizzo IP di partenza per la ricerca</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 13</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Indirizzo di partenza</value>
-  </data>
-  <data name="Label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 13</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Indirizzo IP di fine</value>
-  </data>
-  <data name="Label2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LabelDescription.Text" xml:space="preserve">
-    <value>Seleziona le macchine desiderate con il checkboxes, poi fai click su OK per aggiungerle al database</value>
-  </data>
-  <data name="LabelDescription.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="listView.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="OKButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SearchBegin.Text" xml:space="preserve">
-    <value>Inizio ricerca</value>
-  </data>
-  <data name="SearchBegin.ToolTip" xml:space="preserve">
-    <value>Inizio ricerca delle macchine</value>
-  </data>
-  <data name="StatusStrip1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="UnCheckAllButton.Text" xml:space="preserve">
-    <value>Deseleziona tutti</value>
-  </data>
-  <data name="UnCheckAllButton.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>

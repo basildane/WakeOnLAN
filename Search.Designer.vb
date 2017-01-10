@@ -71,7 +71,6 @@ Partial Class Search
         Me.listView.MultiSelect = False
         Me.listView.Name = "listView"
         Me.listView.ShowGroups = False
-        Me.ToolTip1.SetToolTip(Me.listView, resources.GetString("listView.ToolTip"))
         Me.listView.UseCompatibleStateImageBehavior = False
         Me.listView.View = System.Windows.Forms.View.Details
         '
@@ -110,21 +109,20 @@ Partial Class Search
         Me.gbSearch.Controls.Add(Me.SearchBegin)
         Me.gbSearch.Name = "gbSearch"
         Me.gbSearch.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.gbSearch, resources.GetString("gbSearch.ToolTip"))
         '
         'IpAddressControl_End
         '
-        resources.ApplyResources(Me.IpAddressControl_End, "IpAddressControl_End")
         Me.IpAddressControl_End.BackColor = System.Drawing.SystemColors.Window
         Me.IpAddressControl_End.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.IpAddressControl_End, "IpAddressControl_End")
         Me.IpAddressControl_End.Name = "IpAddressControl_End"
         Me.ToolTip1.SetToolTip(Me.IpAddressControl_End, resources.GetString("IpAddressControl_End.ToolTip"))
         '
         'IpAddressControl_Start
         '
-        resources.ApplyResources(Me.IpAddressControl_Start, "IpAddressControl_Start")
         Me.IpAddressControl_Start.BackColor = System.Drawing.SystemColors.Window
         Me.IpAddressControl_Start.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.IpAddressControl_Start, "IpAddressControl_Start")
         Me.IpAddressControl_Start.Name = "IpAddressControl_Start"
         Me.ToolTip1.SetToolTip(Me.IpAddressControl_Start, resources.GetString("IpAddressControl_Start.ToolTip"))
         '
@@ -139,13 +137,11 @@ Partial Class Search
         '
         resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.ToolTip1.SetToolTip(Me.Label2, resources.GetString("Label2.ToolTip"))
         '
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.ToolTip1.SetToolTip(Me.Label1, resources.GetString("Label1.ToolTip"))
         '
         'backgroundWorker
         '
@@ -154,46 +150,42 @@ Partial Class Search
         '
         'StatusStrip1
         '
-        resources.ApplyResources(Me.StatusStrip1, "StatusStrip1")
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel_spacer, Me.ToolStripProgressBar1})
+        resources.ApplyResources(Me.StatusStrip1, "StatusStrip1")
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.SizingGrip = False
-        Me.ToolTip1.SetToolTip(Me.StatusStrip1, resources.GetString("StatusStrip1.ToolTip"))
         '
         'ToolStripStatusLabel1
         '
-        resources.ApplyResources(Me.ToolStripStatusLabel1, "ToolStripStatusLabel1")
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        resources.ApplyResources(Me.ToolStripStatusLabel1, "ToolStripStatusLabel1")
         '
         'ToolStripStatusLabel_spacer
         '
-        resources.ApplyResources(Me.ToolStripStatusLabel_spacer, "ToolStripStatusLabel_spacer")
         Me.ToolStripStatusLabel_spacer.Name = "ToolStripStatusLabel_spacer"
+        resources.ApplyResources(Me.ToolStripStatusLabel_spacer, "ToolStripStatusLabel_spacer")
         Me.ToolStripStatusLabel_spacer.Spring = True
         '
         'ToolStripProgressBar1
         '
-        resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
+        resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
         '
         'LabelDescription
         '
         resources.ApplyResources(Me.LabelDescription, "LabelDescription")
         Me.LabelDescription.Name = "LabelDescription"
-        Me.ToolTip1.SetToolTip(Me.LabelDescription, resources.GetString("LabelDescription.ToolTip"))
         '
         'CheckAllButton
         '
         resources.ApplyResources(Me.CheckAllButton, "CheckAllButton")
         Me.CheckAllButton.Name = "CheckAllButton"
-        Me.ToolTip1.SetToolTip(Me.CheckAllButton, resources.GetString("CheckAllButton.ToolTip"))
         Me.CheckAllButton.UseVisualStyleBackColor = True
         '
         'UnCheckAllButton
         '
         resources.ApplyResources(Me.UnCheckAllButton, "UnCheckAllButton")
         Me.UnCheckAllButton.Name = "UnCheckAllButton"
-        Me.ToolTip1.SetToolTip(Me.UnCheckAllButton, resources.GetString("UnCheckAllButton.ToolTip"))
         Me.UnCheckAllButton.UseVisualStyleBackColor = True
         '
         'closeButton
@@ -201,20 +193,17 @@ Partial Class Search
         resources.ApplyResources(Me.closeButton, "closeButton")
         Me.closeButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.closeButton.Name = "closeButton"
-        Me.ToolTip1.SetToolTip(Me.closeButton, resources.GetString("closeButton.ToolTip"))
         '
         'OKButton
         '
         resources.ApplyResources(Me.OKButton, "OKButton")
         Me.OKButton.Name = "OKButton"
-        Me.ToolTip1.SetToolTip(Me.OKButton, resources.GetString("OKButton.ToolTip"))
         '
         'ComboBoxGroup
         '
-        resources.ApplyResources(Me.ComboBoxGroup, "ComboBoxGroup")
         Me.ComboBoxGroup.FormattingEnabled = True
+        resources.ApplyResources(Me.ComboBoxGroup, "ComboBoxGroup")
         Me.ComboBoxGroup.Name = "ComboBoxGroup"
-        Me.ToolTip1.SetToolTip(Me.ComboBoxGroup, resources.GetString("ComboBoxGroup.ToolTip"))
         '
         'gbAddToGroup
         '
@@ -224,7 +213,6 @@ Partial Class Search
         Me.gbAddToGroup.Controls.Add(Me.CheckAllButton)
         Me.gbAddToGroup.Name = "gbAddToGroup"
         Me.gbAddToGroup.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.gbAddToGroup, resources.GetString("gbAddToGroup.ToolTip"))
         '
         'Search
         '
@@ -241,7 +229,6 @@ Partial Class Search
         Me.MinimizeBox = False
         Me.Name = "Search"
         Me.ShowInTaskbar = False
-        Me.ToolTip1.SetToolTip(Me, resources.GetString("$this.ToolTip"))
         Me.gbSearch.ResumeLayout(False)
         Me.gbSearch.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
