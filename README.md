@@ -2,7 +2,7 @@
 Wake On LAN, WakeOnLAN, shutdown software for Windows. A powerful WOL, ping, shutdown, GUI application.
 
 Please see the project page for WOL.
-http://wol.aquilatech.com/
+https://wol.aquilatech.com/
 
 WakeOnLAN features include:
 * Wake Up remote machines
