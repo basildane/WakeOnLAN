@@ -233,9 +233,9 @@ Public Class Explorer
         tvRoot = TreeView.Nodes.Add(My.Resources.Strings.AllMachines)
 
         Dim groups() As String = (From machine As Machine In Machines
-             Where machine.Group <> ""
-             Order By machine.Group
-             Select machine.Group).Distinct().ToArray()
+                                  Where machine.Group <> ""
+                                  Order By machine.Group
+                                  Select machine.Group).Distinct().ToArray()
 
         For Each groupName As String In groups
             tvNode = tvRoot.Nodes.Add(groupName)
@@ -895,4 +895,9 @@ Public Class Explorer
     Private Sub ToolStripMenuItemWakeUp_Click(sender As Object, e As EventArgs) Handles TrayMenuItemWakeUp.Click
 
     End Sub
+
+    Private Sub Explorer_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        My.Settings.Save()
+    End Sub
+
 End Class
