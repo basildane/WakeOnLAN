@@ -390,19 +390,19 @@ Public Module Module1
     End Function
 
     Private Sub ProcessMachine(machine As Machine, flags As AquilaWolLibrary.ShutdownFlags)
-        Dim encryption As New Encryption(My.Application.Info.ProductName)
+        Dim encryption As New Encryption()
 
         Try
             Select Case machine.ShutdownMethod
                 Case Machine.ShutdownMethods.WMI
-                    AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain)
+                    AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.Decrypt(machine.Password), machine.Domain)
 
                 Case Machine.ShutdownMethods.Custom
                     Dim cmd As String = machine.ShutdownCommand
                     cmd = cmd.Replace("$PF", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles))
                     cmd = cmd.Replace("$PFX86", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86))
                     cmd = cmd.Replace("$USER", machine.UserID)
-                    cmd = cmd.Replace("$PASS", encryption.EnigmaDecrypt(machine.Password))
+                    cmd = cmd.Replace("$PASS", encryption.Decrypt(machine.Password))
                     cmd = cmd.Replace("$HOST", machine.Netbios)
                     Debug.WriteLine("Custom command: " & cmd)
                     Shell(cmd, AppWinStyle.Hide, False)
@@ -426,7 +426,7 @@ Public Module Module1
 
                     End Select
 
-                    AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain, _alertMessage)
+                    AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.Decrypt(machine.Password), machine.Domain, _alertMessage)
 
             End Select
 

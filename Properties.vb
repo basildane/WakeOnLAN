@@ -20,7 +20,7 @@ Imports Machines
 
 Public Class Properties
     Private _previousHostName As String
-    Private ReadOnly _encryption As New Encryption(My.Application.Info.ProductName)
+    Private ReadOnly _encryption As New Encryption()
 
     Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OK_Button.Click
         Dim m As New Machine
@@ -50,7 +50,7 @@ Public Class Properties
             m.RDPFile = tRDPFilename.Text.Trim
             m.Note = TextBox_Notes.Text
             m.UserID = tUserId.Text
-            m.Password = _encryption.EnigmaEncrypt(tPassword.Text)
+            m.Password = _encryption.Encrypt(tPassword.Text)
             m.Domain = tDomain.Text
             m.ShutdownMethod = ComboBoxShutdownMethod.SelectedIndex
             m.RepeatCount = Repeat.Text
@@ -114,7 +114,7 @@ Public Class Properties
         tRDPFilename.Text = m.RDPFile
         TextBox_Notes.Text = m.Note
         tUserId.Text = m.UserID
-        tPassword.Text = _encryption.EnigmaDecrypt(m.Password)
+        tPassword.Text = _encryption.Decrypt(m.Password)
         tDomain.Text = m.Domain
         ComboBoxShutdownMethod.SelectedIndex = m.ShutdownMethod
         Repeat.Text = m.RepeatCount

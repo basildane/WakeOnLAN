@@ -19,7 +19,7 @@
 Public Class EditTask
 
     Private MyTask As Task
-    Private Encrypt As New Encryption(My.Application.Info.ProductName)
+    Private encryption As New Encryption()
 
 
     Public Overloads Function ShowDialog(ByVal owner As Form, ByRef Task As Task) As Windows.Forms.DialogResult
@@ -29,7 +29,7 @@ Public Class EditTask
         NameTextBox.Text = MyTask.Name
         DescriptionTextBox.Text = MyTask.Description
         UserIDTextBox.Text = My.Settings.TaskUserID
-        PasswordTextBox.Text = Encrypt.EnigmaDecrypt(My.Settings.TaskPassword)
+        PasswordTextBox.Text = encryption.Decrypt(My.Settings.TaskPassword)
 
         ListViewTriggers.Items.Clear()
         For Each Trigger As Trigger In MyTask.Triggers
@@ -66,7 +66,7 @@ Public Class EditTask
         End With
 
         My.Settings.TaskUserID = UserIDTextBox.Text
-        My.Settings.TaskPassword = Encrypt.EnigmaEncrypt(PasswordTextBox.Text)
+        My.Settings.TaskPassword = encryption.Encrypt(PasswordTextBox.Text)
 
         DialogResult = DialogResult.OK
         Close()

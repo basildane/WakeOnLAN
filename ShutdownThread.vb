@@ -63,7 +63,7 @@ Public Class ShutdownThread
     Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
         Dim machine As Machine
         Dim flags As ShutdownFlags
-        Dim encryption As New Encryption(My.Application.Info.ProductName)
+        Dim encryption As New Encryption()
 
         Try
             machine = Machines(_item.Text)
@@ -108,7 +108,7 @@ Public Class ShutdownThread
                         cmd = cmd.Replace("$PF", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles))
                         cmd = cmd.Replace("$PFX86", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86))
                         cmd = cmd.Replace("$USER", machine.UserID)
-                        cmd = cmd.Replace("$PASS", encryption.EnigmaDecrypt(machine.Password))
+                        cmd = cmd.Replace("$PASS", encryption.Decrypt(machine.Password))
                         cmd = cmd.Replace("$HOST", machine.Netbios)
                         Debug.WriteLine("Custom command: " & cmd)
                         Shell(cmd, AppWinStyle.Hide, False)
@@ -149,7 +149,7 @@ Public Class ShutdownThread
 
             End Select
 
-            AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.EnigmaDecrypt(machine.Password), machine.Domain, _message)
+            AquilaWolLibrary.Shutdown(machine.Netbios, flags, machine.UserID, encryption.Decrypt(machine.Password), machine.Domain, _message)
             WriteLog(String.Format("Sending {0} to ""{1}""", _action.ToString(), machine.Name), EventLogEntryType.Information, EventId.Shutdown)
 
         Catch ex As Exception

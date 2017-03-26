@@ -159,7 +159,7 @@ Namespace Schedule
         Private Function Edit(ByVal myTask As Task) As Boolean
             Dim result As Boolean = False
             Dim m As Machine
-            Dim encrypt As New Encryption(My.Application.Info.ProductName)
+            Dim encrypt As New Encryption()
             Dim machinesXml As String
 
             machinesXml = "-p " & wrapSpaces(Machines.GetFile())
@@ -374,9 +374,9 @@ Namespace Schedule
                     End With
 
                     iTask.Data = myTask.Serialize
-                    _taskFolder.RegisterTaskDefinition(myTask.Name, iTask, _
-                                                       _TASK_CREATION.TASK_CREATE_OR_UPDATE, _
-                                                       My.Settings.TaskUserID, encrypt.EnigmaDecrypt(My.Settings.TaskPassword), _
+                    _taskFolder.RegisterTaskDefinition(myTask.Name, iTask,
+                                                       _TASK_CREATION.TASK_CREATE_OR_UPDATE,
+                                                       My.Settings.TaskUserID, encrypt.Decrypt(My.Settings.TaskPassword),
                                                        _TASK_LOGON_TYPE.TASK_LOGON_PASSWORD, "")
 
                     result = True

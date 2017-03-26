@@ -117,53 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Crea task</value>
-  </data>
-  <data name="ActionDeleteButton.Text" xml:space="preserve">
-    <value>Cancella</value>
-  </data>
-  <data name="ActionEditButton.Text" xml:space="preserve">
-    <value>Modifica...</value>
-  </data>
-  <data name="ActionNewButton.Text" xml:space="preserve">
-    <value>Nuovo...</value>
-  </data>
-  <data name="ButtonCancel.Text" xml:space="preserve">
-    <value>Annulla</value>
-  </data>
-  <data name="ColumnHeader1.Text" xml:space="preserve">
-    <value>Azione</value>
-  </data>
-  <data name="ColumnHeader2.Text" xml:space="preserve">
-    <value>Dettagli</value>
-  </data>
-  <data name="ColumnHeader4.Text" xml:space="preserve">
-    <value>Dettagli</value>
-  </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>Opzioni di sicurezza</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Nome</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Descrizione</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Specifica le condizioni che accadranno per questo evento</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Specifica l'azione che accadrà quando l'evento avverrà</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
     <value>(Dominio\Utente)</value>
   </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Opzioni di sicurezza</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Descrizione</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
   <data name="TabPage1.Text" xml:space="preserve">
     <value>Generale</value>
   </data>
-  <data name="TabPage3.Text" xml:space="preserve">
-    <value>Azioni</value>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>Dettagli</value>
   </data>
   <data name="TriggerDeleteButton.Text" xml:space="preserve">
     <value>Cancella</value>
@@ -174,19 +151,40 @@
   <data name="TriggerNewButton.Text" xml:space="preserve">
     <value>Nuovo...</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Login user id:</value>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 13</value>
   </data>
-  <data name="ColumnHeader3.Text" xml:space="preserve">
-    <value>Trigger</value>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Specifica le condizioni che accadranno per questo evento</value>
   </data>
-  <data name="TabPage2.Text" xml:space="preserve">
-    <value>Triggers</value>
+  <data name="ActionDeleteButton.Text" xml:space="preserve">
+    <value>Cancella</value>
   </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>Password:</value>
+  <data name="ActionEditButton.Text" xml:space="preserve">
+    <value>Modifica...</value>
   </data>
-  <data name="OKButton.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="ActionNewButton.Text" xml:space="preserve">
+    <value>Nuovo...</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 13</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Specifica l'azione che accadrà quando l'evento avverrà</value>
+  </data>
+  <data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>Azione</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Dettagli</value>
+  </data>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>Azioni</value>
+  </data>
+  <data name="ButtonCancel.Text" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Crea task</value>
   </data>
 </root>
