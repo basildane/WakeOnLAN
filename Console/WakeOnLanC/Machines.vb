@@ -45,15 +45,22 @@ Public Class MachinesClass
         End Get
     End Property
 
-    Public Sub Load(Path As String)
+    Public Function GetPath(Path As String)
         If String.IsNullOrEmpty(Path) Then
             Dim regKey As RegistryKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN", False)
             Path = regKey.GetValue("Database", IO.Directory.GetParent(My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, RegistryValueOptions.None)
             Path = IO.Path.Combine(Path, "machines.xml")
             regKey.Close()
         End If
+        Return Path
+    End Function
 
-        Import(Path)
+    Public Sub Load(Path As String)
+        Import(GetPath(Path))
+    End Sub
+
+    Public Sub Save(Path As String)
+        Export(GetPath(Path))
     End Sub
 
     Public Sub Import(ByVal Filename As String)
@@ -64,6 +71,24 @@ Public Class MachinesClass
             Console.WriteLine("Loading database: " & Filename)
             fs = New IO.FileStream(Filename, IO.FileMode.Open, IO.FileAccess.Read)
             Machines = CType(serializer.Deserialize(fs), MachinesClass)
+            fs.Close()
+
+        Catch ex As Exception
+            Debug.WriteLine(ex.Message)
+            Throw
+
+        End Try
+
+    End Sub
+
+    Public Sub Export(ByVal Filename As String)
+        Dim serializer As New XmlSerializer(GetType(MachinesClass))
+        Dim writer As IO.StreamWriter
+
+        Try
+            writer = New IO.StreamWriter(Filename)
+            serializer.Serialize(writer, Machines)
+            writer.Close()
 
         Catch ex As Exception
             Debug.WriteLine(ex.Message)

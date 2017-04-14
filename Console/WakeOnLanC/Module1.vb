@@ -35,6 +35,7 @@ Public Module Module1
         Hibernate
         Enumerate
         Message
+        Password
     End Enum
 
     Enum ErrorCodes
@@ -56,6 +57,7 @@ Public Module Module1
     Dim _result As Integer = ErrorCodes.Ok
     Dim _path As String = String.Empty
     Dim _repeatInterval As Integer = 750
+    Dim _password As String = String.Empty
 
     Function Main() As Integer
         Console.ForegroundColor = ConsoleColor.Green
@@ -145,6 +147,15 @@ Public Module Module1
                     _alertMessage = My.Application.CommandLineArgs.Item(i + 1)
                     i += 1
 
+                Case "-pw"
+                    If i = My.Application.CommandLineArgs.Count - 1 Then
+                        BadCommand()
+                        Return ErrorCodes.InvalidCommand
+                    End If
+                    _mode = ModeTypes.Password
+                    _password = My.Application.CommandLineArgs.Item(i + 1)
+                    i += 1
+
                 Case "-l"
                     Listen()
                     Return ErrorCodes.Ok
@@ -190,6 +201,9 @@ Public Module Module1
             Case ModeTypes.Message
                 SendMessage()
 
+            Case ModeTypes.Password
+                ChangePassword()
+
             Case Else
                 BadCommand()
                 Return ErrorCodes.InvalidCommand
@@ -214,6 +228,7 @@ Public Module Module1
         Console.WriteLine("-msg (immediate message (example -msg -c ""Shutting down in 10 minutes"")")
         Console.WriteLine("     Optional: Use -m to send message to a remote machine.")
         Console.WriteLine("-d   (debug) requires -m")
+        Console.WriteLine("-pw  (password) change shutdown password for a machine, requires -m, -g or -all")
         Console.WriteLine("-h   (display this help message)")
         Console.WriteLine()
         Console.WriteLine("options:")
@@ -487,6 +502,45 @@ Public Module Module1
             Console.WriteLine(" IP: {0,-16} MAC: {1}", m.IP, m.MAC)
         Next
     End Sub
+
+    Private Function ChangePassword() As Integer
+        Dim machine As Machine
+        Dim encryption As New Encryption()
+        Dim encrypted As String = encryption.Encrypt(_password)
+
+        Machines.Load(_path)
+
+        If (String.IsNullOrEmpty(_machine) And String.IsNullOrEmpty(_group) And (_all = False)) Then
+            Console.WriteLine("Error.  No machine specified.")
+            DisplayHelp()
+            _result = ErrorCodes.InvalidCommand
+            Return _result
+        End If
+
+        If _all Then
+            Console.WriteLine(String.Format("Changing password all machines"))
+            For Each machine In Machines
+                Console.WriteLine("  > " & machine.Name)
+                machine.Password = encrypted
+            Next
+        ElseIf (_group.Length) Then
+            Console.WriteLine(String.Format("Changing password for group: {0}", _group))
+            For Each Machine In From machine1 As Machine In Machines Where machine1.Group = _group
+                Console.WriteLine("  > " & machine.Name)
+                machine.Password = encrypted
+            Next
+        Else
+            Machine = Machines(_machine)
+            Console.WriteLine("Changing password: {0}", machine.Name)
+            machine.Password = encrypted
+        End If
+
+        Machines.Save(_path)
+
+        Console.WriteLine("Done.")
+        Return _result
+
+    End Function
 
     Private Function ShowIPConfig() As Integer
         Dim ping As New NetworkInformation.Ping
