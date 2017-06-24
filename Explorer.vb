@@ -29,6 +29,7 @@ Public Class Explorer
     Private allowClose As Boolean = False
     Private WithEvents _historyBackgroundworker As New BackgroundWorker()
     Public Shared Pool As Semaphore = New Semaphore(0, My.Settings.Threads)
+    Private debugForm As New debugHelper
 
     Public Sub New()
 
@@ -78,7 +79,7 @@ Public Class Explorer
 
         SetView(ListView.View)
         Machines.Load(Pool)
-        Machines.dirty = False
+        Machines.Dirty = False
 
         Try
             If (My.Application.CommandLineArgs(0) = "/min") Then
@@ -218,8 +219,16 @@ Public Class Explorer
             ListView.Items(hostName).Group = ListView.Groups(Status.ToString)
             ListView.Sort()
 
+            If (debugHelper.Visible) Then
+                Dim machine As Machine = Machines(hostName)
+                debugHelper.Log(hostName & ": " & machine.Reply.Status.ToString())
+            End If
+
         Catch ex As Exception
             Debug.WriteLine("(statuschange error)" & ex.Message)
+            If (debugHelper.Visible) Then
+                debugHelper.Log(hostName & ": " & ex.Message)
+            End If
 
         End Try
     End Sub
@@ -524,6 +533,8 @@ Public Class Explorer
                     ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.ResponseTime, machine.Name, machine.Reply.RoundtripTime)
 
             End Select
+            'TODO: remove
+            ToolStripStatusLabel1.Text &= " [" & machine.Reply.Status.ToString() & "]"
 
         Catch ex As Exception
             ResetMonitor()
@@ -768,10 +779,10 @@ Public Class Explorer
                                  Order By machine.Name
                                  Select machine.Name).ToArray()
 
-            Dim item As ToolStripMenuItem = New ToolStripMenuItem()
-
-            item.Name = s
-            item.Text = s
+            Dim item As ToolStripMenuItem = New ToolStripMenuItem() With {
+                .Name = s,
+                .Text = s
+            }
             TrayMenuItemWakeUp.DropDownItems.Add(item)
             AddHandler item.Click, AddressOf TaskTrayWake_Click
         Next
@@ -797,10 +808,10 @@ Public Class Explorer
                                  Order By machine.Name
                                  Select machine.Name).ToArray()
 
-            Dim item As ToolStripMenuItem = New ToolStripMenuItem()
-
-            item.Name = s
-            item.Text = s
+            Dim item As ToolStripMenuItem = New ToolStripMenuItem() With {
+                .Name = s,
+                .Text = s
+            }
             TrayMenuItemRDP.DropDownItems.Add(item)
             AddHandler item.Click, AddressOf TaskTrayRDP_Click
         Next
@@ -825,10 +836,10 @@ Public Class Explorer
                                  Order By machine.Name
                                  Select machine.Name).ToArray()
 
-            Dim item As ToolStripMenuItem = New ToolStripMenuItem()
-
-            item.Name = s
-            item.Text = s
+            Dim item As ToolStripMenuItem = New ToolStripMenuItem() With {
+                .Name = s,
+                .Text = s
+            }
             TrayMenuItemShutdown.DropDownItems.Add(item)
             AddHandler item.Click, AddressOf TaskTrayShutdown_Click
         Next
@@ -900,4 +911,8 @@ Public Class Explorer
         My.Settings.Save()
     End Sub
 
+    Private Sub DebugLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DebugLogToolStripMenuItem.Click
+        If (Not debugHelper.Visible) Then debugHelper.Show(Me)
+        debugHelper.Log("Debug log started")
+    End Sub
 End Class

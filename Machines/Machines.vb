@@ -102,16 +102,22 @@ Imports System.Threading
                 Debug.Assert(Not IsNothing(Pool))
                 Debug.WriteLine("pool wait : " & Name)
                 Pool.WaitOne()
-                Reply = ping.Send(e.Argument, 1500)
+                Reply = ping.Send(e.Argument, 5000)
 
-                If Reply.Status = IPStatus.Success Then
-                    _backgroundWorker.ReportProgress(100)
-                Else
-                    _backgroundWorker.ReportProgress(0)
-                End If
+                Select Case Reply.Status
+                    Case IPStatus.Success
+                        _backgroundWorker.ReportProgress(100)
+
+                    Case IPStatus.TimedOut, IPStatus.DestinationNetworkUnreachable, IPStatus.DestinationHostUnreachable
+                        _backgroundWorker.ReportProgress(0)
+
+                    Case Else
+                        _backgroundWorker.ReportProgress(50)
+
+                End Select
 
             Catch ex As Exception
-                _backgroundWorker.ReportProgress(0)
+                _backgroundWorker.ReportProgress(50)
 
             Finally
                 Pool.Release()
@@ -175,11 +181,14 @@ Imports System.Threading
                         RaiseEvent StatusChange(Name, Status, newIpAddress)
                     End If
 
-                Case Else
+                Case 0
                     If Status <> StatusCodes.Offline Then
                         Status = StatusCodes.Offline
-                        RaiseEvent StatusChange(Name, Status, "")
+                        RaiseEvent StatusChange(Name, Status, String.Empty)
                     End If
+
+                Case 50
+                    RaiseEvent StatusChange(Name, Status, String.Empty)
 
             End Select
 
@@ -194,7 +203,7 @@ Imports System.Threading
         Try
             Debug.WriteLine("RunWorkerCompleted:: " & Name & " " & e.Result)
             Status = StatusCodes.Unknown
-            RaiseEvent StatusChange(Name, Status, "")
+            RaiseEvent StatusChange(Name, Status, String.Empty)
 
         Catch ex As Exception
             Debug.Fail(ex.Message)
@@ -205,11 +214,11 @@ Imports System.Threading
 
     Private Function CompareMac(mac1 As String, mac2 As String) As Int32
 
-        Dim _mac1 As String = Replace(mac1, ":", "")
-        _mac1 = Replace(_mac1, "-", "")
+        Dim _mac1 As String = Replace(mac1, ":", String.Empty)
+        _mac1 = Replace(_mac1, "-", String.Empty)
 
-        Dim _mac2 As String = Replace(mac2, ":", "")
-        _mac2 = Replace(_mac2, "-", "")
+        Dim _mac2 As String = Replace(mac2, ":", String.Empty)
+        _mac2 = Replace(_mac2, "-", String.Empty)
 
         Return StrComp(_mac1, _mac2, CompareMethod.Text)
 

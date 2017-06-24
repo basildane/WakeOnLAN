@@ -177,6 +177,7 @@ Partial Class Explorer
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.TimerUpdate = New System.Windows.Forms.Timer(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
+        Me.DebugLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -526,7 +527,7 @@ Partial Class Explorer
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem, Me.FoldersToolStripMenuItem, Me.ShowGroupsToolStripMenuItem, Me.ShowHotButtonsToolStripMenuItem, Me.EventLogToolStripMenuItem, Me.ToolStripSeparator7, Me.MinimizeToTaskTrayToolStripMenuItem, Me.AutoStartWithWindowsToolStripMenuItem, Me.ToolStripSeparator9, Me.ResetWindowLayoutToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem, Me.FoldersToolStripMenuItem, Me.ShowGroupsToolStripMenuItem, Me.ShowHotButtonsToolStripMenuItem, Me.EventLogToolStripMenuItem, Me.DebugLogToolStripMenuItem, Me.ToolStripSeparator7, Me.MinimizeToTaskTrayToolStripMenuItem, Me.AutoStartWithWindowsToolStripMenuItem, Me.ToolStripSeparator9, Me.ResetWindowLayoutToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         resources.ApplyResources(Me.ViewToolStripMenuItem, "ViewToolStripMenuItem")
         '
@@ -834,6 +835,11 @@ Partial Class Explorer
         '
         Me.CultureManager.ManagedControl = Me
         '
+        'DebugLogToolStripMenuItem
+        '
+        Me.DebugLogToolStripMenuItem.Name = "DebugLogToolStripMenuItem"
+        resources.ApplyResources(Me.DebugLogToolStripMenuItem, "DebugLogToolStripMenuItem")
+        '
         'Explorer
         '
         resources.ApplyResources(Me, "$this")
@@ -934,4 +940,5 @@ Partial Class Explorer
     Friend WithEvents TimerUpdate As System.Windows.Forms.Timer
     Friend WithEvents TrayMenuItemRDP As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TrayMenuItemShutdown As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DebugLogToolStripMenuItem As ToolStripMenuItem
 End Class
