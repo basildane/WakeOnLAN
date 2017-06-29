@@ -176,7 +176,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0, 0")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("-1, -1")>  _
         Public Property MainWindow_Location() As Global.System.Drawing.Point
             Get
                 Return CType(Me("MainWindow_Location"),Global.System.Drawing.Point)

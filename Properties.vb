@@ -73,21 +73,27 @@ Public Class Properties
     End Sub
 
     Public Sub Create()
-        _previousHostName = String.Empty
-        Text = String.Format(My.Resources.Strings.Properties, My.Resources.Strings.isNew)
-        Delete_Button.Visible = False
-        cbKeepAlive.Checked = False
-        IP.Text = String.Empty
-        Broadcast.Text = Net.IPAddress.Broadcast.ToString()
-        rbIP.Checked = True
-        UDPPort.Text = "9"
-        TTL.Text = "128"
-        tRDPPort.Text = "3389"
-        tRDPFilename.Text = String.Empty
-        ComboBoxShutdownMethod.SelectedIndex = 0
-        TextBox_Notes.Text = String.Empty
-        Repeat.Text = "1"
-        ShowDialog(My.Forms.Explorer)
+        Try
+            _previousHostName = String.Empty
+            Text = String.Format(My.Resources.Strings.Properties, My.Resources.Strings.isNew)
+            Delete_Button.Visible = False
+            cbKeepAlive.Checked = False
+            IP.Text = String.Empty
+            Broadcast.Text = Net.IPAddress.Broadcast.ToString()
+            rbIP.Checked = True
+            UDPPort.Text = "9"
+            TTL.Text = "128"
+            tRDPPort.Text = "3389"
+            tRDPFilename.Text = String.Empty
+            ComboBoxShutdownMethod.SelectedIndex = 0
+            TextBox_Notes.Text = String.Empty
+            Repeat.Text = "1"
+            ShowDialog(My.Forms.Explorer)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.InnerException.ToString() & vbCrLf & ex.Message & vbCrLf & ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
     End Sub
 
     Public Sub Edit(ByVal hostName As String)

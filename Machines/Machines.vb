@@ -106,18 +106,18 @@ Imports System.Threading
 
                 Select Case Reply.Status
                     Case IPStatus.Success
-                        _backgroundWorker.ReportProgress(100)
+                        _backgroundWorker.ReportProgress(StatusCodes.Online)
 
                     Case IPStatus.TimedOut, IPStatus.DestinationNetworkUnreachable, IPStatus.DestinationHostUnreachable
-                        _backgroundWorker.ReportProgress(0)
+                        _backgroundWorker.ReportProgress(StatusCodes.Offline)
 
                     Case Else
-                        _backgroundWorker.ReportProgress(50)
+                        _backgroundWorker.ReportProgress(StatusCodes.Unknown)
 
                 End Select
 
             Catch ex As Exception
-                _backgroundWorker.ReportProgress(50)
+                _backgroundWorker.ReportProgress(StatusCodes.Unknown)
 
             Finally
                 Pool.Release()
@@ -137,7 +137,7 @@ Imports System.Threading
             If _backgroundWorker.CancellationPending Then Exit Sub
 
             Select Case e.ProgressPercentage
-                Case 100
+                Case StatusCodes.Online
                     newStatus = StatusCodes.Online
                     newIpAddress = Reply.Address.ToString
 
@@ -181,13 +181,13 @@ Imports System.Threading
                         RaiseEvent StatusChange(Name, Status, newIpAddress)
                     End If
 
-                Case 0
+                Case StatusCodes.Offline
                     If Status <> StatusCodes.Offline Then
                         Status = StatusCodes.Offline
                         RaiseEvent StatusChange(Name, Status, String.Empty)
                     End If
 
-                Case 50
+                Case StatusCodes.Unknown
                     RaiseEvent StatusChange(Name, Status, String.Empty)
 
             End Select
