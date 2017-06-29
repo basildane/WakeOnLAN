@@ -45,9 +45,7 @@ Public Class Explorer
 
         Location = My.Settings.MainWindow_Location
         Size = My.Settings.MainWindow_Size
-        If Not IsOnScreen(Me) Then
-            Location = New Point(0, 0)
-        End If
+        If Not IsOnScreen(Me) Then CenterForm(Me)
 
         MenuStrip.Location = New Point(0, 0)
 
@@ -221,7 +219,7 @@ Public Class Explorer
 
             If (debugHelper.Visible) Then
                 Dim machine As Machine = Machines(hostName)
-                debugHelper.Log(hostName & ": " & machine.Reply.Status.ToString())
+                debugHelper.Log(String.Format("{0}: {1}: {2}ms", hostName, machine.Reply.Status.ToString(), machine.Reply.RoundtripTime))
             End If
 
         Catch ex As Exception
@@ -405,14 +403,14 @@ Public Class Explorer
 
     Private Sub ResetWindowLayoutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ResetWindowLayoutToolStripMenuItem.Click, ResetWindowLayoutToolStripMenuItem1.Click
         My.Settings.MinimizeToTray = False
-
-        Size = New Size(650, 490)
-        Location = New Point(100, 100)
+        Size = New Size(780, 580)
         MinimizeToTaskTrayToolStripMenuItem.Checked = My.Settings.MinimizeToTray
         ShowInTaskbar = Not My.Settings.MinimizeToTray
         NotifyIcon1.Visible = My.Settings.MinimizeToTray
         Show()
         WindowState = FormWindowState.Normal
+        Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Height \ 2)
+        Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (Width \ 2)
         BringToFront()
         Activate()
     End Sub
@@ -533,8 +531,6 @@ Public Class Explorer
                     ToolStripStatusLabel2.Text = String.Format(My.Resources.Strings.ResponseTime, machine.Name, machine.Reply.RoundtripTime)
 
             End Select
-            'TODO: remove
-            ToolStripStatusLabel1.Text &= " [" & machine.Reply.Status.ToString() & "]"
 
         Catch ex As Exception
             ResetMonitor()
@@ -915,4 +911,5 @@ Public Class Explorer
         If (Not debugHelper.Visible) Then debugHelper.Show(Me)
         debugHelper.Log("Debug log started")
     End Sub
+
 End Class

@@ -137,6 +137,7 @@ Partial Class Explorer
         Me.SearchForMachinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScheduleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DebugLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
@@ -177,7 +178,6 @@ Partial Class Explorer
         Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.TimerUpdate = New System.Windows.Forms.Timer(Me.components)
         Me.CultureManager = New Localization.CultureManager(Me.components)
-        Me.DebugLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer.ContentPanel.SuspendLayout()
         Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -365,7 +365,7 @@ Partial Class Explorer
         '
         'NewToolStripMenuItem1
         '
-        Me.NewToolStripMenuItem1.Image = Global.WakeOnLan.My.Resources.Resources._new
+        Me.NewToolStripMenuItem1.Image = Global.WakeOnLan.My.Resources.Resources.FileNew
         Me.NewToolStripMenuItem1.Name = "NewToolStripMenuItem1"
         resources.ApplyResources(Me.NewToolStripMenuItem1, "NewToolStripMenuItem1")
         '
@@ -527,7 +527,7 @@ Partial Class Explorer
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem, Me.FoldersToolStripMenuItem, Me.ShowGroupsToolStripMenuItem, Me.ShowHotButtonsToolStripMenuItem, Me.EventLogToolStripMenuItem, Me.DebugLogToolStripMenuItem, Me.ToolStripSeparator7, Me.MinimizeToTaskTrayToolStripMenuItem, Me.AutoStartWithWindowsToolStripMenuItem, Me.ToolStripSeparator9, Me.ResetWindowLayoutToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem, Me.FoldersToolStripMenuItem, Me.ShowGroupsToolStripMenuItem, Me.ShowHotButtonsToolStripMenuItem, Me.EventLogToolStripMenuItem, Me.ToolStripSeparator7, Me.MinimizeToTaskTrayToolStripMenuItem, Me.AutoStartWithWindowsToolStripMenuItem, Me.ToolStripSeparator9, Me.ResetWindowLayoutToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         resources.ApplyResources(Me.ViewToolStripMenuItem, "ViewToolStripMenuItem")
         '
@@ -598,7 +598,7 @@ Partial Class Explorer
         '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.SearchForMachinesToolStripMenuItem, Me.ScheduleToolStripMenuItem, Me.ListenToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.SearchForMachinesToolStripMenuItem, Me.ScheduleToolStripMenuItem, Me.ListenToolStripMenuItem, Me.DebugLogToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         resources.ApplyResources(Me.ToolsToolStripMenuItem, "ToolsToolStripMenuItem")
         '
@@ -622,6 +622,12 @@ Partial Class Explorer
         Me.ListenToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.network_receive_48
         Me.ListenToolStripMenuItem.Name = "ListenToolStripMenuItem"
         resources.ApplyResources(Me.ListenToolStripMenuItem, "ListenToolStripMenuItem")
+        '
+        'DebugLogToolStripMenuItem
+        '
+        Me.DebugLogToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.log_icon
+        Me.DebugLogToolStripMenuItem.Name = "DebugLogToolStripMenuItem"
+        resources.ApplyResources(Me.DebugLogToolStripMenuItem, "DebugLogToolStripMenuItem")
         '
         'HelpToolStripMenuItem
         '
@@ -834,11 +840,6 @@ Partial Class Explorer
         'CultureManager
         '
         Me.CultureManager.ManagedControl = Me
-        '
-        'DebugLogToolStripMenuItem
-        '
-        Me.DebugLogToolStripMenuItem.Name = "DebugLogToolStripMenuItem"
-        resources.ApplyResources(Me.DebugLogToolStripMenuItem, "DebugLogToolStripMenuItem")
         '
         'Explorer
         '
