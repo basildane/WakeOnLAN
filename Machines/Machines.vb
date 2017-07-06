@@ -65,6 +65,8 @@ Imports System.Threading
     <XmlIgnore()> Public Status As StatusCodes = StatusCodes.Unknown
     <NonSerialized> <XmlIgnore()> Public Reply As PingReply
     <NonSerialized> <XmlIgnore()> Public Pool As Semaphore
+    <NonSerialized> <XmlIgnore()> Const data As String = "abcdefghijklmnopqrstuvwabcdefghi"
+    <NonSerialized> <XmlIgnore()> Dim buffer As Byte() = Text.Encoding.ASCII.GetBytes(data)
 
     Public Event StatusChange(ByVal Name As String, ByVal status As StatusCodes, ByVal IpAddress As String)
 
@@ -99,10 +101,14 @@ Imports System.Threading
     Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
         Do
             Try
+                Dim options As PingOptions = New PingOptions() With {
+                    .Ttl = TTL,
+                    .DontFragment = True
+                }
+
                 Debug.Assert(Not IsNothing(Pool))
-                Debug.WriteLine("pool wait : " & Name)
                 Pool.WaitOne()
-                Reply = ping.Send(e.Argument, 5000)
+                Reply = ping.Send(e.Argument, 10000, buffer, options)
 
                 Select Case Reply.Status
                     Case IPStatus.Success
@@ -121,7 +127,6 @@ Imports System.Threading
 
             Finally
                 Pool.Release()
-                Debug.WriteLine("pool release : " & Name)
                 Thread.Sleep(2000)
 
             End Try
