@@ -23,15 +23,9 @@ if($config -ne 'Release')
 	exit 0
 }
 
-$sgen = "${Env:ProgramFiles(x86)}\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools\x64\sgen.exe"
-$signtool = "${Env:ProgramFiles(x86)}\Windows Kits\10\bin\x64\signtool.exe"
-$subject = "Open Source Developer, Phillip Tull"
-
 Try
 {
-	# sign the DLL
-	#& $signtool sign /a /n "$subject" /fd sha1 /t http://timestamp.comodoca.com/authenticode /d "$project" "$target"
-	#& $signtool sign /a /n "$subject" /as /fd sha256 /td sha256 /tr http://timestamp.comodoca.com/rfc3161 /d "$project" "$target"
+	$sgen = "${Env:ProgramFiles(x86)}\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools\x64\sgen.exe"
 }
 Catch [system.exception]
 {
