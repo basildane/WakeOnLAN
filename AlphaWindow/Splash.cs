@@ -19,7 +19,6 @@
  */
 
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -36,6 +35,12 @@ namespace AlphaWindow
         private static String _title;
         private static String _version;
         private static String _copyright;
+
+#if DEBUG
+        private const int delay = 20;
+#else
+        private const int delay = 40;
+#endif
 
         static public void ShowSplash(Bitmap bitmap, String title, String version, String copyright)
 	    {
@@ -60,7 +65,8 @@ namespace AlphaWindow
 	    private static void ShowForm()
 	    {
             ShowIt();
-            for (int i = 1; i <= 40; i++)
+            Thread.Sleep(10);
+            for (int i = 1; i <= delay; i++)
             {
                 Thread.Sleep(100);
             }
