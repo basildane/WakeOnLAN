@@ -65,6 +65,8 @@ Imports System.Threading
     <XmlIgnore()> Public Status As StatusCodes = StatusCodes.Unknown
     <NonSerialized> <XmlIgnore()> Public Reply As PingReply
     <NonSerialized> <XmlIgnore()> Public Pool As Semaphore
+    <NonSerialized> <XmlIgnore()> Const data As String = "abcdefghijklmnopqrstuvwabcdefghi"
+    <NonSerialized> <XmlIgnore()> Dim buffer As Byte() = Text.Encoding.ASCII.GetBytes(data)
 
     Public Event StatusChange(ByVal Name As String, ByVal status As StatusCodes, ByVal IpAddress As String)
 
@@ -99,23 +101,32 @@ Imports System.Threading
     Private Sub DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles _backgroundWorker.DoWork
         Do
             Try
-                Debug.Assert(Not IsNothing(Pool))
-                Debug.WriteLine("pool wait : " & Name)
-                Pool.WaitOne()
-                Reply = ping.Send(e.Argument, 1500)
+                Dim options As PingOptions = New PingOptions() With {
+                    .Ttl = TTL,
+                    .DontFragment = True
+                }
 
-                If Reply.Status = IPStatus.Success Then
-                    _backgroundWorker.ReportProgress(100)
-                Else
-                    _backgroundWorker.ReportProgress(0)
-                End If
+                Debug.Assert(Not IsNothing(Pool))
+                Pool.WaitOne()
+                Reply = ping.Send(e.Argument, 10000, buffer, options)
+
+                Select Case Reply.Status
+                    Case IPStatus.Success
+                        _backgroundWorker.ReportProgress(StatusCodes.Online)
+
+                    Case IPStatus.TimedOut, IPStatus.DestinationNetworkUnreachable, IPStatus.DestinationHostUnreachable
+                        _backgroundWorker.ReportProgress(StatusCodes.Offline)
+
+                    Case Else
+                        _backgroundWorker.ReportProgress(StatusCodes.Unknown)
+
+                End Select
 
             Catch ex As Exception
-                _backgroundWorker.ReportProgress(0)
+                _backgroundWorker.ReportProgress(StatusCodes.Unknown)
 
             Finally
                 Pool.Release()
-                Debug.WriteLine("pool release : " & Name)
                 Thread.Sleep(2000)
 
             End Try
@@ -131,7 +142,7 @@ Imports System.Threading
             If _backgroundWorker.CancellationPending Then Exit Sub
 
             Select Case e.ProgressPercentage
-                Case 100
+                Case StatusCodes.Online
                     newStatus = StatusCodes.Online
                     newIpAddress = Reply.Address.ToString
 
@@ -175,11 +186,14 @@ Imports System.Threading
                         RaiseEvent StatusChange(Name, Status, newIpAddress)
                     End If
 
-                Case Else
+                Case StatusCodes.Offline
                     If Status <> StatusCodes.Offline Then
                         Status = StatusCodes.Offline
-                        RaiseEvent StatusChange(Name, Status, "")
+                        RaiseEvent StatusChange(Name, Status, String.Empty)
                     End If
+
+                Case StatusCodes.Unknown
+                    RaiseEvent StatusChange(Name, Status, String.Empty)
 
             End Select
 
@@ -194,7 +208,7 @@ Imports System.Threading
         Try
             Debug.WriteLine("RunWorkerCompleted:: " & Name & " " & e.Result)
             Status = StatusCodes.Unknown
-            RaiseEvent StatusChange(Name, Status, "")
+            RaiseEvent StatusChange(Name, Status, String.Empty)
 
         Catch ex As Exception
             Debug.Fail(ex.Message)
@@ -205,11 +219,11 @@ Imports System.Threading
 
     Private Function CompareMac(mac1 As String, mac2 As String) As Int32
 
-        Dim _mac1 As String = Replace(mac1, ":", "")
-        _mac1 = Replace(_mac1, "-", "")
+        Dim _mac1 As String = Replace(mac1, ":", String.Empty)
+        _mac1 = Replace(_mac1, "-", String.Empty)
 
-        Dim _mac2 As String = Replace(mac2, ":", "")
-        _mac2 = Replace(_mac2, "-", "")
+        Dim _mac2 As String = Replace(mac2, ":", String.Empty)
+        _mac2 = Replace(_mac2, "-", String.Empty)
 
         Return StrComp(_mac1, _mac2, CompareMethod.Text)
 

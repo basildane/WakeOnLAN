@@ -130,7 +130,7 @@
   </data>
   <data name="ToolStripStatusLabel1.Text" xml:space="preserve">
     <value>[strip1]</value>
-  <comment>@Invariant</comment></data>
+  </data>
   <data name="ToolStripStatusLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
@@ -139,7 +139,7 @@
   </data>
   <data name="ToolStripStatusLabel2.Text" xml:space="preserve">
     <value>[strip2]</value>
-  <comment>@Invariant</comment></data>
+  </data>
   <data name="ToolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
   </data>
@@ -158,7 +158,7 @@
   </data>
   <data name="StatusStrip.Text" xml:space="preserve">
     <value>[StatusStrip]</value>
-  <comment>@Invariant</comment></data>
+  </data>
   <data name="&gt;&gt;StatusStrip.Name" xml:space="preserve">
     <value>StatusStrip</value>
   </data>
@@ -1127,7 +1127,7 @@
   </data>
   <data name="SplitContainer.Text" xml:space="preserve">
     <value>[SplitContainer1]</value>
-  <comment>@Invariant</comment></data>
+  </data>
   <data name="&gt;&gt;SplitContainer.Name" xml:space="preserve">
     <value>SplitContainer</value>
   </data>
@@ -1193,7 +1193,7 @@
   </data>
   <data name="ToolStripContainer.Text" xml:space="preserve">
     <value>[ToolStripContainer1]</value>
-  <comment>@Invariant</comment></data>
+  </data>
   <metadata name="MenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
@@ -1637,6 +1637,12 @@
   <data name="ListenToolStripMenuItem.Text" xml:space="preserve">
     <value>Listener</value>
   </data>
+  <data name="DebugLogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="DebugLogToolStripMenuItem.Text" xml:space="preserve">
+    <value>Debug Log</value>
+  </data>
   <data name="ToolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 20</value>
   </data>
@@ -1690,7 +1696,7 @@
   </data>
   <data name="MenuStrip.Text" xml:space="preserve">
     <value>[MenuStrip1]</value>
-  <comment>@Invariant</comment></data>
+  </data>
   <data name="&gt;&gt;MenuStrip.Name" xml:space="preserve">
     <value>MenuStrip</value>
   </data>
@@ -1768,8 +1774,6 @@
         IWMXGkra7a9STACjOPdFEHBVBP6Q5ezscPPKOfdNN/j1O5COV8YcNyEzBPvgJUrcOp2S3cZRWsTcI/Ln
         f+yaN7HbmHi33vvK9ANbcyCzC881s6c8vGvY4K4vyJ/8OWqc0+3DYzb1zrGE9a57oo/jGPn1n6969XLo
         Kk//qr/qj1sODv8GPhwwgXsdTSgAAAAASUVORK5CYII=
-        Y/s+K7/y31FTHe6eGLJ1cIrBd3DDE0Psp8jL/301aJBdX3n6//p//XLLzu7vF159+viUOL0AAAAASUVO
-        RK5CYII=
 </value>
   </data>
   <data name="FoldersToolStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -7978,7 +7982,7 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>[title]</value>
-  <comment>@Invariant</comment></data>
+  </data>
   <data name="&gt;&gt;ToolStripStatusLabel1.Name" xml:space="preserve">
     <value>ToolStripStatusLabel1</value>
   </data>
@@ -8325,6 +8329,12 @@
     <value>ListenToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;ListenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DebugLogToolStripMenuItem.Name" xml:space="preserve">
+    <value>DebugLogToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DebugLogToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HelpToolStripMenuItem.Name" xml:space="preserve">

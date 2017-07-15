@@ -29,12 +29,9 @@ $subject = "Open Source Developer, Phillip Tull"
 
 Try
 {
-	# generate XML serializer
-	# & $sgen "$target" /force
-
 	# sign the DLL
-	& $signtool sign /a /n "$subject" /fd sha1 /t http://timestamp.comodoca.com/authenticode /d "$project" "$target"
-	& $signtool sign /a /n "$subject" /as /fd sha256 /td sha256 /tr http://timestamp.comodoca.com/rfc3161 /d "$project" "$target"
+	#& $signtool sign /a /n "$subject" /fd sha1 /t http://timestamp.comodoca.com/authenticode /d "$project" "$target"
+	#& $signtool sign /a /n "$subject" /as /fd sha256 /td sha256 /tr http://timestamp.comodoca.com/rfc3161 /d "$project" "$target"
 }
 Catch [system.exception]
 {

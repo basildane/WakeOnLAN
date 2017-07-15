@@ -266,14 +266,15 @@ Public Class AquilaWolLibrary
                 shutdownCommand.AppendFormat(" /c ""{0}""", message)
             End If
 
-            Dim pi As ProcessStartInfo = New ProcessStartInfo()
-            pi.Arguments = shutdownCommand.ToString()
-            pi.FileName = "cmd.exe"
-            pi.CreateNoWindow = True
-            pi.WindowStyle = ProcessWindowStyle.Hidden
-            pi.UseShellExecute = False
-            pi.RedirectStandardError = True
-            pi.RedirectStandardOutput = False
+            Dim pi As ProcessStartInfo = New ProcessStartInfo() With {
+                .Arguments = shutdownCommand.ToString(),
+                .FileName = "cmd.exe",
+                .CreateNoWindow = True,
+                .WindowStyle = ProcessWindowStyle.Hidden,
+                .UseShellExecute = False,
+                .RedirectStandardError = True,
+                .RedirectStandardOutput = False
+            }
             p.StartInfo = pi
             p.Start()
 

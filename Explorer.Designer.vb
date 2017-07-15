@@ -137,6 +137,7 @@ Partial Class Explorer
         Me.SearchForMachinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScheduleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DebugLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
@@ -364,7 +365,7 @@ Partial Class Explorer
         '
         'NewToolStripMenuItem1
         '
-        Me.NewToolStripMenuItem1.Image = Global.WakeOnLan.My.Resources.Resources._new
+        Me.NewToolStripMenuItem1.Image = Global.WakeOnLan.My.Resources.Resources.FileNew
         Me.NewToolStripMenuItem1.Name = "NewToolStripMenuItem1"
         resources.ApplyResources(Me.NewToolStripMenuItem1, "NewToolStripMenuItem1")
         '
@@ -598,7 +599,7 @@ Partial Class Explorer
         '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.SearchForMachinesToolStripMenuItem, Me.ScheduleToolStripMenuItem, Me.ListenToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.SearchForMachinesToolStripMenuItem, Me.ScheduleToolStripMenuItem, Me.ListenToolStripMenuItem, Me.DebugLogToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         resources.ApplyResources(Me.ToolsToolStripMenuItem, "ToolsToolStripMenuItem")
         '
@@ -622,6 +623,12 @@ Partial Class Explorer
         Me.ListenToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.network_receive_48
         Me.ListenToolStripMenuItem.Name = "ListenToolStripMenuItem"
         resources.ApplyResources(Me.ListenToolStripMenuItem, "ListenToolStripMenuItem")
+        '
+        'DebugLogToolStripMenuItem
+        '
+        Me.DebugLogToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.log_icon
+        Me.DebugLogToolStripMenuItem.Name = "DebugLogToolStripMenuItem"
+        resources.ApplyResources(Me.DebugLogToolStripMenuItem, "DebugLogToolStripMenuItem")
         '
         'HelpToolStripMenuItem
         '
@@ -935,4 +942,5 @@ Partial Class Explorer
     Friend WithEvents TimerUpdate As System.Windows.Forms.Timer
     Friend WithEvents TrayMenuItemRDP As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TrayMenuItemShutdown As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DebugLogToolStripMenuItem As ToolStripMenuItem
 End Class

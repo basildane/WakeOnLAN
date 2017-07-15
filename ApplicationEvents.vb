@@ -22,7 +22,6 @@ Imports Localization
 Imports AlphaWindow
 Imports System.Runtime.InteropServices
 Imports Microsoft.Win32
-Imports System.Windows.Forms
 
 Namespace My
 
@@ -65,9 +64,11 @@ Namespace My
                 version &= " BETA " & Application.Info.Version.Revision
             End If
 
+#If Not DEBUG Then
             If (Settings.ShowSplash) Then
                 Splash.ShowSplash(Resources.Splash, Resources.Strings.Title, version, Resources.Strings.Copyright)
             End If
+#End If
 
         End Sub
 
@@ -180,15 +181,18 @@ Namespace My
             End Try
 
             Try
-                For i As Int16 = 0 To CommandLineArgs.Count
+                For i As Int16 = 0 To CommandLineArgs.Count - 1
                     If (CommandLineArgs(i) = "-p") Then
                         Settings.dbPath = CommandLineArgs(i + 1)
-                        Return
+                        Exit For
                     End If
                 Next
 
                 regKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
-                database = regKey.GetValue("Database", IO.Directory.GetParent(Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, Microsoft.Win32.RegistryValueOptions.None)
+                If regKey Is Nothing Then
+                    regKey = Registry.CurrentUser.CreateSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadWriteSubTree, RegistryOptions.None)
+                End If
+                database = regKey.GetValue("Database", IO.Directory.GetParent(Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, RegistryValueOptions.None)
                 regKey.Close()
 
                 filename = IO.Path.GetFileName(Settings.dbPath)

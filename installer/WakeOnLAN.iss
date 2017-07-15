@@ -41,8 +41,8 @@ WizardSmallImageFile={#rootFolder}\Resources\connected.bmp
 AppCopyright=Copyright Aquila Technology
 
 ; declare mysign=$p
-SignTool=mysign {#signtool} sign /a /n $q{#subject}$q /fd sha1 /t http://timestamp.comodoca.com/authenticode /d $q{#MyAppName}$q $f
-SignTool=mysign {#signtool} sign /a /n $q{#subject}$q /as /fd sha256 /td sha256 /tr http://timestamp.comodoca.com/rfc3161 /d $q{#MyAppName}$q $f
+;SignTool=mysign {#signtool} sign /a /n $q{#subject}$q /fd sha1 /t http://timestamp.comodoca.com/authenticode /d $q{#MyAppName}$q $f
+;SignTool=mysign {#signtool} sign /a /n $q{#subject}$q /as /fd sha256 /td sha256 /tr http://timestamp.comodoca.com/rfc3161 /d $q{#MyAppName}$q $f
 
 [Languages]
 Name: "en";    MessagesFile: "compiler:Default.isl"

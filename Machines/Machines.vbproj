@@ -46,6 +46,16 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release %28unsigned%29|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release %28unsigned%29\</OutputPath>
+    <DocumentationFile>Machines.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -104,7 +114,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
-    <PostBuildEvent>Powershell -File "$(ProjectDir)build.ps1" -config $(ConfigurationName) -source $(SolutionDir) -project $(ProjectName) -target $(TargetPath)</PostBuildEvent>
+    <PostBuildEvent>Powershell -File "$(ProjectDir)build.ps1" -config "$(ConfigurationName)" -source $(SolutionDir) -project $(ProjectName) -target $(TargetPath)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
