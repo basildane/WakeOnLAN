@@ -114,10 +114,10 @@ Public Class MachinesClass
 
     Public Sub Export(ByVal filename As String)
         Dim serializer As New XmlSerializer(GetType(MachinesClass))
-        Dim writer As IO.StreamWriter
+        Dim writer As StreamWriter
 
         Try
-            writer = New IO.StreamWriter(filename)
+            writer = New StreamWriter(filename)
             serializer.Serialize(writer, Machines)
             writer.Close()
 

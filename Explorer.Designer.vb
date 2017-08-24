@@ -436,6 +436,7 @@ Partial Class Explorer
         '
         'NewToolStripMenuItem
         '
+        Me.NewToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.FileNew
         resources.ApplyResources(Me.NewToolStripMenuItem, "NewToolStripMenuItem")
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         '
