@@ -193,7 +193,10 @@ Imports System.Threading
                     End If
 
                 Case StatusCodes.Unknown
-                    RaiseEvent StatusChange(Name, Status, String.Empty)
+                    If Status <> StatusCodes.Unknown Then
+                        Status = StatusCodes.Unknown
+                        RaiseEvent StatusChange(Name, Status, String.Empty)
+                    End If
 
             End Select
 
