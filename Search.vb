@@ -139,6 +139,9 @@ Public Class Search
         Dim profile As New Profile
 
         Try
+            Debug.WriteLine("Entering GetWMIdata <" & ip & ">")
+            Debug.Indent()
+
             scopeCimv2 = New ManagementScope("\\" & ip & "\root\cimv2")
             scopeCimv2.Connect()
             scopeWmi = New ManagementScope("\\" & ip & "\root\WMI")
@@ -151,7 +154,9 @@ Public Class Search
 
             For Each managementObject In queryCollection
                 profile.Name = managementObject("csname")
+                Debug.WriteLine("profile.name " & profile.Name)
                 profile.OsName = managementObject("Caption")
+                Debug.WriteLine("profile.osname " & profile.OsName)
                 Exit For
             Next
 
@@ -163,6 +168,7 @@ Public Class Search
             For Each managementObject In queryCollection
                 For Each s As String In managementObject("IPaddress")
                     profile.IpAddress = s
+                    Debug.WriteLine("profile.ipaddress " & profile.IpAddress)
                     Exit For
                 Next
 
@@ -171,7 +177,9 @@ Public Class Search
 
                 For Each managementObjectAdapter As ManagementObject In searcher.Get()
                     profile.NetInterface = managementObjectAdapter("Description")
+                    Debug.WriteLine("profile.netinterface " & profile.NetInterface)
                     profile.MacAddress = managementObjectAdapter("MACAddress")
+                    Debug.WriteLine("profile.macaddress " & profile.MacAddress)
 
                     Try
                         wmiQuery = New ObjectQuery("SELECT * FROM MSPower_DeviceEnable")
@@ -180,6 +188,7 @@ Public Class Search
                             If (managementObject2("InstanceName").ToString().ToUpper.StartsWith(managementObjectAdapter("PNPDeviceID"))) Then
                                 profile.PowerManagementEnable = IIf(managementObject2("Enable"), Resources.Strings.lit_true, Resources.Strings.lit_false)
                                 profile.PowerManagementActive = IIf(managementObject2("Active"), Resources.Strings.lit_true, Resources.Strings.lit_false)
+                                Debug.WriteLine("profile.PowerManagementActive " & profile.PowerManagementActive)
                                 Exit For
                             End If
                         Next
@@ -189,6 +198,7 @@ Public Class Search
                         For Each managementObject2 As ManagementObject In searcher2.Get()
                             If (managementObject2("InstanceName").ToString().ToUpper.StartsWith(managementObjectAdapter("PNPDeviceID"))) Then
                                 profile.WakeEnabled = IIf(managementObject2("Enable"), Resources.Strings.lit_true, Resources.Strings.lit_false)
+                                Debug.WriteLine("profile.WakeEnabled " & profile.WakeEnabled)
                                 Exit For
                             End If
                         Next
@@ -198,11 +208,13 @@ Public Class Search
                         For Each managementObject2 As ManagementObject In searcher2.Get()
                             If (managementObject2("InstanceName").ToString().ToUpper.StartsWith(managementObjectAdapter("PNPDeviceID"))) Then
                                 profile.WakeOnMagicOnly = IIf(managementObject2("EnableWakeOnMagicPacketOnly"), Resources.Strings.lit_true, Resources.Strings.lit_false)
+                                Debug.WriteLine("profile.WakeOnMagicOnly " & profile.WakeOnMagicOnly)
                                 Exit For
                             End If
                         Next
 
-                    Catch
+                    Catch ex As Exception
+                        Debug.WriteLine("Exception1: " & ex.Message)
 
                     End Try
 
@@ -210,6 +222,7 @@ Public Class Search
             Next
 
         Catch ex As Exception
+            Debug.WriteLine("Exception2: " & ex.Message)
             profile.IpAddress = ip
             profile = FindMAC(profile)
 
@@ -221,6 +234,8 @@ Public Class Search
         If String.IsNullOrEmpty(profile.WakeEnabled) Then profile.WakeEnabled = Resources.Strings.lit_Unknown
         If String.IsNullOrEmpty(profile.WakeOnMagicOnly) Then profile.WakeOnMagicOnly = Resources.Strings.lit_Unknown
 
+        Debug.Unindent()
+        Debug.WriteLine("Leaving GetWMIdata")
         Return profile
 
     End Function
@@ -233,22 +248,32 @@ Public Class Search
         Dim hostEntry As IPHostEntry
 
         Try
+            Debug.WriteLine("Entering FindMAC")
+            Debug.Indent()
+
             address = IPAddress.Parse(profile.IpAddress)
             remoteIp = address.GetHashCode()
+            Debug.WriteLine("IP: " & address.ToString())
 
             If remoteIp <> 0 Then
                 If SendARP(remoteIp, 0, mac, len) = 0 Then
                     profile.MacAddress = BitConverter.ToString(mac, 0, len)
+                    Debug.WriteLine("MAC: " & profile.MacAddress)
                     hostEntry = Dns.GetHostEntry(address)
                     profile.Name = hostEntry.HostName
+                    Debug.WriteLine("name: " & hostEntry.HostName)
                     profile.OsName = Resources.Strings.lit_Unknown
                 End If
             End If
 
         Catch ex As Exception
             profile.OsName = ex.Message
+            Debug.WriteLine("Exception: " & ex.Message)
 
         End Try
+
+        Debug.Unindent()
+        Debug.WriteLine("Leaving FindMAC")
 
         Return profile
 
@@ -302,26 +327,40 @@ Public Class Search
         Dim p As Profile
 
         Try
+            Debug.WriteLine("Entering backgroundWorker_ProgressChanged")
+            Debug.Indent()
 
+            Debug.WriteLine("e.UserState null? " & (e.UserState Is Nothing))
             If Not (e.UserState Is Nothing) Then
                 p = e.UserState
 #If DISPLAY Then
             p.MacAddress = p.MacAddress.Substring(0, 9) & "00:00:00"
 #End If
+                Debug.WriteLine("adding p.Name")
                 i = listView.Items.Add(p.Name)
+                Debug.WriteLine("adding p.OsName")
                 i.SubItems.Add(p.OsName)
+                Debug.WriteLine("adding p.NetInterface")
                 i.SubItems.Add(p.NetInterface)
+                Debug.WriteLine("adding p.IpAddress")
                 i.SubItems.Add(p.IpAddress)
+                Debug.WriteLine("adding p.MacAddress")
                 i.SubItems.Add(p.MacAddress)
+                Debug.WriteLine("adding p.WakeEnabled")
                 i.SubItems.Add(p.WakeEnabled)
             End If
 
+            Debug.WriteLine("writing progress: " & e.ProgressPercentage)
             ToolStripProgressBar1.Value = e.ProgressPercentage
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error in [backgroundWorker_ProgressChanged]", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Debug.WriteLine("backgroundWorker_ProgressChanged Exception: " & ex.Message)
+            'MessageBox.Show(ex.Message, "Error in [backgroundWorker_ProgressChanged]", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
+
+        Debug.Unindent()
+        Debug.WriteLine("Leaving backgroundWorker_ProgressChanged")
 
     End Sub
 

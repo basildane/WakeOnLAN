@@ -29,7 +29,6 @@ Public Class Explorer
     Private allowClose As Boolean = False
     Private WithEvents _historyBackgroundworker As New BackgroundWorker()
     Public Shared Pool As Semaphore = New Semaphore(0, My.Settings.Threads)
-    Private debugForm As New debugHelper
 
     Public Sub New()
 
@@ -152,9 +151,11 @@ Public Class Explorer
         End If
 
         SaveChanges()
+        Debug.WriteLine("Explorer_FormClosing, reason: " & e.CloseReason.ToString())
     End Sub
 
     Private Sub SaveChanges()
+        Debug.WriteLine("SaveChanges")
         My.Settings.ListView_View = ListView.View
         My.Settings.ListView_Columns = SaveListViewState(ListView)
 
@@ -217,16 +218,8 @@ Public Class Explorer
             ListView.Items(hostName).Group = ListView.Groups(Status.ToString)
             ListView.Sort()
 
-            If (debugHelper.Visible) Then
-                Dim machine As Machine = Machines(hostName)
-                debugHelper.Log(String.Format("{0}: {1}: {2}ms", hostName, machine.Reply.Status.ToString(), machine.Reply.RoundtripTime))
-            End If
-
         Catch ex As Exception
-            Debug.WriteLine("(statuschange error)" & ex.Message)
-            If (debugHelper.Visible) Then
-                debugHelper.Log(hostName & ": " & ex.Message)
-            End If
+            Debug.WriteLine("Explorer::StatusChange exception: " & hostName & ", " & ex.Message)
 
         End Try
     End Sub
@@ -900,16 +893,11 @@ Public Class Explorer
     End Sub
 
     Private Sub ToolStripMenuItemWakeUp_Click(sender As Object, e As EventArgs) Handles TrayMenuItemWakeUp.Click
-
+        'TODO
     End Sub
 
     Private Sub Explorer_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         My.Settings.Save()
-    End Sub
-
-    Private Sub DebugLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DebugLogToolStripMenuItem.Click
-        If (Not debugHelper.Visible) Then debugHelper.Show(Me)
-        debugHelper.Log("Debug log started")
     End Sub
 
 End Class

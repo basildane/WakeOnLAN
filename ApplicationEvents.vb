@@ -23,6 +23,12 @@ Imports AlphaWindow
 Imports System.Runtime.InteropServices
 Imports Microsoft.Win32
 
+#If DEBUG Then
+Imports System.Reflection
+Imports System.Linq
+#End If
+
+
 Namespace My
 
     ' The following events are available for MyApplication:
@@ -42,15 +48,27 @@ Namespace My
         Private Shared Function ShowWindow(ByVal hwnd As IntPtr, ByVal nCmdShow As Int32) As Boolean
         End Function
 
-        ' Defines:
-        ' DISPLAY  - used to zero out the last part of MAC addresses for screenshots
-
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As ApplicationServices.StartupEventArgs) Handles Me.Startup
             If (Control.ModifierKeys = Keys.Control) Then
                 SafeMode.ShowDialog()
             End If
 
+#If DEBUG Then
+            Dim filename As String = IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "wakeonlan.tracelog")
+            Dim trace As TextWriterTraceListener = New TextWriterTraceListener(IO.File.CreateText(filename))
+            Debug.Listeners.Add(trace)
+            Debug.AutoFlush() = True
+            Debug.WriteLine("***********************************************")
+            Debug.WriteLine("WakeOnLAN started at " & DateTime.UtcNow.ToString & " UTC")
             Debug.WriteLine("CommonApplicationData: " & Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData))
+            Debug.WriteLine(Environment.OSVersion.VersionString)
+
+            Debug.WriteLine("Assemblies*************************************")
+            For Each a As AssemblyName In Assembly.GetExecutingAssembly().GetReferencedAssemblies().ToArray()
+                Debug.WriteLine(String.Format("{0}: {1}", a.Name, a.Version))
+            Next
+            Debug.WriteLine("***********************************************")
+#End If
 
             singleInstance()
             upgradeSettings()
@@ -63,12 +81,12 @@ Namespace My
             If (Application.Info.Version.Revision > 0) Then
                 version &= " BETA " & Application.Info.Version.Revision
             End If
+            Debug.WriteLine(version)
+            Debug.WriteLine("***********************************************")
 
-#If Not DEBUG Then
             If (Settings.ShowSplash) Then
                 Splash.ShowSplash(Resources.Splash, Resources.Strings.Title, version, Resources.Strings.Copyright)
             End If
-#End If
 
         End Sub
 

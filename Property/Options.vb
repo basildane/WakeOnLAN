@@ -64,7 +64,11 @@ Public Class Options
 
             End Try
 
+#If DEBUG Then
+            Application.Exit()
+#Else
             Application.Restart()
+#End If
         End If
 
         Dispose()

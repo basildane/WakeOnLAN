@@ -18,25 +18,42 @@
 
 Param([string]$config, [string]$source, [string]$project, [string]$target)
 
-if($config -ne 'Release')
+if($config -eq 'Release')
 {
-	exit 0
+	$sgen = "${Env:ProgramFiles(x86)}\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools\x64\sgen.exe"
+
+	Try
+	{
+		# generate XML serializer
+		& $sgen "$target" /t:WakeOnLan.Task /force
+
+		# build the installer
+		& "${Env:ProgramFiles(x86)}\Inno Setup 5\iscc" /Q "$source\installer\WakeOnLAN.iss"
+	}
+	Catch [system.exception]
+	{
+		"Error"
+		exit 1
+	}
 }
 
-$sgen = "${Env:ProgramFiles(x86)}\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools\x64\sgen.exe"
-
-Try
+if($config -eq 'Checked')
 {
-	# generate XML serializer
-	& $sgen "$target" /t:WakeOnLan.Task /force
+	$sgen = "${Env:ProgramFiles(x86)}\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools\x64\sgen.exe"
 
-	# build the installer
-	& "${Env:ProgramFiles(x86)}\Inno Setup 5\iscc" /Q "$source\installer\WakeOnLAN.iss"
-}
-Catch [system.exception]
-{
-	"Error"
-	exit 1
+	Try
+	{
+		# generate XML serializer
+		& $sgen "$target" /t:WakeOnLan.Task /force
+
+		# build the installer
+		& "${Env:ProgramFiles(x86)}\Inno Setup 5\iscc" /Q "$source\installer\WakeOnLAN-checked.iss"
+	}
+	Catch [system.exception]
+	{
+		"Error"
+		exit 1
+	}
 }
 
 echo "Build.ps1 $config completed"

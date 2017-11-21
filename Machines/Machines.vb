@@ -22,7 +22,10 @@ Imports System.Xml.Serialization
 Imports System.Net
 Imports System.Threading
 
-<Serializable()> <CLSCompliant(True)> Public Class Machine
+<DebuggerDisplay("{Name,nq}")>
+<Serializable()>
+<CLSCompliant(True)>
+Public Class Machine
 
     <NonSerialized> Private WithEvents _backgroundWorker As New BackgroundWorker
     <NonSerialized> Private WithEvents ping As New Ping
@@ -139,6 +142,9 @@ Imports System.Threading
         Dim newIpAddress As String
 
         Try
+            Debug.WriteLine("Machines::backgroundWorker_ProgressChanged: " & Name)
+            Debug.Indent()
+
             If _backgroundWorker.CancellationPending Then Exit Sub
 
             Select Case e.ProgressPercentage
@@ -158,8 +164,10 @@ Imports System.Threading
                                 Dim dWord As Integer
 
                                 Try
-                                    remoteIp = ipAddress.GetHashCode()
-                                    If remoteIp <> 0 Then
+									remoteIp = ipAddress.GetHashCode()
+									Debug.WriteLine("dns returned: " & ipAddress.ToString())
+
+									If remoteIp <> 0 Then
                                         dWord = SendARP(remoteIp, 0, remoteMac, remoteMac.Length)
                                         If dWord = 0 Or dWord = 67 Then
                                             '
@@ -169,7 +177,8 @@ Imports System.Threading
                                             If CompareMac(BitConverter.ToString(remoteMac, 0, remoteMac.Length), MAC) = 0 Or dWord = 67 Then
                                                 newStatus = StatusCodes.Online
                                                 newIpAddress = ipAddress.ToString()
-                                                Exit For
+												Debug.WriteLine("match: " & newIpAddress)
+												Exit For
                                             End If
                                         End If
                                     End If
@@ -182,18 +191,21 @@ Imports System.Threading
                     End If
 
                     If (Status <> newStatus) Then
+                        Debug.WriteLine(String.Format("{0}: {1}: {2}ms", "going Online", Reply.Status.ToString(), Reply.RoundtripTime))
                         Status = newStatus
                         RaiseEvent StatusChange(Name, Status, newIpAddress)
                     End If
 
                 Case StatusCodes.Offline
                     If Status <> StatusCodes.Offline Then
+                        Debug.WriteLine("going Offline")
                         Status = StatusCodes.Offline
                         RaiseEvent StatusChange(Name, Status, String.Empty)
                     End If
 
                 Case StatusCodes.Unknown
                     If Status <> StatusCodes.Unknown Then
+                        Debug.WriteLine("going Unknown")
                         Status = StatusCodes.Unknown
                         RaiseEvent StatusChange(Name, Status, String.Empty)
                     End If
@@ -201,10 +213,13 @@ Imports System.Threading
             End Select
 
         Catch ex As Exception
+            Debug.WriteLine("Exception: " & ex.Message)
             Debug.Fail(ex.Message)
 
         End Try
 
+        Debug.Unindent()
+        Debug.WriteLine("Leaving Machines::backgroundWorker_ProgressChanged: " & Name)
     End Sub
 
     Private Sub RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted

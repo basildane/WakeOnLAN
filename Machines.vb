@@ -90,6 +90,9 @@ Public Class MachinesClass
     End Sub
 
     Private Sub CheckUpgrade()
+        Debug.WriteLine("Loading database")
+        Debug.Indent()
+
         For Each machine As Machine In Machines
             machine.Pool = _pool
 
@@ -109,7 +112,33 @@ Public Class MachinesClass
                 Dirty = True
                 machine.RDPPort = 3389
             End If
+
+            Debug.WriteLine("Machine: " & machine.Name)
+            Debug.Indent()
+            Debug.WriteLine("MAC [" & machine.MAC & "]")
+            Debug.WriteLine("IP [" & machine.IP & "]")
+            Debug.WriteLine("Broadcast [" & machine.Broadcast & "]")
+            Debug.WriteLine("Netbios [" & machine.Netbios & "]")
+            Debug.WriteLine("Method [" & machine.Method & "]")
+            Debug.WriteLine("Emergency [" & machine.Emergency & "]")
+            Debug.WriteLine("ShutdownCommand [" & machine.ShutdownCommand & "]")
+            Debug.WriteLine("Group [" & machine.Group & "]")
+            Debug.WriteLine("UDPPort [" & machine.UDPPort & "]")
+            Debug.WriteLine("TTL [" & machine.TTL & "]")
+            Debug.WriteLine("RDPPort [" & machine.RDPPort & "]")
+            Debug.WriteLine("RDPFile [" & machine.RDPFile & "]")
+            Debug.WriteLine("Note [" & machine.Note & "]")
+            Debug.WriteLine("UserID [" & machine.UserID & "]")
+            Debug.WriteLine("Domain [" & machine.Domain & "]")
+            Debug.WriteLine("ShutdownMethod [" & machine.ShutdownMethod & "]")
+            Debug.WriteLine("KeepAlive [" & machine.KeepAlive & "]")
+            Debug.WriteLine("RepeatCount [" & machine.RepeatCount & "]")
+            Debug.Unindent()
         Next
+
+        Debug.Unindent()
+        Debug.WriteLine("Database complete")
+        Debug.WriteLine("***********************************************")
     End Sub
 
     Public Sub Export(ByVal filename As String)

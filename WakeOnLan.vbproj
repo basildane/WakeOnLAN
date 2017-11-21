@@ -347,6 +347,47 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Checked|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Checked\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>WakeOnLan.xml</DocumentationFile>
+    <Optimize>false</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DefineDebug>true</DefineDebug>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Checked|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Checked\</OutputPath>
+    <DefineConstants>Trial=false</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>WakeOnLan.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Checked|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Checked\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>WakeOnLan.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -425,12 +466,6 @@
       <DependentUpon>Crash.vb</DependentUpon>
     </Compile>
     <Compile Include="Crash.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="debugHelper.Designer.vb">
-      <DependentUpon>debugHelper.vb</DependentUpon>
-    </Compile>
-    <Compile Include="debugHelper.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="History.Designer.vb">
@@ -773,9 +808,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Crash.ru.resx">
       <DependentUpon>Crash.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="debugHelper.resx">
-      <DependentUpon>debugHelper.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Explorer.ar-JO.resx">
       <DependentUpon>Explorer.vb</DependentUpon>

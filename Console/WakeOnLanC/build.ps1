@@ -18,7 +18,7 @@
 
 Param([string]$config, [string]$source, [string]$project, [string]$target)
 
-if($config -ne 'Release')
+if($config -eq 'Debug')
 {
 	exit 0
 }
