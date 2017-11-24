@@ -51,9 +51,10 @@ Public Class Explorer
         ListView.View = My.Settings.ListView_View
         GetListViewState(ListView, My.Settings.ListView_Columns)
 
-        ShowGroupsToolStripMenuItem.Checked = My.Settings.ShowGroups
+		ShowGroupsToolStripMenuItem.Checked = My.Settings.ShowGroups
+		TraceLogToolStripMenuItem.Checked = My.Settings.TraceLog
 
-        ToolBarToolStripMenuItem.Checked = My.Settings.ShowToolBar
+		ToolBarToolStripMenuItem.Checked = My.Settings.ShowToolBar
         ToolStrip.Visible = ToolBarToolStripMenuItem.Checked
 
         StatusBarToolStripMenuItem.Checked = My.Settings.ShowStatusBar
@@ -151,12 +152,13 @@ Public Class Explorer
         End If
 
         SaveChanges()
-        Debug.WriteLine("Explorer_FormClosing, reason: " & e.CloseReason.ToString())
-    End Sub
+		Tracelog.WriteLine("Explorer_FormClosing, reason: " & e.CloseReason.ToString())
+		Tracelog.Close()
+	End Sub
 
     Private Sub SaveChanges()
-        Debug.WriteLine("SaveChanges")
-        My.Settings.ListView_View = ListView.View
+		Tracelog.WriteLine("SaveChanges")
+		My.Settings.ListView_View = ListView.View
         My.Settings.ListView_Columns = SaveListViewState(ListView)
 
         If WindowState = FormWindowState.Normal Then
@@ -174,54 +176,82 @@ Public Class Explorer
         Machines.Close()
     End Sub
 
-    Public Sub StatusChange(ByVal hostName As String, ByVal Status As Machine.StatusCodes, IPAddress As String)
-        Try
-            ListView.Items(hostName).SubItems.Item(1).Text = ListView.Groups.Item(Status.GetHashCode).ToString
-            'Todo globalize strings
-            Select Case Status
-                Case Machine.StatusCodes.Unknown
-                    ListView.Items(hostName).ImageIndex = 0
+	Public Sub TraceEvent(s As String, method As Machine.TraceMethods)
+		Select Case method
+			Case Machine.TraceMethods.WriteLine
+				Tracelog.WriteLine(s)
 
-                Case Machine.StatusCodes.Offline
-                    If ListView.Items(hostName).ImageIndex = 2 Then
-                        WOL.AquilaWolLibrary.WriteLog(String.Format("Host ""{0}"" is offline.", hostName), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.Down)
+			Case Machine.TraceMethods.Indent
+				Tracelog.Indent()
 
-                        If My.Settings.Sound Then
-                            My.Computer.Audio.Play(My.Resources.down, AudioPlayMode.Background)
-                        End If
+			Case Machine.TraceMethods.UnIndent
+				Tracelog.UnIndent()
 
-                        If (My.Settings.MinimizeToTray) Then
-                            NotifyIcon1.ShowBalloonTip(5000, hostName, My.Resources.Strings.OffLine, ToolTipIcon.Info)
-                        End If
-                    End If
-                    ListView.Items(hostName).ImageIndex = 1
+		End Select
+	End Sub
 
-                Case Machine.StatusCodes.Online
-                    If ListView.Items(hostName).ImageIndex = 1 Then
-                        WOL.AquilaWolLibrary.WriteLog(String.Format("Host ""{0}"" is online.", hostName), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.Up)
+	Public Sub StatusChange(ByVal hostName As String, ByVal Status As Machine.StatusCodes, IPAddress As String)
+		Try
+			Try
+				ListView.Items(hostName).SubItems.Item(1).Text = ListView.Groups.Item(Status.GetHashCode).ToString
 
-                        If My.Settings.Sound Then
-                            My.Computer.Audio.Play(My.Resources.up, AudioPlayMode.Background)
-                        End If
+			Catch ex As Exception
+				Tracelog.WriteLine("Explorer::StatusChange::ListView exception: " _
+					& hostName & ", " & ex.Message _
+					& ", status " & Status.ToString _
+					& " item.count: " & ListView.Items.Count)
 
-                        If (My.Settings.MinimizeToTray) Then
-                            NotifyIcon1.ShowBalloonTip(5000, hostName, My.Resources.Strings.OnLine, ToolTipIcon.Info)
-                        End If
-                    End If
-                    ListView.Items(hostName).ImageIndex = 2
-                    ListView.Items(hostName).SubItems(2).Text = IPAddress
+			End Try
 
-                Case Else
-                    Debug.Fail("status: " & Status)
+			'Todo globalize strings
+			Select Case Status
+				Case Machine.StatusCodes.Unknown
+					ListView.Items(hostName).ImageIndex = 0
+					Tracelog.WriteLine(hostName & " unknown, reply: " & IPAddress)
 
-            End Select
-            ListView.Items(hostName).Group = ListView.Groups(Status.ToString)
-            ListView.Sort()
+				Case Machine.StatusCodes.Offline
+					If ListView.Items(hostName).ImageIndex = 2 Then
+						WOL.AquilaWolLibrary.WriteLog(String.Format("Host ""{0}"" is offline.", hostName), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.Down)
+						Tracelog.WriteLine(hostName & " offline")
 
-        Catch ex As Exception
-            Debug.WriteLine("Explorer::StatusChange exception: " & hostName & ", " & ex.Message)
+						If My.Settings.Sound Then
+							My.Computer.Audio.Play(My.Resources.down, AudioPlayMode.Background)
+						End If
 
-        End Try
+						If (My.Settings.MinimizeToTray) Then
+							NotifyIcon1.ShowBalloonTip(5000, hostName, My.Resources.Strings.OffLine, ToolTipIcon.Info)
+						End If
+					End If
+					ListView.Items(hostName).ImageIndex = 1
+
+				Case Machine.StatusCodes.Online
+					If ListView.Items(hostName).ImageIndex = 1 Then
+						WOL.AquilaWolLibrary.WriteLog(String.Format("Host ""{0}"" is online.", hostName), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.Up)
+						Tracelog.WriteLine(hostName & " online")
+
+						If My.Settings.Sound Then
+							My.Computer.Audio.Play(My.Resources.up, AudioPlayMode.Background)
+						End If
+
+						If (My.Settings.MinimizeToTray) Then
+							NotifyIcon1.ShowBalloonTip(5000, hostName, My.Resources.Strings.OnLine, ToolTipIcon.Info)
+						End If
+					End If
+					ListView.Items(hostName).ImageIndex = 2
+					ListView.Items(hostName).SubItems(2).Text = IPAddress
+
+				Case Else
+					Tracelog.WriteLine(hostName & " unknown status " & Status)
+					Debug.Fail("status: " & Status)
+
+			End Select
+			ListView.Items(hostName).Group = ListView.Groups(Status.ToString)
+			ListView.Sort()
+
+		Catch ex As Exception
+			Tracelog.WriteLine("Explorer::StatusChange exception: " & hostName & ", " & ex.Message)
+
+		End Try
     End Sub
 
     Private Sub LoadTree()
@@ -900,4 +930,14 @@ Public Class Explorer
         My.Settings.Save()
     End Sub
 
+	Private Sub TraceLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TraceLogToolStripMenuItem.Click
+		My.Settings.TraceLog = TraceLogToolStripMenuItem.Checked
+		If TraceLogToolStripMenuItem.Checked = True Then
+			If MessageBox.Show("Tracing enabled.  WOL will now restart.", "AquilaWOL", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.OK Then
+				Application.Restart()
+			End If
+		Else
+			Tracelog.Close()
+		End If
+	End Sub
 End Class

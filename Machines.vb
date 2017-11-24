@@ -80,9 +80,9 @@ Public Class MachinesClass
             CheckUpgrade()
 
         Catch ex As Exception
-            Debug.WriteLine(ex.Message)
+			Tracelog.WriteLine("Machines::Import " & ex.Message)
 #If DEBUG Then
-            Debugger.Break()
+			Debugger.Break()
 #End If
 
         End Try
@@ -90,10 +90,10 @@ Public Class MachinesClass
     End Sub
 
     Private Sub CheckUpgrade()
-        Debug.WriteLine("Loading database")
-        Debug.Indent()
+		Tracelog.WriteLine("Loading database")
+		Tracelog.Indent()
 
-        For Each machine As Machine In Machines
+		For Each machine As Machine In Machines
             machine.Pool = _pool
 
             If (machine.Broadcast = "") Then
@@ -113,33 +113,33 @@ Public Class MachinesClass
                 machine.RDPPort = 3389
             End If
 
-            Debug.WriteLine("Machine: " & machine.Name)
-            Debug.Indent()
-            Debug.WriteLine("MAC [" & machine.MAC & "]")
-            Debug.WriteLine("IP [" & machine.IP & "]")
-            Debug.WriteLine("Broadcast [" & machine.Broadcast & "]")
-            Debug.WriteLine("Netbios [" & machine.Netbios & "]")
-            Debug.WriteLine("Method [" & machine.Method & "]")
-            Debug.WriteLine("Emergency [" & machine.Emergency & "]")
-            Debug.WriteLine("ShutdownCommand [" & machine.ShutdownCommand & "]")
-            Debug.WriteLine("Group [" & machine.Group & "]")
-            Debug.WriteLine("UDPPort [" & machine.UDPPort & "]")
-            Debug.WriteLine("TTL [" & machine.TTL & "]")
-            Debug.WriteLine("RDPPort [" & machine.RDPPort & "]")
-            Debug.WriteLine("RDPFile [" & machine.RDPFile & "]")
-            Debug.WriteLine("Note [" & machine.Note & "]")
-            Debug.WriteLine("UserID [" & machine.UserID & "]")
-            Debug.WriteLine("Domain [" & machine.Domain & "]")
-            Debug.WriteLine("ShutdownMethod [" & machine.ShutdownMethod & "]")
-            Debug.WriteLine("KeepAlive [" & machine.KeepAlive & "]")
-            Debug.WriteLine("RepeatCount [" & machine.RepeatCount & "]")
-            Debug.Unindent()
-        Next
+			Tracelog.WriteLine("Machine: " & machine.Name)
+			Tracelog.Indent()
+			Tracelog.WriteLine("MAC [" & machine.MAC & "]")
+			Tracelog.WriteLine("IP [" & machine.IP & "]")
+			Tracelog.WriteLine("Broadcast [" & machine.Broadcast & "]")
+			Tracelog.WriteLine("Netbios [" & machine.Netbios & "]")
+			Tracelog.WriteLine("Method [" & machine.Method & "]")
+			Tracelog.WriteLine("Emergency [" & machine.Emergency & "]")
+			Tracelog.WriteLine("ShutdownCommand [" & machine.ShutdownCommand & "]")
+			Tracelog.WriteLine("Group [" & machine.Group & "]")
+			Tracelog.WriteLine("UDPPort [" & machine.UDPPort & "]")
+			Tracelog.WriteLine("TTL [" & machine.TTL & "]")
+			Tracelog.WriteLine("RDPPort [" & machine.RDPPort & "]")
+			Tracelog.WriteLine("RDPFile [" & machine.RDPFile & "]")
+			Tracelog.WriteLine("Note [" & machine.Note & "]")
+			Tracelog.WriteLine("UserID [" & machine.UserID & "]")
+			Tracelog.WriteLine("Domain [" & machine.Domain & "]")
+			Tracelog.WriteLine("ShutdownMethod [" & machine.ShutdownMethod & "]")
+			Tracelog.WriteLine("KeepAlive [" & machine.KeepAlive & "]")
+			Tracelog.WriteLine("RepeatCount [" & machine.RepeatCount & "]")
+			Tracelog.UnIndent()
+		Next
 
-        Debug.Unindent()
-        Debug.WriteLine("Database complete")
-        Debug.WriteLine("***********************************************")
-    End Sub
+		Tracelog.UnIndent()
+		Tracelog.WriteLine("Database complete")
+		Tracelog.Line()
+	End Sub
 
     Public Sub Export(ByVal filename As String)
         Dim serializer As New XmlSerializer(GetType(MachinesClass))
@@ -164,9 +164,10 @@ Public Class MachinesClass
 
     Public Sub Add(ByVal machine As Machine)
         List.Add(machine)
-        AddHandler machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
+		AddHandler machine.StatusChange, AddressOf My.Forms.Explorer.StatusChange
+		AddHandler machine.TraceEvent, AddressOf My.Forms.Explorer.TraceEvent
 
-        If My.Forms.Explorer.PingToolStripButton.Checked Then
+		If My.Forms.Explorer.PingToolStripButton.Checked Then
             machine.Pool = _pool
             machine.Run()
         End If

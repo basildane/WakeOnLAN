@@ -110,8 +110,8 @@ Public Class ShutdownThread
                         cmd = cmd.Replace("$USER", machine.UserID)
                         cmd = cmd.Replace("$PASS", encryption.Decrypt(machine.Password))
                         cmd = cmd.Replace("$HOST", machine.Netbios)
-                        Debug.WriteLine("Custom command: " & cmd)
-                        Shell(cmd, AppWinStyle.Hide, False)
+						Tracelog.WriteLine("Custom command: " & cmd)
+						Shell(cmd, AppWinStyle.Hide, False)
                         Return
                     End If
                     

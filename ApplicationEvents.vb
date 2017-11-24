@@ -23,214 +23,198 @@ Imports AlphaWindow
 Imports System.Runtime.InteropServices
 Imports Microsoft.Win32
 
-#If DEBUG Then
-Imports System.Reflection
-Imports System.Linq
-#End If
-
-
 Namespace My
 
-    ' The following events are available for MyApplication:
-    ' 
-    ' Startup: Raised when the application starts, before the startup form is created.
-    ' Shutdown: Raised after all application forms are closed.  This event is not raised if the application terminates abnormally.
-    ' UnhandledException: Raised if the application encounters an unhandled exception.
-    ' StartupNextInstance: Raised when launching a single-instance application and the application is already active. 
-    ' NetworkAvailabilityChanged: Raised when the network connection is connected or disconnected.
+	' The following events are available for MyApplication:
+	' 
+	' Startup: Raised when the application starts, before the startup form is created.
+	' Shutdown: Raised after all application forms are closed.  This event is not raised if the application terminates abnormally.
+	' UnhandledException: Raised if the application encounters an unhandled exception.
+	' StartupNextInstance: Raised when launching a single-instance application and the application is already active. 
+	' NetworkAvailabilityChanged: Raised when the network connection is connected or disconnected.
 
-    Partial Friend Class MyApplication
-        <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)>
-        Private Shared Function FindWindow(ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
-        End Function
+	Partial Friend Class MyApplication
+		<DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)>
+		Private Shared Function FindWindow(ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
+		End Function
 
-        <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)>
-        Private Shared Function ShowWindow(ByVal hwnd As IntPtr, ByVal nCmdShow As Int32) As Boolean
-        End Function
+		<DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)>
+		Private Shared Function ShowWindow(ByVal hwnd As IntPtr, ByVal nCmdShow As Int32) As Boolean
+		End Function
 
-        Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As ApplicationServices.StartupEventArgs) Handles Me.Startup
-            If (Control.ModifierKeys = Keys.Control) Then
-                SafeMode.ShowDialog()
-            End If
+		Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As ApplicationServices.StartupEventArgs) Handles Me.Startup
+			If (Control.ModifierKeys = Keys.Control) Then
+				SafeMode.ShowDialog()
+			End If
 
-#If DEBUG Then
-            Dim filename As String = IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "wakeonlan.tracelog")
-            Dim trace As TextWriterTraceListener = New TextWriterTraceListener(IO.File.CreateText(filename))
-            Debug.Listeners.Add(trace)
-            Debug.AutoFlush() = True
-            Debug.WriteLine("***********************************************")
-            Debug.WriteLine("WakeOnLAN started at " & DateTime.UtcNow.ToString & " UTC")
-            Debug.WriteLine("CommonApplicationData: " & Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData))
-            Debug.WriteLine(Environment.OSVersion.VersionString)
+			If My.Settings.TraceLog Then
+				Tracelog.Load()
+			End If
+			singleInstance()
+			upgradeSettings()
+			ConfigureCulture()
 
-            Debug.WriteLine("Assemblies*************************************")
-            For Each a As AssemblyName In Assembly.GetExecutingAssembly().GetReferencedAssemblies().ToArray()
-                Debug.WriteLine(String.Format("{0}: {1}", a.Name, a.Version))
-            Next
-            Debug.WriteLine("***********************************************")
+			'Throw New Exception("This is a test unhandled exception.")
+
+			Dim version As String = String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
+
+			If (Application.Info.Version.Revision > 0) Then
+				version &= " BETA " & Application.Info.Version.Revision
+			End If
+			Tracelog.WriteLine(version)
+			Tracelog.Line()
+
+#If Not DEBUG Then
+			If (Settings.ShowSplash) Then
+				Splash.ShowSplash(Resources.Splash, Resources.Strings.Title, version, Resources.Strings.Copyright)
+			End If
 #End If
 
-            singleInstance()
-            upgradeSettings()
-            ConfigureCulture()
+		End Sub
 
-            'Throw New Exception("This is a test unhandled exception.")
+		Private Sub MyApplication_UnhandledException(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
+			Dim crash As New Crash()
 
-            Dim version As String = String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
+			crash.exception = e.Exception
+			crash.ShowDialog()
+			Application.Log.WriteException(e.Exception, TraceEventType.Critical, "Application shut down at " & Computer.Clock.GmtTime.ToString)
+			Tracelog.WriteLine("CRASH: " & e.Exception.ToString)
+			Tracelog.Close()
+		End Sub
 
-            If (Application.Info.Version.Revision > 0) Then
-                version &= " BETA " & Application.Info.Version.Revision
-            End If
-            Debug.WriteLine(version)
-            Debug.WriteLine("***********************************************")
+		''' <summary>
+		''' Setup the culture and language configuration.
+		''' </summary>
+		''' <remarks></remarks>
+		Private Sub ConfigureCulture()
+			If String.IsNullOrEmpty(Settings.Language) Then
+				Dim regKey As RegistryKey = Registry.LocalMachine.OpenSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadSubTree)
+				If regKey Is Nothing Then
+					regKey = Registry.LocalMachine.OpenSubKey("Software\WOW6432Node\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadSubTree)
+				End If
+				If regKey Is Nothing Then
+					Settings.Language = "en-US"
+				Else
+					Dim language As String = regKey.GetValue("Language", "en-US", RegistryValueOptions.None)
 
-            If (Settings.ShowSplash) Then
-                Splash.ShowSplash(Resources.Splash, Resources.Strings.Title, version, Resources.Strings.Copyright)
-            End If
+					Select Case language
+						Case "ar_JO"
+							language = "ar-JO"
+						Case "de"
+							language = "de-DE"
+						Case "en"
+							language = "en-US"
+						Case "es"
+							language = "es-ES"
+						Case "fi"
+							language = "fi-FI"
+						Case "fr"
+							language = "fr-FR"
+						Case "hu"
+							language = "hu-HU"
+						Case "it"
+							language = "it-IT"
+						Case "nl"
+							language = "nl-NL"
+						Case "pt_BR"
+							language = "pt-BR"
+						Case "ru"
+							language = "ru-RU"
+						Case "zh_TW"
+							language = "zh-TW"
+					End Select
 
-        End Sub
+					regKey.Close()
+					Settings.Language = language
+				End If
+			End If
 
-        Private Sub MyApplication_UnhandledException(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
-            Dim crash As New Crash()
+			CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
+			Tracelog.WriteLine("Language: " & Settings.Language)
+		End Sub
 
-            crash.exception = e.Exception
-            crash.ShowDialog()
-            Application.Log.WriteException(e.Exception, TraceEventType.Critical, "Application shut down at " & Computer.Clock.GmtTime.ToString)
-        End Sub
+		''' <summary>
+		''' Search for another running instance of WOL.  If found, activate it and terminate this instance.
+		''' </summary>
+		''' <remarks></remarks>
+		Private Sub singleInstance()
+			Const SW_RESTORE As Int32 = 9
+			Const SW_SHOW As Int32 = 5
+			Dim hwnd As IntPtr
 
-        ''' <summary>
-        ''' Setup the culture and language configuration.
-        ''' </summary>
-        ''' <remarks></remarks>
-        Private Sub ConfigureCulture()
-            If String.IsNullOrEmpty(Settings.Language) Then
-                Dim regKey As RegistryKey = Registry.LocalMachine.OpenSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadSubTree)
-                If regKey Is Nothing Then
-                    regKey = Registry.LocalMachine.OpenSubKey("Software\WOW6432Node\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadSubTree)
-                End If
-                If regKey Is Nothing Then
-                    Settings.Language = "en-US"
-                Else
-                    Dim language As String = regKey.GetValue("Language", "en-US", RegistryValueOptions.None)
+			hwnd = FindWindow(Nothing, Resources.Strings.Title)
 
-                    Select Case language
-                        Case "ar_JO"
-                            language = "ar-JO"
-                        Case "de"
-                            language = "de-DE"
-                        Case "en"
-                            language = "en-US"
-                        Case "es"
-                            language = "es-ES"
-                        Case "fi"
-                            language = "fi-FI"
-                        Case "fr"
-                            language = "fr-FR"
-                        Case "hu"
-                            language = "hu-HU"
-                        Case "it"
-                            language = "it-IT"
-                        Case "nl"
-                            language = "nl-NL"
-                        Case "pt_BR"
-                            language = "pt-BR"
-                        Case "ru"
-                            language = "ru-RU"
-                        Case "zh_TW"
-                            language = "zh-TW"
-                    End Select
+			If hwnd <> IntPtr.Zero Then
+				ShowWindow(hwnd, SW_SHOW)
+				ShowWindow(hwnd, SW_RESTORE)
+				SetForegroundWindow(hwnd)
+				End
+			End If
 
-                    regKey.Close()
-                    Settings.Language = language
-                End If
-            End If
+		End Sub
 
-            CultureManager.ApplicationUICulture = New CultureInfo(Settings.Language)
-            Debug.WriteLine("Language: " & Settings.Language)
-        End Sub
+		''' <summary>
+		''' If this is an upgrade from a previous version, try to recover the previous user settings.
+		''' </summary>
+		''' <remarks></remarks>
+		Private Sub upgradeSettings()
+			Dim regKey As RegistryKey
+			Dim database As String
+			Dim newPath As String
+			Dim filename As String
 
-        ''' <summary>
-        ''' Search for another running instance of WOL.  If found, activate it and terminate this instance.
-        ''' </summary>
-        ''' <remarks></remarks>
-        Private Sub singleInstance()
-            Const SW_RESTORE As Int32 = 9
-            Const SW_SHOW As Int32 = 5
-            Dim hwnd As IntPtr
+			Try
+				If Settings.needUpgrade Then
+					Settings.Upgrade()
+					Settings.needUpgrade = False
+					Settings.Save()
+				End If
 
-            hwnd = FindWindow(Nothing, Resources.Strings.Title)
+			Catch ex As ConfigurationErrorsException
+				filename = DirectCast(ex.InnerException, ConfigurationErrorsException).Filename
 
-            If hwnd <> IntPtr.Zero Then
-                ShowWindow(hwnd, SW_SHOW)
-                ShowWindow(hwnd, SW_RESTORE)
-                SetForegroundWindow(hwnd)
-                End
-            End If
+				If MessageBox.Show(Text.RegularExpressions.Regex.Unescape(Resources.Strings.errUserConfigCorrupt), Resources.Strings.errUserConfigTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
+					IO.File.Delete(filename)
+					Windows.Forms.Application.Restart()
+					Process.GetCurrentProcess().Kill()
+				Else
+					Process.GetCurrentProcess().Kill()
+				End If
+			End Try
 
-        End Sub
+			Try
+				For i As Int16 = 0 To CommandLineArgs.Count - 1
+					If (CommandLineArgs(i) = "-p") Then
+						Settings.dbPath = CommandLineArgs(i + 1)
+						Exit For
+					End If
+				Next
 
-        ''' <summary>
-        ''' If this is an upgrade from a previous version, try to recover the previous user settings.
-        ''' </summary>
-        ''' <remarks></remarks>
-        Private Sub upgradeSettings()
-            Dim regKey As RegistryKey
-            Dim database As String
-            Dim newPath As String
-            Dim filename As String
+				regKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
+				If regKey Is Nothing Then
+					regKey = Registry.CurrentUser.CreateSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadWriteSubTree, RegistryOptions.None)
+				End If
+				database = regKey.GetValue("Database", IO.Directory.GetParent(Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, RegistryValueOptions.None)
+				regKey.Close()
 
-            Try
-                If Settings.needUpgrade Then
-                    Settings.Upgrade()
-                    Settings.needUpgrade = False
-                    Settings.Save()
-                End If
+				filename = IO.Path.GetFileName(Settings.dbPath)
+				If (String.IsNullOrEmpty(filename)) Then
+					filename = "machines.xml"
+				End If
+				newPath = IO.Path.Combine(database, filename)
 
-            Catch ex As ConfigurationErrorsException
-                filename = DirectCast(ex.InnerException, ConfigurationErrorsException).Filename
+				If (Settings.dbPath <> newPath) Then
+					Settings.dbPath = newPath
+					Settings.Save()
+				End If
 
-                If MessageBox.Show(Text.RegularExpressions.Regex.Unescape(Resources.Strings.errUserConfigCorrupt), Resources.Strings.errUserConfigTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-                    IO.File.Delete(filename)
-                    Windows.Forms.Application.Restart()
-                    Process.GetCurrentProcess().Kill()
-                Else
-                    Process.GetCurrentProcess().Kill()
-                End If
-            End Try
+			Catch ex As Exception
 
-            Try
-                For i As Int16 = 0 To CommandLineArgs.Count - 1
-                    If (CommandLineArgs(i) = "-p") Then
-                        Settings.dbPath = CommandLineArgs(i + 1)
-                        Exit For
-                    End If
-                Next
+			End Try
 
-                regKey = Registry.CurrentUser.OpenSubKey("Software\Aquila Technology\WakeOnLAN")
-                If regKey Is Nothing Then
-                    regKey = Registry.CurrentUser.CreateSubKey("Software\Aquila Technology\WakeOnLAN", RegistryKeyPermissionCheck.ReadWriteSubTree, RegistryOptions.None)
-                End If
-                database = regKey.GetValue("Database", IO.Directory.GetParent(Computer.FileSystem.SpecialDirectories.AllUsersApplicationData.ToString).ToString, RegistryValueOptions.None)
-                regKey.Close()
+		End Sub
 
-                filename = IO.Path.GetFileName(Settings.dbPath)
-                If (String.IsNullOrEmpty(filename)) Then
-                    filename = "machines.xml"
-                End If
-                newPath = IO.Path.Combine(database, filename)
-
-                If (Settings.dbPath <> newPath) Then
-                    Settings.dbPath = newPath
-                    Settings.Save()
-                End If
-
-            Catch ex As Exception
-
-            End Try
-
-        End Sub
-
-    End Class
+	End Class
 
 End Namespace
 

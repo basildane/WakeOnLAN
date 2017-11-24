@@ -38,13 +38,19 @@ Public Class Machine
         Legacy = 2
     End Enum
 
-    Public Enum StatusCodes As Integer
-        Online
-        Offline
-        Unknown
-    End Enum
+	Public Enum StatusCodes As Integer
+		Online
+		Offline
+		Unknown
+	End Enum
 
-    Public Property Name As String = String.Empty
+	Public Enum TraceMethods As Integer
+		WriteLine
+		Indent
+		UnIndent
+	End Enum
+
+	Public Property Name As String = String.Empty
     Public Property MAC As String = String.Empty
     Public Property IP As String = String.Empty
     Public Property Broadcast As String = String.Empty
@@ -71,9 +77,10 @@ Public Class Machine
     <NonSerialized> <XmlIgnore()> Const data As String = "abcdefghijklmnopqrstuvwabcdefghi"
     <NonSerialized> <XmlIgnore()> Dim buffer As Byte() = Text.Encoding.ASCII.GetBytes(data)
 
-    Public Event StatusChange(ByVal Name As String, ByVal status As StatusCodes, ByVal IpAddress As String)
+	Public Event StatusChange(ByVal Name As String, ByVal status As StatusCodes, ByVal IpAddress As String)
+	Public Event TraceEvent(ByVal s As String, ByVal method As TraceMethods)
 
-    Public Sub New()
+	Public Sub New()
         _backgroundWorker.WorkerSupportsCancellation = True
     End Sub
 
@@ -82,9 +89,9 @@ Public Class Machine
     End Function
 
     Public Sub Run()
-        If _backgroundWorker.IsBusy Then Exit Sub
+		If _backgroundWorker.IsBusy Then Exit Sub
 
-        _backgroundWorker.WorkerReportsProgress = True
+		_backgroundWorker.WorkerReportsProgress = True
         If String.IsNullOrEmpty(Netbios) Then
             If String.IsNullOrEmpty(IP) Then Exit Sub
             _backgroundWorker.RunWorkerAsync(IP)
@@ -142,10 +149,10 @@ Public Class Machine
         Dim newIpAddress As String
 
         Try
-            Debug.WriteLine("Machines::backgroundWorker_ProgressChanged: " & Name)
-            Debug.Indent()
+			RaiseEvent TraceEvent("Machines::backgroundWorker_ProgressChanged: " & Name, TraceMethods.WriteLine)
+			RaiseEvent TraceEvent(String.Empty, TraceMethods.Indent)
 
-            If _backgroundWorker.CancellationPending Then Exit Sub
+			If _backgroundWorker.CancellationPending Then Exit Sub
 
             Select Case e.ProgressPercentage
                 Case StatusCodes.Online
@@ -165,7 +172,7 @@ Public Class Machine
 
                                 Try
 									remoteIp = ipAddress.GetHashCode()
-									Debug.WriteLine("dns returned: " & ipAddress.ToString())
+									RaiseEvent TraceEvent("dns returned: " & ipAddress.ToString(), TraceMethods.WriteLine)
 
 									If remoteIp <> 0 Then
                                         dWord = SendARP(remoteIp, 0, remoteMac, remoteMac.Length)
@@ -177,7 +184,7 @@ Public Class Machine
                                             If CompareMac(BitConverter.ToString(remoteMac, 0, remoteMac.Length), MAC) = 0 Or dWord = 67 Then
                                                 newStatus = StatusCodes.Online
                                                 newIpAddress = ipAddress.ToString()
-												Debug.WriteLine("match: " & newIpAddress)
+												RaiseEvent TraceEvent("match: " & newIpAddress, TraceMethods.WriteLine)
 												Exit For
                                             End If
                                         End If
@@ -191,42 +198,38 @@ Public Class Machine
                     End If
 
                     If (Status <> newStatus) Then
-                        Debug.WriteLine(String.Format("{0}: {1}: {2}ms", "going Online", Reply.Status.ToString(), Reply.RoundtripTime))
-                        Status = newStatus
-                        RaiseEvent StatusChange(Name, Status, newIpAddress)
+						Status = newStatus
+						RaiseEvent StatusChange(Name, Status, newIpAddress)
                     End If
 
                 Case StatusCodes.Offline
                     If Status <> StatusCodes.Offline Then
-                        Debug.WriteLine("going Offline")
-                        Status = StatusCodes.Offline
-                        RaiseEvent StatusChange(Name, Status, String.Empty)
+						Status = StatusCodes.Offline
+						RaiseEvent StatusChange(Name, Status, String.Empty)
                     End If
 
                 Case StatusCodes.Unknown
-                    If Status <> StatusCodes.Unknown Then
-                        Debug.WriteLine("going Unknown")
-                        Status = StatusCodes.Unknown
-                        RaiseEvent StatusChange(Name, Status, String.Empty)
-                    End If
+					If Status <> StatusCodes.Unknown Then
+						Status = StatusCodes.Unknown
+						RaiseEvent StatusChange(Name, Status, Reply.Status.ToString)
+					End If
 
-            End Select
+			End Select
 
         Catch ex As Exception
-            Debug.WriteLine("Exception: " & ex.Message)
-            Debug.Fail(ex.Message)
+			RaiseEvent TraceEvent("backgroundWorker_ProgressChanged::Exception: " & ex.Message, TraceMethods.WriteLine)
+			Debug.Fail(ex.Message)
 
-        End Try
+		End Try
 
-        Debug.Unindent()
-        Debug.WriteLine("Leaving Machines::backgroundWorker_ProgressChanged: " & Name)
-    End Sub
+		RaiseEvent TraceEvent(String.Empty, TraceMethods.UnIndent)
+		RaiseEvent TraceEvent("Leaving Machines::backgroundWorker_ProgressChanged: " & Name, TraceMethods.WriteLine)
+	End Sub
 
     Private Sub RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles _backgroundWorker.RunWorkerCompleted
         Try
-            Debug.WriteLine("RunWorkerCompleted:: " & Name & " " & e.Result)
-            Status = StatusCodes.Unknown
-            RaiseEvent StatusChange(Name, Status, String.Empty)
+			Status = StatusCodes.Unknown
+			RaiseEvent StatusChange(Name, Status, String.Empty)
 
         Catch ex As Exception
             Debug.Fail(ex.Message)

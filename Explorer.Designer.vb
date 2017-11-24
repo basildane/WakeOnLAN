@@ -177,6 +177,7 @@ Partial Class Explorer
 		Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
 		Me.TimerUpdate = New System.Windows.Forms.Timer(Me.components)
 		Me.CultureManager = New Localization.CultureManager(Me.components)
+		Me.TraceLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
 		Me.ToolStripContainer.ContentPanel.SuspendLayout()
 		Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -598,7 +599,7 @@ Partial Class Explorer
 		'
 		'ToolsToolStripMenuItem
 		'
-		Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.SearchForMachinesToolStripMenuItem, Me.ScheduleToolStripMenuItem, Me.ListenToolStripMenuItem})
+		Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.SearchForMachinesToolStripMenuItem, Me.ScheduleToolStripMenuItem, Me.ListenToolStripMenuItem, Me.TraceLogToolStripMenuItem})
 		Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
 		resources.ApplyResources(Me.ToolsToolStripMenuItem, "ToolsToolStripMenuItem")
 		'
@@ -835,6 +836,12 @@ Partial Class Explorer
 		'
 		Me.CultureManager.ManagedControl = Me
 		'
+		'TraceLogToolStripMenuItem
+		'
+		Me.TraceLogToolStripMenuItem.CheckOnClick = True
+		Me.TraceLogToolStripMenuItem.Name = "TraceLogToolStripMenuItem"
+		resources.ApplyResources(Me.TraceLogToolStripMenuItem, "TraceLogToolStripMenuItem")
+		'
 		'Explorer
 		'
 		resources.ApplyResources(Me, "$this")
@@ -935,4 +942,5 @@ Partial Class Explorer
     Friend WithEvents TimerUpdate As System.Windows.Forms.Timer
     Friend WithEvents TrayMenuItemRDP As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TrayMenuItemShutdown As System.Windows.Forms.ToolStripMenuItem
+	Friend WithEvents TraceLogToolStripMenuItem As ToolStripMenuItem
 End Class
