@@ -137,6 +137,7 @@ Partial Class Explorer
 		Me.SearchForMachinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.ScheduleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.ListenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.TraceLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
@@ -177,7 +178,6 @@ Partial Class Explorer
 		Me.NotifyIconUpdate = New System.Windows.Forms.NotifyIcon(Me.components)
 		Me.TimerUpdate = New System.Windows.Forms.Timer(Me.components)
 		Me.CultureManager = New Localization.CultureManager(Me.components)
-		Me.TraceLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.ToolStripContainer.BottomToolStripPanel.SuspendLayout()
 		Me.ToolStripContainer.ContentPanel.SuspendLayout()
 		Me.ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -624,6 +624,12 @@ Partial Class Explorer
 		Me.ListenToolStripMenuItem.Name = "ListenToolStripMenuItem"
 		resources.ApplyResources(Me.ListenToolStripMenuItem, "ListenToolStripMenuItem")
 		'
+		'TraceLogToolStripMenuItem
+		'
+		Me.TraceLogToolStripMenuItem.CheckOnClick = True
+		Me.TraceLogToolStripMenuItem.Name = "TraceLogToolStripMenuItem"
+		resources.ApplyResources(Me.TraceLogToolStripMenuItem, "TraceLogToolStripMenuItem")
+		'
 		'HelpToolStripMenuItem
 		'
 		Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.ToolStripSeparator6, Me.DonateToolStripMenuItem, Me.LicenseToolStripMenuItem, Me.AboutToolStripMenuItem})
@@ -835,12 +841,6 @@ Partial Class Explorer
 		'CultureManager
 		'
 		Me.CultureManager.ManagedControl = Me
-		'
-		'TraceLogToolStripMenuItem
-		'
-		Me.TraceLogToolStripMenuItem.CheckOnClick = True
-		Me.TraceLogToolStripMenuItem.Name = "TraceLogToolStripMenuItem"
-		resources.ApplyResources(Me.TraceLogToolStripMenuItem, "TraceLogToolStripMenuItem")
 		'
 		'Explorer
 		'

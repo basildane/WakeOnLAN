@@ -44,7 +44,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetZone>LocalIntranet</TargetZone>
     <GenerateManifests>true</GenerateManifests>
-    <ManifestCertificateThumbprint>6BA011669D4A445C0B403B0E13758E8395362D2D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>564FD285833F7BF6E7686CCC300AA6F09E3B2B0B</ManifestCertificateThumbprint>
     <ManifestKeyFile>
     </ManifestKeyFile>
     <SignManifests>false</SignManifests>
@@ -425,6 +425,12 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestTimestampUrl>http://time.certum.pl</ManifestTimestampUrl>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">

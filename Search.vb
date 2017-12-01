@@ -351,7 +351,7 @@ Public Class Search
 			ToolStripProgressBar1.Value = e.ProgressPercentage
 
         Catch ex As Exception
-			Tracelog.WriteLine("backgroundWorker_ProgressChanged Exception: " & ex.Message)
+			Tracelog.WriteLine("Search::backgroundWorker_ProgressChanged Exception: " & ex.Message)
 			'MessageBox.Show(ex.Message, "Error in [backgroundWorker_ProgressChanged]", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
 		End Try

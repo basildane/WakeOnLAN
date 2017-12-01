@@ -193,7 +193,11 @@ Public Class Explorer
 	Public Sub StatusChange(ByVal hostName As String, ByVal Status As Machine.StatusCodes, IPAddress As String)
 		Try
 			Try
-				ListView.Items(hostName).SubItems.Item(1).Text = ListView.Groups.Item(Status.GetHashCode).ToString
+				If Status = Machine.StatusCodes.Uninitialized Then
+					ListView.Items(hostName).SubItems.Item(1).Text = ListView.Groups.Item(Machine.StatusCodes.Unknown).ToString
+				Else
+					ListView.Items(hostName).SubItems.Item(1).Text = ListView.Groups.Item(Status.GetHashCode).ToString
+				End If
 
 			Catch ex As Exception
 				Tracelog.WriteLine("Explorer::StatusChange::ListView exception: " _
@@ -204,15 +208,23 @@ Public Class Explorer
 			End Try
 
 			'Todo globalize strings
+
 			Select Case Status
+				Case Machine.StatusCodes.Uninitialized
+					ListView.Items(hostName).ImageIndex = 0
+
 				Case Machine.StatusCodes.Unknown
 					ListView.Items(hostName).ImageIndex = 0
-					Tracelog.WriteLine(hostName & " unknown, reply: " & IPAddress)
+					Tracelog.WriteLine("Explorer::StatusChange::" & DateTime.Now.ToLongTimeString & " Host: " & hostName & " [unknown], " & IPAddress)
+
+				Case Machine.StatusCodes.Fail
+					ListView.Items(hostName).ImageIndex = 0
+					Tracelog.WriteLine("Explorer::StatusChange::" & DateTime.Now.ToLongTimeString & " Host: " & hostName & " [fail], " & IPAddress)
 
 				Case Machine.StatusCodes.Offline
 					If ListView.Items(hostName).ImageIndex = 2 Then
 						WOL.AquilaWolLibrary.WriteLog(String.Format("Host ""{0}"" is offline.", hostName), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.Down)
-						Tracelog.WriteLine(hostName & " offline")
+						Tracelog.WriteLine("Explorer::StatusChange::" & DateTime.Now.ToLongTimeString & " Host: " & hostName & " [offline]")
 
 						If My.Settings.Sound Then
 							My.Computer.Audio.Play(My.Resources.down, AudioPlayMode.Background)
@@ -227,7 +239,7 @@ Public Class Explorer
 				Case Machine.StatusCodes.Online
 					If ListView.Items(hostName).ImageIndex = 1 Then
 						WOL.AquilaWolLibrary.WriteLog(String.Format("Host ""{0}"" is online.", hostName), EventLogEntryType.Information, WOL.AquilaWolLibrary.EventId.Up)
-						Tracelog.WriteLine(hostName & " online")
+						Tracelog.WriteLine("Explorer::StatusChange::" & DateTime.Now.ToLongTimeString & " Host: " & hostName & " [online]")
 
 						If My.Settings.Sound Then
 							My.Computer.Audio.Play(My.Resources.up, AudioPlayMode.Background)
@@ -241,7 +253,7 @@ Public Class Explorer
 					ListView.Items(hostName).SubItems(2).Text = IPAddress
 
 				Case Else
-					Tracelog.WriteLine(hostName & " unknown status " & Status)
+					Tracelog.WriteLine("Explorer::StatusChange::" & DateTime.Now.ToLongTimeString & " Host: " & hostName & " [undefined status] " & Status.ToString)
 					Debug.Fail("status: " & Status)
 
 			End Select
