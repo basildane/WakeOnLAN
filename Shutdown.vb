@@ -233,26 +233,27 @@ Public Class Shutdown
 
     End Sub
 
-    Private Sub PopupMessage(machine As Machine, message As String)
-        Try
-            If (String.IsNullOrEmpty(message)) Then Return
+	Public Sub PopupMessage(machine As Machine, message As String)
+		Try
+			If (String.IsNullOrEmpty(message)) Then Return
 
-            Select Case machine.ShutdownMethod
-                Case machine.ShutdownMethods.WMI
-                    Shell(String.Format("msg * /server:{0} ""{1}""", machine.Netbios, message))
+			Select Case machine.ShutdownMethod
+				Case Machine.ShutdownMethods.WMI
+					Shell(String.Format("msg * /server:{0} ""{1}""", machine.Netbios, message))
+					Debug.WriteLine("message sent to " & machine.Netbios & " " & message)
 
-                Case machine.ShutdownMethods.Custom
+				Case Machine.ShutdownMethods.Custom
 
-                Case machine.ShutdownMethods.Legacy
+				Case Machine.ShutdownMethods.Legacy
 
-            End Select
+			End Select
 
-        Catch
+		Catch
 
-        End Try
-    End Sub
+		End Try
+	End Sub
 
-    Private Sub CancelButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+	Private Sub CancelButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Cancel_Button.Click
         Close()
     End Sub
 

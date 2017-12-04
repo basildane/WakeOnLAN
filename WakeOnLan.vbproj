@@ -775,6 +775,12 @@
     <Compile Include="Search.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SendMessage.Designer.vb">
+      <DependentUpon>SendMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SendMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Shutdown.Designer.vb">
       <DependentUpon>Shutdown.vb</DependentUpon>
     </Compile>
@@ -789,6 +795,8 @@
     </Compile>
     <Compile Include="Tracelog.vb" />
     <Compile Include="Wake.vb" />
+    <Content Include="Resources\view_text.ico" />
+    <None Include="Resources\view_text.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
@@ -1373,6 +1381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Search.zh-TW.resx">
       <DependentUpon>Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendMessage.resx">
+      <DependentUpon>SendMessage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shutdown.ar-JO.resx">
       <DependentUpon>Shutdown.vb</DependentUpon>
