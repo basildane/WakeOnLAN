@@ -93,6 +93,7 @@ Partial Class Explorer
 		Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
 		Me.NewToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.RDPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+		Me.MessageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.PropertiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.ClearIPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 		Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -344,7 +345,7 @@ Partial Class Explorer
 		'
 		'ContextMenuStrip_Machines
 		'
-		Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.NewToolStripMenuItem1, Me.RDPToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.ClearIPToolStripMenuItem, Me.DeleteToolStripMenuItem})
+		Me.ContextMenuStrip_Machines.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WakeUpToolStripMenuItem, Me.ShutdownToolStripMenuItem, Me.ToolStripSeparator10, Me.NewToolStripMenuItem1, Me.RDPToolStripMenuItem, Me.MessageToolStripMenuItem, Me.PropertiesToolStripMenuItem, Me.ClearIPToolStripMenuItem, Me.DeleteToolStripMenuItem})
 		Me.ContextMenuStrip_Machines.Name = "ContextMenuStrip_Machines"
 		resources.ApplyResources(Me.ContextMenuStrip_Machines, "ContextMenuStrip_Machines")
 		'
@@ -373,6 +374,12 @@ Partial Class Explorer
 		'
 		resources.ApplyResources(Me.RDPToolStripMenuItem, "RDPToolStripMenuItem")
 		Me.RDPToolStripMenuItem.Name = "RDPToolStripMenuItem"
+		'
+		'MessageToolStripMenuItem
+		'
+		Me.MessageToolStripMenuItem.Image = Global.WakeOnLan.My.Resources.Resources.view_text
+		Me.MessageToolStripMenuItem.Name = "MessageToolStripMenuItem"
+		resources.ApplyResources(Me.MessageToolStripMenuItem, "MessageToolStripMenuItem")
 		'
 		'PropertiesToolStripMenuItem
 		'
@@ -943,4 +950,5 @@ Partial Class Explorer
     Friend WithEvents TrayMenuItemRDP As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TrayMenuItemShutdown As System.Windows.Forms.ToolStripMenuItem
 	Friend WithEvents TraceLogToolStripMenuItem As ToolStripMenuItem
+	Friend WithEvents MessageToolStripMenuItem As ToolStripMenuItem
 End Class

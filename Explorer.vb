@@ -952,4 +952,8 @@ Public Class Explorer
 			Tracelog.Close()
 		End If
 	End Sub
+
+	Private Sub MessageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MessageToolStripMenuItem.Click
+		Dim Send As New SendMessage(ListView.SelectedItems.Cast(Of ListViewItem).Select(Function(lvi As ListViewItem) lvi.Text).ToArray())
+	End Sub
 End Class
