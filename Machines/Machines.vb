@@ -158,15 +158,20 @@ Public Class Machine
 			Select Case e.ProgressPercentage
 				Case StatusCodes.Online
 					newStatus = StatusCodes.Online
-					newIpAddress = Reply.Address.ToString
+					For Each ipAddress As IPAddress In From IPA1 In Dns.GetHostAddresses(Netbios) Where IPA1.AddressFamily.ToString() = "InterNetwork"
 
-					If Status = StatusCodes.Unknown Then
-						' if the host is DHCP, try to resolve the correct IP and verify the MAC.
-						' if we cannot find a matching interface with our MAC, assume the host is OFFLINE.
 						If IP = String.Empty Then
-							newStatus = StatusCodes.Offline
+							newIpAddress = ipAddress.ToString()
+						Else
+							newIpAddress = IP
+						End If
 
-							For Each ipAddress As IPAddress In From IPA1 In Dns.GetHostAddresses(Netbios) Where IPA1.AddressFamily.ToString() = "InterNetwork"
+						If Status = StatusCodes.Uninitialized Then
+							' if the host is DHCP, try to resolve the correct IP and verify the MAC.
+							' if we cannot find a matching interface with our MAC, assume the host is OFFLINE.
+							If IP = String.Empty Then
+								newStatus = StatusCodes.Offline
+
 								Dim remoteIp As Integer
 								Dim remoteMac() As Byte = New Byte(5) {}
 								Dim dWord As Integer
@@ -194,9 +199,9 @@ Public Class Machine
 								Catch
 
 								End Try
-							Next
+							End If
 						End If
-					End If
+					Next
 
 					If (Status <> newStatus) Then
 						Status = newStatus
@@ -209,7 +214,7 @@ Public Class Machine
 						RaiseEvent StatusChange(Name, Status, String.Empty)
 					End If
 
-				Case StatusCodes.Unknown, StatusCodes.Fail
+				Case StatusCodes.Unknown, StatusCodes.Fail, StatusCodes.Uninitialized
 					If Status <> StatusCodes.Unknown Then
 						Status = StatusCodes.Unknown
 						RaiseEvent StatusChange(Name, Status, message)

@@ -257,6 +257,8 @@ Public Class Explorer
 					Debug.Fail("status: " & Status)
 
 			End Select
+			If Status = Machine.StatusCodes.Uninitialized Then Status = Machine.StatusCodes.Unknown
+
 			ListView.Items(hostName).Group = ListView.Groups(Status.ToString)
 			ListView.Sort()
 
