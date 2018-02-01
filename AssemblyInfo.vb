@@ -32,7 +32,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Wake On Lan")> 
 <Assembly: AssemblyCompany("Aquila Technology")> 
 <Assembly: AssemblyProduct("WakeOnLan")>
-<Assembly: AssemblyCopyright("Copyright (c) 2004 - 2017, Aquila Technology")>
+<Assembly: AssemblyCopyright("Copyright (c) 2004 - 2018, Aquila Technology")>
 <Assembly: AssemblyTrademark("All rights reserved.")> 
 <Assembly: CLSCompliant(True)> 
 
@@ -49,7 +49,7 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 
-<Assembly: AssemblyVersion("2.11.20.0")>
+<Assembly: AssemblyVersion("2.11.21.10")>
 
 <Assembly: ComVisibleAttribute(False)> 
 <Assembly: NeutralResourcesLanguageAttribute("en-US")> 

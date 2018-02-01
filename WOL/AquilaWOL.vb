@@ -242,8 +242,8 @@ Public Class AquilaWolLibrary
             If (String.IsNullOrEmpty(host)) Then Return
 
             If (Not String.IsNullOrEmpty(userid)) Then
-                shutdownCommand.AppendFormat("net use \\{0}\IPC$ {1} /User:{2} & ", host, password, userid)
-            End If
+				shutdownCommand.AppendFormat("net use \\{0}\IPC$ ""{1}"" /User:{2} & ", host, password, userid)
+			End If
 
             shutdownCommand.AppendFormat("shutdown /m \\{0} /t {1}", host, dwDelay)
 
@@ -288,9 +288,9 @@ Public Class AquilaWolLibrary
 
                     Debug.WriteLine("")
 
-                    ' Display current process statistics.
+					' Display current process statistics.
 
-                    Debug.WriteLine("  Process: " & p.StartInfo.FileName)
+					Debug.WriteLine("  Process: " & p.StartInfo.FileName)
                     Debug.WriteLine("Arguments: " & p.StartInfo.Arguments.ToString())
                     Debug.WriteLine("-------------------------------------")
 
