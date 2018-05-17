@@ -48,6 +48,7 @@ Public Module Module1
     Dim _machine As String = String.Empty
     Dim _mac As String = String.Empty
     Dim _all As Boolean = False
+    Dim _agent As String = "255.255.255.255"
     Dim _alertMessage As String = "System is shutting down"
     Dim _delay As Long = 30
     Dim _force As Long = 0
@@ -116,6 +117,14 @@ Public Module Module1
 
                 Case "-all"
                     _all = True
+
+                Case "-agent"
+                    If i = My.Application.CommandLineArgs.Count - 1 Then
+                        BadCommand()
+                        Return ErrorCodes.InvalidCommand
+                    End If
+                    i += 1
+                    _agent = My.Application.CommandLineArgs.Item(i)
 
                 Case "-r"
                     _mode = ModeTypes.Shutdown
@@ -221,7 +230,8 @@ Public Module Module1
         Console.WriteLine("-a   (abort a shutdown) requires -m (depreciated)")
         Console.WriteLine("-r   (reboot)")
         Console.WriteLine("-w   (wakeup) requires -m, -g, -mac parameter, or -all")
-        Console.WriteLine("     Use -m with -w to send to a specific subnet.")
+        Console.WriteLine("     Use -m with -w to send to a specific subnet")
+        Console.WriteLine("     Use -mac and -agent to explicitly send WOL packet to a specific IP")
         Console.WriteLine("-l   (listen for WOL packets)")
         Console.WriteLine("-e   (enumerate machine list)")
         Console.WriteLine("-p   (path to machines.xml (optional))")
@@ -238,7 +248,8 @@ Public Module Module1
         Console.WriteLine("-mac xx    xx = mac address.")
         Console.WriteLine("-g xx      xx = group name.  To wakeup or shutdown a group of machines.")
         Console.WriteLine("-all       all machines.")
-        Console.WriteLine("-c ""xx""  xx = popup message.  Optional popup message on shutdown.")
+        Console.WriteLine("-agent xx  xx = address of WOL agent if on remote subnet, use with -mac.")
+        Console.WriteLine("-c ""xx""    xx = popup message.  Optional popup message on shutdown.")
         Console.WriteLine()
     End Sub
 
@@ -312,7 +323,7 @@ Public Module Module1
 
         ElseIf _mac.Length Then
             Console.WriteLine("waking up mac: " & _mac)
-            WakeUp(_mac)
+            WakeUp(_mac, _agent)
             Return ErrorCodes.Ok
 
         ElseIf _group.Length Then

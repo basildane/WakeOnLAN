@@ -46,8 +46,8 @@ Module Wake
 
     End Sub
 
-    Public Sub WakeUp(ByVal mac As String)
-        WOL.AquilaWolLibrary.WakeUp(mac)
+    Public Sub WakeUp(ByVal mac As String, Optional network As String = "")
+        WOL.AquilaWolLibrary.WakeUp(mac, network)
     End Sub
 
 End Module
