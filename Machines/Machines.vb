@@ -150,9 +150,9 @@ Public Class Machine
 
 	Private Sub backgroundWorker_ProgressChanged(ByVal sender As Object, ByVal e As ProgressChangedEventArgs) Handles _backgroundWorker.ProgressChanged
 		Dim newStatus As StatusCodes
-		Dim newIpAddress As String
+        Dim newIpAddress As String = String.Empty
 
-		Try
+        Try
 			If _backgroundWorker.CancellationPending Then Exit Sub
 
 			Select Case e.ProgressPercentage

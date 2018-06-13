@@ -7,9 +7,9 @@
 #define MyAppExeName "WakeOnLan.exe"
 #define MyAppVersion GetFileVersion("C:\Projects\WakeOnLan\bin\Release\WakeOnLan.exe")
 
-#define signtool "c:\Program Files (x86)\Windows Kits\10\bin\x64\signtool.exe"
 #define subject "Open Source Developer, Phillip Tull"
 #define time "http://time.certum.pl"
+; mysign=C:\Program Files (x86)\Windows Kits\10\bin\10.0.17134.0\x64\signtool.exe $p
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -42,7 +42,7 @@ WizardSmallImageFile={#rootFolder}\Resources\connected.bmp
 AppCopyright=Copyright Aquila Technology
 
 ; declare mysign=$p
-SignTool=mysign {#signtool} sign /a /n $q{#subject}$q /as /fd sha256 /td sha256 /tr {#time} /d $q{#MyAppName}$q $f
+SignTool=mysign sign /a /n $q{#subject}$q /as /fd sha256 /td sha256 /tr {#time} /d $q{#MyAppName}$q $f
 
 [Languages]
 Name: "en";    MessagesFile: "compiler:Default.isl"
