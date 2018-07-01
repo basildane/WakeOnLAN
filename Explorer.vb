@@ -654,7 +654,9 @@ Public Class Explorer
     Private Sub RDPToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RDPToolStripMenuItem.Click
         Dim machine As Machine = Machines(ListView.SelectedItems(0).Name)
 
-        If (String.IsNullOrEmpty(machine.RDPFile)) Then
+        If (Not String.IsNullOrEmpty(machine.RemoteCommand)) Then
+            Shell(machine.RemoteCommand, AppWinStyle.NormalFocus, False)
+        ElseIf (String.IsNullOrEmpty(machine.RDPFile)) Then
             Shell(String.Format("mstsc.exe -v:{0}:{1}", machine.Netbios, machine.RDPPort), AppWinStyle.NormalFocus, False)
         Else
             Shell(String.Format("mstsc.exe ""{0}"" -v:{1}:{2}", machine.RDPFile, machine.Netbios, machine.RDPPort), AppWinStyle.NormalFocus, False)
@@ -958,4 +960,8 @@ Public Class Explorer
 	Private Sub MessageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MessageToolStripMenuItem.Click
 		Dim Send As New SendMessage(ListView.SelectedItems.Cast(Of ListViewItem).Select(Function(lvi As ListViewItem) lvi.Text).ToArray())
 	End Sub
+
+    Private Sub TrayMenuItemRDP_Click(sender As Object, e As EventArgs) Handles TrayMenuItemRDP.Click
+
+    End Sub
 End Class

@@ -44,36 +44,41 @@ Partial Class Properties
         Me.lbUDP = New System.Windows.Forms.Label()
         Me.lbSendTo = New System.Windows.Forms.Label()
         Me.lNotes = New System.Windows.Forms.Label()
-        Me.MachineName = New WakeOnLan.Controls.RegExTextBox()
-        Me.Broadcast = New WakeOnLan.Controls.IpAddressControl()
-        Me.IP = New WakeOnLan.Controls.IpAddressControl()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabProperties = New System.Windows.Forms.TabPage()
         Me.TextBox_Notes = New System.Windows.Forms.TextBox()
+        Me.MachineName = New WakeOnLan.Controls.RegExTextBox()
         Me.TabWakeUp = New System.Windows.Forms.TabPage()
         Me.Repeat = New WakeOnLan.Controls.RegExTextBox()
         Me.lbRepeat = New System.Windows.Forms.Label()
         Me.cbKeepAlive = New System.Windows.Forms.CheckBox()
-        Me.tHostURI = New WakeOnLan.Controls.RegExTextBox()
         Me.bCalcBroadcast = New System.Windows.Forms.Button()
         Me.rbURI = New System.Windows.Forms.RadioButton()
         Me.rbIP = New System.Windows.Forms.RadioButton()
+        Me.tHostURI = New WakeOnLan.Controls.RegExTextBox()
         Me.TTL = New WakeOnLan.Controls.RegExTextBox()
         Me.UDPPort = New WakeOnLan.Controls.RegExTextBox()
+        Me.Broadcast = New WakeOnLan.Controls.IpAddressControl()
         Me.MAC = New WakeOnLan.Controls.RegExTextBox()
         Me.TabStatus = New System.Windows.Forms.TabPage()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.tRemoteCommand = New WakeOnLan.Controls.RegExTextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.IP = New WakeOnLan.Controls.IpAddressControl()
+        Me.lbLeaveBlank = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.tRDPFilename = New WakeOnLan.Controls.RegExTextBox()
+        Me.tRDPPort = New WakeOnLan.Controls.RegExTextBox()
+        Me.lbRDPPort = New System.Windows.Forms.Label()
         Me.EditRDPButton = New System.Windows.Forms.Button()
+        Me.lbRemoteDesktop = New System.Windows.Forms.Label()
         Me.File_Button = New System.Windows.Forms.Button()
         Me.lbRDPFile = New System.Windows.Forms.Label()
-        Me.lbRemoteDesktop = New System.Windows.Forms.Label()
-        Me.lbLeaveBlank = New System.Windows.Forms.Label()
-        Me.lbRDPPort = New System.Windows.Forms.Label()
-        Me.tRDPPort = New WakeOnLan.Controls.RegExTextBox()
         Me.TabShutdown = New System.Windows.Forms.TabPage()
         Me.tDomain = New WakeOnLan.Controls.RegExTextBox()
-        Me.tPassword = New WakeOnLan.Controls.RegExTextBox()
         Me.tUserId = New WakeOnLan.Controls.RegExTextBox()
+        Me.tPassword = New WakeOnLan.Controls.RegExTextBox()
         Me.lDomain = New System.Windows.Forms.Label()
         Me.lPassword = New System.Windows.Forms.Label()
         Me.lUserId = New System.Windows.Forms.Label()
@@ -87,6 +92,9 @@ Partial Class Properties
         Me.TabProperties.SuspendLayout()
         Me.TabWakeUp.SuspendLayout()
         Me.TabStatus.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.TabShutdown.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -252,41 +260,6 @@ Partial Class Properties
         Me.lNotes.Name = "lNotes"
         Me.ToolTip1.SetToolTip(Me.lNotes, resources.GetString("lNotes.ToolTip"))
         '
-        'MachineName
-        '
-        resources.ApplyResources(Me.MachineName, "MachineName")
-        Me.ErrorProvider1.SetError(Me.MachineName, resources.GetString("MachineName.Error"))
-        Me.MachineName.ErrorColor = System.Drawing.Color.Red
-        Me.ErrorProvider1.SetIconAlignment(Me.MachineName, CType(resources.GetObject("MachineName.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.MachineName, CType(resources.GetObject("MachineName.IconPadding"), Integer))
-        Me.MachineName.Name = "MachineName"
-        Me.ToolTip1.SetToolTip(Me.MachineName, resources.GetString("MachineName.ToolTip"))
-        Me.MachineName.ValidationExpression = "\w{1,}"
-        '
-        'Broadcast
-        '
-        resources.ApplyResources(Me.Broadcast, "Broadcast")
-        Me.Broadcast.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.Broadcast.BackColor = System.Drawing.SystemColors.Window
-        Me.Broadcast.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ErrorProvider1.SetError(Me.Broadcast, resources.GetString("Broadcast.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.Broadcast, CType(resources.GetObject("Broadcast.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.Broadcast, CType(resources.GetObject("Broadcast.IconPadding"), Integer))
-        Me.Broadcast.Name = "Broadcast"
-        Me.ToolTip1.SetToolTip(Me.Broadcast, resources.GetString("Broadcast.ToolTip"))
-        '
-        'IP
-        '
-        resources.ApplyResources(Me.IP, "IP")
-        Me.IP.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.IP.BackColor = System.Drawing.SystemColors.Window
-        Me.IP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ErrorProvider1.SetError(Me.IP, resources.GetString("IP.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.IP, CType(resources.GetObject("IP.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.IP, CType(resources.GetObject("IP.IconPadding"), Integer))
-        Me.IP.Name = "IP"
-        Me.ToolTip1.SetToolTip(Me.IP, resources.GetString("IP.ToolTip"))
-        '
         'TabControl1
         '
         resources.ApplyResources(Me.TabControl1, "TabControl1")
@@ -326,13 +299,23 @@ Partial Class Properties
         Me.TextBox_Notes.Name = "TextBox_Notes"
         Me.ToolTip1.SetToolTip(Me.TextBox_Notes, resources.GetString("TextBox_Notes.ToolTip"))
         '
+        'MachineName
+        '
+        resources.ApplyResources(Me.MachineName, "MachineName")
+        Me.ErrorProvider1.SetError(Me.MachineName, resources.GetString("MachineName.Error"))
+        Me.MachineName.ErrorColor = System.Drawing.Color.Red
+        Me.ErrorProvider1.SetIconAlignment(Me.MachineName, CType(resources.GetObject("MachineName.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.MachineName, CType(resources.GetObject("MachineName.IconPadding"), Integer))
+        Me.MachineName.Name = "MachineName"
+        Me.ToolTip1.SetToolTip(Me.MachineName, resources.GetString("MachineName.ToolTip"))
+        Me.MachineName.ValidationExpression = "\w{1,}"
+        '
         'TabWakeUp
         '
         resources.ApplyResources(Me.TabWakeUp, "TabWakeUp")
         Me.TabWakeUp.Controls.Add(Me.Repeat)
         Me.TabWakeUp.Controls.Add(Me.lbRepeat)
         Me.TabWakeUp.Controls.Add(Me.cbKeepAlive)
-        Me.TabWakeUp.Controls.Add(Me.tHostURI)
         Me.TabWakeUp.Controls.Add(Me.lbUDP)
         Me.TabWakeUp.Controls.Add(Me.lbTTL)
         Me.TabWakeUp.Controls.Add(Me.lbMAC)
@@ -342,6 +325,7 @@ Partial Class Properties
         Me.TabWakeUp.Controls.Add(Me.rbURI)
         Me.TabWakeUp.Controls.Add(Me.rbIP)
         Me.TabWakeUp.Controls.Add(Me.lbBroadcast)
+        Me.TabWakeUp.Controls.Add(Me.tHostURI)
         Me.TabWakeUp.Controls.Add(Me.TTL)
         Me.TabWakeUp.Controls.Add(Me.UDPPort)
         Me.TabWakeUp.Controls.Add(Me.Broadcast)
@@ -383,17 +367,6 @@ Partial Class Properties
         Me.ToolTip1.SetToolTip(Me.cbKeepAlive, resources.GetString("cbKeepAlive.ToolTip"))
         Me.cbKeepAlive.UseVisualStyleBackColor = True
         '
-        'tHostURI
-        '
-        resources.ApplyResources(Me.tHostURI, "tHostURI")
-        Me.ErrorProvider1.SetError(Me.tHostURI, resources.GetString("tHostURI.Error"))
-        Me.tHostURI.ErrorColor = System.Drawing.Color.Red
-        Me.ErrorProvider1.SetIconAlignment(Me.tHostURI, CType(resources.GetObject("tHostURI.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.tHostURI, CType(resources.GetObject("tHostURI.IconPadding"), Integer))
-        Me.tHostURI.Name = "tHostURI"
-        Me.ToolTip1.SetToolTip(Me.tHostURI, resources.GetString("tHostURI.ToolTip"))
-        Me.tHostURI.ValidationExpression = "^(?!\s*$).+"
-        '
         'bCalcBroadcast
         '
         resources.ApplyResources(Me.bCalcBroadcast, "bCalcBroadcast")
@@ -426,6 +399,17 @@ Partial Class Properties
         Me.ToolTip1.SetToolTip(Me.rbIP, resources.GetString("rbIP.ToolTip"))
         Me.rbIP.UseVisualStyleBackColor = True
         '
+        'tHostURI
+        '
+        resources.ApplyResources(Me.tHostURI, "tHostURI")
+        Me.ErrorProvider1.SetError(Me.tHostURI, resources.GetString("tHostURI.Error"))
+        Me.tHostURI.ErrorColor = System.Drawing.Color.Red
+        Me.ErrorProvider1.SetIconAlignment(Me.tHostURI, CType(resources.GetObject("tHostURI.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.tHostURI, CType(resources.GetObject("tHostURI.IconPadding"), Integer))
+        Me.tHostURI.Name = "tHostURI"
+        Me.ToolTip1.SetToolTip(Me.tHostURI, resources.GetString("tHostURI.ToolTip"))
+        Me.tHostURI.ValidationExpression = "^(?!\s*$).+"
+        '
         'TTL
         '
         resources.ApplyResources(Me.TTL, "TTL")
@@ -448,6 +432,18 @@ Partial Class Properties
         Me.ToolTip1.SetToolTip(Me.UDPPort, resources.GetString("UDPPort.ToolTip"))
         Me.UDPPort.ValidationExpression = "^\d+$"
         '
+        'Broadcast
+        '
+        resources.ApplyResources(Me.Broadcast, "Broadcast")
+        Me.Broadcast.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
+        Me.Broadcast.BackColor = System.Drawing.SystemColors.Window
+        Me.Broadcast.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ErrorProvider1.SetError(Me.Broadcast, resources.GetString("Broadcast.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.Broadcast, CType(resources.GetObject("Broadcast.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.Broadcast, CType(resources.GetObject("Broadcast.IconPadding"), Integer))
+        Me.Broadcast.Name = "Broadcast"
+        Me.ToolTip1.SetToolTip(Me.Broadcast, resources.GetString("Broadcast.ToolTip"))
+        '
         'MAC
         '
         resources.ApplyResources(Me.MAC, "MAC")
@@ -463,22 +459,98 @@ Partial Class Properties
         'TabStatus
         '
         resources.ApplyResources(Me.TabStatus, "TabStatus")
-        Me.TabStatus.Controls.Add(Me.tRDPFilename)
-        Me.TabStatus.Controls.Add(Me.EditRDPButton)
-        Me.TabStatus.Controls.Add(Me.File_Button)
-        Me.TabStatus.Controls.Add(Me.lbRDPFile)
-        Me.TabStatus.Controls.Add(Me.lbRemoteDesktop)
-        Me.TabStatus.Controls.Add(Me.lbLeaveBlank)
-        Me.TabStatus.Controls.Add(Me.lbIP)
-        Me.TabStatus.Controls.Add(Me.lbRDPPort)
-        Me.TabStatus.Controls.Add(Me.IP)
-        Me.TabStatus.Controls.Add(Me.tRDPPort)
+        Me.TabStatus.Controls.Add(Me.GroupBox3)
+        Me.TabStatus.Controls.Add(Me.GroupBox2)
+        Me.TabStatus.Controls.Add(Me.GroupBox1)
         Me.ErrorProvider1.SetError(Me.TabStatus, resources.GetString("TabStatus.Error"))
         Me.ErrorProvider1.SetIconAlignment(Me.TabStatus, CType(resources.GetObject("TabStatus.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
         Me.ErrorProvider1.SetIconPadding(Me.TabStatus, CType(resources.GetObject("TabStatus.IconPadding"), Integer))
         Me.TabStatus.Name = "TabStatus"
         Me.ToolTip1.SetToolTip(Me.TabStatus, resources.GetString("TabStatus.ToolTip"))
         Me.TabStatus.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        resources.ApplyResources(Me.GroupBox3, "GroupBox3")
+        Me.GroupBox3.Controls.Add(Me.Label1)
+        Me.GroupBox3.Controls.Add(Me.tRemoteCommand)
+        Me.ErrorProvider1.SetError(Me.GroupBox3, resources.GetString("GroupBox3.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.GroupBox3, CType(resources.GetObject("GroupBox3.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.GroupBox3, CType(resources.GetObject("GroupBox3.IconPadding"), Integer))
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.GroupBox3, resources.GetString("GroupBox3.ToolTip"))
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.ErrorProvider1.SetError(Me.Label1, resources.GetString("Label1.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.Label1, CType(resources.GetObject("Label1.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.Label1, CType(resources.GetObject("Label1.IconPadding"), Integer))
+        Me.Label1.Name = "Label1"
+        Me.ToolTip1.SetToolTip(Me.Label1, resources.GetString("Label1.ToolTip"))
+        '
+        'tRemoteCommand
+        '
+        resources.ApplyResources(Me.tRemoteCommand, "tRemoteCommand")
+        Me.ErrorProvider1.SetError(Me.tRemoteCommand, resources.GetString("tRemoteCommand.Error"))
+        Me.tRemoteCommand.ErrorColor = System.Drawing.Color.Red
+        Me.ErrorProvider1.SetIconAlignment(Me.tRemoteCommand, CType(resources.GetObject("tRemoteCommand.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.tRemoteCommand, CType(resources.GetObject("tRemoteCommand.IconPadding"), Integer))
+        Me.tRemoteCommand.Name = "tRemoteCommand"
+        Me.ToolTip1.SetToolTip(Me.tRemoteCommand, resources.GetString("tRemoteCommand.ToolTip"))
+        Me.tRemoteCommand.ValidationExpression = ""
+        '
+        'GroupBox2
+        '
+        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
+        Me.GroupBox2.Controls.Add(Me.IP)
+        Me.GroupBox2.Controls.Add(Me.lbIP)
+        Me.GroupBox2.Controls.Add(Me.lbLeaveBlank)
+        Me.ErrorProvider1.SetError(Me.GroupBox2, resources.GetString("GroupBox2.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.GroupBox2, CType(resources.GetObject("GroupBox2.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.GroupBox2, CType(resources.GetObject("GroupBox2.IconPadding"), Integer))
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.GroupBox2, resources.GetString("GroupBox2.ToolTip"))
+        '
+        'IP
+        '
+        resources.ApplyResources(Me.IP, "IP")
+        Me.IP.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
+        Me.IP.BackColor = System.Drawing.SystemColors.Window
+        Me.IP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ErrorProvider1.SetError(Me.IP, resources.GetString("IP.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.IP, CType(resources.GetObject("IP.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.IP, CType(resources.GetObject("IP.IconPadding"), Integer))
+        Me.IP.Name = "IP"
+        Me.ToolTip1.SetToolTip(Me.IP, resources.GetString("IP.ToolTip"))
+        '
+        'lbLeaveBlank
+        '
+        resources.ApplyResources(Me.lbLeaveBlank, "lbLeaveBlank")
+        Me.ErrorProvider1.SetError(Me.lbLeaveBlank, resources.GetString("lbLeaveBlank.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.lbLeaveBlank, CType(resources.GetObject("lbLeaveBlank.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.lbLeaveBlank, CType(resources.GetObject("lbLeaveBlank.IconPadding"), Integer))
+        Me.lbLeaveBlank.Name = "lbLeaveBlank"
+        Me.ToolTip1.SetToolTip(Me.lbLeaveBlank, resources.GetString("lbLeaveBlank.ToolTip"))
+        '
+        'GroupBox1
+        '
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
+        Me.GroupBox1.Controls.Add(Me.tRDPFilename)
+        Me.GroupBox1.Controls.Add(Me.tRDPPort)
+        Me.GroupBox1.Controls.Add(Me.lbRDPPort)
+        Me.GroupBox1.Controls.Add(Me.EditRDPButton)
+        Me.GroupBox1.Controls.Add(Me.lbRemoteDesktop)
+        Me.GroupBox1.Controls.Add(Me.File_Button)
+        Me.GroupBox1.Controls.Add(Me.lbRDPFile)
+        Me.ErrorProvider1.SetError(Me.GroupBox1, resources.GetString("GroupBox1.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.GroupBox1, CType(resources.GetObject("GroupBox1.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.GroupBox1, CType(resources.GetObject("GroupBox1.IconPadding"), Integer))
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.GroupBox1, resources.GetString("GroupBox1.ToolTip"))
         '
         'tRDPFilename
         '
@@ -491,6 +563,26 @@ Partial Class Properties
         Me.ToolTip1.SetToolTip(Me.tRDPFilename, resources.GetString("tRDPFilename.ToolTip"))
         Me.tRDPFilename.ValidationExpression = ""
         '
+        'tRDPPort
+        '
+        resources.ApplyResources(Me.tRDPPort, "tRDPPort")
+        Me.ErrorProvider1.SetError(Me.tRDPPort, resources.GetString("tRDPPort.Error"))
+        Me.tRDPPort.ErrorColor = System.Drawing.Color.Red
+        Me.ErrorProvider1.SetIconAlignment(Me.tRDPPort, CType(resources.GetObject("tRDPPort.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.tRDPPort, CType(resources.GetObject("tRDPPort.IconPadding"), Integer))
+        Me.tRDPPort.Name = "tRDPPort"
+        Me.ToolTip1.SetToolTip(Me.tRDPPort, resources.GetString("tRDPPort.ToolTip"))
+        Me.tRDPPort.ValidationExpression = ""
+        '
+        'lbRDPPort
+        '
+        resources.ApplyResources(Me.lbRDPPort, "lbRDPPort")
+        Me.ErrorProvider1.SetError(Me.lbRDPPort, resources.GetString("lbRDPPort.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.lbRDPPort, CType(resources.GetObject("lbRDPPort.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.lbRDPPort, CType(resources.GetObject("lbRDPPort.IconPadding"), Integer))
+        Me.lbRDPPort.Name = "lbRDPPort"
+        Me.ToolTip1.SetToolTip(Me.lbRDPPort, resources.GetString("lbRDPPort.ToolTip"))
+        '
         'EditRDPButton
         '
         resources.ApplyResources(Me.EditRDPButton, "EditRDPButton")
@@ -500,6 +592,15 @@ Partial Class Properties
         Me.EditRDPButton.Name = "EditRDPButton"
         Me.ToolTip1.SetToolTip(Me.EditRDPButton, resources.GetString("EditRDPButton.ToolTip"))
         Me.EditRDPButton.UseVisualStyleBackColor = True
+        '
+        'lbRemoteDesktop
+        '
+        resources.ApplyResources(Me.lbRemoteDesktop, "lbRemoteDesktop")
+        Me.ErrorProvider1.SetError(Me.lbRemoteDesktop, resources.GetString("lbRemoteDesktop.Error"))
+        Me.ErrorProvider1.SetIconAlignment(Me.lbRemoteDesktop, CType(resources.GetObject("lbRemoteDesktop.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.lbRemoteDesktop, CType(resources.GetObject("lbRemoteDesktop.IconPadding"), Integer))
+        Me.lbRemoteDesktop.Name = "lbRemoteDesktop"
+        Me.ToolTip1.SetToolTip(Me.lbRemoteDesktop, resources.GetString("lbRemoteDesktop.ToolTip"))
         '
         'File_Button
         '
@@ -520,50 +621,12 @@ Partial Class Properties
         Me.lbRDPFile.Name = "lbRDPFile"
         Me.ToolTip1.SetToolTip(Me.lbRDPFile, resources.GetString("lbRDPFile.ToolTip"))
         '
-        'lbRemoteDesktop
-        '
-        resources.ApplyResources(Me.lbRemoteDesktop, "lbRemoteDesktop")
-        Me.ErrorProvider1.SetError(Me.lbRemoteDesktop, resources.GetString("lbRemoteDesktop.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.lbRemoteDesktop, CType(resources.GetObject("lbRemoteDesktop.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.lbRemoteDesktop, CType(resources.GetObject("lbRemoteDesktop.IconPadding"), Integer))
-        Me.lbRemoteDesktop.Name = "lbRemoteDesktop"
-        Me.ToolTip1.SetToolTip(Me.lbRemoteDesktop, resources.GetString("lbRemoteDesktop.ToolTip"))
-        '
-        'lbLeaveBlank
-        '
-        resources.ApplyResources(Me.lbLeaveBlank, "lbLeaveBlank")
-        Me.ErrorProvider1.SetError(Me.lbLeaveBlank, resources.GetString("lbLeaveBlank.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.lbLeaveBlank, CType(resources.GetObject("lbLeaveBlank.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.lbLeaveBlank, CType(resources.GetObject("lbLeaveBlank.IconPadding"), Integer))
-        Me.lbLeaveBlank.Name = "lbLeaveBlank"
-        Me.ToolTip1.SetToolTip(Me.lbLeaveBlank, resources.GetString("lbLeaveBlank.ToolTip"))
-        '
-        'lbRDPPort
-        '
-        resources.ApplyResources(Me.lbRDPPort, "lbRDPPort")
-        Me.ErrorProvider1.SetError(Me.lbRDPPort, resources.GetString("lbRDPPort.Error"))
-        Me.ErrorProvider1.SetIconAlignment(Me.lbRDPPort, CType(resources.GetObject("lbRDPPort.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.lbRDPPort, CType(resources.GetObject("lbRDPPort.IconPadding"), Integer))
-        Me.lbRDPPort.Name = "lbRDPPort"
-        Me.ToolTip1.SetToolTip(Me.lbRDPPort, resources.GetString("lbRDPPort.ToolTip"))
-        '
-        'tRDPPort
-        '
-        resources.ApplyResources(Me.tRDPPort, "tRDPPort")
-        Me.ErrorProvider1.SetError(Me.tRDPPort, resources.GetString("tRDPPort.Error"))
-        Me.tRDPPort.ErrorColor = System.Drawing.Color.Red
-        Me.ErrorProvider1.SetIconAlignment(Me.tRDPPort, CType(resources.GetObject("tRDPPort.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.tRDPPort, CType(resources.GetObject("tRDPPort.IconPadding"), Integer))
-        Me.tRDPPort.Name = "tRDPPort"
-        Me.ToolTip1.SetToolTip(Me.tRDPPort, resources.GetString("tRDPPort.ToolTip"))
-        Me.tRDPPort.ValidationExpression = ""
-        '
         'TabShutdown
         '
         resources.ApplyResources(Me.TabShutdown, "TabShutdown")
         Me.TabShutdown.Controls.Add(Me.tDomain)
-        Me.TabShutdown.Controls.Add(Me.tPassword)
         Me.TabShutdown.Controls.Add(Me.tUserId)
+        Me.TabShutdown.Controls.Add(Me.tPassword)
         Me.TabShutdown.Controls.Add(Me.lDomain)
         Me.TabShutdown.Controls.Add(Me.lPassword)
         Me.TabShutdown.Controls.Add(Me.lUserId)
@@ -591,6 +654,17 @@ Partial Class Properties
         Me.ToolTip1.SetToolTip(Me.tDomain, resources.GetString("tDomain.ToolTip"))
         Me.tDomain.ValidationExpression = ""
         '
+        'tUserId
+        '
+        resources.ApplyResources(Me.tUserId, "tUserId")
+        Me.ErrorProvider1.SetError(Me.tUserId, resources.GetString("tUserId.Error"))
+        Me.tUserId.ErrorColor = System.Drawing.Color.Red
+        Me.ErrorProvider1.SetIconAlignment(Me.tUserId, CType(resources.GetObject("tUserId.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
+        Me.ErrorProvider1.SetIconPadding(Me.tUserId, CType(resources.GetObject("tUserId.IconPadding"), Integer))
+        Me.tUserId.Name = "tUserId"
+        Me.ToolTip1.SetToolTip(Me.tUserId, resources.GetString("tUserId.ToolTip"))
+        Me.tUserId.ValidationExpression = ""
+        '
         'tPassword
         '
         resources.ApplyResources(Me.tPassword, "tPassword")
@@ -602,17 +676,6 @@ Partial Class Properties
         Me.ToolTip1.SetToolTip(Me.tPassword, resources.GetString("tPassword.ToolTip"))
         Me.tPassword.UseSystemPasswordChar = True
         Me.tPassword.ValidationExpression = ""
-        '
-        'tUserId
-        '
-        resources.ApplyResources(Me.tUserId, "tUserId")
-        Me.ErrorProvider1.SetError(Me.tUserId, resources.GetString("tUserId.Error"))
-        Me.tUserId.ErrorColor = System.Drawing.Color.Red
-        Me.ErrorProvider1.SetIconAlignment(Me.tUserId, CType(resources.GetObject("tUserId.IconAlignment"), System.Windows.Forms.ErrorIconAlignment))
-        Me.ErrorProvider1.SetIconPadding(Me.tUserId, CType(resources.GetObject("tUserId.IconPadding"), Integer))
-        Me.tUserId.Name = "tUserId"
-        Me.ToolTip1.SetToolTip(Me.tUserId, resources.GetString("tUserId.ToolTip"))
-        Me.tUserId.ValidationExpression = ""
         '
         'lDomain
         '
@@ -704,7 +767,12 @@ Partial Class Properties
         Me.TabWakeUp.ResumeLayout(False)
         Me.TabWakeUp.PerformLayout()
         Me.TabStatus.ResumeLayout(False)
-        Me.TabStatus.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.TabShutdown.ResumeLayout(False)
         Me.TabShutdown.PerformLayout()
         Me.ResumeLayout(False)
@@ -766,4 +834,9 @@ Partial Class Properties
     Friend WithEvents tRDPFilename As RegExTextBox
     Friend WithEvents Repeat As RegExTextBox
     Friend WithEvents lbRepeat As Label
+    Friend WithEvents tRemoteCommand As RegExTextBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

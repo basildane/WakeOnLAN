@@ -48,6 +48,7 @@ Public Class Properties
             m.TTL = CInt(TTL.Text)
             m.RDPPort = tRDPPort.Text
             m.RDPFile = tRDPFilename.Text.Trim
+            m.RemoteCommand = tRemoteCommand.Text
             m.Note = TextBox_Notes.Text
             m.UserID = tUserId.Text
             m.Password = _encryption.Encrypt(tPassword.Text)
@@ -85,6 +86,7 @@ Public Class Properties
             TTL.Text = "128"
             tRDPPort.Text = "3389"
             tRDPFilename.Text = String.Empty
+            tRemoteCommand.Text = String.Empty
             ComboBoxShutdownMethod.SelectedIndex = 0
             TextBox_Notes.Text = String.Empty
             Repeat.Text = "1"
@@ -118,6 +120,7 @@ Public Class Properties
         rbURI.Checked = (m.Method = 1)
         tRDPPort.Text = m.RDPPort
         tRDPFilename.Text = m.RDPFile
+        tRemoteCommand.Text = m.RemoteCommand
         TextBox_Notes.Text = m.Note
         tUserId.Text = m.UserID
         tPassword.Text = _encryption.Decrypt(m.Password)

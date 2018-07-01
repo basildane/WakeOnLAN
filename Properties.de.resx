@@ -117,51 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Text" xml:space="preserve">
-    <value>Eigenschaften</value>
-  </data>
-  <data name="bCalcBroadcast.Text" xml:space="preserve">
-    <value>Berechne</value>
-  </data>
-  <data name="Broadcast.ErrorMessage" xml:space="preserve">
-    <value>Ungültige IP-Adresse. Muster   ###.###.###.###</value>
-  </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
-  <data name="cbKeepAlive.Text" xml:space="preserve">
-    <value>Keep-Alive</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lNotes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 88</value>
   </data>
-  <data name="CheckBox_Emergency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 171</value>
+  <data name="lNotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
   </data>
-  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 17</value>
+  <data name="lNotes.Text" xml:space="preserve">
+    <value>Anmerkungen</value>
   </data>
-  <data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>Notfallabschaltung für diesen Rechner einschalten?</value>
-  </data>
-  <data name="ComboBoxShutdownMethod.Items1" xml:space="preserve">
-    <value>Angepasst</value>
-  </data>
-  <data name="ComboBoxShutdownMethod.Items2" xml:space="preserve">
-    <value>Legacy-Modus</value>
-  </data>
-  <data name="Delete_Button.Text" xml:space="preserve">
-    <value>Löschen</value>
-  </data>
-  <data name="Help_Button.Text" xml:space="preserve">
-    <value>Hilfe</value>
-  </data>
-  <data name="IP.ErrorMessage" xml:space="preserve">
-    <value>Ungültige IP-Adresse. Muster   ###.###.###.###</value>
-  </data>
-  <data name="LabelShutdownMethod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 13</value>
-  </data>
-  <data name="LabelShutdownMethod.Text" xml:space="preserve">
-    <value>Methode für das Herunterfahren</value>
+  <data name="TextBox_Notes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 104</value>
   </data>
   <data name="lbGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 54</value>
@@ -172,8 +142,83 @@
   <data name="lbGroup.Text" xml:space="preserve">
     <value>Gruppe</value>
   </data>
+  <data name="MachineName.ErrorMessage" xml:space="preserve">
+    <value>Ungültiger Rechnername</value>
+  </data>
+  <data name="MachineName.ToolTip" xml:space="preserve">
+    <value>Das ist der Name des Rechners. Geben Sie einen gültigen Namen bestehend aus Buchstaben, Nummern, Bindestrich oder Unterstrich ein.</value>
+  </data>
+  <data name="TabProperties.Text" xml:space="preserve">
+    <value>Bildschirmeigenschaften</value>
+  </data>
+  <data name="cbKeepAlive.Text" xml:space="preserve">
+    <value>Keep-Alive</value>
+  </data>
+  <data name="lbUDP.Text" xml:space="preserve">
+    <value>UDP-Port</value>
+  </data>
+  <data name="lbMAC.Text" xml:space="preserve">
+    <value>MAC-Adresse</value>
+  </data>
+  <data name="bCalcBroadcast.Text" xml:space="preserve">
+    <value>Berechne</value>
+  </data>
+  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 13</value>
+  </data>
+  <data name="lbNetbios.Text" xml:space="preserve">
+    <value>Vollständiger Name der Domäne / IP</value>
+  </data>
+  <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 52</value>
+  </data>
+  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="lbSendTo.Text" xml:space="preserve">
+    <value>Sende WOL über</value>
+  </data>
+  <data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 50</value>
+  </data>
+  <data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 17</value>
+  </data>
+  <data name="rbURI.Text" xml:space="preserve">
+    <value>Vollständiger Name der Domäne / IP</value>
+  </data>
+  <data name="rbIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 50</value>
+  </data>
+  <data name="tHostURI.ErrorMessage" xml:space="preserve">
+    <value>Ungültiger Rechnername</value>
+  </data>
+  <data name="tHostURI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 104</value>
+  </data>
+  <data name="TTL.ErrorMessage" xml:space="preserve">
+    <value>TTL-Fehler</value>
+  </data>
+  <data name="UDPPort.ErrorMessage" xml:space="preserve">
+    <value>Ungültiges UDP-Port</value>
+  </data>
+  <data name="Broadcast.ErrorMessage" xml:space="preserve">
+    <value>Ungültige IP-Adresse. Muster   ###.###.###.###</value>
+  </data>
+  <data name="MAC.ErrorMessage" xml:space="preserve">
+    <value>Ungültige MAC-Adresse. Muster   ##:##:##:##:##:##</value>
+  </data>
+  <data name="MAC.ToolTip" xml:space="preserve">
+    <value>Geben Sie die MAC-Adresse des Rechners ein. Diese wird für Aufwachnachrichten verwendet. Gültige MAC-Adressen bestehen aus 6 Hexadezimal-Wertpaaren, getrennt durch ':' oder '.'.  Beispiel: 01:00:22:32:af:d0</value>
+  </data>
+  <data name="TabWakeUp.Text" xml:space="preserve">
+    <value>Aufwachen</value>
+  </data>
+  <data name="IP.ErrorMessage" xml:space="preserve">
+    <value>Ungültige IP-Adresse. Muster   ###.###.###.###</value>
+  </data>
   <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 29</value>
+    <value>35, 23</value>
   </data>
   <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
@@ -187,14 +232,11 @@
   <data name="lbLeaveBlank.Text" xml:space="preserve">
     <value>* leerlassen für DHCP</value>
   </data>
-  <data name="lbMAC.Text" xml:space="preserve">
-    <value>MAC-Adresse</value>
+  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
+    <value>Ungültiger RDP-Port</value>
   </data>
-  <data name="lbNetbios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 13</value>
-  </data>
-  <data name="lbNetbios.Text" xml:space="preserve">
-    <value>Vollständiger Name der Domäne / IP</value>
+  <data name="tRDPPort.ToolTip" xml:space="preserve">
+    <value>Remote Destop Port</value>
   </data>
   <data name="lbRDPPort.Text" xml:space="preserve">
     <value>RDP-Port</value>
@@ -205,41 +247,14 @@
   <data name="lbRemoteDesktop.Text" xml:space="preserve">
     <value>* Remote Desktop Port</value>
   </data>
-  <data name="lbSendTo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 52</value>
-  </data>
-  <data name="lbSendTo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
-  </data>
-  <data name="lbSendTo.Text" xml:space="preserve">
-    <value>Sende WOL über</value>
-  </data>
-  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 13</value>
-  </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Kommandozeile zum Herunterfahren(optional):</value>
-  </data>
-  <data name="lbUDP.Text" xml:space="preserve">
-    <value>UDP-Port</value>
-  </data>
-  <data name="lDescription.Text" xml:space="preserve">
-    <value>Sie können optional eine Benutzer-ID, Passwort und Domäne eingeben welche für das Herunterfahren genommen wird. Für leere Felder wird der Standardwert verwendet.</value>
+  <data name="TabStatus.Text" xml:space="preserve">
+    <value>Status / Steuerung</value>
   </data>
   <data name="lDomain.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
   </data>
   <data name="lDomain.Text" xml:space="preserve">
     <value>Domäne</value>
-  </data>
-  <data name="lNotes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 88</value>
-  </data>
-  <data name="lNotes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 13</value>
-  </data>
-  <data name="lNotes.Text" xml:space="preserve">
-    <value>Anmerkungen</value>
   </data>
   <data name="lPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
@@ -253,61 +268,46 @@
   <data name="lUserId.Text" xml:space="preserve">
     <value>Benutzer-ID</value>
   </data>
-  <data name="MAC.ErrorMessage" xml:space="preserve">
-    <value>Ungültige MAC-Adresse. Muster   ##:##:##:##:##:##</value>
+  <data name="lDescription.Text" xml:space="preserve">
+    <value>Sie können optional eine Benutzer-ID, Passwort und Domäne eingeben welche für das Herunterfahren genommen wird. Für leere Felder wird der Standardwert verwendet.</value>
   </data>
-  <data name="MAC.ToolTip" xml:space="preserve">
-    <value>Geben Sie die MAC-Adresse des Rechners ein. Diese wird für Aufwachnachrichten verwendet. Gültige MAC-Adressen bestehen aus 6 Hexadezimal-Wertpaaren, getrennt durch ':' oder '.'.  Beispiel: 01:00:22:32:af:d0</value>
+  <data name="LabelShutdownMethod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 13</value>
   </data>
-  <data name="MachineName.ErrorMessage" xml:space="preserve">
-    <value>Ungültiger Rechnername</value>
+  <data name="LabelShutdownMethod.Text" xml:space="preserve">
+    <value>Methode für das Herunterfahren</value>
   </data>
-  <data name="MachineName.ToolTip" xml:space="preserve">
-    <value>Das ist der Name des Rechners. Geben Sie einen gültigen Namen bestehend aus Buchstaben, Nummern, Bindestrich oder Unterstrich ein.</value>
+  <data name="ComboBoxShutdownMethod.Items1" xml:space="preserve">
+    <value>Angepasst</value>
   </data>
-  <data name="rbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 50</value>
+  <data name="ComboBoxShutdownMethod.Items2" xml:space="preserve">
+    <value>Legacy-Modus</value>
   </data>
-  <data name="rbURI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 50</value>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 13</value>
   </data>
-  <data name="rbURI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 17</value>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>Kommandozeile zum Herunterfahren(optional):</value>
   </data>
-  <data name="rbURI.Text" xml:space="preserve">
-    <value>Vollständiger Name der Domäne / IP</value>
+  <data name="CheckBox_Emergency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 171</value>
   </data>
-  <data name="TabProperties.Text" xml:space="preserve">
-    <value>Bildschirmeigenschaften</value>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 17</value>
+  </data>
+  <data name="CheckBox_Emergency.Text" xml:space="preserve">
+    <value>Notfallabschaltung für diesen Rechner einschalten?</value>
   </data>
   <data name="TabShutdown.Text" xml:space="preserve">
     <value>Herunterfahren</value>
   </data>
-  <data name="TabStatus.Text" xml:space="preserve">
-    <value>Status / Steuerung</value>
+  <data name="Help_Button.Text" xml:space="preserve">
+    <value>Hilfe</value>
   </data>
-  <data name="TabWakeUp.Text" xml:space="preserve">
-    <value>Aufwachen</value>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Löschen</value>
   </data>
-  <data name="TextBox_Notes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 104</value>
-  </data>
-  <data name="tHostURI.ErrorMessage" xml:space="preserve">
-    <value>Ungültiger Rechnername</value>
-  </data>
-  <data name="tHostURI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 104</value>
-  </data>
-  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
-    <value>Ungültiger RDP-Port</value>
-  </data>
-  <data name="tRDPPort.ToolTip" xml:space="preserve">
-    <value>Remote Destop Port</value>
-  </data>
-  <data name="TTL.ErrorMessage" xml:space="preserve">
-    <value>TTL-Fehler</value>
-  </data>
-  <data name="UDPPort.ErrorMessage" xml:space="preserve">
-    <value>Ungültiges UDP-Port</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Eigenschaften</value>
   </data>
 </root>
