@@ -7,7 +7,7 @@
 #define MyAppExeName "WakeOnLan.exe"
 #define MyAppVersion GetFileVersion("C:\Projects\WakeOnLan\bin\Release\WakeOnLan.exe")
 
-#define subject "Open Source Developer, Philip Sterling Tull"
+#define subject "Open Source Developer"
 #define time "http://time.certum.pl"
 ; mysign=C:\Program Files (x86)\Windows Kits\10\bin\10.0.17134.0\x86\signtool.exe $p
 
