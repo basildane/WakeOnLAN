@@ -163,26 +163,24 @@ Namespace My
 			Dim newPath As String
 			Dim filename As String
 
-			Try
-				If Settings.needUpgrade Then
-					Settings.Upgrade()
-					Settings.needUpgrade = False
-					Settings.Save()
-				End If
+            Try
+                If Settings.needUpgrade Then
+                    Settings.Upgrade()
+                    Settings.needUpgrade = False
+                    Settings.Save()
+                End If
 
-			Catch ex As ConfigurationErrorsException
-				filename = DirectCast(ex.InnerException, ConfigurationErrorsException).Filename
+            Catch ex As ConfigurationErrorsException
+                filename = DirectCast(ex.InnerException, ConfigurationErrorsException).Filename
 
-				If MessageBox.Show(Text.RegularExpressions.Regex.Unescape(Resources.Strings.errUserConfigCorrupt), Resources.Strings.errUserConfigTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-					IO.File.Delete(filename)
-					Windows.Forms.Application.Restart()
-					Process.GetCurrentProcess().Kill()
-				Else
-					Process.GetCurrentProcess().Kill()
-				End If
-			End Try
+                If MessageBox.Show(Text.RegularExpressions.Regex.Unescape(Resources.Strings.errUserConfigCorrupt), Resources.Strings.errUserConfigTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
+                    IO.File.Delete(filename)
+                    Windows.Forms.Application.Restart()
+                End If
+                Process.GetCurrentProcess().Kill()
+            End Try
 
-			Try
+            Try
 				For i As Int16 = 0 To CommandLineArgs.Count - 1
 					If (CommandLineArgs(i) = "-p") Then
 						Settings.dbPath = CommandLineArgs(i + 1)

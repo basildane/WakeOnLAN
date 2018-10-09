@@ -136,8 +136,6 @@ Module Wake
             Group = machine.Group
             UDPPort = machine.UDPPort
             TTL = machine.TTL
-            RDPPort = machine.RDPPort
-            RDPFile = machine.RDPFile
             Note = machine.Note
             UserID = machine.UserID
             Password = machine.Password

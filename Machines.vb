@@ -108,12 +108,8 @@ Public Class MachinesClass
                 Dirty = True
                 machine.TTL = 128
             End If
-            If (machine.RDPPort = 0) Then
-                Dirty = True
-                machine.RDPPort = 3389
-            End If
 
-			Tracelog.WriteLine("Machine: " & machine.Name)
+            Tracelog.WriteLine("Machine: " & machine.Name)
 			Tracelog.Indent()
 			Tracelog.WriteLine("MAC [" & machine.MAC & "]")
 			Tracelog.WriteLine("IP [" & machine.IP & "]")
@@ -125,10 +121,9 @@ Public Class MachinesClass
 			Tracelog.WriteLine("Group [" & machine.Group & "]")
 			Tracelog.WriteLine("UDPPort [" & machine.UDPPort & "]")
 			Tracelog.WriteLine("TTL [" & machine.TTL & "]")
-			Tracelog.WriteLine("RDPPort [" & machine.RDPPort & "]")
-			Tracelog.WriteLine("RDPFile [" & machine.RDPFile & "]")
-			Tracelog.WriteLine("Note [" & machine.Note & "]")
-			Tracelog.WriteLine("UserID [" & machine.UserID & "]")
+            Tracelog.WriteLine("RemoteCommand [" & machine.RemoteCommand & "]")
+            Tracelog.WriteLine("Note [" & machine.Note & "]")
+            Tracelog.WriteLine("UserID [" & machine.UserID & "]")
 			Tracelog.WriteLine("Domain [" & machine.Domain & "]")
 			Tracelog.WriteLine("ShutdownMethod [" & machine.ShutdownMethod & "]")
 			Tracelog.WriteLine("KeepAlive [" & machine.KeepAlive & "]")

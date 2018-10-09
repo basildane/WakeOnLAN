@@ -117,34 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Text" xml:space="preserve">
-    <value>Propriedades</value>
-  </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
     <value>Cancelar</value>
-  </data>
-  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 17</value>
-  </data>
-  <data name="CheckBox_Emergency.Text" xml:space="preserve">
-    <value>Deligamento de emergência?</value>
-  </data>
-  <data name="Delete_Button.Text" xml:space="preserve">
-    <value>Excluir</value>
   </data>
   <data name="lbGroup.Text" xml:space="preserve">
     <value>Grupo</value>
   </data>
-  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 29</value>
+  <data name="lbName.Text" xml:space="preserve">
+    <value>Nome</value>
   </data>
-  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 13</value>
+  <data name="MachineName.ErrorMessage" xml:space="preserve">
+    <value>Nome do computador inválido</value>
   </data>
-  <data name="lbIP.Text" xml:space="preserve">
-    <value>Endereço IP</value>
+  <data name="MachineName.ToolTip" xml:space="preserve">
+    <value>Insira o nome do computador. Insira um nome válido, contendo letras "A-Z, a-z", números "0-9", hífens "-" ou sublihandos "_".</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbMAC.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 26</value>
   </data>
@@ -153,9 +141,6 @@
   </data>
   <data name="lbMAC.Text" xml:space="preserve">
     <value>Endereço MAC</value>
-  </data>
-  <data name="lbName.Text" xml:space="preserve">
-    <value>Nome</value>
   </data>
   <data name="lbNetbios.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 109</value>
@@ -166,11 +151,8 @@
   <data name="lbNetbios.Text" xml:space="preserve">
     <value>Nome NetBIOS</value>
   </data>
-  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 13</value>
-  </data>
-  <data name="lbShutdownCommand.Text" xml:space="preserve">
-    <value>Linha de comando Shutdown:</value>
+  <data name="tHostURI.ErrorMessage" xml:space="preserve">
+    <value>Nome do computador inválido</value>
   </data>
   <data name="MAC.ErrorMessage" xml:space="preserve">
     <value>Endereço MAC inválido. Utilize ##:##:##:##:##:##</value>
@@ -178,13 +160,31 @@
   <data name="MAC.ToolTip" xml:space="preserve">
     <value>Insira o endereço MAC do computador. Um endereço MAC válido é composto de 6 pares de digitos hexadecimais separados por ':' ou '-'. Exemplo: 01:00:22:32:af:d0</value>
   </data>
-  <data name="MachineName.ErrorMessage" xml:space="preserve">
-    <value>Nome do computador inválido</value>
+  <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 23</value>
   </data>
-  <data name="MachineName.ToolTip" xml:space="preserve">
-    <value>Insira o nome do computador. Insira um nome válido, contendo letras "A-Z, a-z", números "0-9", hífens "-" ou sublihandos "_".</value>
+  <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 13</value>
   </data>
-  <data name="tHostURI.ErrorMessage" xml:space="preserve">
-    <value>Nome do computador inválido</value>
+  <data name="lbIP.Text" xml:space="preserve">
+    <value>Endereço IP</value>
+  </data>
+  <data name="lbShutdownCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 13</value>
+  </data>
+  <data name="lbShutdownCommand.Text" xml:space="preserve">
+    <value>Linha de comando Shutdown:</value>
+  </data>
+  <data name="CheckBox_Emergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 17</value>
+  </data>
+  <data name="CheckBox_Emergency.Text" xml:space="preserve">
+    <value>Deligamento de emergência?</value>
+  </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Propriedades</value>
   </data>
 </root>
