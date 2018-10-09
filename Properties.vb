@@ -46,9 +46,7 @@ Public Class Properties
             m.Group = Group.Text
             m.UDPPort = CInt(UDPPort.Text)
             m.TTL = CInt(TTL.Text)
-            m.RDPPort = tRDPPort.Text
-            m.RDPFile = tRDPFilename.Text.Trim
-            m.RemoteCommand = tRemoteCommand.Text
+            m.RemoteCommand = tRDPFilename.Text.Trim
             m.Note = TextBox_Notes.Text
             m.UserID = tUserId.Text
             m.Password = _encryption.Encrypt(tPassword.Text)
@@ -84,9 +82,7 @@ Public Class Properties
             rbIP.Checked = True
             UDPPort.Text = "9"
             TTL.Text = "128"
-            tRDPPort.Text = "3389"
             tRDPFilename.Text = String.Empty
-            tRemoteCommand.Text = String.Empty
             ComboBoxShutdownMethod.SelectedIndex = 0
             TextBox_Notes.Text = String.Empty
             Repeat.Text = "1"
@@ -118,9 +114,7 @@ Public Class Properties
         TTL.Text = m.TTL
         rbIP.Checked = (m.Method = 0)
         rbURI.Checked = (m.Method = 1)
-        tRDPPort.Text = m.RDPPort
-        tRDPFilename.Text = m.RDPFile
-        tRemoteCommand.Text = m.RemoteCommand
+        tRDPFilename.Text = m.RemoteCommand
         TextBox_Notes.Text = m.Note
         tUserId.Text = m.UserID
         tPassword.Text = _encryption.Decrypt(m.Password)
@@ -164,7 +158,7 @@ Public Class Properties
             Next
         Next
 
-        EditRDPButton.Enabled = Not String.IsNullOrWhiteSpace(tRDPFilename.Text)
+        EditRDPButton.Enabled = (tRDPFilename.Text.ToLower.EndsWith(".rdp"))
         ErrorProvider1.SetError(TabControl1, String.Empty)
 
         If String.IsNullOrEmpty(MachineName.Text) Then Return

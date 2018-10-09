@@ -87,7 +87,6 @@ Public Class Search
             machine.Emergency = True
             machine.UDPPort = 9
             machine.TTL = 128
-            machine.RDPPort = 3389
             machine.ShutdownCommand = String.Empty
             If (ComboBoxGroup.Text <> _none) Then
                 machine.Group = ComboBoxGroup.Text
