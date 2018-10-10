@@ -9,7 +9,6 @@
 
 #define subject "Open Source Developer"
 #define time "http://time.certum.pl"
-; mysign=C:\Program Files (x86)\Windows Kits\10\bin\10.0.17134.0\x86\signtool.exe $p
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -121,7 +120,7 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChang
 #include "scripts\products\winversion.iss"
 #include "scripts\products\fileversion.iss"
 #include "scripts\products\dotnetfxversion.iss"
-#include "scripts\products\dotnetfx40full.iss"
+#include "scripts\products\dotnetfx46.iss"
 
 [Registry]
 Root: HKLM; Subkey: "Software\{#MyAppPublisher}\{#MyAppName}"; ValueType: string; ValueName: "Language"; ValueData: "{language}"
@@ -139,6 +138,6 @@ function InitializeSetup(): boolean;
 begin
 	//init windows version
 	initwinversion();
-	dotnetfx40full();
+	dotnetfx46(50); // min allowed version is 4.5.0
 	Result := true;
 end;
