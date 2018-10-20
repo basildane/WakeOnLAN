@@ -504,13 +504,7 @@ Public Class Explorer
     End Sub
 
     Private Sub ListView_DoubleClick(ByVal sender As Object, ByVal e As EventArgs) Handles ListView.DoubleClick
-
-        Properties.Edit(ListView.SelectedItems(0).Name)
-        If Properties.DialogResult = DialogResult.OK Then
-            LoadTree()
-        End If
-        Properties.Dispose()
-
+        RemoteCommand(ListView.SelectedItems(0).Name)
     End Sub
 
     Private Sub ListView_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ListView.SelectedIndexChanged
