@@ -118,24 +118,37 @@ Module Globals
 
     End Function
 
+    ''' <summary>
+    ''' Executes the appropriate Remote Desktop function.
+    ''' Supports rdp, putty, cmd, http, https.
+    ''' </summary>
+    ''' <param name="MachineName"></param>
     Public Sub RemoteCommand(MachineName As String)
         Dim machine As Machine = Machines(MachineName)
         Dim command As String = String.Empty
 
-        If (machine.RemoteCommand.StartsWith("rdp:")) Then
-            command = String.Format("mstsc.exe -v:{0}", machine.RemoteCommand.Substring(4))
-        ElseIf (machine.RemoteCommand.ToLower().EndsWith(".rdp")) Then
-            command = String.Format("mstsc.exe ""{0}""", machine.RemoteCommand)
-        ElseIf (machine.RemoteCommand.StartsWith("putty:")) Then
-            command = String.Format("putty -load ""{0}""", machine.RemoteCommand.Substring(6))
-        ElseIf (machine.RemoteCommand.StartsWith("cmd:")) Then
-            command = machine.RemoteCommand.Substring(4)
-        ElseIf (machine.RemoteCommand.StartsWith("http:") Or machine.RemoteCommand.StartsWith("https:")) Then
-            Process.Start(machine.RemoteCommand)
-            Return
-        End If
+        Try
+            If (machine.RemoteCommand.StartsWith("rdp:")) Then
+                command = String.Format("mstsc.exe -v:{0}", machine.RemoteCommand.Substring(4))
+            ElseIf (machine.RemoteCommand.ToLower().EndsWith(".rdp")) Then
+                command = String.Format("mstsc.exe ""{0}""", machine.RemoteCommand)
+            ElseIf (machine.RemoteCommand.StartsWith("putty:")) Then
+                command = String.Format("putty -load ""{0}""", machine.RemoteCommand.Substring(6))
+            ElseIf (machine.RemoteCommand.StartsWith("cmd:")) Then
+                command = machine.RemoteCommand.Substring(4)
+            ElseIf (String.IsNullOrWhiteSpace(machine.RemoteCommand)) Then
+                command = String.Format("mstsc.exe -v:{0}", machine.Netbios)
+            ElseIf (machine.RemoteCommand.StartsWith("http:") Or machine.RemoteCommand.StartsWith("https:")) Then
+                Process.Start(machine.RemoteCommand)
+                Return
+            End If
 
-        Shell(command, AppWinStyle.NormalFocus, False)
+            Shell(command, AppWinStyle.NormalFocus, False)
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "RemoteCommand")
+
+        End Try
     End Sub
 
     ''' <summary>
