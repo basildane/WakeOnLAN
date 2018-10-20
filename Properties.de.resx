@@ -232,21 +232,6 @@
   <data name="lbLeaveBlank.Text" xml:space="preserve">
     <value>* leerlassen für DHCP</value>
   </data>
-  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
-    <value>Ungültiger RDP-Port</value>
-  </data>
-  <data name="tRDPPort.ToolTip" xml:space="preserve">
-    <value>Remote Destop Port</value>
-  </data>
-  <data name="lbRDPPort.Text" xml:space="preserve">
-    <value>RDP-Port</value>
-  </data>
-  <data name="lbRemoteDesktop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 13</value>
-  </data>
-  <data name="lbRemoteDesktop.Text" xml:space="preserve">
-    <value>* Remote Desktop Port</value>
-  </data>
   <data name="TabStatus.Text" xml:space="preserve">
     <value>Status / Steuerung</value>
   </data>
@@ -256,11 +241,17 @@
   <data name="lDomain.Text" xml:space="preserve">
     <value>Domäne</value>
   </data>
+  <data name="lPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 117</value>
+  </data>
   <data name="lPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
   </data>
   <data name="lPassword.Text" xml:space="preserve">
     <value>Passwort</value>
+  </data>
+  <data name="lUserId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 86</value>
   </data>
   <data name="lUserId.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>

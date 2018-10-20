@@ -206,7 +206,7 @@
     <value>Indirizzo IP invalido.. Usare ###.###.###.###</value>
   </data>
   <data name="lbIP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 29</value>
+    <value>0, 23</value>
   </data>
   <data name="lbIP.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 13</value>
@@ -226,27 +226,6 @@
   <data name="tRDPFilename.ToolTip" xml:space="preserve">
     <value>Porta Desctop Remoto</value>
   </data>
-  <data name="tRDPPort.ErrorMessage" xml:space="preserve">
-    <value>Porta RDP Invalida</value>
-  </data>
-  <data name="tRDPPort.ToolTip" xml:space="preserve">
-    <value>Porta Desctop Remoto</value>
-  </data>
-  <data name="lbRDPPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 30</value>
-  </data>
-  <data name="lbRDPPort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="lbRDPPort.Text" xml:space="preserve">
-    <value>Porta RDP</value>
-  </data>
-  <data name="lbRemoteDesktop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 13</value>
-  </data>
-  <data name="lbRemoteDesktop.Text" xml:space="preserve">
-    <value>* porta desktop remoto</value>
-  </data>
   <data name="TabStatus.Text" xml:space="preserve">
     <value>Stato / Controllo</value>
   </data>
@@ -255,6 +234,9 @@
   </data>
   <data name="lDomain.Text" xml:space="preserve">
     <value>Dominio</value>
+  </data>
+  <data name="lUserId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 86</value>
   </data>
   <data name="lUserId.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
