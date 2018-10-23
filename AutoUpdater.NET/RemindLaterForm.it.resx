@@ -117,11 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Ricordami più tardi per l'aggiornamento</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 19</value>
   </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="labelTitle.Text" xml:space="preserve">
+    <value>Vuoi scaricare gli aggiornamenti più tardi?</value>
+  </data>
+  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 30</value>
+  </data>
+  <data name="labelDescription.Text" xml:space="preserve">
+    <value>Si, dovresti scaricare gli aggiornamenti ora. Ci vorranno solo pochi minuti a seconda del tipo di connessione internet</value>
+  </data>
+  <data name="radioButtonYes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 19</value>
+  </data>
+  <data name="radioButtonYes.Text" xml:space="preserve">
+    <value>Si, grazie, ricordamelo più tardi:</value>
+  </data>
+  <data name="radioButtonNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 19</value>
+  </data>
+  <data name="radioButtonNo.Text" xml:space="preserve">
+    <value>No, scarica gli aggiornamento ora (raccomandato)</value>
   </data>
   <data name="comboBoxRemindLater.Items" xml:space="preserve">
     <value>Dopo 30 minuti</value>
@@ -144,16 +163,7 @@
   <data name="comboBoxRemindLater.Items6" xml:space="preserve">
     <value>Dopo 10 giorni</value>
   </data>
-  <data name="labelDescription.Text" xml:space="preserve">
-    <value>Si, dovresti scaricare gli aggiornamenti ora. Ci vorranno solo pochi minuti a seconda del tipo di connessione internet</value>
-  </data>
-  <data name="labelTitle.Text" xml:space="preserve">
-    <value>Vuoi scaricare gli aggiornamenti più tardi?</value>
-  </data>
-  <data name="radioButtonNo.Text" xml:space="preserve">
-    <value>No, scarica gli aggiornamento ora (raccomandato)</value>
-  </data>
-  <data name="radioButtonYes.Text" xml:space="preserve">
-    <value>Si, grazie, ricordamelo più tardi:</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Ricordami più tardi per l'aggiornamento</value>
   </data>
 </root>

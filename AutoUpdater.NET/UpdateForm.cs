@@ -44,7 +44,7 @@ namespace AutoUpdaterDotNET
                 labelUpdate.Text = string.Format(resources.GetString("labelUpdate.Text", CultureInfo.CurrentCulture), AutoUpdater.AppTitle);
                 labelDescription.Text =
                     string.Format(resources.GetString("labelDescription.Text", CultureInfo.CurrentCulture),
-                        AutoUpdater.AppTitle, AutoUpdater.CurrentVersion, AutoUpdater.InstalledVersion);
+                        AutoUpdater.AppTitle, AutoUpdater.AvailableVersion, AutoUpdater.InstalledVersion);
             }
         }
 
@@ -86,7 +86,7 @@ namespace AutoUpdaterDotNET
             RegistryKey updateKey = Registry.CurrentUser.CreateSubKey(AutoUpdater.RegistryLocation);
             if (updateKey != null)
             {
-                updateKey.SetValue("version", AutoUpdater.CurrentVersion.ToString());
+                updateKey.SetValue("version", AutoUpdater.AvailableVersion.ToString());
                 updateKey.SetValue("skip", 1);
                 updateKey.Close();
             }
@@ -129,7 +129,7 @@ namespace AutoUpdaterDotNET
             RegistryKey updateKey = Registry.CurrentUser.CreateSubKey(AutoUpdater.RegistryLocation);
             if (updateKey != null)
             {
-                updateKey.SetValue("version", AutoUpdater.CurrentVersion);
+                updateKey.SetValue("version", AutoUpdater.AvailableVersion);
                 updateKey.SetValue("skip", 0);
                 DateTime remindLaterDateTime = DateTime.Now;
                 switch (AutoUpdater.RemindLaterTimeSpan)

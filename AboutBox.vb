@@ -61,6 +61,8 @@ Public NotInheritable Class AboutBox
             Return
         End If
 
+        Tracelog.WriteLine(e.Status.ToString() + "::" + e.Text)
+
         Select Case (e.Status)
             Case AutoUpdateEventArgs.StatusCodes.checking
                 pbUpdate.Image = My.Resources.system_software_update
@@ -72,6 +74,8 @@ Public NotInheritable Class AboutBox
             Case AutoUpdateEventArgs.StatusCodes.updateAvailable
                 pbUpdate.Image = My.Resources.software_update_available
                 RemoveHandler AutoUpdater.UpdateStatus, AddressOf UpdateStatus
+
+            Case AutoUpdateEventArgs.StatusCodes.trace
 
             Case Else
                 pbUpdate.Image = My.Resources.emblem_ok
