@@ -304,7 +304,7 @@ namespace AutoUpdaterDotNET
             }
 #endif
 
-            if (InstalledVersion <= AvailableVersion)
+            if (InstalledVersion >= AvailableVersion)
             {
                 args.Status = AutoUpdateEventArgs.StatusCodes.noUpdateAvailable;
                 args.Text = Strings.sLatestVersion;
