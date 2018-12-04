@@ -47,16 +47,17 @@ Namespace My
 				SafeMode.ShowDialog()
 			End If
 
-			If My.Settings.TraceLog Then
-				Tracelog.Load()
-			End If
-			singleInstance()
-			upgradeSettings()
+            singleInstance()
+            upgradeSettings()
 			ConfigureCulture()
 
-			'Throw New Exception("This is a test unhandled exception.")
+            If My.Settings.TraceLog Then
+                Tracelog.Load()
+            End If
 
-			Dim version As String = String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
+            'Throw New Exception("This is a test unhandled exception.")
+
+            Dim version As String = String.Format(Resources.Strings.Version, Application.Info.Version.Major, Application.Info.Version.Minor, Application.Info.Version.Build, Application.Info.Version.Revision)
 
 			If (Application.Info.Version.Revision > 0) Then
 				version &= " BETA " & Application.Info.Version.Revision
@@ -170,14 +171,20 @@ Namespace My
                     Settings.Save()
                 End If
 
-            Catch ex As ConfigurationErrorsException
-                filename = DirectCast(ex.InnerException, ConfigurationErrorsException).Filename
+            Catch ex As Exception
+                Try
+                    filename = DirectCast(ex.InnerException, ConfigurationErrorsException).Filename
 
-                If MessageBox.Show(Text.RegularExpressions.Regex.Unescape(Resources.Strings.errUserConfigCorrupt), Resources.Strings.errUserConfigTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-                    IO.File.Delete(filename)
-                    Windows.Forms.Application.Restart()
-                End If
-                Process.GetCurrentProcess().Kill()
+                    If MessageBox.Show(Text.RegularExpressions.Regex.Unescape(Resources.Strings.errUserConfigCorrupt), Resources.Strings.errUserConfigTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
+                        IO.File.Delete(filename)
+                        Windows.Forms.Application.Restart()
+                    End If
+                    Process.GetCurrentProcess().Kill()
+
+                Catch ex1 As Exception
+                    MessageBox.Show(ex.ToString)
+
+                End Try
             End Try
 
             Try

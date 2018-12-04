@@ -45,7 +45,8 @@ namespace AutoUpdaterDotNET
             updateAvailable,
             noUpdateAvailable,
             delayed,
-            error
+            error,
+            trace
         }
 
         public StatusCodes Status;
@@ -62,8 +63,8 @@ namespace AutoUpdaterDotNET
         internal static String DownloadURL;
         internal static String RegistryLocation;
         internal static String AppTitle;
-        internal static Version CurrentVersion;
         internal static Version InstalledVersion;
+        internal static Version AvailableVersion;
 
         public delegate void UpdateStatusHandler(object sender, AutoUpdateEventArgs e);
         public static event UpdateStatusHandler UpdateStatus;
@@ -135,6 +136,7 @@ namespace AutoUpdaterDotNET
         {
             int compareResult;
             AutoUpdateEventArgs args = new AutoUpdateEventArgs();
+            TraceWriteLine("Beginning AutoUpdater worker");
 
             Thread.CurrentThread.CurrentUICulture = CurrentCulture;
             var mainAssembly = Assembly.GetEntryAssembly();
@@ -168,8 +170,9 @@ namespace AutoUpdaterDotNET
                             return;
                         }
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
+                        TraceWriteLine("AutoUpdater(175)::" + ex.Message);
                     }
                 }
             }
@@ -189,8 +192,9 @@ namespace AutoUpdaterDotNET
                         return;
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    TraceWriteLine("AutoUpdater(198)::" + ex.Message);
                 }
             }
 
@@ -224,7 +228,11 @@ namespace AutoUpdaterDotNET
             var receivedAppCastDocument = new XmlDocument();
 
             if (appCastStream != null) receivedAppCastDocument.Load(appCastStream);
-            else return;
+            else
+            {
+                TraceWriteLine("AutoUpdater(234)::return");
+                return;
+            }
 
             XmlNodeList appCastItems = receivedAppCastDocument.SelectNodes("channel/item");
 
@@ -236,25 +244,20 @@ namespace AutoUpdaterDotNET
                     if (appCastVersion != null)
                     {
                         String appVersion = appCastVersion.InnerText;
-                        var version = new Version(appVersion);
-                        if (version <= InstalledVersion)
-                            continue;
-                        CurrentVersion = version;
+                        AvailableVersion = new Version(appVersion);
+
+                        XmlNode appCastTitle = item.SelectSingleNode("title");
+
+                        DialogTitle = appCastTitle != null ? appCastTitle.InnerText : "";
+
+                        XmlNode appCastChangeLog = item.SelectSingleNode("changelog");
+
+                        ChangeLogURL = appCastChangeLog != null ? appCastChangeLog.InnerText : "";
+
+                        XmlNode appCastUrl = item.SelectSingleNode("url");
+
+                        DownloadURL = appCastUrl != null ? appCastUrl.InnerText : "";
                     }
-                    else
-                        continue;
-
-                    XmlNode appCastTitle = item.SelectSingleNode("title");
-
-                    DialogTitle = appCastTitle != null ? appCastTitle.InnerText : "";
-
-                    XmlNode appCastChangeLog = item.SelectSingleNode("changelog");
-
-                    ChangeLogURL = appCastChangeLog != null ? appCastChangeLog.InnerText : "";
-
-                    XmlNode appCastUrl = item.SelectSingleNode("url");
-
-                    DownloadURL = appCastUrl != null ? appCastUrl.InnerText : "";
                 }
             }
 
@@ -264,19 +267,19 @@ namespace AutoUpdaterDotNET
             {
                 string skipValue = skip.ToString();
                 var skipVersion = new Version(applicationVersion.ToString());
-                if (skipValue.Equals("1") && CurrentVersion <= skipVersion)
+                if (skipValue.Equals("1") && InstalledVersion == skipVersion)
                 {
                     args.Status = AutoUpdateEventArgs.StatusCodes.noUpdateAvailable;
                     args.Text = Strings.sSkipping;
                     OnUpdateStatus(args);
                     return;
                 }
-                if (CurrentVersion > skipVersion)
+                if (InstalledVersion > skipVersion)
                 {
                     RegistryKey updateKeyWrite = Registry.CurrentUser.CreateSubKey(RegistryLocation);
                     if (updateKeyWrite != null)
                     {
-                        updateKeyWrite.SetValue("version", CurrentVersion.ToString());
+                        updateKeyWrite.SetValue("version", InstalledVersion.ToString());
                         updateKeyWrite.SetValue("skip", 0);
                     }
                 }
@@ -301,15 +304,13 @@ namespace AutoUpdaterDotNET
             }
 #endif
 
-            if (CurrentVersion == null)
+            if (InstalledVersion >= AvailableVersion)
             {
                 args.Status = AutoUpdateEventArgs.StatusCodes.noUpdateAvailable;
                 args.Text = Strings.sLatestVersion;
                 OnUpdateStatus(args);
                 return;
             }
-
-            if (CurrentVersion <= InstalledVersion) return;
 
             args.Status = AutoUpdateEventArgs.StatusCodes.updateAvailable;
             args.Text = Strings.sUpdateAvailable;
@@ -374,6 +375,16 @@ namespace AutoUpdaterDotNET
                 return null;
             }
             return (Attribute)attributes[0];
+        }
+
+        private static void TraceWriteLine(String s)
+        {
+            AutoUpdateEventArgs args = new AutoUpdateEventArgs
+            {
+                Status = AutoUpdateEventArgs.StatusCodes.trace,
+                Text = s
+            };
+            OnUpdateStatus(args);
         }
     }
 }

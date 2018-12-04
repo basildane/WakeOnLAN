@@ -116,15 +116,24 @@ Public Class Explorer
             Return
         End If
 
+        Select Case e.Status
+            Case AutoUpdateEventArgs.StatusCodes.trace
+                Tracelog.WriteLine(e.Text)
+
+            Case AutoUpdateEventArgs.StatusCodes.updateAvailable
+                ToolStripStatusLabel2.Text = e.Text
+                NotifyIconUpdate.Visible = True
+                NotifyIconUpdate.ShowBalloonTip(0, My.Resources.Strings.Title, e.Text, ToolTipIcon.Info)
+
+            Case Else
+                ToolStripStatusLabel2.Text = e.Text
+
+        End Select
+
         If (e.Status <> AutoUpdateEventArgs.StatusCodes.checking) Then
-            RemoveHandler AutoUpdater.UpdateStatus, AddressOf UpdateStatus
+            'RemoveHandler AutoUpdater.UpdateStatus, AddressOf UpdateStatus
         End If
 
-        ToolStripStatusLabel2.Text = e.Text
-        If (e.Status = AutoUpdateEventArgs.StatusCodes.updateAvailable) Then
-            NotifyIconUpdate.Visible = True
-            NotifyIconUpdate.ShowBalloonTip(0, My.Resources.Strings.Title, e.Text, ToolTipIcon.Info)
-        End If
     End Sub
 
     Private Sub NotifyIconUpdate_BalloonTipClicked(sender As Object, e As EventArgs) Handles NotifyIconUpdate.BalloonTipClicked, NotifyIconUpdate.Click
