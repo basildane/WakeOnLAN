@@ -134,18 +134,18 @@
     <comment>Abort Shutdown in progress...</comment>
   </data>
   <data name="AbortSuccess" xml:space="preserve">
-    <value>Annulation {0} réussi</value>
+    <value>Annulation {0} réussie</value>
     <comment>Abort {machine} successful</comment>
   </data>
   <data name="actions_email" xml:space="preserve">
     <value>Envoyer un Email</value>
   </data>
   <data name="actions_hibernate" xml:space="preserve">
-		<value>Mettre l'ordinateur en veille prolongée</value>
-	</data>
+        <value>Mettre l'ordinateur en veille prolongée</value>
+    </data>
   <data name="actions_hibernateAll" xml:space="preserve">
-		<value>Mettre tout les ordinateurs en veille prolongée</value>
-	</data>
+        <value>Mettre tous les ordinateurs en veille prolongée</value>
+    </data>
   <data name="actions_popup" xml:space="preserve">
     <value>Popup un message</value>
   </data>
@@ -153,32 +153,32 @@
     <value>Arrêter l'ordinateur</value>
   </data>
   <data name="actions_shutdownAll" xml:space="preserve">
-    <value>Arrêter tout les ordinateurs</value>
+    <value>Arrêter tous les ordinateurs</value>
   </data>
   <data name="actions_shutdownGroup" xml:space="preserve">
     <value>Arrêter le groupe</value>
   </data>
   <data name="actions_sleep" xml:space="preserve">
-		<value>Mettre l'ordinateur en veille</value>
-	</data>
+        <value>Mettre l'ordinateur en veille</value>
+    </data>
   <data name="actions_sleepAll" xml:space="preserve">
-		<value>Mettre tout les ordinateurs en veille</value>
-	</data>
+        <value>Mettre tous les ordinateurs en veille</value>
+    </data>
   <data name="actions_start" xml:space="preserve">
     <value>Démarrer l'ordinateur</value>
   </data>
   <data name="actions_startAll" xml:space="preserve">
-    <value>Démarrer tout les ordinateurs</value>
+    <value>Démarrer tous les ordinateurs</value>
   </data>
   <data name="actions_startGroup" xml:space="preserve">
     <value>Démarrer le groupe</value>
   </data>
   <data name="AllMachines" xml:space="preserve">
-    <value>Tout les périphériques</value>
+    <value>Tous les périphériques</value>
     <comment>All machines</comment>
   </data>
   <data name="AreYouSure" xml:space="preserve">
-    <value>Etes vous sûr?</value>
+    <value>Etes-vous sûr?</value>
     <comment>Are you sure?</comment>
   </data>
   <data name="BeginShutdown" xml:space="preserve">
@@ -235,11 +235,11 @@
     <comment>Host not responding</comment>
   </data>
   <data name="ImmediateReboot" xml:space="preserve">
-    <value>Cela va redémarrer IMMEDIATEMENT CE périphérique. Etes vous sûr?</value>
+    <value>Cela va redémarrer IMMEDIATEMENT CE périphérique. Etes-vous sûr?</value>
     <comment>This will IMMEDIATELY reboot THIS machine.  Are you sure?</comment>
   </data>
   <data name="ImmediateShutdown" xml:space="preserve">
-    <value>Cela va arrêter IMMEDIATEMENT CE périphérique. Etes vous sûr?</value>
+    <value>Cela va arrêter IMMEDIATEMENT CE périphérique. Etes-vous sûr?</value>
     <comment>This will IMMEDIATELY shutdown THIS machine.  Are you sure?</comment>
   </data>
   <data name="ImportedFrom" xml:space="preserve">
@@ -257,10 +257,10 @@
     <value>Le {0} à {1}</value>
   </data>
   <data name="lit_atDays" xml:space="preserve">
-    <value>A {0} tout les {1} jour(s)</value>
+    <value>A {0} tous les {1} jour(s)</value>
   </data>
   <data name="lit_atWeeks" xml:space="preserve">
-    <value>A {0} tout les {1} toutes les {2} semaines, commence le {3}</value>
+    <value>A {0} tous les {1} toutes les {2} semaines, commence le {3}</value>
   </data>
   <data name="lit_DeleteRecords" xml:space="preserve">
     <value>Supprimer {0} enregistrement(s)</value>
@@ -290,7 +290,7 @@
     <value>Vide</value>
   </data>
   <data name="lit_noRights" xml:space="preserve">
-    <value>{0} ne semble pas avoir les droits de lecture pour la base de données du planificateur WOL. Voulez vous l'autoriser ?</value>
+    <value>{0} ne semble pas avoir les droits de lecture pour la base de données du planificateur WOL. Voulez-vous l'autoriser ?</value>
   </data>
   <data name="lit_notFound" xml:space="preserve">
     <value>Périphérique non trouvé</value>
@@ -347,7 +347,7 @@
     <comment>Select a WakeOnLan settings file to import</comment>
   </data>
   <data name="SendShutdown" xml:space="preserve">
-    <value>Envoie de la commande d'arrêt à {0}</value>
+    <value>Envoi de la commande d'arrêt à {0}</value>
     <comment>Sending shutdown command to {host}</comment>
   </data>
   <data name="SentTo" xml:space="preserve">
@@ -402,7 +402,7 @@
     <comment>Version {0}.{1:00}.{2}.{3}</comment>
   </data>
   <data name="WhereSave" xml:space="preserve">
-    <value>Où voulez vous sauvegarder les paramètres?</value>
+    <value>Où voulez-vous sauvegarder les paramètres?</value>
     <comment>Where do you want to save the settings?</comment>
   </data>
 </root>
