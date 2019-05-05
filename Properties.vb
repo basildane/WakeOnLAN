@@ -1,5 +1,5 @@
 ﻿'    WakeOnLAN - Wake On LAN
-'    Copyright (C) 2004-2018 Aquila Technology, LLC. <webmaster@aquilatech.com>
+'    Copyright (C) 2004-2019 Aquila Technology, LLC. <webmaster@aquilatech.com>
 '
 '    This file is part of WakeOnLAN.
 '
@@ -139,6 +139,19 @@ Public Class Properties
     End Sub
 
     Private Sub Controls_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MachineName.Validating, tHostURI.Validating, MAC.Validating, Broadcast.Validating, IP.Validating, UDPPort.Validating, TTL.Validating, tRDPFilename.Validating, Repeat.Validating
+        DoValidation(sender)
+    End Sub
+
+    Private Sub ControlTextChanged(sender As Object, e As EventArgs) Handles MAC.TextChanged, UDPPort.TextChanged, TTL.TextChanged, tHostURI.TextChanged, Repeat.TextChanged
+        DoValidation(sender)
+    End Sub
+
+    Private Sub MachineName_TextChanged(sender As Object, e As EventArgs) Handles MachineName.TextChanged
+        Text = String.Format(My.Resources.Strings.Properties, MachineName.Text)
+        DoValidation(sender)
+    End Sub
+
+    Private Sub DoValidation(sender As Object)
         If sender.IsValid() Then
             ErrorProvider1.SetError(sender, String.Empty)
         Else
@@ -175,10 +188,6 @@ Public Class Properties
 
     Private Sub Help_Button_Click(sender As Object, e As EventArgs) Handles Help_Button.Click
         ShowHelp(Me, "properties\default.html")
-    End Sub
-
-    Private Sub MachineName_TextChanged(sender As Object, e As EventArgs) Handles MachineName.TextChanged
-        Text = String.Format(My.Resources.Strings.Properties, MachineName.Text)
     End Sub
 
     Private Sub File_Button_Click(sender As Object, e As EventArgs) Handles File_Button.Click
