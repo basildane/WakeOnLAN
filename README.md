@@ -25,3 +25,8 @@ WakeOnLAN features include:
 * Automatic check for latest version
 * Supports Wake-Up over the Internet using WOLAgent
 * Event Log shows a history of wake-ups, shutdowns, and exceptions
+
+
+# Please read
+Friends, I'm sorry that lately I cannot devote a lot of time to this project.  I have so many responsibilities with work and family that it just impossible.
+I will try to respond to issues, but don't be offended if it takes a long time.
