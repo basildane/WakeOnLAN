@@ -117,50 +117,121 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Brazil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Brazil_Flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppVersion" xml:space="preserve">
+    <value>版本</value>
+    <comment>Version</comment>
   </data>
-  <data name="Finland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\finland_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RepeatInterval" xml:space="preserve">
+    <value>重复间隔</value>
   </data>
-  <data name="France" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\france_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppVersionDescription" xml:space="preserve">
+    <value>程序版本</value>
+    <comment>Application version</comment>
   </data>
-  <data name="Germany" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Germany_Flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AutoCheck" xml:space="preserve">
+    <value>自动检查更新</value>
   </data>
-  <data name="Hungary" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\hungary_flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Broadcast_Address" xml:space="preserve">
+    <value>广播地址</value>
+    <comment>Broadcast Address</comment>
   </data>
-  <data name="Italy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\flags\italy_flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Broadcast_AddressDescription" xml:space="preserve">
+    <value>输入网络唤醒广播数据包的广播IP地址。</value>
+    <comment>Enter the broadcast IP Address for the WOL broadcast packets.</comment>
   </data>
-  <data name="Jordan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\jordan-flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cat_Application" xml:space="preserve">
+    <value>应用</value>
+    <comment>Application</comment>
   </data>
-  <data name="Netherlands" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\netherlands_flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cat_Emergency" xml:space="preserve">
+    <value>紧急设置</value>
+    <comment>Emergency settings</comment>
   </data>
-  <data name="Portugal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Portugal-Flag-16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cat_Shutdown" xml:space="preserve">
+    <value>关机</value>
+    <comment>Shutdown</comment>
   </data>
-  <data name="Romania" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\romania_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cat_WOL" xml:space="preserve">
+    <value>网络唤醒</value>
+    <comment>WOL</comment>
   </data>
-  <data name="Russia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\RussiaFlag16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Culture" xml:space="preserve">
+    <value>地区</value>
   </data>
-  <data name="Spain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\spain_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dbPath" xml:space="preserve">
+    <value>参数路径</value>
   </data>
-  <data name="ChinaMainland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\ChinaMainland-Flag-16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Delay" xml:space="preserve">
+    <value>时间延迟</value>
+    <comment>Time delay</comment>
   </data>
-  <data name="Taiwan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Taiwan-Flag-16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DelayDescription" xml:space="preserve">
+    <value>默认的关机延迟时间。</value>
+    <comment>The default time delay for shutdowns.</comment>
   </data>
-  <data name="USA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\United_States_Flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EmergencyDelay" xml:space="preserve">
+    <value>时间延迟</value>
+    <comment>Time delay</comment>
+  </data>
+  <data name="EmergencyDelayDescription" xml:space="preserve">
+    <value>紧急关机的时间延迟。</value>
+    <comment>The time delay for emergency shutdowns.</comment>
+  </data>
+  <data name="EmergencyShutdown" xml:space="preserve">
+    <value>默认消息</value>
+    <comment>Default Message</comment>
+  </data>
+  <data name="EmergencyShutdownDescription" xml:space="preserve">
+    <value>立即关机的消息。</value>
+    <comment>The emergency shutdown message.</comment>
+  </data>
+  <data name="Enable_Sound" xml:space="preserve">
+    <value>启用声音</value>
+    <comment>Enable sound</comment>
+  </data>
+  <data name="Enable_SoundDescription" xml:space="preserve">
+    <value>当受监控服务器上线或停止响应时播放声音。</value>
+    <comment>Play a sound when a monitored server comes online, or stops responding.</comment>
+  </data>
+  <data name="Force" xml:space="preserve">
+    <value>强制关机</value>
+    <comment>Force shutdown</comment>
+  </data>
+  <data name="ForceDescription" xml:space="preserve">
+    <value>强制远程服务器关机，未保存的文件将会丢失。</value>
+    <comment>Force remote server to shutdown.  Unsaved files will be lost.</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="Reboot" xml:space="preserve">
+    <value>重启</value>
+    <comment>Reboot</comment>
+  </data>
+  <data name="RebootDescription" xml:space="preserve">
+    <value>关机后重新启动。</value>
+    <comment>If true, then reboot after shutdown.</comment>
+  </data>
+  <data name="ShowSplash" xml:space="preserve">
+    <value>显示启动画面</value>
+  </data>
+  <data name="Shutdown" xml:space="preserve">
+    <value>默认消息</value>
+    <comment>Default Message</comment>
+  </data>
+  <data name="ShutdownDescription" xml:space="preserve">
+    <value>默认的关机消息。</value>
+    <comment>The default shutdown message.</comment>
+  </data>
+  <data name="Threads" xml:space="preserve">
+    <value>线程数</value>
+  </data>
+  <data name="UDPPort" xml:space="preserve">
+    <value>UDP端口</value>
+    <comment>UDP Port</comment>
+  </data>
+  <data name="UDPPortDescription" xml:space="preserve">
+    <value>输入广播消息的UDP端口号。</value>
+    <comment>Enter the UDP Port number for the broadcast messages.</comment>
   </data>
 </root>

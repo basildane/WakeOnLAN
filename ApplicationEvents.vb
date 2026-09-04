@@ -121,6 +121,8 @@ Namespace My
 							language = "pt-BR"
 						Case "ru"
 							language = "ru-RU"
+						Case "zh_CN"
+							language = "zh-CN"
 						Case "zh_TW"
 							language = "zh-TW"
 					End Select

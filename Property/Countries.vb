@@ -40,6 +40,7 @@ Public Class Countries : Inherits StringConverter
             "ru-RU",
             "ro-RO",
             "fi-FI",
+            "zh-CN",
             "zh-TW"
         }
 
@@ -134,6 +135,8 @@ Public Class LanguageEditor : Inherits UITypeEditor
                 newImage = My.Resources.Flags.Romania
             Case "fi-FI"
                 newImage = My.Resources.Flags.Finland
+            Case "zh-CN"
+                newImage = My.Resources.Flags.ChinaMainland
             Case "zh-TW"
                 newImage = My.Resources.Flags.Taiwan
             Case Else

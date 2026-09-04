@@ -117,50 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="OK_Button.Text" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Cancel_Button.Text" xml:space="preserve">
+    <value>取消</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Brazil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Brazil_Flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lError.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="Finland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\finland_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 20</value>
   </data>
-  <data name="France" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\france_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lTitle.Text" xml:space="preserve">
+    <value>发生了一个意外异常。</value>
   </data>
-  <data name="Germany" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Germany_Flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>错误消息</value>
   </data>
-  <data name="Hungary" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\hungary_flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GroupBox2.Text" xml:space="preserve">
+    <value>堆栈跟踪</value>
   </data>
-  <data name="Italy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\flags\italy_flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Jordan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\jordan-flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Netherlands" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\netherlands_flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Portugal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Portugal-Flag-16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Romania" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\romania_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Russia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\RussiaFlag16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Spain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\spain_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ChinaMainland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\ChinaMainland-Flag-16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Taiwan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Taiwan-Flag-16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="USA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\United_States_Flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>应用程序崩溃</value>
   </data>
 </root>

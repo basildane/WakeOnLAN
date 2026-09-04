@@ -178,6 +178,9 @@
     <EmbeddedResource Include="EventLogViewer.ru.resx">
       <DependentUpon>EventLogViewer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventLogViewer.zh-CN.resx">
+      <DependentUpon>EventLogViewer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -200,6 +203,7 @@
       <LastGenOutput>Strings.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Strings.ru.resx" />
+    <EmbeddedResource Include="Strings.zh-CN.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">

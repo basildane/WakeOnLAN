@@ -30,7 +30,7 @@ Public Class Options
             My.Settings.DefaultMessage = .Shutdown
             My.Settings.emerg_delay = .EmergencyDelay
             My.Settings.emerg_message = .EmergencyShutdown
-            My.Settings.Sound = .EnableSound
+            My.Settings.Sound = .Enable_Sound
             My.Settings.Force = .Force
             My.Settings.Reboot = .Reboot
             My.Settings.ShowSplash = .ShowSplash
@@ -91,7 +91,7 @@ Public Class Options
             .Shutdown = My.Settings.DefaultMessage
             .EmergencyDelay = My.Settings.emerg_delay
             .EmergencyShutdown = My.Settings.emerg_message
-            .EnableSound = My.Settings.Sound
+            .Enable_Sound = My.Settings.Sound
             .Force = My.Settings.Force
             .Reboot = My.Settings.Reboot
             .ShowSplash = My.Settings.ShowSplash
@@ -133,7 +133,7 @@ Public Class Options
         Private _sound As Boolean
 
         <TypeConverter(GetType(TrueFalseConverter))> _
-        <GlobalizedCategory("cat_WOL")> Public Property EnableSound() As Boolean
+        <GlobalizedCategory("cat_WOL")> Public Property Enable_Sound() As Boolean
             Get
                 Return _sound
             End Get

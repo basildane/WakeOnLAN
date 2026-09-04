@@ -117,50 +117,57 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="comboBoxRemindLater.Items2" xml:space="preserve">
+    <value>1天后</value>
+  </data>
+  <data name="comboBoxRemindLater.Items1" xml:space="preserve">
+    <value>12小时候</value>
+  </data>
+  <data name="buttonOK.Text" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="radioButtonNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 19</value>
+  </data>
+  <data name="comboBoxRemindLater.Items4" xml:space="preserve">
+    <value>4天后</value>
+  </data>
+  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 19</value>
+  </data>
+  <data name="radioButtonYes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 19</value>
+  </data>
+  <data name="labelTitle.Text" xml:space="preserve">
+    <value>您想要稍后再更新吗？</value>
+  </data>
+  <data name="radioButtonYes.Text" xml:space="preserve">
+    <value>是，稍后再提醒我:</value>
+  </data>
+  <data name="labelDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 30</value>
+  </data>
+  <data name="comboBoxRemindLater.Items" xml:space="preserve">
+    <value>30分钟后</value>
+  </data>
+  <data name="labelDescription.Text" xml:space="preserve">
+    <value>您应现在下载更新。根据您的网络情况，这通常只需几分钟即可完成，确保您使用的是应用程序的最新版本。</value>
+  </data>
+  <data name="comboBoxRemindLater.Items3" xml:space="preserve">
+    <value>2天后</value>
+  </data>
+  <data name="comboBoxRemindLater.Items6" xml:space="preserve">
+    <value>10天后</value>
+  </data>
+  <data name="comboBoxRemindLater.Items5" xml:space="preserve">
+    <value>8天后</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>稍后提醒我更新</value>
+  </data>
+  <data name="radioButtonNo.Text" xml:space="preserve">
+    <value>否，立即下载更新(推荐)</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Brazil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Brazil_Flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Finland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\finland_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="France" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\france_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Germany" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Germany_Flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Hungary" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\hungary_flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Italy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\flags\italy_flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Jordan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\jordan-flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Netherlands" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\netherlands_flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Portugal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Portugal-Flag-16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Romania" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\romania_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Russia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\RussiaFlag16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Spain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\spain_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ChinaMainland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\ChinaMainland-Flag-16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Taiwan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\Taiwan-Flag-16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="USA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flags\United_States_Flag_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
